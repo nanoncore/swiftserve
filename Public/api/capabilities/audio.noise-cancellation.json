@@ -1,0 +1,220 @@
+{
+  "aliases" : [
+    "noise suppression",
+    "denoise",
+    "krisp",
+    "background noise removal"
+  ],
+  "id" : "audio.noise-cancellation",
+  "label" : "Noise cancellation",
+  "packages" : [
+    {
+      "commit" : "7f3af1488411a9787e1e94ddd66b0bed2057bed3",
+      "notes" : "Two tiers. (1) WebRTC software noise suppression ships in the SDK itself (AudioCaptureOptions.noiseSuppression, unguarded). (2) Krisp-grade enhanced noise cancellation comes from the companion LiveKitKrispNoiseFilter package, whose real platform fence lives inside a binary xcframework: its manifest was iOS-only through 0.0.3 and added macOS at 0.0.5 — the founding incident of this index. At the pinned versions both tiers claim macOS.",
+      "package" : "https://github.com/livekit/client-sdk-swift",
+      "packageName" : "LiveKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/LiveKit/Types/Options/AudioCaptureOptions.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "note" : "WebRTC software noise suppression toggle",
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Types/Options/AudioCaptureOptions.swift#L64",
+              "symbol" : "AudioCaptureOptions.noiseSuppression"
+            },
+            {
+              "file" : "Sources/LiveKit/Protocols/AudioCustomProcessingDelegate.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "Krisp processor hook in the custom-audio-processing delegate",
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Protocols/AudioCustomProcessingDelegate.swift#L22",
+              "symbol" : "kLiveKitKrispAudioProcessorName"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "the SDK rides on a prebuilt Apple-platform WebRTC xcframework; no Linux artifacts observed, but nothing in Swift source proves absence"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/LiveKit/Types/Options/AudioCaptureOptions.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Types/Options/AudioCaptureOptions.swift#L64",
+              "symbol" : "AudioCaptureOptions.noiseSuppression"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/LiveKit/Types/Options/AudioCaptureOptions.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "note" : "WebRTC software noise suppression toggle (unguarded)",
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Types/Options/AudioCaptureOptions.swift#L64",
+              "symbol" : "AudioCaptureOptions.noiseSuppression"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/LiveKit/Types/Options/AudioCaptureOptions.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "note" : "manifest declares tvOS 17",
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Types/Options/AudioCaptureOptions.swift#L64",
+              "symbol" : "AudioCaptureOptions.noiseSuppression"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/LiveKit/Types/Options/AudioCaptureOptions.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Types/Options/AudioCaptureOptions.swift#L64",
+              "symbol" : "AudioCaptureOptions.noiseSuppression"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from the manifest platforms (iOS/macOS/macCatalyst/tvOS); the SDK's WebRTC binary dependency makes watchOS support doubtful, but nothing in source proves absence"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+        "https://github.com/livekit/swift-krisp-noise-filter"
+      ],
+      "slug" : "client-sdk-swift",
+      "version" : "2.15.1"
+    },
+    {
+      "commit" : "c12a41f2afc95ee67994faf2ea7c87cde6d65cc6",
+      "notes" : "The founding-incident package. The Swift surface is a thin wrapper — the real fence lives in the KrispNoiseFilter.xcframework binary (confidence capped accordingly). Requires LiveKit Cloud.",
+      "package" : "https://github.com/livekit/swift-krisp-noise-filter",
+      "packageName" : "LiveKitKrispNoiseFilter",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/LiveKitKrispNoiseFilter/LiveKitKrispNoiseFilter.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "Krisp audio processor for LiveKit tracks",
+              "permalink" : "https://github.com/livekit/swift-krisp-noise-filter/blob/0.0.8/Sources/LiveKitKrispNoiseFilter/LiveKitKrispNoiseFilter.swift#L10",
+              "symbol" : "LiveKitKrispNoiseFilter"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "Krisp binary is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "binary xcframework slices decide; Catalyst coverage unverified"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/LiveKitKrispNoiseFilter/LiveKitKrispNoiseFilter.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "Krisp audio processor for LiveKit tracks",
+              "permalink" : "https://github.com/livekit/swift-krisp-noise-filter/blob/0.0.8/Sources/LiveKitKrispNoiseFilter/LiveKitKrispNoiseFilter.swift#L10",
+              "symbol" : "LiveKitKrispNoiseFilter"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.15 — added at 0.0.5; iOS-only before that"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swift-krisp-noise-filter",
+      "version" : "0.0.8"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+[
+  {
+    "capability" : {
+      "id" : "media.streaming.hls",
+      "label" : "HLS streaming"
+    },
+    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "HLS playlist parsing/serialization primitives (not a player).",
+    "package" : {
+      "aliases" : [
+        "fcanas/hlscore"
+      ],
+      "canonicalURL" : "https://github.com/fcanas/hlscore",
+      "commit" : "2835209970afdaaaf137fd7073d9c0ab2beb2905",
+      "name" : "HLSCore",
+      "surfaceDigest" : "fnv1a64:a5a043e6cf32475f",
+      "version" : "0.2.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Parsing/MasterPlaylistParser.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : "M3U8 master playlist parser",
+            "package" : null,
+            "symbol" : "parseMasterPlaylist"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 10",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "pure-Swift parsing may build on Linux; unverified",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Parsing/MasterPlaylistParser.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : "M3U8 master playlist parser",
+            "package" : null,
+            "symbol" : "parseMasterPlaylist"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Parsing/MasterPlaylistParser.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : "M3U8 master playlist parser",
+            "package" : null,
+            "symbol" : "parseMasterPlaylist"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 10.12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Parsing/MasterPlaylistParser.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : "M3U8 master playlist parser",
+            "package" : null,
+            "symbol" : "parseMasterPlaylist"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 10",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors (predates it)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

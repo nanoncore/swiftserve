@@ -1,0 +1,348 @@
+{
+  "aliases" : [
+    "hls",
+    "http live streaming",
+    "m3u8"
+  ],
+  "id" : "media.streaming.hls",
+  "label" : "HLS streaming",
+  "packages" : [
+    {
+      "commit" : "36e481e70ca02b18828ba02a512d0e621f629d5d",
+      "notes" : "HLS toolkit: parse/build master + media playlists, live subtitles, VOD/live workflows.",
+      "package" : "https://github.com/atelier-socle/swift-hls-kit",
+      "packageName" : "HLSKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/HLSKit/Builder/MasterPlaylistBuilder.swift",
+              "kind" : "symbol",
+              "line" : 24,
+              "note" : "builds master playlists",
+              "permalink" : "https://github.com/atelier-socle/swift-hls-kit/blob/0.6.1/Sources/HLSKit/Builder/MasterPlaylistBuilder.swift#L24",
+              "symbol" : "MasterPlaylistBuilder"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 17"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "pure-Swift playlist tooling could build on Linux; unverified"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/HLSKit/Builder/MasterPlaylistBuilder.swift",
+              "kind" : "symbol",
+              "line" : 24,
+              "note" : "builds master playlists",
+              "permalink" : "https://github.com/atelier-socle/swift-hls-kit/blob/0.6.1/Sources/HLSKit/Builder/MasterPlaylistBuilder.swift#L24",
+              "symbol" : "MasterPlaylistBuilder"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macCatalyst 17"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/HLSKit/Builder/MasterPlaylistBuilder.swift",
+              "kind" : "symbol",
+              "line" : 24,
+              "note" : "builds master playlists",
+              "permalink" : "https://github.com/atelier-socle/swift-hls-kit/blob/0.6.1/Sources/HLSKit/Builder/MasterPlaylistBuilder.swift#L24",
+              "symbol" : "MasterPlaylistBuilder"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 14"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/HLSKit/Builder/MasterPlaylistBuilder.swift",
+              "kind" : "symbol",
+              "line" : 24,
+              "note" : "builds master playlists",
+              "permalink" : "https://github.com/atelier-socle/swift-hls-kit/blob/0.6.1/Sources/HLSKit/Builder/MasterPlaylistBuilder.swift#L24",
+              "symbol" : "MasterPlaylistBuilder"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 17"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/HLSKit/Builder/MasterPlaylistBuilder.swift",
+              "kind" : "symbol",
+              "line" : 24,
+              "note" : "builds master playlists",
+              "permalink" : "https://github.com/atelier-socle/swift-hls-kit/blob/0.6.1/Sources/HLSKit/Builder/MasterPlaylistBuilder.swift#L24",
+              "symbol" : "MasterPlaylistBuilder"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares visionOS 1"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/HLSKit/Builder/MasterPlaylistBuilder.swift",
+              "kind" : "symbol",
+              "line" : 24,
+              "note" : "builds master playlists",
+              "permalink" : "https://github.com/atelier-socle/swift-hls-kit/blob/0.6.1/Sources/HLSKit/Builder/MasterPlaylistBuilder.swift#L24",
+              "symbol" : "MasterPlaylistBuilder"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares watchOS 10"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swift-hls-kit",
+      "version" : "0.6.1"
+    },
+    {
+      "commit" : "2835209970afdaaaf137fd7073d9c0ab2beb2905",
+      "notes" : "HLS playlist parsing/serialization primitives (not a player).",
+      "package" : "https://github.com/fcanas/hlscore",
+      "packageName" : "HLSCore",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Parsing/MasterPlaylistParser.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "note" : "M3U8 master playlist parser",
+              "permalink" : "https://github.com/fcanas/hlscore/blob/0.2.1/Sources/Parsing/MasterPlaylistParser.swift#L28",
+              "symbol" : "parseMasterPlaylist"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "pure-Swift parsing may build on Linux; unverified"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/Parsing/MasterPlaylistParser.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "note" : "M3U8 master playlist parser",
+              "permalink" : "https://github.com/fcanas/hlscore/blob/0.2.1/Sources/Parsing/MasterPlaylistParser.swift#L28",
+              "symbol" : "parseMasterPlaylist"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Parsing/MasterPlaylistParser.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "note" : "M3U8 master playlist parser",
+              "permalink" : "https://github.com/fcanas/hlscore/blob/0.2.1/Sources/Parsing/MasterPlaylistParser.swift#L28",
+              "symbol" : "parseMasterPlaylist"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Parsing/MasterPlaylistParser.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "note" : "M3U8 master playlist parser",
+              "permalink" : "https://github.com/fcanas/hlscore/blob/0.2.1/Sources/Parsing/MasterPlaylistParser.swift#L28",
+              "symbol" : "parseMasterPlaylist"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors (predates it)"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "hlscore",
+      "version" : "0.2.1"
+    },
+    {
+      "commit" : "41291ed4f88aecd8e9dc885693f908ea58888257",
+      "notes" : "Segment-level HLS caching through a local reverse proxy.",
+      "package" : "https://github.com/garynewby/hlsvideocache",
+      "packageName" : "HLSVideoCache",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Source/HLSVideoCache.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "local proxy that caches HLS segments",
+              "permalink" : "https://github.com/garynewby/hlsvideocache/blob/1.0.0/Source/HLSVideoCache.swift#L22",
+              "symbol" : "HLSVideoCache"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "GCDWebServer-based proxy"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Source/HLSVideoCache.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "local proxy that caches HLS segments",
+              "permalink" : "https://github.com/garynewby/hlsvideocache/blob/1.0.0/Source/HLSVideoCache.swift#L22",
+              "symbol" : "HLSVideoCache"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "macOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "hlsvideocache",
+      "version" : "1.0.0"
+    }
+  ]
+}

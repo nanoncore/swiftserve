@@ -1,0 +1,179 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.streaming",
+      "label" : "Audio streaming"
+    },
+    "labeledAt" : "2026-07-02T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Plays audio chunk-by-chunk as it arrives (e.g. TTS streams) — no full download needed.",
+    "package" : {
+      "aliases" : [
+        "mihai8804858/swift-chunked-audio-player"
+      ],
+      "canonicalURL" : "https://github.com/mihai8804858/swift-chunked-audio-player",
+      "commit" : "7a46fa1bfb88c4b4ea47ee656e6b2abd1cd7fed8",
+      "name" : "ChunkedAudioPlayer",
+      "surfaceDigest" : "fnv1a64:fa637ad1655a3b39",
+      "version" : "1.1.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioPlayer.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "streams chunked audio via AudioToolbox as chunks arrive",
+            "package" : null,
+            "symbol" : "AudioPlayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "AudioToolbox is Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioPlayer.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "streams chunked audio via AudioToolbox as chunks arrive",
+            "package" : null,
+            "symbol" : "AudioPlayer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioPlayer.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "streams chunked audio via AudioToolbox as chunks arrive",
+            "package" : null,
+            "symbol" : "AudioPlayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioPlayer.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "streams chunked audio via AudioToolbox as chunks arrive",
+            "package" : null,
+            "symbol" : "AudioPlayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioPlayer.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "streams chunked audio via AudioToolbox as chunks arrive",
+            "package" : null,
+            "symbol" : "AudioPlayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares visionOS 1",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

@@ -1,0 +1,446 @@
+{
+  "aliases" : [
+    "waveform view",
+    "audio visualization",
+    "spectrogram"
+  ],
+  "id" : "audio.waveform-visualization",
+  "label" : "Waveform visualization",
+  "packages" : [
+    {
+      "commit" : "357de1945a36e62a27f74a9b3b8f5e45904659d9",
+      "notes" : "GPU (Metal) waveform rendering. Implemented as an os(macOS)/!os(macOS) split pair of same-named types — each platform claim anchors its own side.",
+      "package" : "https://github.com/audiokit/waveform",
+      "packageName" : "AudioKit Waveform",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "condition" : "!os(macOS)",
+              "file" : "Sources/Waveform/Waveform.swift",
+              "kind" : "symbol",
+              "line" : 68,
+              "note" : "the !os(macOS) side of the split pair",
+              "permalink" : "https://github.com/audiokit/waveform/blob/1.0.3/Sources/Waveform/Waveform.swift#L68",
+              "symbol" : "Waveform"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 14"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "Metal-based rendering"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "condition" : "!os(macOS)",
+              "file" : "Sources/Waveform/Waveform.swift",
+              "kind" : "symbol",
+              "line" : 68,
+              "note" : "the !os(macOS) side of the split pair",
+              "permalink" : "https://github.com/audiokit/waveform/blob/1.0.3/Sources/Waveform/Waveform.swift#L68",
+              "symbol" : "Waveform"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "condition" : "os(macOS)",
+              "file" : "Sources/Waveform/Waveform.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "the os(macOS) side of the split pair",
+              "permalink" : "https://github.com/audiokit/waveform/blob/1.0.3/Sources/Waveform/Waveform.swift#L9",
+              "symbol" : "Waveform"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 11"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "symbol compiles there but tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "waveform",
+      "version" : "1.0.3"
+    },
+    {
+      "commit" : "1a61e8a96c7ee24c3e5abe06dc3334a31fd7571d",
+      "notes" : "SwiftUI visualizations for AudioKit: waveforms, live node output, spectrogram, amplitude.",
+      "package" : "https://github.com/audiokit/audiokitui",
+      "packageName" : "AudioKitUI",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKitUI/Visualizations/AudioWaveform.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "waveform shape view",
+              "permalink" : "https://github.com/audiokit/audiokitui/blob/0.3.7/Sources/AudioKitUI/Visualizations/AudioWaveform.swift#L5",
+              "symbol" : "AudioWaveform"
+            },
+            {
+              "file" : "Sources/AudioKitUI/Visualizations/SpectrogramView.swift",
+              "kind" : "symbol",
+              "line" : 165,
+              "note" : "live spectrogram",
+              "permalink" : "https://github.com/audiokit/audiokitui/blob/0.3.7/Sources/AudioKitUI/Visualizations/SpectrogramView.swift#L165",
+              "symbol" : "SpectrogramView"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "SwiftUI-based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKitUI/Visualizations/AudioWaveform.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "waveform shape view",
+              "permalink" : "https://github.com/audiokit/audiokitui/blob/0.3.7/Sources/AudioKitUI/Visualizations/AudioWaveform.swift#L5",
+              "symbol" : "AudioWaveform"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKitUI/Visualizations/AudioWaveform.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "waveform shape view",
+              "permalink" : "https://github.com/audiokit/audiokitui/blob/0.3.7/Sources/AudioKitUI/Visualizations/AudioWaveform.swift#L5",
+              "symbol" : "AudioWaveform"
+            },
+            {
+              "file" : "Sources/AudioKitUI/Visualizations/SpectrogramView.swift",
+              "kind" : "symbol",
+              "line" : 165,
+              "note" : "live spectrogram",
+              "permalink" : "https://github.com/audiokit/audiokitui/blob/0.3.7/Sources/AudioKitUI/Visualizations/SpectrogramView.swift#L165",
+              "symbol" : "SpectrogramView"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "audiokitui",
+      "version" : "0.3.7"
+    },
+    {
+      "commit" : "00afb7930863b9cc3bd011389d601735e548093c",
+      "notes" : "Renders waveform images and live SwiftUI waveforms from audio files.",
+      "package" : "https://github.com/dmrschmidt/dswaveformimage",
+      "packageName" : "DSWaveformImage",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/DSWaveformImage/WaveformImageDrawer.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "permalink" : "https://github.com/dmrschmidt/dswaveformimage/blob/14.5.0/Sources/DSWaveformImage/WaveformImageDrawer.swift#L6",
+              "symbol" : "WaveformImageDrawer"
+            },
+            {
+              "file" : "Sources/DSWaveformImage/WaveformAnalyzer.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "permalink" : "https://github.com/dmrschmidt/dswaveformimage/blob/14.5.0/Sources/DSWaveformImage/WaveformAnalyzer.swift#L20",
+              "symbol" : "WaveformAnalyzer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "CoreGraphics-based rendering"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/DSWaveformImage/WaveformImageDrawer.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "permalink" : "https://github.com/dmrschmidt/dswaveformimage/blob/14.5.0/Sources/DSWaveformImage/WaveformImageDrawer.swift#L6",
+              "symbol" : "WaveformImageDrawer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/DSWaveformImage/WaveformImageDrawer.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "permalink" : "https://github.com/dmrschmidt/dswaveformimage/blob/14.5.0/Sources/DSWaveformImage/WaveformImageDrawer.swift#L6",
+              "symbol" : "WaveformImageDrawer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "dswaveformimage",
+      "version" : "14.5.0"
+    },
+    {
+      "commit" : "8e7ab7eba27317c0a0aa49de367279375e4c4da2",
+      "notes" : "Drop-in UIView that renders an audio file's waveform, with zoom/scrub.",
+      "package" : "https://github.com/fulldecent/fdwaveformview",
+      "packageName" : "FDWaveformView",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/FDWaveformView/FDWaveformView.swift",
+              "kind" : "symbol",
+              "line" : 7,
+              "note" : "waveform rendering view",
+              "permalink" : "https://github.com/fulldecent/fdwaveformview/blob/5.1.1/Sources/FDWaveformView/FDWaveformView.swift#L7",
+              "symbol" : "FDWaveformView"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "UIKit-based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/FDWaveformView/FDWaveformView.swift",
+              "kind" : "symbol",
+              "line" : 7,
+              "note" : "waveform rendering view",
+              "permalink" : "https://github.com/fulldecent/fdwaveformview/blob/5.1.1/Sources/FDWaveformView/FDWaveformView.swift#L7",
+              "symbol" : "FDWaveformView"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "macOS absent from manifest floors (UIKit view)"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/FDWaveformView/FDWaveformView.swift",
+              "kind" : "symbol",
+              "line" : 7,
+              "note" : "waveform rendering view",
+              "permalink" : "https://github.com/fulldecent/fdwaveformview/blob/5.1.1/Sources/FDWaveformView/FDWaveformView.swift#L7",
+              "symbol" : "FDWaveformView"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares visionOS 1"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "fdwaveformview",
+      "version" : "5.1.1"
+    }
+  ]
+}

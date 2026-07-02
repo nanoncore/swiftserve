@@ -1,0 +1,159 @@
+[
+  {
+    "capability" : {
+      "id" : "speech.stt",
+      "label" : "Speech-to-text"
+    },
+    "labeledAt" : "2026-07-02T14:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "SwiftUI-first speech recognition over SFSpeechRecognizer.",
+    "package" : {
+      "aliases" : [
+        "Cay-Zhang/SwiftSpeech"
+      ],
+      "canonicalURL" : "https://github.com/cay-zhang/swiftspeech",
+      "commit" : "6e41f289f5ccc1751ef5674972d46b48b326c4c6",
+      "name" : "SwiftSpeech",
+      "surfaceDigest" : "fnv1a64:6bee321e704d1f0b",
+      "version" : "v0.9.3"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftSpeech/SwiftSpeech.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : "SwiftUI wrapper over SFSpeechRecognizer",
+            "package" : null,
+            "symbol" : "SwiftSpeech"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "Speech framework is Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftSpeech/SwiftSpeech.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SwiftSpeech"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftSpeech/SwiftSpeech.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SwiftSpeech"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 10.15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "tvOS absent from manifest floors; SFSpeechRecognizer unavailable there",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors (package predates it)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

@@ -1,0 +1,423 @@
+{
+  "capabilities" : [
+    {
+      "aliases" : [
+        "background audio",
+        "play in background"
+      ],
+      "id" : "audio.background-playback",
+      "label" : "Background audio playback"
+    },
+    {
+      "aliases" : [
+        "sound analysis",
+        "audio classification",
+        "sound recognition"
+      ],
+      "id" : "audio.classification",
+      "label" : "Sound classification"
+    },
+    {
+      "aliases" : [
+        "mp3 codec",
+        "lame"
+      ],
+      "id" : "audio.codec.mp3",
+      "label" : "MP3 encoding/decoding"
+    },
+    {
+      "aliases" : [
+        "opus codec"
+      ],
+      "id" : "audio.codec.opus",
+      "label" : "Opus encoding/decoding"
+    },
+    {
+      "aliases" : [
+        "input device",
+        "output device",
+        "audio device"
+      ],
+      "id" : "audio.device-selection",
+      "label" : "Audio device selection"
+    },
+    {
+      "aliases" : [
+        "AEC",
+        "acoustic echo"
+      ],
+      "id" : "audio.echo-cancellation",
+      "label" : "Echo cancellation"
+    },
+    {
+      "aliases" : [
+        "wav",
+        "aiff",
+        "audio file",
+        "audio export"
+      ],
+      "id" : "audio.file-io",
+      "label" : "Audio file reading/writing"
+    },
+    {
+      "aliases" : [
+        "volume meter",
+        "vu meter",
+        "loudness"
+      ],
+      "id" : "audio.metering",
+      "label" : "Audio level metering"
+    },
+    {
+      "aliases" : [
+        "noise suppression",
+        "denoise",
+        "krisp",
+        "background noise removal"
+      ],
+      "id" : "audio.noise-cancellation",
+      "label" : "Noise cancellation"
+    },
+    {
+      "aliases" : [
+        "tuner",
+        "frequency detection"
+      ],
+      "id" : "audio.pitch-detection",
+      "label" : "Pitch detection"
+    },
+    {
+      "aliases" : [
+        "play audio",
+        "sound playback",
+        "audio player"
+      ],
+      "id" : "audio.playback",
+      "label" : "Audio playback"
+    },
+    {
+      "aliases" : [
+        "mic capture",
+        "record audio",
+        "audio capture"
+      ],
+      "id" : "audio.recording",
+      "label" : "Microphone recording"
+    },
+    {
+      "aliases" : [
+        "avaudiosession",
+        "audio routing",
+        "interruption handling"
+      ],
+      "id" : "audio.session-management",
+      "label" : "Audio session management"
+    },
+    {
+      "aliases" : [
+        "3d audio",
+        "ambisonics",
+        "binaural"
+      ],
+      "id" : "audio.spatial",
+      "label" : "Spatial audio",
+      "note" : "As of July 2026 no dedicated Swift package serves spatial audio — we swept the full package index for ambisonics, binaural, HRTF, Atmos, and head-tracking wrappers and found none. Apple's own frameworks are the path: PHASE for game/interactive scenes, AVAudioEnvironmentNode for 3D positioning in AVAudioEngine, and CMHeadphoneMotionManager for head tracking."
+    },
+    {
+      "aliases" : [
+        "stream audio",
+        "radio streaming"
+      ],
+      "id" : "audio.streaming",
+      "label" : "Audio streaming"
+    },
+    {
+      "aliases" : [
+        "dsp",
+        "oscillator",
+        "signal processing",
+        "effects"
+      ],
+      "id" : "audio.synthesis",
+      "label" : "Audio synthesis / DSP"
+    },
+    {
+      "aliases" : [
+        "waveform view",
+        "audio visualization",
+        "spectrogram"
+      ],
+      "id" : "audio.waveform-visualization",
+      "label" : "Waveform visualization"
+    },
+    {
+      "aliases" : [
+        "remote images",
+        "image downloading",
+        "url image"
+      ],
+      "id" : "image.async-loading",
+      "label" : "Async image loading"
+    },
+    {
+      "aliases" : [
+        "disk cache",
+        "memory cache",
+        "image cache"
+      ],
+      "id" : "image.caching",
+      "label" : "Image caching"
+    },
+    {
+      "aliases" : [
+        "image resizing",
+        "thumbnails",
+        "image processing"
+      ],
+      "id" : "image.downsampling",
+      "label" : "Downsampling / resizing"
+    },
+    {
+      "aliases" : [
+        "gif",
+        "animated images",
+        "apng"
+      ],
+      "id" : "image.gif",
+      "label" : "Animated GIF playback"
+    },
+    {
+      "aliases" : [
+        "image preloading",
+        "prefetch"
+      ],
+      "id" : "image.prefetching",
+      "label" : "Prefetching"
+    },
+    {
+      "aliases" : [
+        "progressive jpeg",
+        "blurhash",
+        "placeholder"
+      ],
+      "id" : "image.progressive",
+      "label" : "Progressive loading"
+    },
+    {
+      "aliases" : [
+        "svg",
+        "vector images"
+      ],
+      "id" : "image.svg",
+      "label" : "SVG rendering"
+    },
+    {
+      "aliases" : [
+        "webp"
+      ],
+      "id" : "image.webp",
+      "label" : "WebP decoding"
+    },
+    {
+      "aliases" : [
+        "lock screen controls",
+        "control center",
+        "mpnowplaying"
+      ],
+      "id" : "media.now-playing",
+      "label" : "Now-playing / remote controls"
+    },
+    {
+      "aliases" : [
+        "hls",
+        "http live streaming",
+        "m3u8"
+      ],
+      "id" : "media.streaming.hls",
+      "label" : "HLS streaming"
+    },
+    {
+      "aliases" : [
+        "rtmp",
+        "live broadcast"
+      ],
+      "id" : "media.streaming.rtmp",
+      "label" : "RTMP streaming"
+    },
+    {
+      "aliases" : [
+        "webrtc",
+        "rtc",
+        "real-time communication"
+      ],
+      "id" : "media.streaming.webrtc",
+      "label" : "WebRTC real-time streaming"
+    },
+    {
+      "aliases" : [
+        "midi file",
+        "smf",
+        "standard midi file",
+        "midi parsing"
+      ],
+      "id" : "midi.file",
+      "label" : "MIDI file read/write"
+    },
+    {
+      "aliases" : [
+        "midi",
+        "coremidi"
+      ],
+      "id" : "midi.io",
+      "label" : "MIDI input/output"
+    },
+    {
+      "aliases" : [
+        "background download",
+        "background upload"
+      ],
+      "id" : "network.background-transfer",
+      "label" : "Background transfers"
+    },
+    {
+      "aliases" : [
+        "ssl pinning",
+        "server trust",
+        "tls pinning"
+      ],
+      "id" : "network.certificate-pinning",
+      "label" : "Certificate pinning"
+    },
+    {
+      "aliases" : [
+        "http requests",
+        "rest client",
+        "networking"
+      ],
+      "id" : "network.http-client",
+      "label" : "HTTP client"
+    },
+    {
+      "aliases" : [
+        "network debugging",
+        "request logging",
+        "network inspector"
+      ],
+      "id" : "network.logging",
+      "label" : "Network logging / inspection"
+    },
+    {
+      "aliases" : [
+        "multipart form data",
+        "file upload"
+      ],
+      "id" : "network.multipart-upload",
+      "label" : "Multipart upload"
+    },
+    {
+      "aliases" : [
+        "connectivity monitoring",
+        "network status",
+        "offline detection"
+      ],
+      "id" : "network.reachability",
+      "label" : "Network reachability"
+    },
+    {
+      "aliases" : [
+        "network mocking",
+        "stub requests"
+      ],
+      "id" : "network.request-mocking",
+      "label" : "Request stubbing / mocking"
+    },
+    {
+      "aliases" : [
+        "retry policy",
+        "exponential backoff"
+      ],
+      "id" : "network.retry",
+      "label" : "Request retry / backoff"
+    },
+    {
+      "aliases" : [
+        "sse",
+        "eventsource",
+        "event stream"
+      ],
+      "id" : "network.server-sent-events",
+      "label" : "Server-sent events"
+    },
+    {
+      "aliases" : [
+        "websocket",
+        "ws",
+        "socket"
+      ],
+      "id" : "network.websockets",
+      "label" : "WebSockets"
+    },
+    {
+      "aliases" : [
+        "transcription",
+        "speech recognition",
+        "whisper",
+        "asr"
+      ],
+      "id" : "speech.stt",
+      "label" : "Speech-to-text"
+    },
+    {
+      "aliases" : [
+        "voice synthesis",
+        "speak text"
+      ],
+      "id" : "speech.tts",
+      "label" : "Text-to-speech"
+    },
+    {
+      "aliases" : [
+        "video chat",
+        "video conference"
+      ],
+      "id" : "video.calling",
+      "label" : "Video calling"
+    },
+    {
+      "aliases" : [
+        "camera",
+        "video recording"
+      ],
+      "id" : "video.capture",
+      "label" : "Camera capture"
+    },
+    {
+      "aliases" : [
+        "video player",
+        "play video"
+      ],
+      "id" : "video.playback",
+      "label" : "Video playback"
+    },
+    {
+      "aliases" : [
+        "screen capture",
+        "screen broadcast",
+        "replaykit"
+      ],
+      "id" : "video.screen-sharing",
+      "label" : "Screen sharing"
+    },
+    {
+      "aliases" : [
+        "voip",
+        "voice chat",
+        "audio call"
+      ],
+      "id" : "voice.calling",
+      "label" : "Voice calling"
+    }
+  ],
+  "domain" : "audio+images+networking",
+  "taxonomyVersion" : 1
+}

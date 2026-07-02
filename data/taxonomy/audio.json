@@ -1,0 +1,270 @@
+{
+  "_comment": "The governed capability vocabulary for the audio/media domain. Records may only claim ids that exist here (validator V01). Labeling proposes additions; the curator approves by committing them. Aliases feed search.",
+  "taxonomyVersion": 1,
+  "domain": "audio",
+  "capabilities": [
+    {
+      "id": "audio.background-playback",
+      "label": "Background audio playback",
+      "aliases": [
+        "background audio",
+        "play in background"
+      ]
+    },
+    {
+      "id": "audio.classification",
+      "label": "Sound classification",
+      "aliases": [
+        "sound analysis",
+        "audio classification",
+        "sound recognition"
+      ]
+    },
+    {
+      "id": "audio.codec.mp3",
+      "label": "MP3 encoding/decoding",
+      "aliases": [
+        "mp3 codec",
+        "lame"
+      ]
+    },
+    {
+      "id": "audio.codec.opus",
+      "label": "Opus encoding/decoding",
+      "aliases": [
+        "opus codec"
+      ]
+    },
+    {
+      "id": "audio.device-selection",
+      "label": "Audio device selection",
+      "aliases": [
+        "input device",
+        "output device",
+        "audio device"
+      ]
+    },
+    {
+      "id": "audio.echo-cancellation",
+      "label": "Echo cancellation",
+      "aliases": [
+        "AEC",
+        "acoustic echo"
+      ]
+    },
+    {
+      "id": "audio.file-io",
+      "label": "Audio file reading/writing",
+      "aliases": [
+        "wav",
+        "aiff",
+        "audio file",
+        "audio export"
+      ]
+    },
+    {
+      "id": "audio.metering",
+      "label": "Audio level metering",
+      "aliases": [
+        "volume meter",
+        "vu meter",
+        "loudness"
+      ]
+    },
+    {
+      "id": "audio.noise-cancellation",
+      "label": "Noise cancellation",
+      "aliases": [
+        "noise suppression",
+        "denoise",
+        "krisp",
+        "background noise removal"
+      ]
+    },
+    {
+      "id": "audio.pitch-detection",
+      "label": "Pitch detection",
+      "aliases": [
+        "tuner",
+        "frequency detection"
+      ]
+    },
+    {
+      "id": "audio.playback",
+      "label": "Audio playback",
+      "aliases": [
+        "play audio",
+        "sound playback",
+        "audio player"
+      ]
+    },
+    {
+      "id": "audio.recording",
+      "label": "Microphone recording",
+      "aliases": [
+        "mic capture",
+        "record audio",
+        "audio capture"
+      ]
+    },
+    {
+      "id": "audio.session-management",
+      "label": "Audio session management",
+      "aliases": [
+        "avaudiosession",
+        "audio routing",
+        "interruption handling"
+      ]
+    },
+    {
+      "id": "audio.spatial",
+      "label": "Spatial audio",
+      "aliases": [
+        "3d audio",
+        "ambisonics",
+        "binaural"
+      ],
+      "note": "As of July 2026 no dedicated Swift package serves spatial audio — we swept the full package index for ambisonics, binaural, HRTF, Atmos, and head-tracking wrappers and found none. Apple's own frameworks are the path: PHASE for game/interactive scenes, AVAudioEnvironmentNode for 3D positioning in AVAudioEngine, and CMHeadphoneMotionManager for head tracking."
+    },
+    {
+      "id": "audio.streaming",
+      "label": "Audio streaming",
+      "aliases": [
+        "stream audio",
+        "radio streaming"
+      ]
+    },
+    {
+      "id": "audio.synthesis",
+      "label": "Audio synthesis / DSP",
+      "aliases": [
+        "dsp",
+        "oscillator",
+        "signal processing",
+        "effects"
+      ]
+    },
+    {
+      "id": "audio.waveform-visualization",
+      "label": "Waveform visualization",
+      "aliases": [
+        "waveform view",
+        "audio visualization",
+        "spectrogram"
+      ]
+    },
+    {
+      "id": "media.now-playing",
+      "label": "Now-playing / remote controls",
+      "aliases": [
+        "lock screen controls",
+        "control center",
+        "mpnowplaying"
+      ]
+    },
+    {
+      "id": "media.streaming.hls",
+      "label": "HLS streaming",
+      "aliases": [
+        "hls",
+        "http live streaming",
+        "m3u8"
+      ]
+    },
+    {
+      "id": "media.streaming.rtmp",
+      "label": "RTMP streaming",
+      "aliases": [
+        "rtmp",
+        "live broadcast"
+      ]
+    },
+    {
+      "id": "media.streaming.webrtc",
+      "label": "WebRTC real-time streaming",
+      "aliases": [
+        "webrtc",
+        "rtc",
+        "real-time communication"
+      ]
+    },
+    {
+      "id": "midi.file",
+      "label": "MIDI file read/write",
+      "aliases": [
+        "midi file",
+        "smf",
+        "standard midi file",
+        "midi parsing"
+      ]
+    },
+    {
+      "id": "midi.io",
+      "label": "MIDI input/output",
+      "aliases": [
+        "midi",
+        "coremidi"
+      ]
+    },
+    {
+      "id": "speech.stt",
+      "label": "Speech-to-text",
+      "aliases": [
+        "transcription",
+        "speech recognition",
+        "whisper",
+        "asr"
+      ]
+    },
+    {
+      "id": "speech.tts",
+      "label": "Text-to-speech",
+      "aliases": [
+        "voice synthesis",
+        "speak text"
+      ]
+    },
+    {
+      "id": "video.calling",
+      "label": "Video calling",
+      "aliases": [
+        "video chat",
+        "video conference"
+      ]
+    },
+    {
+      "id": "video.capture",
+      "label": "Camera capture",
+      "aliases": [
+        "camera",
+        "video recording"
+      ]
+    },
+    {
+      "id": "video.playback",
+      "label": "Video playback",
+      "aliases": [
+        "video player",
+        "play video"
+      ]
+    },
+    {
+      "id": "video.screen-sharing",
+      "label": "Screen sharing",
+      "aliases": [
+        "screen capture",
+        "screen broadcast",
+        "replaykit"
+      ]
+    },
+    {
+      "id": "voice.calling",
+      "label": "Voice calling",
+      "aliases": [
+        "voip",
+        "voice chat",
+        "audio call"
+      ]
+    }
+  ]
+}

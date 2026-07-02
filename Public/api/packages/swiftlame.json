@@ -1,0 +1,159 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.codec.mp3",
+      "label" : "MP3 encoding/decoding"
+    },
+    "labeledAt" : "2026-07-02T17:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "MP3 ENCODING via LAME (35 C files unparsed — the codec core is a v1 blind spot). Decoding isn't the target: AVFoundation already decodes MP3.",
+    "package" : {
+      "aliases" : [
+        "hidden-spectrum/SwiftLAME"
+      ],
+      "canonicalURL" : "https://github.com/hidden-spectrum/swiftlame",
+      "commit" : "45d1b021c2bd2bbd38b9669934c0584cda0d1b6b",
+      "name" : "SwiftLAME",
+      "surfaceDigest" : "fnv1a64:1e5af9985c32bc42",
+      "version" : "0.1.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftLAME/SwiftLameEncoder.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "async PCM→MP3 encoding over LAME",
+            "package" : null,
+            "symbol" : "SwiftLameEncoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "LAME itself builds on Linux; this wrapper unverified",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftLAME/SwiftLameEncoder.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "async PCM→MP3 encoding over LAME",
+            "package" : null,
+            "symbol" : "SwiftLameEncoder"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftLAME/SwiftLameEncoder.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "async PCM→MP3 encoding over LAME",
+            "package" : null,
+            "symbol" : "SwiftLameEncoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "tvOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

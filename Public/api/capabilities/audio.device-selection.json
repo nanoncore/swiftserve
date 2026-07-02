@@ -1,0 +1,201 @@
+{
+  "aliases" : [
+    "input device",
+    "output device",
+    "audio device"
+  ],
+  "id" : "audio.device-selection",
+  "label" : "Audio device selection",
+  "packages" : [
+    {
+      "commit" : "d927963dcfbb819da6ed6f17b83f17ffbc689280",
+      "notes" : "Swift model of the CoreAudio hardware abstraction layer: enumerate devices, streams, controls.",
+      "package" : "https://github.com/sbooth/caaudiohardware",
+      "packageName" : "CAAudioHardware",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "CoreAudio HAL is a macOS API family; manifest declares macOS only — no source fence though"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "CoreAudio is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/CAAudioHardware/AudioDevice.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "HAL device object",
+              "permalink" : "https://github.com/sbooth/caaudiohardware/blob/0.7.1/Sources/CAAudioHardware/AudioDevice.swift#L15",
+              "symbol" : "AudioDevice"
+            },
+            {
+              "file" : "Sources/CAAudioHardware/AudioSystem.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "note" : "system-object entry point",
+              "permalink" : "https://github.com/sbooth/caaudiohardware/blob/0.7.1/Sources/CAAudioHardware/AudioSystem.swift#L20",
+              "symbol" : "AudioSystem"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.15 only"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS only"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "caaudiohardware",
+      "version" : "0.7.1"
+    },
+    {
+      "commit" : "ebe07274a6cd4c77f390b2726b9ebfd85ea5cf13",
+      "notes" : "Device enumeration/selection + status events over the CoreAudio HAL.",
+      "package" : "https://github.com/ryanfrancesconi/spfk-audio-hardware",
+      "packageName" : "SPFKAudioHardware",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "CoreAudio HAL is macOS-only in practice; manifest declares macOS only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "CoreAudio is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/SPFKAudioHardware/Public/AudioObject/AudioDevice/AudioDevice.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "CoreAudio device object",
+              "permalink" : "https://github.com/ryanfrancesconi/spfk-audio-hardware/blob/5.2.0/Sources/SPFKAudioHardware/Public/AudioObject/AudioDevice/AudioDevice.swift#L11",
+              "symbol" : "AudioDevice"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 13 only"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS only"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "spfk-audio-hardware",
+      "version" : "5.2.0"
+    }
+  ]
+}

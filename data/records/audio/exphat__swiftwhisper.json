@@ -1,0 +1,139 @@
+[
+  {
+    "capability" : {
+      "id" : "speech.stt",
+      "label" : "Speech-to-text"
+    },
+    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "whisper.cpp bindings (6 ObjC/C files unparsed — the C core is a v1 blind spot).",
+    "package" : {
+      "aliases" : [
+        "exPHAT/SwiftWhisper"
+      ],
+      "canonicalURL" : "https://github.com/exphat/swiftwhisper",
+      "commit" : "a192004db08de7c6eaa169eede77f1625e7d23fb",
+      "name" : "SwiftWhisper",
+      "surfaceDigest" : "fnv1a64:f9cde65626da4e40",
+      "version" : "1.2.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftWhisper/Whisper.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : "whisper.cpp transcription",
+            "package" : null,
+            "symbol" : "Whisper"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "whisper.cpp itself builds on Linux; this wrapper unverified",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftWhisper/Whisper.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : "whisper.cpp transcription",
+            "package" : null,
+            "symbol" : "Whisper"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftWhisper/Whisper.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : "whisper.cpp transcription",
+            "package" : null,
+            "symbol" : "Whisper"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "empty manifest; whisper.cpp may build but intent unstated",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "empty manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "memory constraints make whisper.cpp doubtful; nothing proven",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

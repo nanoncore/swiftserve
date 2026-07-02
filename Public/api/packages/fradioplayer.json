@@ -1,0 +1,169 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.streaming",
+      "label" : "Audio streaming"
+    },
+    "labeledAt" : "2026-07-02T14:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Internet-radio streaming over AVPlayer with metadata (artist/track) parsing.",
+    "package" : {
+      "aliases" : [
+        "fethica/FRadioPlayer"
+      ],
+      "canonicalURL" : "https://github.com/fethica/fradioplayer",
+      "commit" : "243cd9246b79a186c39b3c53dbe725c8c01bab59",
+      "name" : "FRadioPlayer",
+      "surfaceDigest" : "fnv1a64:e4d794912a7a7e62",
+      "version" : "0.2.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FRadioPlayer/FRadioPlayer.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "the streaming radio player",
+            "package" : null,
+            "symbol" : "FRadioPlayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "AVPlayer-based",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FRadioPlayer/FRadioPlayer.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "the streaming radio player",
+            "package" : null,
+            "symbol" : "FRadioPlayer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FRadioPlayer/FRadioPlayer.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "the streaming radio player",
+            "package" : null,
+            "symbol" : "FRadioPlayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 10.12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FRadioPlayer/FRadioPlayer.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "the streaming radio player",
+            "package" : null,
+            "symbol" : "FRadioPlayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 10",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

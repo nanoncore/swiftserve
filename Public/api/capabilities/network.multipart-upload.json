@@ -1,0 +1,124 @@
+{
+  "aliases" : [
+    "multipart form data",
+    "file upload"
+  ],
+  "id" : "network.multipart-upload",
+  "label" : "Multipart upload",
+  "packages" : [
+    {
+      "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
+      "notes" : "First-class multipart form data encoding + streaming upload.",
+      "package" : "https://github.com/alamofire/alamofire",
+      "packageName" : "Alamofire",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Features/MultipartFormData.swift",
+              "kind" : "symbol",
+              "line" : 45,
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/MultipartFormData.swift#L45",
+              "symbol" : "MultipartFormData"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "Alamofire is URLSession-based; Linux is explicitly unsupported per the project — but no source fence proves it"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Source/Features/MultipartFormData.swift",
+              "kind" : "symbol",
+              "line" : 45,
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/MultipartFormData.swift#L45",
+              "symbol" : "MultipartFormData"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Features/MultipartFormData.swift",
+              "kind" : "symbol",
+              "line" : 45,
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/MultipartFormData.swift#L45",
+              "symbol" : "MultipartFormData"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.7999999999999999,
+          "evidence" : [
+            {
+              "file" : "Source/Features/MultipartFormData.swift",
+              "kind" : "symbol",
+              "line" : 45,
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/MultipartFormData.swift#L45",
+              "symbol" : "MultipartFormData"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.7999999999999999,
+          "evidence" : [
+            {
+              "file" : "Source/Features/MultipartFormData.swift",
+              "kind" : "symbol",
+              "line" : 45,
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/MultipartFormData.swift#L45",
+              "symbol" : "MultipartFormData"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares watchOS 4"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "alamofire",
+      "version" : "5.12.0"
+    }
+  ]
+}

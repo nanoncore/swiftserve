@@ -1,0 +1,199 @@
+[
+  {
+    "capability" : {
+      "id" : "media.streaming.hls",
+      "label" : "HLS streaming"
+    },
+    "labeledAt" : "2026-07-02T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "HLS toolkit: parse/build master + media playlists, live subtitles, VOD/live workflows.",
+    "package" : {
+      "aliases" : [
+        "atelier-socle/swift-hls-kit"
+      ],
+      "canonicalURL" : "https://github.com/atelier-socle/swift-hls-kit",
+      "commit" : "36e481e70ca02b18828ba02a512d0e621f629d5d",
+      "name" : "HLSKit",
+      "surfaceDigest" : "fnv1a64:c7c8f41235a79585",
+      "version" : "0.6.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HLSKit/Builder/MasterPlaylistBuilder.swift",
+            "kind" : "symbol",
+            "line" : 24,
+            "note" : "builds master playlists",
+            "package" : null,
+            "symbol" : "MasterPlaylistBuilder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 17",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "pure-Swift playlist tooling could build on Linux; unverified",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HLSKit/Builder/MasterPlaylistBuilder.swift",
+            "kind" : "symbol",
+            "line" : 24,
+            "note" : "builds master playlists",
+            "package" : null,
+            "symbol" : "MasterPlaylistBuilder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macCatalyst 17",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HLSKit/Builder/MasterPlaylistBuilder.swift",
+            "kind" : "symbol",
+            "line" : 24,
+            "note" : "builds master playlists",
+            "package" : null,
+            "symbol" : "MasterPlaylistBuilder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 14",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HLSKit/Builder/MasterPlaylistBuilder.swift",
+            "kind" : "symbol",
+            "line" : 24,
+            "note" : "builds master playlists",
+            "package" : null,
+            "symbol" : "MasterPlaylistBuilder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 17",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HLSKit/Builder/MasterPlaylistBuilder.swift",
+            "kind" : "symbol",
+            "line" : 24,
+            "note" : "builds master playlists",
+            "package" : null,
+            "symbol" : "MasterPlaylistBuilder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares visionOS 1",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HLSKit/Builder/MasterPlaylistBuilder.swift",
+            "kind" : "symbol",
+            "line" : 24,
+            "note" : "builds master playlists",
+            "package" : null,
+            "symbol" : "MasterPlaylistBuilder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares watchOS 10",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

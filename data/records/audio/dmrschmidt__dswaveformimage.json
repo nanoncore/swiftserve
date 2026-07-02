@@ -1,0 +1,169 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.waveform-visualization",
+      "label" : "Waveform visualization"
+    },
+    "labeledAt" : "2026-07-02T14:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Renders waveform images and live SwiftUI waveforms from audio files.",
+    "package" : {
+      "aliases" : [
+        "dmrschmidt/DSWaveformImage"
+      ],
+      "canonicalURL" : "https://github.com/dmrschmidt/dswaveformimage",
+      "commit" : "00afb7930863b9cc3bd011389d601735e548093c",
+      "name" : "DSWaveformImage",
+      "surfaceDigest" : "fnv1a64:3d5bce46f4c88b3c",
+      "version" : "14.5.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/DSWaveformImage/WaveformImageDrawer.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : null,
+            "package" : null,
+            "symbol" : "WaveformImageDrawer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/DSWaveformImage/WaveformAnalyzer.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : null,
+            "package" : null,
+            "symbol" : "WaveformAnalyzer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "CoreGraphics-based rendering",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/DSWaveformImage/WaveformImageDrawer.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : null,
+            "package" : null,
+            "symbol" : "WaveformImageDrawer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/DSWaveformImage/WaveformImageDrawer.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : null,
+            "package" : null,
+            "symbol" : "WaveformImageDrawer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "tvOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

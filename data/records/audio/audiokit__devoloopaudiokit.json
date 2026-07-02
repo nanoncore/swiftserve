@@ -1,0 +1,219 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.synthesis",
+      "label" : "Audio synthesis / DSP"
+    },
+    "labeledAt" : "2026-07-02T17:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Guitar-oriented DSP processors.",
+    "package" : {
+      "aliases" : [
+        "audiokit/devoloopaudiokit"
+      ],
+      "canonicalURL" : "https://github.com/audiokit/devoloopaudiokit",
+      "commit" : "3dfb80b2ee280c5edb19b2e4e340142521fcafdf",
+      "name" : "DevoloopAudioKit",
+      "surfaceDigest" : "fnv1a64:5bf67af6a57f555a",
+      "version" : "5.5.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/DevoloopAudioKit/RhinoGuitarProcessor.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : "guitar amp/distortion",
+            "package" : null,
+            "symbol" : "RhinoGuitarProcessor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/DevoloopAudioKit/DynaRageCompressor.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "compressor",
+            "package" : null,
+            "symbol" : "DynaRageCompressor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "Apple-frameworks based",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/DevoloopAudioKit/RhinoGuitarProcessor.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : "guitar amp/distortion",
+            "package" : null,
+            "symbol" : "RhinoGuitarProcessor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/DevoloopAudioKit/DynaRageCompressor.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "compressor",
+            "package" : null,
+            "symbol" : "DynaRageCompressor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macCatalyst",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/DevoloopAudioKit/RhinoGuitarProcessor.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : "guitar amp/distortion",
+            "package" : null,
+            "symbol" : "RhinoGuitarProcessor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/DevoloopAudioKit/DynaRageCompressor.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "compressor",
+            "package" : null,
+            "symbol" : "DynaRageCompressor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/DevoloopAudioKit/RhinoGuitarProcessor.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : "guitar amp/distortion",
+            "package" : null,
+            "symbol" : "RhinoGuitarProcessor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/DevoloopAudioKit/DynaRageCompressor.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "compressor",
+            "package" : null,
+            "symbol" : "DynaRageCompressor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

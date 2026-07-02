@@ -1,0 +1,243 @@
+{
+  "aliases" : [
+    "image preloading",
+    "prefetch"
+  ],
+  "id" : "image.prefetching",
+  "label" : "Prefetching",
+  "packages" : [
+    {
+      "commit" : "63a8fcbd6621340a2410bc3e9575ac97058615f4",
+      "package" : "https://github.com/kean/nuke",
+      "packageName" : "Nuke",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Nuke/Prefetching/ImagePrefetcher.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "permalink" : "https://github.com/kean/nuke/blob/13.0.6/Sources/Nuke/Prefetching/ImagePrefetcher.swift#L14",
+              "symbol" : "ImagePrefetcher"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "Apple imaging stacks only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Nuke/Prefetching/ImagePrefetcher.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "permalink" : "https://github.com/kean/nuke/blob/13.0.6/Sources/Nuke/Prefetching/ImagePrefetcher.swift#L14",
+              "symbol" : "ImagePrefetcher"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Nuke/Prefetching/ImagePrefetcher.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "permalink" : "https://github.com/kean/nuke/blob/13.0.6/Sources/Nuke/Prefetching/ImagePrefetcher.swift#L14",
+              "symbol" : "ImagePrefetcher"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Nuke/Prefetching/ImagePrefetcher.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "permalink" : "https://github.com/kean/nuke/blob/13.0.6/Sources/Nuke/Prefetching/ImagePrefetcher.swift#L14",
+              "symbol" : "ImagePrefetcher"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Nuke/Prefetching/ImagePrefetcher.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "permalink" : "https://github.com/kean/nuke/blob/13.0.6/Sources/Nuke/Prefetching/ImagePrefetcher.swift#L14",
+              "symbol" : "ImagePrefetcher"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares visionOS 1"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Nuke/Prefetching/ImagePrefetcher.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "permalink" : "https://github.com/kean/nuke/blob/13.0.6/Sources/Nuke/Prefetching/ImagePrefetcher.swift#L14",
+              "symbol" : "ImagePrefetcher"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares watchOS 8"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "nuke",
+      "version" : "13.0.6"
+    },
+    {
+      "commit" : "ac632bd26a1c00f139ff62fd01806f21cf67325e",
+      "package" : "https://github.com/onevcat/kingfisher",
+      "packageName" : "Kingfisher",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Networking/ImagePrefetcher.swift",
+              "kind" : "symbol",
+              "line" : 75,
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Networking/ImagePrefetcher.swift#L75",
+              "symbol" : "ImagePrefetcher"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "Apple imaging stacks only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Networking/ImagePrefetcher.swift",
+              "kind" : "symbol",
+              "line" : 75,
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Networking/ImagePrefetcher.swift#L75",
+              "symbol" : "ImagePrefetcher"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Networking/ImagePrefetcher.swift",
+              "kind" : "symbol",
+              "line" : 75,
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Networking/ImagePrefetcher.swift#L75",
+              "symbol" : "ImagePrefetcher"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.7999999999999999,
+          "evidence" : [
+            {
+              "file" : "Sources/Networking/ImagePrefetcher.swift",
+              "kind" : "symbol",
+              "line" : 75,
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Networking/ImagePrefetcher.swift#L75",
+              "symbol" : "ImagePrefetcher"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors at this tag"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.7999999999999999,
+          "evidence" : [
+            {
+              "file" : "Sources/Networking/ImagePrefetcher.swift",
+              "kind" : "symbol",
+              "line" : 75,
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Networking/ImagePrefetcher.swift#L75",
+              "symbol" : "ImagePrefetcher"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares watchOS 6"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "kingfisher",
+      "version" : "8.10.0"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "aliases" : [
+    "network debugging",
+    "request logging",
+    "network inspector"
+  ],
+  "id" : "network.logging",
+  "label" : "Network logging / inspection",
+  "packages" : [
+    {
+      "commit" : "94b92731d370c129bb771e9c18f69b0a44ccca5c",
+      "notes" : "Persistent URLSession logging (LoggerStore) with an on-device inspector UI.",
+      "package" : "https://github.com/kean/pulse",
+      "packageName" : "Pulse",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Pulse/NetworkLogger/NetworkLogger.swift",
+              "kind" : "symbol",
+              "line" : 12,
+              "permalink" : "https://github.com/kean/pulse/blob/5.2.3/Sources/Pulse/NetworkLogger/NetworkLogger.swift#L12",
+              "symbol" : "NetworkLogger"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "UI companion is Apple-only; core store unverified on Linux"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Pulse/NetworkLogger/NetworkLogger.swift",
+              "kind" : "symbol",
+              "line" : 12,
+              "permalink" : "https://github.com/kean/pulse/blob/5.2.3/Sources/Pulse/NetworkLogger/NetworkLogger.swift#L12",
+              "symbol" : "NetworkLogger"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Pulse/NetworkLogger/NetworkLogger.swift",
+              "kind" : "symbol",
+              "line" : 12,
+              "permalink" : "https://github.com/kean/pulse/blob/5.2.3/Sources/Pulse/NetworkLogger/NetworkLogger.swift#L12",
+              "symbol" : "NetworkLogger"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Pulse/NetworkLogger/NetworkLogger.swift",
+              "kind" : "symbol",
+              "line" : 12,
+              "permalink" : "https://github.com/kean/pulse/blob/5.2.3/Sources/Pulse/NetworkLogger/NetworkLogger.swift#L12",
+              "symbol" : "NetworkLogger"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Pulse/NetworkLogger/NetworkLogger.swift",
+              "kind" : "symbol",
+              "line" : 12,
+              "permalink" : "https://github.com/kean/pulse/blob/5.2.3/Sources/Pulse/NetworkLogger/NetworkLogger.swift#L12",
+              "symbol" : "NetworkLogger"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares visionOS 1"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Pulse/NetworkLogger/NetworkLogger.swift",
+              "kind" : "symbol",
+              "line" : 12,
+              "permalink" : "https://github.com/kean/pulse/blob/5.2.3/Sources/Pulse/NetworkLogger/NetworkLogger.swift#L12",
+              "symbol" : "NetworkLogger"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares watchOS 9"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "pulse",
+      "version" : "5.2.3"
+    }
+  ]
+}

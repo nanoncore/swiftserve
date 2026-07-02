@@ -1,0 +1,159 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.noise-cancellation",
+      "label" : "Noise cancellation"
+    },
+    "labeledAt" : "2026-07-02T17:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "The founding-incident package. The Swift surface is a thin wrapper — the real fence lives in the KrispNoiseFilter.xcframework binary (confidence capped accordingly). Requires LiveKit Cloud.",
+    "package" : {
+      "aliases" : [
+        "livekit/swift-krisp-noise-filter"
+      ],
+      "canonicalURL" : "https://github.com/livekit/swift-krisp-noise-filter",
+      "commit" : "c12a41f2afc95ee67994faf2ea7c87cde6d65cc6",
+      "name" : "LiveKitKrispNoiseFilter",
+      "surfaceDigest" : "fnv1a64:68d6d143c2807c4e",
+      "version" : "0.0.8"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKitKrispNoiseFilter/LiveKitKrispNoiseFilter.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : "Krisp audio processor for LiveKit tracks",
+            "package" : null,
+            "symbol" : "LiveKitKrispNoiseFilter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "Krisp binary is Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "binary xcframework slices decide; Catalyst coverage unverified",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKitKrispNoiseFilter/LiveKitKrispNoiseFilter.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : "Krisp audio processor for LiveKit tracks",
+            "package" : null,
+            "symbol" : "LiveKitKrispNoiseFilter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 10.15 — added at 0.0.5; iOS-only before that",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "tvOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

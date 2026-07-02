@@ -1,0 +1,114 @@
+{
+  "aliases" : [
+    "volume meter",
+    "vu meter",
+    "loudness"
+  ],
+  "id" : "audio.metering",
+  "label" : "Audio level metering",
+  "packages" : [
+    {
+      "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+      "notes" : "AmplitudeTap/FFTTap give live level + spectrum metering on any node.",
+      "package" : "https://github.com/audiokit/audiokit",
+      "packageName" : "AudioKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKit/Taps/AmplitudeTap.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "note" : "RMS/peak amplitude per buffer",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/Taps/AmplitudeTap.swift#L8",
+              "symbol" : "AmplitudeTap"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVAudioEngine-based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKit/Taps/AmplitudeTap.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "note" : "RMS/peak amplitude per buffer",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/Taps/AmplitudeTap.swift#L8",
+              "symbol" : "AmplitudeTap"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKit/Taps/AmplitudeTap.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "note" : "RMS/peak amplitude per buffer",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/Taps/AmplitudeTap.swift#L8",
+              "symbol" : "AmplitudeTap"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKit/Taps/AmplitudeTap.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "note" : "RMS/peak amplitude per buffer",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/Taps/AmplitudeTap.swift#L8",
+              "symbol" : "AmplitudeTap"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKit/Taps/AmplitudeTap.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "note" : "RMS/peak amplitude per buffer",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/Taps/AmplitudeTap.swift#L8",
+              "symbol" : "AmplitudeTap"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "audiokit",
+      "version" : "5.7.2"
+    }
+  ]
+}

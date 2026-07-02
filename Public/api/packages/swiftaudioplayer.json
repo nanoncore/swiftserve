@@ -1,0 +1,159 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.streaming",
+      "label" : "Audio streaming"
+    },
+    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Streams + saves remote audio via AVAudioEngine, with EQ/effects while streaming.",
+    "package" : {
+      "aliases" : [
+        "tanhakabir/SwiftAudioPlayer"
+      ],
+      "canonicalURL" : "https://github.com/tanhakabir/swiftaudioplayer",
+      "commit" : "2fdfc62ce9f5d8b818ee1b2a9ac061fce4f64af9",
+      "name" : "SwiftAudioPlayer",
+      "surfaceDigest" : "fnv1a64:87fa5a71ecf47a56",
+      "version" : "7.6.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/SAPlayer.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : "streams remote audio with real-time effects",
+            "package" : null,
+            "symbol" : "SAPlayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 10",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "AVAudioEngine-based",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/SAPlayer.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : "streams remote audio with real-time effects",
+            "package" : null,
+            "symbol" : "SAPlayer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "macOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "tvOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/SAPlayer.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : "streams remote audio with real-time effects",
+            "package" : null,
+            "symbol" : "SAPlayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 10",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

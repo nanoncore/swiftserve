@@ -1,0 +1,1527 @@
+{
+  "capabilities" : [
+    {
+      "aliases" : [
+        "background audio",
+        "play in background"
+      ],
+      "domain" : "audio",
+      "id" : "audio.background-playback",
+      "label" : "Background audio playback",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 0,
+        "tvOS" : 0,
+        "visionOS" : 0,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "sound analysis",
+        "audio classification",
+        "sound recognition"
+      ],
+      "domain" : "audio",
+      "id" : "audio.classification",
+      "label" : "Sound classification",
+      "n" : 1,
+      "p" : {
+        "iOS" : 0,
+        "linux" : 0,
+        "macCatalyst" : 0,
+        "macOS" : 1,
+        "tvOS" : 0,
+        "visionOS" : 0,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "mp3 codec",
+        "lame"
+      ],
+      "domain" : "audio",
+      "id" : "audio.codec.mp3",
+      "label" : "MP3 encoding/decoding",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 0,
+        "visionOS" : 0,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "opus codec"
+      ],
+      "domain" : "audio",
+      "id" : "audio.codec.opus",
+      "label" : "Opus encoding/decoding",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 0,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "input device",
+        "output device",
+        "audio device"
+      ],
+      "domain" : "audio",
+      "id" : "audio.device-selection",
+      "label" : "Audio device selection",
+      "n" : 2,
+      "p" : {
+        "iOS" : 0,
+        "linux" : 0,
+        "macCatalyst" : 0,
+        "macOS" : 2,
+        "tvOS" : 0,
+        "visionOS" : 0,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "AEC",
+        "acoustic echo"
+      ],
+      "domain" : "audio",
+      "id" : "audio.echo-cancellation",
+      "label" : "Echo cancellation",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 0,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "wav",
+        "aiff",
+        "audio file",
+        "audio export"
+      ],
+      "domain" : "audio",
+      "id" : "audio.file-io",
+      "label" : "Audio file reading/writing",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "volume meter",
+        "vu meter",
+        "loudness"
+      ],
+      "domain" : "audio",
+      "id" : "audio.metering",
+      "label" : "Audio level metering",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "noise suppression",
+        "denoise",
+        "krisp",
+        "background noise removal"
+      ],
+      "domain" : "audio",
+      "id" : "audio.noise-cancellation",
+      "label" : "Noise cancellation",
+      "n" : 2,
+      "p" : {
+        "iOS" : 2,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 2,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "tuner",
+        "frequency detection"
+      ],
+      "domain" : "audio",
+      "id" : "audio.pitch-detection",
+      "label" : "Pitch detection",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "play audio",
+        "sound playback",
+        "audio player"
+      ],
+      "domain" : "audio",
+      "id" : "audio.playback",
+      "label" : "Audio playback",
+      "n" : 5,
+      "p" : {
+        "iOS" : 4,
+        "linux" : 0,
+        "macCatalyst" : 4,
+        "macOS" : 3,
+        "tvOS" : 2,
+        "visionOS" : 1,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "mic capture",
+        "record audio",
+        "audio capture"
+      ],
+      "domain" : "audio",
+      "id" : "audio.recording",
+      "label" : "Microphone recording",
+      "n" : 3,
+      "p" : {
+        "iOS" : 3,
+        "linux" : 0,
+        "macCatalyst" : 3,
+        "macOS" : 2,
+        "tvOS" : 0,
+        "visionOS" : 1,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "avaudiosession",
+        "audio routing",
+        "interruption handling"
+      ],
+      "domain" : "audio",
+      "id" : "audio.session-management",
+      "label" : "Audio session management",
+      "n" : 2,
+      "p" : {
+        "iOS" : 2,
+        "linux" : 0,
+        "macCatalyst" : 2,
+        "macOS" : 0,
+        "tvOS" : 2,
+        "visionOS" : 1,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "3d audio",
+        "ambisonics",
+        "binaural"
+      ],
+      "domain" : "audio",
+      "id" : "audio.spatial",
+      "label" : "Spatial audio",
+      "n" : 0,
+      "p" : {
+        "iOS" : 0,
+        "linux" : 0,
+        "macCatalyst" : 0,
+        "macOS" : 0,
+        "tvOS" : 0,
+        "visionOS" : 0,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "stream audio",
+        "radio streaming"
+      ],
+      "domain" : "audio",
+      "id" : "audio.streaming",
+      "label" : "Audio streaming",
+      "n" : 3,
+      "p" : {
+        "iOS" : 3,
+        "linux" : 0,
+        "macCatalyst" : 3,
+        "macOS" : 2,
+        "tvOS" : 3,
+        "visionOS" : 1,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "dsp",
+        "oscillator",
+        "signal processing",
+        "effects"
+      ],
+      "domain" : "audio",
+      "id" : "audio.synthesis",
+      "label" : "Audio synthesis / DSP",
+      "n" : 6,
+      "p" : {
+        "iOS" : 6,
+        "linux" : 0,
+        "macCatalyst" : 6,
+        "macOS" : 6,
+        "tvOS" : 6,
+        "visionOS" : 1,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "waveform view",
+        "audio visualization",
+        "spectrogram"
+      ],
+      "domain" : "audio",
+      "id" : "audio.waveform-visualization",
+      "label" : "Waveform visualization",
+      "n" : 4,
+      "p" : {
+        "iOS" : 4,
+        "linux" : 0,
+        "macCatalyst" : 4,
+        "macOS" : 3,
+        "tvOS" : 0,
+        "visionOS" : 1,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "remote images",
+        "image downloading",
+        "url image"
+      ],
+      "domain" : "image",
+      "id" : "image.async-loading",
+      "label" : "Async image loading",
+      "n" : 4,
+      "p" : {
+        "iOS" : 3,
+        "linux" : 0,
+        "macCatalyst" : 3,
+        "macOS" : 3,
+        "tvOS" : 3,
+        "visionOS" : 1,
+        "watchOS" : 3
+      }
+    },
+    {
+      "aliases" : [
+        "disk cache",
+        "memory cache",
+        "image cache"
+      ],
+      "domain" : "image",
+      "id" : "image.caching",
+      "label" : "Image caching",
+      "n" : 2,
+      "p" : {
+        "iOS" : 2,
+        "linux" : 0,
+        "macCatalyst" : 2,
+        "macOS" : 2,
+        "tvOS" : 2,
+        "visionOS" : 1,
+        "watchOS" : 2
+      }
+    },
+    {
+      "aliases" : [
+        "image resizing",
+        "thumbnails",
+        "image processing"
+      ],
+      "domain" : "image",
+      "id" : "image.downsampling",
+      "label" : "Downsampling / resizing",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 0,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "gif",
+        "animated images",
+        "apng"
+      ],
+      "domain" : "image",
+      "id" : "image.gif",
+      "label" : "Animated GIF playback",
+      "n" : 3,
+      "p" : {
+        "iOS" : 3,
+        "linux" : 0,
+        "macCatalyst" : 3,
+        "macOS" : 2,
+        "tvOS" : 3,
+        "visionOS" : 1,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "image preloading",
+        "prefetch"
+      ],
+      "domain" : "image",
+      "id" : "image.prefetching",
+      "label" : "Prefetching",
+      "n" : 2,
+      "p" : {
+        "iOS" : 2,
+        "linux" : 0,
+        "macCatalyst" : 2,
+        "macOS" : 2,
+        "tvOS" : 2,
+        "visionOS" : 1,
+        "watchOS" : 2
+      }
+    },
+    {
+      "aliases" : [
+        "progressive jpeg",
+        "blurhash",
+        "placeholder"
+      ],
+      "domain" : "image",
+      "id" : "image.progressive",
+      "label" : "Progressive loading",
+      "n" : 0,
+      "p" : {
+        "iOS" : 0,
+        "linux" : 0,
+        "macCatalyst" : 0,
+        "macOS" : 0,
+        "tvOS" : 0,
+        "visionOS" : 0,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "svg",
+        "vector images"
+      ],
+      "domain" : "image",
+      "id" : "image.svg",
+      "label" : "SVG rendering",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 0,
+        "visionOS" : 0,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "webp"
+      ],
+      "domain" : "image",
+      "id" : "image.webp",
+      "label" : "WebP decoding",
+      "n" : 1,
+      "p" : {
+        "iOS" : 0,
+        "linux" : 0,
+        "macCatalyst" : 0,
+        "macOS" : 0,
+        "tvOS" : 0,
+        "visionOS" : 0,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "lock screen controls",
+        "control center",
+        "mpnowplaying"
+      ],
+      "domain" : "media",
+      "id" : "media.now-playing",
+      "label" : "Now-playing / remote controls",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 0,
+        "tvOS" : 0,
+        "visionOS" : 0,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "hls",
+        "http live streaming",
+        "m3u8"
+      ],
+      "domain" : "media",
+      "id" : "media.streaming.hls",
+      "label" : "HLS streaming",
+      "n" : 3,
+      "p" : {
+        "iOS" : 3,
+        "linux" : 0,
+        "macCatalyst" : 3,
+        "macOS" : 2,
+        "tvOS" : 2,
+        "visionOS" : 1,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "rtmp",
+        "live broadcast"
+      ],
+      "domain" : "media",
+      "id" : "media.streaming.rtmp",
+      "label" : "RTMP streaming",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "webrtc",
+        "rtc",
+        "real-time communication"
+      ],
+      "domain" : "media",
+      "id" : "media.streaming.webrtc",
+      "label" : "WebRTC real-time streaming",
+      "n" : 3,
+      "p" : {
+        "iOS" : 2,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "midi file",
+        "smf",
+        "standard midi file",
+        "midi parsing"
+      ],
+      "domain" : "midi",
+      "id" : "midi.file",
+      "label" : "MIDI file read/write",
+      "n" : 3,
+      "p" : {
+        "iOS" : 3,
+        "linux" : 0,
+        "macCatalyst" : 3,
+        "macOS" : 3,
+        "tvOS" : 1,
+        "visionOS" : 2,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "midi",
+        "coremidi"
+      ],
+      "domain" : "midi",
+      "id" : "midi.io",
+      "label" : "MIDI input/output",
+      "n" : 5,
+      "p" : {
+        "iOS" : 5,
+        "linux" : 0,
+        "macCatalyst" : 5,
+        "macOS" : 5,
+        "tvOS" : 0,
+        "visionOS" : 2,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "background download",
+        "background upload"
+      ],
+      "domain" : "network",
+      "id" : "network.background-transfer",
+      "label" : "Background transfers",
+      "n" : 0,
+      "p" : {
+        "iOS" : 0,
+        "linux" : 0,
+        "macCatalyst" : 0,
+        "macOS" : 0,
+        "tvOS" : 0,
+        "visionOS" : 0,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "ssl pinning",
+        "server trust",
+        "tls pinning"
+      ],
+      "domain" : "network",
+      "id" : "network.certificate-pinning",
+      "label" : "Certificate pinning",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 0,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "http requests",
+        "rest client",
+        "networking"
+      ],
+      "domain" : "network",
+      "id" : "network.http-client",
+      "label" : "HTTP client",
+      "n" : 2,
+      "p" : {
+        "iOS" : 2,
+        "linux" : 0,
+        "macCatalyst" : 2,
+        "macOS" : 2,
+        "tvOS" : 2,
+        "visionOS" : 0,
+        "watchOS" : 2
+      }
+    },
+    {
+      "aliases" : [
+        "network debugging",
+        "request logging",
+        "network inspector"
+      ],
+      "domain" : "network",
+      "id" : "network.logging",
+      "label" : "Network logging / inspection",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "multipart form data",
+        "file upload"
+      ],
+      "domain" : "network",
+      "id" : "network.multipart-upload",
+      "label" : "Multipart upload",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 0,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "connectivity monitoring",
+        "network status",
+        "offline detection"
+      ],
+      "domain" : "network",
+      "id" : "network.reachability",
+      "label" : "Network reachability",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "network mocking",
+        "stub requests"
+      ],
+      "domain" : "network",
+      "id" : "network.request-mocking",
+      "label" : "Request stubbing / mocking",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 0,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "retry policy",
+        "exponential backoff"
+      ],
+      "domain" : "network",
+      "id" : "network.retry",
+      "label" : "Request retry / backoff",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 0,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "sse",
+        "eventsource",
+        "event stream"
+      ],
+      "domain" : "network",
+      "id" : "network.server-sent-events",
+      "label" : "Server-sent events",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 1,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 0,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "websocket",
+        "ws",
+        "socket"
+      ],
+      "domain" : "network",
+      "id" : "network.websockets",
+      "label" : "WebSockets",
+      "n" : 2,
+      "p" : {
+        "iOS" : 2,
+        "linux" : 1,
+        "macCatalyst" : 2,
+        "macOS" : 2,
+        "tvOS" : 2,
+        "visionOS" : 2,
+        "watchOS" : 2
+      }
+    },
+    {
+      "aliases" : [
+        "transcription",
+        "speech recognition",
+        "whisper",
+        "asr"
+      ],
+      "domain" : "speech",
+      "id" : "speech.stt",
+      "label" : "Speech-to-text",
+      "n" : 5,
+      "p" : {
+        "iOS" : 5,
+        "linux" : 0,
+        "macCatalyst" : 5,
+        "macOS" : 5,
+        "tvOS" : 0,
+        "visionOS" : 2,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "voice synthesis",
+        "speak text"
+      ],
+      "domain" : "speech",
+      "id" : "speech.tts",
+      "label" : "Text-to-speech",
+      "n" : 6,
+      "p" : {
+        "iOS" : 6,
+        "linux" : 0,
+        "macCatalyst" : 5,
+        "macOS" : 6,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "video chat",
+        "video conference"
+      ],
+      "domain" : "video",
+      "id" : "video.calling",
+      "label" : "Video calling",
+      "n" : 2,
+      "p" : {
+        "iOS" : 2,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "camera",
+        "video recording"
+      ],
+      "domain" : "video",
+      "id" : "video.capture",
+      "label" : "Camera capture",
+      "n" : 2,
+      "p" : {
+        "iOS" : 2,
+        "linux" : 0,
+        "macCatalyst" : 2,
+        "macOS" : 1,
+        "tvOS" : 0,
+        "visionOS" : 0,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "video player",
+        "play video"
+      ],
+      "domain" : "video",
+      "id" : "video.playback",
+      "label" : "Video playback",
+      "n" : 6,
+      "p" : {
+        "iOS" : 6,
+        "linux" : 0,
+        "macCatalyst" : 6,
+        "macOS" : 2,
+        "tvOS" : 3,
+        "visionOS" : 2,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "screen capture",
+        "screen broadcast",
+        "replaykit"
+      ],
+      "domain" : "video",
+      "id" : "video.screen-sharing",
+      "label" : "Screen sharing",
+      "n" : 2,
+      "p" : {
+        "iOS" : 2,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 0,
+        "visionOS" : 0,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "voip",
+        "voice chat",
+        "audio call"
+      ],
+      "domain" : "voice",
+      "id" : "voice.calling",
+      "label" : "Voice calling",
+      "n" : 2,
+      "p" : {
+        "iOS" : 2,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 0
+      }
+    }
+  ],
+  "packages" : [
+    {
+      "aliases" : [
+        "kasimok/AECAudioStream"
+      ],
+      "caps" : 1,
+      "name" : "AECAudioStream",
+      "slug" : "aecaudiostream"
+    },
+    {
+      "aliases" : [
+        "Alamofire/Alamofire",
+        "AF"
+      ],
+      "caps" : 5,
+      "name" : "Alamofire",
+      "slug" : "alamofire"
+    },
+    {
+      "aliases" : [
+        "AudioKit/AudioKit"
+      ],
+      "caps" : 6,
+      "name" : "AudioKit",
+      "slug" : "audiokit"
+    },
+    {
+      "aliases" : [
+        "AudioKit/Waveform"
+      ],
+      "caps" : 1,
+      "name" : "AudioKit Waveform",
+      "slug" : "waveform"
+    },
+    {
+      "aliases" : [
+        "AudioKit/AudioKitUI"
+      ],
+      "caps" : 1,
+      "name" : "AudioKitUI",
+      "slug" : "audiokitui"
+    },
+    {
+      "aliases" : [
+        "markbattistella/AudioManager"
+      ],
+      "caps" : 1,
+      "name" : "AudioManager",
+      "slug" : "audiomanager"
+    },
+    {
+      "aliases" : [
+        "atacan/AudioRecorder"
+      ],
+      "caps" : 1,
+      "name" : "AudioRecorder",
+      "slug" : "audiorecorder"
+    },
+    {
+      "aliases" : [
+        "sbooth/CAAudioHardware"
+      ],
+      "caps" : 1,
+      "name" : "CAAudioHardware",
+      "slug" : "caaudiohardware"
+    },
+    {
+      "aliases" : [
+        "mihai8804858/swift-chunked-audio-player"
+      ],
+      "caps" : 1,
+      "name" : "ChunkedAudioPlayer",
+      "slug" : "swift-chunked-audio-player"
+    },
+    {
+      "aliases" : [
+        "mkj-is/CombineMIDI"
+      ],
+      "caps" : 1,
+      "name" : "CombineMIDI",
+      "slug" : "combinemidi"
+    },
+    {
+      "aliases" : [
+        "audiokit/devoloopaudiokit"
+      ],
+      "caps" : 1,
+      "name" : "DevoloopAudioKit",
+      "slug" : "devoloopaudiokit"
+    },
+    {
+      "aliases" : [
+        "dmrschmidt/DSWaveformImage"
+      ],
+      "caps" : 1,
+      "name" : "DSWaveformImage",
+      "slug" : "dswaveformimage"
+    },
+    {
+      "aliases" : [
+        "audiokit/dunneaudiokit"
+      ],
+      "caps" : 1,
+      "name" : "DunneAudioKit",
+      "slug" : "dunneaudiokit"
+    },
+    {
+      "aliases" : [
+        "exyte/MediaPicker"
+      ],
+      "caps" : 1,
+      "name" : "ExyteMediaPicker",
+      "slug" : "mediapicker"
+    },
+    {
+      "aliases" : [
+        "fulldecent/FDSoundActivatedRecorder"
+      ],
+      "caps" : 1,
+      "name" : "FDSoundActivatedRecorder",
+      "slug" : "fdsoundactivatedrecorder"
+    },
+    {
+      "aliases" : [
+        "fulldecent/FDWaveformView"
+      ],
+      "caps" : 1,
+      "name" : "FDWaveformView",
+      "slug" : "fdwaveformview"
+    },
+    {
+      "aliases" : [
+        "FluidInference/FluidAudio"
+      ],
+      "caps" : 1,
+      "name" : "FluidAudio",
+      "slug" : "fluidaudio"
+    },
+    {
+      "aliases" : [
+        "fethica/FRadioPlayer"
+      ],
+      "caps" : 1,
+      "name" : "FRadioPlayer",
+      "slug" : "fradioplayer"
+    },
+    {
+      "aliases" : [
+        "kaishin/Gifu"
+      ],
+      "caps" : 1,
+      "name" : "Gifu",
+      "slug" : "gifu"
+    },
+    {
+      "aliases" : [
+        "fcanas/hlscore"
+      ],
+      "caps" : 1,
+      "name" : "HLSCore",
+      "slug" : "hlscore"
+    },
+    {
+      "aliases" : [
+        "atelier-socle/swift-hls-kit"
+      ],
+      "caps" : 1,
+      "name" : "HLSKit",
+      "slug" : "swift-hls-kit"
+    },
+    {
+      "aliases" : [
+        "garynewby/HLSVideoCache"
+      ],
+      "caps" : 1,
+      "name" : "HLSVideoCache",
+      "slug" : "hlsvideocache"
+    },
+    {
+      "aliases" : [
+        "onevcat/Kingfisher",
+        "KF"
+      ],
+      "caps" : 6,
+      "name" : "Kingfisher",
+      "slug" : "kingfisher"
+    },
+    {
+      "aliases" : [
+        "kingslay/KSPlayer"
+      ],
+      "caps" : 1,
+      "name" : "KSPlayer",
+      "slug" : "ksplayer"
+    },
+    {
+      "aliases" : [
+        "LaunchDarkly/swift-eventsource",
+        "swift-eventsource"
+      ],
+      "caps" : 1,
+      "name" : "LDSwiftEventSource",
+      "slug" : "swift-eventsource"
+    },
+    {
+      "aliases" : [
+        "LiveKitClient",
+        "livekit/client-sdk-swift",
+        "client-sdk-swift"
+      ],
+      "caps" : 6,
+      "name" : "LiveKit",
+      "slug" : "client-sdk-swift"
+    },
+    {
+      "aliases" : [
+        "livekit/swift-krisp-noise-filter"
+      ],
+      "caps" : 1,
+      "name" : "LiveKitKrispNoiseFilter",
+      "slug" : "swift-krisp-noise-filter"
+    },
+    {
+      "aliases" : [
+        "mapbox/mapbox-speech-swift"
+      ],
+      "caps" : 1,
+      "name" : "MapboxSpeech",
+      "slug" : "mapbox-speech-swift"
+    },
+    {
+      "aliases" : [
+        "orchetect/swift-midi-io",
+        "swift-midi-io"
+      ],
+      "caps" : 1,
+      "name" : "MIDIKitIO",
+      "slug" : "swift-midi-io"
+    },
+    {
+      "aliases" : [
+        "orchetect/swift-midi-file"
+      ],
+      "caps" : 1,
+      "name" : "MIDIKitSMF",
+      "slug" : "swift-midi-file"
+    },
+    {
+      "aliases" : [
+        "matsune/MidiParser"
+      ],
+      "caps" : 1,
+      "name" : "MidiParser",
+      "slug" : "midiparser"
+    },
+    {
+      "aliases" : [
+        "Blaizzy/mlx-audio-swift"
+      ],
+      "caps" : 1,
+      "name" : "MLXAudio",
+      "slug" : "mlx-audio-swift"
+    },
+    {
+      "aliases" : [
+        "noreasonprojects/modernavplayer"
+      ],
+      "caps" : 1,
+      "name" : "ModernAVPlayer",
+      "slug" : "modernavplayer"
+    },
+    {
+      "aliases" : [
+        "bradhowes/morkandmidi"
+      ],
+      "caps" : 1,
+      "name" : "MorkAndMIDI",
+      "slug" : "morkandmidi"
+    },
+    {
+      "aliases" : [
+        "Moya/Moya"
+      ],
+      "caps" : 2,
+      "name" : "Moya",
+      "slug" : "moya"
+    },
+    {
+      "aliases" : [
+        "muxinc/mux-player-swift"
+      ],
+      "caps" : 1,
+      "name" : "MuxPlayerSwift",
+      "slug" : "mux-player-swift"
+    },
+    {
+      "aliases" : [
+        "kean/Nuke"
+      ],
+      "caps" : 3,
+      "name" : "Nuke",
+      "slug" : "nuke"
+    },
+    {
+      "aliases" : [
+        "piemonte/player"
+      ],
+      "caps" : 1,
+      "name" : "Player",
+      "slug" : "player"
+    },
+    {
+      "aliases" : [
+        "kean/Pulse"
+      ],
+      "caps" : 1,
+      "name" : "Pulse",
+      "slug" : "pulse"
+    },
+    {
+      "aliases" : [
+        "atelier-socle/swift-rtmp-kit"
+      ],
+      "caps" : 1,
+      "name" : "RTMPKit",
+      "slug" : "swift-rtmp-kit"
+    },
+    {
+      "aliases" : [
+        "SDWebImage/SDWebImage"
+      ],
+      "caps" : 1,
+      "name" : "SDWebImage",
+      "slug" : "sdwebimage"
+    },
+    {
+      "aliases" : [
+        "SDWebImage/SDWebImageSwiftUI"
+      ],
+      "caps" : 2,
+      "name" : "SDWebImageSwiftUI",
+      "slug" : "sdwebimageswiftui"
+    },
+    {
+      "aliases" : [
+        "sbooth/SFBAudioEngine"
+      ],
+      "caps" : 1,
+      "name" : "SFBAudioEngine",
+      "slug" : "sfbaudioengine"
+    },
+    {
+      "aliases" : [
+        "audiokit/soulaudiokit"
+      ],
+      "caps" : 1,
+      "name" : "SoulAudioKit",
+      "slug" : "soulaudiokit"
+    },
+    {
+      "aliases" : [
+        "AudioKit/SoundpipeAudioKit"
+      ],
+      "caps" : 1,
+      "name" : "SoundpipeAudioKit",
+      "slug" : "soundpipeaudiokit"
+    },
+    {
+      "aliases" : [
+        "StanfordSpezi/SpeziSpeech"
+      ],
+      "caps" : 2,
+      "name" : "SpeziSpeech",
+      "slug" : "spezispeech"
+    },
+    {
+      "aliases" : [
+        "ryanfrancesconi/spfk-audio-hardware"
+      ],
+      "caps" : 1,
+      "name" : "SPFKAudioHardware",
+      "slug" : "spfk-audio-hardware"
+    },
+    {
+      "aliases" : [
+        "ryanfrancesconi/spfk-sound-analysis"
+      ],
+      "caps" : 1,
+      "name" : "SPFKSoundAnalysis",
+      "slug" : "spfk-sound-analysis"
+    },
+    {
+      "aliases" : [
+        "audiokit/sporthaudiokit"
+      ],
+      "caps" : 1,
+      "name" : "SporthAudioKit",
+      "slug" : "sporthaudiokit"
+    },
+    {
+      "aliases" : [
+        "daltoniam/Starscream"
+      ],
+      "caps" : 1,
+      "name" : "Starscream",
+      "slug" : "starscream"
+    },
+    {
+      "aliases" : [
+        "audiokit/stkaudiokit"
+      ],
+      "caps" : 1,
+      "name" : "STKAudioKit",
+      "slug" : "stkaudiokit"
+    },
+    {
+      "aliases" : [
+        "GetStream/stream-video-swift"
+      ],
+      "caps" : 4,
+      "name" : "StreamVideo",
+      "slug" : "stream-video-swift"
+    },
+    {
+      "aliases" : [
+        "exyte/SVGView"
+      ],
+      "caps" : 1,
+      "name" : "SVGView",
+      "slug" : "svgview"
+    },
+    {
+      "aliases" : [
+        "alta/swift-opus"
+      ],
+      "caps" : 1,
+      "name" : "swift-opus",
+      "slug" : "swift-opus"
+    },
+    {
+      "aliases" : [
+        "p-x9/swift-system-sound"
+      ],
+      "caps" : 1,
+      "name" : "swift-system-sound",
+      "slug" : "swift-system-sound"
+    },
+    {
+      "aliases" : [
+        "DoubleSymmetry/SwiftAudioEx"
+      ],
+      "caps" : 3,
+      "name" : "SwiftAudioEx",
+      "slug" : "swiftaudioex"
+    },
+    {
+      "aliases" : [
+        "tanhakabir/SwiftAudioPlayer"
+      ],
+      "caps" : 1,
+      "name" : "SwiftAudioPlayer",
+      "slug" : "swiftaudioplayer"
+    },
+    {
+      "aliases" : [
+        "herrkaefer/SwiftEdgeTTS"
+      ],
+      "caps" : 1,
+      "name" : "SwiftEdgeTTS",
+      "slug" : "swiftedgetts"
+    },
+    {
+      "aliases" : [
+        "hidden-spectrum/SwiftLAME"
+      ],
+      "caps" : 1,
+      "name" : "SwiftLAME",
+      "slug" : "swiftlame"
+    },
+    {
+      "aliases" : [
+        "apple/swift-nio",
+        "swift-nio",
+        "NIO"
+      ],
+      "caps" : 1,
+      "name" : "SwiftNIO",
+      "slug" : "swift-nio"
+    },
+    {
+      "aliases" : [
+        "Cay-Zhang/SwiftSpeech"
+      ],
+      "caps" : 1,
+      "name" : "SwiftSpeech",
+      "slug" : "swiftspeech"
+    },
+    {
+      "aliases" : [
+        "renaudjenny/swift-tts"
+      ],
+      "caps" : 1,
+      "name" : "SwiftTTS",
+      "slug" : "swift-tts"
+    },
+    {
+      "aliases" : [
+        "exPHAT/SwiftWhisper"
+      ],
+      "caps" : 1,
+      "name" : "SwiftWhisper",
+      "slug" : "swiftwhisper"
+    },
+    {
+      "aliases" : [
+        "abdullahselek/swifty360player"
+      ],
+      "caps" : 1,
+      "name" : "Swifty360Player",
+      "slug" : "swifty360player"
+    },
+    {
+      "aliases" : [
+        "adamcichy/SwiftySound"
+      ],
+      "caps" : 2,
+      "name" : "SwiftySound",
+      "slug" : "swiftysound"
+    },
+    {
+      "aliases" : [
+        "MetalPetal/VideoIO"
+      ],
+      "caps" : 1,
+      "name" : "VideoIO",
+      "slug" : "videoio"
+    },
+    {
+      "aliases" : [
+        "tattn/voicevox-client"
+      ],
+      "caps" : 1,
+      "name" : "VOICEVOX",
+      "slug" : "voicevox-client"
+    },
+    {
+      "aliases" : [
+        "adamnemecek/webmidikit"
+      ],
+      "caps" : 1,
+      "name" : "WebMIDIKit",
+      "slug" : "webmidikit"
+    },
+    {
+      "aliases" : [
+        "stasel/WebRTC"
+      ],
+      "caps" : 1,
+      "name" : "WebRTC (stasel)",
+      "slug" : "webrtc"
+    },
+    {
+      "aliases" : [
+        "argmaxinc/WhisperKit"
+      ],
+      "caps" : 1,
+      "name" : "WhisperKit",
+      "slug" : "whisperkit"
+    },
+    {
+      "aliases" : [
+        "sventiigi/youtubeplayerkit"
+      ],
+      "caps" : 1,
+      "name" : "YouTubePlayerKit",
+      "slug" : "youtubeplayerkit"
+    }
+  ],
+  "v" : 1
+}

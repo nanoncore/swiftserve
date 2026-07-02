@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SwiftServe — scan your Package.resolved</title>
+  <meta name="description" content="Drop your Package.resolved and get a dependency-health Scoop from Swiftee." />
+  <link rel="icon" href="/swiftee/swiftee-idle.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/site.js" defer></script>
+</head>
+<body class="site">
+  <header class="top-nav">
+    <a class="wordmark" href="/">🍦 <strong>SwiftServe</strong></a>
+    <nav aria-label="Primary">
+      <a href="/menu/">Menu</a>
+      <a href="/scoop/" aria-current="page">Scoop</a>
+      <a href="/agents/">Agents</a>
+      <a href="/about/">About</a>
+    </nav>
+    <form class="nav-search" action="/" role="search" data-search hidden>
+      <input type="search" name="q" placeholder="press / to search" aria-label="Search capabilities" />
+    </form>
+  </header>
+
+  <header class="site-header">
+    <p class="tagline">Dependency health, scooped fresh.</p>
+  </header>
+
+  <main>
+    <!-- Landing / upload -->
+    <section id="landing" class="landing">
+      <div class="swiftee-stage">
+        <img id="idle-sprite" class="swiftee-sprite" src="/swiftee/swiftee-idle.png" alt="Swiftee, the SwiftServe mascot" />
+      </div>
+      <p id="idle-voice" class="voice-line">Drop your Package.resolved — let's take a look.</p>
+
+      <div id="dropzone" class="dropzone" role="button" tabindex="0" aria-label="Choose your Package.resolved file">
+        <span class="dropzone-title">Drop your <code>Package.resolved</code> here</span>
+        <span class="dropzone-sub">or click to choose a file</span>
+      </div>
+      <input id="file-input" type="file" accept=".resolved,application/json,.json" hidden />
+
+      <div id="scanning" class="scanning" hidden>
+        <span class="spinner" aria-hidden="true"></span>
+        <span>Scanning your Scoop…</span>
+      </div>
+
+      <p class="fine-print">Package.resolved only — never your source or binaries. Nothing is stored.</p>
+      <p id="error" class="error" hidden></p>
+    </section>
+
+    <!-- Scoop card (rendered from JSON) -->
+    <section id="scoop" class="scoop" hidden></section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Made refreshingly cool from Paris, France</span>
+  </footer>
+
+  <script src="/scoop/app.js"></script>
+</body>
+</html>

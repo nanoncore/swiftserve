@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://swiftserve.dev/schemas/package-surface-v1.json",
+  "title": "SwiftServe Package Surface",
+  "description": "A package's public API surface × platform conditionals, extracted by parsing at a pinned commit. Deterministic: same commit, same bytes. No wall-clock timestamp by design.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["surfaceVersion", "package", "manifestPlatforms", "decls", "stats"],
+  "properties": {
+    "surfaceVersion": { "type": "integer", "const": 1 },
+    "package": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["canonicalURL", "name", "tag", "commit"],
+      "properties": {
+        "canonicalURL": { "type": ["string", "null"] },
+        "name": { "type": "string" },
+        "tag": { "type": ["string", "null"] },
+        "commit": { "type": ["string", "null"] }
+      }
+    },
+    "manifestPlatforms": {
+      "type": "array",
+      "description": "Package.swift platforms: — version FLOORS only, never exclusions (SPM semantics).",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["platform", "minVersion"],
+        "properties": {
+          "platform": { "type": "string" },
+          "minVersion": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "decls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "kind", "signature", "location", "condition", "rawCondition", "availability", "resolvedPlatforms", "docSummary", "hasMacroAttributes"],
+        "properties": {
+          "name": { "type": "string", "description": "qualified: RoomOptions.noiseCancellationFilter" },
+          "kind": { "type": "string", "enum": ["function", "property", "initializer", "subscript", "enumCase", "class", "struct", "enum", "protocol", "actor", "typealias"] },
+          "signature": { "type": ["string", "null"] },
+          "location": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["file", "line"],
+            "properties": { "file": { "type": "string" }, "line": { "type": "integer" } }
+          },
+          "condition": { "description": "structured #if condition tree (kind/value/operand/operands), null when unconditional" },
+          "rawCondition": { "type": ["string", "null"], "description": "rendered condition text — the explainability channel" },
+          "availability": { "type": "array", "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["platform", "introduced", "deprecated", "obsoleted", "unavailable", "message"],
+            "properties": {
+              "platform": { "type": "string" },
+              "introduced": { "type": ["string", "null"] },
+              "deprecated": { "type": ["string", "null"] },
+              "obsoleted": { "type": ["string", "null"] },
+              "unavailable": { "type": "boolean" },
+              "message": { "type": ["string", "null"] }
+            }
+          }},
+          "resolvedPlatforms": {
+            "type": ["object", "null"],
+            "description": "Platform → three-valued presence. ‘conditional’ carries the undecidable condition text — never a guess.",
+            "additionalProperties": false,
+            "patternProperties": {
+              "^(iOS|macOS|watchOS|tvOS|visionOS|macCatalyst|linux)$": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["state"],
+                "properties": {
+                  "state": { "type": "string", "enum": ["present", "absent", "conditional"] },
+                  "condition": { "type": "string" }
+                }
+              }
+            }
+          },
+          "docSummary": { "type": ["string", "null"] },
+          "hasMacroAttributes": { "type": "boolean" }
+        }
+      }
+    },
+    "stats": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["swiftFiles", "objcFiles", "declCount", "parseFailures", "manifestUnparsed", "hasBinaryTargets"],
+      "properties": {
+        "swiftFiles": { "type": "integer" },
+        "objcFiles": { "type": "integer", "description": "unparsed in v1 — an honest blind spot" },
+        "declCount": { "type": "integer" },
+        "parseFailures": { "type": "integer" },
+        "manifestUnparsed": { "type": "boolean" },
+        "hasBinaryTargets": { "type": "boolean", "description": "the real fence may live in a binary — confidence cap" }
+      }
+    }
+  }
+}

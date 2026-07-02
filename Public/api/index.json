@@ -1,0 +1,12 @@
+{
+  "description" : "SwiftServe capability index — what Swift packages actually serve, per platform, with source-line evidence. All endpoints are static JSON.",
+  "endpoints" : {
+    "capability" : "/api/capabilities/{id}.json",
+    "package" : "/api/packages/{slug}.json",
+    "packages" : "/api/packages/index.json",
+    "recordSchema" : "/api/schemas/capability-record-v1.json",
+    "search" : "/api/search-index.json",
+    "taxonomy" : "/api/taxonomy.json"
+  },
+  "schemaVersion" : 1
+}

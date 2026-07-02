@@ -1,0 +1,343 @@
+{
+  "aliases" : [
+    "stream audio",
+    "radio streaming"
+  ],
+  "id" : "audio.streaming",
+  "label" : "Audio streaming",
+  "packages" : [
+    {
+      "commit" : "7a46fa1bfb88c4b4ea47ee656e6b2abd1cd7fed8",
+      "notes" : "Plays audio chunk-by-chunk as it arrives (e.g. TTS streams) — no full download needed.",
+      "package" : "https://github.com/mihai8804858/swift-chunked-audio-player",
+      "packageName" : "ChunkedAudioPlayer",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioPlayer.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "streams chunked audio via AudioToolbox as chunks arrive",
+              "permalink" : "https://github.com/mihai8804858/swift-chunked-audio-player/blob/1.1.2/Sources/AudioPlayer.swift#L6",
+              "symbol" : "AudioPlayer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AudioToolbox is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioPlayer.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "streams chunked audio via AudioToolbox as chunks arrive",
+              "permalink" : "https://github.com/mihai8804858/swift-chunked-audio-player/blob/1.1.2/Sources/AudioPlayer.swift#L6",
+              "symbol" : "AudioPlayer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioPlayer.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "streams chunked audio via AudioToolbox as chunks arrive",
+              "permalink" : "https://github.com/mihai8804858/swift-chunked-audio-player/blob/1.1.2/Sources/AudioPlayer.swift#L6",
+              "symbol" : "AudioPlayer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioPlayer.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "streams chunked audio via AudioToolbox as chunks arrive",
+              "permalink" : "https://github.com/mihai8804858/swift-chunked-audio-player/blob/1.1.2/Sources/AudioPlayer.swift#L6",
+              "symbol" : "AudioPlayer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioPlayer.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "streams chunked audio via AudioToolbox as chunks arrive",
+              "permalink" : "https://github.com/mihai8804858/swift-chunked-audio-player/blob/1.1.2/Sources/AudioPlayer.swift#L6",
+              "symbol" : "AudioPlayer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares visionOS 1"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swift-chunked-audio-player",
+      "version" : "1.1.2"
+    },
+    {
+      "commit" : "243cd9246b79a186c39b3c53dbe725c8c01bab59",
+      "notes" : "Internet-radio streaming over AVPlayer with metadata (artist/track) parsing.",
+      "package" : "https://github.com/fethica/fradioplayer",
+      "packageName" : "FRadioPlayer",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/FRadioPlayer/FRadioPlayer.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "the streaming radio player",
+              "permalink" : "https://github.com/fethica/fradioplayer/blob/0.2.2/Sources/FRadioPlayer/FRadioPlayer.swift#L15",
+              "symbol" : "FRadioPlayer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVPlayer-based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/FRadioPlayer/FRadioPlayer.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "the streaming radio player",
+              "permalink" : "https://github.com/fethica/fradioplayer/blob/0.2.2/Sources/FRadioPlayer/FRadioPlayer.swift#L15",
+              "symbol" : "FRadioPlayer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/FRadioPlayer/FRadioPlayer.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "the streaming radio player",
+              "permalink" : "https://github.com/fethica/fradioplayer/blob/0.2.2/Sources/FRadioPlayer/FRadioPlayer.swift#L15",
+              "symbol" : "FRadioPlayer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/FRadioPlayer/FRadioPlayer.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "the streaming radio player",
+              "permalink" : "https://github.com/fethica/fradioplayer/blob/0.2.2/Sources/FRadioPlayer/FRadioPlayer.swift#L15",
+              "symbol" : "FRadioPlayer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "fradioplayer",
+      "version" : "0.2.2"
+    },
+    {
+      "commit" : "2fdfc62ce9f5d8b818ee1b2a9ac061fce4f64af9",
+      "notes" : "Streams + saves remote audio via AVAudioEngine, with EQ/effects while streaming.",
+      "package" : "https://github.com/tanhakabir/swiftaudioplayer",
+      "packageName" : "SwiftAudioPlayer",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/SAPlayer.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "note" : "streams remote audio with real-time effects",
+              "permalink" : "https://github.com/tanhakabir/swiftaudioplayer/blob/7.6.0/Source/SAPlayer.swift#L29",
+              "symbol" : "SAPlayer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVAudioEngine-based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Source/SAPlayer.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "note" : "streams remote audio with real-time effects",
+              "permalink" : "https://github.com/tanhakabir/swiftaudioplayer/blob/7.6.0/Source/SAPlayer.swift#L29",
+              "symbol" : "SAPlayer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "macOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Source/SAPlayer.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "note" : "streams remote audio with real-time effects",
+              "permalink" : "https://github.com/tanhakabir/swiftaudioplayer/blob/7.6.0/Source/SAPlayer.swift#L29",
+              "symbol" : "SAPlayer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swiftaudioplayer",
+      "version" : "7.6.0"
+    }
+  ]
+}

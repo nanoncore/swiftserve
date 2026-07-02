@@ -1,0 +1,189 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.playback",
+      "label" : "Audio playback"
+    },
+    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "UI feedback sounds (scoped to system settings) — not a general-purpose player.",
+    "package" : {
+      "aliases" : [
+        "markbattistella/AudioManager"
+      ],
+      "canonicalURL" : "https://github.com/markbattistella/audiomanager",
+      "commit" : "d93afd7a48885f9a92bbe7c0eb6b692afbafce66",
+      "name" : "AudioManager",
+      "surfaceDigest" : "fnv1a64:15a0bc6ae2909fe6",
+      "version" : "26.6.11"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioManager/AudioFeedbackPerformer.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : "plays UI feedback sounds honoring user settings",
+            "package" : null,
+            "symbol" : "AudioFeedbackPerformer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 14",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "Apple-frameworks based",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioManager/AudioFeedbackPerformer.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : "plays UI feedback sounds honoring user settings",
+            "package" : null,
+            "symbol" : "AudioFeedbackPerformer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macCatalyst 14",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioManager/AudioFeedbackPerformer.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : "plays UI feedback sounds honoring user settings",
+            "package" : null,
+            "symbol" : "AudioFeedbackPerformer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 11",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioManager/AudioFeedbackPerformer.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : "plays UI feedback sounds honoring user settings",
+            "package" : null,
+            "symbol" : "AudioFeedbackPerformer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 14",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioManager/AudioFeedbackPerformer.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : "plays UI feedback sounds honoring user settings",
+            "package" : null,
+            "symbol" : "AudioFeedbackPerformer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares visionOS 1",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

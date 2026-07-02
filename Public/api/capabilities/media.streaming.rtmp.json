@@ -1,0 +1,135 @@
+{
+  "aliases" : [
+    "rtmp",
+    "live broadcast"
+  ],
+  "id" : "media.streaming.rtmp",
+  "label" : "RTMP streaming",
+  "packages" : [
+    {
+      "commit" : "163eea45fe8d66b0047d028c92de9ef993bd2ace",
+      "notes" : "RTMP protocol toolkit (handshake, chunking, messages).",
+      "package" : "https://github.com/atelier-socle/swift-rtmp-kit",
+      "packageName" : "RTMPKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/RTMPKit/Configuration/RTMPConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/atelier-socle/swift-rtmp-kit/blob/0.3.1/Sources/RTMPKit/Configuration/RTMPConfiguration.swift#L27",
+              "symbol" : "RTMPConfiguration"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 17"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "protocol-level Swift could build on Linux; unverified"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/RTMPKit/Configuration/RTMPConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/atelier-socle/swift-rtmp-kit/blob/0.3.1/Sources/RTMPKit/Configuration/RTMPConfiguration.swift#L27",
+              "symbol" : "RTMPConfiguration"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macCatalyst 17"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/RTMPKit/Configuration/RTMPConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/atelier-socle/swift-rtmp-kit/blob/0.3.1/Sources/RTMPKit/Configuration/RTMPConfiguration.swift#L27",
+              "symbol" : "RTMPConfiguration"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 14"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/RTMPKit/Configuration/RTMPConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/atelier-socle/swift-rtmp-kit/blob/0.3.1/Sources/RTMPKit/Configuration/RTMPConfiguration.swift#L27",
+              "symbol" : "RTMPConfiguration"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 17"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/RTMPKit/Configuration/RTMPConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/atelier-socle/swift-rtmp-kit/blob/0.3.1/Sources/RTMPKit/Configuration/RTMPConfiguration.swift#L27",
+              "symbol" : "RTMPConfiguration"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares visionOS 1"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/RTMPKit/Configuration/RTMPConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/atelier-socle/swift-rtmp-kit/blob/0.3.1/Sources/RTMPKit/Configuration/RTMPConfiguration.swift#L27",
+              "symbol" : "RTMPConfiguration"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares watchOS 10"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swift-rtmp-kit",
+      "version" : "0.3.1"
+    }
+  ]
+}

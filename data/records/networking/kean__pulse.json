@@ -1,0 +1,179 @@
+[
+  {
+    "capability" : {
+      "id" : "network.logging",
+      "label" : "Network logging / inspection"
+    },
+    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Persistent URLSession logging (LoggerStore) with an on-device inspector UI.",
+    "package" : {
+      "aliases" : [
+        "kean/Pulse"
+      ],
+      "canonicalURL" : "https://github.com/kean/pulse",
+      "commit" : "94b92731d370c129bb771e9c18f69b0a44ccca5c",
+      "name" : "Pulse",
+      "surfaceDigest" : "fnv1a64:f71b138797654859",
+      "version" : "5.2.3"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pulse/NetworkLogger/NetworkLogger.swift",
+            "kind" : "symbol",
+            "line" : 12,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NetworkLogger"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "UI companion is Apple-only; core store unverified on Linux",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pulse/NetworkLogger/NetworkLogger.swift",
+            "kind" : "symbol",
+            "line" : 12,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NetworkLogger"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pulse/NetworkLogger/NetworkLogger.swift",
+            "kind" : "symbol",
+            "line" : 12,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NetworkLogger"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pulse/NetworkLogger/NetworkLogger.swift",
+            "kind" : "symbol",
+            "line" : 12,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NetworkLogger"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pulse/NetworkLogger/NetworkLogger.swift",
+            "kind" : "symbol",
+            "line" : 12,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NetworkLogger"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares visionOS 1",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pulse/NetworkLogger/NetworkLogger.swift",
+            "kind" : "symbol",
+            "line" : 12,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NetworkLogger"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares watchOS 9",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

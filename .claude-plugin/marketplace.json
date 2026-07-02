@@ -1,0 +1,17 @@
+{
+  "name": "swiftserve",
+  "owner": {
+    "name": "Nanoncore"
+  },
+  "description": "Capability truth for Swift packages — verdicts from parsed source with evidence permalinks.",
+  "plugins": [
+    {
+      "name": "swiftserve",
+      "source": "./plugins/swiftserve",
+      "description": "Capability truth + dependency health for Swift packages: capability-check, find, dependency scans, private-API detection.",
+      "version": "0.1.0",
+      "homepage": "https://swiftserve.dev",
+      "keywords": ["swift", "swiftpm", "dependencies", "capabilities", "app-store"]
+    }
+  ]
+}

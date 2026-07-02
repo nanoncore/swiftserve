@@ -1,0 +1,169 @@
+[
+  {
+    "capability" : {
+      "id" : "image.svg",
+      "label" : "SVG rendering"
+    },
+    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "SVG parsing + SwiftUI rendering with interactive node access.",
+    "package" : {
+      "aliases" : [
+        "exyte/SVGView"
+      ],
+      "canonicalURL" : "https://github.com/exyte/svgview",
+      "commit" : "6465962facdd25cb96eaebc35603afa2f15d2c0d",
+      "name" : "SVGView",
+      "surfaceDigest" : "fnv1a64:9cda549e38427e90",
+      "version" : "1.0.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Parser/SVG/SVGView.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : "parse + render SVG in SwiftUI",
+            "package" : null,
+            "symbol" : "SVGView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 14",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "SwiftUI-based",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Parser/SVG/SVGView.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : "parse + render SVG in SwiftUI",
+            "package" : null,
+            "symbol" : "SVGView"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Parser/SVG/SVGView.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : "parse + render SVG in SwiftUI",
+            "package" : null,
+            "symbol" : "SVGView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 11",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "tvOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Parser/SVG/SVGView.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : "parse + render SVG in SwiftUI",
+            "package" : null,
+            "symbol" : "SVGView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares watchOS 7",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

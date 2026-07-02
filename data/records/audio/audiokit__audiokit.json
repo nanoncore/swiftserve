@@ -1,0 +1,874 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.file-io",
+      "label" : "Audio file reading/writing"
+    },
+    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Read/write/convert audio files (wav, aiff, caf, m4a…) via FormatConverter + AVAudioFile helpers.",
+    "package" : {
+      "aliases" : [
+        "AudioKit/AudioKit"
+      ],
+      "canonicalURL" : "https://github.com/audiokit/audiokit",
+      "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+      "name" : "AudioKit",
+      "surfaceDigest" : "fnv1a64:bf6eb5e879b0cd61",
+      "version" : "5.7.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioKit/Audio Files/Format Converter/FormatConverter.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : "audio file format conversion",
+            "package" : null,
+            "symbol" : "FormatConverter"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "AVFoundation/ExtAudioFile-based",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioKit/Audio Files/Format Converter/FormatConverter.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : "audio file format conversion",
+            "package" : null,
+            "symbol" : "FormatConverter"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioKit/Audio Files/Format Converter/FormatConverter.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : "audio file format conversion",
+            "package" : null,
+            "symbol" : "FormatConverter"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioKit/Audio Files/Format Converter/FormatConverter.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : "audio file format conversion",
+            "package" : null,
+            "symbol" : "FormatConverter"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioKit/Audio Files/Format Converter/FormatConverter.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : "audio file format conversion",
+            "package" : null,
+            "symbol" : "FormatConverter"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "audio.metering",
+      "label" : "Audio level metering"
+    },
+    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "AmplitudeTap/FFTTap give live level + spectrum metering on any node.",
+    "package" : {
+      "aliases" : [
+        "AudioKit/AudioKit"
+      ],
+      "canonicalURL" : "https://github.com/audiokit/audiokit",
+      "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+      "name" : "AudioKit",
+      "surfaceDigest" : "fnv1a64:bf6eb5e879b0cd61",
+      "version" : "5.7.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioKit/Taps/AmplitudeTap.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : "RMS/peak amplitude per buffer",
+            "package" : null,
+            "symbol" : "AmplitudeTap"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "AVAudioEngine-based",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioKit/Taps/AmplitudeTap.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : "RMS/peak amplitude per buffer",
+            "package" : null,
+            "symbol" : "AmplitudeTap"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioKit/Taps/AmplitudeTap.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : "RMS/peak amplitude per buffer",
+            "package" : null,
+            "symbol" : "AmplitudeTap"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioKit/Taps/AmplitudeTap.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : "RMS/peak amplitude per buffer",
+            "package" : null,
+            "symbol" : "AmplitudeTap"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioKit/Taps/AmplitudeTap.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : "RMS/peak amplitude per buffer",
+            "package" : null,
+            "symbol" : "AmplitudeTap"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "audio.recording",
+      "label" : "Microphone recording"
+    },
+    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "NodeRecorder records the input (or any node) to file.",
+    "package" : {
+      "aliases" : [
+        "AudioKit/AudioKit"
+      ],
+      "canonicalURL" : "https://github.com/audiokit/audiokit",
+      "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+      "name" : "AudioKit",
+      "surfaceDigest" : "fnv1a64:bf6eb5e879b0cd61",
+      "version" : "5.7.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioKit/Taps/NodeRecorder.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "records any node (incl. the mic input) to file",
+            "package" : null,
+            "symbol" : "NodeRecorder"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "AVAudioEngine-based",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioKit/Taps/NodeRecorder.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "records any node (incl. the mic input) to file",
+            "package" : null,
+            "symbol" : "NodeRecorder"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioKit/Taps/NodeRecorder.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "records any node (incl. the mic input) to file",
+            "package" : null,
+            "symbol" : "NodeRecorder"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "NodeRecorder compiles for tvOS but there's no microphone input path on tvOS",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioKit/Taps/NodeRecorder.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "records any node (incl. the mic input) to file",
+            "package" : null,
+            "symbol" : "NodeRecorder"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "audio.synthesis",
+      "label" : "Audio synthesis / DSP"
+    },
+    "labeledAt" : "2026-07-02T12:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "The audio-synthesis anchor package: AudioEngine over AVAudioEngine, node graph, DSP.",
+    "package" : {
+      "aliases" : [
+        "AudioKit/AudioKit"
+      ],
+      "canonicalURL" : "https://github.com/audiokit/audiokit",
+      "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+      "name" : "AudioKit",
+      "surfaceDigest" : "fnv1a64:bf6eb5e879b0cd61",
+      "version" : "5.7.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioKit/Internals/Engine/AudioEngine.swift",
+            "kind" : "symbol",
+            "line" : 56,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AudioEngine"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "AVAudioEngine-based; Apple platforms only in practice, unproven in source",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioKit/Internals/Engine/AudioEngine.swift",
+            "kind" : "symbol",
+            "line" : 56,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AudioEngine"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioKit/Internals/Engine/AudioEngine.swift",
+            "kind" : "symbol",
+            "line" : 56,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AudioEngine"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 11",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioKit/Internals/Engine/AudioEngine.swift",
+            "kind" : "symbol",
+            "line" : 56,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AudioEngine"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioKit/Internals/Engine/AudioEngine.swift",
+            "kind" : "symbol",
+            "line" : 56,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AudioEngine"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares visionOS 1",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors; no source fence proves absence",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "midi.file",
+      "label" : "MIDI file read/write"
+    },
+    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "MIDI file loading + AppleSequencer playback — fenced off tvOS with the rest of the MIDI subsystem.",
+    "package" : {
+      "aliases" : [
+        "AudioKit/AudioKit"
+      ],
+      "canonicalURL" : "https://github.com/audiokit/audiokit",
+      "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+      "name" : "AudioKit",
+      "surfaceDigest" : "fnv1a64:bf6eb5e879b0cd61",
+      "version" : "5.7.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(tvOS)",
+            "file" : "Sources/AudioKit/MIDI/MIDIFile/MIDIFile.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : "SMF loading for the AppleSequencer",
+            "package" : null,
+            "symbol" : "MIDIFile"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "AudioToolbox-based",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(tvOS)",
+            "file" : "Sources/AudioKit/MIDI/MIDIFile/MIDIFile.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : "SMF loading for the AppleSequencer",
+            "package" : null,
+            "symbol" : "MIDIFile"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(tvOS)",
+            "file" : "Sources/AudioKit/MIDI/MIDIFile/MIDIFile.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : "SMF loading for the AppleSequencer",
+            "package" : null,
+            "symbol" : "MIDIFile"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(tvOS)",
+            "file" : "Sources/AudioKit/MIDI/MIDIFile/MIDIFile.swift",
+            "kind" : "guard",
+            "line" : 8,
+            "note" : "under the MIDI subsystem's !os(tvOS) fence",
+            "package" : null,
+            "symbol" : "MIDIFile"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(tvOS)",
+            "file" : "Sources/AudioKit/MIDI/MIDIFile/MIDIFile.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : "SMF loading for the AppleSequencer",
+            "package" : null,
+            "symbol" : "MIDIFile"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "midi.io",
+      "label" : "MIDI input/output"
+    },
+    "labeledAt" : "2026-07-02T12:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "CoreMIDI wrapper (input + output). Provably excluded on tvOS via #if !os(tvOS).",
+    "package" : {
+      "aliases" : [
+        "AudioKit/AudioKit"
+      ],
+      "canonicalURL" : "https://github.com/audiokit/audiokit",
+      "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+      "name" : "AudioKit",
+      "surfaceDigest" : "fnv1a64:bf6eb5e879b0cd61",
+      "version" : "5.7.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(tvOS)",
+            "file" : "Sources/AudioKit/MIDI/MIDI.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MIDI"
+          },
+          {
+            "availability" : null,
+            "condition" : "!os(tvOS)",
+            "file" : "Sources/AudioKit/MIDI/MIDI+Receiving.swift",
+            "kind" : "symbol",
+            "line" : 140,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MIDI.openInput"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "CoreMIDI is Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(tvOS)",
+            "file" : "Sources/AudioKit/MIDI/MIDI.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MIDI"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(tvOS)",
+            "file" : "Sources/AudioKit/MIDI/MIDI.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MIDI"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(tvOS)",
+            "file" : "Sources/AudioKit/MIDI/MIDI.swift",
+            "kind" : "guard",
+            "line" : 8,
+            "note" : "the whole MIDI subsystem is fenced off tvOS — the line that decides it",
+            "package" : null,
+            "symbol" : "MIDI"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(tvOS)",
+            "file" : "Sources/AudioKit/MIDI/MIDI.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MIDI"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors; MIDI symbols resolve present but intent is unstated",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

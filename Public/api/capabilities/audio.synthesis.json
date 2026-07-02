@@ -1,0 +1,797 @@
+{
+  "aliases" : [
+    "dsp",
+    "oscillator",
+    "signal processing",
+    "effects"
+  ],
+  "id" : "audio.synthesis",
+  "label" : "Audio synthesis / DSP",
+  "packages" : [
+    {
+      "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+      "notes" : "The audio-synthesis anchor package: AudioEngine over AVAudioEngine, node graph, DSP.",
+      "package" : "https://github.com/audiokit/audiokit",
+      "packageName" : "AudioKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKit/Internals/Engine/AudioEngine.swift",
+              "kind" : "symbol",
+              "line" : 56,
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/Internals/Engine/AudioEngine.swift#L56",
+              "symbol" : "AudioEngine"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVAudioEngine-based; Apple platforms only in practice, unproven in source"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKit/Internals/Engine/AudioEngine.swift",
+              "kind" : "symbol",
+              "line" : 56,
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/Internals/Engine/AudioEngine.swift#L56",
+              "symbol" : "AudioEngine"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKit/Internals/Engine/AudioEngine.swift",
+              "kind" : "symbol",
+              "line" : 56,
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/Internals/Engine/AudioEngine.swift#L56",
+              "symbol" : "AudioEngine"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 11"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKit/Internals/Engine/AudioEngine.swift",
+              "kind" : "symbol",
+              "line" : 56,
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/Internals/Engine/AudioEngine.swift#L56",
+              "symbol" : "AudioEngine"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKit/Internals/Engine/AudioEngine.swift",
+              "kind" : "symbol",
+              "line" : 56,
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/Internals/Engine/AudioEngine.swift#L56",
+              "symbol" : "AudioEngine"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares visionOS 1"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors; no source fence proves absence"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "audiokit",
+      "version" : "5.7.2"
+    },
+    {
+      "commit" : "3dfb80b2ee280c5edb19b2e4e340142521fcafdf",
+      "notes" : "Guitar-oriented DSP processors.",
+      "package" : "https://github.com/audiokit/devoloopaudiokit",
+      "packageName" : "DevoloopAudioKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/DevoloopAudioKit/RhinoGuitarProcessor.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "guitar amp/distortion",
+              "permalink" : "https://github.com/audiokit/devoloopaudiokit/blob/5.5.1/Sources/DevoloopAudioKit/RhinoGuitarProcessor.swift#L10",
+              "symbol" : "RhinoGuitarProcessor"
+            },
+            {
+              "file" : "Sources/DevoloopAudioKit/DynaRageCompressor.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "compressor",
+              "permalink" : "https://github.com/audiokit/devoloopaudiokit/blob/5.5.1/Sources/DevoloopAudioKit/DynaRageCompressor.swift#L11",
+              "symbol" : "DynaRageCompressor"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "Apple-frameworks based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/DevoloopAudioKit/RhinoGuitarProcessor.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "guitar amp/distortion",
+              "permalink" : "https://github.com/audiokit/devoloopaudiokit/blob/5.5.1/Sources/DevoloopAudioKit/RhinoGuitarProcessor.swift#L10",
+              "symbol" : "RhinoGuitarProcessor"
+            },
+            {
+              "file" : "Sources/DevoloopAudioKit/DynaRageCompressor.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "compressor",
+              "permalink" : "https://github.com/audiokit/devoloopaudiokit/blob/5.5.1/Sources/DevoloopAudioKit/DynaRageCompressor.swift#L11",
+              "symbol" : "DynaRageCompressor"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macCatalyst"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/DevoloopAudioKit/RhinoGuitarProcessor.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "guitar amp/distortion",
+              "permalink" : "https://github.com/audiokit/devoloopaudiokit/blob/5.5.1/Sources/DevoloopAudioKit/RhinoGuitarProcessor.swift#L10",
+              "symbol" : "RhinoGuitarProcessor"
+            },
+            {
+              "file" : "Sources/DevoloopAudioKit/DynaRageCompressor.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "compressor",
+              "permalink" : "https://github.com/audiokit/devoloopaudiokit/blob/5.5.1/Sources/DevoloopAudioKit/DynaRageCompressor.swift#L11",
+              "symbol" : "DynaRageCompressor"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/DevoloopAudioKit/RhinoGuitarProcessor.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "guitar amp/distortion",
+              "permalink" : "https://github.com/audiokit/devoloopaudiokit/blob/5.5.1/Sources/DevoloopAudioKit/RhinoGuitarProcessor.swift#L10",
+              "symbol" : "RhinoGuitarProcessor"
+            },
+            {
+              "file" : "Sources/DevoloopAudioKit/DynaRageCompressor.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "compressor",
+              "permalink" : "https://github.com/audiokit/devoloopaudiokit/blob/5.5.1/Sources/DevoloopAudioKit/DynaRageCompressor.swift#L11",
+              "symbol" : "DynaRageCompressor"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "devoloopaudiokit",
+      "version" : "5.5.1"
+    },
+    {
+      "commit" : "f6cee064ab82b95b36d8b9242a11bd06cb390256",
+      "notes" : "Sampler + Synth instruments (41 C++ DSP files unparsed). Note: Synth is fenced !os(tvOS); the Sampler anchor carries the tvOS claim.",
+      "package" : "https://github.com/audiokit/dunneaudiokit",
+      "packageName" : "DunneAudioKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/DunneAudioKit/Sampler.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "polyphonic sampler instrument",
+              "permalink" : "https://github.com/audiokit/dunneaudiokit/blob/5.6.2/Sources/DunneAudioKit/Sampler.swift#L9",
+              "symbol" : "Sampler"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "Apple-frameworks based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/DunneAudioKit/Sampler.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "polyphonic sampler instrument",
+              "permalink" : "https://github.com/audiokit/dunneaudiokit/blob/5.6.2/Sources/DunneAudioKit/Sampler.swift#L9",
+              "symbol" : "Sampler"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macCatalyst"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/DunneAudioKit/Sampler.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "polyphonic sampler instrument",
+              "permalink" : "https://github.com/audiokit/dunneaudiokit/blob/5.6.2/Sources/DunneAudioKit/Sampler.swift#L9",
+              "symbol" : "Sampler"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/DunneAudioKit/Sampler.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "polyphonic sampler instrument",
+              "permalink" : "https://github.com/audiokit/dunneaudiokit/blob/5.6.2/Sources/DunneAudioKit/Sampler.swift#L9",
+              "symbol" : "Sampler"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "dunneaudiokit",
+      "version" : "5.6.2"
+    },
+    {
+      "commit" : "e0334228042814216ff12b81499f911632440104",
+      "notes" : "Single SOUL-generated processor (thin surface).",
+      "package" : "https://github.com/audiokit/soulaudiokit",
+      "packageName" : "SoulAudioKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/SoulAudioKit/DiodeClipper.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "diode clipper distortion",
+              "permalink" : "https://github.com/audiokit/soulaudiokit/blob/5.3.0/Sources/SoulAudioKit/DiodeClipper.swift#L9",
+              "symbol" : "DiodeClipper"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "Apple-frameworks based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/SoulAudioKit/DiodeClipper.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "diode clipper distortion",
+              "permalink" : "https://github.com/audiokit/soulaudiokit/blob/5.3.0/Sources/SoulAudioKit/DiodeClipper.swift#L9",
+              "symbol" : "DiodeClipper"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macCatalyst"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/SoulAudioKit/DiodeClipper.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "diode clipper distortion",
+              "permalink" : "https://github.com/audiokit/soulaudiokit/blob/5.3.0/Sources/SoulAudioKit/DiodeClipper.swift#L9",
+              "symbol" : "DiodeClipper"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/SoulAudioKit/DiodeClipper.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "diode clipper distortion",
+              "permalink" : "https://github.com/audiokit/soulaudiokit/blob/5.3.0/Sources/SoulAudioKit/DiodeClipper.swift#L9",
+              "symbol" : "DiodeClipper"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "soulaudiokit",
+      "version" : "5.3.0"
+    },
+    {
+      "commit" : "638c95036430ce23ba2810101de319ed31f481bb",
+      "notes" : "Operation-based DSP (Sporth language) as AudioKit nodes.",
+      "package" : "https://github.com/audiokit/sporthaudiokit",
+      "packageName" : "SporthAudioKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/SporthAudioKit/OperationGenerator.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "Sporth operation → generator node",
+              "permalink" : "https://github.com/audiokit/sporthaudiokit/blob/5.5.1/Sources/SporthAudioKit/OperationGenerator.swift#L9",
+              "symbol" : "OperationGenerator"
+            },
+            {
+              "file" : "Sources/SporthAudioKit/OperationEffect.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Sporth operation → effect node",
+              "permalink" : "https://github.com/audiokit/sporthaudiokit/blob/5.5.1/Sources/SporthAudioKit/OperationEffect.swift#L11",
+              "symbol" : "OperationEffect"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "Apple-frameworks based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SporthAudioKit/OperationGenerator.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "Sporth operation → generator node",
+              "permalink" : "https://github.com/audiokit/sporthaudiokit/blob/5.5.1/Sources/SporthAudioKit/OperationGenerator.swift#L9",
+              "symbol" : "OperationGenerator"
+            },
+            {
+              "file" : "Sources/SporthAudioKit/OperationEffect.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Sporth operation → effect node",
+              "permalink" : "https://github.com/audiokit/sporthaudiokit/blob/5.5.1/Sources/SporthAudioKit/OperationEffect.swift#L11",
+              "symbol" : "OperationEffect"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macCatalyst"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/SporthAudioKit/OperationGenerator.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "Sporth operation → generator node",
+              "permalink" : "https://github.com/audiokit/sporthaudiokit/blob/5.5.1/Sources/SporthAudioKit/OperationGenerator.swift#L9",
+              "symbol" : "OperationGenerator"
+            },
+            {
+              "file" : "Sources/SporthAudioKit/OperationEffect.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Sporth operation → effect node",
+              "permalink" : "https://github.com/audiokit/sporthaudiokit/blob/5.5.1/Sources/SporthAudioKit/OperationEffect.swift#L11",
+              "symbol" : "OperationEffect"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SporthAudioKit/OperationGenerator.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "Sporth operation → generator node",
+              "permalink" : "https://github.com/audiokit/sporthaudiokit/blob/5.5.1/Sources/SporthAudioKit/OperationGenerator.swift#L9",
+              "symbol" : "OperationGenerator"
+            },
+            {
+              "file" : "Sources/SporthAudioKit/OperationEffect.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Sporth operation → effect node",
+              "permalink" : "https://github.com/audiokit/sporthaudiokit/blob/5.5.1/Sources/SporthAudioKit/OperationEffect.swift#L11",
+              "symbol" : "OperationEffect"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "sporthaudiokit",
+      "version" : "5.5.1"
+    },
+    {
+      "commit" : "e6af9e24eb599d4ff34d5776b0801cf0068142bc",
+      "notes" : "Stanford STK physical models (191 C++ files unparsed — heavy blind spot, confidence modest).",
+      "package" : "https://github.com/audiokit/stkaudiokit",
+      "packageName" : "STKAudioKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "physical-model instrument",
+              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L22",
+              "symbol" : "Clarinet"
+            },
+            {
+              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+              "kind" : "symbol",
+              "line" : 40,
+              "note" : "physical-model instrument",
+              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L40",
+              "symbol" : "RhodesPianoKey"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "Apple-frameworks based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "physical-model instrument",
+              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L22",
+              "symbol" : "Clarinet"
+            },
+            {
+              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+              "kind" : "symbol",
+              "line" : 40,
+              "note" : "physical-model instrument",
+              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L40",
+              "symbol" : "RhodesPianoKey"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macCatalyst"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "physical-model instrument",
+              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L22",
+              "symbol" : "Clarinet"
+            },
+            {
+              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+              "kind" : "symbol",
+              "line" : 40,
+              "note" : "physical-model instrument",
+              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L40",
+              "symbol" : "RhodesPianoKey"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "physical-model instrument",
+              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L22",
+              "symbol" : "Clarinet"
+            },
+            {
+              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+              "kind" : "symbol",
+              "line" : 40,
+              "note" : "physical-model instrument",
+              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L40",
+              "symbol" : "RhodesPianoKey"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "stkaudiokit",
+      "version" : "5.5.4"
+    }
+  ]
+}

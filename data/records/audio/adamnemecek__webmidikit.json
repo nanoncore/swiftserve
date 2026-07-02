@@ -1,0 +1,139 @@
+[
+  {
+    "capability" : {
+      "id" : "midi.io",
+      "label" : "MIDI input/output"
+    },
+    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "WebMIDI-shaped API over CoreMIDI.",
+    "package" : {
+      "aliases" : [
+        "adamnemecek/webmidikit"
+      ],
+      "canonicalURL" : "https://github.com/adamnemecek/webmidikit",
+      "commit" : "b40e74e47f34ecba4c4e7c60f9c56f2e208b0031",
+      "name" : "WebMIDIKit",
+      "surfaceDigest" : "fnv1a64:9f52aab1822f7e5b",
+      "version" : "1.0.5"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebMIDIKit/MIDIInput.swift",
+            "kind" : "symbol",
+            "line" : 13,
+            "note" : "WebMIDI-style input port",
+            "package" : null,
+            "symbol" : "MIDIInput"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "CoreMIDI is Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebMIDIKit/MIDIInput.swift",
+            "kind" : "symbol",
+            "line" : 13,
+            "note" : "WebMIDI-style input port",
+            "package" : null,
+            "symbol" : "MIDIInput"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebMIDIKit/MIDIInput.swift",
+            "kind" : "symbol",
+            "line" : 13,
+            "note" : "WebMIDI-style input port",
+            "package" : null,
+            "symbol" : "MIDIInput"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "empty manifest; CoreMIDI I/O absent on tvOS",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "empty manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "empty manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

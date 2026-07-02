@@ -1,0 +1,32 @@
+{
+  "_comment": "Hand-curated seeds for the audio/media domain. `keywords` drive the packages.json sweep in `swiftserve index discover`; keyword hits land as candidates for human pruning. Companion packages cite the package they serve.",
+  "version": 1,
+  "domain": "audio",
+  "keywords": [
+    "audio", "sound", "voice", "speech", "microphone", "video", "media",
+    "player", "webrtc", "midi", "synth", "codec", "opus", "transcrib",
+    "whisper", "music", "podcast", "waveform", "metronome", "hls", "rtmp",
+    "karaoke", "recorder", "tts", "spatial"
+  ],
+  "packages": [
+    {
+      "url": "https://github.com/livekit/client-sdk-swift",
+      "why": "acceptance target — the founding incident (noise cancellation, iOS-only)"
+    },
+    {
+      "url": "https://github.com/livekit/swift-krisp-noise-filter",
+      "why": "companion: LiveKit's Krisp noise-cancellation filter",
+      "companionOf": "https://github.com/livekit/client-sdk-swift"
+    },
+    { "url": "https://github.com/AudioKit/AudioKit", "why": "the audio synthesis/DSP anchor package" },
+    { "url": "https://github.com/AudioKit/AudioKitEX", "why": "AudioKit extensions" },
+    { "url": "https://github.com/AudioKit/SoundpipeAudioKit", "why": "Soundpipe DSP nodes" },
+    { "url": "https://github.com/GetStream/stream-video-swift", "why": "video/voice calling SDK" },
+    { "url": "https://github.com/DoubleSymmetry/SwiftAudioEx", "why": "audio player over AVPlayer" },
+    { "url": "https://github.com/tanhakabir/SwiftAudioPlayer", "why": "streaming audio player" },
+    { "url": "https://github.com/adamcichy/SwiftySound", "why": "simple sound playback" },
+    { "url": "https://github.com/argmaxinc/WhisperKit", "why": "on-device speech-to-text" },
+    { "url": "https://github.com/exPHAT/SwiftWhisper", "why": "whisper.cpp wrapper for STT" },
+    { "url": "https://github.com/stasel/WebRTC", "why": "prebuilt WebRTC binaries (known ObjC/binary blind spot — honest unknown expected)" }
+  ]
+}

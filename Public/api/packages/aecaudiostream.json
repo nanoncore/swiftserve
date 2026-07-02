@@ -1,0 +1,169 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.echo-cancellation",
+      "label" : "Echo cancellation"
+    },
+    "labeledAt" : "2026-07-02T14:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Wraps Apple's Voice-Processing I/O unit to strip echo (and optionally apply AGC) from mic capture.",
+    "package" : {
+      "aliases" : [
+        "kasimok/AECAudioStream"
+      ],
+      "canonicalURL" : "https://github.com/kasimok/aecaudiostream",
+      "commit" : "c5d16bbb9f3c4282523d6d6039c0009480b72c25",
+      "name" : "AECAudioStream",
+      "surfaceDigest" : "fnv1a64:863235b8b87e2546",
+      "version" : "1.0.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AECAudioStream/AECAudioStream.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : "Voice-Processing I/O (AEC) audio unit stream",
+            "package" : null,
+            "symbol" : "AECAudioStream"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "AudioToolbox VPIO is Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AECAudioStream/AECAudioStream.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : "Voice-Processing I/O (AEC) audio unit stream",
+            "package" : null,
+            "symbol" : "AECAudioStream"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AECAudioStream/AECAudioStream.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : "Voice-Processing I/O (AEC) audio unit stream",
+            "package" : null,
+            "symbol" : "AECAudioStream"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AECAudioStream/AECAudioStream.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : "Voice-Processing I/O (AEC) audio unit stream",
+            "package" : null,
+            "symbol" : "AECAudioStream"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors; no source fence",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors; no source fence",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

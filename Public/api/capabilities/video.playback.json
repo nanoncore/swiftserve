@@ -1,0 +1,668 @@
+{
+  "aliases" : [
+    "video player",
+    "play video"
+  ],
+  "id" : "video.playback",
+  "label" : "Video playback",
+  "packages" : [
+    {
+      "commit" : "bdfa2da39bb18865b317c4ffd08cdef5f8efc043",
+      "notes" : "AVPlayer + FFmpeg-based player (subtitles, HDR, multiple audio tracks).",
+      "package" : "https://github.com/kingslay/ksplayer",
+      "packageName" : "KSPlayer",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/KSPlayer/AVPlayer/KSPlayerLayer.swift",
+              "kind" : "symbol",
+              "line" : 67,
+              "note" : "the player surface",
+              "permalink" : "https://github.com/kingslay/ksplayer/blob/2.3.4/Sources/KSPlayer/AVPlayer/KSPlayerLayer.swift#L67",
+              "symbol" : "KSPlayerLayer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVFoundation/FFmpeg player targeting Apple platforms"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/KSPlayer/AVPlayer/KSPlayerLayer.swift",
+              "kind" : "symbol",
+              "line" : 67,
+              "note" : "the player surface",
+              "permalink" : "https://github.com/kingslay/ksplayer/blob/2.3.4/Sources/KSPlayer/AVPlayer/KSPlayerLayer.swift#L67",
+              "symbol" : "KSPlayerLayer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macCatalyst 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/KSPlayer/AVPlayer/KSPlayerLayer.swift",
+              "kind" : "symbol",
+              "line" : 67,
+              "note" : "the player surface",
+              "permalink" : "https://github.com/kingslay/ksplayer/blob/2.3.4/Sources/KSPlayer/AVPlayer/KSPlayerLayer.swift#L67",
+              "symbol" : "KSPlayerLayer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/KSPlayer/AVPlayer/KSPlayerLayer.swift",
+              "kind" : "symbol",
+              "line" : 67,
+              "note" : "the player surface",
+              "permalink" : "https://github.com/kingslay/ksplayer/blob/2.3.4/Sources/KSPlayer/AVPlayer/KSPlayerLayer.swift#L67",
+              "symbol" : "KSPlayerLayer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/KSPlayer/AVPlayer/KSPlayerLayer.swift",
+              "kind" : "symbol",
+              "line" : 67,
+              "note" : "the player surface",
+              "permalink" : "https://github.com/kingslay/ksplayer/blob/2.3.4/Sources/KSPlayer/AVPlayer/KSPlayerLayer.swift#L67",
+              "symbol" : "KSPlayerLayer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares visionOS 1"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "ksplayer",
+      "version" : "2.3.4"
+    },
+    {
+      "commit" : "1ae827573024ab13dd6adea33b25d3eef6ff667c",
+      "notes" : "YouTube playback via the IFrame API in a hosted web view — not raw AVPlayer.",
+      "package" : "https://github.com/sventiigi/youtubeplayerkit",
+      "packageName" : "YouTubePlayerKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/UI/HostingView/YouTubePlayerHostingView.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "permalink" : "https://github.com/sventiigi/youtubeplayerkit/blob/2.0.5/Sources/UI/HostingView/YouTubePlayerHostingView.swift#L20",
+              "symbol" : "YouTubePlayerHostingView"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVFoundation/Apple-frameworks based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/UI/HostingView/YouTubePlayerHostingView.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "permalink" : "https://github.com/sventiigi/youtubeplayerkit/blob/2.0.5/Sources/UI/HostingView/YouTubePlayerHostingView.swift#L20",
+              "symbol" : "YouTubePlayerHostingView"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/UI/HostingView/YouTubePlayerHostingView.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "permalink" : "https://github.com/sventiigi/youtubeplayerkit/blob/2.0.5/Sources/UI/HostingView/YouTubePlayerHostingView.swift#L20",
+              "symbol" : "YouTubePlayerHostingView"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors; no source fence"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/UI/HostingView/YouTubePlayerHostingView.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "permalink" : "https://github.com/sventiigi/youtubeplayerkit/blob/2.0.5/Sources/UI/HostingView/YouTubePlayerHostingView.swift#L20",
+              "symbol" : "YouTubePlayerHostingView"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares visionOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors; no source fence"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "youtubeplayerkit",
+      "version" : "2.0.5"
+    },
+    {
+      "commit" : "ab16588b7b8e297255e2d8a7407eb89506af265b",
+      "notes" : "AVPlayer wrapper with robust state machine, remote commands, audio session handling.",
+      "package" : "https://github.com/noreasonprojects/modernavplayer",
+      "packageName" : "ModernAVPlayer",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Core/ModernAVPlayer.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "permalink" : "https://github.com/noreasonprojects/modernavplayer/blob/1.7.3/Sources/Core/ModernAVPlayer.swift#L29",
+              "symbol" : "ModernAVPlayer"
+            },
+            {
+              "file" : "Sources/Core/Components/ModernAVPlayerConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 33,
+              "permalink" : "https://github.com/noreasonprojects/modernavplayer/blob/1.7.3/Sources/Core/Components/ModernAVPlayerConfiguration.swift#L33",
+              "symbol" : "ModernAVPlayerConfiguration"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVFoundation/Apple-frameworks based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Core/ModernAVPlayer.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "permalink" : "https://github.com/noreasonprojects/modernavplayer/blob/1.7.3/Sources/Core/ModernAVPlayer.swift#L29",
+              "symbol" : "ModernAVPlayer"
+            },
+            {
+              "file" : "Sources/Core/Components/ModernAVPlayerConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 33,
+              "permalink" : "https://github.com/noreasonprojects/modernavplayer/blob/1.7.3/Sources/Core/Components/ModernAVPlayerConfiguration.swift#L33",
+              "symbol" : "ModernAVPlayerConfiguration"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "macOS absent from manifest floors; no source fence"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Core/ModernAVPlayer.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "permalink" : "https://github.com/noreasonprojects/modernavplayer/blob/1.7.3/Sources/Core/ModernAVPlayer.swift#L29",
+              "symbol" : "ModernAVPlayer"
+            },
+            {
+              "file" : "Sources/Core/Components/ModernAVPlayerConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 33,
+              "permalink" : "https://github.com/noreasonprojects/modernavplayer/blob/1.7.3/Sources/Core/Components/ModernAVPlayerConfiguration.swift#L33",
+              "symbol" : "ModernAVPlayerConfiguration"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors; no source fence"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors; no source fence"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "modernavplayer",
+      "version" : "1.7.3"
+    },
+    {
+      "commit" : "df1e48f95d26b3ee0a861037052e836ea63cbd8c",
+      "notes" : "Simple AVPlayer wrapper for video playback.",
+      "package" : "https://github.com/piemonte/player",
+      "packageName" : "Player",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Player.swift",
+              "kind" : "symbol",
+              "line" : 95,
+              "permalink" : "https://github.com/piemonte/player/blob/0.15.0/Sources/Player.swift#L95",
+              "symbol" : "Player"
+            },
+            {
+              "file" : "Sources/Player.swift",
+              "kind" : "symbol",
+              "line" : 53,
+              "permalink" : "https://github.com/piemonte/player/blob/0.15.0/Sources/Player.swift#L53",
+              "symbol" : "PlayerDelegate"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVFoundation/Apple-frameworks based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Player.swift",
+              "kind" : "symbol",
+              "line" : 95,
+              "permalink" : "https://github.com/piemonte/player/blob/0.15.0/Sources/Player.swift#L95",
+              "symbol" : "Player"
+            },
+            {
+              "file" : "Sources/Player.swift",
+              "kind" : "symbol",
+              "line" : 53,
+              "permalink" : "https://github.com/piemonte/player/blob/0.15.0/Sources/Player.swift#L53",
+              "symbol" : "PlayerDelegate"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "macOS absent from manifest floors; no source fence"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Player.swift",
+              "kind" : "symbol",
+              "line" : 95,
+              "permalink" : "https://github.com/piemonte/player/blob/0.15.0/Sources/Player.swift#L95",
+              "symbol" : "Player"
+            },
+            {
+              "file" : "Sources/Player.swift",
+              "kind" : "symbol",
+              "line" : 53,
+              "permalink" : "https://github.com/piemonte/player/blob/0.15.0/Sources/Player.swift#L53",
+              "symbol" : "PlayerDelegate"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors; no source fence"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors; no source fence"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "player",
+      "version" : "0.15.0"
+    },
+    {
+      "commit" : "974bb44689a8b3bc541eb082728c1317f65af197",
+      "notes" : "Mux video player over AVPlayerViewController/AVPlayerLayer.",
+      "package" : "https://github.com/muxinc/mux-player-swift",
+      "packageName" : "MuxPlayerSwift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/MuxPlayerSwift/PublicAPI/ViewController/MuxPlayerContainerViewController.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "permalink" : "https://github.com/muxinc/mux-player-swift/blob/v1.7.0/Sources/MuxPlayerSwift/PublicAPI/ViewController/MuxPlayerContainerViewController.swift#L10",
+              "symbol" : "MuxPlayerContainerViewController"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVFoundation/Apple-frameworks based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/MuxPlayerSwift/PublicAPI/ViewController/MuxPlayerContainerViewController.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "permalink" : "https://github.com/muxinc/mux-player-swift/blob/v1.7.0/Sources/MuxPlayerSwift/PublicAPI/ViewController/MuxPlayerContainerViewController.swift#L10",
+              "symbol" : "MuxPlayerContainerViewController"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "macOS absent from manifest floors; no source fence"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors; no source fence"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors; no source fence"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors; no source fence"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "mux-player-swift",
+      "version" : "v1.7.0"
+    },
+    {
+      "commit" : "a3a9249e34ce1bdcfa20c0780fdbec26a6396ddb",
+      "notes" : "360° video playback (SceneKit + AVPlayer).",
+      "package" : "https://github.com/abdullahselek/swifty360player",
+      "packageName" : "Swifty360Player",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Swifty360Player/Swifty360CameraController.swift",
+              "kind" : "symbol",
+              "line" : 57,
+              "permalink" : "https://github.com/abdullahselek/swifty360player/blob/0.2.7/Swifty360Player/Swifty360CameraController.swift#L57",
+              "symbol" : "Swifty360CameraController"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVFoundation/Apple-frameworks based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Swifty360Player/Swifty360CameraController.swift",
+              "kind" : "symbol",
+              "line" : 57,
+              "permalink" : "https://github.com/abdullahselek/swifty360player/blob/0.2.7/Swifty360Player/Swifty360CameraController.swift#L57",
+              "symbol" : "Swifty360CameraController"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "macOS absent from manifest floors; no source fence"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors; no source fence"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors; no source fence"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors; no source fence"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swifty360player",
+      "version" : "0.2.7"
+    }
+  ]
+}

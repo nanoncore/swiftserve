@@ -1,0 +1,159 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.recording",
+      "label" : "Microphone recording"
+    },
+    "labeledAt" : "2026-07-02T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Microphone recording with output to file, with a dependency-client interface.",
+    "package" : {
+      "aliases" : [
+        "atacan/AudioRecorder"
+      ],
+      "canonicalURL" : "https://github.com/atacan/audiorecorder",
+      "commit" : "fade972c21f3665fdbfa3f0525ef0961b3e56566",
+      "name" : "AudioRecorder",
+      "surfaceDigest" : "fnv1a64:708f9a0642a03587",
+      "version" : "1.0.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioRecorderClient/AudioRecorderClient+LiveKey.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "TCA-style recording client",
+            "package" : null,
+            "symbol" : "AudioRecorderClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 16",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "AVFoundation-based",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioRecorderClient/AudioRecorderClient+LiveKey.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "TCA-style recording client",
+            "package" : null,
+            "symbol" : "AudioRecorderClient"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AudioRecorderClient/AudioRecorderClient+LiveKey.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "TCA-style recording client",
+            "package" : null,
+            "symbol" : "AudioRecorderClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "tvOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

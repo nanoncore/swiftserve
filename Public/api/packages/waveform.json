@@ -1,0 +1,159 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.waveform-visualization",
+      "label" : "Waveform visualization"
+    },
+    "labeledAt" : "2026-07-02T17:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "GPU (Metal) waveform rendering. Implemented as an os(macOS)/!os(macOS) split pair of same-named types — each platform claim anchors its own side.",
+    "package" : {
+      "aliases" : [
+        "AudioKit/Waveform"
+      ],
+      "canonicalURL" : "https://github.com/audiokit/waveform",
+      "commit" : "357de1945a36e62a27f74a9b3b8f5e45904659d9",
+      "name" : "AudioKit Waveform",
+      "surfaceDigest" : "fnv1a64:cacbaf79f75fc06f",
+      "version" : "1.0.3"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(macOS)",
+            "file" : "Sources/Waveform/Waveform.swift",
+            "kind" : "symbol",
+            "line" : 68,
+            "note" : "the !os(macOS) side of the split pair",
+            "package" : null,
+            "symbol" : "Waveform"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 14",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "Metal-based rendering",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(macOS)",
+            "file" : "Sources/Waveform/Waveform.swift",
+            "kind" : "symbol",
+            "line" : 68,
+            "note" : "the !os(macOS) side of the split pair",
+            "package" : null,
+            "symbol" : "Waveform"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(macOS)",
+            "file" : "Sources/Waveform/Waveform.swift",
+            "kind" : "symbol",
+            "line" : 9,
+            "note" : "the os(macOS) side of the split pair",
+            "package" : null,
+            "symbol" : "Waveform"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 11",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "symbol compiles there but tvOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

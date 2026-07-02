@@ -1,0 +1,395 @@
+{
+  "packages" : {
+    "https://github.com/abdullahselek/swifty360player" : {
+      "commit" : "a3a9249e34ce1bdcfa20c0780fdbec26a6396ddb",
+      "fetchedAt" : "2026-07-02T09:01:32Z",
+      "tag" : "0.2.7"
+    },
+    "https://github.com/adamcichy/swiftysound" : {
+      "commit" : "72dbeaf4b4496b105bc731db05819dd16edc9449",
+      "fetchedAt" : "2026-07-02T08:42:49Z",
+      "tag" : "1.3.0"
+    },
+    "https://github.com/adamnemecek/webmidikit" : {
+      "commit" : "b40e74e47f34ecba4c4e7c60f9c56f2e208b0031",
+      "fetchedAt" : "2026-07-02T09:01:21Z",
+      "tag" : "1.0.5"
+    },
+    "https://github.com/alamofire/alamofire" : {
+      "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
+      "fetchedAt" : "2026-07-02T10:25:48Z",
+      "tag" : "5.12.0"
+    },
+    "https://github.com/alta/swift-opus" : {
+      "commit" : "5f0164b8915fb9001265c54413aa0f0efbd3df06",
+      "fetchedAt" : "2026-07-02T09:02:00Z",
+      "tag" : "0.0.2"
+    },
+    "https://github.com/apple/swift-nio" : {
+      "commit" : "cd3e1152083706d77b223fb29110e590efcc70c0",
+      "fetchedAt" : "2026-07-02T10:25:51Z",
+      "tag" : "2.101.2"
+    },
+    "https://github.com/argmaxinc/whisperkit" : {
+      "commit" : "25c62997041c134b03ca82731ce2f6fd2cae1eb9",
+      "fetchedAt" : "2026-07-02T08:42:50Z",
+      "tag" : "v1.0.0"
+    },
+    "https://github.com/atacan/audiorecorder" : {
+      "commit" : "fade972c21f3665fdbfa3f0525ef0961b3e56566",
+      "fetchedAt" : "2026-07-02T09:01:47Z",
+      "tag" : "1.0.0"
+    },
+    "https://github.com/atelier-socle/swift-hls-kit" : {
+      "commit" : "36e481e70ca02b18828ba02a512d0e621f629d5d",
+      "fetchedAt" : "2026-07-02T09:02:01Z",
+      "tag" : "0.6.1"
+    },
+    "https://github.com/atelier-socle/swift-rtmp-kit" : {
+      "commit" : "163eea45fe8d66b0047d028c92de9ef993bd2ace",
+      "fetchedAt" : "2026-07-02T09:02:03Z",
+      "tag" : "0.3.1"
+    },
+    "https://github.com/audiokit/audiokit" : {
+      "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+      "fetchedAt" : "2026-07-02T08:42:41Z",
+      "tag" : "5.7.2"
+    },
+    "https://github.com/audiokit/audiokitex" : {
+      "commit" : "c33dac0f581e4ef5bf179e550394f3152aafabfd",
+      "fetchedAt" : "2026-07-02T08:42:42Z",
+      "tag" : "5.7.0"
+    },
+    "https://github.com/audiokit/audiokitui" : {
+      "commit" : "1a61e8a96c7ee24c3e5abe06dc3334a31fd7571d",
+      "fetchedAt" : "2026-07-02T09:01:37Z",
+      "tag" : "0.3.7"
+    },
+    "https://github.com/audiokit/devoloopaudiokit" : {
+      "commit" : "3dfb80b2ee280c5edb19b2e4e340142521fcafdf",
+      "fetchedAt" : "2026-07-02T09:01:43Z",
+      "tag" : "5.5.1"
+    },
+    "https://github.com/audiokit/dunneaudiokit" : {
+      "commit" : "f6cee064ab82b95b36d8b9242a11bd06cb390256",
+      "fetchedAt" : "2026-07-02T09:01:40Z",
+      "tag" : "5.6.2"
+    },
+    "https://github.com/audiokit/soulaudiokit" : {
+      "commit" : "e0334228042814216ff12b81499f911632440104",
+      "fetchedAt" : "2026-07-02T09:01:45Z",
+      "tag" : "5.3.0"
+    },
+    "https://github.com/audiokit/soundpipeaudiokit" : {
+      "commit" : "d8afd31b3710a0efd5f9ecb11f1169ca493795e9",
+      "fetchedAt" : "2026-07-02T08:42:43Z",
+      "tag" : "5.7.4"
+    },
+    "https://github.com/audiokit/sporthaudiokit" : {
+      "commit" : "638c95036430ce23ba2810101de319ed31f481bb",
+      "fetchedAt" : "2026-07-02T09:01:41Z",
+      "tag" : "5.5.1"
+    },
+    "https://github.com/audiokit/stkaudiokit" : {
+      "commit" : "e6af9e24eb599d4ff34d5776b0801cf0068142bc",
+      "fetchedAt" : "2026-07-02T09:01:42Z",
+      "tag" : "5.5.4"
+    },
+    "https://github.com/audiokit/waveform" : {
+      "commit" : "357de1945a36e62a27f74a9b3b8f5e45904659d9",
+      "fetchedAt" : "2026-07-02T09:01:39Z",
+      "tag" : "1.0.3"
+    },
+    "https://github.com/blaizzy/mlx-audio-swift" : {
+      "commit" : "fcbd04daa1bfebe881932f630af2ba6ce9af3274",
+      "fetchedAt" : "2026-07-02T09:01:57Z",
+      "tag" : "v0.1.2"
+    },
+    "https://github.com/bradhowes/morkandmidi" : {
+      "commit" : "07cdd56620f6948a9e30aa3519b30268daea4b6f",
+      "fetchedAt" : "2026-07-02T09:01:22Z",
+      "tag" : "5.1.0"
+    },
+    "https://github.com/cay-zhang/swiftspeech" : {
+      "commit" : "6e41f289f5ccc1751ef5674972d46b48b326c4c6",
+      "fetchedAt" : "2026-07-02T09:01:48Z",
+      "tag" : "v0.9.3"
+    },
+    "https://github.com/daltoniam/starscream" : {
+      "commit" : "c6bfd1af48efcc9a9ad203665db12375ba6b145a",
+      "fetchedAt" : "2026-07-02T10:25:49Z",
+      "tag" : "4.0.8"
+    },
+    "https://github.com/dmrschmidt/dswaveformimage" : {
+      "commit" : "00afb7930863b9cc3bd011389d601735e548093c",
+      "fetchedAt" : "2026-07-02T09:01:35Z",
+      "tag" : "14.5.0"
+    },
+    "https://github.com/doublesymmetry/swiftaudioex" : {
+      "commit" : "7b506bebabd68b542256c0e1e55519fab5f4c092",
+      "fetchedAt" : "2026-07-02T08:42:47Z",
+      "tag" : "1.1.0"
+    },
+    "https://github.com/exphat/swiftwhisper" : {
+      "commit" : "a192004db08de7c6eaa169eede77f1625e7d23fb",
+      "fetchedAt" : "2026-07-02T08:42:51Z",
+      "tag" : "1.2.0"
+    },
+    "https://github.com/exyte/mediapicker" : {
+      "commit" : "ce2eda6300337d1478a78fc033bce8dd9bf4bb2c",
+      "fetchedAt" : "2026-07-02T09:02:07Z",
+      "tag" : "3.3.2"
+    },
+    "https://github.com/exyte/svgview" : {
+      "commit" : "6465962facdd25cb96eaebc35603afa2f15d2c0d",
+      "fetchedAt" : "2026-07-02T10:26:03Z",
+      "tag" : "1.0.6"
+    },
+    "https://github.com/fcanas/hlscore" : {
+      "commit" : "2835209970afdaaaf137fd7073d9c0ab2beb2905",
+      "fetchedAt" : "2026-07-02T09:02:04Z",
+      "tag" : "0.2.1"
+    },
+    "https://github.com/fethica/fradioplayer" : {
+      "commit" : "243cd9246b79a186c39b3c53dbe725c8c01bab59",
+      "fetchedAt" : "2026-07-02T09:01:29Z",
+      "tag" : "0.2.2"
+    },
+    "https://github.com/fluidinference/fluidaudio" : {
+      "commit" : "b9d43724cbdb5a980e441fd54180964e94d470f7",
+      "fetchedAt" : "2026-07-02T09:01:59Z",
+      "tag" : "v0.15.4"
+    },
+    "https://github.com/fulldecent/fdsoundactivatedrecorder" : {
+      "commit" : "997c7b6de74782ee478676b2bf9c2706438cb82c",
+      "fetchedAt" : "2026-07-02T09:01:46Z",
+      "tag" : "4.0.0"
+    },
+    "https://github.com/fulldecent/fdwaveformview" : {
+      "commit" : "8e7ab7eba27317c0a0aa49de367279375e4c4da2",
+      "fetchedAt" : "2026-07-02T09:01:36Z",
+      "tag" : "5.1.1"
+    },
+    "https://github.com/garynewby/hlsvideocache" : {
+      "commit" : "41291ed4f88aecd8e9dc885693f908ea58888257",
+      "fetchedAt" : "2026-07-02T09:02:05Z",
+      "tag" : "1.0.0"
+    },
+    "https://github.com/getstream/stream-video-swift" : {
+      "commit" : "eab7c4eb73b9f242af6a1991cbb21413ba3cc6a0",
+      "fetchedAt" : "2026-07-02T08:42:45Z",
+      "tag" : "1.48.0"
+    },
+    "https://github.com/getstream/stream-video-swift-webrtc" : {
+      "commit" : "fd9610ccf90332b2bc80f61b1e76cf1b25c25227",
+      "fetchedAt" : "2026-07-02T09:02:13Z",
+      "tag" : "145.10.0"
+    },
+    "https://github.com/herrkaefer/swiftedgetts" : {
+      "commit" : "6fafd2dd66e45358812c98e3bb2fa28b2757e614",
+      "fetchedAt" : "2026-07-02T09:01:55Z",
+      "tag" : "v1.3.0"
+    },
+    "https://github.com/hidden-spectrum/swiftlame" : {
+      "commit" : "45d1b021c2bd2bbd38b9669934c0584cda0d1b6b",
+      "fetchedAt" : "2026-07-02T09:46:38Z",
+      "tag" : "0.1.0"
+    },
+    "https://github.com/kaishin/gifu" : {
+      "commit" : "f19726eaf0dfa4dbce4d3f80293c9d38c2acba53",
+      "fetchedAt" : "2026-07-02T10:26:01Z",
+      "tag" : "v4.0.1"
+    },
+    "https://github.com/kasimok/aecaudiostream" : {
+      "commit" : "c5d16bbb9f3c4282523d6d6039c0009480b72c25",
+      "fetchedAt" : "2026-07-02T09:01:11Z",
+      "tag" : "1.0.1"
+    },
+    "https://github.com/kean/nuke" : {
+      "commit" : "63a8fcbd6621340a2410bc3e9575ac97058615f4",
+      "fetchedAt" : "2026-07-02T10:25:57Z",
+      "tag" : "13.0.6"
+    },
+    "https://github.com/kean/pulse" : {
+      "commit" : "94b92731d370c129bb771e9c18f69b0a44ccca5c",
+      "fetchedAt" : "2026-07-02T10:25:54Z",
+      "tag" : "5.2.3"
+    },
+    "https://github.com/kingslay/ksplayer" : {
+      "commit" : "bdfa2da39bb18865b317c4ffd08cdef5f8efc043",
+      "fetchedAt" : "2026-07-02T09:01:23Z",
+      "tag" : "2.3.4"
+    },
+    "https://github.com/launchdarkly/swift-eventsource" : {
+      "commit" : "57051701c58a93603ffa2051f8e9cf0c8cff7814",
+      "fetchedAt" : "2026-07-02T10:25:53Z",
+      "tag" : "3.3.0"
+    },
+    "https://github.com/livekit/client-sdk-swift" : {
+      "commit" : "7f3af1488411a9787e1e94ddd66b0bed2057bed3",
+      "fetchedAt" : "2026-07-02T08:10:40Z",
+      "tag" : "2.15.1"
+    },
+    "https://github.com/livekit/swift-krisp-noise-filter" : {
+      "commit" : "c12a41f2afc95ee67994faf2ea7c87cde6d65cc6",
+      "fetchedAt" : "2026-07-02T08:10:41Z",
+      "tag" : "0.0.8"
+    },
+    "https://github.com/livekit/webrtc-xcframework" : {
+      "commit" : "883f7f39f0733be564eb033d7fa6ce10960f7b7e",
+      "fetchedAt" : "2026-07-02T08:10:42Z",
+      "tag" : "144.7559.10"
+    },
+    "https://github.com/mapbox/mapbox-speech-swift" : {
+      "commit" : "a9ef284deae227c6111c27a3535098c1e9a9d8e3",
+      "fetchedAt" : "2026-07-02T09:01:52Z",
+      "tag" : "v2.1.1"
+    },
+    "https://github.com/markbattistella/audiomanager" : {
+      "commit" : "d93afd7a48885f9a92bbe7c0eb6b692afbafce66",
+      "fetchedAt" : "2026-07-02T09:02:10Z",
+      "tag" : "26.6.11"
+    },
+    "https://github.com/matsune/midiparser" : {
+      "commit" : "a8b0a071781a4f99837b2b621f651b1a1b9d4d8e",
+      "fetchedAt" : "2026-07-02T09:01:18Z",
+      "tag" : "0.2"
+    },
+    "https://github.com/metalpetal/videoio" : {
+      "commit" : "22f7c00083b7e16c7e15ace1adcdb90fb5ffe006",
+      "fetchedAt" : "2026-07-02T09:02:06Z",
+      "tag" : "2.3.1"
+    },
+    "https://github.com/mihai8804858/swift-chunked-audio-player" : {
+      "commit" : "7a46fa1bfb88c4b4ea47ee656e6b2abd1cd7fed8",
+      "fetchedAt" : "2026-07-02T09:01:30Z",
+      "tag" : "1.1.2"
+    },
+    "https://github.com/mkj-is/combinemidi" : {
+      "commit" : "c044ae3f65f14f27b2842908ef3eb550e2782bff",
+      "fetchedAt" : "2026-07-02T09:01:20Z",
+      "tag" : "0.3.0"
+    },
+    "https://github.com/moya/moya" : {
+      "commit" : "c263811c1f3dbf002be9bd83107f7cdc38992b26",
+      "fetchedAt" : "2026-07-02T10:25:52Z",
+      "tag" : "15.0.3"
+    },
+    "https://github.com/muxinc/mux-player-swift" : {
+      "commit" : "974bb44689a8b3bc541eb082728c1317f65af197",
+      "fetchedAt" : "2026-07-02T09:01:28Z",
+      "tag" : "v1.7.0"
+    },
+    "https://github.com/noreasonprojects/modernavplayer" : {
+      "commit" : "ab16588b7b8e297255e2d8a7407eb89506af265b",
+      "fetchedAt" : "2026-07-02T09:01:27Z",
+      "tag" : "1.7.3"
+    },
+    "https://github.com/onevcat/kingfisher" : {
+      "commit" : "ac632bd26a1c00f139ff62fd01806f21cf67325e",
+      "fetchedAt" : "2026-07-02T10:25:55Z",
+      "tag" : "8.10.0"
+    },
+    "https://github.com/orchetect/swift-midi" : {
+      "commit" : "17e72aa3b73b05d195481dd72c05bc91433be119",
+      "fetchedAt" : "2026-07-02T09:01:15Z",
+      "tag" : "1.1.0"
+    },
+    "https://github.com/orchetect/swift-midi-file" : {
+      "commit" : "7d5ac32c068cfa288362a85bdf340653a4d242ee",
+      "fetchedAt" : "2026-07-02T09:01:17Z",
+      "tag" : "1.0.2"
+    },
+    "https://github.com/orchetect/swift-midi-io" : {
+      "commit" : "54ac94028e3825bd8e622d373b0698d196927212",
+      "fetchedAt" : "2026-07-02T09:01:16Z",
+      "tag" : "1.1.0"
+    },
+    "https://github.com/p-x9/swift-system-sound" : {
+      "commit" : "e3f44c2d5766b0a7c3cdaacd4d61b5e1c8804794",
+      "fetchedAt" : "2026-07-02T09:02:11Z",
+      "tag" : "0.10.0"
+    },
+    "https://github.com/piemonte/player" : {
+      "commit" : "df1e48f95d26b3ee0a861037052e836ea63cbd8c",
+      "fetchedAt" : "2026-07-02T09:01:24Z",
+      "tag" : "0.15.0"
+    },
+    "https://github.com/renaudjenny/swift-speech-recognizer" : {
+      "commit" : "7a7947a6f9fb1edaa48ee0e8d1c523f5fd8e9bd8",
+      "fetchedAt" : "2026-07-02T09:01:49Z",
+      "tag" : "1.0.0"
+    },
+    "https://github.com/renaudjenny/swift-tts" : {
+      "commit" : "01ed546e43f75e45eee49ed91f5a449d86e48fa3",
+      "fetchedAt" : "2026-07-02T09:01:51Z",
+      "tag" : "2.1.2"
+    },
+    "https://github.com/ryanfrancesconi/spfk-audio-hardware" : {
+      "commit" : "ebe07274a6cd4c77f390b2726b9ebfd85ea5cf13",
+      "fetchedAt" : "2026-07-02T09:02:08Z",
+      "tag" : "5.2.0"
+    },
+    "https://github.com/ryanfrancesconi/spfk-sound-analysis" : {
+      "commit" : "279b9489ee4ffaf2a60e03acd90c0d980c84bb23",
+      "fetchedAt" : "2026-07-02T09:02:09Z",
+      "tag" : "1.0.3"
+    },
+    "https://github.com/ryanlintott/oevoice" : {
+      "commit" : "6c75deab37e5776b2421082e4ab46ac959fd7075",
+      "fetchedAt" : "2026-07-02T09:01:54Z",
+      "tag" : "1.4.2"
+    },
+    "https://github.com/sbooth/avfaudioextensions" : {
+      "commit" : "276deda6780b974be0d3dacf1bb0a890754b9e1b",
+      "fetchedAt" : "2026-07-02T09:01:14Z",
+      "tag" : "0.5.1"
+    },
+    "https://github.com/sbooth/caaudiohardware" : {
+      "commit" : "d927963dcfbb819da6ed6f17b83f17ffbc689280",
+      "fetchedAt" : "2026-07-02T09:01:13Z",
+      "tag" : "0.7.1"
+    },
+    "https://github.com/sbooth/sfbaudioengine" : {
+      "commit" : "5a74dde3089060bac35f0a16970d91fc8402e751",
+      "fetchedAt" : "2026-07-02T09:01:12Z",
+      "tag" : "0.13.0"
+    },
+    "https://github.com/sdwebimage/sdwebimage" : {
+      "commit" : "2de3a496eaf6df9a1312862adcfd54acd73c39c0",
+      "fetchedAt" : "2026-07-02T10:25:58Z",
+      "tag" : "5.21.7"
+    },
+    "https://github.com/sdwebimage/sdwebimageswiftui" : {
+      "commit" : "0e331457ca9af2f0b08bcaa138a91ffb907b004f",
+      "fetchedAt" : "2026-07-02T10:26:00Z",
+      "tag" : "3.1.4"
+    },
+    "https://github.com/stanfordspezi/spezispeech" : {
+      "commit" : "6c51d4165d2cabb6102aa61233c480fb75c167f6",
+      "fetchedAt" : "2026-07-02T09:01:53Z",
+      "tag" : "1.1.2"
+    },
+    "https://github.com/stasel/webrtc" : {
+      "commit" : "ff4647dc67f00d037c199c69e1a1ee8ceda88236",
+      "fetchedAt" : "2026-07-02T08:42:53Z",
+      "tag" : "149.0.0"
+    },
+    "https://github.com/sventiigi/youtubeplayerkit" : {
+      "commit" : "1ae827573024ab13dd6adea33b25d3eef6ff667c",
+      "fetchedAt" : "2026-07-02T09:01:34Z",
+      "tag" : "2.0.5"
+    },
+    "https://github.com/tanhakabir/swiftaudioplayer" : {
+      "commit" : "2fdfc62ce9f5d8b818ee1b2a9ac061fce4f64af9",
+      "fetchedAt" : "2026-07-02T08:42:48Z",
+      "tag" : "7.6.0"
+    },
+    "https://github.com/tattn/voicevox-client" : {
+      "commit" : "22ffcef8ea5eaf88bcd602f044af74a2ebe56fca",
+      "fetchedAt" : "2026-07-02T09:01:56Z",
+      "tag" : "1.2.2"
+    }
+  },
+  "version" : 1
+}

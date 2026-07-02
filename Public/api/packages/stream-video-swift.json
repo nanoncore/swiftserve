@@ -1,0 +1,620 @@
+[
+  {
+    "capability" : {
+      "id" : "media.streaming.webrtc",
+      "label" : "WebRTC real-time streaming"
+    },
+    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "WebRTC transport via the stream-video-swift-webrtc binary companion.",
+    "package" : {
+      "aliases" : [
+        "GetStream/stream-video-swift"
+      ],
+      "canonicalURL" : "https://github.com/getstream/stream-video-swift",
+      "commit" : "eab7c4eb73b9f242af6a1991cbb21413ba3cc6a0",
+      "name" : "StreamVideo",
+      "surfaceDigest" : "fnv1a64:3483aca7e627b067",
+      "version" : "1.48.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/StreamVideo/Call.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "WebRTC session underneath every call",
+            "package" : null,
+            "symbol" : "Call"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 13 only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "WebRTC binary is Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "compiles as iOS; Stream documents iPad/iPhone targets — intent for Catalyst unstated",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "macOS absent from manifest floors (iOS-only manifest)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "tvOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "tvOS absent from manifest floors (iOS-only manifest)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors (iOS-only manifest)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors (iOS-only manifest)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+      "https://github.com/getstream/stream-video-swift-webrtc"
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "video.calling",
+      "label" : "Video calling"
+    },
+    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Stream's video-calling SDK over a bundled WebRTC binary.",
+    "package" : {
+      "aliases" : [
+        "GetStream/stream-video-swift"
+      ],
+      "canonicalURL" : "https://github.com/getstream/stream-video-swift",
+      "commit" : "eab7c4eb73b9f242af6a1991cbb21413ba3cc6a0",
+      "name" : "StreamVideo",
+      "surfaceDigest" : "fnv1a64:3483aca7e627b067",
+      "version" : "1.48.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/StreamVideo/Call.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "call object: join, publish, tracks",
+            "package" : null,
+            "symbol" : "Call"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/StreamVideo/CallKit/CallKitAdapter.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : "CallKit integration",
+            "package" : null,
+            "symbol" : "CallKitAdapter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 13 only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "WebRTC binary is Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "compiles as iOS; Stream documents iPad/iPhone targets — intent for Catalyst unstated",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "macOS absent from manifest floors (iOS-only manifest)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "tvOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "tvOS absent from manifest floors (iOS-only manifest)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors (iOS-only manifest)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors (iOS-only manifest)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+      "https://github.com/getstream/stream-video-swift-webrtc"
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "video.screen-sharing",
+      "label" : "Screen sharing"
+    },
+    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "In-call screen sharing (in-app and broadcast-extension modes).",
+    "package" : {
+      "aliases" : [
+        "GetStream/stream-video-swift"
+      ],
+      "canonicalURL" : "https://github.com/getstream/stream-video-swift",
+      "commit" : "eab7c4eb73b9f242af6a1991cbb21413ba3cc6a0",
+      "name" : "StreamVideo",
+      "surfaceDigest" : "fnv1a64:3483aca7e627b067",
+      "version" : "1.48.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/StreamVideo/Call.swift",
+            "kind" : "symbol",
+            "line" : 596,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Call.startScreensharing"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/StreamVideo/Call.swift",
+            "kind" : "symbol",
+            "line" : 607,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Call.stopScreensharing"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 13 only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "WebRTC binary is Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "compiles as iOS; Stream documents iPad/iPhone targets — intent for Catalyst unstated",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "macOS absent from manifest floors (iOS-only manifest)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "tvOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "tvOS absent from manifest floors (iOS-only manifest)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors (iOS-only manifest)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors (iOS-only manifest)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+      "https://github.com/getstream/stream-video-swift-webrtc"
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "voice.calling",
+      "label" : "Voice calling"
+    },
+    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Audio-only calls ride the same Call machinery + CallKit.",
+    "package" : {
+      "aliases" : [
+        "GetStream/stream-video-swift"
+      ],
+      "canonicalURL" : "https://github.com/getstream/stream-video-swift",
+      "commit" : "eab7c4eb73b9f242af6a1991cbb21413ba3cc6a0",
+      "name" : "StreamVideo",
+      "surfaceDigest" : "fnv1a64:3483aca7e627b067",
+      "version" : "1.48.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/StreamVideo/Call.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "audio-only calls via the same Call object",
+            "package" : null,
+            "symbol" : "Call"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/StreamVideo/CallKit/CallKitService.swift",
+            "kind" : "symbol",
+            "line" : 12,
+            "note" : "system call UI",
+            "package" : null,
+            "symbol" : "CallKitService"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 13 only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "WebRTC binary is Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "compiles as iOS; Stream documents iPad/iPhone targets — intent for Catalyst unstated",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "macOS absent from manifest floors (iOS-only manifest)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "tvOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "tvOS absent from manifest floors (iOS-only manifest)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors (iOS-only manifest)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors (iOS-only manifest)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+      "https://github.com/getstream/stream-video-swift-webrtc"
+    ]
+  }
+]

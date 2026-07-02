@@ -1,0 +1,159 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.waveform-visualization",
+      "label" : "Waveform visualization"
+    },
+    "labeledAt" : "2026-07-02T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Drop-in UIView that renders an audio file's waveform, with zoom/scrub.",
+    "package" : {
+      "aliases" : [
+        "fulldecent/FDWaveformView"
+      ],
+      "canonicalURL" : "https://github.com/fulldecent/fdwaveformview",
+      "commit" : "8e7ab7eba27317c0a0aa49de367279375e4c4da2",
+      "name" : "FDWaveformView",
+      "surfaceDigest" : "fnv1a64:f8786ef472651a76",
+      "version" : "5.1.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FDWaveformView/FDWaveformView.swift",
+            "kind" : "symbol",
+            "line" : 7,
+            "note" : "waveform rendering view",
+            "package" : null,
+            "symbol" : "FDWaveformView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "UIKit-based",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FDWaveformView/FDWaveformView.swift",
+            "kind" : "symbol",
+            "line" : 7,
+            "note" : "waveform rendering view",
+            "package" : null,
+            "symbol" : "FDWaveformView"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "macOS absent from manifest floors (UIKit view)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "tvOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "tvOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FDWaveformView/FDWaveformView.swift",
+            "kind" : "symbol",
+            "line" : 7,
+            "note" : "waveform rendering view",
+            "package" : null,
+            "symbol" : "FDWaveformView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares visionOS 1",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

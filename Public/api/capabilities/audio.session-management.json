@@ -1,0 +1,240 @@
+{
+  "aliases" : [
+    "avaudiosession",
+    "audio routing",
+    "interruption handling"
+  ],
+  "id" : "audio.session-management",
+  "label" : "Audio session management",
+  "packages" : [
+    {
+      "commit" : "7f3af1488411a9787e1e94ddd66b0bed2057bed3",
+      "notes" : "A textbook feature×platform gap caught from source: LiveKit's automatic audio-session handling exists only where AVAudioSession does (iOS/visionOS/tvOS, plus Catalyst via os(iOS)). On macOS you configure audio routing yourself.",
+      "package" : "https://github.com/livekit/client-sdk-swift",
+      "packageName" : "LiveKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "condition" : "os(iOS) || os(visionOS) || os(tvOS)",
+              "file" : "Sources/LiveKit/Audio/AudioSessionEngineObserver.swift",
+              "kind" : "symbol",
+              "line" : 24,
+              "note" : "automatic AVAudioSession configuration observer",
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Audio/AudioSessionEngineObserver.swift#L24",
+              "symbol" : "AudioSessionEngineObserver"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "condition" : "os(iOS) || os(visionOS) || os(tvOS)",
+              "file" : "Sources/LiveKit/Audio/AudioSessionEngineObserver.swift",
+              "kind" : "guard",
+              "line" : 24,
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Audio/AudioSessionEngineObserver.swift#L24",
+              "symbol" : "AudioSessionEngineObserver"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "condition" : "os(iOS) || os(visionOS) || os(tvOS)",
+              "file" : "Sources/LiveKit/Audio/AudioSessionEngineObserver.swift",
+              "kind" : "symbol",
+              "line" : 24,
+              "note" : "present via os(iOS) — Catalyst compiles as iOS",
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Audio/AudioSessionEngineObserver.swift#L24",
+              "symbol" : "AudioSessionEngineObserver"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "condition" : "os(iOS) || os(visionOS) || os(tvOS)",
+              "file" : "Sources/LiveKit/Audio/AudioSessionEngineObserver.swift",
+              "kind" : "guard",
+              "line" : 24,
+              "note" : "the session-management observer is fenced to iOS/visionOS/tvOS — macOS has no AVAudioSession; the line that decides it",
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Audio/AudioSessionEngineObserver.swift#L24",
+              "symbol" : "AudioSessionEngineObserver"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "condition" : "os(iOS) || os(visionOS) || os(tvOS)",
+              "file" : "Sources/LiveKit/Audio/AudioSessionEngineObserver.swift",
+              "kind" : "symbol",
+              "line" : 24,
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Audio/AudioSessionEngineObserver.swift#L24",
+              "symbol" : "AudioSessionEngineObserver"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "condition" : "os(iOS) || os(visionOS) || os(tvOS)",
+              "file" : "Sources/LiveKit/Audio/AudioSessionEngineObserver.swift",
+              "kind" : "symbol",
+              "line" : 24,
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Audio/AudioSessionEngineObserver.swift#L24",
+              "symbol" : "AudioSessionEngineObserver"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "condition" : "os(iOS) || os(visionOS) || os(tvOS)",
+              "file" : "Sources/LiveKit/Audio/AudioSessionEngineObserver.swift",
+              "kind" : "guard",
+              "line" : 24,
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Audio/AudioSessionEngineObserver.swift#L24",
+              "symbol" : "AudioSessionEngineObserver"
+            }
+          ],
+          "status" : "unsupported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "client-sdk-swift",
+      "version" : "2.15.1"
+    },
+    {
+      "commit" : "72dbeaf4b4496b105bc731db05819dd16edc9449",
+      "notes" : "SoundCategory (AVAudioSession categories) is fenced to iOS/tvOS — a small, clean feature×platform gap.",
+      "package" : "https://github.com/adamcichy/swiftysound",
+      "packageName" : "SwiftySound",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Sources/Sound.swift",
+              "kind" : "symbol",
+              "line" : 32,
+              "permalink" : "https://github.com/adamcichy/swiftysound/blob/1.3.0/Sources/Sound.swift#L32",
+              "symbol" : "SoundCategory"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Sources/Sound.swift",
+              "kind" : "guard",
+              "line" : 32,
+              "note" : "session categories exist only where AVAudioSession does",
+              "permalink" : "https://github.com/adamcichy/swiftysound/blob/1.3.0/Sources/Sound.swift#L32",
+              "symbol" : "SoundCategory"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Sources/Sound.swift",
+              "kind" : "symbol",
+              "line" : 32,
+              "permalink" : "https://github.com/adamcichy/swiftysound/blob/1.3.0/Sources/Sound.swift#L32",
+              "symbol" : "SoundCategory"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Sources/Sound.swift",
+              "kind" : "guard",
+              "line" : 32,
+              "note" : "session categories exist only where AVAudioSession does",
+              "permalink" : "https://github.com/adamcichy/swiftysound/blob/1.3.0/Sources/Sound.swift#L32",
+              "symbol" : "SoundCategory"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Sources/Sound.swift",
+              "kind" : "symbol",
+              "line" : 32,
+              "permalink" : "https://github.com/adamcichy/swiftysound/blob/1.3.0/Sources/Sound.swift#L32",
+              "symbol" : "SoundCategory"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Sources/Sound.swift",
+              "kind" : "guard",
+              "line" : 32,
+              "note" : "session categories exist only where AVAudioSession does",
+              "permalink" : "https://github.com/adamcichy/swiftysound/blob/1.3.0/Sources/Sound.swift#L32",
+              "symbol" : "SoundCategory"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "watchOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Sources/Sound.swift",
+              "kind" : "guard",
+              "line" : 32,
+              "note" : "session categories exist only where AVAudioSession does",
+              "permalink" : "https://github.com/adamcichy/swiftysound/blob/1.3.0/Sources/Sound.swift#L32",
+              "symbol" : "SoundCategory"
+            }
+          ],
+          "status" : "unsupported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swiftysound",
+      "version" : "1.3.0"
+    }
+  ]
+}

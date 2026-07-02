@@ -1,0 +1,92 @@
+{
+  "aliases" : [
+    "webp"
+  ],
+  "id" : "image.webp",
+  "label" : "WebP decoding",
+  "packages" : [
+    {
+      "commit" : "ac632bd26a1c00f139ff62fd01806f21cf67325e",
+      "notes" : "Not in core — the community KingfisherWebP package adds a WebP coder.",
+      "package" : "https://github.com/onevcat/kingfisher",
+      "packageName" : "Kingfisher",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "WebP needs the separate KingfisherWebP coder package — nothing in this package serves it"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "Apple imaging stacks only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "WebP needs the separate KingfisherWebP coder package — nothing in this package serves it"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "WebP needs the separate KingfisherWebP coder package — nothing in this package serves it"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "WebP needs the separate KingfisherWebP coder package — nothing in this package serves it"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "WebP needs the separate KingfisherWebP coder package — nothing in this package serves it"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "WebP needs the separate KingfisherWebP coder package — nothing in this package serves it"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "kingfisher",
+      "version" : "8.10.0"
+    }
+  ]
+}

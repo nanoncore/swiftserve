@@ -1,0 +1,475 @@
+{
+  "domain": "audio",
+  "packages": [
+    {
+      "companionOf": null,
+      "name": "livekit/client-sdk-swift",
+      "source": "seed",
+      "url": "https://github.com/livekit/client-sdk-swift",
+      "why": "acceptance target \u2014 the founding incident (noise cancellation, iOS-only)"
+    },
+    {
+      "companionOf": "https://github.com/livekit/client-sdk-swift",
+      "name": "livekit/swift-krisp-noise-filter",
+      "source": "seed",
+      "url": "https://github.com/livekit/swift-krisp-noise-filter",
+      "why": "companion: LiveKit's Krisp noise-cancellation filter"
+    },
+    {
+      "companionOf": null,
+      "name": "AudioKit/AudioKit",
+      "source": "seed",
+      "url": "https://github.com/audiokit/audiokit",
+      "why": "the audio synthesis/DSP anchor package"
+    },
+    {
+      "companionOf": null,
+      "name": "AudioKit/AudioKitEX",
+      "source": "seed",
+      "url": "https://github.com/audiokit/audiokitex",
+      "why": "AudioKit extensions"
+    },
+    {
+      "companionOf": null,
+      "name": "AudioKit/SoundpipeAudioKit",
+      "source": "seed",
+      "url": "https://github.com/audiokit/soundpipeaudiokit",
+      "why": "Soundpipe DSP nodes"
+    },
+    {
+      "companionOf": null,
+      "name": "GetStream/stream-video-swift",
+      "source": "seed",
+      "url": "https://github.com/getstream/stream-video-swift",
+      "why": "video/voice calling SDK"
+    },
+    {
+      "companionOf": null,
+      "name": "DoubleSymmetry/SwiftAudioEx",
+      "source": "seed",
+      "url": "https://github.com/doublesymmetry/swiftaudioex",
+      "why": "audio player over AVPlayer"
+    },
+    {
+      "companionOf": null,
+      "name": "tanhakabir/SwiftAudioPlayer",
+      "source": "seed",
+      "url": "https://github.com/tanhakabir/swiftaudioplayer",
+      "why": "streaming audio player"
+    },
+    {
+      "companionOf": null,
+      "name": "adamcichy/SwiftySound",
+      "source": "seed",
+      "url": "https://github.com/adamcichy/swiftysound",
+      "why": "simple sound playback"
+    },
+    {
+      "companionOf": null,
+      "name": "argmaxinc/WhisperKit",
+      "source": "seed",
+      "url": "https://github.com/argmaxinc/whisperkit",
+      "why": "on-device speech-to-text"
+    },
+    {
+      "companionOf": null,
+      "name": "exPHAT/SwiftWhisper",
+      "source": "seed",
+      "url": "https://github.com/exphat/swiftwhisper",
+      "why": "whisper.cpp wrapper for STT"
+    },
+    {
+      "companionOf": null,
+      "name": "stasel/WebRTC",
+      "source": "seed",
+      "url": "https://github.com/stasel/webrtc",
+      "why": "prebuilt WebRTC binaries (known ObjC/binary blind spot \u2014 honest unknown expected)"
+    },
+    {
+      "companionOf": null,
+      "name": "kasimok/AECAudioStream",
+      "source": "keyword",
+      "url": "https://github.com/kasimok/aecaudiostream",
+      "why": "echo cancellation \u2014 taxonomy hit with zero records"
+    },
+    {
+      "companionOf": null,
+      "name": "sbooth/SFBAudioEngine",
+      "source": "keyword",
+      "url": "https://github.com/sbooth/sfbaudioengine",
+      "why": "the serious multi-format audio playback engine"
+    },
+    {
+      "companionOf": null,
+      "name": "sbooth/CAAudioHardware",
+      "source": "keyword",
+      "url": "https://github.com/sbooth/caaudiohardware",
+      "why": "audio device selection (CoreAudio, macOS)"
+    },
+    {
+      "companionOf": null,
+      "name": "sbooth/AVFAudioExtensions",
+      "source": "keyword",
+      "url": "https://github.com/sbooth/avfaudioextensions",
+      "why": "AVFAudio utilities"
+    },
+    {
+      "companionOf": null,
+      "name": "orchetect/swift-midi",
+      "source": "keyword",
+      "url": "https://github.com/orchetect/swift-midi",
+      "why": "MIDIKit umbrella"
+    },
+    {
+      "companionOf": null,
+      "name": "orchetect/swift-midi-io",
+      "source": "keyword",
+      "url": "https://github.com/orchetect/swift-midi-io",
+      "why": "MIDI I/O"
+    },
+    {
+      "companionOf": null,
+      "name": "orchetect/swift-midi-file",
+      "source": "keyword",
+      "url": "https://github.com/orchetect/swift-midi-file",
+      "why": "MIDI file read/write"
+    },
+    {
+      "companionOf": null,
+      "name": "matsune/MidiParser",
+      "source": "keyword",
+      "url": "https://github.com/matsune/midiparser",
+      "why": "MIDI file parsing"
+    },
+    {
+      "companionOf": null,
+      "name": "mkj-is/CombineMIDI",
+      "source": "keyword",
+      "url": "https://github.com/mkj-is/combinemidi",
+      "why": "MIDI + Combine"
+    },
+    {
+      "companionOf": null,
+      "name": "adamnemecek/webmidikit",
+      "source": "keyword",
+      "url": "https://github.com/adamnemecek/webmidikit",
+      "why": "WebMIDI-style MIDI"
+    },
+    {
+      "companionOf": null,
+      "name": "bradhowes/morkandmidi",
+      "source": "keyword",
+      "url": "https://github.com/bradhowes/morkandmidi",
+      "why": "MIDI toolkit"
+    },
+    {
+      "companionOf": null,
+      "name": "kingslay/KSPlayer",
+      "source": "keyword",
+      "url": "https://github.com/kingslay/ksplayer",
+      "why": "major video player (HLS etc.)"
+    },
+    {
+      "companionOf": null,
+      "name": "piemonte/Player",
+      "source": "keyword",
+      "url": "https://github.com/piemonte/player",
+      "why": "video player"
+    },
+    {
+      "companionOf": null,
+      "name": "noreasonprojects/ModernAVPlayer",
+      "source": "keyword",
+      "url": "https://github.com/noreasonprojects/modernavplayer",
+      "why": "AVPlayer wrapper"
+    },
+    {
+      "companionOf": null,
+      "name": "muxinc/mux-player-swift",
+      "source": "keyword",
+      "url": "https://github.com/muxinc/mux-player-swift",
+      "why": "Mux video player"
+    },
+    {
+      "companionOf": null,
+      "name": "fethica/FRadioPlayer",
+      "source": "keyword",
+      "url": "https://github.com/fethica/fradioplayer",
+      "why": "radio/audio streaming player"
+    },
+    {
+      "companionOf": null,
+      "name": "mihai8804858/swift-chunked-audio-player",
+      "source": "keyword",
+      "url": "https://github.com/mihai8804858/swift-chunked-audio-player",
+      "why": "chunked/streaming audio player"
+    },
+    {
+      "companionOf": null,
+      "name": "abdullahselek/Swifty360Player",
+      "source": "keyword",
+      "url": "https://github.com/abdullahselek/swifty360player",
+      "why": "360\u00b0 video playback"
+    },
+    {
+      "companionOf": null,
+      "name": "SvenTiigi/YouTubePlayerKit",
+      "source": "keyword",
+      "url": "https://github.com/sventiigi/youtubeplayerkit",
+      "why": "YouTube playback"
+    },
+    {
+      "companionOf": null,
+      "name": "dmrschmidt/DSWaveformImage",
+      "source": "keyword",
+      "url": "https://github.com/dmrschmidt/dswaveformimage",
+      "why": "waveform rendering"
+    },
+    {
+      "companionOf": null,
+      "name": "fulldecent/FDWaveformView",
+      "source": "keyword",
+      "url": "https://github.com/fulldecent/fdwaveformview",
+      "why": "waveform view"
+    },
+    {
+      "companionOf": null,
+      "name": "pixlwave/Waveform",
+      "source": "keyword",
+      "url": "https://github.com/pixlwave/waveform",
+      "why": "waveform view"
+    },
+    {
+      "companionOf": null,
+      "name": "AudioKit/AudioKitUI",
+      "source": "keyword",
+      "url": "https://github.com/audiokit/audiokitui",
+      "why": "AudioKit UI/visualization"
+    },
+    {
+      "companionOf": null,
+      "name": "AudioKit/Waveform",
+      "source": "keyword",
+      "url": "https://github.com/audiokit/waveform",
+      "why": "GPU waveform"
+    },
+    {
+      "companionOf": null,
+      "name": "AudioKit/DunneAudioKit",
+      "source": "keyword",
+      "url": "https://github.com/audiokit/dunneaudiokit",
+      "why": "synth/DSP nodes"
+    },
+    {
+      "companionOf": null,
+      "name": "AudioKit/SporthAudioKit",
+      "source": "keyword",
+      "url": "https://github.com/audiokit/sporthaudiokit",
+      "why": "Sporth DSP"
+    },
+    {
+      "companionOf": null,
+      "name": "AudioKit/STKAudioKit",
+      "source": "keyword",
+      "url": "https://github.com/audiokit/stkaudiokit",
+      "why": "STK physical models"
+    },
+    {
+      "companionOf": null,
+      "name": "AudioKit/DevoloopAudioKit",
+      "source": "keyword",
+      "url": "https://github.com/audiokit/devoloopaudiokit",
+      "why": "guitar DSP"
+    },
+    {
+      "companionOf": null,
+      "name": "AudioKit/SoulAudioKit",
+      "source": "keyword",
+      "url": "https://github.com/audiokit/soulaudiokit",
+      "why": "Soul DSP"
+    },
+    {
+      "companionOf": null,
+      "name": "fulldecent/FDSoundActivatedRecorder",
+      "source": "keyword",
+      "url": "https://github.com/fulldecent/fdsoundactivatedrecorder",
+      "why": "sound-activated recording"
+    },
+    {
+      "companionOf": null,
+      "name": "atacan/AudioRecorder",
+      "source": "keyword",
+      "url": "https://github.com/atacan/audiorecorder",
+      "why": "microphone recording"
+    },
+    {
+      "companionOf": null,
+      "name": "Cay-Zhang/SwiftSpeech",
+      "source": "keyword",
+      "url": "https://github.com/cay-zhang/swiftspeech",
+      "why": "speech-to-text (SFSpeech wrapper)"
+    },
+    {
+      "companionOf": null,
+      "name": "renaudjenny/swift-speech-recognizer",
+      "source": "keyword",
+      "url": "https://github.com/renaudjenny/swift-speech-recognizer",
+      "why": "speech-to-text"
+    },
+    {
+      "companionOf": null,
+      "name": "renaudjenny/swift-tts",
+      "source": "keyword",
+      "url": "https://github.com/renaudjenny/swift-tts",
+      "why": "text-to-speech"
+    },
+    {
+      "companionOf": null,
+      "name": "mapbox/mapbox-speech-swift",
+      "source": "keyword",
+      "url": "https://github.com/mapbox/mapbox-speech-swift",
+      "why": "TTS (Mapbox voice)"
+    },
+    {
+      "companionOf": null,
+      "name": "StanfordSpezi/SpeziSpeech",
+      "source": "keyword",
+      "url": "https://github.com/stanfordspezi/spezispeech",
+      "why": "speech (STT+TTS) for Spezi"
+    },
+    {
+      "companionOf": null,
+      "name": "ryanlintott/OEVoice",
+      "source": "keyword",
+      "url": "https://github.com/ryanlintott/oevoice",
+      "why": "TTS/AVSpeech IPA pronunciation"
+    },
+    {
+      "companionOf": null,
+      "name": "herrkaefer/SwiftEdgeTTS",
+      "source": "keyword",
+      "url": "https://github.com/herrkaefer/swiftedgetts",
+      "why": "Edge TTS client"
+    },
+    {
+      "companionOf": null,
+      "name": "tattn/voicevox-client",
+      "source": "keyword",
+      "url": "https://github.com/tattn/voicevox-client",
+      "why": "VOICEVOX TTS client"
+    },
+    {
+      "companionOf": null,
+      "name": "Blaizzy/mlx-audio-swift",
+      "source": "keyword",
+      "url": "https://github.com/blaizzy/mlx-audio-swift",
+      "why": "on-device TTS/STT via MLX"
+    },
+    {
+      "companionOf": null,
+      "name": "FluidInference/FluidAudio",
+      "source": "keyword",
+      "url": "https://github.com/fluidinference/fluidaudio",
+      "why": "VAD/diarization/transcription"
+    },
+    {
+      "companionOf": null,
+      "name": "alta/swift-opus",
+      "source": "keyword",
+      "url": "https://github.com/alta/swift-opus",
+      "why": "Opus encode/decode"
+    },
+    {
+      "companionOf": null,
+      "name": "atelier-socle/swift-hls-kit",
+      "source": "keyword",
+      "url": "https://github.com/atelier-socle/swift-hls-kit",
+      "why": "HLS toolkit"
+    },
+    {
+      "companionOf": null,
+      "name": "atelier-socle/swift-rtmp-kit",
+      "source": "keyword",
+      "url": "https://github.com/atelier-socle/swift-rtmp-kit",
+      "why": "RTMP toolkit"
+    },
+    {
+      "companionOf": null,
+      "name": "fcanas/hlscore",
+      "source": "keyword",
+      "url": "https://github.com/fcanas/hlscore",
+      "why": "HLS core parsing"
+    },
+    {
+      "companionOf": null,
+      "name": "garynewby/HLSVideoCache",
+      "source": "keyword",
+      "url": "https://github.com/garynewby/hlsvideocache",
+      "why": "HLS caching/proxy"
+    },
+    {
+      "companionOf": null,
+      "name": "MetalPetal/VideoIO",
+      "source": "keyword",
+      "url": "https://github.com/metalpetal/videoio",
+      "why": "camera capture / video I/O"
+    },
+    {
+      "companionOf": null,
+      "name": "exyte/MediaPicker",
+      "source": "keyword",
+      "url": "https://github.com/exyte/mediapicker",
+      "why": "camera & media picking UI"
+    },
+    {
+      "companionOf": null,
+      "name": "ryanfrancesconi/spfk-audio-hardware",
+      "source": "keyword",
+      "url": "https://github.com/ryanfrancesconi/spfk-audio-hardware",
+      "why": "audio device management"
+    },
+    {
+      "companionOf": null,
+      "name": "ryanfrancesconi/spfk-sound-analysis",
+      "source": "keyword",
+      "url": "https://github.com/ryanfrancesconi/spfk-sound-analysis",
+      "why": "sound analysis wrapper"
+    },
+    {
+      "companionOf": null,
+      "name": "markbattistella/AudioManager",
+      "source": "keyword",
+      "url": "https://github.com/markbattistella/audiomanager",
+      "why": "audio session management"
+    },
+    {
+      "companionOf": null,
+      "name": "p-x9/swift-system-sound",
+      "source": "keyword",
+      "url": "https://github.com/p-x9/swift-system-sound",
+      "why": "system sound playback"
+    },
+    {
+      "companionOf": "https://github.com/getstream/stream-video-swift",
+      "name": "GetStream/stream-video-swift-webrtc",
+      "source": "keyword",
+      "url": "https://github.com/getstream/stream-video-swift-webrtc",
+      "why": "WebRTC companion of stream-video-swift"
+    },
+    {
+      "companionOf": "https://github.com/livekit/client-sdk-swift",
+      "name": "livekit/webrtc-xcframework",
+      "source": "keyword",
+      "url": "https://github.com/livekit/webrtc-xcframework",
+      "why": "WebRTC binary companion of LiveKit"
+    },
+    {
+      "companionOf": null,
+      "name": "hidden-spectrum/SwiftLAME",
+      "source": "keyword",
+      "url": "https://github.com/hidden-spectrum/swiftlame",
+      "why": "MP3 encoding via LAME \u2014 fills audio.codec.mp3"
+    }
+  ],
+  "version": 1
+}

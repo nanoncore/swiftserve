@@ -1,0 +1,623 @@
+{
+  "aliases" : [
+    "voice synthesis",
+    "speak text"
+  ],
+  "id" : "speech.tts",
+  "label" : "Text-to-speech",
+  "packages" : [
+    {
+      "commit" : "a9ef284deae227c6111c27a3535098c1e9a9d8e3",
+      "notes" : "Network TTS — audio comes from the Mapbox Voice API, not on-device synthesis. Empty manifest = default floors on all platforms.",
+      "package" : "https://github.com/mapbox/mapbox-speech-swift",
+      "packageName" : "MapboxSpeech",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/MapboxSpeech/MapboxSpeech.swift",
+              "kind" : "symbol",
+              "line" : 78,
+              "note" : "Mapbox Voice API client",
+              "permalink" : "https://github.com/mapbox/mapbox-speech-swift/blob/v2.1.1/Sources/MapboxSpeech/MapboxSpeech.swift#L78",
+              "symbol" : "SpeechSynthesizer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "Foundation-networking client could build on Linux; unverified"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/MapboxSpeech/MapboxSpeech.swift",
+              "kind" : "symbol",
+              "line" : 78,
+              "note" : "Mapbox Voice API client",
+              "permalink" : "https://github.com/mapbox/mapbox-speech-swift/blob/v2.1.1/Sources/MapboxSpeech/MapboxSpeech.swift#L78",
+              "symbol" : "SpeechSynthesizer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/MapboxSpeech/MapboxSpeech.swift",
+              "kind" : "symbol",
+              "line" : 78,
+              "note" : "Mapbox Voice API client",
+              "permalink" : "https://github.com/mapbox/mapbox-speech-swift/blob/v2.1.1/Sources/MapboxSpeech/MapboxSpeech.swift#L78",
+              "symbol" : "SpeechSynthesizer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/MapboxSpeech/MapboxSpeech.swift",
+              "kind" : "symbol",
+              "line" : 78,
+              "note" : "Mapbox Voice API client",
+              "permalink" : "https://github.com/mapbox/mapbox-speech-swift/blob/v2.1.1/Sources/MapboxSpeech/MapboxSpeech.swift#L78",
+              "symbol" : "SpeechSynthesizer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "predates visionOS; symbols unguarded but untested"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/MapboxSpeech/MapboxSpeech.swift",
+              "kind" : "symbol",
+              "line" : 78,
+              "note" : "Mapbox Voice API client",
+              "permalink" : "https://github.com/mapbox/mapbox-speech-swift/blob/v2.1.1/Sources/MapboxSpeech/MapboxSpeech.swift#L78",
+              "symbol" : "SpeechSynthesizer"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "mapbox-speech-swift",
+      "version" : "v2.1.1"
+    },
+    {
+      "commit" : "6c51d4165d2cabb6102aa61233c480fb75c167f6",
+      "notes" : "Speech synthesis module for the Stanford Spezi health framework.",
+      "package" : "https://github.com/stanfordspezi/spezispeech",
+      "packageName" : "SpeziSpeech",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SpeziSpeechSynthesizer/SpeechSynthesizer.swift",
+              "kind" : "symbol",
+              "line" : 59,
+              "note" : "AVSpeechSynthesizer module",
+              "permalink" : "https://github.com/stanfordspezi/spezispeech/blob/1.1.2/Sources/SpeziSpeechSynthesizer/SpeechSynthesizer.swift#L59",
+              "symbol" : "SpeechSynthesizer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 17"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "Speech/AVFAudio are Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SpeziSpeechSynthesizer/SpeechSynthesizer.swift",
+              "kind" : "symbol",
+              "line" : 59,
+              "note" : "AVSpeechSynthesizer module",
+              "permalink" : "https://github.com/stanfordspezi/spezispeech/blob/1.1.2/Sources/SpeziSpeechSynthesizer/SpeechSynthesizer.swift#L59",
+              "symbol" : "SpeechSynthesizer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SpeziSpeechSynthesizer/SpeechSynthesizer.swift",
+              "kind" : "symbol",
+              "line" : 59,
+              "note" : "AVSpeechSynthesizer module",
+              "permalink" : "https://github.com/stanfordspezi/spezispeech/blob/1.1.2/Sources/SpeziSpeechSynthesizer/SpeechSynthesizer.swift#L59",
+              "symbol" : "SpeechSynthesizer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 14"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SpeziSpeechSynthesizer/SpeechSynthesizer.swift",
+              "kind" : "symbol",
+              "line" : 59,
+              "note" : "AVSpeechSynthesizer module",
+              "permalink" : "https://github.com/stanfordspezi/spezispeech/blob/1.1.2/Sources/SpeziSpeechSynthesizer/SpeechSynthesizer.swift#L59",
+              "symbol" : "SpeechSynthesizer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares visionOS 1"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "spezispeech",
+      "version" : "1.1.2"
+    },
+    {
+      "commit" : "6fafd2dd66e45358812c98e3bb2fa28b2757e614",
+      "notes" : "Network TTS via Microsoft Edge's speech service.",
+      "package" : "https://github.com/herrkaefer/swiftedgetts",
+      "packageName" : "SwiftEdgeTTS",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftEdgeTTS/EdgeTTSClient.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/herrkaefer/swiftedgetts/blob/v1.3.0/Sources/SwiftEdgeTTS/EdgeTTSClient.swift#L4",
+              "symbol" : "EdgeTTSClient"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "WebSocket client could build on Linux; unverified"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftEdgeTTS/EdgeTTSClient.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/herrkaefer/swiftedgetts/blob/v1.3.0/Sources/SwiftEdgeTTS/EdgeTTSClient.swift#L4",
+              "symbol" : "EdgeTTSClient"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftEdgeTTS/EdgeTTSClient.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/herrkaefer/swiftedgetts/blob/v1.3.0/Sources/SwiftEdgeTTS/EdgeTTSClient.swift#L4",
+              "symbol" : "EdgeTTSClient"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swiftedgetts",
+      "version" : "v1.3.0"
+    },
+    {
+      "commit" : "01ed546e43f75e45eee49ed91f5a449d86e48fa3",
+      "notes" : "AVSpeechSynthesizer wrappers (vanilla, Combine, TCA dependency).",
+      "package" : "https://github.com/renaudjenny/swift-tts",
+      "packageName" : "SwiftTTS",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftTTS/SwiftTTS.swift",
+              "kind" : "symbol",
+              "line" : 7,
+              "permalink" : "https://github.com/renaudjenny/swift-tts/blob/2.1.2/Sources/SwiftTTS/SwiftTTS.swift#L7",
+              "symbol" : "SwiftTTS"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVSpeechSynthesizer is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftTTS/SwiftTTS.swift",
+              "kind" : "symbol",
+              "line" : 7,
+              "permalink" : "https://github.com/renaudjenny/swift-tts/blob/2.1.2/Sources/SwiftTTS/SwiftTTS.swift#L7",
+              "symbol" : "SwiftTTS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftTTS/SwiftTTS.swift",
+              "kind" : "symbol",
+              "line" : 7,
+              "permalink" : "https://github.com/renaudjenny/swift-tts/blob/2.1.2/Sources/SwiftTTS/SwiftTTS.swift#L7",
+              "symbol" : "SwiftTTS"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors; AVSpeechSynthesizer exists there but intent unstated"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swift-tts",
+      "version" : "2.1.2"
+    },
+    {
+      "commit" : "22ffcef8ea5eaf88bcd602f044af74a2ebe56fca",
+      "notes" : "Client for the VOICEVOX speech-synthesis engine (Japanese voices).",
+      "package" : "https://github.com/tattn/voicevox-client",
+      "packageName" : "VOICEVOX",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/VOICEVOX/VOICEVOXConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "permalink" : "https://github.com/tattn/voicevox-client/blob/1.2.2/Sources/VOICEVOX/VOICEVOXConfiguration.swift#L9",
+              "symbol" : "VOICEVOXConfiguration"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 16"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "client for a local VOICEVOX engine; unverified"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/VOICEVOX/VOICEVOXConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "permalink" : "https://github.com/tattn/voicevox-client/blob/1.2.2/Sources/VOICEVOX/VOICEVOXConfiguration.swift#L9",
+              "symbol" : "VOICEVOXConfiguration"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/VOICEVOX/VOICEVOXConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "permalink" : "https://github.com/tattn/voicevox-client/blob/1.2.2/Sources/VOICEVOX/VOICEVOXConfiguration.swift#L9",
+              "symbol" : "VOICEVOXConfiguration"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "voicevox-client",
+      "version" : "1.2.2"
+    },
+    {
+      "commit" : "fcbd04daa1bfebe881932f630af2ba6ce9af3274",
+      "notes" : "On-device TTS over MLX (Apple silicon). Semantic tie is via generation types — main API surface is model-specific, hence modest confidence.",
+      "package" : "https://github.com/blaizzy/mlx-audio-swift",
+      "packageName" : "MLXAudio",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/MLXAudioCore/Generation/GenerationTypes.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "TTS generation pipeline types (Kokoro/Orpheus models)",
+              "permalink" : "https://github.com/blaizzy/mlx-audio-swift/blob/v0.1.2/Sources/MLXAudioCore/Generation/GenerationTypes.swift#L14",
+              "symbol" : "AudioGenerationInfo"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 17"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "MLX is Apple-silicon-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "MLX requires Apple-silicon GPU paths; Catalyst unverified"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/MLXAudioCore/Generation/GenerationTypes.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "TTS generation pipeline types (Kokoro/Orpheus models)",
+              "permalink" : "https://github.com/blaizzy/mlx-audio-swift/blob/v0.1.2/Sources/MLXAudioCore/Generation/GenerationTypes.swift#L14",
+              "symbol" : "AudioGenerationInfo"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 14"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "mlx-audio-swift",
+      "version" : "v0.1.2"
+    }
+  ]
+}

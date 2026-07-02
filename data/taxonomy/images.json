@@ -1,0 +1,75 @@
+{
+  "_comment": "Images domain. Records may only claim ids that exist here (V01).",
+  "taxonomyVersion": 1,
+  "domain": "images",
+  "capabilities": [
+    {
+      "id": "image.async-loading",
+      "label": "Async image loading",
+      "aliases": [
+        "remote images",
+        "image downloading",
+        "url image"
+      ]
+    },
+    {
+      "id": "image.caching",
+      "label": "Image caching",
+      "aliases": [
+        "disk cache",
+        "memory cache",
+        "image cache"
+      ]
+    },
+    {
+      "id": "image.gif",
+      "label": "Animated GIF playback",
+      "aliases": [
+        "gif",
+        "animated images",
+        "apng"
+      ]
+    },
+    {
+      "id": "image.webp",
+      "label": "WebP decoding",
+      "aliases": [
+        "webp"
+      ]
+    },
+    {
+      "id": "image.progressive",
+      "label": "Progressive loading",
+      "aliases": [
+        "progressive jpeg",
+        "blurhash",
+        "placeholder"
+      ]
+    },
+    {
+      "id": "image.downsampling",
+      "label": "Downsampling / resizing",
+      "aliases": [
+        "image resizing",
+        "thumbnails",
+        "image processing"
+      ]
+    },
+    {
+      "id": "image.prefetching",
+      "label": "Prefetching",
+      "aliases": [
+        "image preloading",
+        "prefetch"
+      ]
+    },
+    {
+      "id": "image.svg",
+      "label": "SVG rendering",
+      "aliases": [
+        "svg",
+        "vector images"
+      ]
+    }
+  ]
+}

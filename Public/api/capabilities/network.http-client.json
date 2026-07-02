@@ -1,0 +1,241 @@
+{
+  "aliases" : [
+    "http requests",
+    "rest client",
+    "networking"
+  ],
+  "id" : "network.http-client",
+  "label" : "HTTP client",
+  "packages" : [
+    {
+      "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
+      "notes" : "The Swift HTTP client. Session wraps URLSession with the full request pipeline.",
+      "package" : "https://github.com/alamofire/alamofire",
+      "packageName" : "Alamofire",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Core/Session.swift",
+              "kind" : "symbol",
+              "line" : 30,
+              "note" : "the request-making core",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Core/Session.swift#L30",
+              "symbol" : "Session"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "Alamofire is URLSession-based; Linux is explicitly unsupported per the project — but no source fence proves it"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Source/Core/Session.swift",
+              "kind" : "symbol",
+              "line" : 30,
+              "note" : "the request-making core",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Core/Session.swift#L30",
+              "symbol" : "Session"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Core/Session.swift",
+              "kind" : "symbol",
+              "line" : 30,
+              "note" : "the request-making core",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Core/Session.swift#L30",
+              "symbol" : "Session"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Core/Session.swift",
+              "kind" : "symbol",
+              "line" : 30,
+              "note" : "the request-making core",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Core/Session.swift#L30",
+              "symbol" : "Session"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Core/Session.swift",
+              "kind" : "symbol",
+              "line" : 30,
+              "note" : "the request-making core",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Core/Session.swift#L30",
+              "symbol" : "Session"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares watchOS 4"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "alamofire",
+      "version" : "5.12.0"
+    },
+    {
+      "commit" : "c263811c1f3dbf002be9bd83107f7cdc38992b26",
+      "notes" : "Type-safe abstraction over Alamofire: define API targets as enums.",
+      "package" : "https://github.com/moya/moya",
+      "packageName" : "Moya",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Moya/MoyaProvider.swift",
+              "kind" : "symbol",
+              "line" : 52,
+              "note" : "target-based request provider",
+              "permalink" : "https://github.com/moya/moya/blob/15.0.3/Sources/Moya/MoyaProvider.swift#L52",
+              "symbol" : "MoyaProvider"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "rides on Alamofire, which doesn't do Linux"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Moya/MoyaProvider.swift",
+              "kind" : "symbol",
+              "line" : 52,
+              "note" : "target-based request provider",
+              "permalink" : "https://github.com/moya/moya/blob/15.0.3/Sources/Moya/MoyaProvider.swift#L52",
+              "symbol" : "MoyaProvider"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Moya/MoyaProvider.swift",
+              "kind" : "symbol",
+              "line" : 52,
+              "note" : "target-based request provider",
+              "permalink" : "https://github.com/moya/moya/blob/15.0.3/Sources/Moya/MoyaProvider.swift#L52",
+              "symbol" : "MoyaProvider"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Moya/MoyaProvider.swift",
+              "kind" : "symbol",
+              "line" : 52,
+              "note" : "target-based request provider",
+              "permalink" : "https://github.com/moya/moya/blob/15.0.3/Sources/Moya/MoyaProvider.swift#L52",
+              "symbol" : "MoyaProvider"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Moya/MoyaProvider.swift",
+              "kind" : "symbol",
+              "line" : 52,
+              "note" : "target-based request provider",
+              "permalink" : "https://github.com/moya/moya/blob/15.0.3/Sources/Moya/MoyaProvider.swift#L52",
+              "symbol" : "MoyaProvider"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "moya",
+      "version" : "15.0.3"
+    }
+  ]
+}

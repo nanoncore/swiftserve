@@ -1,0 +1,11 @@
+# SwiftServe — capability truth for Swift packages
+
+> What Swift packages actually serve, per Apple platform, derived from source
+> at pinned versions, with evidence permalinks. Static JSON API, stable schema.
+
+- Start here: /api/index.json
+- Capability pivot (the question agents ask): /api/capabilities/{id}.json
+- How verdicts are derived: /about/
+- For agents (CLI, skill, examples): /agents/
+- Install (plugin, skill, CLI): /get/
+- The Claude Code skill, ready to save: /skill.md

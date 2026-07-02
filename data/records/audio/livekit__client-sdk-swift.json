@@ -1,0 +1,1026 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.noise-cancellation",
+      "label" : "Noise cancellation"
+    },
+    "labeledAt" : "2026-07-02T12:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Two tiers. (1) WebRTC software noise suppression ships in the SDK itself (AudioCaptureOptions.noiseSuppression, unguarded). (2) Krisp-grade enhanced noise cancellation comes from the companion LiveKitKrispNoiseFilter package, whose real platform fence lives inside a binary xcframework: its manifest was iOS-only through 0.0.3 and added macOS at 0.0.5 — the founding incident of this index. At the pinned versions both tiers claim macOS.",
+    "package" : {
+      "aliases" : [
+        "LiveKitClient",
+        "livekit/client-sdk-swift",
+        "client-sdk-swift"
+      ],
+      "canonicalURL" : "https://github.com/livekit/client-sdk-swift",
+      "commit" : "7f3af1488411a9787e1e94ddd66b0bed2057bed3",
+      "name" : "LiveKit",
+      "surfaceDigest" : "fnv1a64:4379ed1841c55abd",
+      "version" : "2.15.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Types/Options/AudioCaptureOptions.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : "WebRTC software noise suppression toggle",
+            "package" : null,
+            "symbol" : "AudioCaptureOptions.noiseSuppression"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Protocols/AudioCustomProcessingDelegate.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : "Krisp processor hook in the custom-audio-processing delegate",
+            "package" : null,
+            "symbol" : "kLiveKitKrispAudioProcessorName"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "the SDK rides on a prebuilt Apple-platform WebRTC xcframework; no Linux artifacts observed, but nothing in Swift source proves absence",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Types/Options/AudioCaptureOptions.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AudioCaptureOptions.noiseSuppression"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Types/Options/AudioCaptureOptions.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : "WebRTC software noise suppression toggle (unguarded)",
+            "package" : null,
+            "symbol" : "AudioCaptureOptions.noiseSuppression"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Types/Options/AudioCaptureOptions.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : "manifest declares tvOS 17",
+            "package" : null,
+            "symbol" : "AudioCaptureOptions.noiseSuppression"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Types/Options/AudioCaptureOptions.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AudioCaptureOptions.noiseSuppression"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from the manifest platforms (iOS/macOS/macCatalyst/tvOS); the SDK's WebRTC binary dependency makes watchOS support doubtful, but nothing in source proves absence",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+      "https://github.com/livekit/swift-krisp-noise-filter"
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "audio.session-management",
+      "label" : "Audio session management"
+    },
+    "labeledAt" : "2026-07-02T12:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "A textbook feature×platform gap caught from source: LiveKit's automatic audio-session handling exists only where AVAudioSession does (iOS/visionOS/tvOS, plus Catalyst via os(iOS)). On macOS you configure audio routing yourself.",
+    "package" : {
+      "aliases" : [
+        "LiveKitClient",
+        "livekit/client-sdk-swift",
+        "client-sdk-swift"
+      ],
+      "canonicalURL" : "https://github.com/livekit/client-sdk-swift",
+      "commit" : "7f3af1488411a9787e1e94ddd66b0bed2057bed3",
+      "name" : "LiveKit",
+      "surfaceDigest" : "fnv1a64:4379ed1841c55abd",
+      "version" : "2.15.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS) || os(visionOS) || os(tvOS)",
+            "file" : "Sources/LiveKit/Audio/AudioSessionEngineObserver.swift",
+            "kind" : "symbol",
+            "line" : 24,
+            "note" : "automatic AVAudioSession configuration observer",
+            "package" : null,
+            "symbol" : "AudioSessionEngineObserver"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS) || os(visionOS) || os(tvOS)",
+            "file" : "Sources/LiveKit/Audio/AudioSessionEngineObserver.swift",
+            "kind" : "guard",
+            "line" : 24,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AudioSessionEngineObserver"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS) || os(visionOS) || os(tvOS)",
+            "file" : "Sources/LiveKit/Audio/AudioSessionEngineObserver.swift",
+            "kind" : "symbol",
+            "line" : 24,
+            "note" : "present via os(iOS) — Catalyst compiles as iOS",
+            "package" : null,
+            "symbol" : "AudioSessionEngineObserver"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS) || os(visionOS) || os(tvOS)",
+            "file" : "Sources/LiveKit/Audio/AudioSessionEngineObserver.swift",
+            "kind" : "guard",
+            "line" : 24,
+            "note" : "the session-management observer is fenced to iOS/visionOS/tvOS — macOS has no AVAudioSession; the line that decides it",
+            "package" : null,
+            "symbol" : "AudioSessionEngineObserver"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS) || os(visionOS) || os(tvOS)",
+            "file" : "Sources/LiveKit/Audio/AudioSessionEngineObserver.swift",
+            "kind" : "symbol",
+            "line" : 24,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AudioSessionEngineObserver"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS) || os(visionOS) || os(tvOS)",
+            "file" : "Sources/LiveKit/Audio/AudioSessionEngineObserver.swift",
+            "kind" : "symbol",
+            "line" : 24,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AudioSessionEngineObserver"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS) || os(visionOS) || os(tvOS)",
+            "file" : "Sources/LiveKit/Audio/AudioSessionEngineObserver.swift",
+            "kind" : "guard",
+            "line" : 24,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AudioSessionEngineObserver"
+          }
+        ],
+        "status" : "unsupported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "media.streaming.webrtc",
+      "label" : "WebRTC real-time streaming"
+    },
+    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "WebRTC transport via the webrtc-xcframework binary companion.",
+    "package" : {
+      "aliases" : [
+        "LiveKitClient",
+        "livekit/client-sdk-swift",
+        "client-sdk-swift"
+      ],
+      "canonicalURL" : "https://github.com/livekit/client-sdk-swift",
+      "commit" : "7f3af1488411a9787e1e94ddd66b0bed2057bed3",
+      "name" : "LiveKit",
+      "surfaceDigest" : "fnv1a64:4379ed1841c55abd",
+      "version" : "2.15.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Core/Room.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : "the realtime session object",
+            "package" : null,
+            "symbol" : "Room"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "declared in manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "prebuilt WebRTC xcframework is Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Core/Room.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : "the realtime session object",
+            "package" : null,
+            "symbol" : "Room"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "declared in manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Core/Room.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : "the realtime session object",
+            "package" : null,
+            "symbol" : "Room"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "declared in manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Core/Room.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : "the realtime session object",
+            "package" : null,
+            "symbol" : "Room"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "declared in manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Core/Room.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : "the realtime session object",
+            "package" : null,
+            "symbol" : "Room"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "declared in manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+      "https://github.com/livekit/webrtc-xcframework"
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "video.calling",
+      "label" : "Video calling"
+    },
+    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Rooms with camera/mic tracks over WebRTC.",
+    "package" : {
+      "aliases" : [
+        "LiveKitClient",
+        "livekit/client-sdk-swift",
+        "client-sdk-swift"
+      ],
+      "canonicalURL" : "https://github.com/livekit/client-sdk-swift",
+      "commit" : "7f3af1488411a9787e1e94ddd66b0bed2057bed3",
+      "name" : "LiveKit",
+      "surfaceDigest" : "fnv1a64:4379ed1841c55abd",
+      "version" : "2.15.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Core/Room.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : "the realtime session object",
+            "package" : null,
+            "symbol" : "Room"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "declared in manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "prebuilt WebRTC xcframework is Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Core/Room.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : "the realtime session object",
+            "package" : null,
+            "symbol" : "Room"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "declared in manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Core/Room.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : "the realtime session object",
+            "package" : null,
+            "symbol" : "Room"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "declared in manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Core/Room.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : "the realtime session object",
+            "package" : null,
+            "symbol" : "Room"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "declared in manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Core/Room.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : "the realtime session object",
+            "package" : null,
+            "symbol" : "Room"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "declared in manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+      "https://github.com/livekit/webrtc-xcframework"
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "video.screen-sharing",
+      "label" : "Screen sharing"
+    },
+    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Screen sharing on iOS (in-app + ReplayKit broadcast extension) and macOS (display capture). The broadcast capturer is explicitly fenced os(iOS).",
+    "package" : {
+      "aliases" : [
+        "LiveKitClient",
+        "livekit/client-sdk-swift",
+        "client-sdk-swift"
+      ],
+      "canonicalURL" : "https://github.com/livekit/client-sdk-swift",
+      "commit" : "7f3af1488411a9787e1e94ddd66b0bed2057bed3",
+      "name" : "LiveKit",
+      "surfaceDigest" : "fnv1a64:4379ed1841c55abd",
+      "version" : "2.15.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Participant/LocalParticipant.swift",
+            "kind" : "symbol",
+            "line" : 353,
+            "note" : "generic screen-share toggle",
+            "package" : null,
+            "symbol" : "LocalParticipant.setScreenShare"
+          },
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/LiveKit/Broadcast/BroadcastScreenCapturer.swift",
+            "kind" : "symbol",
+            "line" : 99,
+            "note" : "ReplayKit broadcast-extension capture — fenced os(iOS)",
+            "package" : null,
+            "symbol" : "LocalVideoTrack.createBroadcastScreenCapturerTrack"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Participant/LocalParticipant.swift",
+            "kind" : "symbol",
+            "line" : 353,
+            "note" : "generic screen-share toggle",
+            "package" : null,
+            "symbol" : "LocalParticipant.setScreenShare"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Participant/LocalParticipant.swift",
+            "kind" : "symbol",
+            "line" : 353,
+            "note" : "generic screen-share toggle",
+            "package" : null,
+            "symbol" : "LocalParticipant.setScreenShare"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 10.15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "setScreenShare compiles for tvOS 17; capturing a TV app's screen is undocumented territory",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "symbol present; visionOS capture semantics unverified",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+      "https://github.com/livekit/webrtc-xcframework"
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "voice.calling",
+      "label" : "Voice calling"
+    },
+    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Audio-only rooms over the same Room machinery.",
+    "package" : {
+      "aliases" : [
+        "LiveKitClient",
+        "livekit/client-sdk-swift",
+        "client-sdk-swift"
+      ],
+      "canonicalURL" : "https://github.com/livekit/client-sdk-swift",
+      "commit" : "7f3af1488411a9787e1e94ddd66b0bed2057bed3",
+      "name" : "LiveKit",
+      "surfaceDigest" : "fnv1a64:4379ed1841c55abd",
+      "version" : "2.15.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Core/Room.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : "the realtime session object",
+            "package" : null,
+            "symbol" : "Room"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "declared in manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "prebuilt WebRTC xcframework is Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Core/Room.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : "the realtime session object",
+            "package" : null,
+            "symbol" : "Room"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "declared in manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Core/Room.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : "the realtime session object",
+            "package" : null,
+            "symbol" : "Room"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "declared in manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Core/Room.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : "the realtime session object",
+            "package" : null,
+            "symbol" : "Room"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "declared in manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/LiveKit/Core/Room.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : "the realtime session object",
+            "package" : null,
+            "symbol" : "Room"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "declared in manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+      "https://github.com/livekit/webrtc-xcframework"
+    ]
+  }
+]

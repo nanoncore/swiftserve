@@ -1,0 +1,671 @@
+[
+  {
+    "canonicalURL" : "https://github.com/kasimok/aecaudiostream",
+    "capabilities" : [
+      "audio.echo-cancellation"
+    ],
+    "name" : "AECAudioStream",
+    "slug" : "aecaudiostream",
+    "version" : "1.0.1"
+  },
+  {
+    "canonicalURL" : "https://github.com/alamofire/alamofire",
+    "capabilities" : [
+      "network.certificate-pinning",
+      "network.http-client",
+      "network.multipart-upload",
+      "network.reachability",
+      "network.retry"
+    ],
+    "name" : "Alamofire",
+    "slug" : "alamofire",
+    "version" : "5.12.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/audiokit/audiokit",
+    "capabilities" : [
+      "audio.file-io",
+      "audio.metering",
+      "audio.recording",
+      "audio.synthesis",
+      "midi.file",
+      "midi.io"
+    ],
+    "name" : "AudioKit",
+    "slug" : "audiokit",
+    "version" : "5.7.2"
+  },
+  {
+    "canonicalURL" : "https://github.com/audiokit/waveform",
+    "capabilities" : [
+      "audio.waveform-visualization"
+    ],
+    "name" : "AudioKit Waveform",
+    "slug" : "waveform",
+    "version" : "1.0.3"
+  },
+  {
+    "canonicalURL" : "https://github.com/audiokit/audiokitui",
+    "capabilities" : [
+      "audio.waveform-visualization"
+    ],
+    "name" : "AudioKitUI",
+    "slug" : "audiokitui",
+    "version" : "0.3.7"
+  },
+  {
+    "canonicalURL" : "https://github.com/markbattistella/audiomanager",
+    "capabilities" : [
+      "audio.playback"
+    ],
+    "name" : "AudioManager",
+    "slug" : "audiomanager",
+    "version" : "26.6.11"
+  },
+  {
+    "canonicalURL" : "https://github.com/atacan/audiorecorder",
+    "capabilities" : [
+      "audio.recording"
+    ],
+    "name" : "AudioRecorder",
+    "slug" : "audiorecorder",
+    "version" : "1.0.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/sbooth/caaudiohardware",
+    "capabilities" : [
+      "audio.device-selection"
+    ],
+    "name" : "CAAudioHardware",
+    "slug" : "caaudiohardware",
+    "version" : "0.7.1"
+  },
+  {
+    "canonicalURL" : "https://github.com/mihai8804858/swift-chunked-audio-player",
+    "capabilities" : [
+      "audio.streaming"
+    ],
+    "name" : "ChunkedAudioPlayer",
+    "slug" : "swift-chunked-audio-player",
+    "version" : "1.1.2"
+  },
+  {
+    "canonicalURL" : "https://github.com/mkj-is/combinemidi",
+    "capabilities" : [
+      "midi.io"
+    ],
+    "name" : "CombineMIDI",
+    "slug" : "combinemidi",
+    "version" : "0.3.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/audiokit/devoloopaudiokit",
+    "capabilities" : [
+      "audio.synthesis"
+    ],
+    "name" : "DevoloopAudioKit",
+    "slug" : "devoloopaudiokit",
+    "version" : "5.5.1"
+  },
+  {
+    "canonicalURL" : "https://github.com/dmrschmidt/dswaveformimage",
+    "capabilities" : [
+      "audio.waveform-visualization"
+    ],
+    "name" : "DSWaveformImage",
+    "slug" : "dswaveformimage",
+    "version" : "14.5.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/audiokit/dunneaudiokit",
+    "capabilities" : [
+      "audio.synthesis"
+    ],
+    "name" : "DunneAudioKit",
+    "slug" : "dunneaudiokit",
+    "version" : "5.6.2"
+  },
+  {
+    "canonicalURL" : "https://github.com/exyte/mediapicker",
+    "capabilities" : [
+      "video.capture"
+    ],
+    "name" : "ExyteMediaPicker",
+    "slug" : "mediapicker",
+    "version" : "3.3.2"
+  },
+  {
+    "canonicalURL" : "https://github.com/fulldecent/fdsoundactivatedrecorder",
+    "capabilities" : [
+      "audio.recording"
+    ],
+    "name" : "FDSoundActivatedRecorder",
+    "slug" : "fdsoundactivatedrecorder",
+    "version" : "4.0.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/fulldecent/fdwaveformview",
+    "capabilities" : [
+      "audio.waveform-visualization"
+    ],
+    "name" : "FDWaveformView",
+    "slug" : "fdwaveformview",
+    "version" : "5.1.1"
+  },
+  {
+    "canonicalURL" : "https://github.com/fluidinference/fluidaudio",
+    "capabilities" : [
+      "speech.stt"
+    ],
+    "name" : "FluidAudio",
+    "slug" : "fluidaudio",
+    "version" : "v0.15.4"
+  },
+  {
+    "canonicalURL" : "https://github.com/fethica/fradioplayer",
+    "capabilities" : [
+      "audio.streaming"
+    ],
+    "name" : "FRadioPlayer",
+    "slug" : "fradioplayer",
+    "version" : "0.2.2"
+  },
+  {
+    "canonicalURL" : "https://github.com/kaishin/gifu",
+    "capabilities" : [
+      "image.gif"
+    ],
+    "name" : "Gifu",
+    "slug" : "gifu",
+    "version" : "v4.0.1"
+  },
+  {
+    "canonicalURL" : "https://github.com/fcanas/hlscore",
+    "capabilities" : [
+      "media.streaming.hls"
+    ],
+    "name" : "HLSCore",
+    "slug" : "hlscore",
+    "version" : "0.2.1"
+  },
+  {
+    "canonicalURL" : "https://github.com/atelier-socle/swift-hls-kit",
+    "capabilities" : [
+      "media.streaming.hls"
+    ],
+    "name" : "HLSKit",
+    "slug" : "swift-hls-kit",
+    "version" : "0.6.1"
+  },
+  {
+    "canonicalURL" : "https://github.com/garynewby/hlsvideocache",
+    "capabilities" : [
+      "media.streaming.hls"
+    ],
+    "name" : "HLSVideoCache",
+    "slug" : "hlsvideocache",
+    "version" : "1.0.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/onevcat/kingfisher",
+    "capabilities" : [
+      "image.async-loading",
+      "image.caching",
+      "image.downsampling",
+      "image.gif",
+      "image.prefetching",
+      "image.webp"
+    ],
+    "name" : "Kingfisher",
+    "slug" : "kingfisher",
+    "version" : "8.10.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/kingslay/ksplayer",
+    "capabilities" : [
+      "video.playback"
+    ],
+    "name" : "KSPlayer",
+    "slug" : "ksplayer",
+    "version" : "2.3.4"
+  },
+  {
+    "canonicalURL" : "https://github.com/launchdarkly/swift-eventsource",
+    "capabilities" : [
+      "network.server-sent-events"
+    ],
+    "name" : "LDSwiftEventSource",
+    "slug" : "swift-eventsource",
+    "version" : "3.3.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/livekit/client-sdk-swift",
+    "capabilities" : [
+      "audio.noise-cancellation",
+      "audio.session-management",
+      "media.streaming.webrtc",
+      "video.calling",
+      "video.screen-sharing",
+      "voice.calling"
+    ],
+    "name" : "LiveKit",
+    "slug" : "client-sdk-swift",
+    "version" : "2.15.1"
+  },
+  {
+    "canonicalURL" : "https://github.com/livekit/swift-krisp-noise-filter",
+    "capabilities" : [
+      "audio.noise-cancellation"
+    ],
+    "name" : "LiveKitKrispNoiseFilter",
+    "slug" : "swift-krisp-noise-filter",
+    "version" : "0.0.8"
+  },
+  {
+    "canonicalURL" : "https://github.com/mapbox/mapbox-speech-swift",
+    "capabilities" : [
+      "speech.tts"
+    ],
+    "name" : "MapboxSpeech",
+    "slug" : "mapbox-speech-swift",
+    "version" : "v2.1.1"
+  },
+  {
+    "canonicalURL" : "https://github.com/orchetect/swift-midi-io",
+    "capabilities" : [
+      "midi.io"
+    ],
+    "name" : "MIDIKitIO",
+    "slug" : "swift-midi-io",
+    "version" : "1.1.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/orchetect/swift-midi-file",
+    "capabilities" : [
+      "midi.file"
+    ],
+    "name" : "MIDIKitSMF",
+    "slug" : "swift-midi-file",
+    "version" : "1.0.2"
+  },
+  {
+    "canonicalURL" : "https://github.com/matsune/midiparser",
+    "capabilities" : [
+      "midi.file"
+    ],
+    "name" : "MidiParser",
+    "slug" : "midiparser",
+    "version" : "0.2"
+  },
+  {
+    "canonicalURL" : "https://github.com/blaizzy/mlx-audio-swift",
+    "capabilities" : [
+      "speech.tts"
+    ],
+    "name" : "MLXAudio",
+    "slug" : "mlx-audio-swift",
+    "version" : "v0.1.2"
+  },
+  {
+    "canonicalURL" : "https://github.com/noreasonprojects/modernavplayer",
+    "capabilities" : [
+      "video.playback"
+    ],
+    "name" : "ModernAVPlayer",
+    "slug" : "modernavplayer",
+    "version" : "1.7.3"
+  },
+  {
+    "canonicalURL" : "https://github.com/bradhowes/morkandmidi",
+    "capabilities" : [
+      "midi.io"
+    ],
+    "name" : "MorkAndMIDI",
+    "slug" : "morkandmidi",
+    "version" : "5.1.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/moya/moya",
+    "capabilities" : [
+      "network.http-client",
+      "network.request-mocking"
+    ],
+    "name" : "Moya",
+    "slug" : "moya",
+    "version" : "15.0.3"
+  },
+  {
+    "canonicalURL" : "https://github.com/muxinc/mux-player-swift",
+    "capabilities" : [
+      "video.playback"
+    ],
+    "name" : "MuxPlayerSwift",
+    "slug" : "mux-player-swift",
+    "version" : "v1.7.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/kean/nuke",
+    "capabilities" : [
+      "image.async-loading",
+      "image.caching",
+      "image.prefetching"
+    ],
+    "name" : "Nuke",
+    "slug" : "nuke",
+    "version" : "13.0.6"
+  },
+  {
+    "canonicalURL" : "https://github.com/piemonte/player",
+    "capabilities" : [
+      "video.playback"
+    ],
+    "name" : "Player",
+    "slug" : "player",
+    "version" : "0.15.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/kean/pulse",
+    "capabilities" : [
+      "network.logging"
+    ],
+    "name" : "Pulse",
+    "slug" : "pulse",
+    "version" : "5.2.3"
+  },
+  {
+    "canonicalURL" : "https://github.com/atelier-socle/swift-rtmp-kit",
+    "capabilities" : [
+      "media.streaming.rtmp"
+    ],
+    "name" : "RTMPKit",
+    "slug" : "swift-rtmp-kit",
+    "version" : "0.3.1"
+  },
+  {
+    "canonicalURL" : "https://github.com/sdwebimage/sdwebimage",
+    "capabilities" : [
+      "image.async-loading"
+    ],
+    "name" : "SDWebImage",
+    "slug" : "sdwebimage",
+    "version" : "5.21.7"
+  },
+  {
+    "canonicalURL" : "https://github.com/sdwebimage/sdwebimageswiftui",
+    "capabilities" : [
+      "image.async-loading",
+      "image.gif"
+    ],
+    "name" : "SDWebImageSwiftUI",
+    "slug" : "sdwebimageswiftui",
+    "version" : "3.1.4"
+  },
+  {
+    "canonicalURL" : "https://github.com/sbooth/sfbaudioengine",
+    "capabilities" : [
+      "audio.playback"
+    ],
+    "name" : "SFBAudioEngine",
+    "slug" : "sfbaudioengine",
+    "version" : "0.13.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/audiokit/soulaudiokit",
+    "capabilities" : [
+      "audio.synthesis"
+    ],
+    "name" : "SoulAudioKit",
+    "slug" : "soulaudiokit",
+    "version" : "5.3.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/audiokit/soundpipeaudiokit",
+    "capabilities" : [
+      "audio.pitch-detection"
+    ],
+    "name" : "SoundpipeAudioKit",
+    "slug" : "soundpipeaudiokit",
+    "version" : "5.7.4"
+  },
+  {
+    "canonicalURL" : "https://github.com/stanfordspezi/spezispeech",
+    "capabilities" : [
+      "speech.stt",
+      "speech.tts"
+    ],
+    "name" : "SpeziSpeech",
+    "slug" : "spezispeech",
+    "version" : "1.1.2"
+  },
+  {
+    "canonicalURL" : "https://github.com/ryanfrancesconi/spfk-audio-hardware",
+    "capabilities" : [
+      "audio.device-selection"
+    ],
+    "name" : "SPFKAudioHardware",
+    "slug" : "spfk-audio-hardware",
+    "version" : "5.2.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/ryanfrancesconi/spfk-sound-analysis",
+    "capabilities" : [
+      "audio.classification"
+    ],
+    "name" : "SPFKSoundAnalysis",
+    "slug" : "spfk-sound-analysis",
+    "version" : "1.0.3"
+  },
+  {
+    "canonicalURL" : "https://github.com/audiokit/sporthaudiokit",
+    "capabilities" : [
+      "audio.synthesis"
+    ],
+    "name" : "SporthAudioKit",
+    "slug" : "sporthaudiokit",
+    "version" : "5.5.1"
+  },
+  {
+    "canonicalURL" : "https://github.com/daltoniam/starscream",
+    "capabilities" : [
+      "network.websockets"
+    ],
+    "name" : "Starscream",
+    "slug" : "starscream",
+    "version" : "4.0.8"
+  },
+  {
+    "canonicalURL" : "https://github.com/audiokit/stkaudiokit",
+    "capabilities" : [
+      "audio.synthesis"
+    ],
+    "name" : "STKAudioKit",
+    "slug" : "stkaudiokit",
+    "version" : "5.5.4"
+  },
+  {
+    "canonicalURL" : "https://github.com/getstream/stream-video-swift",
+    "capabilities" : [
+      "media.streaming.webrtc",
+      "video.calling",
+      "video.screen-sharing",
+      "voice.calling"
+    ],
+    "name" : "StreamVideo",
+    "slug" : "stream-video-swift",
+    "version" : "1.48.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/exyte/svgview",
+    "capabilities" : [
+      "image.svg"
+    ],
+    "name" : "SVGView",
+    "slug" : "svgview",
+    "version" : "1.0.6"
+  },
+  {
+    "canonicalURL" : "https://github.com/alta/swift-opus",
+    "capabilities" : [
+      "audio.codec.opus"
+    ],
+    "name" : "swift-opus",
+    "slug" : "swift-opus",
+    "version" : "0.0.2"
+  },
+  {
+    "canonicalURL" : "https://github.com/p-x9/swift-system-sound",
+    "capabilities" : [
+      "audio.playback"
+    ],
+    "name" : "swift-system-sound",
+    "slug" : "swift-system-sound",
+    "version" : "0.10.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/doublesymmetry/swiftaudioex",
+    "capabilities" : [
+      "audio.background-playback",
+      "audio.playback",
+      "media.now-playing"
+    ],
+    "name" : "SwiftAudioEx",
+    "slug" : "swiftaudioex",
+    "version" : "1.1.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/tanhakabir/swiftaudioplayer",
+    "capabilities" : [
+      "audio.streaming"
+    ],
+    "name" : "SwiftAudioPlayer",
+    "slug" : "swiftaudioplayer",
+    "version" : "7.6.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/herrkaefer/swiftedgetts",
+    "capabilities" : [
+      "speech.tts"
+    ],
+    "name" : "SwiftEdgeTTS",
+    "slug" : "swiftedgetts",
+    "version" : "v1.3.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/hidden-spectrum/swiftlame",
+    "capabilities" : [
+      "audio.codec.mp3"
+    ],
+    "name" : "SwiftLAME",
+    "slug" : "swiftlame",
+    "version" : "0.1.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/apple/swift-nio",
+    "capabilities" : [
+      "network.websockets"
+    ],
+    "name" : "SwiftNIO",
+    "slug" : "swift-nio",
+    "version" : "2.101.2"
+  },
+  {
+    "canonicalURL" : "https://github.com/cay-zhang/swiftspeech",
+    "capabilities" : [
+      "speech.stt"
+    ],
+    "name" : "SwiftSpeech",
+    "slug" : "swiftspeech",
+    "version" : "v0.9.3"
+  },
+  {
+    "canonicalURL" : "https://github.com/renaudjenny/swift-tts",
+    "capabilities" : [
+      "speech.tts"
+    ],
+    "name" : "SwiftTTS",
+    "slug" : "swift-tts",
+    "version" : "2.1.2"
+  },
+  {
+    "canonicalURL" : "https://github.com/exphat/swiftwhisper",
+    "capabilities" : [
+      "speech.stt"
+    ],
+    "name" : "SwiftWhisper",
+    "slug" : "swiftwhisper",
+    "version" : "1.2.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/abdullahselek/swifty360player",
+    "capabilities" : [
+      "video.playback"
+    ],
+    "name" : "Swifty360Player",
+    "slug" : "swifty360player",
+    "version" : "0.2.7"
+  },
+  {
+    "canonicalURL" : "https://github.com/adamcichy/swiftysound",
+    "capabilities" : [
+      "audio.playback",
+      "audio.session-management"
+    ],
+    "name" : "SwiftySound",
+    "slug" : "swiftysound",
+    "version" : "1.3.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/metalpetal/videoio",
+    "capabilities" : [
+      "video.capture"
+    ],
+    "name" : "VideoIO",
+    "slug" : "videoio",
+    "version" : "2.3.1"
+  },
+  {
+    "canonicalURL" : "https://github.com/tattn/voicevox-client",
+    "capabilities" : [
+      "speech.tts"
+    ],
+    "name" : "VOICEVOX",
+    "slug" : "voicevox-client",
+    "version" : "1.2.2"
+  },
+  {
+    "canonicalURL" : "https://github.com/adamnemecek/webmidikit",
+    "capabilities" : [
+      "midi.io"
+    ],
+    "name" : "WebMIDIKit",
+    "slug" : "webmidikit",
+    "version" : "1.0.5"
+  },
+  {
+    "canonicalURL" : "https://github.com/stasel/webrtc",
+    "capabilities" : [
+      "media.streaming.webrtc"
+    ],
+    "name" : "WebRTC (stasel)",
+    "slug" : "webrtc",
+    "version" : "149.0.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/argmaxinc/whisperkit",
+    "capabilities" : [
+      "speech.stt"
+    ],
+    "name" : "WhisperKit",
+    "slug" : "whisperkit",
+    "version" : "v1.0.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/sventiigi/youtubeplayerkit",
+    "capabilities" : [
+      "video.playback"
+    ],
+    "name" : "YouTubePlayerKit",
+    "slug" : "youtubeplayerkit",
+    "version" : "2.0.5"
+  }
+]

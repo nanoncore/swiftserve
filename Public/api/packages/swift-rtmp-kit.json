@@ -1,0 +1,199 @@
+[
+  {
+    "capability" : {
+      "id" : "media.streaming.rtmp",
+      "label" : "RTMP streaming"
+    },
+    "labeledAt" : "2026-07-02T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "RTMP protocol toolkit (handshake, chunking, messages).",
+    "package" : {
+      "aliases" : [
+        "atelier-socle/swift-rtmp-kit"
+      ],
+      "canonicalURL" : "https://github.com/atelier-socle/swift-rtmp-kit",
+      "commit" : "163eea45fe8d66b0047d028c92de9ef993bd2ace",
+      "name" : "RTMPKit",
+      "surfaceDigest" : "fnv1a64:37c88ab1caa51ae7",
+      "version" : "0.3.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/RTMPKit/Configuration/RTMPConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RTMPConfiguration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 17",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "protocol-level Swift could build on Linux; unverified",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/RTMPKit/Configuration/RTMPConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RTMPConfiguration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macCatalyst 17",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/RTMPKit/Configuration/RTMPConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RTMPConfiguration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 14",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/RTMPKit/Configuration/RTMPConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RTMPConfiguration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 17",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/RTMPKit/Configuration/RTMPConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RTMPConfiguration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares visionOS 1",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/RTMPKit/Configuration/RTMPConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RTMPConfiguration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares watchOS 10",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

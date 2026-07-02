@@ -1,0 +1,139 @@
+[
+  {
+    "capability" : {
+      "id" : "speech.tts",
+      "label" : "Text-to-speech"
+    },
+    "labeledAt" : "2026-07-02T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Network TTS — audio comes from the Mapbox Voice API, not on-device synthesis. Empty manifest = default floors on all platforms.",
+    "package" : {
+      "aliases" : [
+        "mapbox/mapbox-speech-swift"
+      ],
+      "canonicalURL" : "https://github.com/mapbox/mapbox-speech-swift",
+      "commit" : "a9ef284deae227c6111c27a3535098c1e9a9d8e3",
+      "name" : "MapboxSpeech",
+      "surfaceDigest" : "fnv1a64:48f7b348d564c300",
+      "version" : "v2.1.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/MapboxSpeech/MapboxSpeech.swift",
+            "kind" : "symbol",
+            "line" : 78,
+            "note" : "Mapbox Voice API client",
+            "package" : null,
+            "symbol" : "SpeechSynthesizer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "Foundation-networking client could build on Linux; unverified",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/MapboxSpeech/MapboxSpeech.swift",
+            "kind" : "symbol",
+            "line" : 78,
+            "note" : "Mapbox Voice API client",
+            "package" : null,
+            "symbol" : "SpeechSynthesizer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/MapboxSpeech/MapboxSpeech.swift",
+            "kind" : "symbol",
+            "line" : 78,
+            "note" : "Mapbox Voice API client",
+            "package" : null,
+            "symbol" : "SpeechSynthesizer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/MapboxSpeech/MapboxSpeech.swift",
+            "kind" : "symbol",
+            "line" : 78,
+            "note" : "Mapbox Voice API client",
+            "package" : null,
+            "symbol" : "SpeechSynthesizer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "predates visionOS; symbols unguarded but untested",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/MapboxSpeech/MapboxSpeech.swift",
+            "kind" : "symbol",
+            "line" : 78,
+            "note" : "Mapbox Voice API client",
+            "package" : null,
+            "symbol" : "SpeechSynthesizer"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

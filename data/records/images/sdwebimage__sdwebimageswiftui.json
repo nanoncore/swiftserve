@@ -1,0 +1,306 @@
+[
+  {
+    "capability" : {
+      "id" : "image.async-loading",
+      "label" : "Async image loading"
+    },
+    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "WebImage — SwiftUI view with SDWebImage's loading + caching underneath.",
+    "package" : {
+      "aliases" : [
+        "SDWebImage/SDWebImageSwiftUI"
+      ],
+      "canonicalURL" : "https://github.com/sdwebimage/sdwebimageswiftui",
+      "commit" : "0e331457ca9af2f0b08bcaa138a91ffb907b004f",
+      "name" : "SDWebImageSwiftUI",
+      "surfaceDigest" : "fnv1a64:0ed9385f2d21d0d2",
+      "version" : "3.1.4"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImageSwiftUI/Classes/WebImage.swift",
+            "kind" : "symbol",
+            "line" : 82,
+            "note" : "SwiftUI async image view over SDWebImage",
+            "package" : null,
+            "symbol" : "WebImage"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 14",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImageSwiftUI/Classes/WebImage.swift",
+            "kind" : "symbol",
+            "line" : 82,
+            "note" : "SwiftUI async image view over SDWebImage",
+            "package" : null,
+            "symbol" : "WebImage"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImageSwiftUI/Classes/WebImage.swift",
+            "kind" : "symbol",
+            "line" : 82,
+            "note" : "SwiftUI async image view over SDWebImage",
+            "package" : null,
+            "symbol" : "WebImage"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 11",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImageSwiftUI/Classes/WebImage.swift",
+            "kind" : "symbol",
+            "line" : 82,
+            "note" : "SwiftUI async image view over SDWebImage",
+            "package" : null,
+            "symbol" : "WebImage"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImageSwiftUI/Classes/WebImage.swift",
+            "kind" : "symbol",
+            "line" : 82,
+            "note" : "SwiftUI async image view over SDWebImage",
+            "package" : null,
+            "symbol" : "WebImage"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares watchOS 7",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "image.gif",
+      "label" : "Animated GIF playback"
+    },
+    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "AnimatedImage plays GIF/APNG/WebP animations — fenced !os(watchOS), same gap as Kingfisher's.",
+    "package" : {
+      "aliases" : [
+        "SDWebImage/SDWebImageSwiftUI"
+      ],
+      "canonicalURL" : "https://github.com/sdwebimage/sdwebimageswiftui",
+      "commit" : "0e331457ca9af2f0b08bcaa138a91ffb907b004f",
+      "name" : "SDWebImageSwiftUI",
+      "surfaceDigest" : "fnv1a64:0ed9385f2d21d0d2",
+      "version" : "3.1.4"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(watchOS)",
+            "file" : "SDWebImageSwiftUI/Classes/AnimatedImage.swift",
+            "kind" : "symbol",
+            "line" : 109,
+            "note" : "animated image view",
+            "package" : null,
+            "symbol" : "AnimatedImage"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(watchOS)",
+            "file" : "SDWebImageSwiftUI/Classes/AnimatedImage.swift",
+            "kind" : "symbol",
+            "line" : 109,
+            "note" : "animated image view",
+            "package" : null,
+            "symbol" : "AnimatedImage"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(watchOS)",
+            "file" : "SDWebImageSwiftUI/Classes/AnimatedImage.swift",
+            "kind" : "symbol",
+            "line" : 109,
+            "note" : "animated image view",
+            "package" : null,
+            "symbol" : "AnimatedImage"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(watchOS)",
+            "file" : "SDWebImageSwiftUI/Classes/AnimatedImage.swift",
+            "kind" : "symbol",
+            "line" : 109,
+            "note" : "animated image view",
+            "package" : null,
+            "symbol" : "AnimatedImage"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(watchOS)",
+            "file" : "SDWebImageSwiftUI/Classes/AnimatedImage.swift",
+            "kind" : "guard",
+            "line" : 109,
+            "note" : "fenced !os(watchOS)",
+            "package" : null,
+            "symbol" : "AnimatedImage"
+          }
+        ],
+        "status" : "unsupported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

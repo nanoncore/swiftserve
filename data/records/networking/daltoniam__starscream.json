@@ -1,0 +1,139 @@
+[
+  {
+    "capability" : {
+      "id" : "network.websockets",
+      "label" : "WebSockets"
+    },
+    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "RFC 6455 client with TLS/compression. Server-side (WebSocketServer) is separately fenced to Network.framework platforms and marked unavailable on watchOS.",
+    "package" : {
+      "aliases" : [
+        "daltoniam/Starscream"
+      ],
+      "canonicalURL" : "https://github.com/daltoniam/starscream",
+      "commit" : "c6bfd1af48efcc9a9ad203665db12375ba6b145a",
+      "name" : "Starscream",
+      "surfaceDigest" : "fnv1a64:f87de5a994377986",
+      "version" : "4.0.8"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Starscream/WebSocket.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : "the client protocol; WebSocket class conforms",
+            "package" : null,
+            "symbol" : "WebSocketClient"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "historic Linux support has decayed; engine availability differs — unverified at this tag",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Starscream/WebSocket.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : "the client protocol; WebSocket class conforms",
+            "package" : null,
+            "symbol" : "WebSocketClient"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Starscream/WebSocket.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : "the client protocol; WebSocket class conforms",
+            "package" : null,
+            "symbol" : "WebSocketClient"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Starscream/WebSocket.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : "the client protocol; WebSocket class conforms",
+            "package" : null,
+            "symbol" : "WebSocketClient"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Starscream/WebSocket.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : "the client protocol; WebSocket class conforms",
+            "package" : null,
+            "symbol" : "WebSocketClient"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Starscream/WebSocket.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : "the client protocol; WebSocket class conforms",
+            "package" : null,
+            "symbol" : "WebSocketClient"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

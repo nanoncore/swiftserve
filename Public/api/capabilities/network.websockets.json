@@ -1,0 +1,256 @@
+{
+  "aliases" : [
+    "websocket",
+    "ws",
+    "socket"
+  ],
+  "id" : "network.websockets",
+  "label" : "WebSockets",
+  "packages" : [
+    {
+      "commit" : "cd3e1152083706d77b223fb29110e590efcc70c0",
+      "notes" : "Protocol-level WebSocket (framing, upgrader) — you assemble the client/server; it's not a drop-in socket like Starscream. Linux is home turf.",
+      "package" : "https://github.com/apple/swift-nio",
+      "packageName" : "SwiftNIO",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/NIOWebSocket/WebSocketFrame.swift",
+              "kind" : "symbol",
+              "line" : 147,
+              "note" : "RFC 6455 framing in NIOWebSocket",
+              "permalink" : "https://github.com/apple/swift-nio/blob/2.101.2/Sources/NIOWebSocket/WebSocketFrame.swift#L147",
+              "symbol" : "WebSocketFrame"
+            },
+            {
+              "condition" : "!os(WASI)",
+              "file" : "Sources/NIOPosix/MultiThreadedEventLoopGroup.swift",
+              "kind" : "symbol",
+              "line" : 62,
+              "note" : "the engine — guarded only against WASI",
+              "permalink" : "https://github.com/apple/swift-nio/blob/2.101.2/Sources/NIOPosix/MultiThreadedEventLoopGroup.swift#L62",
+              "symbol" : "MultiThreadedEventLoopGroup"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/NIOWebSocket/WebSocketFrame.swift",
+              "kind" : "symbol",
+              "line" : 147,
+              "note" : "RFC 6455 framing in NIOWebSocket",
+              "permalink" : "https://github.com/apple/swift-nio/blob/2.101.2/Sources/NIOWebSocket/WebSocketFrame.swift#L147",
+              "symbol" : "WebSocketFrame"
+            },
+            {
+              "condition" : "!os(WASI)",
+              "file" : "Sources/NIOPosix/MultiThreadedEventLoopGroup.swift",
+              "kind" : "symbol",
+              "line" : 62,
+              "note" : "the engine — guarded only against WASI",
+              "permalink" : "https://github.com/apple/swift-nio/blob/2.101.2/Sources/NIOPosix/MultiThreadedEventLoopGroup.swift#L62",
+              "symbol" : "MultiThreadedEventLoopGroup"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/NIOWebSocket/WebSocketFrame.swift",
+              "kind" : "symbol",
+              "line" : 147,
+              "note" : "RFC 6455 framing in NIOWebSocket",
+              "permalink" : "https://github.com/apple/swift-nio/blob/2.101.2/Sources/NIOWebSocket/WebSocketFrame.swift#L147",
+              "symbol" : "WebSocketFrame"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/NIOWebSocket/WebSocketFrame.swift",
+              "kind" : "symbol",
+              "line" : 147,
+              "note" : "RFC 6455 framing in NIOWebSocket",
+              "permalink" : "https://github.com/apple/swift-nio/blob/2.101.2/Sources/NIOWebSocket/WebSocketFrame.swift#L147",
+              "symbol" : "WebSocketFrame"
+            },
+            {
+              "condition" : "!os(WASI)",
+              "file" : "Sources/NIOPosix/MultiThreadedEventLoopGroup.swift",
+              "kind" : "symbol",
+              "line" : 62,
+              "note" : "the engine — guarded only against WASI",
+              "permalink" : "https://github.com/apple/swift-nio/blob/2.101.2/Sources/NIOPosix/MultiThreadedEventLoopGroup.swift#L62",
+              "symbol" : "MultiThreadedEventLoopGroup"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/NIOWebSocket/WebSocketFrame.swift",
+              "kind" : "symbol",
+              "line" : 147,
+              "note" : "RFC 6455 framing in NIOWebSocket",
+              "permalink" : "https://github.com/apple/swift-nio/blob/2.101.2/Sources/NIOWebSocket/WebSocketFrame.swift#L147",
+              "symbol" : "WebSocketFrame"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/NIOWebSocket/WebSocketFrame.swift",
+              "kind" : "symbol",
+              "line" : 147,
+              "note" : "RFC 6455 framing in NIOWebSocket",
+              "permalink" : "https://github.com/apple/swift-nio/blob/2.101.2/Sources/NIOWebSocket/WebSocketFrame.swift#L147",
+              "symbol" : "WebSocketFrame"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/NIOWebSocket/WebSocketFrame.swift",
+              "kind" : "symbol",
+              "line" : 147,
+              "note" : "RFC 6455 framing in NIOWebSocket",
+              "permalink" : "https://github.com/apple/swift-nio/blob/2.101.2/Sources/NIOWebSocket/WebSocketFrame.swift#L147",
+              "symbol" : "WebSocketFrame"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swift-nio",
+      "version" : "2.101.2"
+    },
+    {
+      "commit" : "c6bfd1af48efcc9a9ad203665db12375ba6b145a",
+      "notes" : "RFC 6455 client with TLS/compression. Server-side (WebSocketServer) is separately fenced to Network.framework platforms and marked unavailable on watchOS.",
+      "package" : "https://github.com/daltoniam/starscream",
+      "packageName" : "Starscream",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Starscream/WebSocket.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "note" : "the client protocol; WebSocket class conforms",
+              "permalink" : "https://github.com/daltoniam/starscream/blob/4.0.8/Sources/Starscream/WebSocket.swift#L44",
+              "symbol" : "WebSocketClient"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "historic Linux support has decayed; engine availability differs — unverified at this tag"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Starscream/WebSocket.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "note" : "the client protocol; WebSocket class conforms",
+              "permalink" : "https://github.com/daltoniam/starscream/blob/4.0.8/Sources/Starscream/WebSocket.swift#L44",
+              "symbol" : "WebSocketClient"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Starscream/WebSocket.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "note" : "the client protocol; WebSocket class conforms",
+              "permalink" : "https://github.com/daltoniam/starscream/blob/4.0.8/Sources/Starscream/WebSocket.swift#L44",
+              "symbol" : "WebSocketClient"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Starscream/WebSocket.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "note" : "the client protocol; WebSocket class conforms",
+              "permalink" : "https://github.com/daltoniam/starscream/blob/4.0.8/Sources/Starscream/WebSocket.swift#L44",
+              "symbol" : "WebSocketClient"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/Starscream/WebSocket.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "note" : "the client protocol; WebSocket class conforms",
+              "permalink" : "https://github.com/daltoniam/starscream/blob/4.0.8/Sources/Starscream/WebSocket.swift#L44",
+              "symbol" : "WebSocketClient"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Starscream/WebSocket.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "note" : "the client protocol; WebSocket class conforms",
+              "permalink" : "https://github.com/daltoniam/starscream/blob/4.0.8/Sources/Starscream/WebSocket.swift#L44",
+              "symbol" : "WebSocketClient"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "starscream",
+      "version" : "4.0.8"
+    }
+  ]
+}

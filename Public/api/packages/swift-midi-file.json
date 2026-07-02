@@ -1,0 +1,179 @@
+[
+  {
+    "capability" : {
+      "id" : "midi.file",
+      "label" : "MIDI file read/write"
+    },
+    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "MIDIKit's SMF module — pure-Swift file parsing, so unlike MIDI *I/O* it works on tvOS/watchOS too.",
+    "package" : {
+      "aliases" : [
+        "orchetect/swift-midi-file"
+      ],
+      "canonicalURL" : "https://github.com/orchetect/swift-midi-file",
+      "commit" : "7d5ac32c068cfa288362a85bdf340653a4d242ee",
+      "name" : "MIDIKitSMF",
+      "surfaceDigest" : "fnv1a64:b71f2ad4e37fce95",
+      "version" : "1.0.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftMIDIFile/MIDI1File/MIDI1File.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "SMF (type 0/1) encode/decode",
+            "package" : null,
+            "symbol" : "MIDI1File"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "pure-Swift SMF parsing may build on Linux; unverified",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftMIDIFile/MIDI1File/MIDI1File.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "SMF (type 0/1) encode/decode",
+            "package" : null,
+            "symbol" : "MIDI1File"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftMIDIFile/MIDI1File/MIDI1File.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "SMF (type 0/1) encode/decode",
+            "package" : null,
+            "symbol" : "MIDI1File"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 10.13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftMIDIFile/MIDI1File/MIDI1File.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "SMF (type 0/1) encode/decode",
+            "package" : null,
+            "symbol" : "MIDI1File"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftMIDIFile/MIDI1File/MIDI1File.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "SMF (type 0/1) encode/decode",
+            "package" : null,
+            "symbol" : "MIDI1File"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftMIDIFile/MIDI1File/MIDI1File.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "SMF (type 0/1) encode/decode",
+            "package" : null,
+            "symbol" : "MIDI1File"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares watchOS 4",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

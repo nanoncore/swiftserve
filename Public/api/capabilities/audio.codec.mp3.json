@@ -1,0 +1,113 @@
+{
+  "aliases" : [
+    "mp3 codec",
+    "lame"
+  ],
+  "id" : "audio.codec.mp3",
+  "label" : "MP3 encoding/decoding",
+  "packages" : [
+    {
+      "commit" : "45d1b021c2bd2bbd38b9669934c0584cda0d1b6b",
+      "notes" : "MP3 ENCODING via LAME (35 C files unparsed — the codec core is a v1 blind spot). Decoding isn't the target: AVFoundation already decodes MP3.",
+      "package" : "https://github.com/hidden-spectrum/swiftlame",
+      "packageName" : "SwiftLAME",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftLAME/SwiftLameEncoder.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "async PCM→MP3 encoding over LAME",
+              "permalink" : "https://github.com/hidden-spectrum/swiftlame/blob/0.1.0/Sources/SwiftLAME/SwiftLameEncoder.swift#L6",
+              "symbol" : "SwiftLameEncoder"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "LAME itself builds on Linux; this wrapper unverified"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftLAME/SwiftLameEncoder.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "async PCM→MP3 encoding over LAME",
+              "permalink" : "https://github.com/hidden-spectrum/swiftlame/blob/0.1.0/Sources/SwiftLAME/SwiftLameEncoder.swift#L6",
+              "symbol" : "SwiftLameEncoder"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftLAME/SwiftLameEncoder.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "async PCM→MP3 encoding over LAME",
+              "permalink" : "https://github.com/hidden-spectrum/swiftlame/blob/0.1.0/Sources/SwiftLAME/SwiftLameEncoder.swift#L6",
+              "symbol" : "SwiftLameEncoder"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swiftlame",
+      "version" : "0.1.0"
+    }
+  ]
+}

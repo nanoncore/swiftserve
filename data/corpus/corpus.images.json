@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "domain": "images",
+  "packages": [
+    {
+      "url": "https://github.com/onevcat/kingfisher",
+      "name": "onevcat/Kingfisher",
+      "source": "seed",
+      "why": "the async image loading package",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/kean/nuke",
+      "name": "kean/Nuke",
+      "source": "seed",
+      "why": "image pipeline with caching/prefetching",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/sdwebimage/sdwebimage",
+      "name": "SDWebImage/SDWebImage",
+      "source": "seed",
+      "why": "the ObjC-era giant — honest blind-spot entry",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/sdwebimage/sdwebimageswiftui",
+      "name": "SDWebImage/SDWebImageSwiftUI",
+      "source": "seed",
+      "why": "SwiftUI layer over SDWebImage",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/kaishin/gifu",
+      "name": "kaishin/Gifu",
+      "source": "seed",
+      "why": "animated GIF playback",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/exyte/svgview",
+      "name": "exyte/SVGView",
+      "source": "seed",
+      "why": "SVG rendering in SwiftUI",
+      "companionOf": null
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "aliases" : [
+    "AEC",
+    "acoustic echo"
+  ],
+  "id" : "audio.echo-cancellation",
+  "label" : "Echo cancellation",
+  "packages" : [
+    {
+      "commit" : "c5d16bbb9f3c4282523d6d6039c0009480b72c25",
+      "notes" : "Wraps Apple's Voice-Processing I/O unit to strip echo (and optionally apply AGC) from mic capture.",
+      "package" : "https://github.com/kasimok/aecaudiostream",
+      "packageName" : "AECAudioStream",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/AECAudioStream/AECAudioStream.swift",
+              "kind" : "symbol",
+              "line" : 19,
+              "note" : "Voice-Processing I/O (AEC) audio unit stream",
+              "permalink" : "https://github.com/kasimok/aecaudiostream/blob/1.0.1/Sources/AECAudioStream/AECAudioStream.swift#L19",
+              "symbol" : "AECAudioStream"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AudioToolbox VPIO is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/AECAudioStream/AECAudioStream.swift",
+              "kind" : "symbol",
+              "line" : 19,
+              "note" : "Voice-Processing I/O (AEC) audio unit stream",
+              "permalink" : "https://github.com/kasimok/aecaudiostream/blob/1.0.1/Sources/AECAudioStream/AECAudioStream.swift#L19",
+              "symbol" : "AECAudioStream"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/AECAudioStream/AECAudioStream.swift",
+              "kind" : "symbol",
+              "line" : 19,
+              "note" : "Voice-Processing I/O (AEC) audio unit stream",
+              "permalink" : "https://github.com/kasimok/aecaudiostream/blob/1.0.1/Sources/AECAudioStream/AECAudioStream.swift#L19",
+              "symbol" : "AECAudioStream"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/AECAudioStream/AECAudioStream.swift",
+              "kind" : "symbol",
+              "line" : 19,
+              "note" : "Voice-Processing I/O (AEC) audio unit stream",
+              "permalink" : "https://github.com/kasimok/aecaudiostream/blob/1.0.1/Sources/AECAudioStream/AECAudioStream.swift#L19",
+              "symbol" : "AECAudioStream"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors; no source fence"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors; no source fence"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "aecaudiostream",
+      "version" : "1.0.1"
+    }
+  ]
+}

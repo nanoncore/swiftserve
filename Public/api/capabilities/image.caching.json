@@ -1,0 +1,297 @@
+{
+  "aliases" : [
+    "disk cache",
+    "memory cache",
+    "image cache"
+  ],
+  "id" : "image.caching",
+  "label" : "Image caching",
+  "packages" : [
+    {
+      "commit" : "63a8fcbd6621340a2410bc3e9575ac97058615f4",
+      "package" : "https://github.com/kean/nuke",
+      "packageName" : "Nuke",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Nuke/Caching/ImageCache.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "permalink" : "https://github.com/kean/nuke/blob/13.0.6/Sources/Nuke/Caching/ImageCache.swift#L22",
+              "symbol" : "ImageCache"
+            },
+            {
+              "file" : "Sources/Nuke/Caching/DataCache.swift",
+              "kind" : "symbol",
+              "line" : 33,
+              "note" : "LRU disk cache",
+              "permalink" : "https://github.com/kean/nuke/blob/13.0.6/Sources/Nuke/Caching/DataCache.swift#L33",
+              "symbol" : "DataCache"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "Apple imaging stacks only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Nuke/Caching/ImageCache.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "permalink" : "https://github.com/kean/nuke/blob/13.0.6/Sources/Nuke/Caching/ImageCache.swift#L22",
+              "symbol" : "ImageCache"
+            },
+            {
+              "file" : "Sources/Nuke/Caching/DataCache.swift",
+              "kind" : "symbol",
+              "line" : 33,
+              "note" : "LRU disk cache",
+              "permalink" : "https://github.com/kean/nuke/blob/13.0.6/Sources/Nuke/Caching/DataCache.swift#L33",
+              "symbol" : "DataCache"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Nuke/Caching/ImageCache.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "permalink" : "https://github.com/kean/nuke/blob/13.0.6/Sources/Nuke/Caching/ImageCache.swift#L22",
+              "symbol" : "ImageCache"
+            },
+            {
+              "file" : "Sources/Nuke/Caching/DataCache.swift",
+              "kind" : "symbol",
+              "line" : 33,
+              "note" : "LRU disk cache",
+              "permalink" : "https://github.com/kean/nuke/blob/13.0.6/Sources/Nuke/Caching/DataCache.swift#L33",
+              "symbol" : "DataCache"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.7999999999999999,
+          "evidence" : [
+            {
+              "file" : "Sources/Nuke/Caching/ImageCache.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "permalink" : "https://github.com/kean/nuke/blob/13.0.6/Sources/Nuke/Caching/ImageCache.swift#L22",
+              "symbol" : "ImageCache"
+            },
+            {
+              "file" : "Sources/Nuke/Caching/DataCache.swift",
+              "kind" : "symbol",
+              "line" : 33,
+              "note" : "LRU disk cache",
+              "permalink" : "https://github.com/kean/nuke/blob/13.0.6/Sources/Nuke/Caching/DataCache.swift#L33",
+              "symbol" : "DataCache"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7999999999999999,
+          "evidence" : [
+            {
+              "file" : "Sources/Nuke/Caching/ImageCache.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "permalink" : "https://github.com/kean/nuke/blob/13.0.6/Sources/Nuke/Caching/ImageCache.swift#L22",
+              "symbol" : "ImageCache"
+            },
+            {
+              "file" : "Sources/Nuke/Caching/DataCache.swift",
+              "kind" : "symbol",
+              "line" : 33,
+              "note" : "LRU disk cache",
+              "permalink" : "https://github.com/kean/nuke/blob/13.0.6/Sources/Nuke/Caching/DataCache.swift#L33",
+              "symbol" : "DataCache"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares visionOS 1"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.7999999999999999,
+          "evidence" : [
+            {
+              "file" : "Sources/Nuke/Caching/ImageCache.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "permalink" : "https://github.com/kean/nuke/blob/13.0.6/Sources/Nuke/Caching/ImageCache.swift#L22",
+              "symbol" : "ImageCache"
+            },
+            {
+              "file" : "Sources/Nuke/Caching/DataCache.swift",
+              "kind" : "symbol",
+              "line" : 33,
+              "note" : "LRU disk cache",
+              "permalink" : "https://github.com/kean/nuke/blob/13.0.6/Sources/Nuke/Caching/DataCache.swift#L33",
+              "symbol" : "DataCache"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares watchOS 8"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "nuke",
+      "version" : "13.0.6"
+    },
+    {
+      "commit" : "ac632bd26a1c00f139ff62fd01806f21cf67325e",
+      "package" : "https://github.com/onevcat/kingfisher",
+      "packageName" : "Kingfisher",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Cache/ImageCache.swift",
+              "kind" : "symbol",
+              "line" : 154,
+              "note" : "hybrid memory + disk cache",
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Cache/ImageCache.swift#L154",
+              "symbol" : "ImageCache"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "Apple imaging stacks only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Cache/ImageCache.swift",
+              "kind" : "symbol",
+              "line" : 154,
+              "note" : "hybrid memory + disk cache",
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Cache/ImageCache.swift#L154",
+              "symbol" : "ImageCache"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Cache/ImageCache.swift",
+              "kind" : "symbol",
+              "line" : 154,
+              "note" : "hybrid memory + disk cache",
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Cache/ImageCache.swift#L154",
+              "symbol" : "ImageCache"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.7999999999999999,
+          "evidence" : [
+            {
+              "file" : "Sources/Cache/ImageCache.swift",
+              "kind" : "symbol",
+              "line" : 154,
+              "note" : "hybrid memory + disk cache",
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Cache/ImageCache.swift#L154",
+              "symbol" : "ImageCache"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors at this tag"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.7999999999999999,
+          "evidence" : [
+            {
+              "file" : "Sources/Cache/ImageCache.swift",
+              "kind" : "symbol",
+              "line" : 154,
+              "note" : "hybrid memory + disk cache",
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Cache/ImageCache.swift#L154",
+              "symbol" : "ImageCache"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares watchOS 6"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "kingfisher",
+      "version" : "8.10.0"
+    }
+  ]
+}

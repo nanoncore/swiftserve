@@ -1,0 +1,140 @@
+[
+  {
+    "capability" : {
+      "id" : "midi.io",
+      "label" : "MIDI input/output"
+    },
+    "labeledAt" : "2026-07-02T14:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Note the trap this catches: the manifest DECLARES tvOS 12 and watchOS 4 floors, but the actual MIDI I/O objects are fenced `#if !os(tvOS) && !os(watchOS)` — it compiles there, the capability doesn't exist there.",
+    "package" : {
+      "aliases" : [
+        "orchetect/swift-midi-io",
+        "swift-midi-io"
+      ],
+      "canonicalURL" : "https://github.com/orchetect/swift-midi-io",
+      "commit" : "54ac94028e3825bd8e622d373b0698d196927212",
+      "name" : "MIDIKitIO",
+      "surfaceDigest" : "fnv1a64:26b2b36169cf62d6",
+      "version" : "1.1.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(tvOS) && !os(watchOS)",
+            "file" : "Sources/CoreMIDI/AnyMIDIEndpoint/AnyMIDIEndpoint.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : "MIDI endpoint object — the I/O surface",
+            "package" : null,
+            "symbol" : "AnyMIDIEndpoint"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "CoreMIDI is Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(tvOS) && !os(watchOS)",
+            "file" : "Sources/CoreMIDI/AnyMIDIEndpoint/AnyMIDIEndpoint.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : "MIDI endpoint object — the I/O surface",
+            "package" : null,
+            "symbol" : "AnyMIDIEndpoint"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(tvOS) && !os(watchOS)",
+            "file" : "Sources/CoreMIDI/AnyMIDIEndpoint/AnyMIDIEndpoint.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : "MIDI endpoint object — the I/O surface",
+            "package" : null,
+            "symbol" : "AnyMIDIEndpoint"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(tvOS) && !os(watchOS)",
+            "file" : "Sources/CoreMIDI/AnyMIDIEndpoint/AnyMIDIEndpoint.swift",
+            "kind" : "guard",
+            "line" : 10,
+            "note" : "MIDI endpoint object — the I/O surface",
+            "package" : null,
+            "symbol" : "AnyMIDIEndpoint"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(tvOS) && !os(watchOS)",
+            "file" : "Sources/CoreMIDI/AnyMIDIEndpoint/AnyMIDIEndpoint.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : "MIDI endpoint object — the I/O surface",
+            "package" : null,
+            "symbol" : "AnyMIDIEndpoint"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(tvOS) && !os(watchOS)",
+            "file" : "Sources/CoreMIDI/AnyMIDIEndpoint/AnyMIDIEndpoint.swift",
+            "kind" : "guard",
+            "line" : 10,
+            "note" : "MIDI endpoint object — the I/O surface",
+            "package" : null,
+            "symbol" : "AnyMIDIEndpoint"
+          }
+        ],
+        "status" : "unsupported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

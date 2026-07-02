@@ -1,0 +1,113 @@
+{
+  "aliases" : [
+    "background audio",
+    "play in background"
+  ],
+  "id" : "audio.background-playback",
+  "label" : "Background audio playback",
+  "packages" : [
+    {
+      "commit" : "7b506bebabd68b542256c0e1e55519fab5f4c092",
+      "notes" : "Provides the background-playback machinery (now-playing info + remote commands + session handling). The APP still enables the ‘audio’ background mode in Info.plist — no package can do that part.",
+      "package" : "https://github.com/doublesymmetry/swiftaudioex",
+      "packageName" : "SwiftAudioEx",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftAudioEx/AudioPlayer.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "note" : "lock-screen now-playing",
+              "permalink" : "https://github.com/doublesymmetry/swiftaudioex/blob/1.1.0/Sources/SwiftAudioEx/AudioPlayer.swift#L17",
+              "symbol" : "AudioPlayer.nowPlayingInfoController"
+            },
+            {
+              "file" : "Sources/SwiftAudioEx/AudioPlayer.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "note" : "remote commands (play/pause/skip from lock screen)",
+              "permalink" : "https://github.com/doublesymmetry/swiftaudioex/blob/1.1.0/Sources/SwiftAudioEx/AudioPlayer.swift#L18",
+              "symbol" : "AudioPlayer.remoteCommandController"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 11"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVFoundation-based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftAudioEx/AudioPlayer.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "note" : "lock-screen now-playing",
+              "permalink" : "https://github.com/doublesymmetry/swiftaudioex/blob/1.1.0/Sources/SwiftAudioEx/AudioPlayer.swift#L17",
+              "symbol" : "AudioPlayer.nowPlayingInfoController"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS only"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swiftaudioex",
+      "version" : "1.1.0"
+    }
+  ]
+}

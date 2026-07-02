@@ -1,0 +1,113 @@
+{
+  "aliases" : [
+    "tuner",
+    "frequency detection"
+  ],
+  "id" : "audio.pitch-detection",
+  "label" : "Pitch detection",
+  "packages" : [
+    {
+      "commit" : "d8afd31b3710a0efd5f9ecb11f1169ca493795e9",
+      "notes" : "PitchTap — the tuner-app primitive. The Soundpipe DSP core is C (76 files unparsed), so confidence stays modest.",
+      "package" : "https://github.com/audiokit/soundpipeaudiokit",
+      "packageName" : "SoundpipeAudioKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/SoundpipeAudioKit/PitchTap.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "real-time pitch (frequency + amplitude) tracking",
+              "permalink" : "https://github.com/audiokit/soundpipeaudiokit/blob/5.7.4/Sources/SoundpipeAudioKit/PitchTap.swift#L9",
+              "symbol" : "PitchTap"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVAudioEngine + C DSP core"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SoundpipeAudioKit/PitchTap.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "real-time pitch (frequency + amplitude) tracking",
+              "permalink" : "https://github.com/audiokit/soundpipeaudiokit/blob/5.7.4/Sources/SoundpipeAudioKit/PitchTap.swift#L9",
+              "symbol" : "PitchTap"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/SoundpipeAudioKit/PitchTap.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "real-time pitch (frequency + amplitude) tracking",
+              "permalink" : "https://github.com/audiokit/soundpipeaudiokit/blob/5.7.4/Sources/SoundpipeAudioKit/PitchTap.swift#L9",
+              "symbol" : "PitchTap"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SoundpipeAudioKit/PitchTap.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "real-time pitch (frequency + amplitude) tracking",
+              "permalink" : "https://github.com/audiokit/soundpipeaudiokit/blob/5.7.4/Sources/SoundpipeAudioKit/PitchTap.swift#L9",
+              "symbol" : "PitchTap"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/SoundpipeAudioKit/PitchTap.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "real-time pitch (frequency + amplitude) tracking",
+              "permalink" : "https://github.com/audiokit/soundpipeaudiokit/blob/5.7.4/Sources/SoundpipeAudioKit/PitchTap.swift#L9",
+              "symbol" : "PitchTap"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "soundpipeaudiokit",
+      "version" : "5.7.4"
+    }
+  ]
+}

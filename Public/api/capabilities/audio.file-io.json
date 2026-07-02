@@ -1,0 +1,115 @@
+{
+  "aliases" : [
+    "wav",
+    "aiff",
+    "audio file",
+    "audio export"
+  ],
+  "id" : "audio.file-io",
+  "label" : "Audio file reading/writing",
+  "packages" : [
+    {
+      "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+      "notes" : "Read/write/convert audio files (wav, aiff, caf, m4a…) via FormatConverter + AVAudioFile helpers.",
+      "package" : "https://github.com/audiokit/audiokit",
+      "packageName" : "AudioKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKit/Audio Files/Format Converter/FormatConverter.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "audio file format conversion",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/Audio Files/Format Converter/FormatConverter.swift#L22",
+              "symbol" : "FormatConverter"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVFoundation/ExtAudioFile-based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKit/Audio Files/Format Converter/FormatConverter.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "audio file format conversion",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/Audio Files/Format Converter/FormatConverter.swift#L22",
+              "symbol" : "FormatConverter"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKit/Audio Files/Format Converter/FormatConverter.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "audio file format conversion",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/Audio Files/Format Converter/FormatConverter.swift#L22",
+              "symbol" : "FormatConverter"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKit/Audio Files/Format Converter/FormatConverter.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "audio file format conversion",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/Audio Files/Format Converter/FormatConverter.swift#L22",
+              "symbol" : "FormatConverter"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKit/Audio Files/Format Converter/FormatConverter.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "audio file format conversion",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/Audio Files/Format Converter/FormatConverter.swift#L22",
+              "symbol" : "FormatConverter"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "audiokit",
+      "version" : "5.7.2"
+    }
+  ]
+}

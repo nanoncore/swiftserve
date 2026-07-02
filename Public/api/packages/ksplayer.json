@@ -1,0 +1,189 @@
+[
+  {
+    "capability" : {
+      "id" : "video.playback",
+      "label" : "Video playback"
+    },
+    "labeledAt" : "2026-07-02T14:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "AVPlayer + FFmpeg-based player (subtitles, HDR, multiple audio tracks).",
+    "package" : {
+      "aliases" : [
+        "kingslay/KSPlayer"
+      ],
+      "canonicalURL" : "https://github.com/kingslay/ksplayer",
+      "commit" : "bdfa2da39bb18865b317c4ffd08cdef5f8efc043",
+      "name" : "KSPlayer",
+      "surfaceDigest" : "fnv1a64:b62b71daf8e24cb9",
+      "version" : "2.3.4"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/KSPlayer/AVPlayer/KSPlayerLayer.swift",
+            "kind" : "symbol",
+            "line" : 67,
+            "note" : "the player surface",
+            "package" : null,
+            "symbol" : "KSPlayerLayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "AVFoundation/FFmpeg player targeting Apple platforms",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/KSPlayer/AVPlayer/KSPlayerLayer.swift",
+            "kind" : "symbol",
+            "line" : 67,
+            "note" : "the player surface",
+            "package" : null,
+            "symbol" : "KSPlayerLayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macCatalyst 13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/KSPlayer/AVPlayer/KSPlayerLayer.swift",
+            "kind" : "symbol",
+            "line" : 67,
+            "note" : "the player surface",
+            "package" : null,
+            "symbol" : "KSPlayerLayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 10.15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/KSPlayer/AVPlayer/KSPlayerLayer.swift",
+            "kind" : "symbol",
+            "line" : 67,
+            "note" : "the player surface",
+            "package" : null,
+            "symbol" : "KSPlayerLayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/KSPlayer/AVPlayer/KSPlayerLayer.swift",
+            "kind" : "symbol",
+            "line" : 67,
+            "note" : "the player surface",
+            "package" : null,
+            "symbol" : "KSPlayerLayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares visionOS 1",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

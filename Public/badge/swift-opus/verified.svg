@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="216.9" height="20" role="img" aria-label="1 capability verified — SwiftServe">
+  <title>swift-opus: 1 capability verified</title>
+  <clipPath id="r"><rect width="216.9" height="20" rx="4"/></clipPath>
+  <g clip-path="url(#r)">
+    <rect width="90.0" height="20" fill="#2c2724"/>
+    <g transform="translate(5.0,3.0) scale(0.6)">
+  <path d="M3 8 L8 18 L13 8 Z" fill="#e8b04b"/>
+  <path d="M2.5 8 A5.5 5.5 0 0 1 13.5 8 Z" fill="#ed8b3e"/>
+  <circle cx="8" cy="4.5" r="3.4" fill="#ed8b3e"/>
+</g>
+    <text x="22" y="14" fill="#fbf7f0" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11">swiftserve</text>
+    <rect x="90.0" width="126.9" height="20" fill="#d9742a"/>
+    <text x="153.4" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11">1 capability verified</text>
+  </g>
+</svg>

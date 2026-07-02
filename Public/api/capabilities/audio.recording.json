@@ -1,0 +1,308 @@
+{
+  "aliases" : [
+    "mic capture",
+    "record audio",
+    "audio capture"
+  ],
+  "id" : "audio.recording",
+  "label" : "Microphone recording",
+  "packages" : [
+    {
+      "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+      "notes" : "NodeRecorder records the input (or any node) to file.",
+      "package" : "https://github.com/audiokit/audiokit",
+      "packageName" : "AudioKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKit/Taps/NodeRecorder.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "records any node (incl. the mic input) to file",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/Taps/NodeRecorder.swift#L6",
+              "symbol" : "NodeRecorder"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVAudioEngine-based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKit/Taps/NodeRecorder.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "records any node (incl. the mic input) to file",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/Taps/NodeRecorder.swift#L6",
+              "symbol" : "NodeRecorder"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKit/Taps/NodeRecorder.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "records any node (incl. the mic input) to file",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/Taps/NodeRecorder.swift#L6",
+              "symbol" : "NodeRecorder"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "NodeRecorder compiles for tvOS but there's no microphone input path on tvOS"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioKit/Taps/NodeRecorder.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "records any node (incl. the mic input) to file",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/Taps/NodeRecorder.swift#L6",
+              "symbol" : "NodeRecorder"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "audiokit",
+      "version" : "5.7.2"
+    },
+    {
+      "commit" : "fade972c21f3665fdbfa3f0525ef0961b3e56566",
+      "notes" : "Microphone recording with output to file, with a dependency-client interface.",
+      "package" : "https://github.com/atacan/audiorecorder",
+      "packageName" : "AudioRecorder",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioRecorderClient/AudioRecorderClient+LiveKey.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "TCA-style recording client",
+              "permalink" : "https://github.com/atacan/audiorecorder/blob/1.0.0/Sources/AudioRecorderClient/AudioRecorderClient+LiveKey.swift#L5",
+              "symbol" : "AudioRecorderClient"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 16"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVFoundation-based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioRecorderClient/AudioRecorderClient+LiveKey.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "TCA-style recording client",
+              "permalink" : "https://github.com/atacan/audiorecorder/blob/1.0.0/Sources/AudioRecorderClient/AudioRecorderClient+LiveKey.swift#L5",
+              "symbol" : "AudioRecorderClient"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioRecorderClient/AudioRecorderClient+LiveKey.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "TCA-style recording client",
+              "permalink" : "https://github.com/atacan/audiorecorder/blob/1.0.0/Sources/AudioRecorderClient/AudioRecorderClient+LiveKey.swift#L5",
+              "symbol" : "AudioRecorderClient"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "audiorecorder",
+      "version" : "1.0.0"
+    },
+    {
+      "commit" : "997c7b6de74782ee478676b2bf9c2706438cb82c",
+      "notes" : "Sound-activated microphone recording (auto start/stop on levels).",
+      "package" : "https://github.com/fulldecent/fdsoundactivatedrecorder",
+      "packageName" : "FDSoundActivatedRecorder",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/FDSoundActivatedRecorder/FDSoundActivatedRecorder.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "note" : "starts recording when sound is detected",
+              "permalink" : "https://github.com/fulldecent/fdsoundactivatedrecorder/blob/4.0.0/Sources/FDSoundActivatedRecorder/FDSoundActivatedRecorder.swift#L38",
+              "symbol" : "FDSoundActivatedRecorder"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 16"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVFoundation-based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/FDSoundActivatedRecorder/FDSoundActivatedRecorder.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "note" : "starts recording when sound is detected",
+              "permalink" : "https://github.com/fulldecent/fdsoundactivatedrecorder/blob/4.0.0/Sources/FDSoundActivatedRecorder/FDSoundActivatedRecorder.swift#L38",
+              "symbol" : "FDSoundActivatedRecorder"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "macOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "fdsoundactivatedrecorder",
+      "version" : "4.0.0"
+    }
+  ]
+}

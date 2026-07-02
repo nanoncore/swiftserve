@@ -1,0 +1,164 @@
+{
+  "aliases" : [
+    "retry policy",
+    "exponential backoff"
+  ],
+  "id" : "network.retry",
+  "label" : "Request retry / backoff",
+  "packages" : [
+    {
+      "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
+      "notes" : "RetryPolicy + RequestInterceptor give configurable retry with exponential backoff.",
+      "package" : "https://github.com/alamofire/alamofire",
+      "packageName" : "Alamofire",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Features/RetryPolicy.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "note" : "exponential backoff with retryable status/error sets",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/RetryPolicy.swift#L29",
+              "symbol" : "RetryPolicy"
+            },
+            {
+              "file" : "Source/Features/RetryPolicy.swift",
+              "kind" : "symbol",
+              "line" : 380,
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/RetryPolicy.swift#L380",
+              "symbol" : "ConnectionLostRetryPolicy"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "Alamofire is URLSession-based; Linux is explicitly unsupported per the project — but no source fence proves it"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Source/Features/RetryPolicy.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "note" : "exponential backoff with retryable status/error sets",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/RetryPolicy.swift#L29",
+              "symbol" : "RetryPolicy"
+            },
+            {
+              "file" : "Source/Features/RetryPolicy.swift",
+              "kind" : "symbol",
+              "line" : 380,
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/RetryPolicy.swift#L380",
+              "symbol" : "ConnectionLostRetryPolicy"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Features/RetryPolicy.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "note" : "exponential backoff with retryable status/error sets",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/RetryPolicy.swift#L29",
+              "symbol" : "RetryPolicy"
+            },
+            {
+              "file" : "Source/Features/RetryPolicy.swift",
+              "kind" : "symbol",
+              "line" : 380,
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/RetryPolicy.swift#L380",
+              "symbol" : "ConnectionLostRetryPolicy"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.7999999999999999,
+          "evidence" : [
+            {
+              "file" : "Source/Features/RetryPolicy.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "note" : "exponential backoff with retryable status/error sets",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/RetryPolicy.swift#L29",
+              "symbol" : "RetryPolicy"
+            },
+            {
+              "file" : "Source/Features/RetryPolicy.swift",
+              "kind" : "symbol",
+              "line" : 380,
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/RetryPolicy.swift#L380",
+              "symbol" : "ConnectionLostRetryPolicy"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.7999999999999999,
+          "evidence" : [
+            {
+              "file" : "Source/Features/RetryPolicy.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "note" : "exponential backoff with retryable status/error sets",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/RetryPolicy.swift#L29",
+              "symbol" : "RetryPolicy"
+            },
+            {
+              "file" : "Source/Features/RetryPolicy.swift",
+              "kind" : "symbol",
+              "line" : 380,
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/RetryPolicy.swift#L380",
+              "symbol" : "ConnectionLostRetryPolicy"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares watchOS 4"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "alamofire",
+      "version" : "5.12.0"
+    }
+  ]
+}

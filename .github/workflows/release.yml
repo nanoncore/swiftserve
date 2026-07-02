@@ -1,0 +1,70 @@
+# Tagged release: build the swiftserve CLI for macOS (universal) and Linux,
+# checksum everything, and publish a GitHub release. This is what install.sh
+# and the Homebrew formula download from.
+#
+# Cut a release:  git tag v0.1.0 && git push origin v0.1.0
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  macos:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build universal binary
+        run: swift build -c release --product swiftserve --arch arm64 --arch x86_64
+      - name: Package
+        run: |
+          mkdir -p dist
+          cp .build/apple/Products/Release/swiftserve dist/
+          tar -czf "swiftserve-$GITHUB_REF_NAME-macos-universal.tar.gz" -C dist swiftserve
+      - uses: actions/upload-artifact@v4
+        with:
+          name: macos-universal
+          path: "*.tar.gz"
+
+  linux:
+    strategy:
+      matrix:
+        include:
+          - runner: ubuntu-latest
+            platform: linux-x86_64
+          - runner: ubuntu-24.04-arm
+            platform: linux-aarch64
+    runs-on: ${{ matrix.runner }}
+    container: swift:6.0
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build (static stdlib)
+        run: swift build -c release --product swiftserve --static-swift-stdlib
+      - name: Package
+        run: |
+          mkdir -p dist
+          cp .build/release/swiftserve dist/
+          tar -czf "swiftserve-$GITHUB_REF_NAME-${{ matrix.platform }}.tar.gz" -C dist swiftserve
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.platform }}
+          path: "*.tar.gz"
+
+  release:
+    needs: [macos, linux]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          merge-multiple: true
+      - name: Checksums
+        run: sha256sum *.tar.gz > checksums.txt
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" *.tar.gz checksums.txt \
+            --repo "$GITHUB_REPOSITORY" --title "$GITHUB_REF_NAME" --generate-notes

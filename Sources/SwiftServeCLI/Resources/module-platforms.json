@@ -1,0 +1,333 @@
+{
+  "_comment": "Which platforms each importable module exists on \u2014 decides canImport(...) conditions. Authoritative in BOTH directions: a listed module's missing platform means 'not importable there'. When unsure about a module, OMIT it entirely (unknown resolves as honestly indeterminate) rather than guessing. Audio/media-domain frameworks curated first. Corrections are a PR.",
+  "version": 1,
+  "modules": {
+    "UIKit": [
+      "iOS",
+      "tvOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "AppKit": [
+      "macOS"
+    ],
+    "WatchKit": [
+      "watchOS"
+    ],
+    "SwiftUI": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "Combine": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "Foundation": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst",
+      "linux"
+    ],
+    "FoundationNetworking": [
+      "linux"
+    ],
+    "FoundationXML": [
+      "linux"
+    ],
+    "Dispatch": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst",
+      "linux"
+    ],
+    "Glibc": [
+      "linux"
+    ],
+    "Musl": [
+      "linux"
+    ],
+    "Darwin": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "ObjectiveC": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "AVFoundation": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "AVFAudio": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "AVKit": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "CoreAudio": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "CoreAudioTypes": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "AudioToolbox": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "CoreMedia": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "CoreVideo": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "CoreImage": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "CoreGraphics": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "Metal": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "MetalKit": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "ScreenCaptureKit": [
+      "macOS"
+    ],
+    "ReplayKit": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "macCatalyst"
+    ],
+    "MediaPlayer": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "macCatalyst"
+    ],
+    "Speech": [
+      "iOS",
+      "macOS",
+      "macCatalyst"
+    ],
+    "SoundAnalysis": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "ShazamKit": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "MusicKit": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "CallKit": [
+      "iOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "PushKit": [
+      "iOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "CoreHaptics": [
+      "iOS",
+      "macCatalyst"
+    ],
+    "CoreML": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "Vision": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "CoreBluetooth": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "CoreLocation": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "CoreData": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "CloudKit": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "StoreKit": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "WebKit": [
+      "iOS",
+      "macOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "Network": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "CryptoKit": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "OSLog": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "os": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "watchOS",
+      "visionOS",
+      "macCatalyst"
+    ],
+    "SystemConfiguration": [
+      "iOS",
+      "macOS",
+      "tvOS",
+      "visionOS",
+      "macCatalyst"
+    ]
+  }
+}

@@ -1,0 +1,336 @@
+[
+  {
+    "capability" : {
+      "id" : "speech.stt",
+      "label" : "Speech-to-text"
+    },
+    "labeledAt" : "2026-07-02T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Speech recognition module for the Stanford Spezi health framework.",
+    "package" : {
+      "aliases" : [
+        "StanfordSpezi/SpeziSpeech"
+      ],
+      "canonicalURL" : "https://github.com/stanfordspezi/spezispeech",
+      "commit" : "6c51d4165d2cabb6102aa61233c480fb75c167f6",
+      "name" : "SpeziSpeech",
+      "surfaceDigest" : "fnv1a64:6167582d247802af",
+      "version" : "1.1.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SpeziSpeechRecognizer/SpeechRecognizer.swift",
+            "kind" : "symbol",
+            "line" : 75,
+            "note" : "SFSpeechRecognizer module",
+            "package" : null,
+            "symbol" : "SpeechRecognizer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 17",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "Speech/AVFAudio are Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SpeziSpeechRecognizer/SpeechRecognizer.swift",
+            "kind" : "symbol",
+            "line" : 75,
+            "note" : "SFSpeechRecognizer module",
+            "package" : null,
+            "symbol" : "SpeechRecognizer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SpeziSpeechRecognizer/SpeechRecognizer.swift",
+            "kind" : "symbol",
+            "line" : 75,
+            "note" : "SFSpeechRecognizer module",
+            "package" : null,
+            "symbol" : "SpeechRecognizer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 14",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "tvOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SpeziSpeechRecognizer/SpeechRecognizer.swift",
+            "kind" : "symbol",
+            "line" : 75,
+            "note" : "SFSpeechRecognizer module",
+            "package" : null,
+            "symbol" : "SpeechRecognizer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares visionOS 1",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "speech.tts",
+      "label" : "Text-to-speech"
+    },
+    "labeledAt" : "2026-07-02T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Speech synthesis module for the Stanford Spezi health framework.",
+    "package" : {
+      "aliases" : [
+        "StanfordSpezi/SpeziSpeech"
+      ],
+      "canonicalURL" : "https://github.com/stanfordspezi/spezispeech",
+      "commit" : "6c51d4165d2cabb6102aa61233c480fb75c167f6",
+      "name" : "SpeziSpeech",
+      "surfaceDigest" : "fnv1a64:6167582d247802af",
+      "version" : "1.1.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SpeziSpeechSynthesizer/SpeechSynthesizer.swift",
+            "kind" : "symbol",
+            "line" : 59,
+            "note" : "AVSpeechSynthesizer module",
+            "package" : null,
+            "symbol" : "SpeechSynthesizer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 17",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "Speech/AVFAudio are Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SpeziSpeechSynthesizer/SpeechSynthesizer.swift",
+            "kind" : "symbol",
+            "line" : 59,
+            "note" : "AVSpeechSynthesizer module",
+            "package" : null,
+            "symbol" : "SpeechSynthesizer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SpeziSpeechSynthesizer/SpeechSynthesizer.swift",
+            "kind" : "symbol",
+            "line" : 59,
+            "note" : "AVSpeechSynthesizer module",
+            "package" : null,
+            "symbol" : "SpeechSynthesizer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 14",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "tvOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SpeziSpeechSynthesizer/SpeechSynthesizer.swift",
+            "kind" : "symbol",
+            "line" : 59,
+            "note" : "AVSpeechSynthesizer module",
+            "package" : null,
+            "symbol" : "SpeechSynthesizer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares visionOS 1",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

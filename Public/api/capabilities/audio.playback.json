@@ -1,0 +1,517 @@
+{
+  "aliases" : [
+    "play audio",
+    "sound playback",
+    "audio player"
+  ],
+  "id" : "audio.playback",
+  "label" : "Audio playback",
+  "packages" : [
+    {
+      "commit" : "d93afd7a48885f9a92bbe7c0eb6b692afbafce66",
+      "notes" : "UI feedback sounds (scoped to system settings) — not a general-purpose player.",
+      "package" : "https://github.com/markbattistella/audiomanager",
+      "packageName" : "AudioManager",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioManager/AudioFeedbackPerformer.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "plays UI feedback sounds honoring user settings",
+              "permalink" : "https://github.com/markbattistella/audiomanager/blob/26.6.11/Sources/AudioManager/AudioFeedbackPerformer.swift#L22",
+              "symbol" : "AudioFeedbackPerformer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 14"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "Apple-frameworks based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioManager/AudioFeedbackPerformer.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "plays UI feedback sounds honoring user settings",
+              "permalink" : "https://github.com/markbattistella/audiomanager/blob/26.6.11/Sources/AudioManager/AudioFeedbackPerformer.swift#L22",
+              "symbol" : "AudioFeedbackPerformer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macCatalyst 14"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioManager/AudioFeedbackPerformer.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "plays UI feedback sounds honoring user settings",
+              "permalink" : "https://github.com/markbattistella/audiomanager/blob/26.6.11/Sources/AudioManager/AudioFeedbackPerformer.swift#L22",
+              "symbol" : "AudioFeedbackPerformer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 11"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioManager/AudioFeedbackPerformer.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "plays UI feedback sounds honoring user settings",
+              "permalink" : "https://github.com/markbattistella/audiomanager/blob/26.6.11/Sources/AudioManager/AudioFeedbackPerformer.swift#L22",
+              "symbol" : "AudioFeedbackPerformer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 14"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/AudioManager/AudioFeedbackPerformer.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "plays UI feedback sounds honoring user settings",
+              "permalink" : "https://github.com/markbattistella/audiomanager/blob/26.6.11/Sources/AudioManager/AudioFeedbackPerformer.swift#L22",
+              "symbol" : "AudioFeedbackPerformer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares visionOS 1"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "audiomanager",
+      "version" : "26.6.11"
+    },
+    {
+      "commit" : "72dbeaf4b4496b105bc731db05819dd16edc9449",
+      "notes" : "One-line sound playback over AVAudioPlayer.",
+      "package" : "https://github.com/adamcichy/swiftysound",
+      "packageName" : "SwiftySound",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Sound.swift",
+              "kind" : "symbol",
+              "line" : 62,
+              "permalink" : "https://github.com/adamcichy/swiftysound/blob/1.3.0/Sources/Sound.swift#L62",
+              "symbol" : "Sound"
+            },
+            {
+              "file" : "Sources/Sound.swift",
+              "kind" : "symbol",
+              "line" : 156,
+              "permalink" : "https://github.com/adamcichy/swiftysound/blob/1.3.0/Sources/Sound.swift#L156",
+              "symbol" : "Sound.play"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVFoundation-based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Sound.swift",
+              "kind" : "symbol",
+              "line" : 62,
+              "permalink" : "https://github.com/adamcichy/swiftysound/blob/1.3.0/Sources/Sound.swift#L62",
+              "symbol" : "Sound"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Sound.swift",
+              "kind" : "symbol",
+              "line" : 62,
+              "permalink" : "https://github.com/adamcichy/swiftysound/blob/1.3.0/Sources/Sound.swift#L62",
+              "symbol" : "Sound"
+            },
+            {
+              "file" : "Sources/Sound.swift",
+              "kind" : "symbol",
+              "line" : 156,
+              "permalink" : "https://github.com/adamcichy/swiftysound/blob/1.3.0/Sources/Sound.swift#L156",
+              "symbol" : "Sound.play"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Sound.swift",
+              "kind" : "symbol",
+              "line" : 62,
+              "permalink" : "https://github.com/adamcichy/swiftysound/blob/1.3.0/Sources/Sound.swift#L62",
+              "symbol" : "Sound"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "predates visionOS; no signal either way"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "README targets iOS/macOS/tvOS; no watchOS signal either way"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swiftysound",
+      "version" : "1.3.0"
+    },
+    {
+      "commit" : "e3f44c2d5766b0a7c3cdaacd4d61b5e1c8804794",
+      "notes" : "Play built-in system sounds by id/name (AudioServices).",
+      "package" : "https://github.com/p-x9/swift-system-sound",
+      "packageName" : "swift-system-sound",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SystemSound/SystemSound.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "note" : "system-sound playback shim",
+              "permalink" : "https://github.com/p-x9/swift-system-sound/blob/0.10.0/Sources/SystemSound/SystemSound.swift#L3",
+              "symbol" : "AudioServicesPlaySystemSound"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AudioToolbox is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/SystemSound/SystemSound.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "note" : "system-sound playback shim",
+              "permalink" : "https://github.com/p-x9/swift-system-sound/blob/0.10.0/Sources/SystemSound/SystemSound.swift#L3",
+              "symbol" : "AudioServicesPlaySystemSound"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SystemSound/SystemSound.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "note" : "system-sound playback shim",
+              "permalink" : "https://github.com/p-x9/swift-system-sound/blob/0.10.0/Sources/SystemSound/SystemSound.swift#L3",
+              "symbol" : "AudioServicesPlaySystemSound"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "empty manifest; AudioToolbox exists there, intent unstated"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "empty manifest"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "empty manifest"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swift-system-sound",
+      "version" : "0.10.0"
+    },
+    {
+      "commit" : "7b506bebabd68b542256c0e1e55519fab5f4c092",
+      "notes" : "AVPlayer wrapper with queue support (QueuedAudioPlayer).",
+      "package" : "https://github.com/doublesymmetry/swiftaudioex",
+      "packageName" : "SwiftAudioEx",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftAudioEx/AudioPlayer.swift",
+              "kind" : "symbol",
+              "line" : 13,
+              "permalink" : "https://github.com/doublesymmetry/swiftaudioex/blob/1.1.0/Sources/SwiftAudioEx/AudioPlayer.swift#L13",
+              "symbol" : "AudioPlayer"
+            },
+            {
+              "file" : "Sources/SwiftAudioEx/QueuedAudioPlayer.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "permalink" : "https://github.com/doublesymmetry/swiftaudioex/blob/1.1.0/Sources/SwiftAudioEx/QueuedAudioPlayer.swift#L14",
+              "symbol" : "QueuedAudioPlayer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVFoundation-based; no Linux support signals"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftAudioEx/AudioPlayer.swift",
+              "kind" : "symbol",
+              "line" : 13,
+              "permalink" : "https://github.com/doublesymmetry/swiftaudioex/blob/1.1.0/Sources/SwiftAudioEx/AudioPlayer.swift#L13",
+              "symbol" : "AudioPlayer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS only; AVPlayer exists elsewhere but the package states no intent"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS only; AVPlayer exists elsewhere but the package states no intent"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS only; AVPlayer exists elsewhere but the package states no intent"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS only; AVPlayer exists elsewhere but the package states no intent"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swiftaudioex",
+      "version" : "1.1.0"
+    },
+    {
+      "commit" : "5a74dde3089060bac35f0a16970d91fc8402e751",
+      "notes" : "A serious multi-format playback/decoding engine (FLAC, Ogg, MP3, DSD…). v1 extraction is Swift-only and this package is ObjC-first — verdicts wait for the ObjC extractor; manifest floors: macOS 11 / iOS 15 / tvOS 15.",
+      "package" : "https://github.com/sbooth/sfbaudioengine",
+      "packageName" : "SFBAudioEngine",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "the playback engine's primary surface is Objective-C (194 files unparsed in v1); Swift-side extraction found no anchorable player symbol — honestly unverified rather than guessed"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "the playback engine's primary surface is Objective-C (194 files unparsed in v1); Swift-side extraction found no anchorable player symbol — honestly unverified rather than guessed"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "the playback engine's primary surface is Objective-C (194 files unparsed in v1); Swift-side extraction found no anchorable player symbol — honestly unverified rather than guessed"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "the playback engine's primary surface is Objective-C (194 files unparsed in v1); Swift-side extraction found no anchorable player symbol — honestly unverified rather than guessed"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "the playback engine's primary surface is Objective-C (194 files unparsed in v1); Swift-side extraction found no anchorable player symbol — honestly unverified rather than guessed"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "the playback engine's primary surface is Objective-C (194 files unparsed in v1); Swift-side extraction found no anchorable player symbol — honestly unverified rather than guessed"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "the playback engine's primary surface is Objective-C (194 files unparsed in v1); Swift-side extraction found no anchorable player symbol — honestly unverified rather than guessed"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "sfbaudioengine",
+      "version" : "0.13.0"
+    }
+  ]
+}

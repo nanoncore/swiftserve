@@ -1,0 +1,212 @@
+{
+  "aliases" : [
+    "camera",
+    "video recording"
+  ],
+  "id" : "video.capture",
+  "label" : "Camera capture",
+  "packages" : [
+    {
+      "commit" : "22f7c00083b7e16c7e15ace1adcdb90fb5ffe006",
+      "notes" : "Camera capture, movie recording, and video processing utilities. The Camera class is explicitly marked unavailable on tvOS — no cameras on Apple TV.",
+      "package" : "https://github.com/metalpetal/videoio",
+      "packageName" : "VideoIO",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/VideoIO/Camera.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "AVCaptureSession wrapper",
+              "permalink" : "https://github.com/metalpetal/videoio/blob/2.3.1/Sources/VideoIO/Camera.swift#L11",
+              "symbol" : "Camera"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AVFoundation is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/VideoIO/Camera.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "AVCaptureSession wrapper",
+              "permalink" : "https://github.com/metalpetal/videoio/blob/2.3.1/Sources/VideoIO/Camera.swift#L11",
+              "symbol" : "Camera"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/VideoIO/Camera.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "AVCaptureSession wrapper",
+              "permalink" : "https://github.com/metalpetal/videoio/blob/2.3.1/Sources/VideoIO/Camera.swift#L11",
+              "symbol" : "Camera"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/VideoIO/Camera.swift",
+              "kind" : "availability",
+              "line" : 11,
+              "note" : "AVCaptureSession wrapper",
+              "permalink" : "https://github.com/metalpetal/videoio/blob/2.3.1/Sources/VideoIO/Camera.swift#L11",
+              "symbol" : "Camera"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors; no camera API there anyway — but nothing in source proves it"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "videoio",
+      "version" : "2.3.1"
+    },
+    {
+      "commit" : "ce2eda6300337d1478a78fc033bce8dd9bf4bb2c",
+      "notes" : "SwiftUI media picker with live camera capture and album browsing.",
+      "package" : "https://github.com/exyte/mediapicker",
+      "packageName" : "ExyteMediaPicker",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/ExyteMediaPicker/Screens/Camera/CameraSelectionContainer.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "live camera capture UI",
+              "permalink" : "https://github.com/exyte/mediapicker/blob/3.3.2/Sources/ExyteMediaPicker/Screens/Camera/CameraSelectionContainer.swift#L10",
+              "symbol" : "CameraSelectionView"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 17"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "SwiftUI/AVFoundation-based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/ExyteMediaPicker/Screens/Camera/CameraSelectionContainer.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "live camera capture UI",
+              "permalink" : "https://github.com/exyte/mediapicker/blob/3.3.2/Sources/ExyteMediaPicker/Screens/Camera/CameraSelectionContainer.swift#L10",
+              "symbol" : "CameraSelectionView"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "macOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "mediapicker",
+      "version" : "3.3.2"
+    }
+  ]
+}

@@ -1,0 +1,544 @@
+{
+  "aliases" : [
+    "transcription",
+    "speech recognition",
+    "whisper",
+    "asr"
+  ],
+  "id" : "speech.stt",
+  "label" : "Speech-to-text",
+  "packages" : [
+    {
+      "commit" : "25c62997041c134b03ca82731ce2f6fd2cae1eb9",
+      "notes" : "On-device Whisper via CoreML. Streaming transcription via AudioStreamTranscriber.",
+      "package" : "https://github.com/argmaxinc/whisperkit",
+      "packageName" : "WhisperKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/WhisperKit/Core/WhisperKit.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "permalink" : "https://github.com/argmaxinc/whisperkit/blob/v1.0.0/Sources/WhisperKit/Core/WhisperKit.swift#L11",
+              "symbol" : "WhisperKit"
+            },
+            {
+              "file" : "Sources/WhisperKit/Core/WhisperKit.swift",
+              "kind" : "symbol",
+              "line" : 587,
+              "note" : "async transcription entry point",
+              "permalink" : "https://github.com/argmaxinc/whisperkit/blob/v1.0.0/Sources/WhisperKit/Core/WhisperKit.swift#L587",
+              "symbol" : "WhisperKit.transcribe"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "CoreML-based on-device inference; no Linux artifacts observed, nothing in source proves absence"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/WhisperKit/Core/WhisperKit.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "permalink" : "https://github.com/argmaxinc/whisperkit/blob/v1.0.0/Sources/WhisperKit/Core/WhisperKit.swift#L11",
+              "symbol" : "WhisperKit"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/WhisperKit/Core/WhisperKit.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "permalink" : "https://github.com/argmaxinc/whisperkit/blob/v1.0.0/Sources/WhisperKit/Core/WhisperKit.swift#L11",
+              "symbol" : "WhisperKit"
+            },
+            {
+              "file" : "Sources/WhisperKit/Core/WhisperKit.swift",
+              "kind" : "symbol",
+              "line" : 587,
+              "note" : "async transcription entry point",
+              "permalink" : "https://github.com/argmaxinc/whisperkit/blob/v1.0.0/Sources/WhisperKit/Core/WhisperKit.swift#L587",
+              "symbol" : "WhisperKit.transcribe"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from the manifest platform floors; no source fence proves absence"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/WhisperKit/Core/WhisperKit.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "permalink" : "https://github.com/argmaxinc/whisperkit/blob/v1.0.0/Sources/WhisperKit/Core/WhisperKit.swift#L11",
+              "symbol" : "WhisperKit"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares visionOS 1"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/WhisperKit/Core/WhisperKit.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "permalink" : "https://github.com/argmaxinc/whisperkit/blob/v1.0.0/Sources/WhisperKit/Core/WhisperKit.swift#L11",
+              "symbol" : "WhisperKit"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares watchOS 10"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "whisperkit",
+      "version" : "v1.0.0"
+    },
+    {
+      "commit" : "6c51d4165d2cabb6102aa61233c480fb75c167f6",
+      "notes" : "Speech recognition module for the Stanford Spezi health framework.",
+      "package" : "https://github.com/stanfordspezi/spezispeech",
+      "packageName" : "SpeziSpeech",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SpeziSpeechRecognizer/SpeechRecognizer.swift",
+              "kind" : "symbol",
+              "line" : 75,
+              "note" : "SFSpeechRecognizer module",
+              "permalink" : "https://github.com/stanfordspezi/spezispeech/blob/1.1.2/Sources/SpeziSpeechRecognizer/SpeechRecognizer.swift#L75",
+              "symbol" : "SpeechRecognizer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 17"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "Speech/AVFAudio are Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SpeziSpeechRecognizer/SpeechRecognizer.swift",
+              "kind" : "symbol",
+              "line" : 75,
+              "note" : "SFSpeechRecognizer module",
+              "permalink" : "https://github.com/stanfordspezi/spezispeech/blob/1.1.2/Sources/SpeziSpeechRecognizer/SpeechRecognizer.swift#L75",
+              "symbol" : "SpeechRecognizer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SpeziSpeechRecognizer/SpeechRecognizer.swift",
+              "kind" : "symbol",
+              "line" : 75,
+              "note" : "SFSpeechRecognizer module",
+              "permalink" : "https://github.com/stanfordspezi/spezispeech/blob/1.1.2/Sources/SpeziSpeechRecognizer/SpeechRecognizer.swift#L75",
+              "symbol" : "SpeechRecognizer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 14"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SpeziSpeechRecognizer/SpeechRecognizer.swift",
+              "kind" : "symbol",
+              "line" : 75,
+              "note" : "SFSpeechRecognizer module",
+              "permalink" : "https://github.com/stanfordspezi/spezispeech/blob/1.1.2/Sources/SpeziSpeechRecognizer/SpeechRecognizer.swift#L75",
+              "symbol" : "SpeechRecognizer"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares visionOS 1"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "spezispeech",
+      "version" : "1.1.2"
+    },
+    {
+      "commit" : "b9d43724cbdb5a980e441fd54180964e94d470f7",
+      "notes" : "On-device ASR (Parakeet), VAD, and speaker diarization over CoreML.",
+      "package" : "https://github.com/fluidinference/fluidaudio",
+      "packageName" : "FluidAudio",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/FluidAudio/ASR/Parakeet/SlidingWindow/TDT/AsrManager.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "Parakeet ASR manager (CoreML)",
+              "permalink" : "https://github.com/fluidinference/fluidaudio/blob/v0.15.4/Sources/FluidAudio/ASR/Parakeet/SlidingWindow/TDT/AsrManager.swift#L6",
+              "symbol" : "AsrManager"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 17"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "CoreML runtime is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/FluidAudio/ASR/Parakeet/SlidingWindow/TDT/AsrManager.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "Parakeet ASR manager (CoreML)",
+              "permalink" : "https://github.com/fluidinference/fluidaudio/blob/v0.15.4/Sources/FluidAudio/ASR/Parakeet/SlidingWindow/TDT/AsrManager.swift#L6",
+              "symbol" : "AsrManager"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/FluidAudio/ASR/Parakeet/SlidingWindow/TDT/AsrManager.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "Parakeet ASR manager (CoreML)",
+              "permalink" : "https://github.com/fluidinference/fluidaudio/blob/v0.15.4/Sources/FluidAudio/ASR/Parakeet/SlidingWindow/TDT/AsrManager.swift#L6",
+              "symbol" : "AsrManager"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 14"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "fluidaudio",
+      "version" : "v0.15.4"
+    },
+    {
+      "commit" : "6e41f289f5ccc1751ef5674972d46b48b326c4c6",
+      "notes" : "SwiftUI-first speech recognition over SFSpeechRecognizer.",
+      "package" : "https://github.com/cay-zhang/swiftspeech",
+      "packageName" : "SwiftSpeech",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftSpeech/SwiftSpeech.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "note" : "SwiftUI wrapper over SFSpeechRecognizer",
+              "permalink" : "https://github.com/cay-zhang/swiftspeech/blob/v0.9.3/Sources/SwiftSpeech/SwiftSpeech.swift#L3",
+              "symbol" : "SwiftSpeech"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "Speech framework is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftSpeech/SwiftSpeech.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/cay-zhang/swiftspeech/blob/v0.9.3/Sources/SwiftSpeech/SwiftSpeech.swift#L3",
+              "symbol" : "SwiftSpeech"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftSpeech/SwiftSpeech.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/cay-zhang/swiftspeech/blob/v0.9.3/Sources/SwiftSpeech/SwiftSpeech.swift#L3",
+              "symbol" : "SwiftSpeech"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors; SFSpeechRecognizer unavailable there"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors (package predates it)"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swiftspeech",
+      "version" : "v0.9.3"
+    },
+    {
+      "commit" : "a192004db08de7c6eaa169eede77f1625e7d23fb",
+      "notes" : "whisper.cpp bindings (6 ObjC/C files unparsed — the C core is a v1 blind spot).",
+      "package" : "https://github.com/exphat/swiftwhisper",
+      "packageName" : "SwiftWhisper",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftWhisper/Whisper.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "note" : "whisper.cpp transcription",
+              "permalink" : "https://github.com/exphat/swiftwhisper/blob/1.2.0/Sources/SwiftWhisper/Whisper.swift#L4",
+              "symbol" : "Whisper"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "whisper.cpp itself builds on Linux; this wrapper unverified"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftWhisper/Whisper.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "note" : "whisper.cpp transcription",
+              "permalink" : "https://github.com/exphat/swiftwhisper/blob/1.2.0/Sources/SwiftWhisper/Whisper.swift#L4",
+              "symbol" : "Whisper"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftWhisper/Whisper.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "note" : "whisper.cpp transcription",
+              "permalink" : "https://github.com/exphat/swiftwhisper/blob/1.2.0/Sources/SwiftWhisper/Whisper.swift#L4",
+              "symbol" : "Whisper"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "empty manifest; whisper.cpp may build but intent unstated"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "empty manifest"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "memory constraints make whisper.cpp doubtful; nothing proven"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swiftwhisper",
+      "version" : "1.2.0"
+    }
+  ]
+}

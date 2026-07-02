@@ -1,0 +1,130 @@
+{
+  "aliases" : [
+    "ssl pinning",
+    "server trust",
+    "tls pinning"
+  ],
+  "id" : "network.certificate-pinning",
+  "label" : "Certificate pinning",
+  "packages" : [
+    {
+      "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
+      "notes" : "ServerTrustManager evaluates per-host trust: pinned certificates, public keys, revocation.",
+      "package" : "https://github.com/alamofire/alamofire",
+      "packageName" : "Alamofire",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Features/ServerTrustEvaluation.swift",
+              "kind" : "symbol",
+              "line" : 31,
+              "note" : "per-host trust evaluators incl. pinned certs/keys",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/ServerTrustEvaluation.swift#L31",
+              "symbol" : "ServerTrustManager"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "Alamofire is URLSession-based; Linux is explicitly unsupported per the project — but no source fence proves it"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Source/Features/ServerTrustEvaluation.swift",
+              "kind" : "symbol",
+              "line" : 31,
+              "note" : "per-host trust evaluators incl. pinned certs/keys",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/ServerTrustEvaluation.swift#L31",
+              "symbol" : "ServerTrustManager"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Features/ServerTrustEvaluation.swift",
+              "kind" : "symbol",
+              "line" : 31,
+              "note" : "per-host trust evaluators incl. pinned certs/keys",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/ServerTrustEvaluation.swift#L31",
+              "symbol" : "ServerTrustManager"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.7999999999999999,
+          "evidence" : [
+            {
+              "file" : "Source/Features/ServerTrustEvaluation.swift",
+              "kind" : "symbol",
+              "line" : 31,
+              "note" : "per-host trust evaluators incl. pinned certs/keys",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/ServerTrustEvaluation.swift#L31",
+              "symbol" : "ServerTrustManager"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.7999999999999999,
+          "evidence" : [
+            {
+              "file" : "Source/Features/ServerTrustEvaluation.swift",
+              "kind" : "symbol",
+              "line" : 31,
+              "note" : "per-host trust evaluators incl. pinned certs/keys",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/ServerTrustEvaluation.swift#L31",
+              "symbol" : "ServerTrustManager"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares watchOS 4"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "alamofire",
+      "version" : "5.12.0"
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.device-selection",
+      "label" : "Audio device selection"
+    },
+    "labeledAt" : "2026-07-02T14:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Swift model of the CoreAudio hardware abstraction layer: enumerate devices, streams, controls.",
+    "package" : {
+      "aliases" : [
+        "sbooth/CAAudioHardware"
+      ],
+      "canonicalURL" : "https://github.com/sbooth/caaudiohardware",
+      "commit" : "d927963dcfbb819da6ed6f17b83f17ffbc689280",
+      "name" : "CAAudioHardware",
+      "surfaceDigest" : "fnv1a64:e66c6029a2d37ddf",
+      "version" : "0.7.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "CoreAudio HAL is a macOS API family; manifest declares macOS only — no source fence though",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "CoreAudio is Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/CAAudioHardware/AudioDevice.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "HAL device object",
+            "package" : null,
+            "symbol" : "AudioDevice"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/CAAudioHardware/AudioSystem.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : "system-object entry point",
+            "package" : null,
+            "symbol" : "AudioSystem"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 10.15 only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

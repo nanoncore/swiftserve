@@ -1,0 +1,219 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.synthesis",
+      "label" : "Audio synthesis / DSP"
+    },
+    "labeledAt" : "2026-07-02T17:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Stanford STK physical models (191 C++ files unparsed — heavy blind spot, confidence modest).",
+    "package" : {
+      "aliases" : [
+        "audiokit/stkaudiokit"
+      ],
+      "canonicalURL" : "https://github.com/audiokit/stkaudiokit",
+      "commit" : "e6af9e24eb599d4ff34d5776b0801cf0068142bc",
+      "name" : "STKAudioKit",
+      "surfaceDigest" : "fnv1a64:ffe1dc6d3dbaa08c",
+      "version" : "5.5.4"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : "physical-model instrument",
+            "package" : null,
+            "symbol" : "Clarinet"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+            "kind" : "symbol",
+            "line" : 40,
+            "note" : "physical-model instrument",
+            "package" : null,
+            "symbol" : "RhodesPianoKey"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "Apple-frameworks based",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : "physical-model instrument",
+            "package" : null,
+            "symbol" : "Clarinet"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+            "kind" : "symbol",
+            "line" : 40,
+            "note" : "physical-model instrument",
+            "package" : null,
+            "symbol" : "RhodesPianoKey"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macCatalyst",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : "physical-model instrument",
+            "package" : null,
+            "symbol" : "Clarinet"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+            "kind" : "symbol",
+            "line" : 40,
+            "note" : "physical-model instrument",
+            "package" : null,
+            "symbol" : "RhodesPianoKey"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : "physical-model instrument",
+            "package" : null,
+            "symbol" : "Clarinet"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+            "kind" : "symbol",
+            "line" : 40,
+            "note" : "physical-model instrument",
+            "package" : null,
+            "symbol" : "RhodesPianoKey"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

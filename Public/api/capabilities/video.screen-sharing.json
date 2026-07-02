@@ -1,0 +1,220 @@
+{
+  "aliases" : [
+    "screen capture",
+    "screen broadcast",
+    "replaykit"
+  ],
+  "id" : "video.screen-sharing",
+  "label" : "Screen sharing",
+  "packages" : [
+    {
+      "commit" : "7f3af1488411a9787e1e94ddd66b0bed2057bed3",
+      "notes" : "Screen sharing on iOS (in-app + ReplayKit broadcast extension) and macOS (display capture). The broadcast capturer is explicitly fenced os(iOS).",
+      "package" : "https://github.com/livekit/client-sdk-swift",
+      "packageName" : "LiveKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/LiveKit/Participant/LocalParticipant.swift",
+              "kind" : "symbol",
+              "line" : 353,
+              "note" : "generic screen-share toggle",
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Participant/LocalParticipant.swift#L353",
+              "symbol" : "LocalParticipant.setScreenShare"
+            },
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/LiveKit/Broadcast/BroadcastScreenCapturer.swift",
+              "kind" : "symbol",
+              "line" : 99,
+              "note" : "ReplayKit broadcast-extension capture — fenced os(iOS)",
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Broadcast/BroadcastScreenCapturer.swift#L99",
+              "symbol" : "LocalVideoTrack.createBroadcastScreenCapturerTrack"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/LiveKit/Participant/LocalParticipant.swift",
+              "kind" : "symbol",
+              "line" : 353,
+              "note" : "generic screen-share toggle",
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Participant/LocalParticipant.swift#L353",
+              "symbol" : "LocalParticipant.setScreenShare"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/LiveKit/Participant/LocalParticipant.swift",
+              "kind" : "symbol",
+              "line" : 353,
+              "note" : "generic screen-share toggle",
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Participant/LocalParticipant.swift#L353",
+              "symbol" : "LocalParticipant.setScreenShare"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "setScreenShare compiles for tvOS 17; capturing a TV app's screen is undocumented territory"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "symbol present; visionOS capture semantics unverified"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+        "https://github.com/livekit/webrtc-xcframework"
+      ],
+      "slug" : "client-sdk-swift",
+      "version" : "2.15.1"
+    },
+    {
+      "commit" : "eab7c4eb73b9f242af6a1991cbb21413ba3cc6a0",
+      "notes" : "In-call screen sharing (in-app and broadcast-extension modes).",
+      "package" : "https://github.com/getstream/stream-video-swift",
+      "packageName" : "StreamVideo",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/StreamVideo/Call.swift",
+              "kind" : "symbol",
+              "line" : 596,
+              "permalink" : "https://github.com/getstream/stream-video-swift/blob/1.48.0/Sources/StreamVideo/Call.swift#L596",
+              "symbol" : "Call.startScreensharing"
+            },
+            {
+              "file" : "Sources/StreamVideo/Call.swift",
+              "kind" : "symbol",
+              "line" : 607,
+              "permalink" : "https://github.com/getstream/stream-video-swift/blob/1.48.0/Sources/StreamVideo/Call.swift#L607",
+              "symbol" : "Call.stopScreensharing"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 13 only"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "WebRTC binary is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "compiles as iOS; Stream documents iPad/iPhone targets — intent for Catalyst unstated"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "macOS absent from manifest floors (iOS-only manifest)"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors (iOS-only manifest)"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors (iOS-only manifest)"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors (iOS-only manifest)"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+        "https://github.com/getstream/stream-video-swift-webrtc"
+      ],
+      "slug" : "stream-video-swift",
+      "version" : "1.48.0"
+    }
+  ]
+}

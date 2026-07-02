@@ -1,0 +1,232 @@
+{
+  "aliases" : [
+    "video chat",
+    "video conference"
+  ],
+  "id" : "video.calling",
+  "label" : "Video calling",
+  "packages" : [
+    {
+      "commit" : "7f3af1488411a9787e1e94ddd66b0bed2057bed3",
+      "notes" : "Rooms with camera/mic tracks over WebRTC.",
+      "package" : "https://github.com/livekit/client-sdk-swift",
+      "packageName" : "LiveKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/LiveKit/Core/Room.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "note" : "the realtime session object",
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Core/Room.swift#L26",
+              "symbol" : "Room"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "declared in manifest"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "prebuilt WebRTC xcframework is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/LiveKit/Core/Room.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "note" : "the realtime session object",
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Core/Room.swift#L26",
+              "symbol" : "Room"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "declared in manifest"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/LiveKit/Core/Room.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "note" : "the realtime session object",
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Core/Room.swift#L26",
+              "symbol" : "Room"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "declared in manifest"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/LiveKit/Core/Room.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "note" : "the realtime session object",
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Core/Room.swift#L26",
+              "symbol" : "Room"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "declared in manifest"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/LiveKit/Core/Room.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "note" : "the realtime session object",
+              "permalink" : "https://github.com/livekit/client-sdk-swift/blob/2.15.1/Sources/LiveKit/Core/Room.swift#L26",
+              "symbol" : "Room"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "declared in manifest"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+        "https://github.com/livekit/webrtc-xcframework"
+      ],
+      "slug" : "client-sdk-swift",
+      "version" : "2.15.1"
+    },
+    {
+      "commit" : "eab7c4eb73b9f242af6a1991cbb21413ba3cc6a0",
+      "notes" : "Stream's video-calling SDK over a bundled WebRTC binary.",
+      "package" : "https://github.com/getstream/stream-video-swift",
+      "packageName" : "StreamVideo",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/StreamVideo/Call.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "call object: join, publish, tracks",
+              "permalink" : "https://github.com/getstream/stream-video-swift/blob/1.48.0/Sources/StreamVideo/Call.swift#L11",
+              "symbol" : "Call"
+            },
+            {
+              "file" : "Sources/StreamVideo/CallKit/CallKitAdapter.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "CallKit integration",
+              "permalink" : "https://github.com/getstream/stream-video-swift/blob/1.48.0/Sources/StreamVideo/CallKit/CallKitAdapter.swift#L10",
+              "symbol" : "CallKitAdapter"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 13 only"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "WebRTC binary is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "compiles as iOS; Stream documents iPad/iPhone targets — intent for Catalyst unstated"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "macOS absent from manifest floors (iOS-only manifest)"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors (iOS-only manifest)"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors (iOS-only manifest)"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors (iOS-only manifest)"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+        "https://github.com/getstream/stream-video-swift-webrtc"
+      ],
+      "slug" : "stream-video-swift",
+      "version" : "1.48.0"
+    }
+  ]
+}

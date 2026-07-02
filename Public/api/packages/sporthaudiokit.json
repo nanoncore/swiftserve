@@ -1,0 +1,219 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.synthesis",
+      "label" : "Audio synthesis / DSP"
+    },
+    "labeledAt" : "2026-07-02T17:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Operation-based DSP (Sporth language) as AudioKit nodes.",
+    "package" : {
+      "aliases" : [
+        "audiokit/sporthaudiokit"
+      ],
+      "canonicalURL" : "https://github.com/audiokit/sporthaudiokit",
+      "commit" : "638c95036430ce23ba2810101de319ed31f481bb",
+      "name" : "SporthAudioKit",
+      "surfaceDigest" : "fnv1a64:13fdfe051305be58",
+      "version" : "5.5.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SporthAudioKit/OperationGenerator.swift",
+            "kind" : "symbol",
+            "line" : 9,
+            "note" : "Sporth operation → generator node",
+            "package" : null,
+            "symbol" : "OperationGenerator"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SporthAudioKit/OperationEffect.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "Sporth operation → effect node",
+            "package" : null,
+            "symbol" : "OperationEffect"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "Apple-frameworks based",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SporthAudioKit/OperationGenerator.swift",
+            "kind" : "symbol",
+            "line" : 9,
+            "note" : "Sporth operation → generator node",
+            "package" : null,
+            "symbol" : "OperationGenerator"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SporthAudioKit/OperationEffect.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "Sporth operation → effect node",
+            "package" : null,
+            "symbol" : "OperationEffect"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macCatalyst",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SporthAudioKit/OperationGenerator.swift",
+            "kind" : "symbol",
+            "line" : 9,
+            "note" : "Sporth operation → generator node",
+            "package" : null,
+            "symbol" : "OperationGenerator"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SporthAudioKit/OperationEffect.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "Sporth operation → effect node",
+            "package" : null,
+            "symbol" : "OperationEffect"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SporthAudioKit/OperationGenerator.swift",
+            "kind" : "symbol",
+            "line" : 9,
+            "note" : "Sporth operation → generator node",
+            "package" : null,
+            "symbol" : "OperationGenerator"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SporthAudioKit/OperationEffect.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "Sporth operation → effect node",
+            "package" : null,
+            "symbol" : "OperationEffect"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

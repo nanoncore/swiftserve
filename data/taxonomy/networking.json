@@ -1,0 +1,93 @@
+{
+  "_comment": "Networking domain. Records may only claim ids that exist here (V01).",
+  "taxonomyVersion": 1,
+  "domain": "networking",
+  "capabilities": [
+    {
+      "id": "network.background-transfer",
+      "label": "Background transfers",
+      "aliases": [
+        "background download",
+        "background upload"
+      ]
+    },
+    {
+      "id": "network.certificate-pinning",
+      "label": "Certificate pinning",
+      "aliases": [
+        "ssl pinning",
+        "server trust",
+        "tls pinning"
+      ]
+    },
+    {
+      "id": "network.http-client",
+      "label": "HTTP client",
+      "aliases": [
+        "http requests",
+        "rest client",
+        "networking"
+      ]
+    },
+    {
+      "id": "network.logging",
+      "label": "Network logging / inspection",
+      "aliases": [
+        "network debugging",
+        "request logging",
+        "network inspector"
+      ]
+    },
+    {
+      "id": "network.multipart-upload",
+      "label": "Multipart upload",
+      "aliases": [
+        "multipart form data",
+        "file upload"
+      ]
+    },
+    {
+      "id": "network.reachability",
+      "label": "Network reachability",
+      "aliases": [
+        "connectivity monitoring",
+        "network status",
+        "offline detection"
+      ]
+    },
+    {
+      "id": "network.request-mocking",
+      "label": "Request stubbing / mocking",
+      "aliases": [
+        "network mocking",
+        "stub requests"
+      ]
+    },
+    {
+      "id": "network.retry",
+      "label": "Request retry / backoff",
+      "aliases": [
+        "retry policy",
+        "exponential backoff"
+      ]
+    },
+    {
+      "id": "network.server-sent-events",
+      "label": "Server-sent events",
+      "aliases": [
+        "sse",
+        "eventsource",
+        "event stream"
+      ]
+    },
+    {
+      "id": "network.websockets",
+      "label": "WebSockets",
+      "aliases": [
+        "websocket",
+        "ws",
+        "socket"
+      ]
+    }
+  ]
+}

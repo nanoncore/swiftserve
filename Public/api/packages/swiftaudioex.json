@@ -1,0 +1,453 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.background-playback",
+      "label" : "Background audio playback"
+    },
+    "labeledAt" : "2026-07-02T17:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Provides the background-playback machinery (now-playing info + remote commands + session handling). The APP still enables the ‘audio’ background mode in Info.plist — no package can do that part.",
+    "package" : {
+      "aliases" : [
+        "DoubleSymmetry/SwiftAudioEx"
+      ],
+      "canonicalURL" : "https://github.com/doublesymmetry/swiftaudioex",
+      "commit" : "7b506bebabd68b542256c0e1e55519fab5f4c092",
+      "name" : "SwiftAudioEx",
+      "surfaceDigest" : "fnv1a64:ff73cf6c59017765",
+      "version" : "1.1.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftAudioEx/AudioPlayer.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : "lock-screen now-playing",
+            "package" : null,
+            "symbol" : "AudioPlayer.nowPlayingInfoController"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftAudioEx/AudioPlayer.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : "remote commands (play/pause/skip from lock screen)",
+            "package" : null,
+            "symbol" : "AudioPlayer.remoteCommandController"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 11",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "AVFoundation-based",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftAudioEx/AudioPlayer.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : "lock-screen now-playing",
+            "package" : null,
+            "symbol" : "AudioPlayer.nowPlayingInfoController"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "tvOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "audio.playback",
+      "label" : "Audio playback"
+    },
+    "labeledAt" : "2026-07-02T12:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "AVPlayer wrapper with queue support (QueuedAudioPlayer).",
+    "package" : {
+      "aliases" : [
+        "DoubleSymmetry/SwiftAudioEx"
+      ],
+      "canonicalURL" : "https://github.com/doublesymmetry/swiftaudioex",
+      "commit" : "7b506bebabd68b542256c0e1e55519fab5f4c092",
+      "name" : "SwiftAudioEx",
+      "surfaceDigest" : "fnv1a64:ff73cf6c59017765",
+      "version" : "1.1.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftAudioEx/AudioPlayer.swift",
+            "kind" : "symbol",
+            "line" : 13,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AudioPlayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftAudioEx/QueuedAudioPlayer.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueuedAudioPlayer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "AVFoundation-based; no Linux support signals",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftAudioEx/AudioPlayer.swift",
+            "kind" : "symbol",
+            "line" : 13,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AudioPlayer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS only; AVPlayer exists elsewhere but the package states no intent",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "tvOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS only; AVPlayer exists elsewhere but the package states no intent",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS only; AVPlayer exists elsewhere but the package states no intent",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS only; AVPlayer exists elsewhere but the package states no intent",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "media.now-playing",
+      "label" : "Now-playing / remote controls"
+    },
+    "labeledAt" : "2026-07-02T12:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Lock-screen/control-center integration built in (MPNowPlayingInfoCenter + MPRemoteCommandCenter).",
+    "package" : {
+      "aliases" : [
+        "DoubleSymmetry/SwiftAudioEx"
+      ],
+      "canonicalURL" : "https://github.com/doublesymmetry/swiftaudioex",
+      "commit" : "7b506bebabd68b542256c0e1e55519fab5f4c092",
+      "name" : "SwiftAudioEx",
+      "surfaceDigest" : "fnv1a64:ff73cf6c59017765",
+      "version" : "1.1.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftAudioEx/AudioPlayer.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AudioPlayer.nowPlayingInfoController"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftAudioEx/AudioPlayer.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AudioPlayer.remoteCommandController"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "MediaPlayer framework is Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftAudioEx/AudioPlayer.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AudioPlayer.nowPlayingInfoController"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS only; AVPlayer exists elsewhere but the package states no intent",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "tvOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS only; AVPlayer exists elsewhere but the package states no intent",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS only; AVPlayer exists elsewhere but the package states no intent",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS only; AVPlayer exists elsewhere but the package states no intent",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

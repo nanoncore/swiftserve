@@ -1,0 +1,139 @@
+[
+  {
+    "capability" : {
+      "id" : "midi.file",
+      "label" : "MIDI file read/write"
+    },
+    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Read/write SMF via AudioToolbox's MusicSequence.",
+    "package" : {
+      "aliases" : [
+        "matsune/MidiParser"
+      ],
+      "canonicalURL" : "https://github.com/matsune/midiparser",
+      "commit" : "a8b0a071781a4f99837b2b621f651b1a1b9d4d8e",
+      "name" : "MidiParser",
+      "surfaceDigest" : "fnv1a64:684dd8ee7d1f2fb0",
+      "version" : "0.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/MidiData/MidiData.swift",
+            "kind" : "symbol",
+            "line" : 12,
+            "note" : "read/write standard MIDI files",
+            "package" : null,
+            "symbol" : "MidiData"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "AudioToolbox MusicSequence-based",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/MidiData/MidiData.swift",
+            "kind" : "symbol",
+            "line" : 12,
+            "note" : "read/write standard MIDI files",
+            "package" : null,
+            "symbol" : "MidiData"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/MidiData/MidiData.swift",
+            "kind" : "symbol",
+            "line" : 12,
+            "note" : "read/write standard MIDI files",
+            "package" : null,
+            "symbol" : "MidiData"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "empty manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "empty manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "empty manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

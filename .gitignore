@@ -1,0 +1,12 @@
+.build/
+.swiftpm/
+*.xcodeproj
+.DS_Store
+
+# verification artifacts
+server.log
+.playwright-mcp/
+*.png
+!assets/**/*.png
+!Public/**/*.png
+.claude/settings.local.json

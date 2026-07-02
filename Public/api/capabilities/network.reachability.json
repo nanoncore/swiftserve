@@ -1,0 +1,137 @@
+{
+  "aliases" : [
+    "connectivity monitoring",
+    "network status",
+    "offline detection"
+  ],
+  "id" : "network.reachability",
+  "label" : "Network reachability",
+  "packages" : [
+    {
+      "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
+      "notes" : "The classic gap: NetworkReachabilityManager needs SystemConfiguration, which watchOS (and Linux) don't have — provably fenced, not just missing.",
+      "package" : "https://github.com/alamofire/alamofire",
+      "packageName" : "Alamofire",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "condition" : "canImport(SystemConfiguration)",
+              "file" : "Source/Features/NetworkReachabilityManager.swift",
+              "kind" : "symbol",
+              "line" : 36,
+              "note" : "SCNetworkReachability wrapper",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/NetworkReachabilityManager.swift#L36",
+              "symbol" : "NetworkReachabilityManager"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "condition" : "canImport(SystemConfiguration)",
+              "file" : "Source/Features/NetworkReachabilityManager.swift",
+              "kind" : "guard",
+              "line" : 36,
+              "note" : "fenced canImport(SystemConfiguration) — the framework watchOS doesn't have",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/NetworkReachabilityManager.swift#L36",
+              "symbol" : "NetworkReachabilityManager"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "condition" : "canImport(SystemConfiguration)",
+              "file" : "Source/Features/NetworkReachabilityManager.swift",
+              "kind" : "symbol",
+              "line" : 36,
+              "note" : "SCNetworkReachability wrapper",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/NetworkReachabilityManager.swift#L36",
+              "symbol" : "NetworkReachabilityManager"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "condition" : "canImport(SystemConfiguration)",
+              "file" : "Source/Features/NetworkReachabilityManager.swift",
+              "kind" : "symbol",
+              "line" : 36,
+              "note" : "SCNetworkReachability wrapper",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/NetworkReachabilityManager.swift#L36",
+              "symbol" : "NetworkReachabilityManager"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "condition" : "canImport(SystemConfiguration)",
+              "file" : "Source/Features/NetworkReachabilityManager.swift",
+              "kind" : "symbol",
+              "line" : 36,
+              "note" : "SCNetworkReachability wrapper",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/NetworkReachabilityManager.swift#L36",
+              "symbol" : "NetworkReachabilityManager"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "condition" : "canImport(SystemConfiguration)",
+              "file" : "Source/Features/NetworkReachabilityManager.swift",
+              "kind" : "symbol",
+              "line" : 36,
+              "note" : "SCNetworkReachability wrapper",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/NetworkReachabilityManager.swift#L36",
+              "symbol" : "NetworkReachabilityManager"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "condition" : "canImport(SystemConfiguration)",
+              "file" : "Source/Features/NetworkReachabilityManager.swift",
+              "kind" : "guard",
+              "line" : 36,
+              "note" : "fenced canImport(SystemConfiguration) — the framework watchOS doesn't have",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/NetworkReachabilityManager.swift#L36",
+              "symbol" : "NetworkReachabilityManager"
+            }
+          ],
+          "status" : "unsupported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "alamofire",
+      "version" : "5.12.0"
+    }
+  ]
+}

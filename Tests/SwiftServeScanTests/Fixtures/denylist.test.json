@@ -1,0 +1,41 @@
+{
+  "version": 99,
+  "entries": [
+    {
+      "id": "mg",
+      "pattern": "MGCopyAnswer",
+      "match": "exact",
+      "appliesTo": ["importedSymbol"],
+      "framework": "libMobileGestalt (private)",
+      "severity": "high",
+      "why": "Reads private device info.",
+      "rejectionCode": "ITMS-90338",
+      "alternative": "Use UIDevice / DeviceCheck.",
+      "reference": null
+    },
+    {
+      "id": "ls",
+      "pattern": "LSApplicationWorkspace",
+      "match": "prefix",
+      "appliesTo": ["objcClass"],
+      "framework": "CoreServices (private)",
+      "severity": "high",
+      "why": "Private app-listing class.",
+      "rejectionCode": null,
+      "alternative": null,
+      "reference": null
+    },
+    {
+      "id": "orient",
+      "pattern": "setOrientation:",
+      "match": "exact",
+      "appliesTo": ["objcSelector"],
+      "framework": "UIDevice (private)",
+      "severity": "medium",
+      "why": "Force-sets orientation via a private setter.",
+      "rejectionCode": null,
+      "alternative": null,
+      "reference": null
+    }
+  ]
+}

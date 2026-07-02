@@ -1,0 +1,109 @@
+{
+  "aliases" : [
+    "network mocking",
+    "stub requests"
+  ],
+  "id" : "network.request-mocking",
+  "label" : "Request stubbing / mocking",
+  "packages" : [
+    {
+      "commit" : "c263811c1f3dbf002be9bd83107f7cdc38992b26",
+      "notes" : "Built-in stubbing: every target carries sampleData; StubBehavior swaps the network out in tests.",
+      "package" : "https://github.com/moya/moya",
+      "packageName" : "Moya",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Moya/MoyaProvider.swift",
+              "kind" : "symbol",
+              "line" : 165,
+              "note" : "immediate/delayed stubbing with per-target sample data",
+              "permalink" : "https://github.com/moya/moya/blob/15.0.3/Sources/Moya/MoyaProvider.swift#L165",
+              "symbol" : "StubBehavior"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "rides on Alamofire"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Moya/MoyaProvider.swift",
+              "kind" : "symbol",
+              "line" : 165,
+              "permalink" : "https://github.com/moya/moya/blob/15.0.3/Sources/Moya/MoyaProvider.swift#L165",
+              "symbol" : "StubBehavior"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Moya/MoyaProvider.swift",
+              "kind" : "symbol",
+              "line" : 165,
+              "permalink" : "https://github.com/moya/moya/blob/15.0.3/Sources/Moya/MoyaProvider.swift#L165",
+              "symbol" : "StubBehavior"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Moya/MoyaProvider.swift",
+              "kind" : "symbol",
+              "line" : 165,
+              "permalink" : "https://github.com/moya/moya/blob/15.0.3/Sources/Moya/MoyaProvider.swift#L165",
+              "symbol" : "StubBehavior"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Moya/MoyaProvider.swift",
+              "kind" : "symbol",
+              "line" : 165,
+              "permalink" : "https://github.com/moya/moya/blob/15.0.3/Sources/Moya/MoyaProvider.swift#L165",
+              "symbol" : "StubBehavior"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "moya",
+      "version" : "15.0.3"
+    }
+  ]
+}

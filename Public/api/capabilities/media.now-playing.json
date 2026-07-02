@@ -1,0 +1,107 @@
+{
+  "aliases" : [
+    "lock screen controls",
+    "control center",
+    "mpnowplaying"
+  ],
+  "id" : "media.now-playing",
+  "label" : "Now-playing / remote controls",
+  "packages" : [
+    {
+      "commit" : "7b506bebabd68b542256c0e1e55519fab5f4c092",
+      "notes" : "Lock-screen/control-center integration built in (MPNowPlayingInfoCenter + MPRemoteCommandCenter).",
+      "package" : "https://github.com/doublesymmetry/swiftaudioex",
+      "packageName" : "SwiftAudioEx",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftAudioEx/AudioPlayer.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "permalink" : "https://github.com/doublesymmetry/swiftaudioex/blob/1.1.0/Sources/SwiftAudioEx/AudioPlayer.swift#L17",
+              "symbol" : "AudioPlayer.nowPlayingInfoController"
+            },
+            {
+              "file" : "Sources/SwiftAudioEx/AudioPlayer.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/doublesymmetry/swiftaudioex/blob/1.1.0/Sources/SwiftAudioEx/AudioPlayer.swift#L18",
+              "symbol" : "AudioPlayer.remoteCommandController"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "MediaPlayer framework is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftAudioEx/AudioPlayer.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "permalink" : "https://github.com/doublesymmetry/swiftaudioex/blob/1.1.0/Sources/SwiftAudioEx/AudioPlayer.swift#L17",
+              "symbol" : "AudioPlayer.nowPlayingInfoController"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS only; AVPlayer exists elsewhere but the package states no intent"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS only; AVPlayer exists elsewhere but the package states no intent"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS only; AVPlayer exists elsewhere but the package states no intent"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS only; AVPlayer exists elsewhere but the package states no intent"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swiftaudioex",
+      "version" : "1.1.0"
+    }
+  ]
+}

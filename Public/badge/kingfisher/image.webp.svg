@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280.8" height="20" role="img" aria-label="WebP decoding platform support — SwiftServe">
+  <title>WebP decoding — verified by SwiftServe</title>
+  <clipPath id="r"><rect width="280.8" height="20" rx="4"/></clipPath>
+  <g clip-path="url(#r)">
+    <rect width="112.8" height="20" fill="#2c2724"/>
+    <g transform="translate(5.0,3.0) scale(0.6)">
+  <path d="M3 8 L8 18 L13 8 Z" fill="#e8b04b"/>
+  <path d="M2.5 8 A5.5 5.5 0 0 1 13.5 8 Z" fill="#ed8b3e"/>
+  <circle cx="8" cy="4.5" r="3.4" fill="#ed8b3e"/>
+</g>
+    <text x="22" y="14" fill="#fbf7f0" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11">WebP decoding</text>
+    <rect x="112.8" width="24.0" height="20" fill="#a49a8f"/>
+<text x="124.8" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="136.8" width="24.0" height="20" fill="#a49a8f"/>
+<text x="148.8" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="160.8" width="24.0" height="20" fill="#a49a8f"/>
+<text x="172.8" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="184.8" width="24.0" height="20" fill="#a49a8f"/>
+<text x="196.8" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="208.8" width="24.0" height="20" fill="#a49a8f"/>
+<text x="220.8" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="232.8" width="24.0" height="20" fill="#a49a8f"/>
+<text x="244.8" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="256.8" width="24.0" height="20" fill="#a49a8f"/>
+<text x="268.8" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text>
+  </g>
+</svg>

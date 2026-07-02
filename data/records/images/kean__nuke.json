@@ -1,0 +1,623 @@
+[
+  {
+    "capability" : {
+      "id" : "image.async-loading",
+      "label" : "Async image loading"
+    },
+    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Performance-first image pipeline with coalescing, priorities, resumable downloads.",
+    "package" : {
+      "aliases" : [
+        "kean/Nuke"
+      ],
+      "canonicalURL" : "https://github.com/kean/nuke",
+      "commit" : "63a8fcbd6621340a2410bc3e9575ac97058615f4",
+      "name" : "Nuke",
+      "surfaceDigest" : "fnv1a64:b558d0436b38158e",
+      "version" : "13.0.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Pipeline/ImagePipeline.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : "the loading pipeline",
+            "package" : null,
+            "symbol" : "ImagePipeline"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "Apple imaging stacks only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Pipeline/ImagePipeline.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : "the loading pipeline",
+            "package" : null,
+            "symbol" : "ImagePipeline"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Pipeline/ImagePipeline.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : "the loading pipeline",
+            "package" : null,
+            "symbol" : "ImagePipeline"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Pipeline/ImagePipeline.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : "the loading pipeline",
+            "package" : null,
+            "symbol" : "ImagePipeline"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Pipeline/ImagePipeline.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : "the loading pipeline",
+            "package" : null,
+            "symbol" : "ImagePipeline"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares visionOS 1",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Pipeline/ImagePipeline.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : "the loading pipeline",
+            "package" : null,
+            "symbol" : "ImagePipeline"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares watchOS 8",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "image.caching",
+      "label" : "Image caching"
+    },
+    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : null,
+    "package" : {
+      "aliases" : [
+        "kean/Nuke"
+      ],
+      "canonicalURL" : "https://github.com/kean/nuke",
+      "commit" : "63a8fcbd6621340a2410bc3e9575ac97058615f4",
+      "name" : "Nuke",
+      "surfaceDigest" : "fnv1a64:b558d0436b38158e",
+      "version" : "13.0.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Caching/ImageCache.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ImageCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Caching/DataCache.swift",
+            "kind" : "symbol",
+            "line" : 33,
+            "note" : "LRU disk cache",
+            "package" : null,
+            "symbol" : "DataCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "Apple imaging stacks only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Caching/ImageCache.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ImageCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Caching/DataCache.swift",
+            "kind" : "symbol",
+            "line" : 33,
+            "note" : "LRU disk cache",
+            "package" : null,
+            "symbol" : "DataCache"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Caching/ImageCache.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ImageCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Caching/DataCache.swift",
+            "kind" : "symbol",
+            "line" : 33,
+            "note" : "LRU disk cache",
+            "package" : null,
+            "symbol" : "DataCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.7999999999999999,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Caching/ImageCache.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ImageCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Caching/DataCache.swift",
+            "kind" : "symbol",
+            "line" : 33,
+            "note" : "LRU disk cache",
+            "package" : null,
+            "symbol" : "DataCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7999999999999999,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Caching/ImageCache.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ImageCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Caching/DataCache.swift",
+            "kind" : "symbol",
+            "line" : 33,
+            "note" : "LRU disk cache",
+            "package" : null,
+            "symbol" : "DataCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares visionOS 1",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.7999999999999999,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Caching/ImageCache.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ImageCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Caching/DataCache.swift",
+            "kind" : "symbol",
+            "line" : 33,
+            "note" : "LRU disk cache",
+            "package" : null,
+            "symbol" : "DataCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares watchOS 8",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "image.prefetching",
+      "label" : "Prefetching"
+    },
+    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : null,
+    "package" : {
+      "aliases" : [
+        "kean/Nuke"
+      ],
+      "canonicalURL" : "https://github.com/kean/nuke",
+      "commit" : "63a8fcbd6621340a2410bc3e9575ac97058615f4",
+      "name" : "Nuke",
+      "surfaceDigest" : "fnv1a64:b558d0436b38158e",
+      "version" : "13.0.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Prefetching/ImagePrefetcher.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ImagePrefetcher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "Apple imaging stacks only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Prefetching/ImagePrefetcher.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ImagePrefetcher"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Prefetching/ImagePrefetcher.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ImagePrefetcher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Prefetching/ImagePrefetcher.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ImagePrefetcher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Prefetching/ImagePrefetcher.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ImagePrefetcher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares visionOS 1",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Nuke/Prefetching/ImagePrefetcher.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ImagePrefetcher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares watchOS 8",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

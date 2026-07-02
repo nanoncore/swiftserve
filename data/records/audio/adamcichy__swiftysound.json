@@ -1,0 +1,296 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.playback",
+      "label" : "Audio playback"
+    },
+    "labeledAt" : "2026-07-02T12:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "One-line sound playback over AVAudioPlayer.",
+    "package" : {
+      "aliases" : [
+        "adamcichy/SwiftySound"
+      ],
+      "canonicalURL" : "https://github.com/adamcichy/swiftysound",
+      "commit" : "72dbeaf4b4496b105bc731db05819dd16edc9449",
+      "name" : "SwiftySound",
+      "surfaceDigest" : "fnv1a64:80b92f89c2493282",
+      "version" : "1.3.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Sound.swift",
+            "kind" : "symbol",
+            "line" : 62,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Sound"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Sound.swift",
+            "kind" : "symbol",
+            "line" : 156,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Sound.play"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "AVFoundation-based",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Sound.swift",
+            "kind" : "symbol",
+            "line" : 62,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Sound"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Sound.swift",
+            "kind" : "symbol",
+            "line" : 62,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Sound"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Sound.swift",
+            "kind" : "symbol",
+            "line" : 156,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Sound.play"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Sound.swift",
+            "kind" : "symbol",
+            "line" : 62,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Sound"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "predates visionOS; no signal either way",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README targets iOS/macOS/tvOS; no watchOS signal either way",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "audio.session-management",
+      "label" : "Audio session management"
+    },
+    "labeledAt" : "2026-07-02T12:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "SoundCategory (AVAudioSession categories) is fenced to iOS/tvOS — a small, clean feature×platform gap.",
+    "package" : {
+      "aliases" : [
+        "adamcichy/SwiftySound"
+      ],
+      "canonicalURL" : "https://github.com/adamcichy/swiftysound",
+      "commit" : "72dbeaf4b4496b105bc731db05819dd16edc9449",
+      "name" : "SwiftySound",
+      "surfaceDigest" : "fnv1a64:80b92f89c2493282",
+      "version" : "1.3.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS) || os(tvOS)",
+            "file" : "Sources/Sound.swift",
+            "kind" : "symbol",
+            "line" : 32,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SoundCategory"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS) || os(tvOS)",
+            "file" : "Sources/Sound.swift",
+            "kind" : "guard",
+            "line" : 32,
+            "note" : "session categories exist only where AVAudioSession does",
+            "package" : null,
+            "symbol" : "SoundCategory"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS) || os(tvOS)",
+            "file" : "Sources/Sound.swift",
+            "kind" : "symbol",
+            "line" : 32,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SoundCategory"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS) || os(tvOS)",
+            "file" : "Sources/Sound.swift",
+            "kind" : "guard",
+            "line" : 32,
+            "note" : "session categories exist only where AVAudioSession does",
+            "package" : null,
+            "symbol" : "SoundCategory"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS) || os(tvOS)",
+            "file" : "Sources/Sound.swift",
+            "kind" : "symbol",
+            "line" : 32,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SoundCategory"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS) || os(tvOS)",
+            "file" : "Sources/Sound.swift",
+            "kind" : "guard",
+            "line" : 32,
+            "note" : "session categories exist only where AVAudioSession does",
+            "package" : null,
+            "symbol" : "SoundCategory"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "watchOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS) || os(tvOS)",
+            "file" : "Sources/Sound.swift",
+            "kind" : "guard",
+            "line" : 32,
+            "note" : "session categories exist only where AVAudioSession does",
+            "package" : null,
+            "symbol" : "SoundCategory"
+          }
+        ],
+        "status" : "unsupported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

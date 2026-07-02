@@ -1,0 +1,171 @@
+[
+  {
+    "capability" : {
+      "id" : "network.websockets",
+      "label" : "WebSockets"
+    },
+    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Protocol-level WebSocket (framing, upgrader) — you assemble the client/server; it's not a drop-in socket like Starscream. Linux is home turf.",
+    "package" : {
+      "aliases" : [
+        "apple/swift-nio",
+        "swift-nio",
+        "NIO"
+      ],
+      "canonicalURL" : "https://github.com/apple/swift-nio",
+      "commit" : "cd3e1152083706d77b223fb29110e590efcc70c0",
+      "name" : "SwiftNIO",
+      "surfaceDigest" : "fnv1a64:9d214699c82fc4a4",
+      "version" : "2.101.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/NIOWebSocket/WebSocketFrame.swift",
+            "kind" : "symbol",
+            "line" : 147,
+            "note" : "RFC 6455 framing in NIOWebSocket",
+            "package" : null,
+            "symbol" : "WebSocketFrame"
+          },
+          {
+            "availability" : null,
+            "condition" : "!os(WASI)",
+            "file" : "Sources/NIOPosix/MultiThreadedEventLoopGroup.swift",
+            "kind" : "symbol",
+            "line" : 62,
+            "note" : "the engine — guarded only against WASI",
+            "package" : null,
+            "symbol" : "MultiThreadedEventLoopGroup"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/NIOWebSocket/WebSocketFrame.swift",
+            "kind" : "symbol",
+            "line" : 147,
+            "note" : "RFC 6455 framing in NIOWebSocket",
+            "package" : null,
+            "symbol" : "WebSocketFrame"
+          },
+          {
+            "availability" : null,
+            "condition" : "!os(WASI)",
+            "file" : "Sources/NIOPosix/MultiThreadedEventLoopGroup.swift",
+            "kind" : "symbol",
+            "line" : 62,
+            "note" : "the engine — guarded only against WASI",
+            "package" : null,
+            "symbol" : "MultiThreadedEventLoopGroup"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/NIOWebSocket/WebSocketFrame.swift",
+            "kind" : "symbol",
+            "line" : 147,
+            "note" : "RFC 6455 framing in NIOWebSocket",
+            "package" : null,
+            "symbol" : "WebSocketFrame"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/NIOWebSocket/WebSocketFrame.swift",
+            "kind" : "symbol",
+            "line" : 147,
+            "note" : "RFC 6455 framing in NIOWebSocket",
+            "package" : null,
+            "symbol" : "WebSocketFrame"
+          },
+          {
+            "availability" : null,
+            "condition" : "!os(WASI)",
+            "file" : "Sources/NIOPosix/MultiThreadedEventLoopGroup.swift",
+            "kind" : "symbol",
+            "line" : 62,
+            "note" : "the engine — guarded only against WASI",
+            "package" : null,
+            "symbol" : "MultiThreadedEventLoopGroup"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/NIOWebSocket/WebSocketFrame.swift",
+            "kind" : "symbol",
+            "line" : 147,
+            "note" : "RFC 6455 framing in NIOWebSocket",
+            "package" : null,
+            "symbol" : "WebSocketFrame"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/NIOWebSocket/WebSocketFrame.swift",
+            "kind" : "symbol",
+            "line" : 147,
+            "note" : "RFC 6455 framing in NIOWebSocket",
+            "package" : null,
+            "symbol" : "WebSocketFrame"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/NIOWebSocket/WebSocketFrame.swift",
+            "kind" : "symbol",
+            "line" : 147,
+            "note" : "RFC 6455 framing in NIOWebSocket",
+            "package" : null,
+            "symbol" : "WebSocketFrame"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

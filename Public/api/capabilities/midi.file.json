@@ -1,0 +1,338 @@
+{
+  "aliases" : [
+    "midi file",
+    "smf",
+    "standard midi file",
+    "midi parsing"
+  ],
+  "id" : "midi.file",
+  "label" : "MIDI file read/write",
+  "packages" : [
+    {
+      "commit" : "7d5ac32c068cfa288362a85bdf340653a4d242ee",
+      "notes" : "MIDIKit's SMF module — pure-Swift file parsing, so unlike MIDI *I/O* it works on tvOS/watchOS too.",
+      "package" : "https://github.com/orchetect/swift-midi-file",
+      "packageName" : "MIDIKitSMF",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftMIDIFile/MIDI1File/MIDI1File.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "SMF (type 0/1) encode/decode",
+              "permalink" : "https://github.com/orchetect/swift-midi-file/blob/1.0.2/Sources/SwiftMIDIFile/MIDI1File/MIDI1File.swift#L11",
+              "symbol" : "MIDI1File"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "pure-Swift SMF parsing may build on Linux; unverified"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftMIDIFile/MIDI1File/MIDI1File.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "SMF (type 0/1) encode/decode",
+              "permalink" : "https://github.com/orchetect/swift-midi-file/blob/1.0.2/Sources/SwiftMIDIFile/MIDI1File/MIDI1File.swift#L11",
+              "symbol" : "MIDI1File"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftMIDIFile/MIDI1File/MIDI1File.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "SMF (type 0/1) encode/decode",
+              "permalink" : "https://github.com/orchetect/swift-midi-file/blob/1.0.2/Sources/SwiftMIDIFile/MIDI1File/MIDI1File.swift#L11",
+              "symbol" : "MIDI1File"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftMIDIFile/MIDI1File/MIDI1File.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "SMF (type 0/1) encode/decode",
+              "permalink" : "https://github.com/orchetect/swift-midi-file/blob/1.0.2/Sources/SwiftMIDIFile/MIDI1File/MIDI1File.swift#L11",
+              "symbol" : "MIDI1File"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftMIDIFile/MIDI1File/MIDI1File.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "SMF (type 0/1) encode/decode",
+              "permalink" : "https://github.com/orchetect/swift-midi-file/blob/1.0.2/Sources/SwiftMIDIFile/MIDI1File/MIDI1File.swift#L11",
+              "symbol" : "MIDI1File"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftMIDIFile/MIDI1File/MIDI1File.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "SMF (type 0/1) encode/decode",
+              "permalink" : "https://github.com/orchetect/swift-midi-file/blob/1.0.2/Sources/SwiftMIDIFile/MIDI1File/MIDI1File.swift#L11",
+              "symbol" : "MIDI1File"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares watchOS 4"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swift-midi-file",
+      "version" : "1.0.2"
+    },
+    {
+      "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+      "notes" : "MIDI file loading + AppleSequencer playback — fenced off tvOS with the rest of the MIDI subsystem.",
+      "package" : "https://github.com/audiokit/audiokit",
+      "packageName" : "AudioKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "condition" : "!os(tvOS)",
+              "file" : "Sources/AudioKit/MIDI/MIDIFile/MIDIFile.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "note" : "SMF loading for the AppleSequencer",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/MIDI/MIDIFile/MIDIFile.swift#L8",
+              "symbol" : "MIDIFile"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AudioToolbox-based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "condition" : "!os(tvOS)",
+              "file" : "Sources/AudioKit/MIDI/MIDIFile/MIDIFile.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "note" : "SMF loading for the AppleSequencer",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/MIDI/MIDIFile/MIDIFile.swift#L8",
+              "symbol" : "MIDIFile"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "condition" : "!os(tvOS)",
+              "file" : "Sources/AudioKit/MIDI/MIDIFile/MIDIFile.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "note" : "SMF loading for the AppleSequencer",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/MIDI/MIDIFile/MIDIFile.swift#L8",
+              "symbol" : "MIDIFile"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "condition" : "!os(tvOS)",
+              "file" : "Sources/AudioKit/MIDI/MIDIFile/MIDIFile.swift",
+              "kind" : "guard",
+              "line" : 8,
+              "note" : "under the MIDI subsystem's !os(tvOS) fence",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/MIDI/MIDIFile/MIDIFile.swift#L8",
+              "symbol" : "MIDIFile"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "condition" : "!os(tvOS)",
+              "file" : "Sources/AudioKit/MIDI/MIDIFile/MIDIFile.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "note" : "SMF loading for the AppleSequencer",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/MIDI/MIDIFile/MIDIFile.swift#L8",
+              "symbol" : "MIDIFile"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "audiokit",
+      "version" : "5.7.2"
+    },
+    {
+      "commit" : "a8b0a071781a4f99837b2b621f651b1a1b9d4d8e",
+      "notes" : "Read/write SMF via AudioToolbox's MusicSequence.",
+      "package" : "https://github.com/matsune/midiparser",
+      "packageName" : "MidiParser",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Source/MidiData/MidiData.swift",
+              "kind" : "symbol",
+              "line" : 12,
+              "note" : "read/write standard MIDI files",
+              "permalink" : "https://github.com/matsune/midiparser/blob/0.2/Source/MidiData/MidiData.swift#L12",
+              "symbol" : "MidiData"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "AudioToolbox MusicSequence-based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Source/MidiData/MidiData.swift",
+              "kind" : "symbol",
+              "line" : 12,
+              "note" : "read/write standard MIDI files",
+              "permalink" : "https://github.com/matsune/midiparser/blob/0.2/Source/MidiData/MidiData.swift#L12",
+              "symbol" : "MidiData"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Source/MidiData/MidiData.swift",
+              "kind" : "symbol",
+              "line" : 12,
+              "note" : "read/write standard MIDI files",
+              "permalink" : "https://github.com/matsune/midiparser/blob/0.2/Source/MidiData/MidiData.swift#L12",
+              "symbol" : "MidiData"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "empty manifest"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "empty manifest"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "empty manifest"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "midiparser",
+      "version" : "0.2"
+    }
+  ]
+}

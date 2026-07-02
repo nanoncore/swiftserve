@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "domain": "networking",
+  "packages": [
+    {
+      "url": "https://github.com/alamofire/alamofire",
+      "name": "Alamofire/Alamofire",
+      "source": "seed",
+      "why": "THE Swift networking package — reachability/trust guards are platform truth gold",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/daltoniam/starscream",
+      "name": "daltoniam/Starscream",
+      "source": "seed",
+      "why": "the WebSocket package",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/apple/swift-nio",
+      "name": "apple/swift-nio",
+      "source": "seed",
+      "why": "server-side event-driven networking — Linux truth",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/moya/moya",
+      "name": "Moya/Moya",
+      "source": "seed",
+      "why": "network abstraction layer over Alamofire",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/launchdarkly/swift-eventsource",
+      "name": "LaunchDarkly/swift-eventsource",
+      "source": "seed",
+      "why": "server-sent events client",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/kean/pulse",
+      "name": "kean/Pulse",
+      "source": "seed",
+      "why": "network logger/inspector",
+      "companionOf": null
+    }
+  ]
+}

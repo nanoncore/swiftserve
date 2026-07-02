@@ -1,0 +1,102 @@
+{
+  "aliases" : [
+    "sound analysis",
+    "audio classification",
+    "sound recognition"
+  ],
+  "id" : "audio.classification",
+  "label" : "Sound classification",
+  "packages" : [
+    {
+      "commit" : "279b9489ee4ffaf2a60e03acd90c0d980c84bb23",
+      "notes" : "Identify sounds (music, speech, noise types) via Apple's SoundAnalysis classifier.",
+      "package" : "https://github.com/ryanfrancesconi/spfk-sound-analysis",
+      "packageName" : "SPFKSoundAnalysis",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "SoundAnalysis exists on iOS but the manifest declares macOS only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "SoundAnalysis is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/SPFKSoundAnalysis/SoundClassification.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "SoundAnalysis (SNClassifySoundRequest) wrapper",
+              "permalink" : "https://github.com/ryanfrancesconi/spfk-sound-analysis/blob/1.0.3/Sources/SPFKSoundAnalysis/SoundClassification.swift#L5",
+              "symbol" : "SoundClassification"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 13 only"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS only"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "spfk-sound-analysis",
+      "version" : "1.0.3"
+    }
+  ]
+}

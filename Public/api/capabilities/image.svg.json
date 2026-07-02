@@ -1,0 +1,121 @@
+{
+  "aliases" : [
+    "svg",
+    "vector images"
+  ],
+  "id" : "image.svg",
+  "label" : "SVG rendering",
+  "packages" : [
+    {
+      "commit" : "6465962facdd25cb96eaebc35603afa2f15d2c0d",
+      "notes" : "SVG parsing + SwiftUI rendering with interactive node access.",
+      "package" : "https://github.com/exyte/svgview",
+      "packageName" : "SVGView",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Source/Parser/SVG/SVGView.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "parse + render SVG in SwiftUI",
+              "permalink" : "https://github.com/exyte/svgview/blob/1.0.6/Source/Parser/SVG/SVGView.swift#L10",
+              "symbol" : "SVGView"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 14"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "SwiftUI-based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Source/Parser/SVG/SVGView.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "parse + render SVG in SwiftUI",
+              "permalink" : "https://github.com/exyte/svgview/blob/1.0.6/Source/Parser/SVG/SVGView.swift#L10",
+              "symbol" : "SVGView"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Source/Parser/SVG/SVGView.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "parse + render SVG in SwiftUI",
+              "permalink" : "https://github.com/exyte/svgview/blob/1.0.6/Source/Parser/SVG/SVGView.swift#L10",
+              "symbol" : "SVGView"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 11"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Source/Parser/SVG/SVGView.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "parse + render SVG in SwiftUI",
+              "permalink" : "https://github.com/exyte/svgview/blob/1.0.6/Source/Parser/SVG/SVGView.swift#L10",
+              "symbol" : "SVGView"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares watchOS 7"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "svgview",
+      "version" : "1.0.6"
+    }
+  ]
+}

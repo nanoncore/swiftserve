@@ -1,0 +1,190 @@
+[
+  {
+    "capability" : {
+      "id" : "network.server-sent-events",
+      "label" : "Server-sent events"
+    },
+    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Spec-compliant EventSource with automatic reconnect + backoff.",
+    "package" : {
+      "aliases" : [
+        "LaunchDarkly/swift-eventsource",
+        "swift-eventsource"
+      ],
+      "canonicalURL" : "https://github.com/launchdarkly/swift-eventsource",
+      "commit" : "57051701c58a93603ffa2051f8e9cf0c8cff7814",
+      "name" : "LDSwiftEventSource",
+      "surfaceDigest" : "fnv1a64:e96cd304f188a56f",
+      "version" : "3.3.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/LDSwiftEventSource.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : "SSE client with reconnection/backoff",
+            "package" : null,
+            "symbol" : "EventSource"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 11",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/LDSwiftEventSource.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : "SSE client with reconnection/backoff",
+            "package" : null,
+            "symbol" : "EventSource"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "LaunchDarkly ships this in server-side SDKs; FoundationNetworking path",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/LDSwiftEventSource.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : "SSE client with reconnection/backoff",
+            "package" : null,
+            "symbol" : "EventSource"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/LDSwiftEventSource.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : "SSE client with reconnection/backoff",
+            "package" : null,
+            "symbol" : "EventSource"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 10.13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/LDSwiftEventSource.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : "SSE client with reconnection/backoff",
+            "package" : null,
+            "symbol" : "EventSource"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 11",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/LDSwiftEventSource.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : "SSE client with reconnection/backoff",
+            "package" : null,
+            "symbol" : "EventSource"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares watchOS 4",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

@@ -1,0 +1,922 @@
+[
+  {
+    "capability" : {
+      "id" : "network.certificate-pinning",
+      "label" : "Certificate pinning"
+    },
+    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "ServerTrustManager evaluates per-host trust: pinned certificates, public keys, revocation.",
+    "package" : {
+      "aliases" : [
+        "Alamofire/Alamofire",
+        "AF"
+      ],
+      "canonicalURL" : "https://github.com/alamofire/alamofire",
+      "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
+      "name" : "Alamofire",
+      "surfaceDigest" : "fnv1a64:b899c02e2a546ac7",
+      "version" : "5.12.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/ServerTrustEvaluation.swift",
+            "kind" : "symbol",
+            "line" : 31,
+            "note" : "per-host trust evaluators incl. pinned certs/keys",
+            "package" : null,
+            "symbol" : "ServerTrustManager"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "Alamofire is URLSession-based; Linux is explicitly unsupported per the project — but no source fence proves it",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/ServerTrustEvaluation.swift",
+            "kind" : "symbol",
+            "line" : 31,
+            "note" : "per-host trust evaluators incl. pinned certs/keys",
+            "package" : null,
+            "symbol" : "ServerTrustManager"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/ServerTrustEvaluation.swift",
+            "kind" : "symbol",
+            "line" : 31,
+            "note" : "per-host trust evaluators incl. pinned certs/keys",
+            "package" : null,
+            "symbol" : "ServerTrustManager"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 10.13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.7999999999999999,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/ServerTrustEvaluation.swift",
+            "kind" : "symbol",
+            "line" : 31,
+            "note" : "per-host trust evaluators incl. pinned certs/keys",
+            "package" : null,
+            "symbol" : "ServerTrustManager"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.7999999999999999,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/ServerTrustEvaluation.swift",
+            "kind" : "symbol",
+            "line" : 31,
+            "note" : "per-host trust evaluators incl. pinned certs/keys",
+            "package" : null,
+            "symbol" : "ServerTrustManager"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares watchOS 4",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "network.http-client",
+      "label" : "HTTP client"
+    },
+    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "The Swift HTTP client. Session wraps URLSession with the full request pipeline.",
+    "package" : {
+      "aliases" : [
+        "Alamofire/Alamofire",
+        "AF"
+      ],
+      "canonicalURL" : "https://github.com/alamofire/alamofire",
+      "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
+      "name" : "Alamofire",
+      "surfaceDigest" : "fnv1a64:b899c02e2a546ac7",
+      "version" : "5.12.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Core/Session.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : "the request-making core",
+            "package" : null,
+            "symbol" : "Session"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "Alamofire is URLSession-based; Linux is explicitly unsupported per the project — but no source fence proves it",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Core/Session.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : "the request-making core",
+            "package" : null,
+            "symbol" : "Session"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Core/Session.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : "the request-making core",
+            "package" : null,
+            "symbol" : "Session"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 10.13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Core/Session.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : "the request-making core",
+            "package" : null,
+            "symbol" : "Session"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Core/Session.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : "the request-making core",
+            "package" : null,
+            "symbol" : "Session"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares watchOS 4",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "network.multipart-upload",
+      "label" : "Multipart upload"
+    },
+    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "First-class multipart form data encoding + streaming upload.",
+    "package" : {
+      "aliases" : [
+        "Alamofire/Alamofire",
+        "AF"
+      ],
+      "canonicalURL" : "https://github.com/alamofire/alamofire",
+      "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
+      "name" : "Alamofire",
+      "surfaceDigest" : "fnv1a64:b899c02e2a546ac7",
+      "version" : "5.12.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/MultipartFormData.swift",
+            "kind" : "symbol",
+            "line" : 45,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MultipartFormData"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "Alamofire is URLSession-based; Linux is explicitly unsupported per the project — but no source fence proves it",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/MultipartFormData.swift",
+            "kind" : "symbol",
+            "line" : 45,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MultipartFormData"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/MultipartFormData.swift",
+            "kind" : "symbol",
+            "line" : 45,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MultipartFormData"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 10.13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.7999999999999999,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/MultipartFormData.swift",
+            "kind" : "symbol",
+            "line" : 45,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MultipartFormData"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.7999999999999999,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/MultipartFormData.swift",
+            "kind" : "symbol",
+            "line" : 45,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MultipartFormData"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares watchOS 4",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "network.reachability",
+      "label" : "Network reachability"
+    },
+    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "The classic gap: NetworkReachabilityManager needs SystemConfiguration, which watchOS (and Linux) don't have — provably fenced, not just missing.",
+    "package" : {
+      "aliases" : [
+        "Alamofire/Alamofire",
+        "AF"
+      ],
+      "canonicalURL" : "https://github.com/alamofire/alamofire",
+      "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
+      "name" : "Alamofire",
+      "surfaceDigest" : "fnv1a64:b899c02e2a546ac7",
+      "version" : "5.12.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "canImport(SystemConfiguration)",
+            "file" : "Source/Features/NetworkReachabilityManager.swift",
+            "kind" : "symbol",
+            "line" : 36,
+            "note" : "SCNetworkReachability wrapper",
+            "package" : null,
+            "symbol" : "NetworkReachabilityManager"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "canImport(SystemConfiguration)",
+            "file" : "Source/Features/NetworkReachabilityManager.swift",
+            "kind" : "guard",
+            "line" : 36,
+            "note" : "fenced canImport(SystemConfiguration) — the framework watchOS doesn't have",
+            "package" : null,
+            "symbol" : "NetworkReachabilityManager"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "canImport(SystemConfiguration)",
+            "file" : "Source/Features/NetworkReachabilityManager.swift",
+            "kind" : "symbol",
+            "line" : 36,
+            "note" : "SCNetworkReachability wrapper",
+            "package" : null,
+            "symbol" : "NetworkReachabilityManager"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "canImport(SystemConfiguration)",
+            "file" : "Source/Features/NetworkReachabilityManager.swift",
+            "kind" : "symbol",
+            "line" : 36,
+            "note" : "SCNetworkReachability wrapper",
+            "package" : null,
+            "symbol" : "NetworkReachabilityManager"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 10.13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "canImport(SystemConfiguration)",
+            "file" : "Source/Features/NetworkReachabilityManager.swift",
+            "kind" : "symbol",
+            "line" : 36,
+            "note" : "SCNetworkReachability wrapper",
+            "package" : null,
+            "symbol" : "NetworkReachabilityManager"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "canImport(SystemConfiguration)",
+            "file" : "Source/Features/NetworkReachabilityManager.swift",
+            "kind" : "symbol",
+            "line" : 36,
+            "note" : "SCNetworkReachability wrapper",
+            "package" : null,
+            "symbol" : "NetworkReachabilityManager"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "canImport(SystemConfiguration)",
+            "file" : "Source/Features/NetworkReachabilityManager.swift",
+            "kind" : "guard",
+            "line" : 36,
+            "note" : "fenced canImport(SystemConfiguration) — the framework watchOS doesn't have",
+            "package" : null,
+            "symbol" : "NetworkReachabilityManager"
+          }
+        ],
+        "status" : "unsupported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "network.retry",
+      "label" : "Request retry / backoff"
+    },
+    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "RetryPolicy + RequestInterceptor give configurable retry with exponential backoff.",
+    "package" : {
+      "aliases" : [
+        "Alamofire/Alamofire",
+        "AF"
+      ],
+      "canonicalURL" : "https://github.com/alamofire/alamofire",
+      "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
+      "name" : "Alamofire",
+      "surfaceDigest" : "fnv1a64:b899c02e2a546ac7",
+      "version" : "5.12.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/RetryPolicy.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : "exponential backoff with retryable status/error sets",
+            "package" : null,
+            "symbol" : "RetryPolicy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/RetryPolicy.swift",
+            "kind" : "symbol",
+            "line" : 380,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ConnectionLostRetryPolicy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "Alamofire is URLSession-based; Linux is explicitly unsupported per the project — but no source fence proves it",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/RetryPolicy.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : "exponential backoff with retryable status/error sets",
+            "package" : null,
+            "symbol" : "RetryPolicy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/RetryPolicy.swift",
+            "kind" : "symbol",
+            "line" : 380,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ConnectionLostRetryPolicy"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/RetryPolicy.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : "exponential backoff with retryable status/error sets",
+            "package" : null,
+            "symbol" : "RetryPolicy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/RetryPolicy.swift",
+            "kind" : "symbol",
+            "line" : 380,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ConnectionLostRetryPolicy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 10.13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.7999999999999999,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/RetryPolicy.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : "exponential backoff with retryable status/error sets",
+            "package" : null,
+            "symbol" : "RetryPolicy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/RetryPolicy.swift",
+            "kind" : "symbol",
+            "line" : 380,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ConnectionLostRetryPolicy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.7999999999999999,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/RetryPolicy.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : "exponential backoff with retryable status/error sets",
+            "package" : null,
+            "symbol" : "RetryPolicy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Features/RetryPolicy.swift",
+            "kind" : "symbol",
+            "line" : 380,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ConnectionLostRetryPolicy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares watchOS 4",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

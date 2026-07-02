@@ -1,0 +1,179 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.codec.opus",
+      "label" : "Opus encoding/decoding"
+    },
+    "labeledAt" : "2026-07-02T14:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Opus audio codec bindings with AVAudioFormat integration.",
+    "package" : {
+      "aliases" : [
+        "alta/swift-opus"
+      ],
+      "canonicalURL" : "https://github.com/alta/swift-opus",
+      "commit" : "5f0164b8915fb9001265c54413aa0f0efbd3df06",
+      "name" : "swift-opus",
+      "surfaceDigest" : "fnv1a64:e6952627b6eacd98",
+      "version" : "0.0.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Opus/Opus.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "encoder/decoder namespace over libopus",
+            "package" : null,
+            "symbol" : "Opus"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "C libopus could build on Linux; unverified",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Opus/Opus.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "encoder/decoder namespace over libopus",
+            "package" : null,
+            "symbol" : "Opus"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Opus/Opus.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "encoder/decoder namespace over libopus",
+            "package" : null,
+            "symbol" : "Opus"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 10.12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Opus/Opus.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "encoder/decoder namespace over libopus",
+            "package" : null,
+            "symbol" : "Opus"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares tvOS 12",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors (package predates it)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Opus/Opus.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "encoder/decoder namespace over libopus",
+            "package" : null,
+            "symbol" : "Opus"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares watchOS 6",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

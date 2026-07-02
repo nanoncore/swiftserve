@@ -1,0 +1,169 @@
+[
+  {
+    "capability" : {
+      "id" : "video.playback",
+      "label" : "Video playback"
+    },
+    "labeledAt" : "2026-07-02T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "YouTube playback via the IFrame API in a hosted web view — not raw AVPlayer.",
+    "package" : {
+      "aliases" : [
+        "sventiigi/youtubeplayerkit"
+      ],
+      "canonicalURL" : "https://github.com/sventiigi/youtubeplayerkit",
+      "commit" : "1ae827573024ab13dd6adea33b25d3eef6ff667c",
+      "name" : "YouTubePlayerKit",
+      "surfaceDigest" : "fnv1a64:68508d701b2eee6f",
+      "version" : "2.0.5"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/UI/HostingView/YouTubePlayerHostingView.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : null,
+            "package" : null,
+            "symbol" : "YouTubePlayerHostingView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "AVFoundation/Apple-frameworks based",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/UI/HostingView/YouTubePlayerHostingView.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : null,
+            "package" : null,
+            "symbol" : "YouTubePlayerHostingView"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/UI/HostingView/YouTubePlayerHostingView.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : null,
+            "package" : null,
+            "symbol" : "YouTubePlayerHostingView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "tvOS absent from manifest floors; no source fence",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/UI/HostingView/YouTubePlayerHostingView.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : null,
+            "package" : null,
+            "symbol" : "YouTubePlayerHostingView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares visionOS",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors; no source fence",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

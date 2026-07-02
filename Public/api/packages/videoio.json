@@ -1,0 +1,159 @@
+[
+  {
+    "capability" : {
+      "id" : "video.capture",
+      "label" : "Camera capture"
+    },
+    "labeledAt" : "2026-07-02T14:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Camera capture, movie recording, and video processing utilities. The Camera class is explicitly marked unavailable on tvOS — no cameras on Apple TV.",
+    "package" : {
+      "aliases" : [
+        "MetalPetal/VideoIO"
+      ],
+      "canonicalURL" : "https://github.com/metalpetal/videoio",
+      "commit" : "22f7c00083b7e16c7e15ace1adcdb90fb5ffe006",
+      "name" : "VideoIO",
+      "surfaceDigest" : "fnv1a64:e598b7f0a667c7b0",
+      "version" : "2.3.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : "@available(tvOS, unavailable)",
+            "condition" : null,
+            "file" : "Sources/VideoIO/Camera.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "AVCaptureSession wrapper",
+            "package" : null,
+            "symbol" : "Camera"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares iOS 10",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "AVFoundation is Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : "@available(tvOS, unavailable)",
+            "condition" : null,
+            "file" : "Sources/VideoIO/Camera.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "AVCaptureSession wrapper",
+            "package" : null,
+            "symbol" : "Camera"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : "@available(tvOS, unavailable)",
+            "condition" : null,
+            "file" : "Sources/VideoIO/Camera.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "AVCaptureSession wrapper",
+            "package" : null,
+            "symbol" : "Camera"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "manifest declares macOS 10.13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : "@available(tvOS, unavailable)",
+            "condition" : null,
+            "file" : "Sources/VideoIO/Camera.swift",
+            "kind" : "availability",
+            "line" : 11,
+            "note" : "AVCaptureSession wrapper",
+            "package" : null,
+            "symbol" : "Camera"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "visionOS absent from manifest floors",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "watchOS absent from manifest floors; no camera API there anyway — but nothing in source proves it",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

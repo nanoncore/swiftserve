@@ -1,0 +1,139 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.playback",
+      "label" : "Audio playback"
+    },
+    "labeledAt" : "2026-07-02T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Play built-in system sounds by id/name (AudioServices).",
+    "package" : {
+      "aliases" : [
+        "p-x9/swift-system-sound"
+      ],
+      "canonicalURL" : "https://github.com/p-x9/swift-system-sound",
+      "commit" : "e3f44c2d5766b0a7c3cdaacd4d61b5e1c8804794",
+      "name" : "swift-system-sound",
+      "surfaceDigest" : "fnv1a64:24c84ea1adf6b1e5",
+      "version" : "0.10.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SystemSound/SystemSound.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : "system-sound playback shim",
+            "package" : null,
+            "symbol" : "AudioServicesPlaySystemSound"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "readme",
+            "line" : null,
+            "note" : "AudioToolbox is Apple-only",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SystemSound/SystemSound.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : "system-sound playback shim",
+            "package" : null,
+            "symbol" : "AudioServicesPlaySystemSound"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SystemSound/SystemSound.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : "system-sound playback shim",
+            "package" : null,
+            "symbol" : "AudioServicesPlaySystemSound"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "empty manifest; AudioToolbox exists there, intent unstated",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "empty manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : null,
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "empty manifest",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

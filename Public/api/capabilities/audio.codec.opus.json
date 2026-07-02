@@ -1,0 +1,128 @@
+{
+  "aliases" : [
+    "opus codec"
+  ],
+  "id" : "audio.codec.opus",
+  "label" : "Opus encoding/decoding",
+  "packages" : [
+    {
+      "commit" : "5f0164b8915fb9001265c54413aa0f0efbd3df06",
+      "notes" : "Opus audio codec bindings with AVAudioFormat integration.",
+      "package" : "https://github.com/alta/swift-opus",
+      "packageName" : "swift-opus",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Opus/Opus.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "encoder/decoder namespace over libopus",
+              "permalink" : "https://github.com/alta/swift-opus/blob/0.0.2/Sources/Opus/Opus.swift#L6",
+              "symbol" : "Opus"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "C libopus could build on Linux; unverified"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Opus/Opus.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "encoder/decoder namespace over libopus",
+              "permalink" : "https://github.com/alta/swift-opus/blob/0.0.2/Sources/Opus/Opus.swift#L6",
+              "symbol" : "Opus"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Opus/Opus.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "encoder/decoder namespace over libopus",
+              "permalink" : "https://github.com/alta/swift-opus/blob/0.0.2/Sources/Opus/Opus.swift#L6",
+              "symbol" : "Opus"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Opus/Opus.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "encoder/decoder namespace over libopus",
+              "permalink" : "https://github.com/alta/swift-opus/blob/0.0.2/Sources/Opus/Opus.swift#L6",
+              "symbol" : "Opus"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors (package predates it)"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Opus/Opus.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "encoder/decoder namespace over libopus",
+              "permalink" : "https://github.com/alta/swift-opus/blob/0.0.2/Sources/Opus/Opus.swift#L6",
+              "symbol" : "Opus"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares watchOS 6"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swift-opus",
+      "version" : "0.0.2"
+    }
+  ]
+}

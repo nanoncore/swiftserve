@@ -1,0 +1,536 @@
+{
+  "aliases" : [
+    "midi",
+    "coremidi"
+  ],
+  "id" : "midi.io",
+  "label" : "MIDI input/output",
+  "packages" : [
+    {
+      "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+      "notes" : "CoreMIDI wrapper (input + output). Provably excluded on tvOS via #if !os(tvOS).",
+      "package" : "https://github.com/audiokit/audiokit",
+      "packageName" : "AudioKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "condition" : "!os(tvOS)",
+              "file" : "Sources/AudioKit/MIDI/MIDI.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/MIDI/MIDI.swift#L8",
+              "symbol" : "MIDI"
+            },
+            {
+              "condition" : "!os(tvOS)",
+              "file" : "Sources/AudioKit/MIDI/MIDI+Receiving.swift",
+              "kind" : "symbol",
+              "line" : 140,
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/MIDI/MIDI+Receiving.swift#L140",
+              "symbol" : "MIDI.openInput"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "CoreMIDI is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "condition" : "!os(tvOS)",
+              "file" : "Sources/AudioKit/MIDI/MIDI.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/MIDI/MIDI.swift#L8",
+              "symbol" : "MIDI"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "condition" : "!os(tvOS)",
+              "file" : "Sources/AudioKit/MIDI/MIDI.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/MIDI/MIDI.swift#L8",
+              "symbol" : "MIDI"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "condition" : "!os(tvOS)",
+              "file" : "Sources/AudioKit/MIDI/MIDI.swift",
+              "kind" : "guard",
+              "line" : 8,
+              "note" : "the whole MIDI subsystem is fenced off tvOS — the line that decides it",
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/MIDI/MIDI.swift#L8",
+              "symbol" : "MIDI"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "condition" : "!os(tvOS)",
+              "file" : "Sources/AudioKit/MIDI/MIDI.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "permalink" : "https://github.com/audiokit/audiokit/blob/5.7.2/Sources/AudioKit/MIDI/MIDI.swift#L8",
+              "symbol" : "MIDI"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors; MIDI symbols resolve present but intent is unstated"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "audiokit",
+      "version" : "5.7.2"
+    },
+    {
+      "commit" : "54ac94028e3825bd8e622d373b0698d196927212",
+      "notes" : "Note the trap this catches: the manifest DECLARES tvOS 12 and watchOS 4 floors, but the actual MIDI I/O objects are fenced `#if !os(tvOS) && !os(watchOS)` — it compiles there, the capability doesn't exist there.",
+      "package" : "https://github.com/orchetect/swift-midi-io",
+      "packageName" : "MIDIKitIO",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "condition" : "!os(tvOS) && !os(watchOS)",
+              "file" : "Sources/CoreMIDI/AnyMIDIEndpoint/AnyMIDIEndpoint.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "MIDI endpoint object — the I/O surface",
+              "permalink" : "https://github.com/orchetect/swift-midi-io/blob/1.1.0/Sources/CoreMIDI/AnyMIDIEndpoint/AnyMIDIEndpoint.swift#L10",
+              "symbol" : "AnyMIDIEndpoint"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "CoreMIDI is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "condition" : "!os(tvOS) && !os(watchOS)",
+              "file" : "Sources/CoreMIDI/AnyMIDIEndpoint/AnyMIDIEndpoint.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "MIDI endpoint object — the I/O surface",
+              "permalink" : "https://github.com/orchetect/swift-midi-io/blob/1.1.0/Sources/CoreMIDI/AnyMIDIEndpoint/AnyMIDIEndpoint.swift#L10",
+              "symbol" : "AnyMIDIEndpoint"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "condition" : "!os(tvOS) && !os(watchOS)",
+              "file" : "Sources/CoreMIDI/AnyMIDIEndpoint/AnyMIDIEndpoint.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "MIDI endpoint object — the I/O surface",
+              "permalink" : "https://github.com/orchetect/swift-midi-io/blob/1.1.0/Sources/CoreMIDI/AnyMIDIEndpoint/AnyMIDIEndpoint.swift#L10",
+              "symbol" : "AnyMIDIEndpoint"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "condition" : "!os(tvOS) && !os(watchOS)",
+              "file" : "Sources/CoreMIDI/AnyMIDIEndpoint/AnyMIDIEndpoint.swift",
+              "kind" : "guard",
+              "line" : 10,
+              "note" : "MIDI endpoint object — the I/O surface",
+              "permalink" : "https://github.com/orchetect/swift-midi-io/blob/1.1.0/Sources/CoreMIDI/AnyMIDIEndpoint/AnyMIDIEndpoint.swift#L10",
+              "symbol" : "AnyMIDIEndpoint"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "visionOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "condition" : "!os(tvOS) && !os(watchOS)",
+              "file" : "Sources/CoreMIDI/AnyMIDIEndpoint/AnyMIDIEndpoint.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "MIDI endpoint object — the I/O surface",
+              "permalink" : "https://github.com/orchetect/swift-midi-io/blob/1.1.0/Sources/CoreMIDI/AnyMIDIEndpoint/AnyMIDIEndpoint.swift#L10",
+              "symbol" : "AnyMIDIEndpoint"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "condition" : "!os(tvOS) && !os(watchOS)",
+              "file" : "Sources/CoreMIDI/AnyMIDIEndpoint/AnyMIDIEndpoint.swift",
+              "kind" : "guard",
+              "line" : 10,
+              "note" : "MIDI endpoint object — the I/O surface",
+              "permalink" : "https://github.com/orchetect/swift-midi-io/blob/1.1.0/Sources/CoreMIDI/AnyMIDIEndpoint/AnyMIDIEndpoint.swift#L10",
+              "symbol" : "AnyMIDIEndpoint"
+            }
+          ],
+          "status" : "unsupported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swift-midi-io",
+      "version" : "1.1.0"
+    },
+    {
+      "commit" : "c044ae3f65f14f27b2842908ef3eb550e2782bff",
+      "notes" : "MIDI messages as a Combine publisher.",
+      "package" : "https://github.com/mkj-is/combinemidi",
+      "packageName" : "CombineMIDI",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/CombineMIDI/MIDIClient.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "CoreMIDI client → Combine publisher",
+              "permalink" : "https://github.com/mkj-is/combinemidi/blob/0.3.0/Sources/CombineMIDI/MIDIClient.swift#L5",
+              "symbol" : "MIDIClient"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "CoreMIDI is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/CombineMIDI/MIDIClient.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "CoreMIDI client → Combine publisher",
+              "permalink" : "https://github.com/mkj-is/combinemidi/blob/0.3.0/Sources/CombineMIDI/MIDIClient.swift#L5",
+              "symbol" : "MIDIClient"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/CombineMIDI/MIDIClient.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "CoreMIDI client → Combine publisher",
+              "permalink" : "https://github.com/mkj-is/combinemidi/blob/0.3.0/Sources/CombineMIDI/MIDIClient.swift#L5",
+              "symbol" : "MIDIClient"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "combinemidi",
+      "version" : "0.3.0"
+    },
+    {
+      "commit" : "07cdd56620f6948a9e30aa3519b30268daea4b6f",
+      "notes" : "Lightweight CoreMIDI wrapper: discovery, connections, MIDI 1/2 parsing.",
+      "package" : "https://github.com/bradhowes/morkandmidi",
+      "packageName" : "MorkAndMIDI",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/MorkAndMIDI/MIDI.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "CoreMIDI connection manager",
+              "permalink" : "https://github.com/bradhowes/morkandmidi/blob/5.1.0/Sources/MorkAndMIDI/MIDI.swift#L10",
+              "symbol" : "MIDI"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 16"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "CoreMIDI is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/MorkAndMIDI/MIDI.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "CoreMIDI connection manager",
+              "permalink" : "https://github.com/bradhowes/morkandmidi/blob/5.1.0/Sources/MorkAndMIDI/MIDI.swift#L10",
+              "symbol" : "MIDI"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/MorkAndMIDI/MIDI.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "CoreMIDI connection manager",
+              "permalink" : "https://github.com/bradhowes/morkandmidi/blob/5.1.0/Sources/MorkAndMIDI/MIDI.swift#L10",
+              "symbol" : "MIDI"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "visionOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "morkandmidi",
+      "version" : "5.1.0"
+    },
+    {
+      "commit" : "b40e74e47f34ecba4c4e7c60f9c56f2e208b0031",
+      "notes" : "WebMIDI-shaped API over CoreMIDI.",
+      "package" : "https://github.com/adamnemecek/webmidikit",
+      "packageName" : "WebMIDIKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/WebMIDIKit/MIDIInput.swift",
+              "kind" : "symbol",
+              "line" : 13,
+              "note" : "WebMIDI-style input port",
+              "permalink" : "https://github.com/adamnemecek/webmidikit/blob/1.0.5/Sources/WebMIDIKit/MIDIInput.swift#L13",
+              "symbol" : "MIDIInput"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "CoreMIDI is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/WebMIDIKit/MIDIInput.swift",
+              "kind" : "symbol",
+              "line" : 13,
+              "note" : "WebMIDI-style input port",
+              "permalink" : "https://github.com/adamnemecek/webmidikit/blob/1.0.5/Sources/WebMIDIKit/MIDIInput.swift#L13",
+              "symbol" : "MIDIInput"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/WebMIDIKit/MIDIInput.swift",
+              "kind" : "symbol",
+              "line" : 13,
+              "note" : "WebMIDI-style input port",
+              "permalink" : "https://github.com/adamnemecek/webmidikit/blob/1.0.5/Sources/WebMIDIKit/MIDIInput.swift#L13",
+              "symbol" : "MIDIInput"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "empty manifest; CoreMIDI I/O absent on tvOS"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "empty manifest"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "empty manifest"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "webmidikit",
+      "version" : "1.0.5"
+    }
+  ]
+}
