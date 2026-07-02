@@ -3,5 +3,6 @@
   "version": "0.1.0",
   "description": "Capability truth + dependency health for Swift packages — verdicts derived from parsed source at pinned versions, with evidence permalinks. Works against the hosted index (swiftserve.dev) with zero install; the CLI adds offline checks, dependency health scans, and private-API detection.",
   "homepage": "https://swiftserve.dev",
-  "repository": "https://github.com/nanoncore/swiftserve"
+  "repository": "https://github.com/nanoncore/swiftserve",
+  "license": "FSL-1.1-ALv2"
 }

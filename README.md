@@ -301,3 +301,10 @@ Private-API detection now spans binaries (`scan-binary`), dependency artifacts
 dependency *source* (a deps × source combo), Objective-C via a real AST (libclang,
 not regex), build-time pointers, inline suppression (`// swiftserve:ignore` — the
 seam is left, not built), a GitHub Action, and any auth / accounts / persistence.
+
+## License
+
+[FSL-1.1-ALv2](LICENSE.md) — Fair Source. Use it, modify it, ship it anywhere,
+including commercially; the one thing reserved is offering SwiftServe itself as
+a competing product or service. Each release becomes Apache-2.0 two years after
+it ships.

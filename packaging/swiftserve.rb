@@ -5,7 +5,7 @@ class Swiftserve < Formula
   desc "Capability truth + dependency health for Swift packages"
   homepage "https://swiftserve.dev"
   version "0.1.0" # keep in sync with the tag
-  license "TODO: set once the repo has a LICENSE"
+  license "FSL-1.1-ALv2"
 
   on_macos do
     url "https://github.com/nanoncore/swiftserve/releases/download/v#{version}/swiftserve-v#{version}-macos-universal.tar.gz"

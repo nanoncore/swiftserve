@@ -5,8 +5,9 @@ repo is public and the first release is tagged.
 
 ## Order of operations
 
-1. Publish the repo (decides the account — everything below embeds it).
-2. Add a LICENSE file (the plugin manifests and Homebrew formula want one).
+1. ~~Publish the repo~~ DONE 2026-07-02: public at nanoncore/swiftserve.
+2. ~~Add a LICENSE file~~ DONE: FSL-1.1-ALv2 (fair source; converts to
+   Apache-2.0 per release after 2 years). Licensor: Nanoncore.
 3. Tag `v0.1.0` → `.github/workflows/release.yml` builds macOS-universal +
    Linux binaries, checksums them, and publishes the GitHub release.
 4. Create the tap repo `<account>/homebrew-tap`, copy `swiftserve.rb` into

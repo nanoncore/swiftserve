@@ -11,6 +11,7 @@
       "description": "Capability truth + dependency health for Swift packages: capability-check, find, dependency scans, private-API detection.",
       "version": "0.1.0",
       "homepage": "https://swiftserve.dev",
+      "license": "FSL-1.1-ALv2",
       "keywords": ["swift", "swiftpm", "dependencies", "capabilities", "app-store"]
     }
   ]
