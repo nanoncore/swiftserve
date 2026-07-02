@@ -1,0 +1,10 @@
+.build/
+.git/
+.swiftpm/
+.claude/
+.claude-plugin/
+assets/
+data/
+packaging/
+plugins/
+*.png

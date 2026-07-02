@@ -14,6 +14,9 @@ struct SwiftServeApp {
 
     static func main() async throws {
         let port = ProcessInfo.processInfo.environment["PORT"].flatMap(Int.init) ?? 8080
+        // Loopback for local dev; containers (Railway etc.) set HOST=0.0.0.0
+        // so the platform's edge proxy can reach the server.
+        let host = ProcessInfo.processInfo.environment["HOST"] ?? "127.0.0.1"
 
         // Enrichment is additive: with a GITHUB_TOKEN we pull live GitHub data,
         // otherwise we fall back to the always-available file-only path.
@@ -59,12 +62,12 @@ struct SwiftServeApp {
         let app = Application(
             router: router,
             configuration: .init(
-                address: .hostname("127.0.0.1", port: port),
+                address: .hostname(host, port: port),
                 serverName: "SwiftServe"
             )
         )
 
-        print("🍦 SwiftServe is scooping at http://127.0.0.1:\(port)")
+        print("🍦 SwiftServe is scooping at http://\(host):\(port)")
         print("   enrichment: \(mode)")
         try await app.runService()
     }
