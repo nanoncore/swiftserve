@@ -372,7 +372,7 @@ public enum GetPage {
     public static let repoSlug = "nanoncore/swiftserve"
     /// Flip when the first tagged release exists (binaries + Homebrew tap);
     /// until then the CLI lane shows build-from-source as the live path.
-    public static let firstReleaseCut = false
+    public static let firstReleaseCut = true
 
     /// A copy-paste command row: the command plus the "Scooped!" copy button.
     static func cmd(_ command: String) -> String {
