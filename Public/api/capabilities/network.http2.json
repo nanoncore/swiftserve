@@ -1,0 +1,661 @@
+{
+  "aliases" : [
+    "http/2",
+    "h2",
+    "multiplexed requests"
+  ],
+  "id" : "network.http2",
+  "label" : "HTTP/2",
+  "packages" : [
+    {
+      "commit" : "4603a8036d921ea999fadb742931546c341f4bd7",
+      "notes" : "HTTP/2 surface is unconditional: HTTPVersion config (.automatic/.http1Only), http2 debug initializers, response version reporting. Manifest depends on swift-nio-http2 for all platforms. README corroborates: 'Automatic HTTP/2 over HTTPS'. Blind spot: 1 ObjC file unparsed.",
+      "package" : "https://github.com/swift-server/async-http-client",
+      "packageName" : "async-http-client",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 1460,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L1460",
+              "symbol" : "HTTPClient.Configuration.HTTPVersion"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 900,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L900",
+              "symbol" : "HTTPClient.Configuration.httpVersion"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 1470,
+              "note" : ".automatic negotiates HTTP/2 over HTTPS via ALPN; README: 'Automatic HTTP/2 over HTTPS'.",
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L1470",
+              "symbol" : "HTTPClient.Configuration.HTTPVersion.automatic"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+              "kind" : "symbol",
+              "line" : 30,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift#L30",
+              "symbol" : "HTTPClientResponse.version"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 940,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L940",
+              "symbol" : "HTTPClient.Configuration.http2ConnectionDebugInitializer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 1460,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L1460",
+              "symbol" : "HTTPClient.Configuration.HTTPVersion"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 900,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L900",
+              "symbol" : "HTTPClient.Configuration.httpVersion"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 1470,
+              "note" : ".automatic negotiates HTTP/2 over HTTPS via ALPN; README: 'Automatic HTTP/2 over HTTPS'.",
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L1470",
+              "symbol" : "HTTPClient.Configuration.HTTPVersion.automatic"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+              "kind" : "symbol",
+              "line" : 30,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift#L30",
+              "symbol" : "HTTPClientResponse.version"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 940,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L940",
+              "symbol" : "HTTPClient.Configuration.http2ConnectionDebugInitializer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 1460,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L1460",
+              "symbol" : "HTTPClient.Configuration.HTTPVersion"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 900,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L900",
+              "symbol" : "HTTPClient.Configuration.httpVersion"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 1470,
+              "note" : ".automatic negotiates HTTP/2 over HTTPS via ALPN; README: 'Automatic HTTP/2 over HTTPS'.",
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L1470",
+              "symbol" : "HTTPClient.Configuration.HTTPVersion.automatic"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+              "kind" : "symbol",
+              "line" : 30,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift#L30",
+              "symbol" : "HTTPClientResponse.version"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 940,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L940",
+              "symbol" : "HTTPClient.Configuration.http2ConnectionDebugInitializer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 1460,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L1460",
+              "symbol" : "HTTPClient.Configuration.HTTPVersion"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 900,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L900",
+              "symbol" : "HTTPClient.Configuration.httpVersion"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 1470,
+              "note" : ".automatic negotiates HTTP/2 over HTTPS via ALPN; README: 'Automatic HTTP/2 over HTTPS'.",
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L1470",
+              "symbol" : "HTTPClient.Configuration.HTTPVersion.automatic"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+              "kind" : "symbol",
+              "line" : 30,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift#L30",
+              "symbol" : "HTTPClientResponse.version"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 940,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L940",
+              "symbol" : "HTTPClient.Configuration.http2ConnectionDebugInitializer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 1460,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L1460",
+              "symbol" : "HTTPClient.Configuration.HTTPVersion"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 900,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L900",
+              "symbol" : "HTTPClient.Configuration.httpVersion"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 1470,
+              "note" : ".automatic negotiates HTTP/2 over HTTPS via ALPN; README: 'Automatic HTTP/2 over HTTPS'.",
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L1470",
+              "symbol" : "HTTPClient.Configuration.HTTPVersion.automatic"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+              "kind" : "symbol",
+              "line" : 30,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift#L30",
+              "symbol" : "HTTPClientResponse.version"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 940,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L940",
+              "symbol" : "HTTPClient.Configuration.http2ConnectionDebugInitializer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 1460,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L1460",
+              "symbol" : "HTTPClient.Configuration.HTTPVersion"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 900,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L900",
+              "symbol" : "HTTPClient.Configuration.httpVersion"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 1470,
+              "note" : ".automatic negotiates HTTP/2 over HTTPS via ALPN; README: 'Automatic HTTP/2 over HTTPS'.",
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L1470",
+              "symbol" : "HTTPClient.Configuration.HTTPVersion.automatic"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+              "kind" : "symbol",
+              "line" : 30,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift#L30",
+              "symbol" : "HTTPClientResponse.version"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 940,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L940",
+              "symbol" : "HTTPClient.Configuration.http2ConnectionDebugInitializer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 1460,
+              "note" : "Public surface is unconditional on watchOS per digest; real-world socket availability for SwiftNIO-based clients on watchOS is not verifiable from this surface, so confidence is reduced.",
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L1460",
+              "symbol" : "HTTPClient.Configuration.HTTPVersion"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 900,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L900",
+              "symbol" : "HTTPClient.Configuration.httpVersion"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 1470,
+              "note" : ".automatic negotiates HTTP/2 over HTTPS via ALPN; README: 'Automatic HTTP/2 over HTTPS'.",
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L1470",
+              "symbol" : "HTTPClient.Configuration.HTTPVersion.automatic"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+              "kind" : "symbol",
+              "line" : 30,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift#L30",
+              "symbol" : "HTTPClientResponse.version"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 940,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L940",
+              "symbol" : "HTTPClient.Configuration.http2ConnectionDebugInitializer"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "async-http-client",
+      "version" : "1.35.0"
+    },
+    {
+      "commit" : "eebb5ecf8a39beea87401f014fdf87f0ce5b159d",
+      "notes" : "HummingbirdHTTP2 product in this package: HTTP2Channel, HTTP2UpgradeChannel, HTTP2ChannelConfiguration — unconditional, no platform gaps in the surface digest. HTTP/2 upgrade in practice pairs with TLS (HummingbirdTLS also in this package). watchOS has no Package.swift platform floor. Surface digest truncated (800 of 1233 decls).",
+      "package" : "https://github.com/hummingbird-project/hummingbird",
+      "packageName" : "hummingbird",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2Channel.swift#L48",
+              "symbol" : "HTTP2Channel"
+            },
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift#L20",
+              "symbol" : "HTTP2UpgradeChannel"
+            },
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2Channel.swift#L18",
+              "symbol" : "HTTP2ChannelConfiguration"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 29,
+              "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2Channel.swift#L48",
+              "symbol" : "HTTP2Channel"
+            },
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift#L20",
+              "symbol" : "HTTP2UpgradeChannel"
+            },
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2Channel.swift#L18",
+              "symbol" : "HTTP2ChannelConfiguration"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2Channel.swift#L48",
+              "symbol" : "HTTP2Channel"
+            },
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift#L20",
+              "symbol" : "HTTP2UpgradeChannel"
+            },
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2Channel.swift#L18",
+              "symbol" : "HTTP2ChannelConfiguration"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 29,
+              "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2Channel.swift#L48",
+              "symbol" : "HTTP2Channel"
+            },
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift#L20",
+              "symbol" : "HTTP2UpgradeChannel"
+            },
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2Channel.swift#L18",
+              "symbol" : "HTTP2ChannelConfiguration"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 29,
+              "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2Channel.swift#L48",
+              "symbol" : "HTTP2Channel"
+            },
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift#L20",
+              "symbol" : "HTTP2UpgradeChannel"
+            },
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2Channel.swift#L18",
+              "symbol" : "HTTP2ChannelConfiguration"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 29,
+              "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2Channel.swift#L48",
+              "symbol" : "HTTP2Channel"
+            },
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift#L20",
+              "symbol" : "HTTP2UpgradeChannel"
+            },
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2Channel.swift#L18",
+              "symbol" : "HTTP2ChannelConfiguration"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 29,
+              "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2Channel.swift#L48",
+              "symbol" : "HTTP2Channel"
+            },
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift#L20",
+              "symbol" : "HTTP2UpgradeChannel"
+            },
+            {
+              "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdHTTP2/HTTP2Channel.swift#L18",
+              "symbol" : "HTTP2ChannelConfiguration"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "hummingbird",
+      "version" : "2.25.0"
+    },
+    {
+      "commit" : "748ae8432a33e0965bbf0351fedd4e915e7f460c",
+      "notes" : "Likely supported but not provable from this digest: the checkout contains `public var supportVersions: Set<HTTPVersionMajor>` (Sources/Vapor/HTTP/Server/HTTPServer.swift line 98 in the checkout), the HTTP/2 protocol-version switch, but that decl is absent from the truncated surface digest (800 of 1967 decls) and therefore cannot anchor a supported claim. Re-label with an untruncated digest.",
+      "package" : "https://github.com/vapor/vapor",
+      "packageName" : "vapor",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.35,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift",
+              "kind" : "symbol",
+              "line" : 163,
+              "note" : "Only an HTTP2-Settings header-name constant is surfaced; not sufficient to prove HTTP/2 serving.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift#L163",
+              "symbol" : "HTTPHeaders.Name.http2Settings"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "linux" : {
+          "confidence" : 0.35,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift",
+              "kind" : "symbol",
+              "line" : 163,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift#L163",
+              "symbol" : "HTTPHeaders.Name.http2Settings"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.35,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift",
+              "kind" : "symbol",
+              "line" : 163,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift#L163",
+              "symbol" : "HTTPHeaders.Name.http2Settings"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macOS" : {
+          "confidence" : 0.35,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift",
+              "kind" : "symbol",
+              "line" : 163,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift#L163",
+              "symbol" : "HTTPHeaders.Name.http2Settings"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.35,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift",
+              "kind" : "symbol",
+              "line" : 163,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift#L163",
+              "symbol" : "HTTPHeaders.Name.http2Settings"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.35,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift",
+              "kind" : "symbol",
+              "line" : 163,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift#L163",
+              "symbol" : "HTTPHeaders.Name.http2Settings"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.35,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift",
+              "kind" : "symbol",
+              "line" : 163,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift#L163",
+              "symbol" : "HTTPHeaders.Name.http2Settings"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "vapor",
+      "version" : "4.122.0"
+    }
+  ]
+}

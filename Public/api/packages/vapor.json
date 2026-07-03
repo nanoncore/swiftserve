@@ -1,0 +1,1152 @@
+[
+  {
+    "capability" : {
+      "id" : "network.http-server",
+      "label" : "HTTP server"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Anchor claim for vapor/vapor: server-side HTTP framework (Application + HTTPServer + Routes). Digest truncated to 800 of 1967 decls, but all cited anchors are unconditional and carry no platform gaps.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/vapor/vapor",
+      "commit" : "748ae8432a33e0965bbf0351fedd4e915e7f460c",
+      "firstParty" : false,
+      "name" : "vapor",
+      "surfaceDigest" : "fnv1a64:a32abce1ef26d12c",
+      "version" : "4.122.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Application.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : "Core application/server entry point; unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "Application"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Application.swift",
+            "kind" : "symbol",
+            "line" : 187,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Application.run"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Server/HTTPServer.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPServer.Configuration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Server/HTTPServer.swift",
+            "kind" : "symbol",
+            "line" : 50,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPServer.Configuration.port"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Routing/RoutesBuilder+Group.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : "Routing surface.",
+            "package" : null,
+            "symbol" : "RoutesBuilder.grouped"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Package.swift declares .iOS(.v13).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Application.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : "No linux gap recorded; digest models linux explicitly (os(Linux)-conditional decls elsewhere in surface), so linux was evaluated.",
+            "package" : null,
+            "symbol" : "Application"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Server/HTTPServer.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPServer.Configuration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Routing/RoutesBuilder+Group.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RoutesBuilder.grouped"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Application.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : "No macCatalyst gap recorded in surface digest; decl resolves PRESENT.",
+            "package" : null,
+            "symbol" : "Application"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Server/HTTPServer.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPServer.Configuration"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Application.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Application"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Server/HTTPServer.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPServer.Configuration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Routing/RoutesBuilder+Group.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RoutesBuilder.grouped"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Package.swift declares .macOS(.v10_15).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Application.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Application"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Server/HTTPServer.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPServer.Configuration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Package.swift declares .tvOS(.v13).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Application.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : "No visionOS gap recorded in surface digest; decl resolves PRESENT.",
+            "package" : null,
+            "symbol" : "Application"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Server/HTTPServer.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : "No visionOS manifest floor in Package.swift; symbol evidence only.",
+            "package" : null,
+            "symbol" : "HTTPServer.Configuration"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Application.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Application"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Server/HTTPServer.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPServer.Configuration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Package.swift declares .watchOS(.v6). API surface compiles; runtime server-socket restrictions on watchOS are outside this label's scope.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "network.http2",
+      "label" : "HTTP/2"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Likely supported but not provable from this digest: the checkout contains `public var supportVersions: Set<HTTPVersionMajor>` (Sources/Vapor/HTTP/Server/HTTPServer.swift line 98 in the checkout), the HTTP/2 protocol-version switch, but that decl is absent from the truncated surface digest (800 of 1967 decls) and therefore cannot anchor a supported claim. Re-label with an untruncated digest.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/vapor/vapor",
+      "commit" : "748ae8432a33e0965bbf0351fedd4e915e7f460c",
+      "firstParty" : false,
+      "name" : "vapor",
+      "surfaceDigest" : "fnv1a64:a32abce1ef26d12c",
+      "version" : "4.122.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.35,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift",
+            "kind" : "symbol",
+            "line" : 163,
+            "note" : "Only an HTTP2-Settings header-name constant is surfaced; not sufficient to prove HTTP/2 serving.",
+            "package" : null,
+            "symbol" : "HTTPHeaders.Name.http2Settings"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "linux" : {
+        "confidence" : 0.35,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift",
+            "kind" : "symbol",
+            "line" : 163,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPHeaders.Name.http2Settings"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.35,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift",
+            "kind" : "symbol",
+            "line" : 163,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPHeaders.Name.http2Settings"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macOS" : {
+        "confidence" : 0.35,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift",
+            "kind" : "symbol",
+            "line" : 163,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPHeaders.Name.http2Settings"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "tvOS" : {
+        "confidence" : 0.35,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift",
+            "kind" : "symbol",
+            "line" : 163,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPHeaders.Name.http2Settings"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.35,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift",
+            "kind" : "symbol",
+            "line" : 163,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPHeaders.Name.http2Settings"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.35,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift",
+            "kind" : "symbol",
+            "line" : 163,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPHeaders.Name.http2Settings"
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "network.logging",
+      "label" : "Network logging / inspection"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Scope: server-side request logging (taxonomy alias 'request logging') via RouteLoggingMiddleware and per-request Logger. This is NOT a client-traffic inspector or network debugger; consumers wanting client-side inspection should look elsewhere.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/vapor/vapor",
+      "commit" : "748ae8432a33e0965bbf0351fedd4e915e7f460c",
+      "firstParty" : false,
+      "name" : "vapor",
+      "surfaceDigest" : "fnv1a64:a32abce1ef26d12c",
+      "version" : "4.122.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Middleware/RouteLoggingMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "Middleware that logs incoming requests; unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "RouteLoggingMiddleware"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Request/Request.swift",
+            "kind" : "symbol",
+            "line" : 187,
+            "note" : "Per-request logger.",
+            "package" : null,
+            "symbol" : "Request.logger"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Package.swift declares .iOS(.v13).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Middleware/RouteLoggingMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "No linux gap recorded; digest evaluates linux (os(Linux)-conditional decls elsewhere in surface).",
+            "package" : null,
+            "symbol" : "RouteLoggingMiddleware"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Request/Request.swift",
+            "kind" : "symbol",
+            "line" : 187,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Request.logger"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Middleware/RouteLoggingMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "No macCatalyst gap recorded in surface digest.",
+            "package" : null,
+            "symbol" : "RouteLoggingMiddleware"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Middleware/RouteLoggingMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RouteLoggingMiddleware"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Request/Request.swift",
+            "kind" : "symbol",
+            "line" : 187,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Request.logger"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Package.swift declares .macOS(.v10_15).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Middleware/RouteLoggingMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RouteLoggingMiddleware"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Package.swift declares .tvOS(.v13).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Middleware/RouteLoggingMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "No visionOS gap recorded; no visionOS manifest floor, symbol evidence only.",
+            "package" : null,
+            "symbol" : "RouteLoggingMiddleware"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Middleware/RouteLoggingMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RouteLoggingMiddleware"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Package.swift declares .watchOS(.v6).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "network.multipart-upload",
+      "label" : "Multipart upload"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Confidence held at ~0.6 because the digest anchors are media-type constants, an indirect link to multipart handling. The actual Content integration (Sources/Vapor/Multipart/FormDataDecoder+Content.swift, FormDataEncoder+Content.swift, File+Multipart.swift in the checkout, backed by the MultipartKit dependency) fell outside the truncated digest (800 of 1967 decls). Re-label with an untruncated digest to raise confidence.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/vapor/vapor",
+      "commit" : "748ae8432a33e0965bbf0351fedd4e915e7f460c",
+      "firstParty" : false,
+      "name" : "vapor",
+      "surfaceDigest" : "fnv1a64:a32abce1ef26d12c",
+      "version" : "4.122.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+            "kind" : "symbol",
+            "line" : 241,
+            "note" : "multipart media-type constant; unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "HTTPMediaType.multipart"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : "multipart/form-data media-type constant.",
+            "package" : null,
+            "symbol" : "HTTPMediaType.formData"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Package.swift declares .iOS(.v13).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+            "kind" : "symbol",
+            "line" : 241,
+            "note" : "No linux gap recorded; digest evaluates linux (os(Linux)-conditional decls elsewhere in surface).",
+            "package" : null,
+            "symbol" : "HTTPMediaType.multipart"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPMediaType.formData"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.55,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+            "kind" : "symbol",
+            "line" : 241,
+            "note" : "No macCatalyst gap recorded in surface digest.",
+            "package" : null,
+            "symbol" : "HTTPMediaType.multipart"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPMediaType.formData"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+            "kind" : "symbol",
+            "line" : 241,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPMediaType.multipart"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPMediaType.formData"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Package.swift declares .macOS(.v10_15).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.55,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+            "kind" : "symbol",
+            "line" : 241,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPMediaType.multipart"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPMediaType.formData"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Package.swift declares .tvOS(.v13).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.55,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+            "kind" : "symbol",
+            "line" : 241,
+            "note" : "No visionOS gap recorded; no visionOS manifest floor, symbol evidence only.",
+            "package" : null,
+            "symbol" : "HTTPMediaType.multipart"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPMediaType.formData"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.55,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+            "kind" : "symbol",
+            "line" : 241,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPMediaType.multipart"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPMediaType.formData"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Package.swift declares .watchOS(.v6).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "network.websockets",
+      "label" : "WebSockets"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Server-side WebSockets: route upgrade (RoutesBuilder.webSocket, Request.webSocket) and WebSocketUpgrader are in the Vapor surface; the wire implementation is delegated to the websocket-kit dependency, whose surface is not part of this digest.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/vapor/vapor",
+      "commit" : "748ae8432a33e0965bbf0351fedd4e915e7f460c",
+      "firstParty" : false,
+      "name" : "vapor",
+      "surfaceDigest" : "fnv1a64:a32abce1ef26d12c",
+      "version" : "4.122.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift",
+            "kind" : "symbol",
+            "line" : 144,
+            "note" : "Server-side WebSocket upgrade; unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "WebSocketUpgrader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Concurrency/WebSocket+Concurrency.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : "WebSocket route registration.",
+            "package" : null,
+            "symbol" : "RoutesBuilder.webSocket"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Concurrency/WebSocket+Concurrency.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Request.webSocket"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Package.swift declares .iOS(.v13).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift",
+            "kind" : "symbol",
+            "line" : 144,
+            "note" : "No linux gap recorded; digest evaluates linux (os(Linux)-conditional decls elsewhere in surface).",
+            "package" : null,
+            "symbol" : "WebSocketUpgrader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Concurrency/WebSocket+Concurrency.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RoutesBuilder.webSocket"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift",
+            "kind" : "symbol",
+            "line" : 144,
+            "note" : "No macCatalyst gap recorded in surface digest.",
+            "package" : null,
+            "symbol" : "WebSocketUpgrader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Concurrency/WebSocket+Concurrency.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RoutesBuilder.webSocket"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift",
+            "kind" : "symbol",
+            "line" : 144,
+            "note" : null,
+            "package" : null,
+            "symbol" : "WebSocketUpgrader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Concurrency/WebSocket+Concurrency.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RoutesBuilder.webSocket"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Package.swift declares .macOS(.v10_15).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift",
+            "kind" : "symbol",
+            "line" : 144,
+            "note" : null,
+            "package" : null,
+            "symbol" : "WebSocketUpgrader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Concurrency/WebSocket+Concurrency.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RoutesBuilder.webSocket"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Package.swift declares .tvOS(.v13).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift",
+            "kind" : "symbol",
+            "line" : 144,
+            "note" : "No visionOS gap recorded; no visionOS manifest floor, symbol evidence only.",
+            "package" : null,
+            "symbol" : "WebSocketUpgrader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Concurrency/WebSocket+Concurrency.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RoutesBuilder.webSocket"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift",
+            "kind" : "symbol",
+            "line" : 144,
+            "note" : null,
+            "package" : null,
+            "symbol" : "WebSocketUpgrader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vapor/Concurrency/WebSocket+Concurrency.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RoutesBuilder.webSocket"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Package.swift declares .watchOS(.v6).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

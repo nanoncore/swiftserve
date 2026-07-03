@@ -8,6 +8,561 @@
   "label" : "Network logging / inspection",
   "packages" : [
     {
+      "commit" : "4603a8036d921ea999fadb742931546c341f4bd7",
+      "notes" : "Request logging via swift-log integration: Logger parameters on execute/get/post/etc. and a per-task logger. This is log-emission integration, not a full network inspector; confidence kept moderate. All anchors unconditional across platforms.",
+      "package" : "https://github.com/swift-server/async-http-client",
+      "packageName" : "async-http-client",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "note" : "Accepts a swift-log Logger for per-request logging.",
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39",
+              "symbol" : "HTTPClient.execute"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 390,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L390",
+              "symbol" : "HTTPClient.get"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPHandler.swift",
+              "kind" : "symbol",
+              "line" : 927,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPHandler.swift#L927",
+              "symbol" : "HTTPClient.Task.logger"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "note" : "Accepts a swift-log Logger for per-request logging.",
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39",
+              "symbol" : "HTTPClient.execute"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 390,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L390",
+              "symbol" : "HTTPClient.get"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPHandler.swift",
+              "kind" : "symbol",
+              "line" : 927,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPHandler.swift#L927",
+              "symbol" : "HTTPClient.Task.logger"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "note" : "Accepts a swift-log Logger for per-request logging.",
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39",
+              "symbol" : "HTTPClient.execute"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 390,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L390",
+              "symbol" : "HTTPClient.get"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPHandler.swift",
+              "kind" : "symbol",
+              "line" : 927,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPHandler.swift#L927",
+              "symbol" : "HTTPClient.Task.logger"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "note" : "Accepts a swift-log Logger for per-request logging.",
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39",
+              "symbol" : "HTTPClient.execute"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 390,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L390",
+              "symbol" : "HTTPClient.get"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPHandler.swift",
+              "kind" : "symbol",
+              "line" : 927,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPHandler.swift#L927",
+              "symbol" : "HTTPClient.Task.logger"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "note" : "Accepts a swift-log Logger for per-request logging.",
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39",
+              "symbol" : "HTTPClient.execute"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 390,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L390",
+              "symbol" : "HTTPClient.get"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPHandler.swift",
+              "kind" : "symbol",
+              "line" : 927,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPHandler.swift#L927",
+              "symbol" : "HTTPClient.Task.logger"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "note" : "Accepts a swift-log Logger for per-request logging.",
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39",
+              "symbol" : "HTTPClient.execute"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 390,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L390",
+              "symbol" : "HTTPClient.get"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPHandler.swift",
+              "kind" : "symbol",
+              "line" : 927,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPHandler.swift#L927",
+              "symbol" : "HTTPClient.Task.logger"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "note" : "Public surface is unconditional on watchOS per digest; real-world socket availability for SwiftNIO-based clients on watchOS is not verifiable from this surface, so confidence is reduced.",
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39",
+              "symbol" : "HTTPClient.execute"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 390,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L390",
+              "symbol" : "HTTPClient.get"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPHandler.swift",
+              "kind" : "symbol",
+              "line" : 927,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPHandler.swift#L927",
+              "symbol" : "HTTPClient.Task.logger"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "async-http-client",
+      "version" : "1.35.0"
+    },
+    {
+      "commit" : "eebb5ecf8a39beea87401f014fdf87f0ce5b159d",
+      "notes" : "Server-side request logging via LogRequestsMiddleware (with HeaderFilter for header redaction) — unconditional, no platform gaps in the surface digest. This is request logging middleware, not a client-side network inspector. watchOS has no Package.swift platform floor. Surface digest truncated (800 of 1233 decls).",
+      "package" : "https://github.com/hummingbird-project/hummingbird",
+      "packageName" : "hummingbird",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L18",
+              "symbol" : "LogRequestsMiddleware"
+            },
+            {
+              "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L20",
+              "symbol" : "LogRequestsMiddleware.HeaderFilter"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 29,
+              "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L18",
+              "symbol" : "LogRequestsMiddleware"
+            },
+            {
+              "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L20",
+              "symbol" : "LogRequestsMiddleware.HeaderFilter"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L18",
+              "symbol" : "LogRequestsMiddleware"
+            },
+            {
+              "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L20",
+              "symbol" : "LogRequestsMiddleware.HeaderFilter"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 29,
+              "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L18",
+              "symbol" : "LogRequestsMiddleware"
+            },
+            {
+              "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L20",
+              "symbol" : "LogRequestsMiddleware.HeaderFilter"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 29,
+              "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L18",
+              "symbol" : "LogRequestsMiddleware"
+            },
+            {
+              "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L20",
+              "symbol" : "LogRequestsMiddleware.HeaderFilter"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 29,
+              "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L18",
+              "symbol" : "LogRequestsMiddleware"
+            },
+            {
+              "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L20",
+              "symbol" : "LogRequestsMiddleware.HeaderFilter"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 29,
+              "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L18",
+              "symbol" : "LogRequestsMiddleware"
+            },
+            {
+              "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L20",
+              "symbol" : "LogRequestsMiddleware.HeaderFilter"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "hummingbird",
+      "version" : "2.25.0"
+    },
+    {
+      "commit" : "748ae8432a33e0965bbf0351fedd4e915e7f460c",
+      "notes" : "Scope: server-side request logging (taxonomy alias 'request logging') via RouteLoggingMiddleware and per-request Logger. This is NOT a client-traffic inspector or network debugger; consumers wanting client-side inspection should look elsewhere.",
+      "package" : "https://github.com/vapor/vapor",
+      "packageName" : "vapor",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/Middleware/RouteLoggingMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "Middleware that logs incoming requests; unconditional, no platform gaps.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Middleware/RouteLoggingMiddleware.swift#L6",
+              "symbol" : "RouteLoggingMiddleware"
+            },
+            {
+              "file" : "Sources/Vapor/Request/Request.swift",
+              "kind" : "symbol",
+              "line" : 187,
+              "note" : "Per-request logger.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Request/Request.swift#L187",
+              "symbol" : "Request.logger"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Package.swift declares .iOS(.v13).",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/Middleware/RouteLoggingMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "No linux gap recorded; digest evaluates linux (os(Linux)-conditional decls elsewhere in surface).",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Middleware/RouteLoggingMiddleware.swift#L6",
+              "symbol" : "RouteLoggingMiddleware"
+            },
+            {
+              "file" : "Sources/Vapor/Request/Request.swift",
+              "kind" : "symbol",
+              "line" : 187,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Request/Request.swift#L187",
+              "symbol" : "Request.logger"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/Middleware/RouteLoggingMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "No macCatalyst gap recorded in surface digest.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Middleware/RouteLoggingMiddleware.swift#L6",
+              "symbol" : "RouteLoggingMiddleware"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/Middleware/RouteLoggingMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Middleware/RouteLoggingMiddleware.swift#L6",
+              "symbol" : "RouteLoggingMiddleware"
+            },
+            {
+              "file" : "Sources/Vapor/Request/Request.swift",
+              "kind" : "symbol",
+              "line" : 187,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Request/Request.swift#L187",
+              "symbol" : "Request.logger"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Package.swift declares .macOS(.v10_15).",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/Middleware/RouteLoggingMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Middleware/RouteLoggingMiddleware.swift#L6",
+              "symbol" : "RouteLoggingMiddleware"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Package.swift declares .tvOS(.v13).",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/Middleware/RouteLoggingMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "No visionOS gap recorded; no visionOS manifest floor, symbol evidence only.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Middleware/RouteLoggingMiddleware.swift#L6",
+              "symbol" : "RouteLoggingMiddleware"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/Middleware/RouteLoggingMiddleware.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Middleware/RouteLoggingMiddleware.swift#L6",
+              "symbol" : "RouteLoggingMiddleware"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Package.swift declares .watchOS(.v6).",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "vapor",
+      "version" : "4.122.0"
+    },
+    {
       "commit" : "94b92731d370c129bb771e9c18f69b0a44ccca5c",
       "notes" : "Persistent URLSession logging (LoggerStore) with an on-device inspector UI.",
       "package" : "https://github.com/kean/pulse",

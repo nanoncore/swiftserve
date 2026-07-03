@@ -7,6 +7,421 @@
   "label" : "Request stubbing / mocking",
   "packages" : [
     {
+      "commit" : "81eb92b6d5cbea9dac154becedf316c05189a47a",
+      "notes" : "APNSTestServer is a dedicated library product: an in-process mock APNs server (start/shutdown, records SentNotification, simulates APNs error responses such as 410 Unregistered) for stubbing push-delivery requests in tests. Scoped to mocking the APNs service specifically, not a general request-stubbing framework. Built on NIOHTTP2/NIOSSL per the manifest.",
+      "package" : "https://github.com/swift-server-community/apnswift",
+      "packageName" : "apnswift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "note" : "Mock server that simulates APNs APIs; unconditional decl, no platform gaps in surface.",
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L48",
+              "symbol" : "APNSTestServer"
+            },
+            {
+              "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+              "kind" : "symbol",
+              "line" : 126,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L126",
+              "symbol" : "APNSTestServer.getSentNotifications"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 6,
+              "note" : "Manifest declares .iOS(.v16) floor.",
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Package.swift#L6"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "note" : "NIO/NIOHTTP2/NIOSSL-based mock APNs server; no linux gap in surface. Used by the package's own test target.",
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L48",
+              "symbol" : "APNSTestServer"
+            },
+            {
+              "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L102",
+              "symbol" : "APNSTestServer.start"
+            },
+            {
+              "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+              "kind" : "symbol",
+              "line" : 126,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L126",
+              "symbol" : "APNSTestServer.getSentNotifications"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "note" : "Unconditional decl, no macCatalyst gap in surface; no explicit Catalyst handling in the package.",
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L48",
+              "symbol" : "APNSTestServer"
+            },
+            {
+              "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L102",
+              "symbol" : "APNSTestServer.start"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L48",
+              "symbol" : "APNSTestServer"
+            },
+            {
+              "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L102",
+              "symbol" : "APNSTestServer.start"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 6,
+              "note" : "Manifest declares .macOS(.v13) floor.",
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Package.swift#L6"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L48",
+              "symbol" : "APNSTestServer"
+            },
+            {
+              "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L102",
+              "symbol" : "APNSTestServer.start"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 6,
+              "note" : "Manifest declares .tvOS(.v16) floor.",
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Package.swift#L6"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "note" : "Unconditional decl, no visionOS gap in surface; no manifest floor declared for visionOS.",
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L48",
+              "symbol" : "APNSTestServer"
+            },
+            {
+              "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L102",
+              "symbol" : "APNSTestServer.start"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "note" : "Decl unconditional and present per surface; running a NIO-based listening server on watchOS is unlikely to be exercised in practice.",
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L48",
+              "symbol" : "APNSTestServer"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 6,
+              "note" : "Manifest declares .watchOS(.v9) floor.",
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Package.swift#L6"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "apnswift",
+      "version" : "6.6.0"
+    },
+    {
+      "commit" : "5a8d18cc239dd3c4b31c9e13e671dbcef5e4072a",
+      "notes" : "ApolloTestSupport product surfaces test mocks (Mock<T>, MockObject, AnyMock, MockFieldValue) for building mocked GraphQL response/model data in tests. This is response-model mocking for generated operation models, NOT URL-level request stubbing; no MockURLSession/MockNetworkTransport-style API is in this surface digest (digest truncated at 800/1134 decls). Confidence reduced accordingly.",
+      "package" : "https://github.com/apollographql/apollo-ios",
+      "packageName" : "apollo-ios",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/ApolloTestSupport/TestMock.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L6",
+              "symbol" : "Mock"
+            },
+            {
+              "file" : "Sources/ApolloTestSupport/TestMock.swift",
+              "kind" : "symbol",
+              "line" : 153,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L153",
+              "symbol" : "MockObject"
+            },
+            {
+              "file" : "Sources/ApolloTestSupport/TestMock.swift",
+              "kind" : "symbol",
+              "line" : 149,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L149",
+              "symbol" : "AnyMock"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "note" : "README platform badge lists iOS 15+ | macOS 12+ | tvOS 15+ | watchOS 8+ | visionOS 1+; Linux is not mentioned"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/ApolloTestSupport/TestMock.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "Surface digest resolves this decl present on macCatalyst (no platform gap, no #if conditions anywhere in the surface); Package.swift declares no explicit macCatalyst floor (inherits iOS).",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L6",
+              "symbol" : "Mock"
+            },
+            {
+              "file" : "Sources/ApolloTestSupport/TestMock.swift",
+              "kind" : "symbol",
+              "line" : 153,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L153",
+              "symbol" : "MockObject"
+            },
+            {
+              "file" : "Sources/ApolloTestSupport/TestMock.swift",
+              "kind" : "symbol",
+              "line" : 149,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L149",
+              "symbol" : "AnyMock"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/ApolloTestSupport/TestMock.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L6",
+              "symbol" : "Mock"
+            },
+            {
+              "file" : "Sources/ApolloTestSupport/TestMock.swift",
+              "kind" : "symbol",
+              "line" : 153,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L153",
+              "symbol" : "MockObject"
+            },
+            {
+              "file" : "Sources/ApolloTestSupport/TestMock.swift",
+              "kind" : "symbol",
+              "line" : 149,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L149",
+              "symbol" : "AnyMock"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/ApolloTestSupport/TestMock.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L6",
+              "symbol" : "Mock"
+            },
+            {
+              "file" : "Sources/ApolloTestSupport/TestMock.swift",
+              "kind" : "symbol",
+              "line" : 153,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L153",
+              "symbol" : "MockObject"
+            },
+            {
+              "file" : "Sources/ApolloTestSupport/TestMock.swift",
+              "kind" : "symbol",
+              "line" : 149,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L149",
+              "symbol" : "AnyMock"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/ApolloTestSupport/TestMock.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L6",
+              "symbol" : "Mock"
+            },
+            {
+              "file" : "Sources/ApolloTestSupport/TestMock.swift",
+              "kind" : "symbol",
+              "line" : 153,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L153",
+              "symbol" : "MockObject"
+            },
+            {
+              "file" : "Sources/ApolloTestSupport/TestMock.swift",
+              "kind" : "symbol",
+              "line" : 149,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L149",
+              "symbol" : "AnyMock"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/ApolloTestSupport/TestMock.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L6",
+              "symbol" : "Mock"
+            },
+            {
+              "file" : "Sources/ApolloTestSupport/TestMock.swift",
+              "kind" : "symbol",
+              "line" : 153,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L153",
+              "symbol" : "MockObject"
+            },
+            {
+              "file" : "Sources/ApolloTestSupport/TestMock.swift",
+              "kind" : "symbol",
+              "line" : 149,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L149",
+              "symbol" : "AnyMock"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "apollo-ios",
+      "version" : "2.2.0"
+    },
+    {
       "commit" : "c263811c1f3dbf002be9bd83107f7cdc38992b26",
       "notes" : "Built-in stubbing: every target carries sampleData; StubBehavior swaps the network out in tests.",
       "package" : "https://github.com/moya/moya",

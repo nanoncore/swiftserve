@@ -1,0 +1,280 @@
+[
+  {
+    "capability" : {
+      "id" : "network.websockets",
+      "label" : "WebSockets"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "All 67 decls in the surface digest are unconditional (no #if conditions, no platform gaps). Manifest declares floors only for macOS/iOS/watchOS/tvOS; visionOS and macCatalyst rely on symbol presence alone, so their confidence is lowered. Only network.websockets is claimed: the package exposes no general HTTP client/server, gRPC, or other taxonomy capability at its public surface.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/vapor/websocket-kit",
+      "commit" : "90bbbdab3ede12c803cfbe91646f291c092517a3",
+      "firstParty" : false,
+      "name" : "websocket-kit",
+      "surfaceDigest" : "fnv1a64:ddcdc5069a463db2",
+      "version" : "2.16.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebSocketKit/WebSocket.swift",
+            "kind" : "symbol",
+            "line" : 9,
+            "note" : "Core WebSocket class; no platform gaps in surface digest",
+            "package" : null,
+            "symbol" : "WebSocket"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebSocketKit/WebSocket+Connect.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "Client connection entry point, unconditional",
+            "package" : null,
+            "symbol" : "WebSocket.connect"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebSocketKit/WebSocket.swift",
+            "kind" : "symbol",
+            "line" : 161,
+            "note" : "Frame send API, unconditional",
+            "package" : null,
+            "symbol" : "WebSocket.send"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Manifest declares .iOS(.v13) floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebSocketKit/WebSocket.swift",
+            "kind" : "symbol",
+            "line" : 9,
+            "note" : "Present per surface digest (no linux gap); SwiftNIO-based server-side package",
+            "package" : null,
+            "symbol" : "WebSocket"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebSocketKit/WebSocketHandler.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : "Server-side channel setup, unconditional",
+            "package" : null,
+            "symbol" : "WebSocket.server"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebSocketKit/WebSocketClient.swift",
+            "kind" : "symbol",
+            "line" : 66,
+            "note" : "Client connect API, unconditional",
+            "package" : null,
+            "symbol" : "WebSocketClient.connect"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebSocketKit/WebSocket.swift",
+            "kind" : "symbol",
+            "line" : 9,
+            "note" : "Present per surface digest (no macCatalyst gap); no #if platform conditions anywhere in surface",
+            "package" : null,
+            "symbol" : "WebSocket"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebSocketKit/WebSocket+Connect.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "Client connection entry point, unconditional; no explicit macCatalyst manifest floor, hence reduced confidence",
+            "package" : null,
+            "symbol" : "WebSocket.connect"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebSocketKit/WebSocket.swift",
+            "kind" : "symbol",
+            "line" : 9,
+            "note" : "Core WebSocket class; no platform gaps in surface digest",
+            "package" : null,
+            "symbol" : "WebSocket"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebSocketKit/WebSocket+Connect.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "Client connection entry point, unconditional",
+            "package" : null,
+            "symbol" : "WebSocket.connect"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebSocketKit/WebSocketHandler.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : "Server-side channel setup, unconditional",
+            "package" : null,
+            "symbol" : "WebSocket.server"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Manifest declares .macOS(.v10_15) floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebSocketKit/WebSocket.swift",
+            "kind" : "symbol",
+            "line" : 9,
+            "note" : "Core WebSocket class; no platform gaps in surface digest",
+            "package" : null,
+            "symbol" : "WebSocket"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebSocketKit/WebSocket+Connect.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "Client connection entry point, unconditional",
+            "package" : null,
+            "symbol" : "WebSocket.connect"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Manifest declares .tvOS(.v13) floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebSocketKit/WebSocket.swift",
+            "kind" : "symbol",
+            "line" : 9,
+            "note" : "Present per surface digest (no visionOS gap); no #if platform conditions anywhere in surface",
+            "package" : null,
+            "symbol" : "WebSocket"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebSocketKit/WebSocket+Connect.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "Client connection entry point, unconditional; no visionOS manifest floor declared, hence reduced confidence",
+            "package" : null,
+            "symbol" : "WebSocket.connect"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebSocketKit/WebSocket.swift",
+            "kind" : "symbol",
+            "line" : 9,
+            "note" : "Core WebSocket class; no platform gaps in surface digest",
+            "package" : null,
+            "symbol" : "WebSocket"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/WebSocketKit/WebSocket+Connect.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "Client connection entry point, unconditional",
+            "package" : null,
+            "symbol" : "WebSocket.connect"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Manifest declares .watchOS(.v6) floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

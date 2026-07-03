@@ -21,12 +21,48 @@
       ]
     },
     {
+      "id": "network.graphql",
+      "label": "GraphQL client",
+      "aliases": [
+        "graphql",
+        "graphql queries",
+        "apollo"
+      ]
+    },
+    {
+      "id": "network.grpc",
+      "label": "gRPC",
+      "aliases": [
+        "grpc",
+        "protobuf rpc",
+        "remote procedure call"
+      ]
+    },
+    {
       "id": "network.http-client",
       "label": "HTTP client",
       "aliases": [
         "http requests",
         "rest client",
         "networking"
+      ]
+    },
+    {
+      "id": "network.http-server",
+      "label": "HTTP server",
+      "aliases": [
+        "web framework",
+        "server framework",
+        "routing"
+      ]
+    },
+    {
+      "id": "network.http2",
+      "label": "HTTP/2",
+      "aliases": [
+        "http/2",
+        "h2",
+        "multiplexed requests"
       ]
     },
     {
@@ -44,6 +80,24 @@
       "aliases": [
         "multipart form data",
         "file upload"
+      ]
+    },
+    {
+      "id": "network.oauth",
+      "label": "OAuth flows",
+      "aliases": [
+        "oauth2",
+        "authorization code flow",
+        "sign in with"
+      ]
+    },
+    {
+      "id": "network.push-notifications",
+      "label": "Push notification delivery",
+      "aliases": [
+        "apns",
+        "push provider",
+        "apple push notification service"
       ]
     },
     {

@@ -1,0 +1,1116 @@
+[
+  {
+    "capability" : {
+      "id" : "network.http-client",
+      "label" : "HTTP client"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Core capability of the package. All anchors are unconditional (no #if, no per-platform gaps). SSWG package; Linux anchors resolve PRESENT in the surface digest. Package.swift declares no platforms: floor (defaults apply), so no manifestPlatforms evidence is claimed. Blind spot: 1 ObjC file unparsed; confidence kept at/below 0.9.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/swift-server/async-http-client",
+      "commit" : "4603a8036d921ea999fadb742931546c341f4bd7",
+      "firstParty" : false,
+      "name" : "async-http-client",
+      "surfaceDigest" : "fnv1a64:088d9f20328c91c4",
+      "version" : "1.35.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 70,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientRequest"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientResponse"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/Singleton.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.shared"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 70,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientRequest"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientResponse"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/Singleton.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.shared"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 70,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientRequest"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientResponse"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/Singleton.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.shared"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 70,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientRequest"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientResponse"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/Singleton.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.shared"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 70,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientRequest"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientResponse"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/Singleton.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.shared"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 70,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientRequest"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientResponse"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/Singleton.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.shared"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 70,
+            "note" : "Public surface is unconditional on watchOS per digest; real-world socket availability for SwiftNIO-based clients on watchOS is not verifiable from this surface, so confidence is reduced.",
+            "package" : null,
+            "symbol" : "HTTPClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientRequest"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientResponse"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/Singleton.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.shared"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "network.http2",
+      "label" : "HTTP/2"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "HTTP/2 surface is unconditional: HTTPVersion config (.automatic/.http1Only), http2 debug initializers, response version reporting. Manifest depends on swift-nio-http2 for all platforms. README corroborates: 'Automatic HTTP/2 over HTTPS'. Blind spot: 1 ObjC file unparsed.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/swift-server/async-http-client",
+      "commit" : "4603a8036d921ea999fadb742931546c341f4bd7",
+      "firstParty" : false,
+      "name" : "async-http-client",
+      "surfaceDigest" : "fnv1a64:088d9f20328c91c4",
+      "version" : "1.35.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 1460,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.HTTPVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 900,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.httpVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 1470,
+            "note" : ".automatic negotiates HTTP/2 over HTTPS via ALPN; README: 'Automatic HTTP/2 over HTTPS'.",
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.HTTPVersion.automatic"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientResponse.version"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 940,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.http2ConnectionDebugInitializer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 1460,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.HTTPVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 900,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.httpVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 1470,
+            "note" : ".automatic negotiates HTTP/2 over HTTPS via ALPN; README: 'Automatic HTTP/2 over HTTPS'.",
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.HTTPVersion.automatic"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientResponse.version"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 940,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.http2ConnectionDebugInitializer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 1460,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.HTTPVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 900,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.httpVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 1470,
+            "note" : ".automatic negotiates HTTP/2 over HTTPS via ALPN; README: 'Automatic HTTP/2 over HTTPS'.",
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.HTTPVersion.automatic"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientResponse.version"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 940,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.http2ConnectionDebugInitializer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 1460,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.HTTPVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 900,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.httpVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 1470,
+            "note" : ".automatic negotiates HTTP/2 over HTTPS via ALPN; README: 'Automatic HTTP/2 over HTTPS'.",
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.HTTPVersion.automatic"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientResponse.version"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 940,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.http2ConnectionDebugInitializer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 1460,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.HTTPVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 900,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.httpVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 1470,
+            "note" : ".automatic negotiates HTTP/2 over HTTPS via ALPN; README: 'Automatic HTTP/2 over HTTPS'.",
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.HTTPVersion.automatic"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientResponse.version"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 940,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.http2ConnectionDebugInitializer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 1460,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.HTTPVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 900,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.httpVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 1470,
+            "note" : ".automatic negotiates HTTP/2 over HTTPS via ALPN; README: 'Automatic HTTP/2 over HTTPS'.",
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.HTTPVersion.automatic"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientResponse.version"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 940,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.http2ConnectionDebugInitializer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 1460,
+            "note" : "Public surface is unconditional on watchOS per digest; real-world socket availability for SwiftNIO-based clients on watchOS is not verifiable from this surface, so confidence is reduced.",
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.HTTPVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 900,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.httpVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 1470,
+            "note" : ".automatic negotiates HTTP/2 over HTTPS via ALPN; README: 'Automatic HTTP/2 over HTTPS'.",
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.HTTPVersion.automatic"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClientResponse.version"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 940,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Configuration.http2ConnectionDebugInitializer"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "network.logging",
+      "label" : "Network logging / inspection"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Request logging via swift-log integration: Logger parameters on execute/get/post/etc. and a per-task logger. This is log-emission integration, not a full network inspector; confidence kept moderate. All anchors unconditional across platforms.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/swift-server/async-http-client",
+      "commit" : "4603a8036d921ea999fadb742931546c341f4bd7",
+      "firstParty" : false,
+      "name" : "async-http-client",
+      "surfaceDigest" : "fnv1a64:088d9f20328c91c4",
+      "version" : "1.35.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : "Accepts a swift-log Logger for per-request logging.",
+            "package" : null,
+            "symbol" : "HTTPClient.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 390,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.get"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPHandler.swift",
+            "kind" : "symbol",
+            "line" : 927,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Task.logger"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : "Accepts a swift-log Logger for per-request logging.",
+            "package" : null,
+            "symbol" : "HTTPClient.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 390,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.get"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPHandler.swift",
+            "kind" : "symbol",
+            "line" : 927,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Task.logger"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : "Accepts a swift-log Logger for per-request logging.",
+            "package" : null,
+            "symbol" : "HTTPClient.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 390,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.get"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPHandler.swift",
+            "kind" : "symbol",
+            "line" : 927,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Task.logger"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : "Accepts a swift-log Logger for per-request logging.",
+            "package" : null,
+            "symbol" : "HTTPClient.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 390,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.get"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPHandler.swift",
+            "kind" : "symbol",
+            "line" : 927,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Task.logger"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : "Accepts a swift-log Logger for per-request logging.",
+            "package" : null,
+            "symbol" : "HTTPClient.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 390,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.get"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPHandler.swift",
+            "kind" : "symbol",
+            "line" : 927,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Task.logger"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : "Accepts a swift-log Logger for per-request logging.",
+            "package" : null,
+            "symbol" : "HTTPClient.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 390,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.get"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPHandler.swift",
+            "kind" : "symbol",
+            "line" : 927,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Task.logger"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : "Public surface is unconditional on watchOS per digest; real-world socket availability for SwiftNIO-based clients on watchOS is not verifiable from this surface, so confidence is reduced.",
+            "package" : null,
+            "symbol" : "HTTPClient.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+            "kind" : "symbol",
+            "line" : 390,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.get"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/AsyncHTTPClient/HTTPHandler.swift",
+            "kind" : "symbol",
+            "line" : 927,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPClient.Task.logger"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

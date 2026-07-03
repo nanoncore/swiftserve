@@ -146,6 +146,647 @@
       "version" : "2.101.2"
     },
     {
+      "commit" : "748ae8432a33e0965bbf0351fedd4e915e7f460c",
+      "notes" : "Server-side WebSockets: route upgrade (RoutesBuilder.webSocket, Request.webSocket) and WebSocketUpgrader are in the Vapor surface; the wire implementation is delegated to the websocket-kit dependency, whose surface is not part of this digest.",
+      "package" : "https://github.com/vapor/vapor",
+      "packageName" : "vapor",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift",
+              "kind" : "symbol",
+              "line" : 144,
+              "note" : "Server-side WebSocket upgrade; unconditional, no platform gaps.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift#L144",
+              "symbol" : "WebSocketUpgrader"
+            },
+            {
+              "file" : "Sources/Vapor/Concurrency/WebSocket+Concurrency.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "note" : "WebSocket route registration.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Concurrency/WebSocket+Concurrency.swift#L46",
+              "symbol" : "RoutesBuilder.webSocket"
+            },
+            {
+              "file" : "Sources/Vapor/Concurrency/WebSocket+Concurrency.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Concurrency/WebSocket+Concurrency.swift#L10",
+              "symbol" : "Request.webSocket"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Package.swift declares .iOS(.v13).",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift",
+              "kind" : "symbol",
+              "line" : 144,
+              "note" : "No linux gap recorded; digest evaluates linux (os(Linux)-conditional decls elsewhere in surface).",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift#L144",
+              "symbol" : "WebSocketUpgrader"
+            },
+            {
+              "file" : "Sources/Vapor/Concurrency/WebSocket+Concurrency.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Concurrency/WebSocket+Concurrency.swift#L46",
+              "symbol" : "RoutesBuilder.webSocket"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift",
+              "kind" : "symbol",
+              "line" : 144,
+              "note" : "No macCatalyst gap recorded in surface digest.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift#L144",
+              "symbol" : "WebSocketUpgrader"
+            },
+            {
+              "file" : "Sources/Vapor/Concurrency/WebSocket+Concurrency.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Concurrency/WebSocket+Concurrency.swift#L46",
+              "symbol" : "RoutesBuilder.webSocket"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift",
+              "kind" : "symbol",
+              "line" : 144,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift#L144",
+              "symbol" : "WebSocketUpgrader"
+            },
+            {
+              "file" : "Sources/Vapor/Concurrency/WebSocket+Concurrency.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Concurrency/WebSocket+Concurrency.swift#L46",
+              "symbol" : "RoutesBuilder.webSocket"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Package.swift declares .macOS(.v10_15).",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift",
+              "kind" : "symbol",
+              "line" : 144,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift#L144",
+              "symbol" : "WebSocketUpgrader"
+            },
+            {
+              "file" : "Sources/Vapor/Concurrency/WebSocket+Concurrency.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Concurrency/WebSocket+Concurrency.swift#L46",
+              "symbol" : "RoutesBuilder.webSocket"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Package.swift declares .tvOS(.v13).",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift",
+              "kind" : "symbol",
+              "line" : 144,
+              "note" : "No visionOS gap recorded; no visionOS manifest floor, symbol evidence only.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift#L144",
+              "symbol" : "WebSocketUpgrader"
+            },
+            {
+              "file" : "Sources/Vapor/Concurrency/WebSocket+Concurrency.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Concurrency/WebSocket+Concurrency.swift#L46",
+              "symbol" : "RoutesBuilder.webSocket"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift",
+              "kind" : "symbol",
+              "line" : 144,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift#L144",
+              "symbol" : "WebSocketUpgrader"
+            },
+            {
+              "file" : "Sources/Vapor/Concurrency/WebSocket+Concurrency.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Concurrency/WebSocket+Concurrency.swift#L46",
+              "symbol" : "RoutesBuilder.webSocket"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Package.swift declares .watchOS(.v6).",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "vapor",
+      "version" : "4.122.0"
+    },
+    {
+      "commit" : "90bbbdab3ede12c803cfbe91646f291c092517a3",
+      "notes" : "All 67 decls in the surface digest are unconditional (no #if conditions, no platform gaps). Manifest declares floors only for macOS/iOS/watchOS/tvOS; visionOS and macCatalyst rely on symbol presence alone, so their confidence is lowered. Only network.websockets is claimed: the package exposes no general HTTP client/server, gRPC, or other taxonomy capability at its public surface.",
+      "package" : "https://github.com/vapor/websocket-kit",
+      "packageName" : "websocket-kit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/WebSocketKit/WebSocket.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "Core WebSocket class; no platform gaps in surface digest",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Sources/WebSocketKit/WebSocket.swift#L9",
+              "symbol" : "WebSocket"
+            },
+            {
+              "file" : "Sources/WebSocketKit/WebSocket+Connect.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "Client connection entry point, unconditional",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Sources/WebSocketKit/WebSocket+Connect.swift#L15",
+              "symbol" : "WebSocket.connect"
+            },
+            {
+              "file" : "Sources/WebSocketKit/WebSocket.swift",
+              "kind" : "symbol",
+              "line" : 161,
+              "note" : "Frame send API, unconditional",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Sources/WebSocketKit/WebSocket.swift#L161",
+              "symbol" : "WebSocket.send"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Manifest declares .iOS(.v13) floor",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/WebSocketKit/WebSocket.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "Present per surface digest (no linux gap); SwiftNIO-based server-side package",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Sources/WebSocketKit/WebSocket.swift#L9",
+              "symbol" : "WebSocket"
+            },
+            {
+              "file" : "Sources/WebSocketKit/WebSocketHandler.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "note" : "Server-side channel setup, unconditional",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Sources/WebSocketKit/WebSocketHandler.swift#L64",
+              "symbol" : "WebSocket.server"
+            },
+            {
+              "file" : "Sources/WebSocketKit/WebSocketClient.swift",
+              "kind" : "symbol",
+              "line" : 66,
+              "note" : "Client connect API, unconditional",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Sources/WebSocketKit/WebSocketClient.swift#L66",
+              "symbol" : "WebSocketClient.connect"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/WebSocketKit/WebSocket.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "Present per surface digest (no macCatalyst gap); no #if platform conditions anywhere in surface",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Sources/WebSocketKit/WebSocket.swift#L9",
+              "symbol" : "WebSocket"
+            },
+            {
+              "file" : "Sources/WebSocketKit/WebSocket+Connect.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "Client connection entry point, unconditional; no explicit macCatalyst manifest floor, hence reduced confidence",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Sources/WebSocketKit/WebSocket+Connect.swift#L15",
+              "symbol" : "WebSocket.connect"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/WebSocketKit/WebSocket.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "Core WebSocket class; no platform gaps in surface digest",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Sources/WebSocketKit/WebSocket.swift#L9",
+              "symbol" : "WebSocket"
+            },
+            {
+              "file" : "Sources/WebSocketKit/WebSocket+Connect.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "Client connection entry point, unconditional",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Sources/WebSocketKit/WebSocket+Connect.swift#L15",
+              "symbol" : "WebSocket.connect"
+            },
+            {
+              "file" : "Sources/WebSocketKit/WebSocketHandler.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "note" : "Server-side channel setup, unconditional",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Sources/WebSocketKit/WebSocketHandler.swift#L64",
+              "symbol" : "WebSocket.server"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Manifest declares .macOS(.v10_15) floor",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/WebSocketKit/WebSocket.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "Core WebSocket class; no platform gaps in surface digest",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Sources/WebSocketKit/WebSocket.swift#L9",
+              "symbol" : "WebSocket"
+            },
+            {
+              "file" : "Sources/WebSocketKit/WebSocket+Connect.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "Client connection entry point, unconditional",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Sources/WebSocketKit/WebSocket+Connect.swift#L15",
+              "symbol" : "WebSocket.connect"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Manifest declares .tvOS(.v13) floor",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/WebSocketKit/WebSocket.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "Present per surface digest (no visionOS gap); no #if platform conditions anywhere in surface",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Sources/WebSocketKit/WebSocket.swift#L9",
+              "symbol" : "WebSocket"
+            },
+            {
+              "file" : "Sources/WebSocketKit/WebSocket+Connect.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "Client connection entry point, unconditional; no visionOS manifest floor declared, hence reduced confidence",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Sources/WebSocketKit/WebSocket+Connect.swift#L15",
+              "symbol" : "WebSocket.connect"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/WebSocketKit/WebSocket.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "Core WebSocket class; no platform gaps in surface digest",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Sources/WebSocketKit/WebSocket.swift#L9",
+              "symbol" : "WebSocket"
+            },
+            {
+              "file" : "Sources/WebSocketKit/WebSocket+Connect.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "Client connection entry point, unconditional",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Sources/WebSocketKit/WebSocket+Connect.swift#L15",
+              "symbol" : "WebSocket.connect"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Manifest declares .watchOS(.v6) floor",
+              "permalink" : "https://github.com/vapor/websocket-kit/blob/2.16.2/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "websocket-kit",
+      "version" : "2.16.2"
+    },
+    {
+      "commit" : "5a8d18cc239dd3c4b31c9e13e671dbcef5e4072a",
+      "notes" : "WebSocket transport for GraphQL subscriptions via the ApolloWebSocket product: WebSocketTransport actor (graphql-ws / subscriptions-transport-ws style transport over an abstracted URLSessionWebSocketTask, see WebSocketTask in Sources/ApolloWebSocket/WebSocketURLSession.swift). Not a general-purpose WebSocket client.",
+      "package" : "https://github.com/apollographql/apollo-ios",
+      "packageName" : "apollo-ios",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/ApolloWebSocket/WebSocketTransport.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloWebSocket/WebSocketTransport.swift#L5",
+              "symbol" : "WebSocketTransport"
+            },
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 603,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L603",
+              "symbol" : "ApolloClient.subscribe"
+            },
+            {
+              "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+              "kind" : "symbol",
+              "line" : 143,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloAPI/GraphQLOperation.swift#L143",
+              "symbol" : "GraphQLSubscription"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "note" : "README platform badge lists iOS 15+ | macOS 12+ | tvOS 15+ | watchOS 8+ | visionOS 1+; Linux is not mentioned"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/ApolloWebSocket/WebSocketTransport.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Surface digest resolves this decl present on macCatalyst (no platform gap, no #if conditions anywhere in the surface); Package.swift declares no explicit macCatalyst floor (inherits iOS).",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloWebSocket/WebSocketTransport.swift#L5",
+              "symbol" : "WebSocketTransport"
+            },
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 603,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L603",
+              "symbol" : "ApolloClient.subscribe"
+            },
+            {
+              "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+              "kind" : "symbol",
+              "line" : 143,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloAPI/GraphQLOperation.swift#L143",
+              "symbol" : "GraphQLSubscription"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/ApolloWebSocket/WebSocketTransport.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloWebSocket/WebSocketTransport.swift#L5",
+              "symbol" : "WebSocketTransport"
+            },
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 603,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L603",
+              "symbol" : "ApolloClient.subscribe"
+            },
+            {
+              "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+              "kind" : "symbol",
+              "line" : 143,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloAPI/GraphQLOperation.swift#L143",
+              "symbol" : "GraphQLSubscription"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/ApolloWebSocket/WebSocketTransport.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloWebSocket/WebSocketTransport.swift#L5",
+              "symbol" : "WebSocketTransport"
+            },
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 603,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L603",
+              "symbol" : "ApolloClient.subscribe"
+            },
+            {
+              "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+              "kind" : "symbol",
+              "line" : 143,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloAPI/GraphQLOperation.swift#L143",
+              "symbol" : "GraphQLSubscription"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/ApolloWebSocket/WebSocketTransport.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloWebSocket/WebSocketTransport.swift#L5",
+              "symbol" : "WebSocketTransport"
+            },
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 603,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L603",
+              "symbol" : "ApolloClient.subscribe"
+            },
+            {
+              "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+              "kind" : "symbol",
+              "line" : 143,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloAPI/GraphQLOperation.swift#L143",
+              "symbol" : "GraphQLSubscription"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/ApolloWebSocket/WebSocketTransport.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloWebSocket/WebSocketTransport.swift#L5",
+              "symbol" : "WebSocketTransport"
+            },
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 603,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L603",
+              "symbol" : "ApolloClient.subscribe"
+            },
+            {
+              "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+              "kind" : "symbol",
+              "line" : 143,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloAPI/GraphQLOperation.swift#L143",
+              "symbol" : "GraphQLSubscription"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "apollo-ios",
+      "version" : "2.2.0"
+    },
+    {
       "commit" : "c6bfd1af48efcc9a9ad203665db12375ba6b145a",
       "notes" : "RFC 6455 client with TLS/compression. Server-side (WebSocketServer) is separately fenced to Network.framework platforms and marked unavailable on watchOS.",
       "package" : "https://github.com/daltoniam/starscream",

@@ -1,0 +1,528 @@
+[
+  {
+    "capability" : {
+      "id" : "network.push-notifications",
+      "label" : "Push notification delivery"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Server-side APNs PROVIDER (sends pushes), not an on-device receiver. Core APNSClient and all sendXNotification APIs are unconditional across the surface. The optional APNSURLSession sub-module (APNSURLSessionClient, Sources/APNSURLSession) is #if-guarded to os(macOS)||os(iOS)||os(watchOS)||os(tvOS) and marked absent on linux and visionOS in the surface, but the primary AsyncHTTPClient-based client covers those platforms.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/swift-server-community/apnswift",
+      "commit" : "81eb92b6d5cbea9dac154becedf316c05189a47a",
+      "firstParty" : false,
+      "name" : "apnswift",
+      "surfaceDigest" : "fnv1a64:c5215c3dae31e6e8",
+      "version" : "6.6.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNS/APNSClient.swift",
+            "kind" : "symbol",
+            "line" : 32,
+            "note" : "Unconditional AsyncHTTPClient-based APNs provider client; no platform gaps in surface.",
+            "package" : null,
+            "symbol" : "APNSClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSCore/Alert/APNSClient+Alert.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSClientProtocol.sendAlertNotification"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSCore/Alert/APNSAlertNotification.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSAlertNotification"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 6,
+            "note" : "Manifest declares .iOS(.v16) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNS/APNSClient.swift",
+            "kind" : "symbol",
+            "line" : 32,
+            "note" : "Server-side APNs provider built on AsyncHTTPClient/SwiftNIO; no linux gap in surface. Repo ships a Dockerfile and the package is SSWG-graduated.",
+            "package" : null,
+            "symbol" : "APNSClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNS/APNSClient.swift",
+            "kind" : "symbol",
+            "line" : 133,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSClient.send"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSCore/Alert/APNSClient+Alert.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSClientProtocol.sendAlertNotification"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "\"A non-blocking Swift module for sending remote Apple Push Notification requests to APNS built on AsyncHttpClient\"; README includes a Server Example section.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNS/APNSClient.swift",
+            "kind" : "symbol",
+            "line" : 32,
+            "note" : "Unconditional decl, no macCatalyst gap in surface; no explicit Catalyst handling in the package.",
+            "package" : null,
+            "symbol" : "APNSClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSCore/Alert/APNSClient+Alert.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSClientProtocol.sendAlertNotification"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNS/APNSClient.swift",
+            "kind" : "symbol",
+            "line" : 32,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSCore/Alert/APNSClient+Alert.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSClientProtocol.sendAlertNotification"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 6,
+            "note" : "Manifest declares .macOS(.v13) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNS/APNSClient.swift",
+            "kind" : "symbol",
+            "line" : 32,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSCore/Alert/APNSClient+Alert.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSClientProtocol.sendAlertNotification"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 6,
+            "note" : "Manifest declares .tvOS(.v16) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNS/APNSClient.swift",
+            "kind" : "symbol",
+            "line" : 32,
+            "note" : "Unconditional decl, no visionOS gap in surface. Note the APNSURLSession sub-module IS visionOS-absent (see notes), but the core client is not.",
+            "package" : null,
+            "symbol" : "APNSClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSCore/Alert/APNSClient+Alert.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSClientProtocol.sendAlertNotification"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNS/APNSClient.swift",
+            "kind" : "symbol",
+            "line" : 32,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSCore/Alert/APNSClient+Alert.swift",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSClientProtocol.sendAlertNotification"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 6,
+            "note" : "Manifest declares .watchOS(.v9) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "network.request-mocking",
+      "label" : "Request stubbing / mocking"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "APNSTestServer is a dedicated library product: an in-process mock APNs server (start/shutdown, records SentNotification, simulates APNs error responses such as 410 Unregistered) for stubbing push-delivery requests in tests. Scoped to mocking the APNs service specifically, not a general request-stubbing framework. Built on NIOHTTP2/NIOSSL per the manifest.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/swift-server-community/apnswift",
+      "commit" : "81eb92b6d5cbea9dac154becedf316c05189a47a",
+      "firstParty" : false,
+      "name" : "apnswift",
+      "surfaceDigest" : "fnv1a64:c5215c3dae31e6e8",
+      "version" : "6.6.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : "Mock server that simulates APNs APIs; unconditional decl, no platform gaps in surface.",
+            "package" : null,
+            "symbol" : "APNSTestServer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+            "kind" : "symbol",
+            "line" : 126,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSTestServer.getSentNotifications"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 6,
+            "note" : "Manifest declares .iOS(.v16) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : "NIO/NIOHTTP2/NIOSSL-based mock APNs server; no linux gap in surface. Used by the package's own test target.",
+            "package" : null,
+            "symbol" : "APNSTestServer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSTestServer.start"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+            "kind" : "symbol",
+            "line" : 126,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSTestServer.getSentNotifications"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : "Unconditional decl, no macCatalyst gap in surface; no explicit Catalyst handling in the package.",
+            "package" : null,
+            "symbol" : "APNSTestServer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSTestServer.start"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSTestServer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSTestServer.start"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 6,
+            "note" : "Manifest declares .macOS(.v13) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSTestServer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSTestServer.start"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 6,
+            "note" : "Manifest declares .tvOS(.v16) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : "Unconditional decl, no visionOS gap in surface; no manifest floor declared for visionOS.",
+            "package" : null,
+            "symbol" : "APNSTestServer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : null,
+            "package" : null,
+            "symbol" : "APNSTestServer.start"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/APNSTestServer/APNSTestServer.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : "Decl unconditional and present per surface; running a NIO-based listening server on watchOS is unlikely to be exercised in practice.",
+            "package" : null,
+            "symbol" : "APNSTestServer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 6,
+            "note" : "Manifest declares .watchOS(.v9) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

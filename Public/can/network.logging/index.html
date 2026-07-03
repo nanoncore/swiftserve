@@ -34,7 +34,7 @@
           <a class="chip" href="/menu/#image">Images<span class="chip-count">7</span></a>
           <a class="chip" href="/menu/#media">Media<span class="chip-count">4</span></a>
           <a class="chip" href="/menu/#midi">MIDI<span class="chip-count">2</span></a>
-          <a class="chip chip-current" href="/menu/#network" aria-current="true">Networking<span class="chip-count">9</span></a>
+          <a class="chip chip-current" href="/menu/#network" aria-current="true">Networking<span class="chip-count">15</span></a>
           <a class="chip" href="/menu/#speech">Speech<span class="chip-count">2</span></a>
           <a class="chip" href="/menu/#storage">Storage<span class="chip-count">14</span></a>
           <a class="chip" href="/menu/#ui">Ui<span class="chip-count">14</span></a>
@@ -48,6 +48,228 @@
       <table class="truth-table" data-capability="network.logging">
         <thead><tr><th scope="col">Package</th><th scope="col">iOS</th><th scope="col">macOS</th><th scope="col">watchOS</th><th scope="col">tvOS</th><th scope="col">visionOS</th><th scope="col">Linux</th><th scope="col">Catalyst</th></tr></thead>
         <tbody>
+<tr data-package="async-http-client" data-supported="iOS macOS watchOS tvOS visionOS Linux Catalyst">
+  <th scope="row">
+    <div class="row-head">
+      <div>
+        <a href="/package/async-http-client/">async-http-client</a> <span class="pill pill-accent">full menu</span>
+        <span class="provenance">as of 1.35.0</span>
+      </div>
+      <a class="details-btn" href="/package/async-http-client/" aria-label="async-http-client details">Details</a>
+    </div>
+  </th>
+  <td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on iOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 1.35.0</p>
+      <ul><li><code>HTTPClient.execute</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Accepts a swift-log Logger for per-request logging.</span></li><li><code>HTTPClient.get</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPClient.swift:390</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L390" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClient.Task.logger</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPHandler.swift:927</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPHandler.swift#L927" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on macOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 1.35.0</p>
+      <ul><li><code>HTTPClient.execute</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Accepts a swift-log Logger for per-request logging.</span></li><li><code>HTTPClient.get</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPClient.swift:390</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L390" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClient.Task.logger</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPHandler.swift:927</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPHandler.swift#L927" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on watchOS, confidence 0.65"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.65 · as of 1.35.0</p>
+      <ul><li><code>HTTPClient.execute</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Public surface is unconditional on watchOS per digest; real-world socket availability for SwiftNIO-based clients on watchOS is not verifiable from this surface, so confidence is reduced.</span></li><li><code>HTTPClient.get</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPClient.swift:390</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L390" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClient.Task.logger</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPHandler.swift:927</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPHandler.swift#L927" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on tvOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 1.35.0</p>
+      <ul><li><code>HTTPClient.execute</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Accepts a swift-log Logger for per-request logging.</span></li><li><code>HTTPClient.get</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPClient.swift:390</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L390" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClient.Task.logger</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPHandler.swift:927</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPHandler.swift#L927" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on visionOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 1.35.0</p>
+      <ul><li><code>HTTPClient.execute</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Accepts a swift-log Logger for per-request logging.</span></li><li><code>HTTPClient.get</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPClient.swift:390</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L390" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClient.Task.logger</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPHandler.swift:927</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPHandler.swift#L927" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on Linux, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 1.35.0</p>
+      <ul><li><code>HTTPClient.execute</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Accepts a swift-log Logger for per-request logging.</span></li><li><code>HTTPClient.get</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPClient.swift:390</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L390" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClient.Task.logger</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPHandler.swift:927</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPHandler.swift#L927" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on Catalyst, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 1.35.0</p>
+      <ul><li><code>HTTPClient.execute</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Accepts a swift-log Logger for per-request logging.</span></li><li><code>HTTPClient.get</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPClient.swift:390</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L390" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClient.Task.logger</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPHandler.swift:927</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPHandler.swift#L927" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+</tr>
+<tr data-package="hummingbird" data-supported="iOS macOS watchOS tvOS visionOS Linux Catalyst">
+  <th scope="row">
+    <div class="row-head">
+      <div>
+        <a href="/package/hummingbird/">hummingbird</a> <span class="pill pill-accent">full menu</span>
+        <span class="provenance">as of 2.25.0</span>
+      </div>
+      <a class="details-btn" href="/package/hummingbird/" aria-label="hummingbird details">Details</a>
+    </div>
+  </th>
+  <td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on iOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 2.25.0</p>
+      <ul><li><code>LogRequestsMiddleware</code><br /><span class="evidence-loc">Sources/Hummingbird/Middleware/LogRequestMiddleware.swift:18</span><br /><a class="evidence-link" href="https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L18" rel="noopener">View the line on GitHub →</a></li><li><code>LogRequestsMiddleware.HeaderFilter</code><br /><span class="evidence-loc">Sources/Hummingbird/Middleware/LogRequestMiddleware.swift:20</span><br /><a class="evidence-link" href="https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L20" rel="noopener">View the line on GitHub →</a></li><li><span class="evidence-loc">Package.swift:29</span><br /><a class="evidence-link" href="https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on macOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 2.25.0</p>
+      <ul><li><code>LogRequestsMiddleware</code><br /><span class="evidence-loc">Sources/Hummingbird/Middleware/LogRequestMiddleware.swift:18</span><br /><a class="evidence-link" href="https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L18" rel="noopener">View the line on GitHub →</a></li><li><code>LogRequestsMiddleware.HeaderFilter</code><br /><span class="evidence-loc">Sources/Hummingbird/Middleware/LogRequestMiddleware.swift:20</span><br /><a class="evidence-link" href="https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L20" rel="noopener">View the line on GitHub →</a></li><li><span class="evidence-loc">Package.swift:29</span><br /><a class="evidence-link" href="https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on watchOS, confidence 0.65"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.65 · as of 2.25.0</p>
+      <ul><li><code>LogRequestsMiddleware</code><br /><span class="evidence-loc">Sources/Hummingbird/Middleware/LogRequestMiddleware.swift:18</span><br /><a class="evidence-link" href="https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L18" rel="noopener">View the line on GitHub →</a></li><li><code>LogRequestsMiddleware.HeaderFilter</code><br /><span class="evidence-loc">Sources/Hummingbird/Middleware/LogRequestMiddleware.swift:20</span><br /><a class="evidence-link" href="https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L20" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on tvOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 2.25.0</p>
+      <ul><li><code>LogRequestsMiddleware</code><br /><span class="evidence-loc">Sources/Hummingbird/Middleware/LogRequestMiddleware.swift:18</span><br /><a class="evidence-link" href="https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L18" rel="noopener">View the line on GitHub →</a></li><li><code>LogRequestsMiddleware.HeaderFilter</code><br /><span class="evidence-loc">Sources/Hummingbird/Middleware/LogRequestMiddleware.swift:20</span><br /><a class="evidence-link" href="https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L20" rel="noopener">View the line on GitHub →</a></li><li><span class="evidence-loc">Package.swift:29</span><br /><a class="evidence-link" href="https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on visionOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 2.25.0</p>
+      <ul><li><code>LogRequestsMiddleware</code><br /><span class="evidence-loc">Sources/Hummingbird/Middleware/LogRequestMiddleware.swift:18</span><br /><a class="evidence-link" href="https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L18" rel="noopener">View the line on GitHub →</a></li><li><code>LogRequestsMiddleware.HeaderFilter</code><br /><span class="evidence-loc">Sources/Hummingbird/Middleware/LogRequestMiddleware.swift:20</span><br /><a class="evidence-link" href="https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L20" rel="noopener">View the line on GitHub →</a></li><li><span class="evidence-loc">Package.swift:29</span><br /><a class="evidence-link" href="https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on Linux, confidence 0.75"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.75 · as of 2.25.0</p>
+      <ul><li><code>LogRequestsMiddleware</code><br /><span class="evidence-loc">Sources/Hummingbird/Middleware/LogRequestMiddleware.swift:18</span><br /><a class="evidence-link" href="https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L18" rel="noopener">View the line on GitHub →</a></li><li><code>LogRequestsMiddleware.HeaderFilter</code><br /><span class="evidence-loc">Sources/Hummingbird/Middleware/LogRequestMiddleware.swift:20</span><br /><a class="evidence-link" href="https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L20" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on Catalyst, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 2.25.0</p>
+      <ul><li><code>LogRequestsMiddleware</code><br /><span class="evidence-loc">Sources/Hummingbird/Middleware/LogRequestMiddleware.swift:18</span><br /><a class="evidence-link" href="https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L18" rel="noopener">View the line on GitHub →</a></li><li><code>LogRequestsMiddleware.HeaderFilter</code><br /><span class="evidence-loc">Sources/Hummingbird/Middleware/LogRequestMiddleware.swift:20</span><br /><a class="evidence-link" href="https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Middleware/LogRequestMiddleware.swift#L20" rel="noopener">View the line on GitHub →</a></li><li><span class="evidence-loc">Package.swift:29</span><br /><a class="evidence-link" href="https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)</span></li></ul>
+    </div>
+  </details>
+</td>
+</tr>
+<tr data-package="vapor" data-supported="iOS macOS watchOS tvOS visionOS Linux Catalyst">
+  <th scope="row">
+    <div class="row-head">
+      <div>
+        <a href="/package/vapor/">vapor</a> <span class="pill pill-accent">full menu</span>
+        <span class="provenance">as of 4.122.0</span>
+      </div>
+      <a class="details-btn" href="/package/vapor/" aria-label="vapor details">Details</a>
+    </div>
+  </th>
+  <td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on iOS, confidence 0.70"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.70 · as of 4.122.0</p>
+      <ul><li><code>RouteLoggingMiddleware</code><br /><span class="evidence-loc">Sources/Vapor/Middleware/RouteLoggingMiddleware.swift:6</span><br /><a class="evidence-link" href="https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Middleware/RouteLoggingMiddleware.swift#L6" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Middleware that logs incoming requests; unconditional, no platform gaps.</span></li><li><code>Request.logger</code><br /><span class="evidence-loc">Sources/Vapor/Request/Request.swift:187</span><br /><a class="evidence-link" href="https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Request/Request.swift#L187" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Per-request logger.</span></li><li><span class="evidence-loc">Package.swift:8</span><br /><a class="evidence-link" href="https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L8" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Package.swift declares .iOS(.v13).</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on macOS, confidence 0.70"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.70 · as of 4.122.0</p>
+      <ul><li><code>RouteLoggingMiddleware</code><br /><span class="evidence-loc">Sources/Vapor/Middleware/RouteLoggingMiddleware.swift:6</span><br /><a class="evidence-link" href="https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Middleware/RouteLoggingMiddleware.swift#L6" rel="noopener">View the line on GitHub →</a></li><li><code>Request.logger</code><br /><span class="evidence-loc">Sources/Vapor/Request/Request.swift:187</span><br /><a class="evidence-link" href="https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Request/Request.swift#L187" rel="noopener">View the line on GitHub →</a></li><li><span class="evidence-loc">Package.swift:7</span><br /><a class="evidence-link" href="https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L7" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Package.swift declares .macOS(.v10_15).</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on watchOS, confidence 0.65"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.65 · as of 4.122.0</p>
+      <ul><li><code>RouteLoggingMiddleware</code><br /><span class="evidence-loc">Sources/Vapor/Middleware/RouteLoggingMiddleware.swift:6</span><br /><a class="evidence-link" href="https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Middleware/RouteLoggingMiddleware.swift#L6" rel="noopener">View the line on GitHub →</a></li><li><span class="evidence-loc">Package.swift:10</span><br /><a class="evidence-link" href="https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L10" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Package.swift declares .watchOS(.v6).</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on tvOS, confidence 0.65"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.65 · as of 4.122.0</p>
+      <ul><li><code>RouteLoggingMiddleware</code><br /><span class="evidence-loc">Sources/Vapor/Middleware/RouteLoggingMiddleware.swift:6</span><br /><a class="evidence-link" href="https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Middleware/RouteLoggingMiddleware.swift#L6" rel="noopener">View the line on GitHub →</a></li><li><span class="evidence-loc">Package.swift:9</span><br /><a class="evidence-link" href="https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L9" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Package.swift declares .tvOS(.v13).</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on visionOS, confidence 0.60"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.60 · as of 4.122.0</p>
+      <ul><li><code>RouteLoggingMiddleware</code><br /><span class="evidence-loc">Sources/Vapor/Middleware/RouteLoggingMiddleware.swift:6</span><br /><a class="evidence-link" href="https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Middleware/RouteLoggingMiddleware.swift#L6" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">No visionOS gap recorded; no visionOS manifest floor, symbol evidence only.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on Linux, confidence 0.70"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.70 · as of 4.122.0</p>
+      <ul><li><code>RouteLoggingMiddleware</code><br /><span class="evidence-loc">Sources/Vapor/Middleware/RouteLoggingMiddleware.swift:6</span><br /><a class="evidence-link" href="https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Middleware/RouteLoggingMiddleware.swift#L6" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">No linux gap recorded; digest evaluates linux (os(Linux)-conditional decls elsewhere in surface).</span></li><li><code>Request.logger</code><br /><span class="evidence-loc">Sources/Vapor/Request/Request.swift:187</span><br /><a class="evidence-link" href="https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Request/Request.swift#L187" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on Catalyst, confidence 0.60"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.60 · as of 4.122.0</p>
+      <ul><li><code>RouteLoggingMiddleware</code><br /><span class="evidence-loc">Sources/Vapor/Middleware/RouteLoggingMiddleware.swift:6</span><br /><a class="evidence-link" href="https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Middleware/RouteLoggingMiddleware.swift#L6" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">No macCatalyst gap recorded in surface digest.</span></li></ul>
+    </div>
+  </details>
+</td>
+</tr>
 <tr data-package="pulse" data-supported="iOS macOS watchOS tvOS visionOS Catalyst">
   <th scope="row">
     <div class="row-head">
@@ -129,7 +351,7 @@
     </section>
   </main>
   <footer class="site-footer">
-    <p>Served fresh · 74 capabilities × 107 packages · 201 records · data v1</p>
+    <p>Served fresh · 80 capabilities × 115 packages · 225 records · data v1</p>
     <p>Every verdict links to the exact source line that decides it. <a href="/about/">How it works</a></p>
     <p>Made refreshingly cool from Paris, France</p>
   </footer>

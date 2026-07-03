@@ -652,33 +652,13 @@
     },
     {
       "aliases" : [
-        "http requests",
-        "rest client",
-        "networking"
+        "graphql",
+        "graphql queries",
+        "apollo"
       ],
       "domain" : "network",
-      "id" : "network.http-client",
-      "label" : "HTTP client",
-      "n" : 2,
-      "p" : {
-        "iOS" : 2,
-        "linux" : 0,
-        "macCatalyst" : 2,
-        "macOS" : 2,
-        "tvOS" : 2,
-        "visionOS" : 1,
-        "watchOS" : 2
-      }
-    },
-    {
-      "aliases" : [
-        "network debugging",
-        "request logging",
-        "network inspector"
-      ],
-      "domain" : "network",
-      "id" : "network.logging",
-      "label" : "Network logging / inspection",
+      "id" : "network.graphql",
+      "label" : "GraphQL client",
       "n" : 1,
       "p" : {
         "iOS" : 1,
@@ -692,16 +672,156 @@
     },
     {
       "aliases" : [
+        "grpc",
+        "protobuf rpc",
+        "remote procedure call"
+      ],
+      "domain" : "network",
+      "id" : "network.grpc",
+      "label" : "gRPC",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 1,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "http requests",
+        "rest client",
+        "networking"
+      ],
+      "domain" : "network",
+      "id" : "network.http-client",
+      "label" : "HTTP client",
+      "n" : 4,
+      "p" : {
+        "iOS" : 4,
+        "linux" : 1,
+        "macCatalyst" : 4,
+        "macOS" : 4,
+        "tvOS" : 4,
+        "visionOS" : 2,
+        "watchOS" : 4
+      }
+    },
+    {
+      "aliases" : [
+        "web framework",
+        "server framework",
+        "routing"
+      ],
+      "domain" : "network",
+      "id" : "network.http-server",
+      "label" : "HTTP server",
+      "n" : 2,
+      "p" : {
+        "iOS" : 2,
+        "linux" : 2,
+        "macCatalyst" : 2,
+        "macOS" : 2,
+        "tvOS" : 2,
+        "visionOS" : 2,
+        "watchOS" : 2
+      }
+    },
+    {
+      "aliases" : [
+        "http/2",
+        "h2",
+        "multiplexed requests"
+      ],
+      "domain" : "network",
+      "id" : "network.http2",
+      "label" : "HTTP/2",
+      "n" : 3,
+      "p" : {
+        "iOS" : 2,
+        "linux" : 2,
+        "macCatalyst" : 2,
+        "macOS" : 2,
+        "tvOS" : 2,
+        "visionOS" : 2,
+        "watchOS" : 2
+      }
+    },
+    {
+      "aliases" : [
+        "network debugging",
+        "request logging",
+        "network inspector"
+      ],
+      "domain" : "network",
+      "id" : "network.logging",
+      "label" : "Network logging / inspection",
+      "n" : 4,
+      "p" : {
+        "iOS" : 4,
+        "linux" : 3,
+        "macCatalyst" : 4,
+        "macOS" : 4,
+        "tvOS" : 4,
+        "visionOS" : 4,
+        "watchOS" : 4
+      }
+    },
+    {
+      "aliases" : [
         "multipart form data",
         "file upload"
       ],
       "domain" : "network",
       "id" : "network.multipart-upload",
       "label" : "Multipart upload",
+      "n" : 4,
+      "p" : {
+        "iOS" : 4,
+        "linux" : 1,
+        "macCatalyst" : 4,
+        "macOS" : 4,
+        "tvOS" : 4,
+        "visionOS" : 3,
+        "watchOS" : 4
+      }
+    },
+    {
+      "aliases" : [
+        "oauth2",
+        "authorization code flow",
+        "sign in with"
+      ],
+      "domain" : "network",
+      "id" : "network.oauth",
+      "label" : "OAuth flows",
       "n" : 1,
       "p" : {
         "iOS" : 1,
         "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 0,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "apns",
+        "push provider",
+        "apple push notification service"
+      ],
+      "domain" : "network",
+      "id" : "network.push-notifications",
+      "label" : "Push notification delivery",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 1,
         "macCatalyst" : 1,
         "macOS" : 1,
         "tvOS" : 1,
@@ -737,15 +857,15 @@
       "domain" : "network",
       "id" : "network.request-mocking",
       "label" : "Request stubbing / mocking",
-      "n" : 1,
+      "n" : 3,
       "p" : {
-        "iOS" : 1,
-        "linux" : 0,
-        "macCatalyst" : 1,
-        "macOS" : 1,
-        "tvOS" : 1,
-        "visionOS" : 0,
-        "watchOS" : 1
+        "iOS" : 3,
+        "linux" : 1,
+        "macCatalyst" : 3,
+        "macOS" : 3,
+        "tvOS" : 3,
+        "visionOS" : 2,
+        "watchOS" : 3
       }
     },
     {
@@ -756,15 +876,15 @@
       "domain" : "network",
       "id" : "network.retry",
       "label" : "Request retry / backoff",
-      "n" : 1,
+      "n" : 3,
       "p" : {
-        "iOS" : 1,
-        "linux" : 0,
-        "macCatalyst" : 1,
-        "macOS" : 1,
-        "tvOS" : 1,
-        "visionOS" : 1,
-        "watchOS" : 1
+        "iOS" : 3,
+        "linux" : 1,
+        "macCatalyst" : 3,
+        "macOS" : 3,
+        "tvOS" : 3,
+        "visionOS" : 3,
+        "watchOS" : 3
       }
     },
     {
@@ -796,15 +916,15 @@
       "domain" : "network",
       "id" : "network.websockets",
       "label" : "WebSockets",
-      "n" : 2,
+      "n" : 5,
       "p" : {
-        "iOS" : 2,
-        "linux" : 1,
-        "macCatalyst" : 2,
-        "macOS" : 2,
-        "tvOS" : 2,
-        "visionOS" : 2,
-        "watchOS" : 2
+        "iOS" : 5,
+        "linux" : 3,
+        "macCatalyst" : 5,
+        "macOS" : 5,
+        "tvOS" : 5,
+        "visionOS" : 5,
+        "watchOS" : 5
       }
     },
     {
@@ -1526,6 +1646,33 @@
     },
     {
       "aliases" : [
+
+      ],
+      "caps" : 2,
+      "fp" : false,
+      "name" : "apnswift",
+      "slug" : "apnswift"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 5,
+      "fp" : false,
+      "name" : "apollo-ios",
+      "slug" : "apollo-ios"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 3,
+      "fp" : false,
+      "name" : "async-http-client",
+      "slug" : "async-http-client"
+    },
+    {
+      "aliases" : [
         "AudioKit/AudioKit"
       ],
       "caps" : 6,
@@ -1832,6 +1979,15 @@
     },
     {
       "aliases" : [
+
+      ],
+      "caps" : 2,
+      "fp" : false,
+      "name" : "grpc-swift",
+      "slug" : "grpc-swift"
+    },
+    {
+      "aliases" : [
         "fcanas/hlscore"
       ],
       "caps" : 1,
@@ -1856,6 +2012,15 @@
       "fp" : false,
       "name" : "HLSVideoCache",
       "slug" : "hlsvideocache"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 3,
+      "fp" : false,
+      "name" : "hummingbird",
+      "slug" : "hummingbird"
     },
     {
       "aliases" : [
@@ -2023,6 +2188,15 @@
       "fp" : false,
       "name" : "Nuke",
       "slug" : "nuke"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 3,
+      "fp" : false,
+      "name" : "oauthswift",
+      "slug" : "oauthswift"
     },
     {
       "aliases" : [
@@ -2415,6 +2589,15 @@
     },
     {
       "aliases" : [
+
+      ],
+      "caps" : 5,
+      "fp" : false,
+      "name" : "vapor",
+      "slug" : "vapor"
+    },
+    {
+      "aliases" : [
         "MetalPetal/VideoIO"
       ],
       "caps" : 1,
@@ -2457,6 +2640,15 @@
       "fp" : false,
       "name" : "WebRTC (stasel)",
       "slug" : "webrtc"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 1,
+      "fp" : false,
+      "name" : "websocket-kit",
+      "slug" : "websocket-kit"
     },
     {
       "aliases" : [

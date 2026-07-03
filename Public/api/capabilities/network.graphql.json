@@ -1,0 +1,240 @@
+{
+  "aliases" : [
+    "graphql",
+    "graphql queries",
+    "apollo"
+  ],
+  "id" : "network.graphql",
+  "label" : "GraphQL client",
+  "packages" : [
+    {
+      "commit" : "5a8d18cc239dd3c4b31c9e13e671dbcef5e4072a",
+      "notes" : "Core capability of the package: ApolloClient is the primary GraphQL entry point (queries, mutations, subscriptions, watchers) with normalized caching. All anchors are unconditional in the extracted surface.",
+      "package" : "https://github.com/apollographql/apollo-ios",
+      "packageName" : "apollo-ios",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L15",
+              "symbol" : "ApolloClient"
+            },
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 128,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L128",
+              "symbol" : "ApolloClient.fetch"
+            },
+            {
+              "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+              "kind" : "symbol",
+              "line" : 129,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloAPI/GraphQLOperation.swift#L129",
+              "symbol" : "GraphQLQuery"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "note" : "README platform badge lists iOS 15+ | macOS 12+ | tvOS 15+ | watchOS 8+ | visionOS 1+; Linux is not mentioned"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "Surface digest resolves this decl present on macCatalyst (no platform gap, no #if conditions anywhere in the surface); Package.swift declares no explicit macCatalyst floor (inherits iOS).",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L15",
+              "symbol" : "ApolloClient"
+            },
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 128,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L128",
+              "symbol" : "ApolloClient.fetch"
+            },
+            {
+              "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+              "kind" : "symbol",
+              "line" : 129,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloAPI/GraphQLOperation.swift#L129",
+              "symbol" : "GraphQLQuery"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L15",
+              "symbol" : "ApolloClient"
+            },
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 128,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L128",
+              "symbol" : "ApolloClient.fetch"
+            },
+            {
+              "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+              "kind" : "symbol",
+              "line" : 129,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloAPI/GraphQLOperation.swift#L129",
+              "symbol" : "GraphQLQuery"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L15",
+              "symbol" : "ApolloClient"
+            },
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 128,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L128",
+              "symbol" : "ApolloClient.fetch"
+            },
+            {
+              "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+              "kind" : "symbol",
+              "line" : 129,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloAPI/GraphQLOperation.swift#L129",
+              "symbol" : "GraphQLQuery"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L15",
+              "symbol" : "ApolloClient"
+            },
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 128,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L128",
+              "symbol" : "ApolloClient.fetch"
+            },
+            {
+              "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+              "kind" : "symbol",
+              "line" : 129,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloAPI/GraphQLOperation.swift#L129",
+              "symbol" : "GraphQLQuery"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L15",
+              "symbol" : "ApolloClient"
+            },
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 128,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L128",
+              "symbol" : "ApolloClient.fetch"
+            },
+            {
+              "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+              "kind" : "symbol",
+              "line" : 129,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloAPI/GraphQLOperation.swift#L129",
+              "symbol" : "GraphQLQuery"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "apollo-ios",
+      "version" : "2.2.0"
+    }
+  ]
+}

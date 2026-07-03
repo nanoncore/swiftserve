@@ -30,6 +30,11 @@
       "fetchedAt" : "2026-07-02T09:02:00Z",
       "tag" : "0.0.2"
     },
+    "https://github.com/apollographql/apollo-ios" : {
+      "commit" : "5a8d18cc239dd3c4b31c9e13e671dbcef5e4072a",
+      "fetchedAt" : "2026-07-03T15:02:17Z",
+      "tag" : "2.2.0"
+    },
     "https://github.com/apple/swift-nio" : {
       "commit" : "cd3e1152083706d77b223fb29110e590efcc70c0",
       "fetchedAt" : "2026-07-02T10:25:51Z",
@@ -235,6 +240,11 @@
       "fetchedAt" : "2026-07-03T12:52:10Z",
       "tag" : "v7.11.1"
     },
+    "https://github.com/grpc/grpc-swift" : {
+      "commit" : "adc18c3e1c55027d0ce43893897ac448e3f27ebe",
+      "fetchedAt" : "2026-07-03T15:02:15Z",
+      "tag" : "2.2.3"
+    },
     "https://github.com/herrkaefer/swiftedgetts" : {
       "commit" : "6fafd2dd66e45358812c98e3bb2fa28b2757e614",
       "fetchedAt" : "2026-07-02T09:01:55Z",
@@ -244,6 +254,11 @@
       "commit" : "45d1b021c2bd2bbd38b9669934c0584cda0d1b6b",
       "fetchedAt" : "2026-07-02T09:46:38Z",
       "tag" : "0.1.0"
+    },
+    "https://github.com/hummingbird-project/hummingbird" : {
+      "commit" : "eebb5ecf8a39beea87401f014fdf87f0ce5b159d",
+      "fetchedAt" : "2026-07-03T15:02:21Z",
+      "tag" : "2.25.0"
     },
     "https://github.com/hyperoslo/cache" : {
       "commit" : "24e47109e31b2031cb26e25cc1b81b607496066c",
@@ -354,6 +369,11 @@
       "commit" : "ab16588b7b8e297255e2d8a7407eb89506af265b",
       "fetchedAt" : "2026-07-02T09:01:27Z",
       "tag" : "1.7.3"
+    },
+    "https://github.com/oauthswift/oauthswift" : {
+      "commit" : "d85964b96dbce94df961f28b996187c835089903",
+      "fetchedAt" : "2026-07-03T15:02:23Z",
+      "tag" : "2.2.0"
     },
     "https://github.com/omaralbeik/drops" : {
       "commit" : "a183ee6f79f21c940092a19c2cba756555422371",
@@ -500,6 +520,16 @@
       "fetchedAt" : "2026-07-02T09:01:34Z",
       "tag" : "2.0.5"
     },
+    "https://github.com/swift-server-community/apnswift" : {
+      "commit" : "81eb92b6d5cbea9dac154becedf316c05189a47a",
+      "fetchedAt" : "2026-07-03T15:02:22Z",
+      "tag" : "6.6.0"
+    },
+    "https://github.com/swift-server/async-http-client" : {
+      "commit" : "4603a8036d921ea999fadb742931546c341f4bd7",
+      "fetchedAt" : "2026-07-03T15:02:18Z",
+      "tag" : "1.35.0"
+    },
     "https://github.com/tanhakabir/swiftaudioplayer" : {
       "commit" : "2fdfc62ce9f5d8b818ee1b2a9ac061fce4f64af9",
       "fetchedAt" : "2026-07-02T08:42:48Z",
@@ -524,6 +554,16 @@
       "commit" : "e227d94dc3fe7099a096ac2ca28cad1f69bd8d5b",
       "fetchedAt" : "2026-07-03T12:52:24Z",
       "tag" : "4.9.0"
+    },
+    "https://github.com/vapor/vapor" : {
+      "commit" : "748ae8432a33e0965bbf0351fedd4e915e7f460c",
+      "fetchedAt" : "2026-07-03T15:02:19Z",
+      "tag" : "4.122.0"
+    },
+    "https://github.com/vapor/websocket-kit" : {
+      "commit" : "90bbbdab3ede12c803cfbe91646f291c092517a3",
+      "fetchedAt" : "2026-07-03T15:02:24Z",
+      "tag" : "2.16.2"
     }
   },
   "version" : 1

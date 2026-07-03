@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The state of visionOS — SwiftServe</title>
-  <meta name="description" content="What the Swift ecosystem actually serves on visionOS: 153 supported verdicts, 29 proven fences with compiler receipts, 19 honest unknowns." />
+  <meta name="description" content="What the Swift ecosystem actually serves on visionOS: 173 supported verdicts, 29 proven fences with compiler receipts, 23 honest unknowns." />
   <link rel="icon" href="/swiftee/swiftee-idle.png" />
   <link rel="stylesheet" href="/styles.css?v=1t66hzl0byk2g" />
   <script src="/site.js?v=1t66hzl0byk2g" defer></script>
@@ -32,11 +32,11 @@
       every count below is derived from the records, and every verdict carries its receipt.</p>
     </section>
     <section class="stat-tiles" aria-label="visionOS verdict counts">
-      <div class="stat-tile stat-good"><span class="stat-num">153</span><span class="stat-label">serve it</span></div>
+      <div class="stat-tile stat-good"><span class="stat-num">173</span><span class="stat-label">serve it</span></div>
       <div class="stat-tile stat-low"><span class="stat-num">29</span><span class="stat-label">fenced out — proven</span></div>
-      <div class="stat-tile stat-unknown"><span class="stat-num">19</span><span class="stat-label">honest unknowns</span></div>
+      <div class="stat-tile stat-unknown"><span class="stat-num">23</span><span class="stat-label">honest unknowns</span></div>
     </section>
-    <p class="stat-caption">across 201 records · 107 packages — counted at generation time, never by hand</p>
+    <p class="stat-caption">across 225 records · 115 packages — counted at generation time, never by hand</p>
     <div class="xr-slot" data-xr hidden></div>
     <section class="on-section">
       <h2>Built into the OS</h2>
@@ -350,20 +350,56 @@
       </a>
     </li>
     <li>
+      <a href="/can/network.graphql/?on=visionOS">
+        <span class="menu-cap">GraphQL client</span>
+        <span class="on-cap-count">1 of 1 package</span>
+      </a>
+    </li>
+    <li>
+      <a href="/can/network.grpc/?on=visionOS">
+        <span class="menu-cap">gRPC</span>
+        <span class="on-cap-count">1 of 1 package</span>
+      </a>
+    </li>
+    <li>
       <a href="/can/network.http-client/?on=visionOS">
         <span class="menu-cap">HTTP client</span>
-        <span class="on-cap-count">1 of 2 packages</span>
+        <span class="on-cap-count">2 of 4 packages</span>
+      </a>
+    </li>
+    <li>
+      <a href="/can/network.http-server/?on=visionOS">
+        <span class="menu-cap">HTTP server</span>
+        <span class="on-cap-count">2 of 2 packages</span>
+      </a>
+    </li>
+    <li>
+      <a href="/can/network.http2/?on=visionOS">
+        <span class="menu-cap">HTTP/2</span>
+        <span class="on-cap-count">2 of 3 packages</span>
       </a>
     </li>
     <li>
       <a href="/can/network.logging/?on=visionOS">
         <span class="menu-cap">Network logging / inspection</span>
-        <span class="on-cap-count">1 of 1 package</span>
+        <span class="on-cap-count">4 of 4 packages</span>
       </a>
     </li>
     <li>
       <a href="/can/network.multipart-upload/?on=visionOS">
         <span class="menu-cap">Multipart upload</span>
+        <span class="on-cap-count">3 of 4 packages</span>
+      </a>
+    </li>
+    <li>
+      <a href="/can/network.oauth/?on=visionOS">
+        <span class="menu-cap">OAuth flows</span>
+        <span class="on-cap-count">0 of 1 package</span>
+      </a>
+    </li>
+    <li>
+      <a href="/can/network.push-notifications/?on=visionOS">
+        <span class="menu-cap">Push notification delivery</span>
         <span class="on-cap-count">1 of 1 package</span>
       </a>
     </li>
@@ -376,13 +412,13 @@
     <li>
       <a href="/can/network.request-mocking/?on=visionOS">
         <span class="menu-cap">Request stubbing / mocking</span>
-        <span class="on-cap-count">0 of 1 package</span>
+        <span class="on-cap-count">2 of 3 packages</span>
       </a>
     </li>
     <li>
       <a href="/can/network.retry/?on=visionOS">
         <span class="menu-cap">Request retry / backoff</span>
-        <span class="on-cap-count">1 of 1 package</span>
+        <span class="on-cap-count">3 of 3 packages</span>
       </a>
     </li>
     <li>
@@ -394,7 +430,7 @@
     <li>
       <a href="/can/network.websockets/?on=visionOS">
         <span class="menu-cap">WebSockets</span>
-        <span class="on-cap-count">2 of 2 packages</span>
+        <span class="on-cap-count">5 of 5 packages</span>
       </a>
     </li>
     </ul>
@@ -857,7 +893,7 @@
     </section>
     <section class="on-section">
       <h2>Honest unknowns</h2>
-      <p class="section-intro">19 verdicts
+      <p class="section-intro">23 verdicts
       we can't call yet — and refuse to guess. Each carries the reason on record.</p>
       <ul class="unknown-list">
     <li>
@@ -894,6 +930,21 @@
       <p><a href="/package/midiparser/">MidiParser</a>
       — <a href="/can/midi.file/?on=visionOS">MIDI file read/write</a></p>
       <p class="unknown-why">empty manifest</p>
+    </li>
+    <li>
+      <p><a href="/package/oauthswift/">oauthswift</a>
+      — <a href="/can/network.http-client/?on=visionOS">HTTP client</a></p>
+      <p class="unknown-why">Unconditional decl, digest-present on visionOS</p>
+    </li>
+    <li>
+      <p><a href="/package/oauthswift/">oauthswift</a>
+      — <a href="/can/network.multipart-upload/?on=visionOS">Multipart upload</a></p>
+      <p class="unknown-why">Unconditional decl, digest-present on visionOS</p>
+    </li>
+    <li>
+      <p><a href="/package/oauthswift/">oauthswift</a>
+      — <a href="/can/network.oauth/?on=visionOS">OAuth flows</a></p>
+      <p class="unknown-why">Core class is unconditional and digest-present on visionOS</p>
     </li>
     <li>
       <p><a href="/package/popupview/">popupview</a>
@@ -951,6 +1002,11 @@
       <p class="unknown-why">empty manifest</p>
     </li>
     <li>
+      <p><a href="/package/vapor/">vapor</a>
+      — <a href="/can/network.http2/?on=visionOS">HTTP/2</a></p>
+      <p class="unknown-why">no claim recorded for this platform yet</p>
+    </li>
+    <li>
       <p><a href="/package/webmidikit/">WebMIDIKit</a>
       — <a href="/can/midi.io/?on=visionOS">MIDI input/output</a></p>
       <p class="unknown-why">empty manifest</p>
@@ -964,7 +1020,7 @@
     </section>
   </main>
   <footer class="site-footer">
-    <p>Served fresh · 74 capabilities × 107 packages · 201 records · data v1</p>
+    <p>Served fresh · 80 capabilities × 115 packages · 225 records · data v1</p>
     <p>Every verdict links to the exact source line that decides it. <a href="/about/">How it works</a></p>
     <p>Made refreshingly cool from Paris, France</p>
   </footer>

@@ -6,7 +6,7 @@
       "url": "https://github.com/alamofire/alamofire",
       "name": "Alamofire/Alamofire",
       "source": "seed",
-      "why": "THE Swift networking package — reachability/trust guards are platform truth gold",
+      "why": "THE Swift networking package \u2014 reachability/trust guards are platform truth gold",
       "companionOf": null
     },
     {
@@ -20,7 +20,7 @@
       "url": "https://github.com/apple/swift-nio",
       "name": "apple/swift-nio",
       "source": "seed",
-      "why": "server-side event-driven networking — Linux truth",
+      "why": "server-side event-driven networking \u2014 Linux truth",
       "companionOf": null
     },
     {
@@ -42,6 +42,62 @@
       "name": "kean/Pulse",
       "source": "seed",
       "why": "network logger/inspector",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/grpc/grpc-swift",
+      "name": "grpc/grpc-swift",
+      "source": "seed",
+      "why": "the gRPC anchor \u2014 HTTP/2, Linux truth",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/apollographql/apollo-ios",
+      "name": "apollographql/apollo-ios",
+      "source": "seed",
+      "why": "the GraphQL client anchor",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/swift-server/async-http-client",
+      "name": "swift-server/async-http-client",
+      "source": "seed",
+      "why": "SSWG HTTP client \u2014 NIO-based, Linux-first",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/vapor/vapor",
+      "name": "vapor/vapor",
+      "source": "seed",
+      "why": "the server framework \u2014 HTTP server truth incl. Linux",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/hummingbird-project/hummingbird",
+      "name": "hummingbird-project/hummingbird",
+      "source": "seed",
+      "why": "the lightweight server framework (SwiftServe runs on it)",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/swift-server-community/apnswift",
+      "name": "swift-server-community/APNSwift",
+      "source": "seed",
+      "why": "APNs push delivery from Swift servers",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/oauthswift/oauthswift",
+      "name": "OAuthSwift/OAuthSwift",
+      "source": "seed",
+      "why": "the OAuth flows package",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/vapor/websocket-kit",
+      "name": "vapor/WebSocketKit",
+      "source": "seed",
+      "why": "NIO WebSocket client/server",
       "companionOf": null
     }
   ]

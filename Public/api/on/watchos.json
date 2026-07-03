@@ -901,10 +901,46 @@
       "builtInNames" : [
 
       ],
+      "id" : "network.graphql",
+      "label" : "GraphQL client",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/network.graphql/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "apollo-ios",
+          "slug" : "apollo-ios",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "network.grpc",
+      "label" : "gRPC",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/network.grpc/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "grpc-swift",
+          "slug" : "grpc-swift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "network.http-client",
       "label" : "HTTP client",
-      "packages" : 2,
-      "supported" : 2,
+      "packages" : 4,
+      "supported" : 4,
       "truthTable" : "/can/network.http-client/?on=watchOS",
       "verdicts" : [
         {
@@ -913,9 +949,70 @@
           "status" : "supported"
         },
         {
+          "name" : "async-http-client",
+          "slug" : "async-http-client",
+          "status" : "supported"
+        },
+        {
           "name" : "Moya",
           "slug" : "moya",
           "status" : "supported"
+        },
+        {
+          "name" : "oauthswift",
+          "slug" : "oauthswift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "network.http-server",
+      "label" : "HTTP server",
+      "packages" : 2,
+      "supported" : 2,
+      "truthTable" : "/can/network.http-server/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "hummingbird",
+          "slug" : "hummingbird",
+          "status" : "supported"
+        },
+        {
+          "name" : "vapor",
+          "slug" : "vapor",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "network.http2",
+      "label" : "HTTP/2",
+      "packages" : 3,
+      "supported" : 2,
+      "truthTable" : "/can/network.http2/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "async-http-client",
+          "slug" : "async-http-client",
+          "status" : "supported"
+        },
+        {
+          "name" : "hummingbird",
+          "slug" : "hummingbird",
+          "status" : "supported"
+        },
+        {
+          "name" : "vapor",
+          "slug" : "vapor",
+          "status" : "unknown"
         }
       ]
     },
@@ -926,13 +1023,28 @@
       ],
       "id" : "network.logging",
       "label" : "Network logging / inspection",
-      "packages" : 1,
-      "supported" : 1,
+      "packages" : 4,
+      "supported" : 4,
       "truthTable" : "/can/network.logging/?on=watchOS",
       "verdicts" : [
         {
+          "name" : "async-http-client",
+          "slug" : "async-http-client",
+          "status" : "supported"
+        },
+        {
+          "name" : "hummingbird",
+          "slug" : "hummingbird",
+          "status" : "supported"
+        },
+        {
           "name" : "Pulse",
           "slug" : "pulse",
+          "status" : "supported"
+        },
+        {
+          "name" : "vapor",
+          "slug" : "vapor",
           "status" : "supported"
         }
       ]
@@ -944,13 +1056,64 @@
       ],
       "id" : "network.multipart-upload",
       "label" : "Multipart upload",
-      "packages" : 1,
-      "supported" : 1,
+      "packages" : 4,
+      "supported" : 4,
       "truthTable" : "/can/network.multipart-upload/?on=watchOS",
       "verdicts" : [
         {
           "name" : "Alamofire",
           "slug" : "alamofire",
+          "status" : "supported"
+        },
+        {
+          "name" : "apollo-ios",
+          "slug" : "apollo-ios",
+          "status" : "supported"
+        },
+        {
+          "name" : "oauthswift",
+          "slug" : "oauthswift",
+          "status" : "supported"
+        },
+        {
+          "name" : "vapor",
+          "slug" : "vapor",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "network.oauth",
+      "label" : "OAuth flows",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/network.oauth/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "oauthswift",
+          "slug" : "oauthswift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "network.push-notifications",
+      "label" : "Push notification delivery",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/network.push-notifications/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "apnswift",
+          "slug" : "apnswift",
           "status" : "supported"
         }
       ]
@@ -980,10 +1143,20 @@
       ],
       "id" : "network.request-mocking",
       "label" : "Request stubbing / mocking",
-      "packages" : 1,
-      "supported" : 1,
+      "packages" : 3,
+      "supported" : 3,
       "truthTable" : "/can/network.request-mocking/?on=watchOS",
       "verdicts" : [
+        {
+          "name" : "apnswift",
+          "slug" : "apnswift",
+          "status" : "supported"
+        },
+        {
+          "name" : "apollo-ios",
+          "slug" : "apollo-ios",
+          "status" : "supported"
+        },
         {
           "name" : "Moya",
           "slug" : "moya",
@@ -998,13 +1171,23 @@
       ],
       "id" : "network.retry",
       "label" : "Request retry / backoff",
-      "packages" : 1,
-      "supported" : 1,
+      "packages" : 3,
+      "supported" : 3,
       "truthTable" : "/can/network.retry/?on=watchOS",
       "verdicts" : [
         {
           "name" : "Alamofire",
           "slug" : "alamofire",
+          "status" : "supported"
+        },
+        {
+          "name" : "apollo-ios",
+          "slug" : "apollo-ios",
+          "status" : "supported"
+        },
+        {
+          "name" : "grpc-swift",
+          "slug" : "grpc-swift",
           "status" : "supported"
         }
       ]
@@ -1034,10 +1217,15 @@
       ],
       "id" : "network.websockets",
       "label" : "WebSockets",
-      "packages" : 2,
-      "supported" : 2,
+      "packages" : 5,
+      "supported" : 5,
       "truthTable" : "/can/network.websockets/?on=watchOS",
       "verdicts" : [
+        {
+          "name" : "apollo-ios",
+          "slug" : "apollo-ios",
+          "status" : "supported"
+        },
         {
           "name" : "Starscream",
           "slug" : "starscream",
@@ -1046,6 +1234,16 @@
         {
           "name" : "SwiftNIO",
           "slug" : "swift-nio",
+          "status" : "supported"
+        },
+        {
+          "name" : "vapor",
+          "slug" : "vapor",
+          "status" : "supported"
+        },
+        {
+          "name" : "websocket-kit",
+          "slug" : "websocket-kit",
           "status" : "supported"
         }
       ]
@@ -2227,10 +2425,10 @@
   "schemaVersion" : 1,
   "stats" : {
     "conditional" : 0,
-    "packages" : 107,
-    "records" : 201,
-    "supported" : 104,
-    "unknown" : 85,
+    "packages" : 115,
+    "records" : 225,
+    "supported" : 127,
+    "unknown" : 86,
     "unsupported" : 12
   },
   "unknowns" : [
@@ -2792,6 +2990,12 @@
       "name" : "SwiftySound",
       "slug" : "swiftysound",
       "why" : "README targets iOS/macOS/tvOS; no watchOS signal either way"
+    },
+    {
+      "capability" : "network.http2",
+      "capabilityLabel" : "HTTP/2",
+      "name" : "vapor",
+      "slug" : "vapor"
     },
     {
       "capability" : "video.capture",

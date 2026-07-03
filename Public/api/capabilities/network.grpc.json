@@ -1,0 +1,346 @@
+{
+  "aliases" : [
+    "grpc",
+    "protobuf rpc",
+    "remote procedure call"
+  ],
+  "id" : "network.grpc",
+  "label" : "gRPC",
+  "packages" : [
+    {
+      "commit" : "adc18c3e1c55027d0ce43893897ac448e3f27ebe",
+      "notes" : "grpc-swift v2 (GRPCCore) is the transport-agnostic gRPC runtime: client, server, and transport protocols plus an in-process transport. Surface digest shows no #if conditions and no per-platform gaps on any decl, so all anchors resolve present on all 7 platforms including Linux. Availability floors on Darwin come from an AvailabilityMacro build setting (macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0); macCatalyst is not named there but inherits the iOS availability, hence slightly lower confidence. HTTP/2 wire transports live in the sibling package grpc-swift-nio-transport, not in this surface.",
+      "package" : "https://github.com/grpc/grpc-swift",
+      "packageName" : "grpc-swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/GRPCCore/GRPCClient.swift",
+              "kind" : "symbol",
+              "line" : 57,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/GRPCClient.swift#L57",
+              "symbol" : "GRPCClient"
+            },
+            {
+              "file" : "Sources/GRPCCore/GRPCServer.swift",
+              "kind" : "symbol",
+              "line" : 78,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/GRPCServer.swift#L78",
+              "symbol" : "GRPCServer"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/ClientTransport.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/ClientTransport.swift#L28",
+              "symbol" : "ClientTransport"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/ServerTransport.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/ServerTransport.swift#L25",
+              "symbol" : "ServerTransport"
+            },
+            {
+              "file" : "Sources/GRPCInProcessTransport/InProcessTransport.swift",
+              "kind" : "symbol",
+              "line" : 19,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCInProcessTransport/InProcessTransport.swift#L19",
+              "symbol" : "InProcessTransport"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 57,
+              "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Package.swift#L57"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/GRPCCore/GRPCClient.swift",
+              "kind" : "symbol",
+              "line" : 57,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/GRPCClient.swift#L57",
+              "symbol" : "GRPCClient"
+            },
+            {
+              "file" : "Sources/GRPCCore/GRPCServer.swift",
+              "kind" : "symbol",
+              "line" : 78,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/GRPCServer.swift#L78",
+              "symbol" : "GRPCServer"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/ClientTransport.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/ClientTransport.swift#L28",
+              "symbol" : "ClientTransport"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/ServerTransport.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/ServerTransport.swift#L25",
+              "symbol" : "ServerTransport"
+            },
+            {
+              "file" : "Sources/GRPCInProcessTransport/InProcessTransport.swift",
+              "kind" : "symbol",
+              "line" : 19,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCInProcessTransport/InProcessTransport.swift#L19",
+              "symbol" : "InProcessTransport"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/GRPCCore/GRPCClient.swift",
+              "kind" : "symbol",
+              "line" : 57,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/GRPCClient.swift#L57",
+              "symbol" : "GRPCClient"
+            },
+            {
+              "file" : "Sources/GRPCCore/GRPCServer.swift",
+              "kind" : "symbol",
+              "line" : 78,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/GRPCServer.swift#L78",
+              "symbol" : "GRPCServer"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/ClientTransport.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/ClientTransport.swift#L28",
+              "symbol" : "ClientTransport"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/ServerTransport.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/ServerTransport.swift#L25",
+              "symbol" : "ServerTransport"
+            },
+            {
+              "file" : "Sources/GRPCInProcessTransport/InProcessTransport.swift",
+              "kind" : "symbol",
+              "line" : 19,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCInProcessTransport/InProcessTransport.swift#L19",
+              "symbol" : "InProcessTransport"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/GRPCCore/GRPCClient.swift",
+              "kind" : "symbol",
+              "line" : 57,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/GRPCClient.swift#L57",
+              "symbol" : "GRPCClient"
+            },
+            {
+              "file" : "Sources/GRPCCore/GRPCServer.swift",
+              "kind" : "symbol",
+              "line" : 78,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/GRPCServer.swift#L78",
+              "symbol" : "GRPCServer"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/ClientTransport.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/ClientTransport.swift#L28",
+              "symbol" : "ClientTransport"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/ServerTransport.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/ServerTransport.swift#L25",
+              "symbol" : "ServerTransport"
+            },
+            {
+              "file" : "Sources/GRPCInProcessTransport/InProcessTransport.swift",
+              "kind" : "symbol",
+              "line" : 19,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCInProcessTransport/InProcessTransport.swift#L19",
+              "symbol" : "InProcessTransport"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 57,
+              "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Package.swift#L57"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/GRPCCore/GRPCClient.swift",
+              "kind" : "symbol",
+              "line" : 57,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/GRPCClient.swift#L57",
+              "symbol" : "GRPCClient"
+            },
+            {
+              "file" : "Sources/GRPCCore/GRPCServer.swift",
+              "kind" : "symbol",
+              "line" : 78,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/GRPCServer.swift#L78",
+              "symbol" : "GRPCServer"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/ClientTransport.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/ClientTransport.swift#L28",
+              "symbol" : "ClientTransport"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/ServerTransport.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/ServerTransport.swift#L25",
+              "symbol" : "ServerTransport"
+            },
+            {
+              "file" : "Sources/GRPCInProcessTransport/InProcessTransport.swift",
+              "kind" : "symbol",
+              "line" : 19,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCInProcessTransport/InProcessTransport.swift#L19",
+              "symbol" : "InProcessTransport"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 57,
+              "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Package.swift#L57"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/GRPCCore/GRPCClient.swift",
+              "kind" : "symbol",
+              "line" : 57,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/GRPCClient.swift#L57",
+              "symbol" : "GRPCClient"
+            },
+            {
+              "file" : "Sources/GRPCCore/GRPCServer.swift",
+              "kind" : "symbol",
+              "line" : 78,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/GRPCServer.swift#L78",
+              "symbol" : "GRPCServer"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/ClientTransport.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/ClientTransport.swift#L28",
+              "symbol" : "ClientTransport"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/ServerTransport.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/ServerTransport.swift#L25",
+              "symbol" : "ServerTransport"
+            },
+            {
+              "file" : "Sources/GRPCInProcessTransport/InProcessTransport.swift",
+              "kind" : "symbol",
+              "line" : 19,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCInProcessTransport/InProcessTransport.swift#L19",
+              "symbol" : "InProcessTransport"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 57,
+              "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Package.swift#L57"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/GRPCCore/GRPCClient.swift",
+              "kind" : "symbol",
+              "line" : 57,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/GRPCClient.swift#L57",
+              "symbol" : "GRPCClient"
+            },
+            {
+              "file" : "Sources/GRPCCore/GRPCServer.swift",
+              "kind" : "symbol",
+              "line" : 78,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/GRPCServer.swift#L78",
+              "symbol" : "GRPCServer"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/ClientTransport.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/ClientTransport.swift#L28",
+              "symbol" : "ClientTransport"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/ServerTransport.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/ServerTransport.swift#L25",
+              "symbol" : "ServerTransport"
+            },
+            {
+              "file" : "Sources/GRPCInProcessTransport/InProcessTransport.swift",
+              "kind" : "symbol",
+              "line" : 19,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCInProcessTransport/InProcessTransport.swift#L19",
+              "symbol" : "InProcessTransport"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 57,
+              "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Package.swift#L57"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "grpc-swift",
+      "version" : "2.2.3"
+    }
+  ]
+}

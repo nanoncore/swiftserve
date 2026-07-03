@@ -1,0 +1,938 @@
+[
+  {
+    "capability" : {
+      "id" : "network.grpc",
+      "label" : "gRPC"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "grpc-swift v2 (GRPCCore) is the transport-agnostic gRPC runtime: client, server, and transport protocols plus an in-process transport. Surface digest shows no #if conditions and no per-platform gaps on any decl, so all anchors resolve present on all 7 platforms including Linux. Availability floors on Darwin come from an AvailabilityMacro build setting (macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0); macCatalyst is not named there but inherits the iOS availability, hence slightly lower confidence. HTTP/2 wire transports live in the sibling package grpc-swift-nio-transport, not in this surface.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/grpc/grpc-swift",
+      "commit" : "adc18c3e1c55027d0ce43893897ac448e3f27ebe",
+      "firstParty" : false,
+      "name" : "grpc-swift",
+      "surfaceDigest" : "fnv1a64:c94045e68eeca94e",
+      "version" : "2.2.3"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/GRPCClient.swift",
+            "kind" : "symbol",
+            "line" : 57,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GRPCClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/GRPCServer.swift",
+            "kind" : "symbol",
+            "line" : 78,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GRPCServer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/ClientTransport.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ClientTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/ServerTransport.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ServerTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCInProcessTransport/InProcessTransport.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "InProcessTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 57,
+            "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/GRPCClient.swift",
+            "kind" : "symbol",
+            "line" : 57,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GRPCClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/GRPCServer.swift",
+            "kind" : "symbol",
+            "line" : 78,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GRPCServer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/ClientTransport.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ClientTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/ServerTransport.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ServerTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCInProcessTransport/InProcessTransport.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "InProcessTransport"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/GRPCClient.swift",
+            "kind" : "symbol",
+            "line" : 57,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GRPCClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/GRPCServer.swift",
+            "kind" : "symbol",
+            "line" : 78,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GRPCServer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/ClientTransport.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ClientTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/ServerTransport.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ServerTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCInProcessTransport/InProcessTransport.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "InProcessTransport"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/GRPCClient.swift",
+            "kind" : "symbol",
+            "line" : 57,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GRPCClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/GRPCServer.swift",
+            "kind" : "symbol",
+            "line" : 78,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GRPCServer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/ClientTransport.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ClientTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/ServerTransport.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ServerTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCInProcessTransport/InProcessTransport.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "InProcessTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 57,
+            "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/GRPCClient.swift",
+            "kind" : "symbol",
+            "line" : 57,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GRPCClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/GRPCServer.swift",
+            "kind" : "symbol",
+            "line" : 78,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GRPCServer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/ClientTransport.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ClientTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/ServerTransport.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ServerTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCInProcessTransport/InProcessTransport.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "InProcessTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 57,
+            "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/GRPCClient.swift",
+            "kind" : "symbol",
+            "line" : 57,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GRPCClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/GRPCServer.swift",
+            "kind" : "symbol",
+            "line" : 78,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GRPCServer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/ClientTransport.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ClientTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/ServerTransport.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ServerTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCInProcessTransport/InProcessTransport.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "InProcessTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 57,
+            "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/GRPCClient.swift",
+            "kind" : "symbol",
+            "line" : 57,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GRPCClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/GRPCServer.swift",
+            "kind" : "symbol",
+            "line" : 78,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GRPCServer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/ClientTransport.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ClientTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/ServerTransport.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ServerTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCInProcessTransport/InProcessTransport.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "InProcessTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 57,
+            "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "network.retry",
+      "label" : "Request retry / backoff"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Retry with exponential backoff is a first-class RPC execution policy in GRPCCore: RetryPolicy (maxAttempts, initialBackoff, maxBackoff, backoffMultiplier, retryableStatusCodes), server-configurable retry throttling (ServiceConfig.RetryThrottling, RetryThrottle), and a HedgingPolicy sibling. This is gRPC RPC-level retry, not generic HTTP request retry. No #if conditions or platform gaps on any anchor.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/grpc/grpc-swift",
+      "commit" : "adc18c3e1c55027d0ce43893897ac448e3f27ebe",
+      "firstParty" : false,
+      "name" : "grpc-swift",
+      "surfaceDigest" : "fnv1a64:c94045e68eeca94e",
+      "version" : "2.2.3"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 219,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/RetryThrottle.swift",
+            "kind" : "symbol",
+            "line" : 33,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryThrottle"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy.initialBackoff"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 247,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy.backoffMultiplier"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/ServiceConfig.swift",
+            "kind" : "symbol",
+            "line" : 235,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ServiceConfig.RetryThrottling"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 57,
+            "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 219,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/RetryThrottle.swift",
+            "kind" : "symbol",
+            "line" : 33,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryThrottle"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy.initialBackoff"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 247,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy.backoffMultiplier"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/ServiceConfig.swift",
+            "kind" : "symbol",
+            "line" : 235,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ServiceConfig.RetryThrottling"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 219,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/RetryThrottle.swift",
+            "kind" : "symbol",
+            "line" : 33,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryThrottle"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy.initialBackoff"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 247,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy.backoffMultiplier"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/ServiceConfig.swift",
+            "kind" : "symbol",
+            "line" : 235,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ServiceConfig.RetryThrottling"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 219,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/RetryThrottle.swift",
+            "kind" : "symbol",
+            "line" : 33,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryThrottle"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy.initialBackoff"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 247,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy.backoffMultiplier"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/ServiceConfig.swift",
+            "kind" : "symbol",
+            "line" : 235,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ServiceConfig.RetryThrottling"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 57,
+            "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 219,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/RetryThrottle.swift",
+            "kind" : "symbol",
+            "line" : 33,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryThrottle"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy.initialBackoff"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 247,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy.backoffMultiplier"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/ServiceConfig.swift",
+            "kind" : "symbol",
+            "line" : 235,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ServiceConfig.RetryThrottling"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 57,
+            "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 219,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/RetryThrottle.swift",
+            "kind" : "symbol",
+            "line" : 33,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryThrottle"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy.initialBackoff"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 247,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy.backoffMultiplier"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/ServiceConfig.swift",
+            "kind" : "symbol",
+            "line" : 235,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ServiceConfig.RetryThrottling"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 57,
+            "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 219,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Transport/RetryThrottle.swift",
+            "kind" : "symbol",
+            "line" : 33,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryThrottle"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy.initialBackoff"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+            "kind" : "symbol",
+            "line" : 247,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RetryPolicy.backoffMultiplier"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/GRPCCore/Configuration/ServiceConfig.swift",
+            "kind" : "symbol",
+            "line" : 235,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ServiceConfig.RetryThrottling"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 57,
+            "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

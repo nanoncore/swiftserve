@@ -1,0 +1,217 @@
+{
+  "aliases" : [
+    "apns",
+    "push provider",
+    "apple push notification service"
+  ],
+  "id" : "network.push-notifications",
+  "label" : "Push notification delivery",
+  "packages" : [
+    {
+      "commit" : "81eb92b6d5cbea9dac154becedf316c05189a47a",
+      "notes" : "Server-side APNs PROVIDER (sends pushes), not an on-device receiver. Core APNSClient and all sendXNotification APIs are unconditional across the surface. The optional APNSURLSession sub-module (APNSURLSessionClient, Sources/APNSURLSession) is #if-guarded to os(macOS)||os(iOS)||os(watchOS)||os(tvOS) and marked absent on linux and visionOS in the surface, but the primary AsyncHTTPClient-based client covers those platforms.",
+      "package" : "https://github.com/swift-server-community/apnswift",
+      "packageName" : "apnswift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/APNS/APNSClient.swift",
+              "kind" : "symbol",
+              "line" : 32,
+              "note" : "Unconditional AsyncHTTPClient-based APNs provider client; no platform gaps in surface.",
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNS/APNSClient.swift#L32",
+              "symbol" : "APNSClient"
+            },
+            {
+              "file" : "Sources/APNSCore/Alert/APNSClient+Alert.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSCore/Alert/APNSClient+Alert.swift#L27",
+              "symbol" : "APNSClientProtocol.sendAlertNotification"
+            },
+            {
+              "file" : "Sources/APNSCore/Alert/APNSAlertNotification.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSCore/Alert/APNSAlertNotification.swift#L25",
+              "symbol" : "APNSAlertNotification"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 6,
+              "note" : "Manifest declares .iOS(.v16) floor.",
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Package.swift#L6"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/APNS/APNSClient.swift",
+              "kind" : "symbol",
+              "line" : 32,
+              "note" : "Server-side APNs provider built on AsyncHTTPClient/SwiftNIO; no linux gap in surface. Repo ships a Dockerfile and the package is SSWG-graduated.",
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNS/APNSClient.swift#L32",
+              "symbol" : "APNSClient"
+            },
+            {
+              "file" : "Sources/APNS/APNSClient.swift",
+              "kind" : "symbol",
+              "line" : 133,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNS/APNSClient.swift#L133",
+              "symbol" : "APNSClient.send"
+            },
+            {
+              "file" : "Sources/APNSCore/Alert/APNSClient+Alert.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSCore/Alert/APNSClient+Alert.swift#L27",
+              "symbol" : "APNSClientProtocol.sendAlertNotification"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "\"A non-blocking Swift module for sending remote Apple Push Notification requests to APNS built on AsyncHttpClient\"; README includes a Server Example section.",
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/README.md#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/APNS/APNSClient.swift",
+              "kind" : "symbol",
+              "line" : 32,
+              "note" : "Unconditional decl, no macCatalyst gap in surface; no explicit Catalyst handling in the package.",
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNS/APNSClient.swift#L32",
+              "symbol" : "APNSClient"
+            },
+            {
+              "file" : "Sources/APNSCore/Alert/APNSClient+Alert.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSCore/Alert/APNSClient+Alert.swift#L27",
+              "symbol" : "APNSClientProtocol.sendAlertNotification"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/APNS/APNSClient.swift",
+              "kind" : "symbol",
+              "line" : 32,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNS/APNSClient.swift#L32",
+              "symbol" : "APNSClient"
+            },
+            {
+              "file" : "Sources/APNSCore/Alert/APNSClient+Alert.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSCore/Alert/APNSClient+Alert.swift#L27",
+              "symbol" : "APNSClientProtocol.sendAlertNotification"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 6,
+              "note" : "Manifest declares .macOS(.v13) floor.",
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Package.swift#L6"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/APNS/APNSClient.swift",
+              "kind" : "symbol",
+              "line" : 32,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNS/APNSClient.swift#L32",
+              "symbol" : "APNSClient"
+            },
+            {
+              "file" : "Sources/APNSCore/Alert/APNSClient+Alert.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSCore/Alert/APNSClient+Alert.swift#L27",
+              "symbol" : "APNSClientProtocol.sendAlertNotification"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 6,
+              "note" : "Manifest declares .tvOS(.v16) floor.",
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Package.swift#L6"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/APNS/APNSClient.swift",
+              "kind" : "symbol",
+              "line" : 32,
+              "note" : "Unconditional decl, no visionOS gap in surface. Note the APNSURLSession sub-module IS visionOS-absent (see notes), but the core client is not.",
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNS/APNSClient.swift#L32",
+              "symbol" : "APNSClient"
+            },
+            {
+              "file" : "Sources/APNSCore/Alert/APNSClient+Alert.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSCore/Alert/APNSClient+Alert.swift#L27",
+              "symbol" : "APNSClientProtocol.sendAlertNotification"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/APNS/APNSClient.swift",
+              "kind" : "symbol",
+              "line" : 32,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNS/APNSClient.swift#L32",
+              "symbol" : "APNSClient"
+            },
+            {
+              "file" : "Sources/APNSCore/Alert/APNSClient+Alert.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSCore/Alert/APNSClient+Alert.swift#L27",
+              "symbol" : "APNSClientProtocol.sendAlertNotification"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 6,
+              "note" : "Manifest declares .watchOS(.v9) floor.",
+              "permalink" : "https://github.com/swift-server-community/apnswift/blob/6.6.0/Package.swift#L6"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "apnswift",
+      "version" : "6.6.0"
+    }
+  ]
+}

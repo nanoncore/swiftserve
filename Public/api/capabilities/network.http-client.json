@@ -8,6 +8,307 @@
   "label" : "HTTP client",
   "packages" : [
     {
+      "commit" : "4603a8036d921ea999fadb742931546c341f4bd7",
+      "notes" : "Core capability of the package. All anchors are unconditional (no #if, no per-platform gaps). SSWG package; Linux anchors resolve PRESENT in the surface digest. Package.swift declares no platforms: floor (defaults apply), so no manifestPlatforms evidence is claimed. Blind spot: 1 ObjC file unparsed; confidence kept at/below 0.9.",
+      "package" : "https://github.com/swift-server/async-http-client",
+      "packageName" : "async-http-client",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 70,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L70",
+              "symbol" : "HTTPClient"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39",
+              "symbol" : "HTTPClient.execute"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift#L39",
+              "symbol" : "HTTPClientRequest"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift#L27",
+              "symbol" : "HTTPClientResponse"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/Singleton.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/Singleton.swift#L22",
+              "symbol" : "HTTPClient.shared"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 70,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L70",
+              "symbol" : "HTTPClient"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39",
+              "symbol" : "HTTPClient.execute"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift#L39",
+              "symbol" : "HTTPClientRequest"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift#L27",
+              "symbol" : "HTTPClientResponse"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/Singleton.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/Singleton.swift#L22",
+              "symbol" : "HTTPClient.shared"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 70,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L70",
+              "symbol" : "HTTPClient"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39",
+              "symbol" : "HTTPClient.execute"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift#L39",
+              "symbol" : "HTTPClientRequest"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift#L27",
+              "symbol" : "HTTPClientResponse"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/Singleton.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/Singleton.swift#L22",
+              "symbol" : "HTTPClient.shared"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 70,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L70",
+              "symbol" : "HTTPClient"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39",
+              "symbol" : "HTTPClient.execute"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift#L39",
+              "symbol" : "HTTPClientRequest"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift#L27",
+              "symbol" : "HTTPClientResponse"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/Singleton.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/Singleton.swift#L22",
+              "symbol" : "HTTPClient.shared"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 70,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L70",
+              "symbol" : "HTTPClient"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39",
+              "symbol" : "HTTPClient.execute"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift#L39",
+              "symbol" : "HTTPClientRequest"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift#L27",
+              "symbol" : "HTTPClientResponse"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/Singleton.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/Singleton.swift#L22",
+              "symbol" : "HTTPClient.shared"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 70,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L70",
+              "symbol" : "HTTPClient"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39",
+              "symbol" : "HTTPClient.execute"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift#L39",
+              "symbol" : "HTTPClientRequest"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift#L27",
+              "symbol" : "HTTPClientResponse"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/Singleton.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/Singleton.swift#L22",
+              "symbol" : "HTTPClient.shared"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/AsyncHTTPClient/HTTPClient.swift",
+              "kind" : "symbol",
+              "line" : 70,
+              "note" : "Public surface is unconditional on watchOS per digest; real-world socket availability for SwiftNIO-based clients on watchOS is not verifiable from this surface, so confidence is reduced.",
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L70",
+              "symbol" : "HTTPClient"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39",
+              "symbol" : "HTTPClient.execute"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift#L39",
+              "symbol" : "HTTPClientRequest"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift",
+              "kind" : "symbol",
+              "line" : 27,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientResponse.swift#L27",
+              "symbol" : "HTTPClientResponse"
+            },
+            {
+              "file" : "Sources/AsyncHTTPClient/Singleton.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "permalink" : "https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/Singleton.swift#L22",
+              "symbol" : "HTTPClient.shared"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "async-http-client",
+      "version" : "1.35.0"
+    },
+    {
       "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
       "notes" : "The Swift HTTP client. Session wraps URLSession with the full request pipeline.",
       "package" : "https://github.com/alamofire/alamofire",
@@ -244,6 +545,218 @@
       ],
       "slug" : "moya",
       "version" : "15.0.3"
+    },
+    {
+      "commit" : "d85964b96dbce94df961f28b996187c835089903",
+      "notes" : "HTTP client is OAuth-signed by design: OAuthSwiftClient wraps URLSession (URLSessionFactory at Sources/OAuthSwiftHTTPRequest.swift:432) with get/post/put/delete/patch plus a generic request method. Blind spot: 4 ObjC files unparsed.",
+      "package" : "https://github.com/oauthswift/oauthswift",
+      "packageName" : "oauthswift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuthSwiftClient.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "note" : "Signed HTTP client with get/post/put/delete/patch verbs; unconditional decl",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L17",
+              "symbol" : "OAuthSwiftClient"
+            },
+            {
+              "file" : "Sources/OAuthSwiftClient.swift",
+              "kind" : "symbol",
+              "line" : 72,
+              "note" : "Generic request entry point",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L72",
+              "symbol" : "OAuthSwiftClient.request"
+            },
+            {
+              "file" : "Sources/OAuthSwiftHTTPRequest.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "note" : "URLSession-backed request type with configurable URLSessionFactory",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftHTTPRequest.swift#L18",
+              "symbol" : "OAuthSwiftHTTPRequest"
+            },
+            {
+              "file" : "Sources/OAuthSwiftResponse.swift",
+              "kind" : "symbol",
+              "line" : 12,
+              "note" : "Response object with data/string/jsonObject accessors",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftResponse.swift#L12",
+              "symbol" : "OAuthSwiftResponse"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.4,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuthSwiftClient.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "note" : "Unconditional decl, digest-present on linux; Package.swift adds swift-crypto under os(Linux) showing Linux intent",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L17",
+              "symbol" : "OAuthSwiftClient"
+            },
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Sources/Handler/OAuthWebViewController.swift",
+              "kind" : "guard",
+              "line" : 13,
+              "note" : "No branch covers linux while unconditional OAuthWebViewController subclasses OAuthViewController, and Sources lack a FoundationNetworking import for URLSession — Linux build unverified; status left unknown",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/OAuthWebViewController.swift#L13",
+              "symbol" : "OAuthViewController"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuthSwiftClient.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "note" : "Unconditional decl, digest-present on macCatalyst",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L17",
+              "symbol" : "OAuthSwiftClient"
+            },
+            {
+              "condition" : "targetEnvironment(macCatalyst) || os(iOS)",
+              "file" : "Sources/Handler/ASWebAuthenticationURLHandler.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "Explicit macCatalyst guard elsewhere in the module shows Catalyst is a handled compile target",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/ASWebAuthenticationURLHandler.swift#L14",
+              "symbol" : "ASWebAuthenticationURLHandler"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuthSwiftClient.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "note" : "Unconditional decl, digest-present on macOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L17",
+              "symbol" : "OAuthSwiftClient"
+            },
+            {
+              "file" : "Sources/OAuthSwiftClient.swift",
+              "kind" : "symbol",
+              "line" : 72,
+              "note" : "Unconditional decl, digest-present on macOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L72",
+              "symbol" : "OAuthSwiftClient.request"
+            },
+            {
+              "file" : "Sources/OAuthSwiftHTTPRequest.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "note" : "Unconditional decl, digest-present on macOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftHTTPRequest.swift#L18",
+              "symbol" : "OAuthSwiftHTTPRequest"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuthSwiftClient.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "note" : "Unconditional decl, digest-present on tvOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L17",
+              "symbol" : "OAuthSwiftClient"
+            },
+            {
+              "file" : "Sources/OAuthSwiftHTTPRequest.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "note" : "Unconditional decl, digest-present on tvOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftHTTPRequest.swift#L18",
+              "symbol" : "OAuthSwiftHTTPRequest"
+            },
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Sources/Handler/OAuthWebViewController.swift",
+              "kind" : "guard",
+              "line" : 13,
+              "note" : "Explicit tvOS branch elsewhere in the module shows tvOS is a handled compile target",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/OAuthWebViewController.swift#L13",
+              "symbol" : "OAuthViewController"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.4,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuthSwiftClient.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "note" : "Unconditional decl, digest-present on visionOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L17",
+              "symbol" : "OAuthSwiftClient"
+            },
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Sources/Handler/OAuthWebViewController.swift",
+              "kind" : "guard",
+              "line" : 13,
+              "note" : "No typealias branch covers visionOS while the unconditional OAuthWebViewController subclasses it — a visionOS build of the whole module (and thus this capability) is doubtful at 2.2.0; status left unknown",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/OAuthWebViewController.swift#L13",
+              "symbol" : "OAuthViewController"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuthSwiftClient.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "note" : "Unconditional decl, digest-present on watchOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L17",
+              "symbol" : "OAuthSwiftClient"
+            },
+            {
+              "file" : "Sources/OAuthSwiftHTTPRequest.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "note" : "Unconditional decl, digest-present on watchOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftHTTPRequest.swift#L18",
+              "symbol" : "OAuthSwiftHTTPRequest"
+            },
+            {
+              "condition" : "!(os(iOS) || os(tvOS)) && os(watchOS)",
+              "file" : "Sources/Handler/OAuthWebViewController.swift",
+              "kind" : "guard",
+              "line" : 16,
+              "note" : "Explicit watchOS branch elsewhere in the module shows watchOS is a compile target the authors handled",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/OAuthWebViewController.swift#L16",
+              "symbol" : "OAuthViewController"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "oauthswift",
+      "version" : "2.2.0"
     }
   ]
 }

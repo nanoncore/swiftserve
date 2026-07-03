@@ -7,6 +7,192 @@
   "label" : "Multipart upload",
   "packages" : [
     {
+      "commit" : "748ae8432a33e0965bbf0351fedd4e915e7f460c",
+      "notes" : "Confidence held at ~0.6 because the digest anchors are media-type constants, an indirect link to multipart handling. The actual Content integration (Sources/Vapor/Multipart/FormDataDecoder+Content.swift, FormDataEncoder+Content.swift, File+Multipart.swift in the checkout, backed by the MultipartKit dependency) fell outside the truncated digest (800 of 1967 decls). Re-label with an untruncated digest to raise confidence.",
+      "package" : "https://github.com/vapor/vapor",
+      "packageName" : "vapor",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+              "kind" : "symbol",
+              "line" : 241,
+              "note" : "multipart media-type constant; unconditional, no platform gaps.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPMediaType.swift#L241",
+              "symbol" : "HTTPMediaType.multipart"
+            },
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "note" : "multipart/form-data media-type constant.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPMediaType.swift#L233",
+              "symbol" : "HTTPMediaType.formData"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Package.swift declares .iOS(.v13).",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+              "kind" : "symbol",
+              "line" : 241,
+              "note" : "No linux gap recorded; digest evaluates linux (os(Linux)-conditional decls elsewhere in surface).",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPMediaType.swift#L241",
+              "symbol" : "HTTPMediaType.multipart"
+            },
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPMediaType.swift#L233",
+              "symbol" : "HTTPMediaType.formData"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.55,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+              "kind" : "symbol",
+              "line" : 241,
+              "note" : "No macCatalyst gap recorded in surface digest.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPMediaType.swift#L241",
+              "symbol" : "HTTPMediaType.multipart"
+            },
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPMediaType.swift#L233",
+              "symbol" : "HTTPMediaType.formData"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+              "kind" : "symbol",
+              "line" : 241,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPMediaType.swift#L241",
+              "symbol" : "HTTPMediaType.multipart"
+            },
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPMediaType.swift#L233",
+              "symbol" : "HTTPMediaType.formData"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Package.swift declares .macOS(.v10_15).",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.55,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+              "kind" : "symbol",
+              "line" : 241,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPMediaType.swift#L241",
+              "symbol" : "HTTPMediaType.multipart"
+            },
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPMediaType.swift#L233",
+              "symbol" : "HTTPMediaType.formData"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Package.swift declares .tvOS(.v13).",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.55,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+              "kind" : "symbol",
+              "line" : 241,
+              "note" : "No visionOS gap recorded; no visionOS manifest floor, symbol evidence only.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPMediaType.swift#L241",
+              "symbol" : "HTTPMediaType.multipart"
+            },
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPMediaType.swift#L233",
+              "symbol" : "HTTPMediaType.formData"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.55,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+              "kind" : "symbol",
+              "line" : 241,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPMediaType.swift#L241",
+              "symbol" : "HTTPMediaType.multipart"
+            },
+            {
+              "file" : "Sources/Vapor/HTTP/Headers/HTTPMediaType.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Headers/HTTPMediaType.swift#L233",
+              "symbol" : "HTTPMediaType.formData"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Package.swift declares .watchOS(.v6).",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "vapor",
+      "version" : "4.122.0"
+    },
+    {
       "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
       "notes" : "First-class multipart form data encoding + streaming upload.",
       "package" : "https://github.com/alamofire/alamofire",
@@ -126,6 +312,473 @@
       ],
       "slug" : "alamofire",
       "version" : "5.12.0"
+    },
+    {
+      "commit" : "5a8d18cc239dd3c4b31c9e13e671dbcef5e4072a",
+      "notes" : "GraphQL multipart file upload (graphql-multipart-request-spec): ApolloClient.upload(operation:files:) builds multipart/form-data bodies via MultipartFormData and GraphQLFile. Scoped to GraphQL operations, not arbitrary HTTP multipart uploads.",
+      "package" : "https://github.com/apollographql/apollo-ios",
+      "packageName" : "apollo-ios",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 505,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L505",
+              "symbol" : "ApolloClient.upload"
+            },
+            {
+              "file" : "Sources/Apollo/MultipartFormData.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/MultipartFormData.swift#L4",
+              "symbol" : "MultipartFormData"
+            },
+            {
+              "file" : "Sources/Apollo/GraphQLFile.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/GraphQLFile.swift#L4",
+              "symbol" : "GraphQLFile"
+            },
+            {
+              "file" : "Sources/Apollo/NetworkTransport.swift",
+              "kind" : "symbol",
+              "line" : 69,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/NetworkTransport.swift#L69",
+              "symbol" : "UploadingNetworkTransport"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "note" : "README platform badge lists iOS 15+ | macOS 12+ | tvOS 15+ | watchOS 8+ | visionOS 1+; Linux is not mentioned"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 505,
+              "note" : "Surface digest resolves this decl present on macCatalyst (no platform gap, no #if conditions anywhere in the surface); Package.swift declares no explicit macCatalyst floor (inherits iOS).",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L505",
+              "symbol" : "ApolloClient.upload"
+            },
+            {
+              "file" : "Sources/Apollo/MultipartFormData.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/MultipartFormData.swift#L4",
+              "symbol" : "MultipartFormData"
+            },
+            {
+              "file" : "Sources/Apollo/GraphQLFile.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/GraphQLFile.swift#L4",
+              "symbol" : "GraphQLFile"
+            },
+            {
+              "file" : "Sources/Apollo/NetworkTransport.swift",
+              "kind" : "symbol",
+              "line" : 69,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/NetworkTransport.swift#L69",
+              "symbol" : "UploadingNetworkTransport"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 505,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L505",
+              "symbol" : "ApolloClient.upload"
+            },
+            {
+              "file" : "Sources/Apollo/MultipartFormData.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/MultipartFormData.swift#L4",
+              "symbol" : "MultipartFormData"
+            },
+            {
+              "file" : "Sources/Apollo/GraphQLFile.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/GraphQLFile.swift#L4",
+              "symbol" : "GraphQLFile"
+            },
+            {
+              "file" : "Sources/Apollo/NetworkTransport.swift",
+              "kind" : "symbol",
+              "line" : 69,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/NetworkTransport.swift#L69",
+              "symbol" : "UploadingNetworkTransport"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 505,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L505",
+              "symbol" : "ApolloClient.upload"
+            },
+            {
+              "file" : "Sources/Apollo/MultipartFormData.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/MultipartFormData.swift#L4",
+              "symbol" : "MultipartFormData"
+            },
+            {
+              "file" : "Sources/Apollo/GraphQLFile.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/GraphQLFile.swift#L4",
+              "symbol" : "GraphQLFile"
+            },
+            {
+              "file" : "Sources/Apollo/NetworkTransport.swift",
+              "kind" : "symbol",
+              "line" : 69,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/NetworkTransport.swift#L69",
+              "symbol" : "UploadingNetworkTransport"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 505,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L505",
+              "symbol" : "ApolloClient.upload"
+            },
+            {
+              "file" : "Sources/Apollo/MultipartFormData.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/MultipartFormData.swift#L4",
+              "symbol" : "MultipartFormData"
+            },
+            {
+              "file" : "Sources/Apollo/GraphQLFile.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/GraphQLFile.swift#L4",
+              "symbol" : "GraphQLFile"
+            },
+            {
+              "file" : "Sources/Apollo/NetworkTransport.swift",
+              "kind" : "symbol",
+              "line" : 69,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/NetworkTransport.swift#L69",
+              "symbol" : "UploadingNetworkTransport"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Apollo/ApolloClient.swift",
+              "kind" : "symbol",
+              "line" : 505,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/ApolloClient.swift#L505",
+              "symbol" : "ApolloClient.upload"
+            },
+            {
+              "file" : "Sources/Apollo/MultipartFormData.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/MultipartFormData.swift#L4",
+              "symbol" : "MultipartFormData"
+            },
+            {
+              "file" : "Sources/Apollo/GraphQLFile.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/GraphQLFile.swift#L4",
+              "symbol" : "GraphQLFile"
+            },
+            {
+              "file" : "Sources/Apollo/NetworkTransport.swift",
+              "kind" : "symbol",
+              "line" : 69,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/NetworkTransport.swift#L69",
+              "symbol" : "UploadingNetworkTransport"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "apollo-ios",
+      "version" : "2.2.0"
+    },
+    {
+      "commit" : "d85964b96dbce94df961f28b996187c835089903",
+      "notes" : "Dedicated public multipart API: OAuthSwiftMultipartData plus OAuthSwiftClient.makeMultiPartRequest/postMultiPartRequest/multiPartBody (Sources/OAuthSwiftClient.swift:113/150/133) and the postImage convenience (line 108). Blind spot: 4 ObjC files unparsed.",
+      "package" : "https://github.com/oauthswift/oauthswift",
+      "packageName" : "oauthswift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuthSwiftMultipartData.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Dedicated multipart part type (name/data/fileName/mimeType); unconditional decl",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftMultipartData.swift#L11",
+              "symbol" : "OAuthSwiftMultipartData"
+            },
+            {
+              "file" : "Sources/OAuthSwiftClient.swift",
+              "kind" : "symbol",
+              "line" : 150,
+              "note" : "Multipart form-data request entry point",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L150",
+              "symbol" : "OAuthSwiftClient.postMultiPartRequest"
+            },
+            {
+              "file" : "Sources/OAuthSwiftClient.swift",
+              "kind" : "symbol",
+              "line" : 113,
+              "note" : "Multipart request builder",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L113",
+              "symbol" : "OAuthSwiftClient.makeMultiPartRequest"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.4,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuthSwiftMultipartData.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Unconditional decl, digest-present on linux; Package.swift adds swift-crypto under os(Linux) showing Linux intent",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftMultipartData.swift#L11",
+              "symbol" : "OAuthSwiftMultipartData"
+            },
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Sources/Handler/OAuthWebViewController.swift",
+              "kind" : "guard",
+              "line" : 13,
+              "note" : "No branch covers linux while unconditional OAuthWebViewController subclasses OAuthViewController, and Sources lack a FoundationNetworking import for URLSession — Linux build unverified; status left unknown",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/OAuthWebViewController.swift#L13",
+              "symbol" : "OAuthViewController"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuthSwiftMultipartData.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Unconditional decl, digest-present on macCatalyst",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftMultipartData.swift#L11",
+              "symbol" : "OAuthSwiftMultipartData"
+            },
+            {
+              "condition" : "targetEnvironment(macCatalyst) || os(iOS)",
+              "file" : "Sources/Handler/ASWebAuthenticationURLHandler.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "Explicit macCatalyst guard elsewhere in the module shows Catalyst is a handled compile target",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/ASWebAuthenticationURLHandler.swift#L14",
+              "symbol" : "ASWebAuthenticationURLHandler"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuthSwiftMultipartData.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Unconditional decl, digest-present on macOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftMultipartData.swift#L11",
+              "symbol" : "OAuthSwiftMultipartData"
+            },
+            {
+              "file" : "Sources/OAuthSwiftClient.swift",
+              "kind" : "symbol",
+              "line" : 150,
+              "note" : "Unconditional decl, digest-present on macOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L150",
+              "symbol" : "OAuthSwiftClient.postMultiPartRequest"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuthSwiftMultipartData.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Unconditional decl, digest-present on tvOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftMultipartData.swift#L11",
+              "symbol" : "OAuthSwiftMultipartData"
+            },
+            {
+              "file" : "Sources/OAuthSwiftClient.swift",
+              "kind" : "symbol",
+              "line" : 150,
+              "note" : "Unconditional decl, digest-present on tvOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L150",
+              "symbol" : "OAuthSwiftClient.postMultiPartRequest"
+            },
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Sources/Handler/OAuthWebViewController.swift",
+              "kind" : "guard",
+              "line" : 13,
+              "note" : "Explicit tvOS branch elsewhere in the module shows tvOS is a handled compile target",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/OAuthWebViewController.swift#L13",
+              "symbol" : "OAuthViewController"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.4,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuthSwiftMultipartData.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Unconditional decl, digest-present on visionOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftMultipartData.swift#L11",
+              "symbol" : "OAuthSwiftMultipartData"
+            },
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Sources/Handler/OAuthWebViewController.swift",
+              "kind" : "guard",
+              "line" : 13,
+              "note" : "No typealias branch covers visionOS while the unconditional OAuthWebViewController subclasses it — a visionOS build of the module is doubtful at 2.2.0; status left unknown",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/OAuthWebViewController.swift#L13",
+              "symbol" : "OAuthViewController"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuthSwiftMultipartData.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Unconditional decl, digest-present on watchOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftMultipartData.swift#L11",
+              "symbol" : "OAuthSwiftMultipartData"
+            },
+            {
+              "file" : "Sources/OAuthSwiftClient.swift",
+              "kind" : "symbol",
+              "line" : 150,
+              "note" : "Unconditional decl, digest-present on watchOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L150",
+              "symbol" : "OAuthSwiftClient.postMultiPartRequest"
+            },
+            {
+              "condition" : "!(os(iOS) || os(tvOS)) && os(watchOS)",
+              "file" : "Sources/Handler/OAuthWebViewController.swift",
+              "kind" : "guard",
+              "line" : 16,
+              "note" : "Explicit watchOS branch elsewhere in the module shows watchOS is a handled compile target",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/OAuthWebViewController.swift#L16",
+              "symbol" : "OAuthViewController"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "oauthswift",
+      "version" : "2.2.0"
     }
   ]
 }

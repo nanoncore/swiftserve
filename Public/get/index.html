@@ -55,8 +55,18 @@
   <button type="button" class="copy-btn" data-copy="/plugin install swiftserve@swiftserve">Copy</button>
 </div>
       <p>Then just ask: <em>“can LiveKit do noise cancellation on macOS?”</em></p>
-      <p><strong>Codex</strong> — the same skill, same file, in the open <code>SKILL.md</code>
-      format Codex speaks. One paste in a terminal:</p>
+      <p><strong>Codex</strong> — this repo is a Codex plugin marketplace too. Two pastes
+      in a terminal, versioned like the Claude plugin:</p>
+      <div class="cmd-row">
+  <pre><code>codex plugin marketplace add nanoncore/swiftserve</code></pre>
+  <button type="button" class="copy-btn" data-copy="codex plugin marketplace add nanoncore/swiftserve">Copy</button>
+</div>
+      <div class="cmd-row">
+  <pre><code>codex plugin add swiftserve@swiftserve</code></pre>
+  <button type="button" class="copy-btn" data-copy="codex plugin add swiftserve@swiftserve">Copy</button>
+</div>
+      <p>Prefer a bare skill file (no plugin, no updates)? One paste — Codex speaks the
+      same open <code>SKILL.md</code> format:</p>
       <div class="cmd-row">
   <pre><code>mkdir -p ~/.agents/skills/swiftserve &amp;&amp; curl -fsSL https://swiftserve.dev/skill.md -o ~/.agents/skills/swiftserve/SKILL.md</code></pre>
   <button type="button" class="copy-btn" data-copy="mkdir -p ~/.agents/skills/swiftserve &amp;&amp; curl -fsSL https://swiftserve.dev/skill.md -o ~/.agents/skills/swiftserve/SKILL.md">Copy</button>
@@ -90,7 +100,7 @@
     </section>
   </main>
   <footer class="site-footer">
-    <p>Served fresh · 74 capabilities × 107 packages · 201 records · data v1</p>
+    <p>Served fresh · 80 capabilities × 115 packages · 225 records · data v1</p>
     <p>Every verdict links to the exact source line that decides it. <a href="/about/">How it works</a></p>
     <p>Made refreshingly cool from Paris, France</p>
   </footer>

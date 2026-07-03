@@ -22,6 +22,40 @@
     "version" : "5.12.0"
   },
   {
+    "canonicalURL" : "https://github.com/swift-server-community/apnswift",
+    "capabilities" : [
+      "network.push-notifications",
+      "network.request-mocking"
+    ],
+    "name" : "apnswift",
+    "slug" : "apnswift",
+    "version" : "6.6.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/apollographql/apollo-ios",
+    "capabilities" : [
+      "network.graphql",
+      "network.multipart-upload",
+      "network.request-mocking",
+      "network.retry",
+      "network.websockets"
+    ],
+    "name" : "apollo-ios",
+    "slug" : "apollo-ios",
+    "version" : "2.2.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/swift-server/async-http-client",
+    "capabilities" : [
+      "network.http-client",
+      "network.http2",
+      "network.logging"
+    ],
+    "name" : "async-http-client",
+    "slug" : "async-http-client",
+    "version" : "1.35.0"
+  },
+  {
     "canonicalURL" : "https://github.com/audiokit/audiokit",
     "capabilities" : [
       "audio.file-io",
@@ -377,6 +411,16 @@
     "version" : "v7.11.1"
   },
   {
+    "canonicalURL" : "https://github.com/grpc/grpc-swift",
+    "capabilities" : [
+      "network.grpc",
+      "network.retry"
+    ],
+    "name" : "grpc-swift",
+    "slug" : "grpc-swift",
+    "version" : "2.2.3"
+  },
+  {
     "canonicalURL" : "https://github.com/fcanas/hlscore",
     "capabilities" : [
       "media.streaming.hls"
@@ -402,6 +446,17 @@
     "name" : "HLSVideoCache",
     "slug" : "hlsvideocache",
     "version" : "1.0.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/hummingbird-project/hummingbird",
+    "capabilities" : [
+      "network.http-server",
+      "network.http2",
+      "network.logging"
+    ],
+    "name" : "hummingbird",
+    "slug" : "hummingbird",
+    "version" : "2.25.0"
   },
   {
     "canonicalURL" : "https://github.com/kishikawakatsumi/keychainaccess",
@@ -577,6 +632,17 @@
     "name" : "Nuke",
     "slug" : "nuke",
     "version" : "13.0.6"
+  },
+  {
+    "canonicalURL" : "https://github.com/oauthswift/oauthswift",
+    "capabilities" : [
+      "network.http-client",
+      "network.multipart-upload",
+      "network.oauth"
+    ],
+    "name" : "oauthswift",
+    "slug" : "oauthswift",
+    "version" : "2.2.0"
   },
   {
     "canonicalURL" : "https://github.com/piemonte/player",
@@ -994,6 +1060,19 @@
     "version" : "5.1.0"
   },
   {
+    "canonicalURL" : "https://github.com/vapor/vapor",
+    "capabilities" : [
+      "network.http-server",
+      "network.http2",
+      "network.logging",
+      "network.multipart-upload",
+      "network.websockets"
+    ],
+    "name" : "vapor",
+    "slug" : "vapor",
+    "version" : "4.122.0"
+  },
+  {
     "canonicalURL" : "https://github.com/metalpetal/videoio",
     "capabilities" : [
       "video.capture"
@@ -1037,6 +1116,15 @@
     "name" : "WebRTC (stasel)",
     "slug" : "webrtc",
     "version" : "149.0.0"
+  },
+  {
+    "canonicalURL" : "https://github.com/vapor/websocket-kit",
+    "capabilities" : [
+      "network.websockets"
+    ],
+    "name" : "websocket-kit",
+    "slug" : "websocket-kit",
+    "version" : "2.16.2"
   },
   {
     "canonicalURL" : "https://github.com/argmaxinc/whisperkit",

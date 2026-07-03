@@ -7,6 +7,341 @@
   "label" : "Request retry / backoff",
   "packages" : [
     {
+      "commit" : "adc18c3e1c55027d0ce43893897ac448e3f27ebe",
+      "notes" : "Retry with exponential backoff is a first-class RPC execution policy in GRPCCore: RetryPolicy (maxAttempts, initialBackoff, maxBackoff, backoffMultiplier, retryableStatusCodes), server-configurable retry throttling (ServiceConfig.RetryThrottling, RetryThrottle), and a HedgingPolicy sibling. This is gRPC RPC-level retry, not generic HTTP request retry. No #if conditions or platform gaps on any anchor.",
+      "package" : "https://github.com/grpc/grpc-swift",
+      "packageName" : "grpc-swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 219,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L219",
+              "symbol" : "RetryPolicy"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/RetryThrottle.swift",
+              "kind" : "symbol",
+              "line" : 33,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/RetryThrottle.swift#L33",
+              "symbol" : "RetryThrottle"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L233",
+              "symbol" : "RetryPolicy.initialBackoff"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 247,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L247",
+              "symbol" : "RetryPolicy.backoffMultiplier"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/ServiceConfig.swift",
+              "kind" : "symbol",
+              "line" : 235,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/ServiceConfig.swift#L235",
+              "symbol" : "ServiceConfig.RetryThrottling"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 57,
+              "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Package.swift#L57"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 219,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L219",
+              "symbol" : "RetryPolicy"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/RetryThrottle.swift",
+              "kind" : "symbol",
+              "line" : 33,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/RetryThrottle.swift#L33",
+              "symbol" : "RetryThrottle"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L233",
+              "symbol" : "RetryPolicy.initialBackoff"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 247,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L247",
+              "symbol" : "RetryPolicy.backoffMultiplier"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/ServiceConfig.swift",
+              "kind" : "symbol",
+              "line" : 235,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/ServiceConfig.swift#L235",
+              "symbol" : "ServiceConfig.RetryThrottling"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 219,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L219",
+              "symbol" : "RetryPolicy"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/RetryThrottle.swift",
+              "kind" : "symbol",
+              "line" : 33,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/RetryThrottle.swift#L33",
+              "symbol" : "RetryThrottle"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L233",
+              "symbol" : "RetryPolicy.initialBackoff"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 247,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L247",
+              "symbol" : "RetryPolicy.backoffMultiplier"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/ServiceConfig.swift",
+              "kind" : "symbol",
+              "line" : 235,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/ServiceConfig.swift#L235",
+              "symbol" : "ServiceConfig.RetryThrottling"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 219,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L219",
+              "symbol" : "RetryPolicy"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/RetryThrottle.swift",
+              "kind" : "symbol",
+              "line" : 33,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/RetryThrottle.swift#L33",
+              "symbol" : "RetryThrottle"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L233",
+              "symbol" : "RetryPolicy.initialBackoff"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 247,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L247",
+              "symbol" : "RetryPolicy.backoffMultiplier"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/ServiceConfig.swift",
+              "kind" : "symbol",
+              "line" : 235,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/ServiceConfig.swift#L235",
+              "symbol" : "ServiceConfig.RetryThrottling"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 57,
+              "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Package.swift#L57"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 219,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L219",
+              "symbol" : "RetryPolicy"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/RetryThrottle.swift",
+              "kind" : "symbol",
+              "line" : 33,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/RetryThrottle.swift#L33",
+              "symbol" : "RetryThrottle"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L233",
+              "symbol" : "RetryPolicy.initialBackoff"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 247,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L247",
+              "symbol" : "RetryPolicy.backoffMultiplier"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/ServiceConfig.swift",
+              "kind" : "symbol",
+              "line" : 235,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/ServiceConfig.swift#L235",
+              "symbol" : "ServiceConfig.RetryThrottling"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 57,
+              "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Package.swift#L57"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 219,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L219",
+              "symbol" : "RetryPolicy"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/RetryThrottle.swift",
+              "kind" : "symbol",
+              "line" : 33,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/RetryThrottle.swift#L33",
+              "symbol" : "RetryThrottle"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L233",
+              "symbol" : "RetryPolicy.initialBackoff"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 247,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L247",
+              "symbol" : "RetryPolicy.backoffMultiplier"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/ServiceConfig.swift",
+              "kind" : "symbol",
+              "line" : 235,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/ServiceConfig.swift#L235",
+              "symbol" : "ServiceConfig.RetryThrottling"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 57,
+              "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Package.swift#L57"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 219,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L219",
+              "symbol" : "RetryPolicy"
+            },
+            {
+              "file" : "Sources/GRPCCore/Transport/RetryThrottle.swift",
+              "kind" : "symbol",
+              "line" : 33,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Transport/RetryThrottle.swift#L33",
+              "symbol" : "RetryThrottle"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L233",
+              "symbol" : "RetryPolicy.initialBackoff"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/MethodConfig.swift",
+              "kind" : "symbol",
+              "line" : 247,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/MethodConfig.swift#L247",
+              "symbol" : "RetryPolicy.backoffMultiplier"
+            },
+            {
+              "file" : "Sources/GRPCCore/Configuration/ServiceConfig.swift",
+              "kind" : "symbol",
+              "line" : 235,
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Sources/GRPCCore/Configuration/ServiceConfig.swift#L235",
+              "symbol" : "ServiceConfig.RetryThrottling"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 57,
+              "note" : "No platforms: block in Package.swift; floors are encoded via AvailabilityMacro build setting mapping 'gRPCSwift 2.x' to macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0",
+              "permalink" : "https://github.com/grpc/grpc-swift/blob/2.2.3/Package.swift#L57"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "grpc-swift",
+      "version" : "2.2.3"
+    },
+    {
       "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
       "notes" : "RetryPolicy + RequestInterceptor give configurable retry with exponential backoff.",
       "package" : "https://github.com/alamofire/alamofire",
@@ -167,6 +502,235 @@
       ],
       "slug" : "alamofire",
       "version" : "5.12.0"
+    },
+    {
+      "commit" : "5a8d18cc239dd3c4b31c9e13e671dbcef5e4072a",
+      "notes" : "Request retry with configurable policy: MaxRetryInterceptor.Configuration exposes maxRetries, baseDelay, multiplier, maxDelay, enableExponentialBackoff, enableJitter; RequestChain.Retry signals interceptor-driven retries of a (possibly modified) request.",
+      "package" : "https://github.com/apollographql/apollo-ios",
+      "packageName" : "apollo-ios",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift#L5",
+              "symbol" : "MaxRetryInterceptor"
+            },
+            {
+              "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift#L18",
+              "symbol" : "MaxRetryInterceptor.Configuration.enableExponentialBackoff"
+            },
+            {
+              "file" : "Sources/Apollo/RequestChain/RequestChain.swift",
+              "kind" : "symbol",
+              "line" : 108,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/RequestChain/RequestChain.swift#L108",
+              "symbol" : "RequestChain.Retry"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "note" : "README platform badge lists iOS 15+ | macOS 12+ | tvOS 15+ | watchOS 8+ | visionOS 1+; Linux is not mentioned"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Surface digest resolves this decl present on macCatalyst (no platform gap, no #if conditions anywhere in the surface); Package.swift declares no explicit macCatalyst floor (inherits iOS).",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift#L5",
+              "symbol" : "MaxRetryInterceptor"
+            },
+            {
+              "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift#L18",
+              "symbol" : "MaxRetryInterceptor.Configuration.enableExponentialBackoff"
+            },
+            {
+              "file" : "Sources/Apollo/RequestChain/RequestChain.swift",
+              "kind" : "symbol",
+              "line" : 108,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/RequestChain/RequestChain.swift#L108",
+              "symbol" : "RequestChain.Retry"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift#L5",
+              "symbol" : "MaxRetryInterceptor"
+            },
+            {
+              "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift#L18",
+              "symbol" : "MaxRetryInterceptor.Configuration.enableExponentialBackoff"
+            },
+            {
+              "file" : "Sources/Apollo/RequestChain/RequestChain.swift",
+              "kind" : "symbol",
+              "line" : 108,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/RequestChain/RequestChain.swift#L108",
+              "symbol" : "RequestChain.Retry"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift#L5",
+              "symbol" : "MaxRetryInterceptor"
+            },
+            {
+              "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift#L18",
+              "symbol" : "MaxRetryInterceptor.Configuration.enableExponentialBackoff"
+            },
+            {
+              "file" : "Sources/Apollo/RequestChain/RequestChain.swift",
+              "kind" : "symbol",
+              "line" : 108,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/RequestChain/RequestChain.swift#L108",
+              "symbol" : "RequestChain.Retry"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift#L5",
+              "symbol" : "MaxRetryInterceptor"
+            },
+            {
+              "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift#L18",
+              "symbol" : "MaxRetryInterceptor.Configuration.enableExponentialBackoff"
+            },
+            {
+              "file" : "Sources/Apollo/RequestChain/RequestChain.swift",
+              "kind" : "symbol",
+              "line" : 108,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/RequestChain/RequestChain.swift#L108",
+              "symbol" : "RequestChain.Retry"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift#L5",
+              "symbol" : "MaxRetryInterceptor"
+            },
+            {
+              "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift#L18",
+              "symbol" : "MaxRetryInterceptor.Configuration.enableExponentialBackoff"
+            },
+            {
+              "file" : "Sources/Apollo/RequestChain/RequestChain.swift",
+              "kind" : "symbol",
+              "line" : 108,
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/Apollo/RequestChain/RequestChain.swift#L108",
+              "symbol" : "RequestChain.Retry"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+              "permalink" : "https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "apollo-ios",
+      "version" : "2.2.0"
     }
   ]
 }

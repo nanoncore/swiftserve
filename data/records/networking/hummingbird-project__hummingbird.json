@@ -1,0 +1,1056 @@
+[
+  {
+    "capability" : {
+      "id" : "network.http-server",
+      "label" : "HTTP server"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Core HTTP/1.1 server framework (Application, Router, Server actor, HTTPServerBuilder, HTTP1Channel) — all anchors unconditional with no platform gaps in the surface digest. watchOS has no Package.swift platform floor (symbol evidence only), hence lower confidence there. Surface digest truncated (800 of 1233 decls); anchors verified within the digest.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/hummingbird-project/hummingbird",
+      "commit" : "eebb5ecf8a39beea87401f014fdf87f0ce5b159d",
+      "firstParty" : false,
+      "name" : "hummingbird",
+      "surfaceDigest" : "fnv1a64:3f564af821571fa4",
+      "version" : "2.25.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Application.swift",
+            "kind" : "symbol",
+            "line" : 181,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Application"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Router/Router.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Router"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/Server.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Server"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPServerBuilder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP1Channel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 29,
+            "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Application.swift",
+            "kind" : "symbol",
+            "line" : 181,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Application"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Router/Router.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Router"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/Server.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Server"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPServerBuilder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP1Channel"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Application.swift",
+            "kind" : "symbol",
+            "line" : 181,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Application"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Router/Router.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Router"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/Server.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Server"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPServerBuilder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP1Channel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 29,
+            "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Application.swift",
+            "kind" : "symbol",
+            "line" : 181,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Application"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Router/Router.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Router"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/Server.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Server"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPServerBuilder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP1Channel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 29,
+            "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Application.swift",
+            "kind" : "symbol",
+            "line" : 181,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Application"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Router/Router.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Router"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/Server.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Server"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPServerBuilder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP1Channel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 29,
+            "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Application.swift",
+            "kind" : "symbol",
+            "line" : 181,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Application"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Router/Router.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Router"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/Server.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Server"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPServerBuilder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP1Channel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 29,
+            "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Application.swift",
+            "kind" : "symbol",
+            "line" : 181,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Application"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Router/Router.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Router"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/Server.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Server"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTPServerBuilder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP1Channel"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "network.http2",
+      "label" : "HTTP/2"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "HummingbirdHTTP2 product in this package: HTTP2Channel, HTTP2UpgradeChannel, HTTP2ChannelConfiguration — unconditional, no platform gaps in the surface digest. HTTP/2 upgrade in practice pairs with TLS (HummingbirdTLS also in this package). watchOS has no Package.swift platform floor. Surface digest truncated (800 of 1233 decls).",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/hummingbird-project/hummingbird",
+      "commit" : "eebb5ecf8a39beea87401f014fdf87f0ce5b159d",
+      "firstParty" : false,
+      "name" : "hummingbird",
+      "surfaceDigest" : "fnv1a64:3f564af821571fa4",
+      "version" : "2.25.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2Channel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2UpgradeChannel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2ChannelConfiguration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 29,
+            "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2Channel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2UpgradeChannel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2ChannelConfiguration"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2Channel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2UpgradeChannel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2ChannelConfiguration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 29,
+            "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2Channel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2UpgradeChannel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2ChannelConfiguration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 29,
+            "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2Channel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2UpgradeChannel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2ChannelConfiguration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 29,
+            "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2Channel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2UpgradeChannel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2ChannelConfiguration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 29,
+            "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2Channel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2UpgradeChannel.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2UpgradeChannel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/HummingbirdHTTP2/HTTP2Channel.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HTTP2ChannelConfiguration"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "network.logging",
+      "label" : "Network logging / inspection"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Server-side request logging via LogRequestsMiddleware (with HeaderFilter for header redaction) — unconditional, no platform gaps in the surface digest. This is request logging middleware, not a client-side network inspector. watchOS has no Package.swift platform floor. Surface digest truncated (800 of 1233 decls).",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/hummingbird-project/hummingbird",
+      "commit" : "eebb5ecf8a39beea87401f014fdf87f0ce5b159d",
+      "firstParty" : false,
+      "name" : "hummingbird",
+      "surfaceDigest" : "fnv1a64:3f564af821571fa4",
+      "version" : "2.25.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "LogRequestsMiddleware"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : null,
+            "package" : null,
+            "symbol" : "LogRequestsMiddleware.HeaderFilter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 29,
+            "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "LogRequestsMiddleware"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : null,
+            "package" : null,
+            "symbol" : "LogRequestsMiddleware.HeaderFilter"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "LogRequestsMiddleware"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : null,
+            "package" : null,
+            "symbol" : "LogRequestsMiddleware.HeaderFilter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 29,
+            "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "LogRequestsMiddleware"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : null,
+            "package" : null,
+            "symbol" : "LogRequestsMiddleware.HeaderFilter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 29,
+            "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "LogRequestsMiddleware"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : null,
+            "package" : null,
+            "symbol" : "LogRequestsMiddleware.HeaderFilter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 29,
+            "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "LogRequestsMiddleware"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : null,
+            "package" : null,
+            "symbol" : "LogRequestsMiddleware.HeaderFilter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 29,
+            "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "LogRequestsMiddleware"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Hummingbird/Middleware/LogRequestMiddleware.swift",
+            "kind" : "symbol",
+            "line" : 20,
+            "note" : null,
+            "package" : null,
+            "symbol" : "LogRequestsMiddleware.HeaderFilter"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

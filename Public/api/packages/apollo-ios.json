@@ -1,0 +1,1652 @@
+[
+  {
+    "capability" : {
+      "id" : "network.graphql",
+      "label" : "GraphQL client"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Core capability of the package: ApolloClient is the primary GraphQL entry point (queries, mutations, subscriptions, watchers) with normalized caching. All anchors are unconditional in the extracted surface.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/apollographql/apollo-ios",
+      "commit" : "5a8d18cc239dd3c4b31c9e13e671dbcef5e4072a",
+      "firstParty" : false,
+      "name" : "apollo-ios",
+      "surfaceDigest" : "fnv1a64:0ba0803931d75c92",
+      "version" : "2.2.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 128,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient.fetch"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+            "kind" : "symbol",
+            "line" : 129,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GraphQLQuery"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README platform badge lists iOS 15+ | macOS 12+ | tvOS 15+ | watchOS 8+ | visionOS 1+; Linux is not mentioned",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "Surface digest resolves this decl present on macCatalyst (no platform gap, no #if conditions anywhere in the surface); Package.swift declares no explicit macCatalyst floor (inherits iOS).",
+            "package" : null,
+            "symbol" : "ApolloClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 128,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient.fetch"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+            "kind" : "symbol",
+            "line" : 129,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GraphQLQuery"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 128,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient.fetch"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+            "kind" : "symbol",
+            "line" : 129,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GraphQLQuery"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 128,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient.fetch"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+            "kind" : "symbol",
+            "line" : 129,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GraphQLQuery"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 128,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient.fetch"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+            "kind" : "symbol",
+            "line" : 129,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GraphQLQuery"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 128,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient.fetch"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+            "kind" : "symbol",
+            "line" : 129,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GraphQLQuery"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "network.multipart-upload",
+      "label" : "Multipart upload"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "GraphQL multipart file upload (graphql-multipart-request-spec): ApolloClient.upload(operation:files:) builds multipart/form-data bodies via MultipartFormData and GraphQLFile. Scoped to GraphQL operations, not arbitrary HTTP multipart uploads.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/apollographql/apollo-ios",
+      "commit" : "5a8d18cc239dd3c4b31c9e13e671dbcef5e4072a",
+      "firstParty" : false,
+      "name" : "apollo-ios",
+      "surfaceDigest" : "fnv1a64:0ba0803931d75c92",
+      "version" : "2.2.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 505,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient.upload"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/MultipartFormData.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MultipartFormData"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/GraphQLFile.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GraphQLFile"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/NetworkTransport.swift",
+            "kind" : "symbol",
+            "line" : 69,
+            "note" : null,
+            "package" : null,
+            "symbol" : "UploadingNetworkTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README platform badge lists iOS 15+ | macOS 12+ | tvOS 15+ | watchOS 8+ | visionOS 1+; Linux is not mentioned",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 505,
+            "note" : "Surface digest resolves this decl present on macCatalyst (no platform gap, no #if conditions anywhere in the surface); Package.swift declares no explicit macCatalyst floor (inherits iOS).",
+            "package" : null,
+            "symbol" : "ApolloClient.upload"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/MultipartFormData.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MultipartFormData"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/GraphQLFile.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GraphQLFile"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/NetworkTransport.swift",
+            "kind" : "symbol",
+            "line" : 69,
+            "note" : null,
+            "package" : null,
+            "symbol" : "UploadingNetworkTransport"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 505,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient.upload"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/MultipartFormData.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MultipartFormData"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/GraphQLFile.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GraphQLFile"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/NetworkTransport.swift",
+            "kind" : "symbol",
+            "line" : 69,
+            "note" : null,
+            "package" : null,
+            "symbol" : "UploadingNetworkTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 505,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient.upload"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/MultipartFormData.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MultipartFormData"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/GraphQLFile.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GraphQLFile"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/NetworkTransport.swift",
+            "kind" : "symbol",
+            "line" : 69,
+            "note" : null,
+            "package" : null,
+            "symbol" : "UploadingNetworkTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 505,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient.upload"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/MultipartFormData.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MultipartFormData"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/GraphQLFile.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GraphQLFile"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/NetworkTransport.swift",
+            "kind" : "symbol",
+            "line" : 69,
+            "note" : null,
+            "package" : null,
+            "symbol" : "UploadingNetworkTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 505,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient.upload"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/MultipartFormData.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MultipartFormData"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/GraphQLFile.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GraphQLFile"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/NetworkTransport.swift",
+            "kind" : "symbol",
+            "line" : 69,
+            "note" : null,
+            "package" : null,
+            "symbol" : "UploadingNetworkTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "network.request-mocking",
+      "label" : "Request stubbing / mocking"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "ApolloTestSupport product surfaces test mocks (Mock<T>, MockObject, AnyMock, MockFieldValue) for building mocked GraphQL response/model data in tests. This is response-model mocking for generated operation models, NOT URL-level request stubbing; no MockURLSession/MockNetworkTransport-style API is in this surface digest (digest truncated at 800/1134 decls). Confidence reduced accordingly.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/apollographql/apollo-ios",
+      "commit" : "5a8d18cc239dd3c4b31c9e13e671dbcef5e4072a",
+      "firstParty" : false,
+      "name" : "apollo-ios",
+      "surfaceDigest" : "fnv1a64:0ba0803931d75c92",
+      "version" : "2.2.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloTestSupport/TestMock.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Mock"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloTestSupport/TestMock.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MockObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloTestSupport/TestMock.swift",
+            "kind" : "symbol",
+            "line" : 149,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AnyMock"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README platform badge lists iOS 15+ | macOS 12+ | tvOS 15+ | watchOS 8+ | visionOS 1+; Linux is not mentioned",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloTestSupport/TestMock.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : "Surface digest resolves this decl present on macCatalyst (no platform gap, no #if conditions anywhere in the surface); Package.swift declares no explicit macCatalyst floor (inherits iOS).",
+            "package" : null,
+            "symbol" : "Mock"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloTestSupport/TestMock.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MockObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloTestSupport/TestMock.swift",
+            "kind" : "symbol",
+            "line" : 149,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AnyMock"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloTestSupport/TestMock.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Mock"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloTestSupport/TestMock.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MockObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloTestSupport/TestMock.swift",
+            "kind" : "symbol",
+            "line" : 149,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AnyMock"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloTestSupport/TestMock.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Mock"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloTestSupport/TestMock.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MockObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloTestSupport/TestMock.swift",
+            "kind" : "symbol",
+            "line" : 149,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AnyMock"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloTestSupport/TestMock.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Mock"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloTestSupport/TestMock.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MockObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloTestSupport/TestMock.swift",
+            "kind" : "symbol",
+            "line" : 149,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AnyMock"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloTestSupport/TestMock.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Mock"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloTestSupport/TestMock.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MockObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloTestSupport/TestMock.swift",
+            "kind" : "symbol",
+            "line" : 149,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AnyMock"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "network.retry",
+      "label" : "Request retry / backoff"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Request retry with configurable policy: MaxRetryInterceptor.Configuration exposes maxRetries, baseDelay, multiplier, maxDelay, enableExponentialBackoff, enableJitter; RequestChain.Retry signals interceptor-driven retries of a (possibly modified) request.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/apollographql/apollo-ios",
+      "commit" : "5a8d18cc239dd3c4b31c9e13e671dbcef5e4072a",
+      "firstParty" : false,
+      "name" : "apollo-ios",
+      "surfaceDigest" : "fnv1a64:0ba0803931d75c92",
+      "version" : "2.2.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MaxRetryInterceptor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MaxRetryInterceptor.Configuration.enableExponentialBackoff"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/RequestChain/RequestChain.swift",
+            "kind" : "symbol",
+            "line" : 108,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RequestChain.Retry"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README platform badge lists iOS 15+ | macOS 12+ | tvOS 15+ | watchOS 8+ | visionOS 1+; Linux is not mentioned",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Surface digest resolves this decl present on macCatalyst (no platform gap, no #if conditions anywhere in the surface); Package.swift declares no explicit macCatalyst floor (inherits iOS).",
+            "package" : null,
+            "symbol" : "MaxRetryInterceptor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MaxRetryInterceptor.Configuration.enableExponentialBackoff"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/RequestChain/RequestChain.swift",
+            "kind" : "symbol",
+            "line" : 108,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RequestChain.Retry"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MaxRetryInterceptor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MaxRetryInterceptor.Configuration.enableExponentialBackoff"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/RequestChain/RequestChain.swift",
+            "kind" : "symbol",
+            "line" : 108,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RequestChain.Retry"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MaxRetryInterceptor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MaxRetryInterceptor.Configuration.enableExponentialBackoff"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/RequestChain/RequestChain.swift",
+            "kind" : "symbol",
+            "line" : 108,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RequestChain.Retry"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MaxRetryInterceptor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MaxRetryInterceptor.Configuration.enableExponentialBackoff"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/RequestChain/RequestChain.swift",
+            "kind" : "symbol",
+            "line" : 108,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RequestChain.Retry"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MaxRetryInterceptor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/RequestChain/Interceptors/MaxRetryInterceptor.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MaxRetryInterceptor.Configuration.enableExponentialBackoff"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/RequestChain/RequestChain.swift",
+            "kind" : "symbol",
+            "line" : 108,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RequestChain.Retry"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "network.websockets",
+      "label" : "WebSockets"
+    },
+    "labeledAt" : "2026-07-03T15:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "WebSocket transport for GraphQL subscriptions via the ApolloWebSocket product: WebSocketTransport actor (graphql-ws / subscriptions-transport-ws style transport over an abstracted URLSessionWebSocketTask, see WebSocketTask in Sources/ApolloWebSocket/WebSocketURLSession.swift). Not a general-purpose WebSocket client.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/apollographql/apollo-ios",
+      "commit" : "5a8d18cc239dd3c4b31c9e13e671dbcef5e4072a",
+      "firstParty" : false,
+      "name" : "apollo-ios",
+      "surfaceDigest" : "fnv1a64:0ba0803931d75c92",
+      "version" : "2.2.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloWebSocket/WebSocketTransport.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : null,
+            "package" : null,
+            "symbol" : "WebSocketTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 603,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient.subscribe"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+            "kind" : "symbol",
+            "line" : 143,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GraphQLSubscription"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README platform badge lists iOS 15+ | macOS 12+ | tvOS 15+ | watchOS 8+ | visionOS 1+; Linux is not mentioned",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloWebSocket/WebSocketTransport.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Surface digest resolves this decl present on macCatalyst (no platform gap, no #if conditions anywhere in the surface); Package.swift declares no explicit macCatalyst floor (inherits iOS).",
+            "package" : null,
+            "symbol" : "WebSocketTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 603,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient.subscribe"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+            "kind" : "symbol",
+            "line" : 143,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GraphQLSubscription"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloWebSocket/WebSocketTransport.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : null,
+            "package" : null,
+            "symbol" : "WebSocketTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 603,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient.subscribe"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+            "kind" : "symbol",
+            "line" : 143,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GraphQLSubscription"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloWebSocket/WebSocketTransport.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : null,
+            "package" : null,
+            "symbol" : "WebSocketTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 603,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient.subscribe"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+            "kind" : "symbol",
+            "line" : 143,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GraphQLSubscription"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloWebSocket/WebSocketTransport.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : null,
+            "package" : null,
+            "symbol" : "WebSocketTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 603,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient.subscribe"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+            "kind" : "symbol",
+            "line" : 143,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GraphQLSubscription"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloWebSocket/WebSocketTransport.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : null,
+            "package" : null,
+            "symbol" : "WebSocketTransport"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Apollo/ApolloClient.swift",
+            "kind" : "symbol",
+            "line" : 603,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ApolloClient.subscribe"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ApolloAPI/GraphQLOperation.swift",
+            "kind" : "symbol",
+            "line" : 143,
+            "note" : null,
+            "package" : null,
+            "symbol" : "GraphQLSubscription"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

@@ -1,0 +1,235 @@
+{
+  "aliases" : [
+    "oauth2",
+    "authorization code flow",
+    "sign in with"
+  ],
+  "id" : "network.oauth",
+  "label" : "OAuth flows",
+  "packages" : [
+    {
+      "commit" : "d85964b96dbce94df961f28b996187c835089903",
+      "notes" : "OAuth1 and OAuth2 (including PKCE via OAuth2Swift.authorize at Sources/OAuth2Swift.swift:336 and token renewal via OAuth2Swift.renewAccessToken at :233) are implemented in unconditional Swift; only the login UI handlers are platform-guarded. Digest quirk: os(OSX)-guarded decls list macOS itself as absent in gaps, so macOS evidence rests on unconditional core decls plus README. Blind spot: 4 ObjC files unparsed; confidence kept at or below 0.9.",
+      "package" : "https://github.com/oauthswift/oauthswift",
+      "packageName" : "oauthswift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuth2Swift.swift",
+              "kind" : "symbol",
+              "line" : 97,
+              "note" : "OAuth2 authorization-code flow entry point; unconditional decl, digest-present on iOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuth2Swift.swift#L97",
+              "symbol" : "OAuth2Swift.authorize"
+            },
+            {
+              "file" : "Sources/OAuth1Swift.swift",
+              "kind" : "symbol",
+              "line" : 76,
+              "note" : "OAuth1 three-legged flow entry point; unconditional decl",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuth1Swift.swift#L76",
+              "symbol" : "OAuth1Swift.authorize"
+            },
+            {
+              "condition" : "targetEnvironment(macCatalyst) || os(iOS)",
+              "file" : "Sources/Handler/ASWebAuthenticationURLHandler.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "ASWebAuthenticationSession-based login UI handler, digest-present on iOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/ASWebAuthenticationURLHandler.swift#L14",
+              "symbol" : "ASWebAuthenticationURLHandler"
+            },
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Handler/SafariURLHandler.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "note" : "SFSafariViewController-based login UI handler",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/SafariURLHandler.swift#L18",
+              "symbol" : "SafariURLHandler"
+            },
+            {
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: 'Swift based OAuth library for iOS and macOS'"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.4,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuth2Swift.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Core class is unconditional and digest-present on linux; Package.swift appends swift-crypto under os(Linux), signalling Linux intent (no platforms block to cite as manifestPlatforms)",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuth2Swift.swift#L11",
+              "symbol" : "OAuth2Swift"
+            },
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Sources/Handler/OAuthWebViewController.swift",
+              "kind" : "guard",
+              "line" : 13,
+              "note" : "No OAuthViewController typealias branch covers linux while the unconditional OAuthWebViewController subclasses it; Sources also lack a FoundationNetworking import for URLSession — Linux build unverified, status left unknown",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/OAuthWebViewController.swift#L13",
+              "symbol" : "OAuthViewController"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuth2Swift.swift",
+              "kind" : "symbol",
+              "line" : 97,
+              "note" : "Unconditional decl, digest-present on macCatalyst",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuth2Swift.swift#L97",
+              "symbol" : "OAuth2Swift.authorize"
+            },
+            {
+              "condition" : "targetEnvironment(macCatalyst) || os(iOS)",
+              "file" : "Sources/Handler/ASWebAuthenticationURLHandler.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "Login UI handler explicitly guarded for macCatalyst; digest-present on macCatalyst",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/ASWebAuthenticationURLHandler.swift#L14",
+              "symbol" : "ASWebAuthenticationURLHandler"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuth2Swift.swift",
+              "kind" : "symbol",
+              "line" : 97,
+              "note" : "Unconditional decl, digest-present on macOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuth2Swift.swift#L97",
+              "symbol" : "OAuth2Swift.authorize"
+            },
+            {
+              "file" : "Sources/OAuth1Swift.swift",
+              "kind" : "symbol",
+              "line" : 76,
+              "note" : "Unconditional decl, digest-present on macOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuth1Swift.swift#L76",
+              "symbol" : "OAuth1Swift.authorize"
+            },
+            {
+              "file" : "Sources/OAuthSwiftCredential.swift",
+              "kind" : "symbol",
+              "line" : 43,
+              "note" : "Credential/token type; unconditional decl",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftCredential.swift#L43",
+              "symbol" : "OAuthSwiftCredential"
+            },
+            {
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: 'Swift based OAuth library for iOS and macOS'; README also documents NSAppleEventManager callback handling on macOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuth2Swift.swift",
+              "kind" : "symbol",
+              "line" : 97,
+              "note" : "Unconditional decl, digest-present on tvOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuth2Swift.swift#L97",
+              "symbol" : "OAuth2Swift.authorize"
+            },
+            {
+              "file" : "Sources/OAuth1Swift.swift",
+              "kind" : "symbol",
+              "line" : 76,
+              "note" : "Unconditional decl, digest-present on tvOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuth1Swift.swift#L76",
+              "symbol" : "OAuth1Swift.authorize"
+            },
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Sources/Handler/OAuthWebViewController.swift",
+              "kind" : "guard",
+              "line" : 13,
+              "note" : "Explicit tvOS branch of the web view controller layer; digest-present on tvOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/OAuthWebViewController.swift#L13",
+              "symbol" : "OAuthViewController"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.4,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuth2Swift.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Core class is unconditional and digest-present on visionOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuth2Swift.swift#L11",
+              "symbol" : "OAuth2Swift"
+            },
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Sources/Handler/OAuthWebViewController.swift",
+              "kind" : "guard",
+              "line" : 13,
+              "note" : "gaps mark visionOS absent for every OAuthViewController typealias branch (iOS/tvOS, watchOS, OSX); the unconditional OAuthWebViewController subclasses OAuthViewController, so a visionOS build of 2.2.0 is doubtful — conflicting evidence, status left unknown",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/OAuthWebViewController.swift#L13",
+              "symbol" : "OAuthViewController"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/OAuth2Swift.swift",
+              "kind" : "symbol",
+              "line" : 97,
+              "note" : "Unconditional decl, digest-present on watchOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuth2Swift.swift#L97",
+              "symbol" : "OAuth2Swift.authorize"
+            },
+            {
+              "file" : "Sources/OAuth1Swift.swift",
+              "kind" : "symbol",
+              "line" : 76,
+              "note" : "Unconditional decl, digest-present on watchOS",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuth1Swift.swift#L76",
+              "symbol" : "OAuth1Swift.authorize"
+            },
+            {
+              "condition" : "!(os(iOS) || os(tvOS)) && os(watchOS)",
+              "file" : "Sources/Handler/OAuthWebViewController.swift",
+              "kind" : "guard",
+              "line" : 16,
+              "note" : "Explicit watchOS branch (OAuthViewController = WKInterfaceController); digest-present on watchOS only",
+              "permalink" : "https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/OAuthWebViewController.swift#L16",
+              "symbol" : "OAuthViewController"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "oauthswift",
+      "version" : "2.2.0"
+    }
+  ]
+}

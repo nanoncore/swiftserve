@@ -34,7 +34,7 @@
           <a class="chip" href="/menu/#image">Images<span class="chip-count">7</span></a>
           <a class="chip" href="/menu/#media">Media<span class="chip-count">4</span></a>
           <a class="chip" href="/menu/#midi">MIDI<span class="chip-count">2</span></a>
-          <a class="chip chip-current" href="/menu/#network" aria-current="true">Networking<span class="chip-count">9</span></a>
+          <a class="chip chip-current" href="/menu/#network" aria-current="true">Networking<span class="chip-count">15</span></a>
           <a class="chip" href="/menu/#speech">Speech<span class="chip-count">2</span></a>
           <a class="chip" href="/menu/#storage">Storage<span class="chip-count">14</span></a>
           <a class="chip" href="/menu/#ui">Ui<span class="chip-count">14</span></a>
@@ -48,6 +48,154 @@
       <table class="truth-table" data-capability="network.request-mocking">
         <thead><tr><th scope="col">Package</th><th scope="col">iOS</th><th scope="col">macOS</th><th scope="col">watchOS</th><th scope="col">tvOS</th><th scope="col">visionOS</th><th scope="col">Linux</th><th scope="col">Catalyst</th></tr></thead>
         <tbody>
+<tr data-package="apnswift" data-supported="iOS macOS watchOS tvOS visionOS Linux Catalyst">
+  <th scope="row">
+    <div class="row-head">
+      <div>
+        <a href="/package/apnswift/">apnswift</a> <span class="pill pill-accent">full menu</span>
+        <span class="provenance">as of 6.6.0</span>
+      </div>
+      <a class="details-btn" href="/package/apnswift/" aria-label="apnswift details">Details</a>
+    </div>
+  </th>
+  <td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on iOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 6.6.0</p>
+      <ul><li><code>APNSTestServer</code><br /><span class="evidence-loc">Sources/APNSTestServer/APNSTestServer.swift:48</span><br /><a class="evidence-link" href="https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L48" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Mock server that simulates APNs APIs; unconditional decl, no platform gaps in surface.</span></li><li><code>APNSTestServer.getSentNotifications</code><br /><span class="evidence-loc">Sources/APNSTestServer/APNSTestServer.swift:126</span><br /><a class="evidence-link" href="https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L126" rel="noopener">View the line on GitHub →</a></li><li><span class="evidence-loc">Package.swift:6</span><br /><a class="evidence-link" href="https://github.com/swift-server-community/apnswift/blob/6.6.0/Package.swift#L6" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Manifest declares .iOS(.v16) floor.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on macOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 6.6.0</p>
+      <ul><li><code>APNSTestServer</code><br /><span class="evidence-loc">Sources/APNSTestServer/APNSTestServer.swift:48</span><br /><a class="evidence-link" href="https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L48" rel="noopener">View the line on GitHub →</a></li><li><code>APNSTestServer.start</code><br /><span class="evidence-loc">Sources/APNSTestServer/APNSTestServer.swift:102</span><br /><a class="evidence-link" href="https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L102" rel="noopener">View the line on GitHub →</a></li><li><span class="evidence-loc">Package.swift:6</span><br /><a class="evidence-link" href="https://github.com/swift-server-community/apnswift/blob/6.6.0/Package.swift#L6" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Manifest declares .macOS(.v13) floor.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on watchOS, confidence 0.70"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.70 · as of 6.6.0</p>
+      <ul><li><code>APNSTestServer</code><br /><span class="evidence-loc">Sources/APNSTestServer/APNSTestServer.swift:48</span><br /><a class="evidence-link" href="https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L48" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Decl unconditional and present per surface; running a NIO-based listening server on watchOS is unlikely to be exercised in practice.</span></li><li><span class="evidence-loc">Package.swift:6</span><br /><a class="evidence-link" href="https://github.com/swift-server-community/apnswift/blob/6.6.0/Package.swift#L6" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Manifest declares .watchOS(.v9) floor.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on tvOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 6.6.0</p>
+      <ul><li><code>APNSTestServer</code><br /><span class="evidence-loc">Sources/APNSTestServer/APNSTestServer.swift:48</span><br /><a class="evidence-link" href="https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L48" rel="noopener">View the line on GitHub →</a></li><li><code>APNSTestServer.start</code><br /><span class="evidence-loc">Sources/APNSTestServer/APNSTestServer.swift:102</span><br /><a class="evidence-link" href="https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L102" rel="noopener">View the line on GitHub →</a></li><li><span class="evidence-loc">Package.swift:6</span><br /><a class="evidence-link" href="https://github.com/swift-server-community/apnswift/blob/6.6.0/Package.swift#L6" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Manifest declares .tvOS(.v16) floor.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on visionOS, confidence 0.70"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.70 · as of 6.6.0</p>
+      <ul><li><code>APNSTestServer</code><br /><span class="evidence-loc">Sources/APNSTestServer/APNSTestServer.swift:48</span><br /><a class="evidence-link" href="https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L48" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Unconditional decl, no visionOS gap in surface; no manifest floor declared for visionOS.</span></li><li><code>APNSTestServer.start</code><br /><span class="evidence-loc">Sources/APNSTestServer/APNSTestServer.swift:102</span><br /><a class="evidence-link" href="https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L102" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on Linux, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 6.6.0</p>
+      <ul><li><code>APNSTestServer</code><br /><span class="evidence-loc">Sources/APNSTestServer/APNSTestServer.swift:48</span><br /><a class="evidence-link" href="https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L48" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">NIO/NIOHTTP2/NIOSSL-based mock APNs server; no linux gap in surface. Used by the package's own test target.</span></li><li><code>APNSTestServer.start</code><br /><span class="evidence-loc">Sources/APNSTestServer/APNSTestServer.swift:102</span><br /><a class="evidence-link" href="https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L102" rel="noopener">View the line on GitHub →</a></li><li><code>APNSTestServer.getSentNotifications</code><br /><span class="evidence-loc">Sources/APNSTestServer/APNSTestServer.swift:126</span><br /><a class="evidence-link" href="https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L126" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on Catalyst, confidence 0.70"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.70 · as of 6.6.0</p>
+      <ul><li><code>APNSTestServer</code><br /><span class="evidence-loc">Sources/APNSTestServer/APNSTestServer.swift:48</span><br /><a class="evidence-link" href="https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L48" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Unconditional decl, no macCatalyst gap in surface; no explicit Catalyst handling in the package.</span></li><li><code>APNSTestServer.start</code><br /><span class="evidence-loc">Sources/APNSTestServer/APNSTestServer.swift:102</span><br /><a class="evidence-link" href="https://github.com/swift-server-community/apnswift/blob/6.6.0/Sources/APNSTestServer/APNSTestServer.swift#L102" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+</tr>
+<tr data-package="apollo-ios" data-supported="iOS macOS watchOS tvOS visionOS Catalyst">
+  <th scope="row">
+    <div class="row-head">
+      <div>
+        <a href="/package/apollo-ios/">apollo-ios</a>
+        <span class="provenance">as of 2.2.0</span>
+      </div>
+      <a class="details-btn" href="/package/apollo-ios/" aria-label="apollo-ios details">Details</a>
+    </div>
+  </th>
+  <td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on iOS, confidence 0.70"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.70 · as of 2.2.0</p>
+      <ul><li><code>Mock</code><br /><span class="evidence-loc">Sources/ApolloTestSupport/TestMock.swift:6</span><br /><a class="evidence-link" href="https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L6" rel="noopener">View the line on GitHub →</a></li><li><code>MockObject</code><br /><span class="evidence-loc">Sources/ApolloTestSupport/TestMock.swift:153</span><br /><a class="evidence-link" href="https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L153" rel="noopener">View the line on GitHub →</a></li><li><code>AnyMock</code><br /><span class="evidence-loc">Sources/ApolloTestSupport/TestMock.swift:149</span><br /><a class="evidence-link" href="https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L149" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on macOS, confidence 0.70"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.70 · as of 2.2.0</p>
+      <ul><li><code>Mock</code><br /><span class="evidence-loc">Sources/ApolloTestSupport/TestMock.swift:6</span><br /><a class="evidence-link" href="https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L6" rel="noopener">View the line on GitHub →</a></li><li><code>MockObject</code><br /><span class="evidence-loc">Sources/ApolloTestSupport/TestMock.swift:153</span><br /><a class="evidence-link" href="https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L153" rel="noopener">View the line on GitHub →</a></li><li><code>AnyMock</code><br /><span class="evidence-loc">Sources/ApolloTestSupport/TestMock.swift:149</span><br /><a class="evidence-link" href="https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L149" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on watchOS, confidence 0.70"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.70 · as of 2.2.0</p>
+      <ul><li><code>Mock</code><br /><span class="evidence-loc">Sources/ApolloTestSupport/TestMock.swift:6</span><br /><a class="evidence-link" href="https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L6" rel="noopener">View the line on GitHub →</a></li><li><code>MockObject</code><br /><span class="evidence-loc">Sources/ApolloTestSupport/TestMock.swift:153</span><br /><a class="evidence-link" href="https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L153" rel="noopener">View the line on GitHub →</a></li><li><code>AnyMock</code><br /><span class="evidence-loc">Sources/ApolloTestSupport/TestMock.swift:149</span><br /><a class="evidence-link" href="https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L149" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on tvOS, confidence 0.70"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.70 · as of 2.2.0</p>
+      <ul><li><code>Mock</code><br /><span class="evidence-loc">Sources/ApolloTestSupport/TestMock.swift:6</span><br /><a class="evidence-link" href="https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L6" rel="noopener">View the line on GitHub →</a></li><li><code>MockObject</code><br /><span class="evidence-loc">Sources/ApolloTestSupport/TestMock.swift:153</span><br /><a class="evidence-link" href="https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L153" rel="noopener">View the line on GitHub →</a></li><li><code>AnyMock</code><br /><span class="evidence-loc">Sources/ApolloTestSupport/TestMock.swift:149</span><br /><a class="evidence-link" href="https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L149" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on visionOS, confidence 0.70"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.70 · as of 2.2.0</p>
+      <ul><li><code>Mock</code><br /><span class="evidence-loc">Sources/ApolloTestSupport/TestMock.swift:6</span><br /><a class="evidence-link" href="https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L6" rel="noopener">View the line on GitHub →</a></li><li><code>MockObject</code><br /><span class="evidence-loc">Sources/ApolloTestSupport/TestMock.swift:153</span><br /><a class="evidence-link" href="https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L153" rel="noopener">View the line on GitHub →</a></li><li><code>AnyMock</code><br /><span class="evidence-loc">Sources/ApolloTestSupport/TestMock.swift:149</span><br /><a class="evidence-link" href="https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L149" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-unknown">
+  <details class="evidence">
+    <summary aria-label="not verified yet on Linux, confidence 0.30"><span class="cell-glyph">?</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">not verified yet · confidence 0.30 · as of 2.2.0</p>
+      <ul><li><span class="evidence-loc">Package.swift:7</span><br /><a class="evidence-link" href="https://github.com/apollographql/apollo-ios/blob/2.2.0/Package.swift#L7" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8), .visionOS(.v1)]</span></li><li><span class="evidence-note">README platform badge lists iOS 15+ | macOS 12+ | tvOS 15+ | watchOS 8+ | visionOS 1+; Linux is not mentioned</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on Catalyst, confidence 0.60"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.60 · as of 2.2.0</p>
+      <ul><li><code>Mock</code><br /><span class="evidence-loc">Sources/ApolloTestSupport/TestMock.swift:6</span><br /><a class="evidence-link" href="https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L6" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Surface digest resolves this decl present on macCatalyst (no platform gap, no #if conditions anywhere in the surface); Package.swift declares no explicit macCatalyst floor (inherits iOS).</span></li><li><code>MockObject</code><br /><span class="evidence-loc">Sources/ApolloTestSupport/TestMock.swift:153</span><br /><a class="evidence-link" href="https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L153" rel="noopener">View the line on GitHub →</a></li><li><code>AnyMock</code><br /><span class="evidence-loc">Sources/ApolloTestSupport/TestMock.swift:149</span><br /><a class="evidence-link" href="https://github.com/apollographql/apollo-ios/blob/2.2.0/Sources/ApolloTestSupport/TestMock.swift#L149" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+</tr>
 <tr data-package="moya" data-supported="iOS macOS watchOS tvOS Catalyst">
   <th scope="row">
     <div class="row-head">
@@ -129,7 +277,7 @@
     </section>
   </main>
   <footer class="site-footer">
-    <p>Served fresh · 74 capabilities × 107 packages · 201 records · data v1</p>
+    <p>Served fresh · 80 capabilities × 115 packages · 225 records · data v1</p>
     <p>Every verdict links to the exact source line that decides it. <a href="/about/">How it works</a></p>
     <p>Made refreshingly cool from Paris, France</p>
   </footer>

@@ -940,10 +940,46 @@
       "builtInNames" : [
 
       ],
+      "id" : "network.graphql",
+      "label" : "GraphQL client",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/network.graphql/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "apollo-ios",
+          "slug" : "apollo-ios",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "network.grpc",
+      "label" : "gRPC",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/network.grpc/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "grpc-swift",
+          "slug" : "grpc-swift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "network.http-client",
       "label" : "HTTP client",
-      "packages" : 2,
-      "supported" : 1,
+      "packages" : 4,
+      "supported" : 2,
       "truthTable" : "/can/network.http-client/?on=visionOS",
       "verdicts" : [
         {
@@ -952,9 +988,70 @@
           "status" : "supported"
         },
         {
+          "name" : "async-http-client",
+          "slug" : "async-http-client",
+          "status" : "supported"
+        },
+        {
           "name" : "Moya",
           "slug" : "moya",
           "status" : "unsupported"
+        },
+        {
+          "name" : "oauthswift",
+          "slug" : "oauthswift",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "network.http-server",
+      "label" : "HTTP server",
+      "packages" : 2,
+      "supported" : 2,
+      "truthTable" : "/can/network.http-server/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "hummingbird",
+          "slug" : "hummingbird",
+          "status" : "supported"
+        },
+        {
+          "name" : "vapor",
+          "slug" : "vapor",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "network.http2",
+      "label" : "HTTP/2",
+      "packages" : 3,
+      "supported" : 2,
+      "truthTable" : "/can/network.http2/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "async-http-client",
+          "slug" : "async-http-client",
+          "status" : "supported"
+        },
+        {
+          "name" : "hummingbird",
+          "slug" : "hummingbird",
+          "status" : "supported"
+        },
+        {
+          "name" : "vapor",
+          "slug" : "vapor",
+          "status" : "unknown"
         }
       ]
     },
@@ -965,13 +1062,28 @@
       ],
       "id" : "network.logging",
       "label" : "Network logging / inspection",
-      "packages" : 1,
-      "supported" : 1,
+      "packages" : 4,
+      "supported" : 4,
       "truthTable" : "/can/network.logging/?on=visionOS",
       "verdicts" : [
         {
+          "name" : "async-http-client",
+          "slug" : "async-http-client",
+          "status" : "supported"
+        },
+        {
+          "name" : "hummingbird",
+          "slug" : "hummingbird",
+          "status" : "supported"
+        },
+        {
           "name" : "Pulse",
           "slug" : "pulse",
+          "status" : "supported"
+        },
+        {
+          "name" : "vapor",
+          "slug" : "vapor",
           "status" : "supported"
         }
       ]
@@ -983,13 +1095,64 @@
       ],
       "id" : "network.multipart-upload",
       "label" : "Multipart upload",
-      "packages" : 1,
-      "supported" : 1,
+      "packages" : 4,
+      "supported" : 3,
       "truthTable" : "/can/network.multipart-upload/?on=visionOS",
       "verdicts" : [
         {
           "name" : "Alamofire",
           "slug" : "alamofire",
+          "status" : "supported"
+        },
+        {
+          "name" : "apollo-ios",
+          "slug" : "apollo-ios",
+          "status" : "supported"
+        },
+        {
+          "name" : "vapor",
+          "slug" : "vapor",
+          "status" : "supported"
+        },
+        {
+          "name" : "oauthswift",
+          "slug" : "oauthswift",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "network.oauth",
+      "label" : "OAuth flows",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/network.oauth/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "oauthswift",
+          "slug" : "oauthswift",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "network.push-notifications",
+      "label" : "Push notification delivery",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/network.push-notifications/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "apnswift",
+          "slug" : "apnswift",
           "status" : "supported"
         }
       ]
@@ -1019,10 +1182,20 @@
       ],
       "id" : "network.request-mocking",
       "label" : "Request stubbing / mocking",
-      "packages" : 1,
-      "supported" : 0,
+      "packages" : 3,
+      "supported" : 2,
       "truthTable" : "/can/network.request-mocking/?on=visionOS",
       "verdicts" : [
+        {
+          "name" : "apnswift",
+          "slug" : "apnswift",
+          "status" : "supported"
+        },
+        {
+          "name" : "apollo-ios",
+          "slug" : "apollo-ios",
+          "status" : "supported"
+        },
         {
           "name" : "Moya",
           "slug" : "moya",
@@ -1037,13 +1210,23 @@
       ],
       "id" : "network.retry",
       "label" : "Request retry / backoff",
-      "packages" : 1,
-      "supported" : 1,
+      "packages" : 3,
+      "supported" : 3,
       "truthTable" : "/can/network.retry/?on=visionOS",
       "verdicts" : [
         {
           "name" : "Alamofire",
           "slug" : "alamofire",
+          "status" : "supported"
+        },
+        {
+          "name" : "apollo-ios",
+          "slug" : "apollo-ios",
+          "status" : "supported"
+        },
+        {
+          "name" : "grpc-swift",
+          "slug" : "grpc-swift",
           "status" : "supported"
         }
       ]
@@ -1073,10 +1256,15 @@
       ],
       "id" : "network.websockets",
       "label" : "WebSockets",
-      "packages" : 2,
-      "supported" : 2,
+      "packages" : 5,
+      "supported" : 5,
       "truthTable" : "/can/network.websockets/?on=visionOS",
       "verdicts" : [
+        {
+          "name" : "apollo-ios",
+          "slug" : "apollo-ios",
+          "status" : "supported"
+        },
         {
           "name" : "Starscream",
           "slug" : "starscream",
@@ -1085,6 +1273,16 @@
         {
           "name" : "SwiftNIO",
           "slug" : "swift-nio",
+          "status" : "supported"
+        },
+        {
+          "name" : "vapor",
+          "slug" : "vapor",
+          "status" : "supported"
+        },
+        {
+          "name" : "websocket-kit",
+          "slug" : "websocket-kit",
           "status" : "supported"
         }
       ]
@@ -2504,10 +2702,10 @@
   "schemaVersion" : 1,
   "stats" : {
     "conditional" : 0,
-    "packages" : 107,
-    "records" : 201,
-    "supported" : 153,
-    "unknown" : 19,
+    "packages" : 115,
+    "records" : 225,
+    "supported" : 173,
+    "unknown" : 23,
     "unsupported" : 29
   },
   "unknowns" : [
@@ -2558,6 +2756,27 @@
       "name" : "MidiParser",
       "slug" : "midiparser",
       "why" : "empty manifest"
+    },
+    {
+      "capability" : "network.http-client",
+      "capabilityLabel" : "HTTP client",
+      "name" : "oauthswift",
+      "slug" : "oauthswift",
+      "why" : "Unconditional decl, digest-present on visionOS"
+    },
+    {
+      "capability" : "network.multipart-upload",
+      "capabilityLabel" : "Multipart upload",
+      "name" : "oauthswift",
+      "slug" : "oauthswift",
+      "why" : "Unconditional decl, digest-present on visionOS"
+    },
+    {
+      "capability" : "network.oauth",
+      "capabilityLabel" : "OAuth flows",
+      "name" : "oauthswift",
+      "slug" : "oauthswift",
+      "why" : "Core class is unconditional and digest-present on visionOS"
     },
     {
       "capability" : "ui.bottom-sheet",
@@ -2635,6 +2854,12 @@
       "name" : "SwiftWhisper",
       "slug" : "swiftwhisper",
       "why" : "empty manifest"
+    },
+    {
+      "capability" : "network.http2",
+      "capabilityLabel" : "HTTP/2",
+      "name" : "vapor",
+      "slug" : "vapor"
     },
     {
       "capability" : "midi.io",

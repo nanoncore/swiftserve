@@ -1,0 +1,568 @@
+{
+  "aliases" : [
+    "web framework",
+    "server framework",
+    "routing"
+  ],
+  "id" : "network.http-server",
+  "label" : "HTTP server",
+  "packages" : [
+    {
+      "commit" : "eebb5ecf8a39beea87401f014fdf87f0ce5b159d",
+      "notes" : "Core HTTP/1.1 server framework (Application, Router, Server actor, HTTPServerBuilder, HTTP1Channel) — all anchors unconditional with no platform gaps in the surface digest. watchOS has no Package.swift platform floor (symbol evidence only), hence lower confidence there. Surface digest truncated (800 of 1233 decls); anchors verified within the digest.",
+      "package" : "https://github.com/hummingbird-project/hummingbird",
+      "packageName" : "hummingbird",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Hummingbird/Application.swift",
+              "kind" : "symbol",
+              "line" : 181,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Application.swift#L181",
+              "symbol" : "Application"
+            },
+            {
+              "file" : "Sources/Hummingbird/Router/Router.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Router/Router.swift#L39",
+              "symbol" : "Router"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/Server.swift",
+              "kind" : "symbol",
+              "line" : 21,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/Server.swift#L21",
+              "symbol" : "Server"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift#L17",
+              "symbol" : "HTTPServerBuilder"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift#L17",
+              "symbol" : "HTTP1Channel"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 29,
+              "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Hummingbird/Application.swift",
+              "kind" : "symbol",
+              "line" : 181,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Application.swift#L181",
+              "symbol" : "Application"
+            },
+            {
+              "file" : "Sources/Hummingbird/Router/Router.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Router/Router.swift#L39",
+              "symbol" : "Router"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/Server.swift",
+              "kind" : "symbol",
+              "line" : 21,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/Server.swift#L21",
+              "symbol" : "Server"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift#L17",
+              "symbol" : "HTTPServerBuilder"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift#L17",
+              "symbol" : "HTTP1Channel"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Hummingbird/Application.swift",
+              "kind" : "symbol",
+              "line" : 181,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Application.swift#L181",
+              "symbol" : "Application"
+            },
+            {
+              "file" : "Sources/Hummingbird/Router/Router.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Router/Router.swift#L39",
+              "symbol" : "Router"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/Server.swift",
+              "kind" : "symbol",
+              "line" : 21,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/Server.swift#L21",
+              "symbol" : "Server"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift#L17",
+              "symbol" : "HTTPServerBuilder"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift#L17",
+              "symbol" : "HTTP1Channel"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 29,
+              "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Hummingbird/Application.swift",
+              "kind" : "symbol",
+              "line" : 181,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Application.swift#L181",
+              "symbol" : "Application"
+            },
+            {
+              "file" : "Sources/Hummingbird/Router/Router.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Router/Router.swift#L39",
+              "symbol" : "Router"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/Server.swift",
+              "kind" : "symbol",
+              "line" : 21,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/Server.swift#L21",
+              "symbol" : "Server"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift#L17",
+              "symbol" : "HTTPServerBuilder"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift#L17",
+              "symbol" : "HTTP1Channel"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 29,
+              "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Hummingbird/Application.swift",
+              "kind" : "symbol",
+              "line" : 181,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Application.swift#L181",
+              "symbol" : "Application"
+            },
+            {
+              "file" : "Sources/Hummingbird/Router/Router.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Router/Router.swift#L39",
+              "symbol" : "Router"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/Server.swift",
+              "kind" : "symbol",
+              "line" : 21,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/Server.swift#L21",
+              "symbol" : "Server"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift#L17",
+              "symbol" : "HTTPServerBuilder"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift#L17",
+              "symbol" : "HTTP1Channel"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 29,
+              "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Hummingbird/Application.swift",
+              "kind" : "symbol",
+              "line" : 181,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Application.swift#L181",
+              "symbol" : "Application"
+            },
+            {
+              "file" : "Sources/Hummingbird/Router/Router.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Router/Router.swift#L39",
+              "symbol" : "Router"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/Server.swift",
+              "kind" : "symbol",
+              "line" : 21,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/Server.swift#L21",
+              "symbol" : "Server"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift#L17",
+              "symbol" : "HTTPServerBuilder"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift#L17",
+              "symbol" : "HTTP1Channel"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 29,
+              "note" : "Package.swift platforms: .macOS(.v11), .iOS(.v15), .macCatalyst(.v15), .tvOS(.v15), .visionOS(.v1)",
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Package.swift#L29"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Hummingbird/Application.swift",
+              "kind" : "symbol",
+              "line" : 181,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Application.swift#L181",
+              "symbol" : "Application"
+            },
+            {
+              "file" : "Sources/Hummingbird/Router/Router.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/Hummingbird/Router/Router.swift#L39",
+              "symbol" : "Router"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/Server.swift",
+              "kind" : "symbol",
+              "line" : 21,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/Server.swift#L21",
+              "symbol" : "Server"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/HTTP/HTTPServerBuilder.swift#L17",
+              "symbol" : "HTTPServerBuilder"
+            },
+            {
+              "file" : "Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "permalink" : "https://github.com/hummingbird-project/hummingbird/blob/2.25.0/Sources/HummingbirdCore/Server/HTTP/HTTP1Channel.swift#L17",
+              "symbol" : "HTTP1Channel"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "hummingbird",
+      "version" : "2.25.0"
+    },
+    {
+      "commit" : "748ae8432a33e0965bbf0351fedd4e915e7f460c",
+      "notes" : "Anchor claim for vapor/vapor: server-side HTTP framework (Application + HTTPServer + Routes). Digest truncated to 800 of 1967 decls, but all cited anchors are unconditional and carry no platform gaps.",
+      "package" : "https://github.com/vapor/vapor",
+      "packageName" : "vapor",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/Application.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "note" : "Core application/server entry point; unconditional, no platform gaps.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Application.swift#L8",
+              "symbol" : "Application"
+            },
+            {
+              "file" : "Sources/Vapor/Application.swift",
+              "kind" : "symbol",
+              "line" : 187,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Application.swift#L187",
+              "symbol" : "Application.run"
+            },
+            {
+              "file" : "Sources/Vapor/HTTP/Server/HTTPServer.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Server/HTTPServer.swift#L22",
+              "symbol" : "HTTPServer.Configuration"
+            },
+            {
+              "file" : "Sources/Vapor/HTTP/Server/HTTPServer.swift",
+              "kind" : "symbol",
+              "line" : 50,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Server/HTTPServer.swift#L50",
+              "symbol" : "HTTPServer.Configuration.port"
+            },
+            {
+              "file" : "Sources/Vapor/Routing/RoutesBuilder+Group.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "note" : "Routing surface.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Routing/RoutesBuilder+Group.swift#L17",
+              "symbol" : "RoutesBuilder.grouped"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Package.swift declares .iOS(.v13).",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/Application.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "note" : "No linux gap recorded; digest models linux explicitly (os(Linux)-conditional decls elsewhere in surface), so linux was evaluated.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Application.swift#L8",
+              "symbol" : "Application"
+            },
+            {
+              "file" : "Sources/Vapor/HTTP/Server/HTTPServer.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Server/HTTPServer.swift#L22",
+              "symbol" : "HTTPServer.Configuration"
+            },
+            {
+              "file" : "Sources/Vapor/Routing/RoutesBuilder+Group.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Routing/RoutesBuilder+Group.swift#L17",
+              "symbol" : "RoutesBuilder.grouped"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/Application.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "note" : "No macCatalyst gap recorded in surface digest; decl resolves PRESENT.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Application.swift#L8",
+              "symbol" : "Application"
+            },
+            {
+              "file" : "Sources/Vapor/HTTP/Server/HTTPServer.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Server/HTTPServer.swift#L22",
+              "symbol" : "HTTPServer.Configuration"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/Application.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Application.swift#L8",
+              "symbol" : "Application"
+            },
+            {
+              "file" : "Sources/Vapor/HTTP/Server/HTTPServer.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Server/HTTPServer.swift#L22",
+              "symbol" : "HTTPServer.Configuration"
+            },
+            {
+              "file" : "Sources/Vapor/Routing/RoutesBuilder+Group.swift",
+              "kind" : "symbol",
+              "line" : 17,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Routing/RoutesBuilder+Group.swift#L17",
+              "symbol" : "RoutesBuilder.grouped"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Package.swift declares .macOS(.v10_15).",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/Application.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Application.swift#L8",
+              "symbol" : "Application"
+            },
+            {
+              "file" : "Sources/Vapor/HTTP/Server/HTTPServer.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Server/HTTPServer.swift#L22",
+              "symbol" : "HTTPServer.Configuration"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Package.swift declares .tvOS(.v13).",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/Application.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "note" : "No visionOS gap recorded in surface digest; decl resolves PRESENT.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Application.swift#L8",
+              "symbol" : "Application"
+            },
+            {
+              "file" : "Sources/Vapor/HTTP/Server/HTTPServer.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "No visionOS manifest floor in Package.swift; symbol evidence only.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Server/HTTPServer.swift#L22",
+              "symbol" : "HTTPServer.Configuration"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Vapor/Application.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/Application.swift#L8",
+              "symbol" : "Application"
+            },
+            {
+              "file" : "Sources/Vapor/HTTP/Server/HTTPServer.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Sources/Vapor/HTTP/Server/HTTPServer.swift#L22",
+              "symbol" : "HTTPServer.Configuration"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Package.swift declares .watchOS(.v6). API surface compiles; runtime server-socket restrictions on watchOS are outside this label's scope.",
+              "permalink" : "https://github.com/vapor/vapor/blob/4.122.0/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "vapor",
+      "version" : "4.122.0"
+    }
+  ]
+}

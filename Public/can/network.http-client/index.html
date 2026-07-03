@@ -34,7 +34,7 @@
           <a class="chip" href="/menu/#image">Images<span class="chip-count">7</span></a>
           <a class="chip" href="/menu/#media">Media<span class="chip-count">4</span></a>
           <a class="chip" href="/menu/#midi">MIDI<span class="chip-count">2</span></a>
-          <a class="chip chip-current" href="/menu/#network" aria-current="true">Networking<span class="chip-count">9</span></a>
+          <a class="chip chip-current" href="/menu/#network" aria-current="true">Networking<span class="chip-count">15</span></a>
           <a class="chip" href="/menu/#speech">Speech<span class="chip-count">2</span></a>
           <a class="chip" href="/menu/#storage">Storage<span class="chip-count">14</span></a>
           <a class="chip" href="/menu/#ui">Ui<span class="chip-count">14</span></a>
@@ -48,6 +48,80 @@
       <table class="truth-table" data-capability="network.http-client">
         <thead><tr><th scope="col">Package</th><th scope="col">iOS</th><th scope="col">macOS</th><th scope="col">watchOS</th><th scope="col">tvOS</th><th scope="col">visionOS</th><th scope="col">Linux</th><th scope="col">Catalyst</th></tr></thead>
         <tbody>
+<tr data-package="async-http-client" data-supported="iOS macOS watchOS tvOS visionOS Linux Catalyst">
+  <th scope="row">
+    <div class="row-head">
+      <div>
+        <a href="/package/async-http-client/">async-http-client</a> <span class="pill pill-accent">full menu</span>
+        <span class="provenance">as of 1.35.0</span>
+      </div>
+      <a class="details-btn" href="/package/async-http-client/" aria-label="async-http-client details">Details</a>
+    </div>
+  </th>
+  <td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on iOS, confidence 0.90"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.90 · as of 1.35.0</p>
+      <ul><li><code>HTTPClient</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPClient.swift:70</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L70" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClient.execute</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClientRequest</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift#L39" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on macOS, confidence 0.90"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.90 · as of 1.35.0</p>
+      <ul><li><code>HTTPClient</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPClient.swift:70</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L70" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClient.execute</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClientRequest</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift#L39" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on watchOS, confidence 0.70"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.70 · as of 1.35.0</p>
+      <ul><li><code>HTTPClient</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPClient.swift:70</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L70" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Public surface is unconditional on watchOS per digest; real-world socket availability for SwiftNIO-based clients on watchOS is not verifiable from this surface, so confidence is reduced.</span></li><li><code>HTTPClient.execute</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClientRequest</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift#L39" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on tvOS, confidence 0.90"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.90 · as of 1.35.0</p>
+      <ul><li><code>HTTPClient</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPClient.swift:70</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L70" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClient.execute</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClientRequest</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift#L39" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on visionOS, confidence 0.90"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.90 · as of 1.35.0</p>
+      <ul><li><code>HTTPClient</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPClient.swift:70</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L70" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClient.execute</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClientRequest</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift#L39" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on Linux, confidence 0.90"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.90 · as of 1.35.0</p>
+      <ul><li><code>HTTPClient</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPClient.swift:70</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L70" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClient.execute</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClientRequest</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift#L39" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on Catalyst, confidence 0.90"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.90 · as of 1.35.0</p>
+      <ul><li><code>HTTPClient</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/HTTPClient.swift:70</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/HTTPClient.swift#L70" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClient.execute</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClient+execute.swift#L39" rel="noopener">View the line on GitHub →</a></li><li><code>HTTPClientRequest</code><br /><span class="evidence-loc">Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift:39</span><br /><a class="evidence-link" href="https://github.com/swift-server/async-http-client/blob/1.35.0/Sources/AsyncHTTPClient/AsyncAwait/HTTPClientRequest.swift#L39" rel="noopener">View the line on GitHub →</a></li></ul>
+    </div>
+  </details>
+</td>
+</tr>
 <tr data-package="alamofire" data-supported="iOS macOS watchOS tvOS visionOS Catalyst">
   <th scope="row">
     <div class="row-head">
@@ -196,6 +270,80 @@
   </details>
 </td>
 </tr>
+<tr data-package="oauthswift" data-supported="iOS macOS watchOS tvOS Catalyst">
+  <th scope="row">
+    <div class="row-head">
+      <div>
+        <a href="/package/oauthswift/">oauthswift</a>
+        <span class="provenance">as of 2.2.0</span>
+      </div>
+      <a class="details-btn" href="/package/oauthswift/" aria-label="oauthswift details">Details</a>
+    </div>
+  </th>
+  <td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on iOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 2.2.0</p>
+      <ul><li><code>OAuthSwiftClient</code><br /><span class="evidence-loc">Sources/OAuthSwiftClient.swift:17</span><br /><a class="evidence-link" href="https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L17" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Signed HTTP client with get/post/put/delete/patch verbs; unconditional decl</span></li><li><code>OAuthSwiftClient.request</code><br /><span class="evidence-loc">Sources/OAuthSwiftClient.swift:72</span><br /><a class="evidence-link" href="https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L72" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Generic request entry point</span></li><li><code>OAuthSwiftHTTPRequest</code><br /><span class="evidence-loc">Sources/OAuthSwiftHTTPRequest.swift:18</span><br /><a class="evidence-link" href="https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftHTTPRequest.swift#L18" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">URLSession-backed request type with configurable URLSessionFactory</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on macOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 2.2.0</p>
+      <ul><li><code>OAuthSwiftClient</code><br /><span class="evidence-loc">Sources/OAuthSwiftClient.swift:17</span><br /><a class="evidence-link" href="https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L17" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Unconditional decl, digest-present on macOS</span></li><li><code>OAuthSwiftClient.request</code><br /><span class="evidence-loc">Sources/OAuthSwiftClient.swift:72</span><br /><a class="evidence-link" href="https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L72" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Unconditional decl, digest-present on macOS</span></li><li><code>OAuthSwiftHTTPRequest</code><br /><span class="evidence-loc">Sources/OAuthSwiftHTTPRequest.swift:18</span><br /><a class="evidence-link" href="https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftHTTPRequest.swift#L18" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Unconditional decl, digest-present on macOS</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good conf-soft">
+  <details class="evidence">
+    <summary aria-label="serves it on watchOS, confidence 0.70"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.70 · as of 2.2.0</p>
+      <ul><li><code>OAuthSwiftClient</code><br /><span class="evidence-loc">Sources/OAuthSwiftClient.swift:17</span><br /><a class="evidence-link" href="https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L17" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Unconditional decl, digest-present on watchOS</span></li><li><code>OAuthSwiftHTTPRequest</code><br /><span class="evidence-loc">Sources/OAuthSwiftHTTPRequest.swift:18</span><br /><a class="evidence-link" href="https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftHTTPRequest.swift#L18" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Unconditional decl, digest-present on watchOS</span></li><li><code>OAuthViewController</code><br /><code class="evidence-guard">#if !(os(iOS) || os(tvOS)) &amp;&amp; os(watchOS)</code><br /><span class="evidence-loc">Sources/Handler/OAuthWebViewController.swift:16</span><br /><a class="evidence-link" href="https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/OAuthWebViewController.swift#L16" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Explicit watchOS branch elsewhere in the module shows watchOS is a compile target the authors handled</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on tvOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 2.2.0</p>
+      <ul><li><code>OAuthSwiftClient</code><br /><span class="evidence-loc">Sources/OAuthSwiftClient.swift:17</span><br /><a class="evidence-link" href="https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L17" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Unconditional decl, digest-present on tvOS</span></li><li><code>OAuthSwiftHTTPRequest</code><br /><span class="evidence-loc">Sources/OAuthSwiftHTTPRequest.swift:18</span><br /><a class="evidence-link" href="https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftHTTPRequest.swift#L18" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Unconditional decl, digest-present on tvOS</span></li><li><code>OAuthViewController</code><br /><code class="evidence-guard">#if os(iOS) || os(tvOS)</code><br /><span class="evidence-loc">Sources/Handler/OAuthWebViewController.swift:13</span><br /><a class="evidence-link" href="https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/OAuthWebViewController.swift#L13" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Explicit tvOS branch elsewhere in the module shows tvOS is a handled compile target</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-unknown">
+  <details class="evidence">
+    <summary aria-label="not verified yet on visionOS, confidence 0.40"><span class="cell-glyph">?</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">not verified yet · confidence 0.40 · as of 2.2.0</p>
+      <ul><li><code>OAuthSwiftClient</code><br /><span class="evidence-loc">Sources/OAuthSwiftClient.swift:17</span><br /><a class="evidence-link" href="https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L17" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Unconditional decl, digest-present on visionOS</span></li><li><code>OAuthViewController</code><br /><code class="evidence-guard">#if os(iOS) || os(tvOS)</code><br /><span class="evidence-loc">Sources/Handler/OAuthWebViewController.swift:13</span><br /><a class="evidence-link" href="https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/OAuthWebViewController.swift#L13" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">No typealias branch covers visionOS while the unconditional OAuthWebViewController subclasses it — a visionOS build of the whole module (and thus this capability) is doubtful at 2.2.0; status left unknown</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-unknown">
+  <details class="evidence">
+    <summary aria-label="not verified yet on Linux, confidence 0.40"><span class="cell-glyph">?</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">not verified yet · confidence 0.40 · as of 2.2.0</p>
+      <ul><li><code>OAuthSwiftClient</code><br /><span class="evidence-loc">Sources/OAuthSwiftClient.swift:17</span><br /><a class="evidence-link" href="https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L17" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Unconditional decl, digest-present on linux; Package.swift adds swift-crypto under os(Linux) showing Linux intent</span></li><li><code>OAuthViewController</code><br /><code class="evidence-guard">#if os(iOS) || os(tvOS)</code><br /><span class="evidence-loc">Sources/Handler/OAuthWebViewController.swift:13</span><br /><a class="evidence-link" href="https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/OAuthWebViewController.swift#L13" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">No branch covers linux while unconditional OAuthWebViewController subclasses OAuthViewController, and Sources lack a FoundationNetworking import for URLSession — Linux build unverified; status left unknown</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on Catalyst, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 2.2.0</p>
+      <ul><li><code>OAuthSwiftClient</code><br /><span class="evidence-loc">Sources/OAuthSwiftClient.swift:17</span><br /><a class="evidence-link" href="https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/OAuthSwiftClient.swift#L17" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Unconditional decl, digest-present on macCatalyst</span></li><li><code>ASWebAuthenticationURLHandler</code><br /><code class="evidence-guard">#if targetEnvironment(macCatalyst) || os(iOS)</code><br /><span class="evidence-loc">Sources/Handler/ASWebAuthenticationURLHandler.swift:14</span><br /><a class="evidence-link" href="https://github.com/oauthswift/oauthswift/blob/2.2.0/Sources/Handler/ASWebAuthenticationURLHandler.swift#L14" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Explicit macCatalyst guard elsewhere in the module shows Catalyst is a handled compile target</span></li></ul>
+    </div>
+  </details>
+</td>
+</tr>
         </tbody>
       </table>
       
@@ -203,7 +351,7 @@
     </section>
   </main>
   <footer class="site-footer">
-    <p>Served fresh · 74 capabilities × 107 packages · 201 records · data v1</p>
+    <p>Served fresh · 80 capabilities × 115 packages · 225 records · data v1</p>
     <p>Every verdict links to the exact source line that decides it. <a href="/about/">How it works</a></p>
     <p>Made refreshingly cool from Paris, France</p>
   </footer>
