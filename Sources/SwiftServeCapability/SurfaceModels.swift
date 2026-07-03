@@ -312,9 +312,13 @@ public struct PackageProvenance: Codable, Sendable, Equatable {
 /// Honest accounting of what extraction covered — and what it couldn't.
 public struct SurfaceStats: Codable, Sendable, Equatable {
     public let swiftFiles: Int
-    /// ObjC files are a blind spot for v1 (Swift-only parsing) — surfaced,
-    /// not hidden, so labeling can stay honest about such packages.
+    /// ObjC files extraction could NOT parse: implementations (`.m`, private
+    /// by construction), private headers, and anything the header scanner
+    /// declined — surfaced, not hidden, so labeling stays honest.
     public let objcFiles: Int
+    /// Public ObjC headers the header scanner DID turn into decls. Zero on
+    /// surfaces extracted before the ObjC pass existed (legacy-tolerant).
+    public let objcHeadersParsed: Int
     public let declCount: Int
     public let parseFailures: Int
     public let manifestUnparsed: Bool
@@ -323,14 +327,26 @@ public struct SurfaceStats: Codable, Sendable, Equatable {
     /// exactly this). Caps labeling confidence.
     public let hasBinaryTargets: Bool
 
-    public init(swiftFiles: Int, objcFiles: Int, declCount: Int, parseFailures: Int,
-                manifestUnparsed: Bool, hasBinaryTargets: Bool = false) {
+    public init(swiftFiles: Int, objcFiles: Int, objcHeadersParsed: Int = 0, declCount: Int,
+                parseFailures: Int, manifestUnparsed: Bool, hasBinaryTargets: Bool = false) {
         self.swiftFiles = swiftFiles
         self.objcFiles = objcFiles
+        self.objcHeadersParsed = objcHeadersParsed
         self.declCount = declCount
         self.parseFailures = parseFailures
         self.manifestUnparsed = manifestUnparsed
         self.hasBinaryTargets = hasBinaryTargets
+    }
+
+    public init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        swiftFiles = try c.decode(Int.self, forKey: .swiftFiles)
+        objcFiles = try c.decode(Int.self, forKey: .objcFiles)
+        objcHeadersParsed = try c.decodeIfPresent(Int.self, forKey: .objcHeadersParsed) ?? 0
+        declCount = try c.decode(Int.self, forKey: .declCount)
+        parseFailures = try c.decode(Int.self, forKey: .parseFailures)
+        manifestUnparsed = try c.decode(Bool.self, forKey: .manifestUnparsed)
+        hasBinaryTargets = try c.decode(Bool.self, forKey: .hasBinaryTargets)
     }
 }
 

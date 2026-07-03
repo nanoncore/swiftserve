@@ -347,13 +347,13 @@
       "label" : "Async image loading",
       "n" : 4,
       "p" : {
-        "iOS" : 3,
+        "iOS" : 4,
         "linux" : 0,
-        "macCatalyst" : 3,
-        "macOS" : 3,
-        "tvOS" : 3,
-        "visionOS" : 3,
-        "watchOS" : 3
+        "macCatalyst" : 4,
+        "macOS" : 4,
+        "tvOS" : 4,
+        "visionOS" : 4,
+        "watchOS" : 4
       }
     },
     {
@@ -365,15 +365,15 @@
       "domain" : "image",
       "id" : "image.caching",
       "label" : "Image caching",
-      "n" : 2,
+      "n" : 3,
       "p" : {
-        "iOS" : 2,
+        "iOS" : 3,
         "linux" : 0,
-        "macCatalyst" : 2,
-        "macOS" : 2,
-        "tvOS" : 2,
-        "visionOS" : 2,
-        "watchOS" : 2
+        "macCatalyst" : 3,
+        "macOS" : 3,
+        "tvOS" : 3,
+        "visionOS" : 3,
+        "watchOS" : 3
       }
     },
     {
@@ -385,45 +385,6 @@
       "domain" : "image",
       "id" : "image.downsampling",
       "label" : "Downsampling / resizing",
-      "n" : 1,
-      "p" : {
-        "iOS" : 1,
-        "linux" : 0,
-        "macCatalyst" : 1,
-        "macOS" : 1,
-        "tvOS" : 1,
-        "visionOS" : 1,
-        "watchOS" : 1
-      }
-    },
-    {
-      "aliases" : [
-        "gif",
-        "animated images",
-        "apng"
-      ],
-      "domain" : "image",
-      "id" : "image.gif",
-      "label" : "Animated GIF playback",
-      "n" : 3,
-      "p" : {
-        "iOS" : 3,
-        "linux" : 0,
-        "macCatalyst" : 3,
-        "macOS" : 2,
-        "tvOS" : 3,
-        "visionOS" : 3,
-        "watchOS" : 0
-      }
-    },
-    {
-      "aliases" : [
-        "image preloading",
-        "prefetch"
-      ],
-      "domain" : "image",
-      "id" : "image.prefetching",
-      "label" : "Prefetching",
       "n" : 2,
       "p" : {
         "iOS" : 2,
@@ -437,6 +398,45 @@
     },
     {
       "aliases" : [
+        "gif",
+        "animated images",
+        "apng"
+      ],
+      "domain" : "image",
+      "id" : "image.gif",
+      "label" : "Animated GIF playback",
+      "n" : 4,
+      "p" : {
+        "iOS" : 4,
+        "linux" : 0,
+        "macCatalyst" : 4,
+        "macOS" : 3,
+        "tvOS" : 4,
+        "visionOS" : 4,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "image preloading",
+        "prefetch"
+      ],
+      "domain" : "image",
+      "id" : "image.prefetching",
+      "label" : "Prefetching",
+      "n" : 3,
+      "p" : {
+        "iOS" : 3,
+        "linux" : 0,
+        "macCatalyst" : 3,
+        "macOS" : 3,
+        "tvOS" : 3,
+        "visionOS" : 3,
+        "watchOS" : 3
+      }
+    },
+    {
+      "aliases" : [
         "progressive jpeg",
         "blurhash",
         "placeholder"
@@ -444,15 +444,15 @@
       "domain" : "image",
       "id" : "image.progressive",
       "label" : "Progressive loading",
-      "n" : 0,
+      "n" : 1,
       "p" : {
-        "iOS" : 0,
+        "iOS" : 1,
         "linux" : 0,
-        "macCatalyst" : 0,
-        "macOS" : 0,
-        "tvOS" : 0,
-        "visionOS" : 0,
-        "watchOS" : 0
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 1
       }
     },
     {
@@ -481,7 +481,7 @@
       "domain" : "image",
       "id" : "image.webp",
       "label" : "WebP decoding",
-      "n" : 1,
+      "n" : 2,
       "p" : {
         "iOS" : 0,
         "linux" : 0,
@@ -2272,20 +2272,20 @@
     },
     {
       "aliases" : [
-        "SDWebImage/SDWebImage"
+
       ],
-      "caps" : 1,
+      "caps" : 7,
       "fp" : false,
-      "name" : "SDWebImage",
+      "name" : "sdwebimage",
       "slug" : "sdwebimage"
     },
     {
       "aliases" : [
-        "SDWebImage/SDWebImageSwiftUI"
+
       ],
       "caps" : 2,
       "fp" : false,
-      "name" : "SDWebImageSwiftUI",
+      "name" : "sdwebimageswiftui",
       "slug" : "sdwebimageswiftui"
     },
     {

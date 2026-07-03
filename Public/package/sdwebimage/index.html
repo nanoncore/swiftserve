@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SDWebImage — SwiftServe</title>
-  <meta name="description" content="What SDWebImage actually serves on each Apple platform, verdict by verdict, with source receipts." />
+  <title>sdwebimage — SwiftServe</title>
+  <meta name="description" content="What sdwebimage actually serves on each Apple platform, verdict by verdict, with source receipts." />
   <link rel="icon" href="/swiftee/swiftee-idle.png" />
   <link rel="stylesheet" href="/styles.css?v=1t66hzl0byk2g" />
   <script src="/site.js?v=1t66hzl0byk2g" defer></script>
@@ -27,7 +27,7 @@
   <main id="main">
     <section class="page-head">
       <p class="crumb"><a href="/menu/">Menu</a> / packages / sdwebimage</p>
-      <h1>SDWebImage<span class="provenance-inline">as of 5.21.7 · <code>2de3a496</code></span></h1>
+      <h1>sdwebimage<span class="provenance-inline">as of 5.21.7 · <code>2de3a496</code></span></h1>
       
       <p><a href="https://github.com/sdwebimage/sdwebimage" rel="noopener">https://github.com/sdwebimage/sdwebimage</a></p>
     </section>
@@ -38,66 +38,462 @@
         <tbody>
 <tr>
   <th scope="row"><a href="/can/image.async-loading/">Async image loading</a></th>
+  <td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on iOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 5.21.7</p>
+      <ul><li><code>SDWebImageManager</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImageManager.h:101</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageManager.h#L101" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Central async load+cache coordinator; unconditional in surface (no platform gaps).</span></li><li><code>SDWebImageDownloader</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImageDownloader.h:148</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageDownloader.h#L148" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Dedicated async downloader; unconditional in surface.</span></li><li><code>SDAnimatedImageView.sd_setImageWithURL:</code><br /><code class="evidence-guard">#if SD_UIKIT || SD_MAC</code><br /><span class="evidence-loc">SDWebImage/Core/SDAnimatedImageView+WebCache.h:27</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImageView+WebCache.h#L27" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">View-layer URL-loading category; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on macOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 5.21.7</p>
+      <ul><li><code>SDWebImageManager</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImageManager.h:101</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageManager.h#L101" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Central async load+cache coordinator; unconditional in surface (no platform gaps).</span></li><li><code>SDWebImageDownloader</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImageDownloader.h:148</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageDownloader.h#L148" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Dedicated async downloader; unconditional in surface.</span></li><li><code>SDAnimatedImageView.sd_setImageWithURL:</code><br /><code class="evidence-guard">#if SD_UIKIT || SD_MAC</code><br /><span class="evidence-loc">SDWebImage/Core/SDAnimatedImageView+WebCache.h:27</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImageView+WebCache.h#L27" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">View-layer URL-loading category; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on watchOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 5.21.7</p>
+      <ul><li><code>SDWebImageManager</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImageManager.h:101</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageManager.h#L101" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Central async load+cache coordinator; unconditional in surface (no platform gaps).</span></li><li><code>SDWebImageDownloader</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImageDownloader.h:148</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageDownloader.h#L148" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Dedicated async downloader; unconditional in surface.</span></li><li><code>SDAnimatedImageView.sd_setImageWithURL:</code><br /><code class="evidence-guard">#if SD_UIKIT || SD_MAC</code><br /><span class="evidence-loc">SDWebImage/Core/SDAnimatedImageView+WebCache.h:27</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImageView+WebCache.h#L27" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">View-layer URL-loading category; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on tvOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 5.21.7</p>
+      <ul><li><code>SDWebImageManager</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImageManager.h:101</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageManager.h#L101" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Central async load+cache coordinator; unconditional in surface (no platform gaps).</span></li><li><code>SDWebImageDownloader</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImageDownloader.h:148</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageDownloader.h#L148" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Dedicated async downloader; unconditional in surface.</span></li><li><code>SDAnimatedImageView.sd_setImageWithURL:</code><br /><code class="evidence-guard">#if SD_UIKIT || SD_MAC</code><br /><span class="evidence-loc">SDWebImage/Core/SDAnimatedImageView+WebCache.h:27</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImageView+WebCache.h#L27" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">View-layer URL-loading category; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on visionOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 5.21.7</p>
+      <ul><li><code>SDWebImageManager</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImageManager.h:101</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageManager.h#L101" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Central async load+cache coordinator; unconditional in surface (no platform gaps).</span></li><li><code>SDWebImageDownloader</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImageDownloader.h:148</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageDownloader.h#L148" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Dedicated async downloader; unconditional in surface.</span></li><li><code>SDAnimatedImageView.sd_setImageWithURL:</code><br /><code class="evidence-guard">#if SD_UIKIT || SD_MAC</code><br /><span class="evidence-loc">SDWebImage/Core/SDAnimatedImageView+WebCache.h:27</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImageView+WebCache.h#L27" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">View-layer URL-loading category; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-unknown">
+  <details class="evidence">
+    <summary aria-label="not verified yet on Linux, confidence 0.25"><span class="cell-glyph">?</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">not verified yet · confidence 0.25 · as of 5.21.7</p>
+      <ul><li><span class="evidence-loc">Package.swift:8</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">SPM manifest declares Apple platforms only (iOS 9, macOS 10.11, tvOS 9, watchOS 2); not evidence of absence. Objective-C library over Foundation/UIKit/AppKit; no linux absence guard in the parsed surface.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on Catalyst, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 5.21.7</p>
+      <ul><li><code>SDWebImageManager</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImageManager.h:101</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageManager.h#L101" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Central async load+cache coordinator; unconditional in surface (no platform gaps).</span></li><li><code>SDWebImageDownloader</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImageDownloader.h:148</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageDownloader.h#L148" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Dedicated async downloader; unconditional in surface.</span></li><li><code>SDAnimatedImageView.sd_setImageWithURL:</code><br /><code class="evidence-guard">#if SD_UIKIT || SD_MAC</code><br /><span class="evidence-loc">SDWebImage/Core/SDAnimatedImageView+WebCache.h:27</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImageView+WebCache.h#L27" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">View-layer URL-loading category; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).</span></li></ul>
+    </div>
+  </details>
+</td>
+</tr>
+<tr>
+  <th scope="row"><a href="/can/image.caching/">Image caching</a></th>
+  <td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on iOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 5.21.7</p>
+      <ul><li><code>SDImageCache</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCache.h:81</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCache.h#L81" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Memory+disk cache facade; unconditional in surface.</span></li><li><code>SDMemoryCache</code><br /><span class="evidence-loc">SDWebImage/Core/SDMemoryCache.h:74</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDMemoryCache.h#L74" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Memory cache class; unconditional.</span></li><li><code>SDDiskCache</code><br /><span class="evidence-loc">SDWebImage/Core/SDDiskCache.h:125</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDDiskCache.h#L125" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Disk cache class; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on macOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 5.21.7</p>
+      <ul><li><code>SDImageCache</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCache.h:81</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCache.h#L81" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Memory+disk cache facade; unconditional in surface.</span></li><li><code>SDMemoryCache</code><br /><span class="evidence-loc">SDWebImage/Core/SDMemoryCache.h:74</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDMemoryCache.h#L74" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Memory cache class; unconditional.</span></li><li><code>SDDiskCache</code><br /><span class="evidence-loc">SDWebImage/Core/SDDiskCache.h:125</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDDiskCache.h#L125" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Disk cache class; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on watchOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 5.21.7</p>
+      <ul><li><code>SDImageCache</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCache.h:81</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCache.h#L81" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Memory+disk cache facade; unconditional in surface.</span></li><li><code>SDMemoryCache</code><br /><span class="evidence-loc">SDWebImage/Core/SDMemoryCache.h:74</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDMemoryCache.h#L74" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Memory cache class; unconditional.</span></li><li><code>SDDiskCache</code><br /><span class="evidence-loc">SDWebImage/Core/SDDiskCache.h:125</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDDiskCache.h#L125" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Disk cache class; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on tvOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 5.21.7</p>
+      <ul><li><code>SDImageCache</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCache.h:81</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCache.h#L81" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Memory+disk cache facade; unconditional in surface.</span></li><li><code>SDMemoryCache</code><br /><span class="evidence-loc">SDWebImage/Core/SDMemoryCache.h:74</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDMemoryCache.h#L74" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Memory cache class; unconditional.</span></li><li><code>SDDiskCache</code><br /><span class="evidence-loc">SDWebImage/Core/SDDiskCache.h:125</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDDiskCache.h#L125" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Disk cache class; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on visionOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 5.21.7</p>
+      <ul><li><code>SDImageCache</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCache.h:81</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCache.h#L81" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Memory+disk cache facade; unconditional in surface.</span></li><li><code>SDMemoryCache</code><br /><span class="evidence-loc">SDWebImage/Core/SDMemoryCache.h:74</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDMemoryCache.h#L74" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Memory cache class; unconditional.</span></li><li><code>SDDiskCache</code><br /><span class="evidence-loc">SDWebImage/Core/SDDiskCache.h:125</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDDiskCache.h#L125" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Disk cache class; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-unknown">
+  <details class="evidence">
+    <summary aria-label="not verified yet on Linux, confidence 0.25"><span class="cell-glyph">?</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">not verified yet · confidence 0.25 · as of 5.21.7</p>
+      <ul><li><span class="evidence-loc">Package.swift:8</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">SPM manifest declares Apple platforms only (iOS 9, macOS 10.11, tvOS 9, watchOS 2); not evidence of absence. Objective-C library over Foundation/UIKit/AppKit; no linux absence guard in the parsed surface.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on Catalyst, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 5.21.7</p>
+      <ul><li><code>SDImageCache</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCache.h:81</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCache.h#L81" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Memory+disk cache facade; unconditional in surface.</span></li><li><code>SDMemoryCache</code><br /><span class="evidence-loc">SDWebImage/Core/SDMemoryCache.h:74</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDMemoryCache.h#L74" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Memory cache class; unconditional.</span></li><li><code>SDDiskCache</code><br /><span class="evidence-loc">SDWebImage/Core/SDDiskCache.h:125</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDDiskCache.h#L125" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Disk cache class; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+</tr>
+<tr>
+  <th scope="row"><a href="/can/image.downsampling/">Downsampling / resizing</a></th>
+  <td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on iOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 5.21.7</p>
+      <ul><li><code>SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoderHelper.h:208</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L208" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Decode + scale-down to a byte budget; unconditional.</span></li><li><code>SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:policy:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoderHelper.h:219</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L219" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Scale-down with force-decode policy; unconditional.</span></li><li><code>SDImageCoderHelper.scaledSizeWithImageSize:scaleSize:preserveAspectRatio:shouldScaleUp:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoderHelper.h:175</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L175" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Thumbnail size calculation; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on macOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 5.21.7</p>
+      <ul><li><code>SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoderHelper.h:208</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L208" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Decode + scale-down to a byte budget; unconditional.</span></li><li><code>SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:policy:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoderHelper.h:219</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L219" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Scale-down with force-decode policy; unconditional.</span></li><li><code>SDImageCoderHelper.scaledSizeWithImageSize:scaleSize:preserveAspectRatio:shouldScaleUp:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoderHelper.h:175</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L175" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Thumbnail size calculation; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on watchOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 5.21.7</p>
+      <ul><li><code>SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoderHelper.h:208</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L208" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Decode + scale-down to a byte budget; unconditional.</span></li><li><code>SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:policy:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoderHelper.h:219</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L219" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Scale-down with force-decode policy; unconditional.</span></li><li><code>SDImageCoderHelper.scaledSizeWithImageSize:scaleSize:preserveAspectRatio:shouldScaleUp:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoderHelper.h:175</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L175" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Thumbnail size calculation; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on tvOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 5.21.7</p>
+      <ul><li><code>SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoderHelper.h:208</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L208" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Decode + scale-down to a byte budget; unconditional.</span></li><li><code>SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:policy:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoderHelper.h:219</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L219" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Scale-down with force-decode policy; unconditional.</span></li><li><code>SDImageCoderHelper.scaledSizeWithImageSize:scaleSize:preserveAspectRatio:shouldScaleUp:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoderHelper.h:175</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L175" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Thumbnail size calculation; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on visionOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 5.21.7</p>
+      <ul><li><code>SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoderHelper.h:208</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L208" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Decode + scale-down to a byte budget; unconditional.</span></li><li><code>SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:policy:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoderHelper.h:219</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L219" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Scale-down with force-decode policy; unconditional.</span></li><li><code>SDImageCoderHelper.scaledSizeWithImageSize:scaleSize:preserveAspectRatio:shouldScaleUp:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoderHelper.h:175</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L175" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Thumbnail size calculation; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-unknown">
+  <details class="evidence">
+    <summary aria-label="not verified yet on Linux, confidence 0.25"><span class="cell-glyph">?</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">not verified yet · confidence 0.25 · as of 5.21.7</p>
+      <ul><li><span class="evidence-loc">Package.swift:8</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">SPM manifest declares Apple platforms only (iOS 9, macOS 10.11, tvOS 9, watchOS 2); not evidence of absence. Objective-C library over Foundation/UIKit/AppKit; no linux absence guard in the parsed surface.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on Catalyst, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 5.21.7</p>
+      <ul><li><code>SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoderHelper.h:208</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L208" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Decode + scale-down to a byte budget; unconditional.</span></li><li><code>SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:policy:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoderHelper.h:219</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L219" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Scale-down with force-decode policy; unconditional.</span></li><li><code>SDImageCoderHelper.scaledSizeWithImageSize:scaleSize:preserveAspectRatio:shouldScaleUp:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoderHelper.h:175</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L175" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Thumbnail size calculation; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+</tr>
+<tr>
+  <th scope="row"><a href="/can/image.gif/">Animated GIF playback</a></th>
+  <td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on iOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 5.21.7</p>
+      <ul><li><code>SDImageGIFCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageGIFCoder.h:18</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageGIFCoder.h#L18" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">GIF decode/encode coder (registered by default); unconditional in surface.</span></li><li><code>SDImageAPNGCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageAPNGCoder.h:15</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAPNGCoder.h#L15" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">APNG animated coder; unconditional.</span></li><li><code>SDAnimatedImagePlayer</code><br /><span class="evidence-loc">SDWebImage/Core/SDAnimatedImagePlayer.h:34</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImagePlayer.h#L34" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Frame-driving animation player; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on macOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 5.21.7</p>
+      <ul><li><code>SDImageGIFCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageGIFCoder.h:18</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageGIFCoder.h#L18" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">GIF decode/encode coder (registered by default); unconditional in surface.</span></li><li><code>SDImageAPNGCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageAPNGCoder.h:15</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAPNGCoder.h#L15" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">APNG animated coder; unconditional.</span></li><li><code>SDAnimatedImagePlayer</code><br /><span class="evidence-loc">SDWebImage/Core/SDAnimatedImagePlayer.h:34</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImagePlayer.h#L34" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Frame-driving animation player; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on watchOS, confidence 0.75"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.75 · as of 5.21.7</p>
+      <ul><li><code>SDImageGIFCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageGIFCoder.h:18</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageGIFCoder.h#L18" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">GIF decode/encode coder (registered by default); unconditional in surface.</span></li><li><code>SDImageAPNGCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageAPNGCoder.h:15</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAPNGCoder.h#L15" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">APNG animated coder; unconditional.</span></li><li><code>SDAnimatedImagePlayer</code><br /><span class="evidence-loc">SDWebImage/Core/SDAnimatedImagePlayer.h:34</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImagePlayer.h#L34" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Frame-driving animation player; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on tvOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 5.21.7</p>
+      <ul><li><code>SDImageGIFCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageGIFCoder.h:18</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageGIFCoder.h#L18" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">GIF decode/encode coder (registered by default); unconditional in surface.</span></li><li><code>SDImageAPNGCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageAPNGCoder.h:15</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAPNGCoder.h#L15" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">APNG animated coder; unconditional.</span></li><li><code>SDAnimatedImagePlayer</code><br /><span class="evidence-loc">SDWebImage/Core/SDAnimatedImagePlayer.h:34</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImagePlayer.h#L34" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Frame-driving animation player; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on visionOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 5.21.7</p>
+      <ul><li><code>SDImageGIFCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageGIFCoder.h:18</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageGIFCoder.h#L18" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">GIF decode/encode coder (registered by default); unconditional in surface.</span></li><li><code>SDImageAPNGCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageAPNGCoder.h:15</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAPNGCoder.h#L15" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">APNG animated coder; unconditional.</span></li><li><code>SDAnimatedImagePlayer</code><br /><span class="evidence-loc">SDWebImage/Core/SDAnimatedImagePlayer.h:34</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImagePlayer.h#L34" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Frame-driving animation player; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-unknown">
+  <details class="evidence">
+    <summary aria-label="not verified yet on Linux, confidence 0.25"><span class="cell-glyph">?</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">not verified yet · confidence 0.25 · as of 5.21.7</p>
+      <ul><li><span class="evidence-loc">Package.swift:8</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">SPM manifest declares Apple platforms only (iOS 9, macOS 10.11, tvOS 9, watchOS 2); not evidence of absence. Objective-C library over Foundation/UIKit/AppKit; no linux absence guard in the parsed surface.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on Catalyst, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 5.21.7</p>
+      <ul><li><code>SDImageGIFCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageGIFCoder.h:18</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageGIFCoder.h#L18" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">GIF decode/encode coder (registered by default); unconditional in surface.</span></li><li><code>SDImageAPNGCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageAPNGCoder.h:15</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAPNGCoder.h#L15" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">APNG animated coder; unconditional.</span></li><li><code>SDAnimatedImagePlayer</code><br /><span class="evidence-loc">SDWebImage/Core/SDAnimatedImagePlayer.h:34</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImagePlayer.h#L34" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Frame-driving animation player; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+</tr>
+<tr>
+  <th scope="row"><a href="/can/image.prefetching/">Prefetching</a></th>
+  <td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on iOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 5.21.7</p>
+      <ul><li><code>SDWebImagePrefetcher</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImagePrefetcher.h:64</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImagePrefetcher.h#L64" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Batch URL prefetcher; unconditional in surface.</span></li><li><code>SDWebImagePrefetchToken</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImagePrefetcher.h:17</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImagePrefetcher.h#L17" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Cancellable prefetch token; unconditional.</span></li><li><span class="evidence-loc">Package.swift:8</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">iOS declared in Package.swift platform floors.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on macOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 5.21.7</p>
+      <ul><li><code>SDWebImagePrefetcher</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImagePrefetcher.h:64</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImagePrefetcher.h#L64" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Batch URL prefetcher; unconditional in surface.</span></li><li><code>SDWebImagePrefetchToken</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImagePrefetcher.h:17</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImagePrefetcher.h#L17" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Cancellable prefetch token; unconditional.</span></li><li><span class="evidence-loc">Package.swift:8</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">macOS declared in Package.swift platform floors.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on watchOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 5.21.7</p>
+      <ul><li><code>SDWebImagePrefetcher</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImagePrefetcher.h:64</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImagePrefetcher.h#L64" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Batch URL prefetcher; unconditional in surface.</span></li><li><code>SDWebImagePrefetchToken</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImagePrefetcher.h:17</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImagePrefetcher.h#L17" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Cancellable prefetch token; unconditional.</span></li><li><span class="evidence-loc">Package.swift:8</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">watchOS declared in Package.swift platform floors.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on tvOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 5.21.7</p>
+      <ul><li><code>SDWebImagePrefetcher</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImagePrefetcher.h:64</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImagePrefetcher.h#L64" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Batch URL prefetcher; unconditional in surface.</span></li><li><code>SDWebImagePrefetchToken</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImagePrefetcher.h:17</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImagePrefetcher.h#L17" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Cancellable prefetch token; unconditional.</span></li><li><span class="evidence-loc">Package.swift:8</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">tvOS declared in Package.swift platform floors.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on visionOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 5.21.7</p>
+      <ul><li><code>SDWebImagePrefetcher</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImagePrefetcher.h:64</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImagePrefetcher.h#L64" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Batch URL prefetcher; unconditional in surface.</span></li><li><code>SDWebImagePrefetchToken</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImagePrefetcher.h:17</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImagePrefetcher.h#L17" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Cancellable prefetch token; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-unknown">
+  <details class="evidence">
+    <summary aria-label="not verified yet on Linux, confidence 0.25"><span class="cell-glyph">?</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">not verified yet · confidence 0.25 · as of 5.21.7</p>
+      <ul><li><span class="evidence-loc">Package.swift:8</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">SPM manifest declares Apple platforms only (iOS 9, macOS 10.11, tvOS 9, watchOS 2); not evidence of absence. Objective-C library over Foundation/UIKit/AppKit; no linux absence guard in the parsed surface.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on Catalyst, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 5.21.7</p>
+      <ul><li><code>SDWebImagePrefetcher</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImagePrefetcher.h:64</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImagePrefetcher.h#L64" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Batch URL prefetcher; unconditional in surface.</span></li><li><code>SDWebImagePrefetchToken</code><br /><span class="evidence-loc">SDWebImage/Core/SDWebImagePrefetcher.h:17</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImagePrefetcher.h#L17" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Cancellable prefetch token; unconditional.</span></li></ul>
+    </div>
+  </details>
+</td>
+</tr>
+<tr>
+  <th scope="row"><a href="/can/image.progressive/">Progressive loading</a></th>
+  <td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on iOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 5.21.7</p>
+      <ul><li><code>SDProgressiveImageCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoder.h:243</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L243" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Incremental/progressive decoding protocol; unconditional in surface.</span></li><li><code>SDProgressiveImageCoder.updateIncrementalData:finished:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoder.h:269</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L269" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Feed partial download data incrementally.</span></li><li><code>SDProgressiveImageCoder.incrementalDecodedImageWithOptions:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoder.h:278</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L278" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Produce the partially-decoded image mid-download.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on macOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 5.21.7</p>
+      <ul><li><code>SDProgressiveImageCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoder.h:243</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L243" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Incremental/progressive decoding protocol; unconditional in surface.</span></li><li><code>SDProgressiveImageCoder.updateIncrementalData:finished:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoder.h:269</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L269" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Feed partial download data incrementally.</span></li><li><code>SDProgressiveImageCoder.incrementalDecodedImageWithOptions:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoder.h:278</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L278" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Produce the partially-decoded image mid-download.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on watchOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 5.21.7</p>
+      <ul><li><code>SDProgressiveImageCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoder.h:243</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L243" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Incremental/progressive decoding protocol; unconditional in surface.</span></li><li><code>SDProgressiveImageCoder.updateIncrementalData:finished:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoder.h:269</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L269" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Feed partial download data incrementally.</span></li><li><code>SDProgressiveImageCoder.incrementalDecodedImageWithOptions:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoder.h:278</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L278" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Produce the partially-decoded image mid-download.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on tvOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 5.21.7</p>
+      <ul><li><code>SDProgressiveImageCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoder.h:243</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L243" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Incremental/progressive decoding protocol; unconditional in surface.</span></li><li><code>SDProgressiveImageCoder.updateIncrementalData:finished:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoder.h:269</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L269" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Feed partial download data incrementally.</span></li><li><code>SDProgressiveImageCoder.incrementalDecodedImageWithOptions:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoder.h:278</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L278" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Produce the partially-decoded image mid-download.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on visionOS, confidence 0.80"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.80 · as of 5.21.7</p>
+      <ul><li><code>SDProgressiveImageCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoder.h:243</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L243" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Incremental/progressive decoding protocol; unconditional in surface.</span></li><li><code>SDProgressiveImageCoder.updateIncrementalData:finished:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoder.h:269</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L269" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Feed partial download data incrementally.</span></li><li><code>SDProgressiveImageCoder.incrementalDecodedImageWithOptions:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoder.h:278</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L278" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Produce the partially-decoded image mid-download.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-unknown">
+  <details class="evidence">
+    <summary aria-label="not verified yet on Linux, confidence 0.25"><span class="cell-glyph">?</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">not verified yet · confidence 0.25 · as of 5.21.7</p>
+      <ul><li><span class="evidence-loc">Package.swift:8</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">SPM manifest declares Apple platforms only (iOS 9, macOS 10.11, tvOS 9, watchOS 2); not evidence of absence. Objective-C library over Foundation/UIKit/AppKit; no linux absence guard in the parsed surface.</span></li></ul>
+    </div>
+  </details>
+</td>
+<td class="cell-good">
+  <details class="evidence">
+    <summary aria-label="serves it on Catalyst, confidence 0.75"><span class="cell-glyph">✓</span></summary>
+    <div class="evidence-pop">
+      <p class="evidence-verdict">serves it · confidence 0.75 · as of 5.21.7</p>
+      <ul><li><code>SDProgressiveImageCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoder.h:243</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L243" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Incremental/progressive decoding protocol; unconditional in surface.</span></li><li><code>SDProgressiveImageCoder.updateIncrementalData:finished:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoder.h:269</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L269" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Feed partial download data incrementally.</span></li><li><code>SDProgressiveImageCoder.incrementalDecodedImageWithOptions:</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageCoder.h:278</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L278" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Produce the partially-decoded image mid-download.</span></li></ul>
+    </div>
+  </details>
+</td>
+</tr>
+<tr>
+  <th scope="row"><a href="/can/image.webp/">WebP decoding</a></th>
   <td class="cell-unknown">
   <details class="evidence">
-    <summary aria-label="not verified yet on iOS, confidence 0.30"><span class="cell-glyph">?</span></summary>
+    <summary aria-label="not verified yet on iOS, confidence 0.40"><span class="cell-glyph">?</span></summary>
     <div class="evidence-pop">
-      <p class="evidence-verdict">not verified yet · confidence 0.30 · as of 5.21.7</p>
-      <ul><li><span class="evidence-note">SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era</span></li></ul>
+      <p class="evidence-verdict">not verified yet · confidence 0.40 · as of 5.21.7</p>
+      <ul><li><code>SDImageAWebPCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageAWebPCoder.h:19</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAWebPCoder.h#L19" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files.</span></li><li><span class="evidence-loc">README.md:0</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/README.md#L0" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">README: 'WebP format from iOS 14/macOS 11.0 via SDWebImageAWebPCoder. For lower firmware, use coder plugin SDWebImageWebPCoder.'</span></li></ul>
     </div>
   </details>
 </td>
 <td class="cell-unknown">
   <details class="evidence">
-    <summary aria-label="not verified yet on macOS, confidence 0.30"><span class="cell-glyph">?</span></summary>
+    <summary aria-label="not verified yet on macOS, confidence 0.40"><span class="cell-glyph">?</span></summary>
     <div class="evidence-pop">
-      <p class="evidence-verdict">not verified yet · confidence 0.30 · as of 5.21.7</p>
-      <ul><li><span class="evidence-note">SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era</span></li></ul>
+      <p class="evidence-verdict">not verified yet · confidence 0.40 · as of 5.21.7</p>
+      <ul><li><code>SDImageAWebPCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageAWebPCoder.h:19</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAWebPCoder.h#L19" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files.</span></li><li><span class="evidence-loc">README.md:0</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/README.md#L0" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">README: 'WebP format from iOS 14/macOS 11.0 via SDWebImageAWebPCoder. For lower firmware, use coder plugin SDWebImageWebPCoder.'</span></li></ul>
     </div>
   </details>
 </td>
 <td class="cell-unknown">
   <details class="evidence">
-    <summary aria-label="not verified yet on watchOS, confidence 0.30"><span class="cell-glyph">?</span></summary>
+    <summary aria-label="not verified yet on watchOS, confidence 0.40"><span class="cell-glyph">?</span></summary>
     <div class="evidence-pop">
-      <p class="evidence-verdict">not verified yet · confidence 0.30 · as of 5.21.7</p>
-      <ul><li><span class="evidence-note">SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era</span></li></ul>
+      <p class="evidence-verdict">not verified yet · confidence 0.40 · as of 5.21.7</p>
+      <ul><li><code>SDImageAWebPCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageAWebPCoder.h:19</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAWebPCoder.h#L19" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files.</span></li><li><span class="evidence-loc">README.md:0</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/README.md#L0" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">README: 'WebP format from iOS 14/macOS 11.0 via SDWebImageAWebPCoder. For lower firmware, use coder plugin SDWebImageWebPCoder.'</span></li></ul>
     </div>
   </details>
 </td>
 <td class="cell-unknown">
   <details class="evidence">
-    <summary aria-label="not verified yet on tvOS, confidence 0.30"><span class="cell-glyph">?</span></summary>
+    <summary aria-label="not verified yet on tvOS, confidence 0.40"><span class="cell-glyph">?</span></summary>
     <div class="evidence-pop">
-      <p class="evidence-verdict">not verified yet · confidence 0.30 · as of 5.21.7</p>
-      <ul><li><span class="evidence-note">SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era</span></li></ul>
+      <p class="evidence-verdict">not verified yet · confidence 0.40 · as of 5.21.7</p>
+      <ul><li><code>SDImageAWebPCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageAWebPCoder.h:19</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAWebPCoder.h#L19" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files.</span></li><li><span class="evidence-loc">README.md:0</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/README.md#L0" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">README: 'WebP format from iOS 14/macOS 11.0 via SDWebImageAWebPCoder. For lower firmware, use coder plugin SDWebImageWebPCoder.'</span></li></ul>
     </div>
   </details>
 </td>
 <td class="cell-unknown">
   <details class="evidence">
-    <summary aria-label="not verified yet on visionOS, confidence 0.20"><span class="cell-glyph">?</span></summary>
+    <summary aria-label="not verified yet on visionOS, confidence 0.40"><span class="cell-glyph">?</span></summary>
     <div class="evidence-pop">
-      <p class="evidence-verdict">not verified yet · confidence 0.20 · as of 5.21.7</p>
-      <ul><li><span class="evidence-note">SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era</span></li></ul>
+      <p class="evidence-verdict">not verified yet · confidence 0.40 · as of 5.21.7</p>
+      <ul><li><code>SDImageAWebPCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageAWebPCoder.h:19</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAWebPCoder.h#L19" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files.</span></li><li><span class="evidence-loc">README.md:0</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/README.md#L0" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">README: 'WebP format from iOS 14/macOS 11.0 via SDWebImageAWebPCoder. For lower firmware, use coder plugin SDWebImageWebPCoder.'</span></li></ul>
     </div>
   </details>
 </td>
 <td class="cell-unknown">
   <details class="evidence">
-    <summary aria-label="not verified yet on Linux, confidence 0.10"><span class="cell-glyph">?</span></summary>
+    <summary aria-label="not verified yet on Linux, confidence 0.25"><span class="cell-glyph">?</span></summary>
     <div class="evidence-pop">
-      <p class="evidence-verdict">not verified yet · confidence 0.10 · as of 5.21.7</p>
-      <ul><li><span class="evidence-note">Apple-only</span></li></ul>
+      <p class="evidence-verdict">not verified yet · confidence 0.25 · as of 5.21.7</p>
+      <ul><li><span class="evidence-loc">Package.swift:8</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">SPM manifest declares Apple platforms only (iOS 9, macOS 10.11, tvOS 9, watchOS 2); not evidence of absence. Objective-C library over Foundation/UIKit/AppKit; no linux absence guard in the parsed surface.</span></li></ul>
     </div>
   </details>
 </td>
 <td class="cell-unknown">
   <details class="evidence">
-    <summary aria-label="not verified yet on Catalyst, confidence 0.20"><span class="cell-glyph">?</span></summary>
+    <summary aria-label="not verified yet on Catalyst, confidence 0.40"><span class="cell-glyph">?</span></summary>
     <div class="evidence-pop">
-      <p class="evidence-verdict">not verified yet · confidence 0.20 · as of 5.21.7</p>
-      <ul><li><span class="evidence-note">SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era</span></li></ul>
+      <p class="evidence-verdict">not verified yet · confidence 0.40 · as of 5.21.7</p>
+      <ul><li><code>SDImageAWebPCoder</code><br /><span class="evidence-loc">SDWebImage/Core/SDImageAWebPCoder.h:19</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAWebPCoder.h#L19" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files.</span></li><li><span class="evidence-loc">README.md:0</span><br /><a class="evidence-link" href="https://github.com/sdwebimage/sdwebimage/blob/5.21.7/README.md#L0" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">README: 'WebP format from iOS 14/macOS 11.0 via SDWebImageAWebPCoder. For lower firmware, use coder plugin SDWebImageWebPCoder.'</span></li></ul>
     </div>
   </details>
 </td>
@@ -106,26 +502,56 @@
       </table>
       <p class="table-legend">✓ serves it · ◐ with conditions · ✕ not served (proven) · ? not verified yet — hover any verdict for the receipt, click to pin it</p>
     </section>
-    <section class="package-notes"><h2>Notes</h2><p><strong>Async image loading:</strong> The ObjC-era giant. Verdicts wait for the ObjC extractor; use SDWebImageSwiftUI for a Swift-parsed surface.</p></section>
+    <section class="package-notes"><h2>Notes</h2><p><strong>Async image loading:</strong> SDWebImageManager/SDWebImageDownloader are unconditional in the parsed public headers. The classic UIImageView+WebCache.h category did not make the truncated digest, so view-convenience evidence rides on the SDAnimatedImageView category (opaque SD_UIKIT || SD_MAC conditional). Digest truncated to 800 of 1762 decls; implementation files and private headers unparsed.</p>
+<p><strong>Image caching:</strong> Full cache stack (SDImageCache, SDMemoryCache, SDDiskCache, SDImageCacheConfig) is unconditional in the parsed public headers. Digest truncated to 800 of 1762 decls; implementation files and private headers unparsed.</p>
+<p><strong>Downsampling / resizing:</strong> Thumbnail decoding options and decode-and-scale-down helpers are unconditional in the parsed public headers. Digest truncated to 800 of 1762 decls; implementation files and private headers unparsed.</p>
+<p><strong>Animated GIF playback:</strong> GIF/APNG decoding (SDImageGIFCoder, SDImageAPNGCoder) and the frame player (SDAnimatedImagePlayer) are unconditional; the SDAnimatedImageView widget is conditionally compiled behind the opaque SD_UIKIT || SD_MAC package macro, so on watchOS the claim rests on decode+player, not the view. Digest truncated to 800 of 1762 decls; implementation files and private headers unparsed.</p>
+<p><strong>Prefetching:</strong> SDWebImagePrefetcher and its token/delegate are unconditional in the parsed public headers. Digest truncated to 800 of 1762 decls; implementation files and private headers unparsed.</p>
+<p><strong>Progressive loading:</strong> Progressive machinery is protocol-level in this surface (SDProgressiveImageCoder with full incremental-decode method set); concrete conformances live in implementation files outside the parsed surface. The SDWebImageProgressiveLoad option is a member of the SDWebImageOptions enum whose individual cases are not itemized in the digest. Digest truncated to 800 of 1762 decls; implementation files and private headers unparsed.</p>
+<p><strong>WebP decoding:</strong> Honest unknown by design. The SDImageFormatWebP typed-enum constant exists in the full 1762-decl surface but fell outside this truncated 800-decl digest, so it cannot be anchored; the enum constant alone would not prove decoding anyway. In-core WebP is limited to the Apple-ImageIO AWebP path on newer OSes; complete WebP decoding (and older-OS support) ships as the companion package https://github.com/SDWebImage/SDWebImageWebPCoder (Kingfisher precedent). Digest truncated to 800 of 1762 decls; implementation files and private headers unparsed.</p></section>
     <section class="badges-section">
       <h2>Badges for your README</h2>
-      <p>Maintainer of SDWebImage? These are yours — verified claims, linked to the receipts. Wrong verdict? That's a fix we want; see <a href="/about/#contribute">contribute</a>.</p>
+      <p>Maintainer of sdwebimage? These are yours — verified claims, linked to the receipts. Wrong verdict? That's a fix we want; see <a href="/about/#contribute">contribute</a>.</p>
       <div class="badge-row">
         <img src="/badge/sdwebimage/verified.svg" alt="verified badge" height="20" />
-        <button type="button" class="copy-btn" data-copy="[![1 capabilities verified by SwiftServe](https://swiftserve.dev/badge/sdwebimage/verified.svg)](https://swiftserve.dev/package/sdwebimage/)">Copy markdown</button>
+        <button type="button" class="copy-btn" data-copy="[![7 capabilities verified by SwiftServe](https://swiftserve.dev/badge/sdwebimage/verified.svg)](https://swiftserve.dev/package/sdwebimage/)">Copy markdown</button>
       </div>
       <div class="badge-row badge-row-matrix">
         <img src="/badge/sdwebimage/matrix.svg" alt="capability matrix badge" />
-        <button type="button" class="copy-btn" data-copy="[![What SDWebImage serves, verified](https://swiftserve.dev/badge/sdwebimage/matrix.svg)](https://swiftserve.dev/package/sdwebimage/)">Copy markdown</button>
+        <button type="button" class="copy-btn" data-copy="[![What sdwebimage serves, verified](https://swiftserve.dev/badge/sdwebimage/matrix.svg)](https://swiftserve.dev/package/sdwebimage/)">Copy markdown</button>
       </div>
 <div class="badge-row">
   <img src="/badge/sdwebimage/image.async-loading.svg" alt="Async image loading badge" height="20" />
   <button type="button" class="copy-btn" data-copy="[![Serves async image loading](https://swiftserve.dev/badge/sdwebimage/image.async-loading.svg)](https://swiftserve.dev/can/image.async-loading/)">Copy markdown</button>
 </div>
+<div class="badge-row">
+  <img src="/badge/sdwebimage/image.caching.svg" alt="Image caching badge" height="20" />
+  <button type="button" class="copy-btn" data-copy="[![Serves image caching](https://swiftserve.dev/badge/sdwebimage/image.caching.svg)](https://swiftserve.dev/can/image.caching/)">Copy markdown</button>
+</div>
+<div class="badge-row">
+  <img src="/badge/sdwebimage/image.downsampling.svg" alt="Downsampling / resizing badge" height="20" />
+  <button type="button" class="copy-btn" data-copy="[![Serves downsampling / resizing](https://swiftserve.dev/badge/sdwebimage/image.downsampling.svg)](https://swiftserve.dev/can/image.downsampling/)">Copy markdown</button>
+</div>
+<div class="badge-row">
+  <img src="/badge/sdwebimage/image.gif.svg" alt="Animated GIF playback badge" height="20" />
+  <button type="button" class="copy-btn" data-copy="[![Serves animated gif playback](https://swiftserve.dev/badge/sdwebimage/image.gif.svg)](https://swiftserve.dev/can/image.gif/)">Copy markdown</button>
+</div>
+<div class="badge-row">
+  <img src="/badge/sdwebimage/image.prefetching.svg" alt="Prefetching badge" height="20" />
+  <button type="button" class="copy-btn" data-copy="[![Serves prefetching](https://swiftserve.dev/badge/sdwebimage/image.prefetching.svg)](https://swiftserve.dev/can/image.prefetching/)">Copy markdown</button>
+</div>
+<div class="badge-row">
+  <img src="/badge/sdwebimage/image.progressive.svg" alt="Progressive loading badge" height="20" />
+  <button type="button" class="copy-btn" data-copy="[![Serves progressive loading](https://swiftserve.dev/badge/sdwebimage/image.progressive.svg)](https://swiftserve.dev/can/image.progressive/)">Copy markdown</button>
+</div>
+<div class="badge-row">
+  <img src="/badge/sdwebimage/image.webp.svg" alt="WebP decoding badge" height="20" />
+  <button type="button" class="copy-btn" data-copy="[![Serves webp decoding](https://swiftserve.dev/badge/sdwebimage/image.webp.svg)](https://swiftserve.dev/can/image.webp/)">Copy markdown</button>
+</div>
     </section>
   </main>
   <footer class="site-footer">
-    <p>Served fresh · 80 capabilities × 115 packages · 225 records · data v1</p>
+    <p>Served fresh · 81 capabilities × 115 packages · 231 records · data v1</p>
     <p>Every verdict links to the exact source line that decides it. <a href="/about/">How it works</a></p>
     <p>Made refreshingly cool from Paris, France</p>
   </footer>

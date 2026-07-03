@@ -4,18 +4,18 @@
       "id" : "image.async-loading",
       "label" : "Async image loading"
     },
-    "labeledAt" : "2026-07-03T11:30:00Z",
+    "labeledAt" : "2026-07-03T16:00:00Z",
     "labeledBy" : "claude-code-session",
-    "notes" : "WebImage — SwiftUI view with SDWebImage's loading + caching underneath.",
+    "notes" : "WebImage — SwiftUI view with SDWebImage's loading + caching underneath. Requires the SDWebImage companion package.",
     "package" : {
       "aliases" : [
-        "SDWebImage/SDWebImageSwiftUI"
+
       ],
       "canonicalURL" : "https://github.com/sdwebimage/sdwebimageswiftui",
       "commit" : "0e331457ca9af2f0b08bcaa138a91ffb907b004f",
       "firstParty" : false,
-      "name" : "SDWebImageSwiftUI",
-      "surfaceDigest" : "fnv1a64:0ed9385f2d21d0d2",
+      "name" : "sdwebimageswiftui",
+      "surfaceDigest" : "fnv1a64:f716019c1297cb91",
       "version" : "3.1.4"
     },
     "platforms" : {
@@ -182,18 +182,18 @@
       "id" : "image.gif",
       "label" : "Animated GIF playback"
     },
-    "labeledAt" : "2026-07-03T11:30:00Z",
+    "labeledAt" : "2026-07-03T16:00:00Z",
     "labeledBy" : "claude-code-session",
-    "notes" : "AnimatedImage plays GIF/APNG/WebP animations — fenced !os(watchOS), same gap as Kingfisher's.",
+    "notes" : "AnimatedImage plays GIF/APNG/WebP animations — fenced !os(watchOS), same gap as Kingfisher's. Requires the SDWebImage companion package.",
     "package" : {
       "aliases" : [
-        "SDWebImage/SDWebImageSwiftUI"
+
       ],
       "canonicalURL" : "https://github.com/sdwebimage/sdwebimageswiftui",
       "commit" : "0e331457ca9af2f0b08bcaa138a91ffb907b004f",
       "firstParty" : false,
-      "name" : "SDWebImageSwiftUI",
-      "surfaceDigest" : "fnv1a64:0ed9385f2d21d0d2",
+      "name" : "sdwebimageswiftui",
+      "surfaceDigest" : "fnv1a64:f716019c1297cb91",
       "version" : "3.1.4"
     },
     "platforms" : {

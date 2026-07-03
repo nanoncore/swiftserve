@@ -87,6 +87,158 @@
       ],
       "slug" : "kingfisher",
       "version" : "8.10.0"
+    },
+    {
+      "commit" : "2de3a496eaf6df9a1312862adcfd54acd73c39c0",
+      "notes" : "Honest unknown by design. The SDImageFormatWebP typed-enum constant exists in the full 1762-decl surface but fell outside this truncated 800-decl digest, so it cannot be anchored; the enum constant alone would not prove decoding anyway. In-core WebP is limited to the Apple-ImageIO AWebP path on newer OSes; complete WebP decoding (and older-OS support) ships as the companion package https://github.com/SDWebImage/SDWebImageWebPCoder (Kingfisher precedent). Digest truncated to 800 of 1762 decls; implementation files and private headers unparsed.",
+      "package" : "https://github.com/sdwebimage/sdwebimage",
+      "packageName" : "sdwebimage",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.4,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageAWebPCoder.h",
+              "kind" : "symbol",
+              "line" : 19,
+              "note" : "Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAWebPCoder.h#L19",
+              "symbol" : "SDImageAWebPCoder"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: 'WebP format from iOS 14/macOS 11.0 via SDWebImageAWebPCoder. For lower firmware, use coder plugin SDWebImageWebPCoder.'",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/README.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "linux" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "SPM manifest declares Apple platforms only (iOS 9, macOS 10.11, tvOS 9, watchOS 2); not evidence of absence. Objective-C library over Foundation/UIKit/AppKit; no linux absence guard in the parsed surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.4,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageAWebPCoder.h",
+              "kind" : "symbol",
+              "line" : 19,
+              "note" : "Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAWebPCoder.h#L19",
+              "symbol" : "SDImageAWebPCoder"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: 'WebP format from iOS 14/macOS 11.0 via SDWebImageAWebPCoder. For lower firmware, use coder plugin SDWebImageWebPCoder.'",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/README.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macOS" : {
+          "confidence" : 0.4,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageAWebPCoder.h",
+              "kind" : "symbol",
+              "line" : 19,
+              "note" : "Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAWebPCoder.h#L19",
+              "symbol" : "SDImageAWebPCoder"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: 'WebP format from iOS 14/macOS 11.0 via SDWebImageAWebPCoder. For lower firmware, use coder plugin SDWebImageWebPCoder.'",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/README.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.4,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageAWebPCoder.h",
+              "kind" : "symbol",
+              "line" : 19,
+              "note" : "Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAWebPCoder.h#L19",
+              "symbol" : "SDImageAWebPCoder"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: 'WebP format from iOS 14/macOS 11.0 via SDWebImageAWebPCoder. For lower firmware, use coder plugin SDWebImageWebPCoder.'",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/README.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.4,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageAWebPCoder.h",
+              "kind" : "symbol",
+              "line" : 19,
+              "note" : "Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAWebPCoder.h#L19",
+              "symbol" : "SDImageAWebPCoder"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: 'WebP format from iOS 14/macOS 11.0 via SDWebImageAWebPCoder. For lower firmware, use coder plugin SDWebImageWebPCoder.'",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/README.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.4,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageAWebPCoder.h",
+              "kind" : "symbol",
+              "line" : 19,
+              "note" : "Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAWebPCoder.h#L19",
+              "symbol" : "SDImageAWebPCoder"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: 'WebP format from iOS 14/macOS 11.0 via SDWebImageAWebPCoder. For lower firmware, use coder plugin SDWebImageWebPCoder.'",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/README.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "sdwebimage",
+      "version" : "5.21.7"
     }
   ]
 }

@@ -132,6 +132,336 @@
       ],
       "slug" : "kingfisher",
       "version" : "8.10.0"
+    },
+    {
+      "commit" : "2de3a496eaf6df9a1312862adcfd54acd73c39c0",
+      "notes" : "Thumbnail decoding options and decode-and-scale-down helpers are unconditional in the parsed public headers. Digest truncated to 800 of 1762 decls; implementation files and private headers unparsed.",
+      "package" : "https://github.com/sdwebimage/sdwebimage",
+      "packageName" : "sdwebimage",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+              "kind" : "symbol",
+              "line" : 208,
+              "note" : "Decode + scale-down to a byte budget; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L208",
+              "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+              "kind" : "symbol",
+              "line" : 219,
+              "note" : "Scale-down with force-decode policy; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L219",
+              "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:policy:"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+              "kind" : "symbol",
+              "line" : 175,
+              "note" : "Thumbnail size calculation; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L175",
+              "symbol" : "SDImageCoderHelper.scaledSizeWithImageSize:scaleSize:preserveAspectRatio:shouldScaleUp:"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoder.h",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "Coder option: decode-time thumbnail pixel size; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L47",
+              "symbol" : "SDImageCoderDecodeThumbnailPixelSize"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoder.h",
+              "kind" : "symbol",
+              "line" : 90,
+              "note" : "Coder option: scale-down byte limit; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L90",
+              "symbol" : "SDImageCoderDecodeScaleDownLimitBytes"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "iOS declared in Package.swift platform floors.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "SPM manifest declares Apple platforms only (iOS 9, macOS 10.11, tvOS 9, watchOS 2); not evidence of absence. Objective-C library over Foundation/UIKit/AppKit; no linux absence guard in the parsed surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+              "kind" : "symbol",
+              "line" : 208,
+              "note" : "Decode + scale-down to a byte budget; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L208",
+              "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+              "kind" : "symbol",
+              "line" : 219,
+              "note" : "Scale-down with force-decode policy; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L219",
+              "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:policy:"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+              "kind" : "symbol",
+              "line" : 175,
+              "note" : "Thumbnail size calculation; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L175",
+              "symbol" : "SDImageCoderHelper.scaledSizeWithImageSize:scaleSize:preserveAspectRatio:shouldScaleUp:"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoder.h",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "Coder option: decode-time thumbnail pixel size; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L47",
+              "symbol" : "SDImageCoderDecodeThumbnailPixelSize"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoder.h",
+              "kind" : "symbol",
+              "line" : 90,
+              "note" : "Coder option: scale-down byte limit; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L90",
+              "symbol" : "SDImageCoderDecodeScaleDownLimitBytes"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+              "kind" : "symbol",
+              "line" : 208,
+              "note" : "Decode + scale-down to a byte budget; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L208",
+              "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+              "kind" : "symbol",
+              "line" : 219,
+              "note" : "Scale-down with force-decode policy; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L219",
+              "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:policy:"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+              "kind" : "symbol",
+              "line" : 175,
+              "note" : "Thumbnail size calculation; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L175",
+              "symbol" : "SDImageCoderHelper.scaledSizeWithImageSize:scaleSize:preserveAspectRatio:shouldScaleUp:"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoder.h",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "Coder option: decode-time thumbnail pixel size; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L47",
+              "symbol" : "SDImageCoderDecodeThumbnailPixelSize"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoder.h",
+              "kind" : "symbol",
+              "line" : 90,
+              "note" : "Coder option: scale-down byte limit; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L90",
+              "symbol" : "SDImageCoderDecodeScaleDownLimitBytes"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "macOS declared in Package.swift platform floors.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+              "kind" : "symbol",
+              "line" : 208,
+              "note" : "Decode + scale-down to a byte budget; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L208",
+              "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+              "kind" : "symbol",
+              "line" : 219,
+              "note" : "Scale-down with force-decode policy; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L219",
+              "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:policy:"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+              "kind" : "symbol",
+              "line" : 175,
+              "note" : "Thumbnail size calculation; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L175",
+              "symbol" : "SDImageCoderHelper.scaledSizeWithImageSize:scaleSize:preserveAspectRatio:shouldScaleUp:"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoder.h",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "Coder option: decode-time thumbnail pixel size; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L47",
+              "symbol" : "SDImageCoderDecodeThumbnailPixelSize"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoder.h",
+              "kind" : "symbol",
+              "line" : 90,
+              "note" : "Coder option: scale-down byte limit; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L90",
+              "symbol" : "SDImageCoderDecodeScaleDownLimitBytes"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "tvOS declared in Package.swift platform floors.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+              "kind" : "symbol",
+              "line" : 208,
+              "note" : "Decode + scale-down to a byte budget; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L208",
+              "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+              "kind" : "symbol",
+              "line" : 219,
+              "note" : "Scale-down with force-decode policy; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L219",
+              "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:policy:"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+              "kind" : "symbol",
+              "line" : 175,
+              "note" : "Thumbnail size calculation; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L175",
+              "symbol" : "SDImageCoderHelper.scaledSizeWithImageSize:scaleSize:preserveAspectRatio:shouldScaleUp:"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoder.h",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "Coder option: decode-time thumbnail pixel size; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L47",
+              "symbol" : "SDImageCoderDecodeThumbnailPixelSize"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoder.h",
+              "kind" : "symbol",
+              "line" : 90,
+              "note" : "Coder option: scale-down byte limit; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L90",
+              "symbol" : "SDImageCoderDecodeScaleDownLimitBytes"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+              "kind" : "symbol",
+              "line" : 208,
+              "note" : "Decode + scale-down to a byte budget; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L208",
+              "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+              "kind" : "symbol",
+              "line" : 219,
+              "note" : "Scale-down with force-decode policy; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L219",
+              "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:policy:"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+              "kind" : "symbol",
+              "line" : 175,
+              "note" : "Thumbnail size calculation; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoderHelper.h#L175",
+              "symbol" : "SDImageCoderHelper.scaledSizeWithImageSize:scaleSize:preserveAspectRatio:shouldScaleUp:"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoder.h",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "Coder option: decode-time thumbnail pixel size; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L47",
+              "symbol" : "SDImageCoderDecodeThumbnailPixelSize"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCoder.h",
+              "kind" : "symbol",
+              "line" : 90,
+              "note" : "Coder option: scale-down byte limit; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCoder.h#L90",
+              "symbol" : "SDImageCoderDecodeScaleDownLimitBytes"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "watchOS declared in Package.swift platform floors.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "sdwebimage",
+      "version" : "5.21.7"
     }
   ]
 }

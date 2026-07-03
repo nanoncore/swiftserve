@@ -300,6 +300,295 @@
       ],
       "slug" : "nuke",
       "version" : "13.0.6"
+    },
+    {
+      "commit" : "2de3a496eaf6df9a1312862adcfd54acd73c39c0",
+      "notes" : "Full cache stack (SDImageCache, SDMemoryCache, SDDiskCache, SDImageCacheConfig) is unconditional in the parsed public headers. Digest truncated to 800 of 1762 decls; implementation files and private headers unparsed.",
+      "package" : "https://github.com/sdwebimage/sdwebimage",
+      "packageName" : "sdwebimage",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageCache.h",
+              "kind" : "symbol",
+              "line" : 81,
+              "note" : "Memory+disk cache facade; unconditional in surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCache.h#L81",
+              "symbol" : "SDImageCache"
+            },
+            {
+              "file" : "SDWebImage/Core/SDMemoryCache.h",
+              "kind" : "symbol",
+              "line" : 74,
+              "note" : "Memory cache class; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDMemoryCache.h#L74",
+              "symbol" : "SDMemoryCache"
+            },
+            {
+              "file" : "SDWebImage/Core/SDDiskCache.h",
+              "kind" : "symbol",
+              "line" : 125,
+              "note" : "Disk cache class; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDDiskCache.h#L125",
+              "symbol" : "SDDiskCache"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCacheConfig.h",
+              "kind" : "symbol",
+              "line" : 36,
+              "note" : "Cache configuration (expiration, cost limits); unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCacheConfig.h#L36",
+              "symbol" : "SDImageCacheConfig"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "iOS declared in Package.swift platform floors.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "SPM manifest declares Apple platforms only (iOS 9, macOS 10.11, tvOS 9, watchOS 2); not evidence of absence. Objective-C library over Foundation/UIKit/AppKit; no linux absence guard in the parsed surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageCache.h",
+              "kind" : "symbol",
+              "line" : 81,
+              "note" : "Memory+disk cache facade; unconditional in surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCache.h#L81",
+              "symbol" : "SDImageCache"
+            },
+            {
+              "file" : "SDWebImage/Core/SDMemoryCache.h",
+              "kind" : "symbol",
+              "line" : 74,
+              "note" : "Memory cache class; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDMemoryCache.h#L74",
+              "symbol" : "SDMemoryCache"
+            },
+            {
+              "file" : "SDWebImage/Core/SDDiskCache.h",
+              "kind" : "symbol",
+              "line" : 125,
+              "note" : "Disk cache class; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDDiskCache.h#L125",
+              "symbol" : "SDDiskCache"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCacheConfig.h",
+              "kind" : "symbol",
+              "line" : 36,
+              "note" : "Cache configuration (expiration, cost limits); unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCacheConfig.h#L36",
+              "symbol" : "SDImageCacheConfig"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageCache.h",
+              "kind" : "symbol",
+              "line" : 81,
+              "note" : "Memory+disk cache facade; unconditional in surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCache.h#L81",
+              "symbol" : "SDImageCache"
+            },
+            {
+              "file" : "SDWebImage/Core/SDMemoryCache.h",
+              "kind" : "symbol",
+              "line" : 74,
+              "note" : "Memory cache class; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDMemoryCache.h#L74",
+              "symbol" : "SDMemoryCache"
+            },
+            {
+              "file" : "SDWebImage/Core/SDDiskCache.h",
+              "kind" : "symbol",
+              "line" : 125,
+              "note" : "Disk cache class; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDDiskCache.h#L125",
+              "symbol" : "SDDiskCache"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCacheConfig.h",
+              "kind" : "symbol",
+              "line" : 36,
+              "note" : "Cache configuration (expiration, cost limits); unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCacheConfig.h#L36",
+              "symbol" : "SDImageCacheConfig"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "macOS declared in Package.swift platform floors.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageCache.h",
+              "kind" : "symbol",
+              "line" : 81,
+              "note" : "Memory+disk cache facade; unconditional in surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCache.h#L81",
+              "symbol" : "SDImageCache"
+            },
+            {
+              "file" : "SDWebImage/Core/SDMemoryCache.h",
+              "kind" : "symbol",
+              "line" : 74,
+              "note" : "Memory cache class; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDMemoryCache.h#L74",
+              "symbol" : "SDMemoryCache"
+            },
+            {
+              "file" : "SDWebImage/Core/SDDiskCache.h",
+              "kind" : "symbol",
+              "line" : 125,
+              "note" : "Disk cache class; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDDiskCache.h#L125",
+              "symbol" : "SDDiskCache"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCacheConfig.h",
+              "kind" : "symbol",
+              "line" : 36,
+              "note" : "Cache configuration (expiration, cost limits); unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCacheConfig.h#L36",
+              "symbol" : "SDImageCacheConfig"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "tvOS declared in Package.swift platform floors.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageCache.h",
+              "kind" : "symbol",
+              "line" : 81,
+              "note" : "Memory+disk cache facade; unconditional in surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCache.h#L81",
+              "symbol" : "SDImageCache"
+            },
+            {
+              "file" : "SDWebImage/Core/SDMemoryCache.h",
+              "kind" : "symbol",
+              "line" : 74,
+              "note" : "Memory cache class; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDMemoryCache.h#L74",
+              "symbol" : "SDMemoryCache"
+            },
+            {
+              "file" : "SDWebImage/Core/SDDiskCache.h",
+              "kind" : "symbol",
+              "line" : 125,
+              "note" : "Disk cache class; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDDiskCache.h#L125",
+              "symbol" : "SDDiskCache"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCacheConfig.h",
+              "kind" : "symbol",
+              "line" : 36,
+              "note" : "Cache configuration (expiration, cost limits); unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCacheConfig.h#L36",
+              "symbol" : "SDImageCacheConfig"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: visionOS supported from 5.19+.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/README.md#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageCache.h",
+              "kind" : "symbol",
+              "line" : 81,
+              "note" : "Memory+disk cache facade; unconditional in surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCache.h#L81",
+              "symbol" : "SDImageCache"
+            },
+            {
+              "file" : "SDWebImage/Core/SDMemoryCache.h",
+              "kind" : "symbol",
+              "line" : 74,
+              "note" : "Memory cache class; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDMemoryCache.h#L74",
+              "symbol" : "SDMemoryCache"
+            },
+            {
+              "file" : "SDWebImage/Core/SDDiskCache.h",
+              "kind" : "symbol",
+              "line" : 125,
+              "note" : "Disk cache class; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDDiskCache.h#L125",
+              "symbol" : "SDDiskCache"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageCacheConfig.h",
+              "kind" : "symbol",
+              "line" : 36,
+              "note" : "Cache configuration (expiration, cost limits); unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageCacheConfig.h#L36",
+              "symbol" : "SDImageCacheConfig"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "watchOS declared in Package.swift platform floors.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "sdwebimage",
+      "version" : "5.21.7"
     }
   ]
 }

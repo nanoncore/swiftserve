@@ -567,7 +567,7 @@
       "id" : "image.async-loading",
       "label" : "Async image loading",
       "packages" : 4,
-      "supported" : 3,
+      "supported" : 4,
       "truthTable" : "/can/image.async-loading/?on=watchOS",
       "verdicts" : [
         {
@@ -581,14 +581,14 @@
           "status" : "supported"
         },
         {
-          "name" : "SDWebImageSwiftUI",
-          "slug" : "sdwebimageswiftui",
+          "name" : "sdwebimage",
+          "slug" : "sdwebimage",
           "status" : "supported"
         },
         {
-          "name" : "SDWebImage",
-          "slug" : "sdwebimage",
-          "status" : "unknown"
+          "name" : "sdwebimageswiftui",
+          "slug" : "sdwebimageswiftui",
+          "status" : "supported"
         }
       ]
     },
@@ -599,8 +599,8 @@
       ],
       "id" : "image.caching",
       "label" : "Image caching",
-      "packages" : 2,
-      "supported" : 2,
+      "packages" : 3,
+      "supported" : 3,
       "truthTable" : "/can/image.caching/?on=watchOS",
       "verdicts" : [
         {
@@ -612,6 +612,11 @@
           "name" : "Nuke",
           "slug" : "nuke",
           "status" : "supported"
+        },
+        {
+          "name" : "sdwebimage",
+          "slug" : "sdwebimage",
+          "status" : "supported"
         }
       ]
     },
@@ -622,13 +627,18 @@
       ],
       "id" : "image.downsampling",
       "label" : "Downsampling / resizing",
-      "packages" : 1,
-      "supported" : 1,
+      "packages" : 2,
+      "supported" : 2,
       "truthTable" : "/can/image.downsampling/?on=watchOS",
       "verdicts" : [
         {
           "name" : "Kingfisher",
           "slug" : "kingfisher",
+          "status" : "supported"
+        },
+        {
+          "name" : "sdwebimage",
+          "slug" : "sdwebimage",
           "status" : "supported"
         }
       ]
@@ -640,17 +650,22 @@
       ],
       "id" : "image.gif",
       "label" : "Animated GIF playback",
-      "packages" : 3,
-      "supported" : 0,
+      "packages" : 4,
+      "supported" : 1,
       "truthTable" : "/can/image.gif/?on=watchOS",
       "verdicts" : [
+        {
+          "name" : "sdwebimage",
+          "slug" : "sdwebimage",
+          "status" : "supported"
+        },
         {
           "name" : "Kingfisher",
           "slug" : "kingfisher",
           "status" : "unsupported"
         },
         {
-          "name" : "SDWebImageSwiftUI",
+          "name" : "sdwebimageswiftui",
           "slug" : "sdwebimageswiftui",
           "status" : "unsupported"
         },
@@ -668,8 +683,8 @@
       ],
       "id" : "image.prefetching",
       "label" : "Prefetching",
-      "packages" : 2,
-      "supported" : 2,
+      "packages" : 3,
+      "supported" : 3,
       "truthTable" : "/can/image.prefetching/?on=watchOS",
       "verdicts" : [
         {
@@ -680,6 +695,29 @@
         {
           "name" : "Nuke",
           "slug" : "nuke",
+          "status" : "supported"
+        },
+        {
+          "name" : "sdwebimage",
+          "slug" : "sdwebimage",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "image.progressive",
+      "label" : "Progressive loading",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/image.progressive/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "sdwebimage",
+          "slug" : "sdwebimage",
           "status" : "supported"
         }
       ]
@@ -709,13 +747,18 @@
       ],
       "id" : "image.webp",
       "label" : "WebP decoding",
-      "packages" : 1,
+      "packages" : 2,
       "supported" : 0,
       "truthTable" : "/can/image.webp/?on=watchOS",
       "verdicts" : [
         {
           "name" : "Kingfisher",
           "slug" : "kingfisher",
+          "status" : "unknown"
+        },
+        {
+          "name" : "sdwebimage",
+          "slug" : "sdwebimage",
           "status" : "unknown"
         }
       ]
@@ -2398,7 +2441,7 @@
           ]
         }
       ],
-      "name" : "SDWebImageSwiftUI",
+      "name" : "sdwebimageswiftui",
       "slug" : "sdwebimageswiftui",
       "version" : "3.1.4"
     },
@@ -2426,8 +2469,8 @@
   "stats" : {
     "conditional" : 0,
     "packages" : 115,
-    "records" : 225,
-    "supported" : 127,
+    "records" : 231,
+    "supported" : 133,
     "unknown" : 86,
     "unsupported" : 12
   },
@@ -2782,11 +2825,11 @@
       "why" : "The core editor guard omits watchOS (with 'iOS'/'macOS' defined only for iOS/macCatalyst/macOS in Package.swift), so the editor view is compiled out on watchOS. The digest resolves this as conditional, not absent, so absence cannot be proven."
     },
     {
-      "capability" : "image.async-loading",
-      "capabilityLabel" : "Async image loading",
-      "name" : "SDWebImage",
+      "capability" : "image.webp",
+      "capabilityLabel" : "WebP decoding",
+      "name" : "sdwebimage",
       "slug" : "sdwebimage",
-      "why" : "SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era"
+      "why" : "Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files."
     },
     {
       "capability" : "audio.playback",

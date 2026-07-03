@@ -90,7 +90,8 @@
       "required": ["swiftFiles", "objcFiles", "declCount", "parseFailures", "manifestUnparsed", "hasBinaryTargets"],
       "properties": {
         "swiftFiles": { "type": "integer" },
-        "objcFiles": { "type": "integer", "description": "unparsed in v1 — an honest blind spot" },
+        "objcFiles": { "type": "integer", "description": "ObjC files NOT parsed (implementations, private headers) — an honest blind spot" },
+        "objcHeadersParsed": { "type": "integer", "description": "public ObjC headers turned into decls; absent/0 on pre-ObjC-pass surfaces" },
         "declCount": { "type": "integer" },
         "parseFailures": { "type": "integer" },
         "manifestUnparsed": { "type": "boolean" },

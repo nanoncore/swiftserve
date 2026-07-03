@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The state of visionOS — SwiftServe</title>
-  <meta name="description" content="What the Swift ecosystem actually serves on visionOS: 173 supported verdicts, 29 proven fences with compiler receipts, 23 honest unknowns." />
+  <meta name="description" content="What the Swift ecosystem actually serves on visionOS: 179 supported verdicts, 29 proven fences with compiler receipts, 23 honest unknowns." />
   <link rel="icon" href="/swiftee/swiftee-idle.png" />
   <link rel="stylesheet" href="/styles.css?v=1t66hzl0byk2g" />
   <script src="/site.js?v=1t66hzl0byk2g" defer></script>
@@ -32,11 +32,11 @@
       every count below is derived from the records, and every verdict carries its receipt.</p>
     </section>
     <section class="stat-tiles" aria-label="visionOS verdict counts">
-      <div class="stat-tile stat-good"><span class="stat-num">173</span><span class="stat-label">serve it</span></div>
+      <div class="stat-tile stat-good"><span class="stat-num">179</span><span class="stat-label">serve it</span></div>
       <div class="stat-tile stat-low"><span class="stat-num">29</span><span class="stat-label">fenced out — proven</span></div>
       <div class="stat-tile stat-unknown"><span class="stat-num">23</span><span class="stat-label">honest unknowns</span></div>
     </section>
-    <p class="stat-caption">across 225 records · 115 packages — counted at generation time, never by hand</p>
+    <p class="stat-caption">across 231 records · 115 packages — counted at generation time, never by hand</p>
     <div class="xr-slot" data-xr hidden></div>
     <section class="on-section">
       <h2>Built into the OS</h2>
@@ -253,31 +253,37 @@
     <li>
       <a href="/can/image.async-loading/?on=visionOS">
         <span class="menu-cap">Async image loading</span>
-        <span class="on-cap-count">3 of 4 packages</span>
+        <span class="on-cap-count">4 of 4 packages</span>
       </a>
     </li>
     <li>
       <a href="/can/image.caching/?on=visionOS">
         <span class="menu-cap">Image caching</span>
-        <span class="on-cap-count">2 of 2 packages</span>
+        <span class="on-cap-count">3 of 3 packages</span>
       </a>
     </li>
     <li>
       <a href="/can/image.downsampling/?on=visionOS">
         <span class="menu-cap">Downsampling / resizing</span>
-        <span class="on-cap-count">1 of 1 package</span>
+        <span class="on-cap-count">2 of 2 packages</span>
       </a>
     </li>
     <li>
       <a href="/can/image.gif/?on=visionOS">
         <span class="menu-cap">Animated GIF playback</span>
-        <span class="on-cap-count">3 of 3 packages</span>
+        <span class="on-cap-count">4 of 4 packages</span>
       </a>
     </li>
     <li>
       <a href="/can/image.prefetching/?on=visionOS">
         <span class="menu-cap">Prefetching</span>
-        <span class="on-cap-count">2 of 2 packages</span>
+        <span class="on-cap-count">3 of 3 packages</span>
+      </a>
+    </li>
+    <li>
+      <a href="/can/image.progressive/?on=visionOS">
+        <span class="menu-cap">Progressive loading</span>
+        <span class="on-cap-count">1 of 1 package</span>
       </a>
     </li>
     <li>
@@ -289,7 +295,7 @@
     <li>
       <a href="/can/image.webp/?on=visionOS">
         <span class="menu-cap">WebP decoding</span>
-        <span class="on-cap-count">0 of 1 package</span>
+        <span class="on-cap-count">0 of 2 packages</span>
       </a>
     </li>
     </ul>
@@ -967,9 +973,9 @@
       <p class="unknown-why">README 'Fully Encrypted' section demonstrates Realm.Configuration(encryptionKey: key) with a 64-byte key ('Data can be encrypted in-flight and at-rest'). README does not name visionOS.</p>
     </li>
     <li>
-      <p><a href="/package/sdwebimage/">SDWebImage</a>
-      — <a href="/can/image.async-loading/?on=visionOS">Async image loading</a></p>
-      <p class="unknown-why">SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era</p>
+      <p><a href="/package/sdwebimage/">sdwebimage</a>
+      — <a href="/can/image.webp/?on=visionOS">WebP decoding</a></p>
+      <p class="unknown-why">Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files.</p>
     </li>
     <li>
       <p><a href="/package/spfk-audio-hardware/">SPFKAudioHardware</a>
@@ -1020,7 +1026,7 @@
     </section>
   </main>
   <footer class="site-footer">
-    <p>Served fresh · 80 capabilities × 115 packages · 225 records · data v1</p>
+    <p>Served fresh · 81 capabilities × 115 packages · 231 records · data v1</p>
     <p>Every verdict links to the exact source line that decides it. <a href="/about/">How it works</a></p>
     <p>Made refreshingly cool from Paris, France</p>
   </footer>

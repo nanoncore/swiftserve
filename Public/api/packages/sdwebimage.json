@@ -4,47 +4,77 @@
       "id" : "image.async-loading",
       "label" : "Async image loading"
     },
-    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledAt" : "2026-07-03T16:00:00Z",
     "labeledBy" : "claude-code-session",
-    "notes" : "The ObjC-era giant. Verdicts wait for the ObjC extractor; use SDWebImageSwiftUI for a Swift-parsed surface.",
+    "notes" : "SDWebImageManager/SDWebImageDownloader are unconditional in the parsed public headers. The classic UIImageView+WebCache.h category did not make the truncated digest, so view-convenience evidence rides on the SDAnimatedImageView category (opaque SD_UIKIT || SD_MAC conditional). Digest truncated to 800 of 1762 decls; implementation files and private headers unparsed.",
     "package" : {
       "aliases" : [
-        "SDWebImage/SDWebImage"
+
       ],
       "canonicalURL" : "https://github.com/sdwebimage/sdwebimage",
       "commit" : "2de3a496eaf6df9a1312862adcfd54acd73c39c0",
       "firstParty" : false,
-      "name" : "SDWebImage",
-      "surfaceDigest" : "fnv1a64:ef3970fcce22bb85",
+      "name" : "sdwebimage",
+      "surfaceDigest" : "fnv1a64:caf1d34d62d71a5b",
       "version" : "5.21.7"
     },
     "platforms" : {
       "iOS" : {
-        "confidence" : 0.3,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
-            "file" : null,
-            "kind" : "readme",
-            "line" : null,
-            "note" : "SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era",
+            "file" : "SDWebImage/Core/SDWebImageManager.h",
+            "kind" : "symbol",
+            "line" : 101,
+            "note" : "Central async load+cache coordinator; unconditional in surface (no platform gaps).",
+            "package" : null,
+            "symbol" : "SDWebImageManager"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImageDownloader.h",
+            "kind" : "symbol",
+            "line" : 148,
+            "note" : "Dedicated async downloader; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDWebImageDownloader"
+          },
+          {
+            "availability" : null,
+            "condition" : "SD_UIKIT || SD_MAC",
+            "file" : "SDWebImage/Core/SDAnimatedImageView+WebCache.h",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : "View-layer URL-loading category; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+            "package" : null,
+            "symbol" : "SDAnimatedImageView.sd_setImageWithURL:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "iOS declared in Package.swift platform floors.",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "linux" : {
-        "confidence" : 0.1,
+        "confidence" : 0.25,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
-            "file" : null,
-            "kind" : "readme",
-            "line" : null,
-            "note" : "Apple-only",
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "SPM manifest declares Apple platforms only (iOS 9, macOS 10.11, tvOS 9, watchOS 2); not evidence of absence. Objective-C library over Foundation/UIKit/AppKit; no linux absence guard in the parsed surface.",
             "package" : null,
             "symbol" : null
           }
@@ -52,15 +82,2123 @@
         "status" : "unknown"
       },
       "macCatalyst" : {
-        "confidence" : 0.2,
+        "confidence" : 0.8,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
-            "file" : null,
+            "file" : "SDWebImage/Core/SDWebImageManager.h",
+            "kind" : "symbol",
+            "line" : 101,
+            "note" : "Central async load+cache coordinator; unconditional in surface (no platform gaps).",
+            "package" : null,
+            "symbol" : "SDWebImageManager"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImageDownloader.h",
+            "kind" : "symbol",
+            "line" : 148,
+            "note" : "Dedicated async downloader; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDWebImageDownloader"
+          },
+          {
+            "availability" : null,
+            "condition" : "SD_UIKIT || SD_MAC",
+            "file" : "SDWebImage/Core/SDAnimatedImageView+WebCache.h",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : "View-layer URL-loading category; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+            "package" : null,
+            "symbol" : "SDAnimatedImageView.sd_setImageWithURL:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
             "kind" : "readme",
-            "line" : null,
-            "note" : "SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era",
+            "line" : 0,
+            "note" : "README badge: 'Mac Catalyst compatible'; requirements list macOS 10.15 for Catalyst.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImageManager.h",
+            "kind" : "symbol",
+            "line" : 101,
+            "note" : "Central async load+cache coordinator; unconditional in surface (no platform gaps).",
+            "package" : null,
+            "symbol" : "SDWebImageManager"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImageDownloader.h",
+            "kind" : "symbol",
+            "line" : 148,
+            "note" : "Dedicated async downloader; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDWebImageDownloader"
+          },
+          {
+            "availability" : null,
+            "condition" : "SD_UIKIT || SD_MAC",
+            "file" : "SDWebImage/Core/SDAnimatedImageView+WebCache.h",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : "View-layer URL-loading category; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+            "package" : null,
+            "symbol" : "SDAnimatedImageView.sd_setImageWithURL:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "macOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImageManager.h",
+            "kind" : "symbol",
+            "line" : 101,
+            "note" : "Central async load+cache coordinator; unconditional in surface (no platform gaps).",
+            "package" : null,
+            "symbol" : "SDWebImageManager"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImageDownloader.h",
+            "kind" : "symbol",
+            "line" : 148,
+            "note" : "Dedicated async downloader; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDWebImageDownloader"
+          },
+          {
+            "availability" : null,
+            "condition" : "SD_UIKIT || SD_MAC",
+            "file" : "SDWebImage/Core/SDAnimatedImageView+WebCache.h",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : "View-layer URL-loading category; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+            "package" : null,
+            "symbol" : "SDAnimatedImageView.sd_setImageWithURL:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "tvOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImageManager.h",
+            "kind" : "symbol",
+            "line" : 101,
+            "note" : "Central async load+cache coordinator; unconditional in surface (no platform gaps).",
+            "package" : null,
+            "symbol" : "SDWebImageManager"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImageDownloader.h",
+            "kind" : "symbol",
+            "line" : 148,
+            "note" : "Dedicated async downloader; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDWebImageDownloader"
+          },
+          {
+            "availability" : null,
+            "condition" : "SD_UIKIT || SD_MAC",
+            "file" : "SDWebImage/Core/SDAnimatedImageView+WebCache.h",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : "View-layer URL-loading category; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+            "package" : null,
+            "symbol" : "SDAnimatedImageView.sd_setImageWithURL:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README: 'From 5.19+, SDWebImage supports visionOS on all Package Managers.'",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImageManager.h",
+            "kind" : "symbol",
+            "line" : 101,
+            "note" : "Central async load+cache coordinator; unconditional in surface (no platform gaps).",
+            "package" : null,
+            "symbol" : "SDWebImageManager"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImageDownloader.h",
+            "kind" : "symbol",
+            "line" : 148,
+            "note" : "Dedicated async downloader; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDWebImageDownloader"
+          },
+          {
+            "availability" : null,
+            "condition" : "SD_UIKIT || SD_MAC",
+            "file" : "SDWebImage/Core/SDAnimatedImageView+WebCache.h",
+            "kind" : "symbol",
+            "line" : 27,
+            "note" : "View-layer URL-loading category; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+            "package" : null,
+            "symbol" : "SDAnimatedImageView.sd_setImageWithURL:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "watchOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "image.caching",
+      "label" : "Image caching"
+    },
+    "labeledAt" : "2026-07-03T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Full cache stack (SDImageCache, SDMemoryCache, SDDiskCache, SDImageCacheConfig) is unconditional in the parsed public headers. Digest truncated to 800 of 1762 decls; implementation files and private headers unparsed.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/sdwebimage/sdwebimage",
+      "commit" : "2de3a496eaf6df9a1312862adcfd54acd73c39c0",
+      "firstParty" : false,
+      "name" : "sdwebimage",
+      "surfaceDigest" : "fnv1a64:caf1d34d62d71a5b",
+      "version" : "5.21.7"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCache.h",
+            "kind" : "symbol",
+            "line" : 81,
+            "note" : "Memory+disk cache facade; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDImageCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDMemoryCache.h",
+            "kind" : "symbol",
+            "line" : 74,
+            "note" : "Memory cache class; unconditional.",
+            "package" : null,
+            "symbol" : "SDMemoryCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDDiskCache.h",
+            "kind" : "symbol",
+            "line" : 125,
+            "note" : "Disk cache class; unconditional.",
+            "package" : null,
+            "symbol" : "SDDiskCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCacheConfig.h",
+            "kind" : "symbol",
+            "line" : 36,
+            "note" : "Cache configuration (expiration, cost limits); unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCacheConfig"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "iOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "SPM manifest declares Apple platforms only (iOS 9, macOS 10.11, tvOS 9, watchOS 2); not evidence of absence. Objective-C library over Foundation/UIKit/AppKit; no linux absence guard in the parsed surface.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCache.h",
+            "kind" : "symbol",
+            "line" : 81,
+            "note" : "Memory+disk cache facade; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDImageCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDMemoryCache.h",
+            "kind" : "symbol",
+            "line" : 74,
+            "note" : "Memory cache class; unconditional.",
+            "package" : null,
+            "symbol" : "SDMemoryCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDDiskCache.h",
+            "kind" : "symbol",
+            "line" : 125,
+            "note" : "Disk cache class; unconditional.",
+            "package" : null,
+            "symbol" : "SDDiskCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCacheConfig.h",
+            "kind" : "symbol",
+            "line" : 36,
+            "note" : "Cache configuration (expiration, cost limits); unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCacheConfig"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCache.h",
+            "kind" : "symbol",
+            "line" : 81,
+            "note" : "Memory+disk cache facade; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDImageCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDMemoryCache.h",
+            "kind" : "symbol",
+            "line" : 74,
+            "note" : "Memory cache class; unconditional.",
+            "package" : null,
+            "symbol" : "SDMemoryCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDDiskCache.h",
+            "kind" : "symbol",
+            "line" : 125,
+            "note" : "Disk cache class; unconditional.",
+            "package" : null,
+            "symbol" : "SDDiskCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCacheConfig.h",
+            "kind" : "symbol",
+            "line" : 36,
+            "note" : "Cache configuration (expiration, cost limits); unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCacheConfig"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "macOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCache.h",
+            "kind" : "symbol",
+            "line" : 81,
+            "note" : "Memory+disk cache facade; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDImageCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDMemoryCache.h",
+            "kind" : "symbol",
+            "line" : 74,
+            "note" : "Memory cache class; unconditional.",
+            "package" : null,
+            "symbol" : "SDMemoryCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDDiskCache.h",
+            "kind" : "symbol",
+            "line" : 125,
+            "note" : "Disk cache class; unconditional.",
+            "package" : null,
+            "symbol" : "SDDiskCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCacheConfig.h",
+            "kind" : "symbol",
+            "line" : 36,
+            "note" : "Cache configuration (expiration, cost limits); unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCacheConfig"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "tvOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCache.h",
+            "kind" : "symbol",
+            "line" : 81,
+            "note" : "Memory+disk cache facade; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDImageCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDMemoryCache.h",
+            "kind" : "symbol",
+            "line" : 74,
+            "note" : "Memory cache class; unconditional.",
+            "package" : null,
+            "symbol" : "SDMemoryCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDDiskCache.h",
+            "kind" : "symbol",
+            "line" : 125,
+            "note" : "Disk cache class; unconditional.",
+            "package" : null,
+            "symbol" : "SDDiskCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCacheConfig.h",
+            "kind" : "symbol",
+            "line" : 36,
+            "note" : "Cache configuration (expiration, cost limits); unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCacheConfig"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README: visionOS supported from 5.19+.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCache.h",
+            "kind" : "symbol",
+            "line" : 81,
+            "note" : "Memory+disk cache facade; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDImageCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDMemoryCache.h",
+            "kind" : "symbol",
+            "line" : 74,
+            "note" : "Memory cache class; unconditional.",
+            "package" : null,
+            "symbol" : "SDMemoryCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDDiskCache.h",
+            "kind" : "symbol",
+            "line" : 125,
+            "note" : "Disk cache class; unconditional.",
+            "package" : null,
+            "symbol" : "SDDiskCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCacheConfig.h",
+            "kind" : "symbol",
+            "line" : 36,
+            "note" : "Cache configuration (expiration, cost limits); unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCacheConfig"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "watchOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "image.downsampling",
+      "label" : "Downsampling / resizing"
+    },
+    "labeledAt" : "2026-07-03T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Thumbnail decoding options and decode-and-scale-down helpers are unconditional in the parsed public headers. Digest truncated to 800 of 1762 decls; implementation files and private headers unparsed.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/sdwebimage/sdwebimage",
+      "commit" : "2de3a496eaf6df9a1312862adcfd54acd73c39c0",
+      "firstParty" : false,
+      "name" : "sdwebimage",
+      "surfaceDigest" : "fnv1a64:caf1d34d62d71a5b",
+      "version" : "5.21.7"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+            "kind" : "symbol",
+            "line" : 208,
+            "note" : "Decode + scale-down to a byte budget; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+            "kind" : "symbol",
+            "line" : 219,
+            "note" : "Scale-down with force-decode policy; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:policy:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+            "kind" : "symbol",
+            "line" : 175,
+            "note" : "Thumbnail size calculation; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderHelper.scaledSizeWithImageSize:scaleSize:preserveAspectRatio:shouldScaleUp:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "Coder option: decode-time thumbnail pixel size; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderDecodeThumbnailPixelSize"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 90,
+            "note" : "Coder option: scale-down byte limit; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderDecodeScaleDownLimitBytes"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "iOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "SPM manifest declares Apple platforms only (iOS 9, macOS 10.11, tvOS 9, watchOS 2); not evidence of absence. Objective-C library over Foundation/UIKit/AppKit; no linux absence guard in the parsed surface.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+            "kind" : "symbol",
+            "line" : 208,
+            "note" : "Decode + scale-down to a byte budget; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+            "kind" : "symbol",
+            "line" : 219,
+            "note" : "Scale-down with force-decode policy; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:policy:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+            "kind" : "symbol",
+            "line" : 175,
+            "note" : "Thumbnail size calculation; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderHelper.scaledSizeWithImageSize:scaleSize:preserveAspectRatio:shouldScaleUp:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "Coder option: decode-time thumbnail pixel size; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderDecodeThumbnailPixelSize"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 90,
+            "note" : "Coder option: scale-down byte limit; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderDecodeScaleDownLimitBytes"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+            "kind" : "symbol",
+            "line" : 208,
+            "note" : "Decode + scale-down to a byte budget; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+            "kind" : "symbol",
+            "line" : 219,
+            "note" : "Scale-down with force-decode policy; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:policy:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+            "kind" : "symbol",
+            "line" : 175,
+            "note" : "Thumbnail size calculation; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderHelper.scaledSizeWithImageSize:scaleSize:preserveAspectRatio:shouldScaleUp:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "Coder option: decode-time thumbnail pixel size; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderDecodeThumbnailPixelSize"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 90,
+            "note" : "Coder option: scale-down byte limit; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderDecodeScaleDownLimitBytes"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "macOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+            "kind" : "symbol",
+            "line" : 208,
+            "note" : "Decode + scale-down to a byte budget; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+            "kind" : "symbol",
+            "line" : 219,
+            "note" : "Scale-down with force-decode policy; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:policy:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+            "kind" : "symbol",
+            "line" : 175,
+            "note" : "Thumbnail size calculation; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderHelper.scaledSizeWithImageSize:scaleSize:preserveAspectRatio:shouldScaleUp:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "Coder option: decode-time thumbnail pixel size; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderDecodeThumbnailPixelSize"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 90,
+            "note" : "Coder option: scale-down byte limit; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderDecodeScaleDownLimitBytes"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "tvOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+            "kind" : "symbol",
+            "line" : 208,
+            "note" : "Decode + scale-down to a byte budget; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+            "kind" : "symbol",
+            "line" : 219,
+            "note" : "Scale-down with force-decode policy; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:policy:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+            "kind" : "symbol",
+            "line" : 175,
+            "note" : "Thumbnail size calculation; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderHelper.scaledSizeWithImageSize:scaleSize:preserveAspectRatio:shouldScaleUp:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "Coder option: decode-time thumbnail pixel size; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderDecodeThumbnailPixelSize"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 90,
+            "note" : "Coder option: scale-down byte limit; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderDecodeScaleDownLimitBytes"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+            "kind" : "symbol",
+            "line" : 208,
+            "note" : "Decode + scale-down to a byte budget; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+            "kind" : "symbol",
+            "line" : 219,
+            "note" : "Scale-down with force-decode policy; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderHelper.decodedAndScaledDownImageWithImage:limitBytes:policy:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoderHelper.h",
+            "kind" : "symbol",
+            "line" : 175,
+            "note" : "Thumbnail size calculation; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderHelper.scaledSizeWithImageSize:scaleSize:preserveAspectRatio:shouldScaleUp:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "Coder option: decode-time thumbnail pixel size; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderDecodeThumbnailPixelSize"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 90,
+            "note" : "Coder option: scale-down byte limit; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageCoderDecodeScaleDownLimitBytes"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "watchOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "image.gif",
+      "label" : "Animated GIF playback"
+    },
+    "labeledAt" : "2026-07-03T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "GIF/APNG decoding (SDImageGIFCoder, SDImageAPNGCoder) and the frame player (SDAnimatedImagePlayer) are unconditional; the SDAnimatedImageView widget is conditionally compiled behind the opaque SD_UIKIT || SD_MAC package macro, so on watchOS the claim rests on decode+player, not the view. Digest truncated to 800 of 1762 decls; implementation files and private headers unparsed.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/sdwebimage/sdwebimage",
+      "commit" : "2de3a496eaf6df9a1312862adcfd54acd73c39c0",
+      "firstParty" : false,
+      "name" : "sdwebimage",
+      "surfaceDigest" : "fnv1a64:caf1d34d62d71a5b",
+      "version" : "5.21.7"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageGIFCoder.h",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : "GIF decode/encode coder (registered by default); unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDImageGIFCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageAPNGCoder.h",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "APNG animated coder; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageAPNGCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDAnimatedImagePlayer.h",
+            "kind" : "symbol",
+            "line" : 34,
+            "note" : "Frame-driving animation player; unconditional.",
+            "package" : null,
+            "symbol" : "SDAnimatedImagePlayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDAnimatedImage.h",
+            "kind" : "symbol",
+            "line" : 16,
+            "note" : "Animated image protocol; unconditional.",
+            "package" : null,
+            "symbol" : "SDAnimatedImage"
+          },
+          {
+            "availability" : null,
+            "condition" : "SD_UIKIT || SD_MAC",
+            "file" : "SDWebImage/Core/SDAnimatedImageView.h",
+            "kind" : "symbol",
+            "line" : 24,
+            "note" : "Animated view widget; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+            "package" : null,
+            "symbol" : "SDAnimatedImageView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "iOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "SPM manifest declares Apple platforms only (iOS 9, macOS 10.11, tvOS 9, watchOS 2); not evidence of absence. Objective-C library over Foundation/UIKit/AppKit; no linux absence guard in the parsed surface.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageGIFCoder.h",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : "GIF decode/encode coder (registered by default); unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDImageGIFCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageAPNGCoder.h",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "APNG animated coder; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageAPNGCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDAnimatedImagePlayer.h",
+            "kind" : "symbol",
+            "line" : 34,
+            "note" : "Frame-driving animation player; unconditional.",
+            "package" : null,
+            "symbol" : "SDAnimatedImagePlayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDAnimatedImage.h",
+            "kind" : "symbol",
+            "line" : 16,
+            "note" : "Animated image protocol; unconditional.",
+            "package" : null,
+            "symbol" : "SDAnimatedImage"
+          },
+          {
+            "availability" : null,
+            "condition" : "SD_UIKIT || SD_MAC",
+            "file" : "SDWebImage/Core/SDAnimatedImageView.h",
+            "kind" : "symbol",
+            "line" : 24,
+            "note" : "Animated view widget; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+            "package" : null,
+            "symbol" : "SDAnimatedImageView"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageGIFCoder.h",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : "GIF decode/encode coder (registered by default); unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDImageGIFCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageAPNGCoder.h",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "APNG animated coder; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageAPNGCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDAnimatedImagePlayer.h",
+            "kind" : "symbol",
+            "line" : 34,
+            "note" : "Frame-driving animation player; unconditional.",
+            "package" : null,
+            "symbol" : "SDAnimatedImagePlayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDAnimatedImage.h",
+            "kind" : "symbol",
+            "line" : 16,
+            "note" : "Animated image protocol; unconditional.",
+            "package" : null,
+            "symbol" : "SDAnimatedImage"
+          },
+          {
+            "availability" : null,
+            "condition" : "SD_UIKIT || SD_MAC",
+            "file" : "SDWebImage/Core/SDAnimatedImageView.h",
+            "kind" : "symbol",
+            "line" : 24,
+            "note" : "Animated view widget; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+            "package" : null,
+            "symbol" : "SDAnimatedImageView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "macOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageGIFCoder.h",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : "GIF decode/encode coder (registered by default); unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDImageGIFCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageAPNGCoder.h",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "APNG animated coder; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageAPNGCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDAnimatedImagePlayer.h",
+            "kind" : "symbol",
+            "line" : 34,
+            "note" : "Frame-driving animation player; unconditional.",
+            "package" : null,
+            "symbol" : "SDAnimatedImagePlayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDAnimatedImage.h",
+            "kind" : "symbol",
+            "line" : 16,
+            "note" : "Animated image protocol; unconditional.",
+            "package" : null,
+            "symbol" : "SDAnimatedImage"
+          },
+          {
+            "availability" : null,
+            "condition" : "SD_UIKIT || SD_MAC",
+            "file" : "SDWebImage/Core/SDAnimatedImageView.h",
+            "kind" : "symbol",
+            "line" : 24,
+            "note" : "Animated view widget; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+            "package" : null,
+            "symbol" : "SDAnimatedImageView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "tvOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageGIFCoder.h",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : "GIF decode/encode coder (registered by default); unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDImageGIFCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageAPNGCoder.h",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "APNG animated coder; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageAPNGCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDAnimatedImagePlayer.h",
+            "kind" : "symbol",
+            "line" : 34,
+            "note" : "Frame-driving animation player; unconditional.",
+            "package" : null,
+            "symbol" : "SDAnimatedImagePlayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDAnimatedImage.h",
+            "kind" : "symbol",
+            "line" : 16,
+            "note" : "Animated image protocol; unconditional.",
+            "package" : null,
+            "symbol" : "SDAnimatedImage"
+          },
+          {
+            "availability" : null,
+            "condition" : "SD_UIKIT || SD_MAC",
+            "file" : "SDWebImage/Core/SDAnimatedImageView.h",
+            "kind" : "symbol",
+            "line" : 24,
+            "note" : "Animated view widget; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+            "package" : null,
+            "symbol" : "SDAnimatedImageView"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageGIFCoder.h",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : "GIF decode/encode coder (registered by default); unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDImageGIFCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageAPNGCoder.h",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "APNG animated coder; unconditional.",
+            "package" : null,
+            "symbol" : "SDImageAPNGCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDAnimatedImagePlayer.h",
+            "kind" : "symbol",
+            "line" : 34,
+            "note" : "Frame-driving animation player; unconditional.",
+            "package" : null,
+            "symbol" : "SDAnimatedImagePlayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDAnimatedImage.h",
+            "kind" : "symbol",
+            "line" : 16,
+            "note" : "Animated image protocol; unconditional.",
+            "package" : null,
+            "symbol" : "SDAnimatedImage"
+          },
+          {
+            "availability" : null,
+            "condition" : "SD_UIKIT || SD_MAC",
+            "file" : "SDWebImage/Core/SDAnimatedImageView.h",
+            "kind" : "symbol",
+            "line" : 24,
+            "note" : "Animated view widget; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+            "package" : null,
+            "symbol" : "SDAnimatedImageView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "watchOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "image.prefetching",
+      "label" : "Prefetching"
+    },
+    "labeledAt" : "2026-07-03T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "SDWebImagePrefetcher and its token/delegate are unconditional in the parsed public headers. Digest truncated to 800 of 1762 decls; implementation files and private headers unparsed.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/sdwebimage/sdwebimage",
+      "commit" : "2de3a496eaf6df9a1312862adcfd54acd73c39c0",
+      "firstParty" : false,
+      "name" : "sdwebimage",
+      "surfaceDigest" : "fnv1a64:caf1d34d62d71a5b",
+      "version" : "5.21.7"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImagePrefetcher.h",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : "Batch URL prefetcher; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDWebImagePrefetcher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImagePrefetcher.h",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : "Cancellable prefetch token; unconditional.",
+            "package" : null,
+            "symbol" : "SDWebImagePrefetchToken"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "iOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "SPM manifest declares Apple platforms only (iOS 9, macOS 10.11, tvOS 9, watchOS 2); not evidence of absence. Objective-C library over Foundation/UIKit/AppKit; no linux absence guard in the parsed surface.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImagePrefetcher.h",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : "Batch URL prefetcher; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDWebImagePrefetcher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImagePrefetcher.h",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : "Cancellable prefetch token; unconditional.",
+            "package" : null,
+            "symbol" : "SDWebImagePrefetchToken"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImagePrefetcher.h",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : "Batch URL prefetcher; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDWebImagePrefetcher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImagePrefetcher.h",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : "Cancellable prefetch token; unconditional.",
+            "package" : null,
+            "symbol" : "SDWebImagePrefetchToken"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "macOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImagePrefetcher.h",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : "Batch URL prefetcher; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDWebImagePrefetcher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImagePrefetcher.h",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : "Cancellable prefetch token; unconditional.",
+            "package" : null,
+            "symbol" : "SDWebImagePrefetchToken"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "tvOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImagePrefetcher.h",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : "Batch URL prefetcher; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDWebImagePrefetcher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImagePrefetcher.h",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : "Cancellable prefetch token; unconditional.",
+            "package" : null,
+            "symbol" : "SDWebImagePrefetchToken"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImagePrefetcher.h",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : "Batch URL prefetcher; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDWebImagePrefetcher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDWebImagePrefetcher.h",
+            "kind" : "symbol",
+            "line" : 17,
+            "note" : "Cancellable prefetch token; unconditional.",
+            "package" : null,
+            "symbol" : "SDWebImagePrefetchToken"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "watchOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "image.progressive",
+      "label" : "Progressive loading"
+    },
+    "labeledAt" : "2026-07-03T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Progressive machinery is protocol-level in this surface (SDProgressiveImageCoder with full incremental-decode method set); concrete conformances live in implementation files outside the parsed surface. The SDWebImageProgressiveLoad option is a member of the SDWebImageOptions enum whose individual cases are not itemized in the digest. Digest truncated to 800 of 1762 decls; implementation files and private headers unparsed.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/sdwebimage/sdwebimage",
+      "commit" : "2de3a496eaf6df9a1312862adcfd54acd73c39c0",
+      "firstParty" : false,
+      "name" : "sdwebimage",
+      "surfaceDigest" : "fnv1a64:caf1d34d62d71a5b",
+      "version" : "5.21.7"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 243,
+            "note" : "Incremental/progressive decoding protocol; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDProgressiveImageCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 269,
+            "note" : "Feed partial download data incrementally.",
+            "package" : null,
+            "symbol" : "SDProgressiveImageCoder.updateIncrementalData:finished:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 278,
+            "note" : "Produce the partially-decoded image mid-download.",
+            "package" : null,
+            "symbol" : "SDProgressiveImageCoder.incrementalDecodedImageWithOptions:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README feature list: 'Progressive image loading (including animated image, like GIF showing in Web browser)'.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "iOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "SPM manifest declares Apple platforms only (iOS 9, macOS 10.11, tvOS 9, watchOS 2); not evidence of absence. Objective-C library over Foundation/UIKit/AppKit; no linux absence guard in the parsed surface.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 243,
+            "note" : "Incremental/progressive decoding protocol; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDProgressiveImageCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 269,
+            "note" : "Feed partial download data incrementally.",
+            "package" : null,
+            "symbol" : "SDProgressiveImageCoder.updateIncrementalData:finished:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 278,
+            "note" : "Produce the partially-decoded image mid-download.",
+            "package" : null,
+            "symbol" : "SDProgressiveImageCoder.incrementalDecodedImageWithOptions:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README feature list: 'Progressive image loading (including animated image, like GIF showing in Web browser)'.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 243,
+            "note" : "Incremental/progressive decoding protocol; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDProgressiveImageCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 269,
+            "note" : "Feed partial download data incrementally.",
+            "package" : null,
+            "symbol" : "SDProgressiveImageCoder.updateIncrementalData:finished:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 278,
+            "note" : "Produce the partially-decoded image mid-download.",
+            "package" : null,
+            "symbol" : "SDProgressiveImageCoder.incrementalDecodedImageWithOptions:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README feature list: 'Progressive image loading (including animated image, like GIF showing in Web browser)'.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "macOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 243,
+            "note" : "Incremental/progressive decoding protocol; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDProgressiveImageCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 269,
+            "note" : "Feed partial download data incrementally.",
+            "package" : null,
+            "symbol" : "SDProgressiveImageCoder.updateIncrementalData:finished:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 278,
+            "note" : "Produce the partially-decoded image mid-download.",
+            "package" : null,
+            "symbol" : "SDProgressiveImageCoder.incrementalDecodedImageWithOptions:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README feature list: 'Progressive image loading (including animated image, like GIF showing in Web browser)'.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "tvOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 243,
+            "note" : "Incremental/progressive decoding protocol; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDProgressiveImageCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 269,
+            "note" : "Feed partial download data incrementally.",
+            "package" : null,
+            "symbol" : "SDProgressiveImageCoder.updateIncrementalData:finished:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 278,
+            "note" : "Produce the partially-decoded image mid-download.",
+            "package" : null,
+            "symbol" : "SDProgressiveImageCoder.incrementalDecodedImageWithOptions:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README feature list: 'Progressive image loading (including animated image, like GIF showing in Web browser)'.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 243,
+            "note" : "Incremental/progressive decoding protocol; unconditional in surface.",
+            "package" : null,
+            "symbol" : "SDProgressiveImageCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 269,
+            "note" : "Feed partial download data incrementally.",
+            "package" : null,
+            "symbol" : "SDProgressiveImageCoder.updateIncrementalData:finished:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageCoder.h",
+            "kind" : "symbol",
+            "line" : 278,
+            "note" : "Produce the partially-decoded image mid-download.",
+            "package" : null,
+            "symbol" : "SDProgressiveImageCoder.incrementalDecodedImageWithOptions:"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README feature list: 'Progressive image loading (including animated image, like GIF showing in Web browser)'.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "watchOS declared in Package.swift platform floors.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "image.webp",
+      "label" : "WebP decoding"
+    },
+    "labeledAt" : "2026-07-03T16:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Honest unknown by design. The SDImageFormatWebP typed-enum constant exists in the full 1762-decl surface but fell outside this truncated 800-decl digest, so it cannot be anchored; the enum constant alone would not prove decoding anyway. In-core WebP is limited to the Apple-ImageIO AWebP path on newer OSes; complete WebP decoding (and older-OS support) ships as the companion package https://github.com/SDWebImage/SDWebImageWebPCoder (Kingfisher precedent). Digest truncated to 800 of 1762 decls; implementation files and private headers unparsed.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/sdwebimage/sdwebimage",
+      "commit" : "2de3a496eaf6df9a1312862adcfd54acd73c39c0",
+      "firstParty" : false,
+      "name" : "sdwebimage",
+      "surfaceDigest" : "fnv1a64:caf1d34d62d71a5b",
+      "version" : "5.21.7"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.4,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageAWebPCoder.h",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : "Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files.",
+            "package" : null,
+            "symbol" : "SDImageAWebPCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README: 'WebP format from iOS 14/macOS 11.0 via SDWebImageAWebPCoder. For lower firmware, use coder plugin SDWebImageWebPCoder.'",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "linux" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "SPM manifest declares Apple platforms only (iOS 9, macOS 10.11, tvOS 9, watchOS 2); not evidence of absence. Objective-C library over Foundation/UIKit/AppKit; no linux absence guard in the parsed surface.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.4,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SDWebImage/Core/SDImageAWebPCoder.h",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : "Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files.",
+            "package" : null,
+            "symbol" : "SDImageAWebPCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README: 'WebP format from iOS 14/macOS 11.0 via SDWebImageAWebPCoder. For lower firmware, use coder plugin SDWebImageWebPCoder.'",
             "package" : null,
             "symbol" : null
           }
@@ -68,15 +2206,25 @@
         "status" : "unknown"
       },
       "macOS" : {
-        "confidence" : 0.3,
+        "confidence" : 0.4,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
-            "file" : null,
+            "file" : "SDWebImage/Core/SDImageAWebPCoder.h",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : "Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files.",
+            "package" : null,
+            "symbol" : "SDImageAWebPCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
             "kind" : "readme",
-            "line" : null,
-            "note" : "SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era",
+            "line" : 0,
+            "note" : "README: 'WebP format from iOS 14/macOS 11.0 via SDWebImageAWebPCoder. For lower firmware, use coder plugin SDWebImageWebPCoder.'",
             "package" : null,
             "symbol" : null
           }
@@ -84,15 +2232,25 @@
         "status" : "unknown"
       },
       "tvOS" : {
-        "confidence" : 0.3,
+        "confidence" : 0.4,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
-            "file" : null,
+            "file" : "SDWebImage/Core/SDImageAWebPCoder.h",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : "Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files.",
+            "package" : null,
+            "symbol" : "SDImageAWebPCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
             "kind" : "readme",
-            "line" : null,
-            "note" : "SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era",
+            "line" : 0,
+            "note" : "README: 'WebP format from iOS 14/macOS 11.0 via SDWebImageAWebPCoder. For lower firmware, use coder plugin SDWebImageWebPCoder.'",
             "package" : null,
             "symbol" : null
           }
@@ -100,15 +2258,25 @@
         "status" : "unknown"
       },
       "visionOS" : {
-        "confidence" : 0.2,
+        "confidence" : 0.4,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
-            "file" : null,
+            "file" : "SDWebImage/Core/SDImageAWebPCoder.h",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : "Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files.",
+            "package" : null,
+            "symbol" : "SDImageAWebPCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
             "kind" : "readme",
-            "line" : null,
-            "note" : "SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era",
+            "line" : 0,
+            "note" : "README: 'WebP format from iOS 14/macOS 11.0 via SDWebImageAWebPCoder. For lower firmware, use coder plugin SDWebImageWebPCoder.'",
             "package" : null,
             "symbol" : null
           }
@@ -116,15 +2284,25 @@
         "status" : "unknown"
       },
       "watchOS" : {
-        "confidence" : 0.3,
+        "confidence" : 0.4,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
-            "file" : null,
+            "file" : "SDWebImage/Core/SDImageAWebPCoder.h",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : "Apple-ImageIO-backed WebP coder is in the core surface, but it depends on OS-level WebP support (iOS 14+/macOS 11+ per README), is not registered by default for animated WebP, and its runtime availability checks live in unparsed implementation files.",
+            "package" : null,
+            "symbol" : "SDImageAWebPCoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
             "kind" : "readme",
-            "line" : null,
-            "note" : "SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era",
+            "line" : 0,
+            "note" : "README: 'WebP format from iOS 14/macOS 11.0 via SDWebImageAWebPCoder. For lower firmware, use coder plugin SDWebImageWebPCoder.'",
             "package" : null,
             "symbol" : null
           }

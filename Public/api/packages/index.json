@@ -727,9 +727,15 @@
   {
     "canonicalURL" : "https://github.com/sdwebimage/sdwebimage",
     "capabilities" : [
-      "image.async-loading"
+      "image.async-loading",
+      "image.caching",
+      "image.downsampling",
+      "image.gif",
+      "image.prefetching",
+      "image.progressive",
+      "image.webp"
     ],
-    "name" : "SDWebImage",
+    "name" : "sdwebimage",
     "slug" : "sdwebimage",
     "version" : "5.21.7"
   },
@@ -739,7 +745,7 @@
       "image.async-loading",
       "image.gif"
     ],
-    "name" : "SDWebImageSwiftUI",
+    "name" : "sdwebimageswiftui",
     "slug" : "sdwebimageswiftui",
     "version" : "3.1.4"
   },

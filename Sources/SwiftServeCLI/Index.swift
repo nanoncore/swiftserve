@@ -314,6 +314,7 @@ struct Extract: ParsableCommand {
             extracted += 1
             let guarded = surface.decls.filter { $0.condition != nil }.count
             print("   ✓ \(candidate.name) @ \(entry.tag): \(surface.stats.declCount) decls, \(guarded) guarded"
+                  + (surface.stats.objcHeadersParsed > 0 ? Style.dim("  (\(surface.stats.objcHeadersParsed) ObjC headers parsed)") : "")
                   + (surface.stats.objcFiles > 0 ? Style.dim("  (\(surface.stats.objcFiles) ObjC files unparsed)") : ""))
         }
 
@@ -747,7 +748,8 @@ struct LabelPrep: ParsableCommand {
         let stats = surface.stats
         var blindSpots: [String] = []
         if stats.hasBinaryTargets { blindSpots.append("ships `.binaryTarget`s — the real fence may live in a binary (confidence cap 0.8)") }
-        if stats.objcFiles > 0 { blindSpots.append("\(stats.objcFiles) ObjC files unparsed (Swift-only extraction)") }
+        if stats.objcFiles > 0 { blindSpots.append("\(stats.objcFiles) ObjC files unparsed (implementations + private headers"
+            + (stats.objcHeadersParsed > 0 ? "; \(stats.objcHeadersParsed) public headers ARE in the surface)" : ")")) }
         if stats.manifestUnparsed { blindSpots.append("Package.swift could not be read syntactically") }
 
         return """

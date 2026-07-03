@@ -8,6 +8,342 @@
   "label" : "Animated GIF playback",
   "packages" : [
     {
+      "commit" : "2de3a496eaf6df9a1312862adcfd54acd73c39c0",
+      "notes" : "GIF/APNG decoding (SDImageGIFCoder, SDImageAPNGCoder) and the frame player (SDAnimatedImagePlayer) are unconditional; the SDAnimatedImageView widget is conditionally compiled behind the opaque SD_UIKIT || SD_MAC package macro, so on watchOS the claim rests on decode+player, not the view. Digest truncated to 800 of 1762 decls; implementation files and private headers unparsed.",
+      "package" : "https://github.com/sdwebimage/sdwebimage",
+      "packageName" : "sdwebimage",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageGIFCoder.h",
+              "kind" : "symbol",
+              "line" : 18,
+              "note" : "GIF decode/encode coder (registered by default); unconditional in surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageGIFCoder.h#L18",
+              "symbol" : "SDImageGIFCoder"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageAPNGCoder.h",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "APNG animated coder; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAPNGCoder.h#L15",
+              "symbol" : "SDImageAPNGCoder"
+            },
+            {
+              "file" : "SDWebImage/Core/SDAnimatedImagePlayer.h",
+              "kind" : "symbol",
+              "line" : 34,
+              "note" : "Frame-driving animation player; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImagePlayer.h#L34",
+              "symbol" : "SDAnimatedImagePlayer"
+            },
+            {
+              "file" : "SDWebImage/Core/SDAnimatedImage.h",
+              "kind" : "symbol",
+              "line" : 16,
+              "note" : "Animated image protocol; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImage.h#L16",
+              "symbol" : "SDAnimatedImage"
+            },
+            {
+              "condition" : "SD_UIKIT || SD_MAC",
+              "file" : "SDWebImage/Core/SDAnimatedImageView.h",
+              "kind" : "symbol",
+              "line" : 24,
+              "note" : "Animated view widget; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImageView.h#L24",
+              "symbol" : "SDAnimatedImageView"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "iOS declared in Package.swift platform floors.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "SPM manifest declares Apple platforms only (iOS 9, macOS 10.11, tvOS 9, watchOS 2); not evidence of absence. Objective-C library over Foundation/UIKit/AppKit; no linux absence guard in the parsed surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageGIFCoder.h",
+              "kind" : "symbol",
+              "line" : 18,
+              "note" : "GIF decode/encode coder (registered by default); unconditional in surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageGIFCoder.h#L18",
+              "symbol" : "SDImageGIFCoder"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageAPNGCoder.h",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "APNG animated coder; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAPNGCoder.h#L15",
+              "symbol" : "SDImageAPNGCoder"
+            },
+            {
+              "file" : "SDWebImage/Core/SDAnimatedImagePlayer.h",
+              "kind" : "symbol",
+              "line" : 34,
+              "note" : "Frame-driving animation player; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImagePlayer.h#L34",
+              "symbol" : "SDAnimatedImagePlayer"
+            },
+            {
+              "file" : "SDWebImage/Core/SDAnimatedImage.h",
+              "kind" : "symbol",
+              "line" : 16,
+              "note" : "Animated image protocol; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImage.h#L16",
+              "symbol" : "SDAnimatedImage"
+            },
+            {
+              "condition" : "SD_UIKIT || SD_MAC",
+              "file" : "SDWebImage/Core/SDAnimatedImageView.h",
+              "kind" : "symbol",
+              "line" : 24,
+              "note" : "Animated view widget; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImageView.h#L24",
+              "symbol" : "SDAnimatedImageView"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageGIFCoder.h",
+              "kind" : "symbol",
+              "line" : 18,
+              "note" : "GIF decode/encode coder (registered by default); unconditional in surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageGIFCoder.h#L18",
+              "symbol" : "SDImageGIFCoder"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageAPNGCoder.h",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "APNG animated coder; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAPNGCoder.h#L15",
+              "symbol" : "SDImageAPNGCoder"
+            },
+            {
+              "file" : "SDWebImage/Core/SDAnimatedImagePlayer.h",
+              "kind" : "symbol",
+              "line" : 34,
+              "note" : "Frame-driving animation player; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImagePlayer.h#L34",
+              "symbol" : "SDAnimatedImagePlayer"
+            },
+            {
+              "file" : "SDWebImage/Core/SDAnimatedImage.h",
+              "kind" : "symbol",
+              "line" : 16,
+              "note" : "Animated image protocol; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImage.h#L16",
+              "symbol" : "SDAnimatedImage"
+            },
+            {
+              "condition" : "SD_UIKIT || SD_MAC",
+              "file" : "SDWebImage/Core/SDAnimatedImageView.h",
+              "kind" : "symbol",
+              "line" : 24,
+              "note" : "Animated view widget; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImageView.h#L24",
+              "symbol" : "SDAnimatedImageView"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "macOS declared in Package.swift platform floors.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageGIFCoder.h",
+              "kind" : "symbol",
+              "line" : 18,
+              "note" : "GIF decode/encode coder (registered by default); unconditional in surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageGIFCoder.h#L18",
+              "symbol" : "SDImageGIFCoder"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageAPNGCoder.h",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "APNG animated coder; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAPNGCoder.h#L15",
+              "symbol" : "SDImageAPNGCoder"
+            },
+            {
+              "file" : "SDWebImage/Core/SDAnimatedImagePlayer.h",
+              "kind" : "symbol",
+              "line" : 34,
+              "note" : "Frame-driving animation player; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImagePlayer.h#L34",
+              "symbol" : "SDAnimatedImagePlayer"
+            },
+            {
+              "file" : "SDWebImage/Core/SDAnimatedImage.h",
+              "kind" : "symbol",
+              "line" : 16,
+              "note" : "Animated image protocol; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImage.h#L16",
+              "symbol" : "SDAnimatedImage"
+            },
+            {
+              "condition" : "SD_UIKIT || SD_MAC",
+              "file" : "SDWebImage/Core/SDAnimatedImageView.h",
+              "kind" : "symbol",
+              "line" : 24,
+              "note" : "Animated view widget; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImageView.h#L24",
+              "symbol" : "SDAnimatedImageView"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "tvOS declared in Package.swift platform floors.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageGIFCoder.h",
+              "kind" : "symbol",
+              "line" : 18,
+              "note" : "GIF decode/encode coder (registered by default); unconditional in surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageGIFCoder.h#L18",
+              "symbol" : "SDImageGIFCoder"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageAPNGCoder.h",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "APNG animated coder; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAPNGCoder.h#L15",
+              "symbol" : "SDImageAPNGCoder"
+            },
+            {
+              "file" : "SDWebImage/Core/SDAnimatedImagePlayer.h",
+              "kind" : "symbol",
+              "line" : 34,
+              "note" : "Frame-driving animation player; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImagePlayer.h#L34",
+              "symbol" : "SDAnimatedImagePlayer"
+            },
+            {
+              "file" : "SDWebImage/Core/SDAnimatedImage.h",
+              "kind" : "symbol",
+              "line" : 16,
+              "note" : "Animated image protocol; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImage.h#L16",
+              "symbol" : "SDAnimatedImage"
+            },
+            {
+              "condition" : "SD_UIKIT || SD_MAC",
+              "file" : "SDWebImage/Core/SDAnimatedImageView.h",
+              "kind" : "symbol",
+              "line" : 24,
+              "note" : "Animated view widget; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImageView.h#L24",
+              "symbol" : "SDAnimatedImageView"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDImageGIFCoder.h",
+              "kind" : "symbol",
+              "line" : 18,
+              "note" : "GIF decode/encode coder (registered by default); unconditional in surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageGIFCoder.h#L18",
+              "symbol" : "SDImageGIFCoder"
+            },
+            {
+              "file" : "SDWebImage/Core/SDImageAPNGCoder.h",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "APNG animated coder; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDImageAPNGCoder.h#L15",
+              "symbol" : "SDImageAPNGCoder"
+            },
+            {
+              "file" : "SDWebImage/Core/SDAnimatedImagePlayer.h",
+              "kind" : "symbol",
+              "line" : 34,
+              "note" : "Frame-driving animation player; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImagePlayer.h#L34",
+              "symbol" : "SDAnimatedImagePlayer"
+            },
+            {
+              "file" : "SDWebImage/Core/SDAnimatedImage.h",
+              "kind" : "symbol",
+              "line" : 16,
+              "note" : "Animated image protocol; unconditional.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImage.h#L16",
+              "symbol" : "SDAnimatedImage"
+            },
+            {
+              "condition" : "SD_UIKIT || SD_MAC",
+              "file" : "SDWebImage/Core/SDAnimatedImageView.h",
+              "kind" : "symbol",
+              "line" : 24,
+              "note" : "Animated view widget; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImageView.h#L24",
+              "symbol" : "SDAnimatedImageView"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "watchOS declared in Package.swift platform floors.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "sdwebimage",
+      "version" : "5.21.7"
+    },
+    {
       "commit" : "ac632bd26a1c00f139ff62fd01806f21cf67325e",
       "notes" : "AnimatedImageView plays GIFs with frame buffering — and is provably fenced off watchOS.",
       "package" : "https://github.com/onevcat/kingfisher",
@@ -126,9 +462,9 @@
     },
     {
       "commit" : "0e331457ca9af2f0b08bcaa138a91ffb907b004f",
-      "notes" : "AnimatedImage plays GIF/APNG/WebP animations — fenced !os(watchOS), same gap as Kingfisher's.",
+      "notes" : "AnimatedImage plays GIF/APNG/WebP animations — fenced !os(watchOS), same gap as Kingfisher's. Requires the SDWebImage companion package.",
       "package" : "https://github.com/sdwebimage/sdwebimageswiftui",
-      "packageName" : "SDWebImageSwiftUI",
+      "packageName" : "sdwebimageswiftui",
       "platforms" : {
         "iOS" : {
           "confidence" : 0.8,

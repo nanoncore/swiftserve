@@ -104,7 +104,7 @@ enum SurfaceBuilder {
         let files = try SurfaceFileCollector.collect(path)
 
         var decls: [SurfaceDecl] = []
-        var swiftFiles = 0, objcFiles = 0, parseFailures = 0
+        var swiftFiles = 0, objcFiles = 0, objcHeadersParsed = 0, parseFailures = 0
         for file in files {
             switch file.language {
             case .swift:
@@ -112,9 +112,17 @@ enum SurfaceBuilder {
                 if file.contents.isEmpty { parseFailures += 1; continue }
                 decls += SurfaceExtractor.decls(in: file.contents, file: file.displayPath)
             case .objc:
-                // v1 is Swift-only — counted, not hidden, so downstream labeling
-                // stays honest about packages with ObjC surface.
-                objcFiles += 1
+                // Public headers ARE the ObjC surface — the header scanner
+                // turns them into decls. Implementations (.m) and private
+                // headers stay counted as the honest blind spot.
+                let isHeader = file.displayPath.hasSuffix(".h")
+                let isPrivate = file.displayPath.range(of: "private", options: .caseInsensitive) != nil
+                if isHeader && !isPrivate && !file.contents.isEmpty {
+                    decls += ObjCHeaderParser.decls(in: file.contents, file: file.displayPath)
+                    objcHeadersParsed += 1
+                } else {
+                    objcFiles += 1
+                }
             }
         }
 
@@ -142,7 +150,8 @@ enum SurfaceBuilder {
             package: provenance,
             manifestPlatforms: manifestPlatforms,
             decls: decls,
-            stats: SurfaceStats(swiftFiles: swiftFiles, objcFiles: objcFiles, declCount: decls.count,
+            stats: SurfaceStats(swiftFiles: swiftFiles, objcFiles: objcFiles,
+                                objcHeadersParsed: objcHeadersParsed, declCount: decls.count,
                                 parseFailures: parseFailures, manifestUnparsed: manifestUnparsed,
                                 hasBinaryTargets: hasBinaryTargets))
     }
@@ -170,8 +179,11 @@ func renderSurfaceCard(_ surface: PackageSurface, writtenTo out: String?) -> Str
     if availabilityFenced > 0 {
         lines.append("   \(availabilityFenced) marked unavailable on at least one platform")
     }
+    if s.objcHeadersParsed > 0 {
+        lines.append(Style.dim("   \(s.objcHeadersParsed) Objective-C header\(s.objcHeadersParsed == 1 ? "" : "s") parsed into the surface"))
+    }
     if s.objcFiles > 0 {
-        lines.append(Style.dim("   \(s.objcFiles) Objective-C file\(s.objcFiles == 1 ? "" : "s") not parsed (Swift-only extraction) — surface may be incomplete"))
+        lines.append(Style.dim("   \(s.objcFiles) Objective-C file\(s.objcFiles == 1 ? "" : "s") not parsed (implementations + private headers) — surface may be incomplete"))
     }
     if s.parseFailures > 0 {
         lines.append(Style.dim("   \(s.parseFailures) file\(s.parseFailures == 1 ? "" : "s") unreadable"))

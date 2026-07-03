@@ -262,10 +262,264 @@
       "version" : "13.0.6"
     },
     {
+      "commit" : "2de3a496eaf6df9a1312862adcfd54acd73c39c0",
+      "notes" : "SDWebImageManager/SDWebImageDownloader are unconditional in the parsed public headers. The classic UIImageView+WebCache.h category did not make the truncated digest, so view-convenience evidence rides on the SDAnimatedImageView category (opaque SD_UIKIT || SD_MAC conditional). Digest truncated to 800 of 1762 decls; implementation files and private headers unparsed.",
+      "package" : "https://github.com/sdwebimage/sdwebimage",
+      "packageName" : "sdwebimage",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDWebImageManager.h",
+              "kind" : "symbol",
+              "line" : 101,
+              "note" : "Central async load+cache coordinator; unconditional in surface (no platform gaps).",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageManager.h#L101",
+              "symbol" : "SDWebImageManager"
+            },
+            {
+              "file" : "SDWebImage/Core/SDWebImageDownloader.h",
+              "kind" : "symbol",
+              "line" : 148,
+              "note" : "Dedicated async downloader; unconditional in surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageDownloader.h#L148",
+              "symbol" : "SDWebImageDownloader"
+            },
+            {
+              "condition" : "SD_UIKIT || SD_MAC",
+              "file" : "SDWebImage/Core/SDAnimatedImageView+WebCache.h",
+              "kind" : "symbol",
+              "line" : 27,
+              "note" : "View-layer URL-loading category; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImageView+WebCache.h#L27",
+              "symbol" : "SDAnimatedImageView.sd_setImageWithURL:"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "iOS declared in Package.swift platform floors.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "SPM manifest declares Apple platforms only (iOS 9, macOS 10.11, tvOS 9, watchOS 2); not evidence of absence. Objective-C library over Foundation/UIKit/AppKit; no linux absence guard in the parsed surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDWebImageManager.h",
+              "kind" : "symbol",
+              "line" : 101,
+              "note" : "Central async load+cache coordinator; unconditional in surface (no platform gaps).",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageManager.h#L101",
+              "symbol" : "SDWebImageManager"
+            },
+            {
+              "file" : "SDWebImage/Core/SDWebImageDownloader.h",
+              "kind" : "symbol",
+              "line" : 148,
+              "note" : "Dedicated async downloader; unconditional in surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageDownloader.h#L148",
+              "symbol" : "SDWebImageDownloader"
+            },
+            {
+              "condition" : "SD_UIKIT || SD_MAC",
+              "file" : "SDWebImage/Core/SDAnimatedImageView+WebCache.h",
+              "kind" : "symbol",
+              "line" : 27,
+              "note" : "View-layer URL-loading category; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImageView+WebCache.h#L27",
+              "symbol" : "SDAnimatedImageView.sd_setImageWithURL:"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README badge: 'Mac Catalyst compatible'; requirements list macOS 10.15 for Catalyst.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/README.md#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDWebImageManager.h",
+              "kind" : "symbol",
+              "line" : 101,
+              "note" : "Central async load+cache coordinator; unconditional in surface (no platform gaps).",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageManager.h#L101",
+              "symbol" : "SDWebImageManager"
+            },
+            {
+              "file" : "SDWebImage/Core/SDWebImageDownloader.h",
+              "kind" : "symbol",
+              "line" : 148,
+              "note" : "Dedicated async downloader; unconditional in surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageDownloader.h#L148",
+              "symbol" : "SDWebImageDownloader"
+            },
+            {
+              "condition" : "SD_UIKIT || SD_MAC",
+              "file" : "SDWebImage/Core/SDAnimatedImageView+WebCache.h",
+              "kind" : "symbol",
+              "line" : 27,
+              "note" : "View-layer URL-loading category; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImageView+WebCache.h#L27",
+              "symbol" : "SDAnimatedImageView.sd_setImageWithURL:"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "macOS declared in Package.swift platform floors.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDWebImageManager.h",
+              "kind" : "symbol",
+              "line" : 101,
+              "note" : "Central async load+cache coordinator; unconditional in surface (no platform gaps).",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageManager.h#L101",
+              "symbol" : "SDWebImageManager"
+            },
+            {
+              "file" : "SDWebImage/Core/SDWebImageDownloader.h",
+              "kind" : "symbol",
+              "line" : 148,
+              "note" : "Dedicated async downloader; unconditional in surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageDownloader.h#L148",
+              "symbol" : "SDWebImageDownloader"
+            },
+            {
+              "condition" : "SD_UIKIT || SD_MAC",
+              "file" : "SDWebImage/Core/SDAnimatedImageView+WebCache.h",
+              "kind" : "symbol",
+              "line" : 27,
+              "note" : "View-layer URL-loading category; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImageView+WebCache.h#L27",
+              "symbol" : "SDAnimatedImageView.sd_setImageWithURL:"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "tvOS declared in Package.swift platform floors.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDWebImageManager.h",
+              "kind" : "symbol",
+              "line" : 101,
+              "note" : "Central async load+cache coordinator; unconditional in surface (no platform gaps).",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageManager.h#L101",
+              "symbol" : "SDWebImageManager"
+            },
+            {
+              "file" : "SDWebImage/Core/SDWebImageDownloader.h",
+              "kind" : "symbol",
+              "line" : 148,
+              "note" : "Dedicated async downloader; unconditional in surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageDownloader.h#L148",
+              "symbol" : "SDWebImageDownloader"
+            },
+            {
+              "condition" : "SD_UIKIT || SD_MAC",
+              "file" : "SDWebImage/Core/SDAnimatedImageView+WebCache.h",
+              "kind" : "symbol",
+              "line" : 27,
+              "note" : "View-layer URL-loading category; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImageView+WebCache.h#L27",
+              "symbol" : "SDAnimatedImageView.sd_setImageWithURL:"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: 'From 5.19+, SDWebImage supports visionOS on all Package Managers.'",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/README.md#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "SDWebImage/Core/SDWebImageManager.h",
+              "kind" : "symbol",
+              "line" : 101,
+              "note" : "Central async load+cache coordinator; unconditional in surface (no platform gaps).",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageManager.h#L101",
+              "symbol" : "SDWebImageManager"
+            },
+            {
+              "file" : "SDWebImage/Core/SDWebImageDownloader.h",
+              "kind" : "symbol",
+              "line" : 148,
+              "note" : "Dedicated async downloader; unconditional in surface.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDWebImageDownloader.h#L148",
+              "symbol" : "SDWebImageDownloader"
+            },
+            {
+              "condition" : "SD_UIKIT || SD_MAC",
+              "file" : "SDWebImage/Core/SDAnimatedImageView+WebCache.h",
+              "kind" : "symbol",
+              "line" : 27,
+              "note" : "View-layer URL-loading category; behind opaque package macro SD_UIKIT || SD_MAC (secondary evidence).",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/SDWebImage/Core/SDAnimatedImageView+WebCache.h#L27",
+              "symbol" : "SDAnimatedImageView.sd_setImageWithURL:"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "watchOS declared in Package.swift platform floors.",
+              "permalink" : "https://github.com/sdwebimage/sdwebimage/blob/5.21.7/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "sdwebimage",
+      "version" : "5.21.7"
+    },
+    {
       "commit" : "0e331457ca9af2f0b08bcaa138a91ffb907b004f",
-      "notes" : "WebImage — SwiftUI view with SDWebImage's loading + caching underneath.",
+      "notes" : "WebImage — SwiftUI view with SDWebImage's loading + caching underneath. Requires the SDWebImage companion package.",
       "package" : "https://github.com/sdwebimage/sdwebimageswiftui",
-      "packageName" : "SDWebImageSwiftUI",
+      "packageName" : "sdwebimageswiftui",
       "platforms" : {
         "iOS" : {
           "confidence" : 0.8,
@@ -383,89 +637,6 @@
       ],
       "slug" : "sdwebimageswiftui",
       "version" : "3.1.4"
-    },
-    {
-      "commit" : "2de3a496eaf6df9a1312862adcfd54acd73c39c0",
-      "notes" : "The ObjC-era giant. Verdicts wait for the ObjC extractor; use SDWebImageSwiftUI for a Swift-parsed surface.",
-      "package" : "https://github.com/sdwebimage/sdwebimage",
-      "packageName" : "SDWebImage",
-      "platforms" : {
-        "iOS" : {
-          "confidence" : 0.3,
-          "evidence" : [
-            {
-              "kind" : "readme",
-              "note" : "SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "linux" : {
-          "confidence" : 0.1,
-          "evidence" : [
-            {
-              "kind" : "readme",
-              "note" : "Apple-only"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "macCatalyst" : {
-          "confidence" : 0.2,
-          "evidence" : [
-            {
-              "kind" : "readme",
-              "note" : "SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "macOS" : {
-          "confidence" : 0.3,
-          "evidence" : [
-            {
-              "kind" : "readme",
-              "note" : "SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "tvOS" : {
-          "confidence" : 0.3,
-          "evidence" : [
-            {
-              "kind" : "readme",
-              "note" : "SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "visionOS" : {
-          "confidence" : 0.2,
-          "evidence" : [
-            {
-              "kind" : "readme",
-              "note" : "SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "watchOS" : {
-          "confidence" : 0.3,
-          "evidence" : [
-            {
-              "kind" : "readme",
-              "note" : "SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era"
-            }
-          ],
-          "status" : "unknown"
-        }
-      },
-      "requiresCompanion" : [
-
-      ],
-      "slug" : "sdwebimage",
-      "version" : "5.21.7"
     }
   ]
 }
