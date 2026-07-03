@@ -1,11 +1,15 @@
-// SwiftServe — the fence yard, v2. The /on/visionos page as a place: a hero
-// panel that tells the story, the capability wall as two wings beside it, the
-// OS shelf beneath, and the fence line with its compiler receipts at the rear
-// — with the whole yard spinnable by pinch-drag, because Apple's spatial HIG
+// SwiftServe — the fence yard, v4. The /on/visionos page as a place: five
+// DISTRICTS of capabilities arranged around the user — each under a floating
+// totem that names it, tints it, and (pinched) brings the whole district
+// around to face you. The hero tells the story up front, the OS shelf runs
+// beneath it, and the fence line with its compiler receipts stays at the
+// rear — the whole yard spinnable by pinch-drag, because Apple's spatial HIG
 // says people bring content to themselves; they don't walk or crane.
 //
 // Interaction model (visionOS natural input, WebKit transient-pointer):
 //   · pinch + drag anywhere  → spin the yard (the target ray tracks the hand)
+//   · look + pinch a totem   → focus that district: the yard turns to face
+//     it, everything else recedes; pinch the totem again to release
 //   · look + pinch (no drag) → open an in-scene detail panel, spawned facing
 //     wherever the user is looking RIGHT NOW — never at a fixed spot
 //   · leaving the scene is always explicit: an "Open ↗" chip on a panel, the
@@ -45,6 +49,59 @@ const PLATFORM_LABEL = { linux: "Linux", macCatalyst: "Catalyst" };
 // pinch stops being a tap. ~1.7 lets a small wrist arc walk the whole fence.
 const DRAG_GAIN = 1.7;
 const TAP_THRESHOLD = 0.035;   // radians of ray travel
+
+// ---------- districts ----------
+// The five taxonomy domains, as places. Capability ids carry sub-prefixes
+// (the audio domain namespaces media./midi./speech./video./voice.), so
+// district membership is an explicit map — never a guess from the id alone.
+// An unmapped prefix becomes its own district with the default look, so a
+// future domain degrades to "present but plain", never to "missing".
+
+const DISTRICT_META = {
+  audio:      { label: "Audio & Media", hue: "#7a63c9", wash: "#f1edfa", icon: drawWaveIcon },
+  networking: { label: "Networking",    hue: "#2f8f8f", wash: "#e7f4f4", icon: drawGlobeIcon },
+  images:     { label: "Images",        hue: "#c2618c", wash: "#f9ecf2", icon: drawPhotoIcon },
+  storage:    { label: "Storage",       hue: "#4a7fb5", wash: "#eaf1f8", icon: drawDbIcon },
+  ui:         { label: "UI & Motion",   hue: "#7d9440", wash: "#f0f4e4", icon: drawSlidersIcon },
+};
+const DOMAIN_OF = {
+  audio: "audio", media: "audio", midi: "audio", speech: "audio", video: "audio", voice: "audio",
+  image: "images", network: "networking", storage: "storage", ui: "ui",
+};
+
+// Group the feed's capabilities into districts, largest first (ties by key,
+// so the layout is deterministic for a given feed).
+function districtsFrom(capabilities) {
+  const byKey = new Map();
+  for (const entry of capabilities) {
+    const prefix = String(entry.id).split(".")[0];
+    const key = DOMAIN_OF[prefix] || prefix;
+    if (!byKey.has(key)) {
+      const meta = DISTRICT_META[key]
+        || { label: prefix, hue: INK_SOFT, wash: HAIRLINE, icon: drawGazeIcon };
+      byKey.set(key, Object.assign({ key, entries: [] }, meta));
+    }
+    byKey.get(key).entries.push(entry);
+  }
+  return [...byKey.values()].sort((a, b) =>
+    (b.entries.length - a.entries.length) || (a.key < b.key ? -1 : 1));
+}
+
+// Pack districts around the hero: each takes cols = ceil(n / maxRows)
+// columns of arc, and goes to whichever side is currently lighter — biggest
+// district first, so the yard balances. Returns centers in degrees
+// (negative = left of the hero), aligned with the input order.
+function layoutDistricts(districts, colStepDeg, gapDeg, wingGapDeg, maxRows) {
+  const sides = { left: wingGapDeg, right: wingGapDeg };
+  return districts.map((district) => {
+    const cols = Math.max(1, Math.ceil(district.entries.length / maxRows));
+    const width = cols * colStepDeg;
+    const side = sides.left <= sides.right ? "left" : "right";
+    const center = sides[side] + width / 2;
+    sides[side] += width + gapDeg;
+    return { key: district.key, cols, centerDeg: side === "left" ? -center : center };
+  });
+}
 
 // ---------- tiny mat4 (column-major, straight into uniformMatrix4fv) ----------
 
@@ -233,6 +290,124 @@ function drawCrownIcon(ctx, cx, cy, r) {
   ctx.stroke();
 }
 
+function drawTotemIcon(ctx, cx, cy, r) {
+  // A pennant on its pole — the district totem, in miniature.
+  const px = cx - r * 0.3;
+  ctx.beginPath();
+  ctx.moveTo(px, cy - r * 0.52);
+  ctx.lineTo(px, cy + r * 0.52);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(px, cy - r * 0.5);
+  ctx.lineTo(px + r * 0.72, cy - r * 0.22);
+  ctx.lineTo(px, cy + r * 0.06);
+  ctx.closePath();
+  ctx.fill();
+}
+
+// District icons — one stroke drawing each, in the district's hue.
+function drawWaveIcon(ctx, cx, cy, r) {
+  const heights = [0.34, 0.62, 0.94, 0.5, 0.72];
+  heights.forEach((h, i) => {
+    const x = cx + (i - 2) * r * 0.34;
+    ctx.beginPath();
+    ctx.moveTo(x, cy - r * h * 0.5);
+    ctx.lineTo(x, cy + r * h * 0.5);
+    ctx.stroke();
+  });
+}
+
+function drawGlobeIcon(ctx, cx, cy, r) {
+  const a = r * 0.52;
+  ctx.beginPath();
+  ctx.arc(cx, cy, a, 0, Math.PI * 2);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.ellipse(cx, cy, a, a * 0.42, 0, 0, Math.PI * 2);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(cx, cy - a);
+  ctx.lineTo(cx, cy + a);
+  ctx.stroke();
+}
+
+function drawPhotoIcon(ctx, cx, cy, r) {
+  const w = r * 1.1, h = r * 0.86;
+  roundRect(ctx, cx - w / 2, cy - h / 2, w, h, r * 0.14);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(cx - w * 0.36, cy + h * 0.3);
+  ctx.lineTo(cx - w * 0.08, cy - h * 0.1);
+  ctx.lineTo(cx + w * 0.14, cy + h * 0.14);
+  ctx.lineTo(cx + w * 0.3, cy - h * 0.04);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(cx - w * 0.16, cy - h * 0.22, r * 0.09, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+function drawDbIcon(ctx, cx, cy, r) {
+  const w = r * 0.92, h = r * 1.0, e = r * 0.2;
+  ctx.beginPath();
+  ctx.ellipse(cx, cy - h / 2 + e, w / 2, e, 0, 0, Math.PI * 2);
+  ctx.stroke();
+  for (const dy of [0.5, 1]) {
+    ctx.beginPath();
+    ctx.ellipse(cx, cy - h / 2 + e + (h - e * 2) * dy, w / 2, e, 0, 0, Math.PI);
+    ctx.stroke();
+  }
+  ctx.beginPath();
+  ctx.moveTo(cx - w / 2, cy - h / 2 + e);
+  ctx.lineTo(cx - w / 2, cy + h / 2 - e);
+  ctx.moveTo(cx + w / 2, cy - h / 2 + e);
+  ctx.lineTo(cx + w / 2, cy + h / 2 - e);
+  ctx.stroke();
+}
+
+function drawSlidersIcon(ctx, cx, cy, r) {
+  const knobs = [-0.2, 0.28, -0.02];
+  knobs.forEach((k, i) => {
+    const y = cy + (i - 1) * r * 0.42;
+    ctx.beginPath();
+    ctx.moveTo(cx - r * 0.55, y);
+    ctx.lineTo(cx + r * 0.55, y);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(cx + k * r, y, r * 0.13, 0, Math.PI * 2);
+    ctx.fill();
+  });
+}
+
+// The district totem: its flag, floating above the wall — icon, name, count,
+// and the one gesture it answers to.
+function paintTotem(district) {
+  const ctx = makeCtx(880, 480);
+  cardBase(ctx);
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(150, 240, 96, 0, Math.PI * 2);
+  ctx.fillStyle = district.wash;
+  ctx.fill();
+  ctx.strokeStyle = district.hue;
+  ctx.fillStyle = district.hue;
+  ctx.lineWidth = 13;
+  ctx.lineCap = "round";
+  ctx.lineJoin = "round";
+  district.icon(ctx, 150, 240, 96);
+  ctx.restore();
+
+  ctx.fillStyle = INK;
+  ctx.font = "700 84px " + SANS;
+  ctx.fillText(district.label, 300, 216);
+  ctx.fillStyle = district.hue;
+  ctx.font = "600 52px " + SANS;
+  ctx.fillText(district.entries.length + " capabilities", 300, 306);
+  ctx.fillStyle = MUTED;
+  ctx.font = "500 42px " + SANS;
+  ctx.fillText("pinch to bring it to you", 300, 384);
+  return ctx.canvas;
+}
+
 function paintHero(stats) {
   const ctx = makeCtx(1900, 1000);
   cardBase(ctx);
@@ -256,7 +431,7 @@ function paintHero(stats) {
   }
 
   const guide = [
-    ["✓", GOOD, "The green wall, both sides — who serves what, capability by capability."],
+    ["✓", GOOD, "Five districts around you — every capability, grouped by what it's for."],
     ["", INK_SOFT, "The dark shelf below — what the OS covers before any dependency."],
     ["✕", LOW, "The fence, around back — packages that don't compile, receipts nailed on."],
   ];
@@ -271,24 +446,34 @@ function paintHero(stats) {
 
   // Gesture hints, badged so they read as controls, not copy.
   const hints = [
+    [drawTotemIcon, "Pinch a totem — bring that district to you"],
     [drawSpinIcon, "Pinch & drag — spin the yard"],
     [drawGazeIcon, "Look + pinch — open it right here"],
     [drawCrownIcon, "Crown — back to Safari"],
   ];
   hints.forEach(([icon, text], i) => {
-    const y = 738 + i * 96;
-    iconBadge(ctx, 132, y, 42, icon);
-    ctx.fillStyle = i === 2 ? MUTED : ACCENT_DEEP;
-    ctx.font = "600 54px " + SANS;
-    ctx.fillText(text, 204, y + 19);
+    const y = 712 + i * 84;
+    iconBadge(ctx, 132, y, 38, icon);
+    ctx.fillStyle = i === 3 ? MUTED : ACCENT_DEEP;
+    ctx.font = "600 52px " + SANS;
+    ctx.fillText(text, 198, y + 18);
   });
   return ctx.canvas;
 }
 
-function paintCapabilityCard(entry) {
+function paintCapabilityCard(entry, district) {
   const ctx = makeCtx(704, 416);
   cardBase(ctx);
-  ctx.fillStyle = MUTED;
+  // A whisper of the district hue over the glass — enough that peripheral
+  // vision groups the wall before any label is read.
+  ctx.save();
+  ctx.globalAlpha = 0.05;
+  roundRect(ctx, 7, 7, 690, 402, 42);
+  ctx.fillStyle = district.hue;
+  ctx.fill();
+  ctx.restore();
+
+  ctx.fillStyle = district.hue;
   ctx.font = "600 36px " + SANS;
   ctx.fillText(entry.id.split(".")[0].toUpperCase(), 50, 84);
 
@@ -308,12 +493,26 @@ function paintCapabilityCard(entry) {
     ctx.fillStyle = MUTED;
     count = "0 of " + entry.packages + " serve it";
   }
-  ctx.fillText(count, 50, 356);
+  ctx.fillText(count, 50, 344);
   if (entry.builtInCovers && entry.packages > 0) {
     // The  glyph is private-use and tofus off Apple devices — but this
     // scene only ever runs on one.
     ctx.fillStyle = INK_SOFT;
-    ctx.fillText("  ·  ", 50 + ctx.measureText(count).width, 356);
+    ctx.fillText("  ·  ", 50 + ctx.measureText(count).width, 344);
+  }
+
+  // Support density, as a bar you can read across the whole wall at once —
+  // how much of this capability's package roster proves out here.
+  if (entry.packages > 0) {
+    roundRect(ctx, 50, 372, 604, 16, 8);
+    ctx.fillStyle = HAIRLINE;
+    ctx.fill();
+    const share = Math.max(0, Math.min(1, entry.supported / entry.packages));
+    if (share > 0) {
+      roundRect(ctx, 50, 372, Math.max(24, 604 * share), 16, 8);
+      ctx.fillStyle = GOOD;
+      ctx.fill();
+    }
   }
   return ctx.canvas;
 }
@@ -581,39 +780,47 @@ function buildYard(gl, isWebGL2, feed, yOff) {
   // Hero — front and center, slightly below eye line per the HIG.
   place(paintHero(feed.stats), 3.0, 0, 1.5, 1.9, 1.0, { noPick: true });
 
-  // Capability wall: two wings flanking the hero, 12 virtual columns per row
-  // (6 left + 6 right), filled in reading order. Categories stay adjacent
-  // because the feed is sorted by capability id.
-  const cardW = 0.44, cardH = 0.26, cardR = 2.6;
-  const colStep = 11.3, wingGap = 24;   // degrees: inner edge of each wing
-  const rowY = [1.98, 1.64, 1.30, 0.96];
-  const perRow = 12;
-  const colPhi = (col) => col < 6
-    ? -(wingGap + (5 - col + 0.5) * colStep)
-    : (wingGap + (col - 6 + 0.5) * colStep);
-  feed.capabilities.forEach((entry, i) => {
-    const row = Math.floor(i / perRow);
-    const inRow = Math.min(perRow, feed.capabilities.length - row * perRow);
-    const col = (i % perRow) + Math.floor((perRow - inRow) / 2);
-    place(paintCapabilityCard(entry), cardR, colPhi(col), rowY[Math.min(row, rowY.length - 1)],
-      cardW, cardH, { action: { type: "capability", entry } });
+  // The districts: each domain's capabilities as a block of columns under
+  // its totem, packed left/right of the hero so the yard balances. Cards
+  // fill top-to-bottom, column by column, so a district reads as one shape.
+  const cardW = 0.38, cardH = 0.235, cardR = 2.6;
+  const colStep = 9.9, districtGap = 6, wingGap = 25, maxRows = 5;
+  const rowY = (row) => 2.06 - row * 0.29;
+  const districts = districtsFrom(feed.capabilities);
+  const centers = layoutDistricts(districts, colStep, districtGap, wingGap, maxRows);
+  districts.forEach((district, d) => {
+    const { cols, centerDeg } = centers[d];
+    const n = district.entries.length;
+    const rows = Math.ceil(n / cols);
+    place(paintTotem(district), cardR, centerDeg, 2.44, 0.55, 0.30,
+      { district: district.key, action: { type: "district", key: district.key, centerDeg } });
+    district.entries.forEach((entry, i) => {
+      const row = Math.floor(i / cols);
+      const inRow = Math.min(cols, n - row * cols);
+      const col = (i % cols) + (cols - inRow) / 2;
+      const phi = centerDeg + (col - (cols - 1) / 2) * colStep;
+      place(paintCapabilityCard(entry, district), cardR, phi, rowY(Math.min(row, rows - 1)),
+        cardW, cardH, { district: district.key, action: { type: "capability", entry } });
+    });
   });
 
   // The OS shelf: dark plaques under the hero — "before you add a
   // dependency" at a glance.
   feed.builtIn.forEach((framework, i) => {
-    place(paintPlaque(framework), 2.35, (i - (feed.builtIn.length - 1) / 2) * 12.5, 0.62,
+    place(paintPlaque(framework), 2.35, (i - (feed.builtIn.length - 1) / 2) * 11.5, 0.62,
       0.46, 0.27, { action: { type: "plaque", framework } });
   });
 
   // The fence: one plank per fenced package, receipts nailed on, around the
-  // back — spin the yard to walk it.
+  // back — spin the yard to walk it. The step tightens as the fence grows so
+  // it never eats into the districts' arc.
   const planks = feed.fenced.map((pkg) => ({
     name: pkg.name, slug: pkg.slug, version: pkg.version,
     fences: pkg.fences,
     worksOn: pkg.fences[0] ? pkg.fences[0].worksOn : [],
   }));
-  const plankStep = 5.6, plankPhi = (i) => 180 + (i - (planks.length - 1) / 2) * plankStep;
+  const plankStep = Math.min(5.6, 112 / Math.max(1, planks.length));
+  const plankPhi = (i) => 180 + (i - (planks.length - 1) / 2) * plankStep;
   planks.forEach((plank, i) => {
     place(paintPlank(plank), 3.0, plankPhi(i), 1.02, 0.26, 1.0,
       { action: { type: "plank", plank } });
@@ -626,11 +833,11 @@ function buildYard(gl, isWebGL2, feed, yOff) {
   }
 
   // The honest unknowns hover above the fence — unresolved, translucent,
-  // never nailed down.
+  // never nailed down. Seven to a row now that there are more of them.
   feed.unknowns.forEach((unknown, i) => {
-    const row = Math.floor(i / 4), col = i % 4;
-    place(paintGhostCard(unknown), 3.0, 180 + (col - 1.5) * 7.5, 1.92 + row * 0.4,
-      0.30, 0.28, { opacity: 0.6, action: { type: "ghost", unknown } });
+    const row = Math.floor(i / 7), col = i % 7;
+    place(paintGhostCard(unknown), 3.0, 180 + (col - 3) * 6.2, 1.92 + row * 0.36,
+      0.30, 0.28, { opacity: 0.6, baseOpacity: 0.6, action: { type: "ghost", unknown } });
   });
 
   return quads;
@@ -944,6 +1151,7 @@ export default async function enter(feed, BASE) {
     let overlay = [];          // the open detail panel + its chips
     let navigateTo = null;
     let drag = null;           // the active transient-pointer, while pinched
+    let focusKey = null;       // the district brought forward, if any
     let lastHead = { x: 0, y: 1.5 + yOff, z: 0, fx: 0, fz: -1 };
 
     let sheetSeq = 0;   // bumps on every overlay change; stale fetches check it
@@ -1062,6 +1270,24 @@ export default async function enter(feed, BASE) {
       const yardHit = pick(rayInYard(rayMatrix, spin), quads);
       if (yardHit) {
         yardHit.pulseAt = performance.now();
+        if (yardHit.action.type === "district") {
+          // Pinch the totem: bring the district around to wherever the user
+          // is looking; pinch it again to let the yard go.
+          const key = yardHit.action.key;
+          if (focusKey === key) {
+            focusKey = null;
+            tick(440);
+          } else {
+            focusKey = key;
+            const phiDistrict = yardHit.action.centerDeg * Math.PI / 180;
+            const headPhi = azimuthOf(lastHead.fx, lastHead.fz);
+            // Content at yard angle φ renders at world φ − spin, so facing
+            // the head means spin = φ_district − φ_head — by the shortest way.
+            spinTarget = spin + wrapAngle(phiDistrict - headPhi - spin);
+            tick(660);
+          }
+          return;
+        }
         openPanel(yardHit.action);
       } else if (overlay.length) {
         closePanel();
@@ -1104,10 +1330,13 @@ export default async function enter(feed, BASE) {
     // --- render loop ---
     const drawQuad = (q, pv, now) => {
       let model = q.model;
+      let k = q.scaleK || 1;
       if (q.pulseAt && now - q.pulseAt < 160) {
         // Tap feedback: a quick 6% swell, decaying — visible confirmation in
         // a world with no hover state.
-        const k = 1 + 0.06 * (1 - (now - q.pulseAt) / 160);
+        k *= 1 + 0.06 * (1 - (now - q.pulseAt) / 160);
+      }
+      if (k !== 1) {
         model = new Float32Array(model);
         for (const i of [0, 1, 2, 4, 5, 6]) model[i] *= k;
       }
@@ -1147,6 +1376,18 @@ export default async function enter(feed, BASE) {
         }
       }
       spin += (spinTarget - spin) * Math.min(1, dt * 14);
+
+      // District focus: the chosen district swells a touch and everything
+      // else in the walls recedes — the hero, shelf, fence, and ghosts keep
+      // their own weight. Eased every frame so focus never snaps.
+      for (const q of quads) {
+        if (!q.district) continue;
+        const dimmed = focusKey && q.district !== focusKey;
+        const opacityTarget = (q.baseOpacity || 1) * (dimmed ? 0.28 : 1);
+        q.opacity += (opacityTarget - q.opacity) * Math.min(1, dt * 7);
+        const scaleTarget = focusKey && q.district === focusKey ? 1.06 : 1;
+        q.scaleK = (q.scaleK || 1) + (scaleTarget - (q.scaleK || 1)) * Math.min(1, dt * 7);
+      }
 
       gl.bindFramebuffer(gl.FRAMEBUFFER, layer.framebuffer);
       gl.clearColor(SKY[0], SKY[1], SKY[2], 1);
