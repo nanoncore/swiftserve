@@ -5,6 +5,7 @@ import FoundationNetworking
 #endif
 import SwiftServeCapability
 import SwiftServeCore
+import SwiftServeSurface
 
 /// `swiftserve index` — the founder-facing corpus pipeline: discover a
 /// domain's packages, fetch them at pinned tags, extract their surfaces.
@@ -13,8 +14,8 @@ import SwiftServeCore
 struct Index: ParsableCommand {
     static let configuration = CommandConfiguration(
         commandName: "index",
-        abstract: "Build the capability corpus: discover, fetch, extract, label, validate.",
-        subcommands: [Discover.self, Fetch.self, Extract.self, LabelPrep.self, Validate.self, Assemble.self]
+        abstract: "Build the capability corpus: discover, fetch, extract, probe, label, validate.",
+        subcommands: [Discover.self, Fetch.self, Extract.self, BuildProbe.self, SdkExtract.self, LabelPrep.self, Validate.self, Assemble.self]
     )
 }
 
@@ -41,6 +42,7 @@ struct CorpusStore {
     var checkouts: URL { root.appendingPathComponent("checkouts") }
     var surfaces: URL { root.appendingPathComponent("surface") }
     var labeling: URL { root.appendingPathComponent("labeling") }
+    var builds: URL { root.appendingPathComponent("builds") }
 
     /// `livekit__client-sdk-swift` — the canonical directory slug.
     static func slug(for canonicalURL: String) -> String {
@@ -319,6 +321,352 @@ struct Extract: ParsableCommand {
     }
 }
 
+// MARK: - build-probe
+
+/// `swiftserve index build-probe` — compile the truth. Builds each fetched
+/// checkout for a platform against the real SDK and writes the outcome as a
+/// `BuildVerdict` artifact (in-repo truth, like records). `buildVerdict`
+/// anchors in records cite these; the validator matches commit + outcome.
+struct BuildProbe: ParsableCommand {
+    static let configuration = CommandConfiguration(
+        commandName: "build-probe",
+        abstract: "Compile checkouts for a platform (xcodebuild) and write build-verdict artifacts."
+    )
+
+    @Option(name: .long, help: "Probe only this package (owner/repo or URL fragment).")
+    var package: String?
+
+    @Option(name: .long, help: "Platform to probe (iOS/macOS/tvOS/watchOS/visionOS/macCatalyst).")
+    var platform: String = "visionOS"
+
+    @Option(name: .long, help: "Corpus JSON produced by `index discover`.")
+    var corpus: String = CorpusFiles.defaultCorpus
+
+    @Option(name: .long, help: "Where verdict artifacts land, one per package × platform.")
+    var out: String = "data/build-verdicts"
+
+    @Option(name: .long, help: "Corpus cache directory (default: ~/Library/Caches/swiftserve/corpus; env SWIFTSERVE_CORPUS).")
+    var corpusDir: String?
+
+    @Flag(name: .long, help: "Re-probe even when a verdict already exists at the pinned commit.")
+    var force = false
+
+    private static let destinations: [String: String] = [
+        "iOS": "generic/platform=iOS",
+        "macOS": "generic/platform=macOS",
+        "tvOS": "generic/platform=tvOS",
+        "watchOS": "generic/platform=watchOS",
+        "visionOS": "generic/platform=visionOS",
+        "macCatalyst": "generic/platform=macOS,variant=Mac Catalyst",
+    ]
+    private static let sdkNames: [String: String] = [
+        "iOS": "iphoneos", "macOS": "macosx", "tvOS": "appletvos",
+        "watchOS": "watchos", "visionOS": "xros", "macCatalyst": "macosx",
+    ]
+
+    func run() throws {
+        guard let destination = Self.destinations[platform] else {
+            throw ScanError("can't probe ‘\(platform)’ — xcodebuild reaches \(Self.destinations.keys.sorted().joined(separator: "/")) only")
+        }
+        let store = CorpusStore(override: corpusDir)
+        let corpusFile = try CorpusFiles.read(corpus, as: Corpus.decode)
+
+        var targets = corpusFile.packages.filter {
+            FileManager.default.fileExists(atPath: store.checkoutDir(for: $0.url).path)
+        }
+        if let package {
+            targets = targets.filter { $0.url.localizedCaseInsensitiveContains(package) }
+            guard !targets.isEmpty else { throw ScanError("no fetched corpus package matches ‘\(package)’") }
+        }
+
+        let toolchain = Self.xcodeVersion()
+        let sdk = Self.sdkBasename(for: platform)
+        let stamp = ISO8601DateFormatter().string(from: Date())
+        var built = 0, failed = 0, inconclusive = 0, skipped = 0
+
+        for candidate in targets {
+            let slug = CorpusStore.slug(for: candidate.url)
+            let checkout = store.checkoutDir(for: candidate.url)
+            let commit = ((try? GitRunner.run(["rev-parse", "HEAD"], cwd: checkout.path)) ?? "")
+                .trimmingCharacters(in: .whitespacesAndNewlines)
+            let verdictPath = "\(out)/\(slug).\(platform).json"
+
+            if !force, let data = FileManager.default.contents(atPath: verdictPath),
+               let existing = try? BuildVerdict.decode(from: data), existing.commit == commit {
+                skipped += 1
+                print(Style.dim("   ~ \(candidate.name): verdict exists at \(commit.prefix(8)) — --force to re-probe"))
+                continue
+            }
+
+            let verdict = probe(candidate: candidate, slug: slug, checkout: checkout, commit: commit,
+                                destination: destination, toolchain: toolchain, sdk: sdk,
+                                store: store, stamp: stamp)
+            try CorpusFiles.writeJSON(verdict, to: verdictPath)
+            let first = verdict.errorExcerpt.first ?? "no error line captured"
+            switch verdict.outcome {
+            case .built:
+                built += 1
+                print(Style.green("   ✓ \(candidate.name) builds for \(platform)") + Style.dim("  (\(verdict.scheme))"))
+            case .failed:
+                failed += 1
+                print(Style.red("   ✗ \(candidate.name) fails for \(platform)") + Style.dim("  \(first.prefix(100))"))
+            case .inconclusive:
+                inconclusive += 1
+                print(Style.yellow("   ~ \(candidate.name) probe inconclusive") + Style.dim("  \(first.prefix(100))"))
+            }
+        }
+
+        print(Style.bold("🍦 build-probe complete")
+              + " — \(built) built, \(failed) failed, \(inconclusive) inconclusive, \(skipped) already probed → \(out)/")
+    }
+
+    /// One package's probe: copy the checkout (never build in the pristine
+    /// tree), pick a scheme, build for the destination, distill the receipt.
+    private func probe(candidate: DomainCandidate, slug: String, checkout: URL, commit: String,
+                       destination: String, toolchain: String, sdk: String,
+                       store: CorpusStore, stamp: String) -> BuildVerdict {
+        let fm = FileManager.default
+        let buildDir = store.builds.appendingPathComponent(slug)
+        defer { try? fm.removeItem(at: buildDir) }
+
+        func verdict(_ outcome: BuildVerdict.Outcome, scheme: String, errors: [String] = []) -> BuildVerdict {
+            BuildVerdict(canonicalURL: candidate.url, commit: commit, platform: platform,
+                         outcome: outcome, toolchain: toolchain, sdk: sdk, destination: destination,
+                         scheme: scheme, errorExcerpt: errors, probedAt: stamp)
+        }
+
+        do {
+            try? fm.removeItem(at: buildDir)
+            try fm.createDirectory(at: store.builds, withIntermediateDirectories: true)
+            try fm.copyItem(at: checkout, to: buildDir)
+            try? fm.removeItem(at: buildDir.appendingPathComponent(".git"))
+            // We probe the PACKAGE. A checked-in xcodeproj/xcworkspace would
+            // hijack `xcodebuild -list` with the repo's own (often iOS-only)
+            // schemes — the SwiftySound lesson.
+            for item in (try? fm.contentsOfDirectory(at: buildDir, includingPropertiesForKeys: nil)) ?? []
+            where ["xcodeproj", "xcworkspace"].contains(item.pathExtension) {
+                try? fm.removeItem(at: item)
+            }
+        } catch {
+            return verdict(.inconclusive, scheme: "", errors: ["probe setup failed: \(error.localizedDescription)"])
+        }
+
+        let scheme = chooseScheme(in: buildDir, packageName: candidate.name)
+        guard !scheme.isEmpty else {
+            return verdict(.inconclusive, scheme: "", errors: ["xcodebuild -list found no schemes"])
+        }
+
+        let result = ToolRunner.run("xcodebuild", [
+            "build", "-scheme", scheme, "-destination", destination,
+            "-derivedDataPath", buildDir.appendingPathComponent(".dd").path,
+            "-skipPackagePluginValidation", "-skipMacroValidation",
+            "CODE_SIGNING_ALLOWED=NO",
+        ], cwd: buildDir.path)
+
+        if result.status == 0 { return verdict(.built, scheme: scheme) }
+        let errors = Self.errorLines(result.output, stripping: buildDir.path)
+        // `xcodebuild: error:` lines are harness trouble (bad destination,
+        // missing scheme), not the package failing to compile — and a missing
+        // local toolchain component (Metal) is OUR gap, never package truth.
+        // A failure with no compiler error at all is the probe's fault too.
+        if errors.contains(where: { $0.contains("missing Metal Toolchain") }) {
+            return verdict(.inconclusive, scheme: scheme, errors: errors)
+        }
+        let compilerErrors = errors.filter { !$0.hasPrefix("xcodebuild: error:") }
+        guard !compilerErrors.isEmpty else {
+            return verdict(.inconclusive, scheme: scheme,
+                           errors: errors.isEmpty ? ["build failed with no error line captured"] : errors)
+        }
+        return verdict(.failed, scheme: scheme, errors: compilerErrors)
+    }
+
+    /// `xcodebuild -list` reports schemes for the whole resolved workspace —
+    /// DEPENDENCIES included — so picking by name alone can silently build
+    /// someone else's product (the swift-midi-io lesson: its probe built the
+    /// dep scheme `swift-midi-core`). Intersect schemes with THIS package's
+    /// own products from `swift package dump-package`, libraries first.
+    private func chooseScheme(in dir: URL, packageName: String) -> String {
+        let result = ToolRunner.run("xcodebuild", ["-list", "-json"], cwd: dir.path)
+        // stderr is merged into the pipe and xcodebuild logs chatter before
+        // the JSON — parse from the first brace.
+        guard result.status == 0, let brace = result.output.firstIndex(of: "{"),
+              let json = try? JSONSerialization.jsonObject(
+                with: Data(result.output[brace...].utf8)) as? [String: Any] else {
+            return ""
+        }
+        let container = (json["workspace"] ?? json["project"]) as? [String: Any]
+        let schemes = container?["schemes"] as? [String] ?? []
+        let repo = packageName.split(separator: "/").last.map(String.init) ?? packageName
+
+        var libraryProducts: [String] = [], otherProducts: [String] = []
+        let dump = ToolRunner.run("swift", ["package", "dump-package"], cwd: dir.path)
+        if dump.status == 0, let dumpBrace = dump.output.firstIndex(of: "{"),
+           let manifest = try? JSONSerialization.jsonObject(
+             with: Data(dump.output[dumpBrace...].utf8)) as? [String: Any],
+           let products = manifest["products"] as? [[String: Any]] {
+            for product in products {
+                guard let name = product["name"] as? String else { continue }
+                let isLibrary = (product["type"] as? [String: Any])?["library"] != nil
+                if isLibrary { libraryProducts.append(name) } else { otherProducts.append(name) }
+            }
+        }
+
+        for pool in [libraryProducts, otherProducts] {
+            let own = schemes.filter { pool.contains($0) }
+            if let exact = own.first(where: { $0.caseInsensitiveCompare(repo) == .orderedSame }) { return exact }
+            if let first = own.first { return first }
+        }
+        // No product scheme (bare-target package): fall back, aggregates last.
+        if let exact = schemes.first(where: { $0.caseInsensitiveCompare(repo) == .orderedSame }) { return exact }
+        return schemes.first { !$0.hasSuffix("-Package") } ?? schemes.first ?? ""
+    }
+
+    private static func errorLines(_ output: String, stripping prefix: String) -> [String] {
+        var seen = Set<String>(), lines: [String] = []
+        for raw in output.split(separator: "\n") where raw.contains("error: ") {
+            let line = raw.trimmingCharacters(in: .whitespaces)
+                .replacingOccurrences(of: prefix + "/", with: "")
+            if seen.insert(line).inserted { lines.append(line) }
+            if lines.count == 12 { break }
+        }
+        return lines
+    }
+
+    private static func xcodeVersion() -> String {
+        guard let (name, build) = ToolRunner.xcodeVersion() else { return "unknown" }
+        return "\(name) (\(build))"
+    }
+
+    private static func sdkBasename(for platform: String) -> String {
+        guard let sdkName = sdkNames[platform] else { return "unknown" }
+        let result = ToolRunner.run("xcrun", ["--sdk", sdkName, "--show-sdk-path"])
+        guard result.status == 0 else { return sdkName }
+        return URL(fileURLWithPath: result.output.trimmingCharacters(in: .whitespacesAndNewlines)).lastPathComponent
+    }
+
+}
+
+/// xcodebuild/xcrun sibling of `GitRunner`, shared by the probe and the SDK
+/// extractor. A nonzero exit is data, not an error — a failed build IS the
+/// verdict. Reads the pipe before waiting so a chatty xcodebuild can't
+/// deadlock on a full buffer.
+enum ToolRunner {
+    static func run(_ tool: String, _ arguments: [String], cwd: String = ".") -> (status: Int32, output: String) {
+        let process = Process()
+        process.executableURL = URL(fileURLWithPath: "/usr/bin/env")
+        process.arguments = [tool] + arguments
+        process.currentDirectoryURL = URL(fileURLWithPath: cwd)
+        let pipe = Pipe()
+        process.standardOutput = pipe
+        process.standardError = pipe
+        do { try process.run() } catch { return (127, "\(error)") }
+        let data = pipe.fileHandleForReading.readDataToEndOfFile()
+        process.waitUntilExit()
+        return (process.terminationStatus, String(decoding: data, as: UTF8.self))
+    }
+
+    /// ("Xcode 26.6", "17F113") from `xcodebuild -version`.
+    static func xcodeVersion() -> (name: String, build: String)? {
+        let result = run("xcodebuild", ["-version"])
+        let parts = result.output.split(separator: "\n").map(String.init)
+        guard result.status == 0, let name = parts.first else { return nil }
+        let build = parts.dropFirst().first?.replacingOccurrences(of: "Build version ", with: "") ?? "?"
+        return (name, build)
+    }
+}
+
+// MARK: - sdk-extract
+
+/// `swiftserve index sdk-extract` — the first-party corpus. Apple frameworks
+/// have no repo to pin, but they have parseable truth: the toolchain's
+/// `swift-symbolgraph-extract` emits every public symbol a platform SDK
+/// exports — ObjC-imported API included — with availability per platform.
+/// One graph per SDK, merged (membership + @available overlays decide
+/// presence), written as a surface the SAME record/validator machinery
+/// consumes — the pin is the Xcode build.
+struct SdkExtract: ParsableCommand {
+    static let configuration = CommandConfiguration(
+        commandName: "sdk-extract",
+        abstract: "Extract Apple framework surfaces from installed platform SDKs (symbol graphs)."
+    )
+
+    @Argument(help: "Framework module names (e.g. AVFAudio CoreMIDI SoundAnalysis).")
+    var frameworks: [String]
+
+    @Option(name: .long, help: "Corpus cache directory (default: ~/Library/Caches/swiftserve/corpus; env SWIFTSERVE_CORPUS).")
+    var corpusDir: String?
+
+    private static let sdks: [(platform: Platform, sdk: String, tripleOS: String)] = [
+        (.iOS, "iphoneos", "ios"), (.macOS, "macosx", "macosx"), (.tvOS, "appletvos", "tvos"),
+        (.watchOS, "watchos", "watchos"), (.visionOS, "xros", "xros"),
+    ]
+
+    func run() throws {
+        let store = CorpusStore(override: corpusDir)
+        guard let (xcodeName, xcodeBuild) = ToolRunner.xcodeVersion() else {
+            throw ScanError("xcodebuild -version failed — is Xcode installed?")
+        }
+
+        var targets: [(platform: Platform, sdkPath: String, triple: String)] = []
+        for entry in Self.sdks {
+            let path = ToolRunner.run("xcrun", ["--sdk", entry.sdk, "--show-sdk-path"])
+            let version = ToolRunner.run("xcrun", ["--sdk", entry.sdk, "--show-sdk-version"])
+            guard path.status == 0, version.status == 0 else { continue }
+            targets.append((entry.platform,
+                            path.output.trimmingCharacters(in: .whitespacesAndNewlines),
+                            "arm64-apple-\(entry.tripleOS)\(version.output.trimmingCharacters(in: .whitespacesAndNewlines))"))
+        }
+        guard !targets.isEmpty else { throw ScanError("no platform SDKs found — install Xcode platforms first") }
+
+        let tmp = FileManager.default.temporaryDirectory
+            .appendingPathComponent("swiftserve-symbolgraph-\(UUID().uuidString)")
+        defer { try? FileManager.default.removeItem(at: tmp) }
+
+        var extracted = 0
+        for framework in frameworks {
+            var perPlatform: [Platform: [SurfaceDecl]] = [:]
+            var graphs = 0
+            for target in targets {
+                let outDir = tmp.appendingPathComponent("\(framework)-\(target.triple)")
+                try FileManager.default.createDirectory(at: outDir, withIntermediateDirectories: true)
+                let result = ToolRunner.run("xcrun", [
+                    "swift-symbolgraph-extract", "-module-name", framework,
+                    "-target", target.triple, "-sdk", target.sdkPath,
+                    "-output-dir", outDir.path, "-minimum-access-level", "public",
+                ])
+                // A missing module on this platform is membership truth, not an error.
+                guard result.status == 0,
+                      let data = FileManager.default.contents(
+                        atPath: outDir.appendingPathComponent("\(framework).symbols.json").path) else { continue }
+                let file = "symbolgraph/\(target.triple)/\(framework).symbols.json"
+                perPlatform[target.platform] = try SymbolGraphParser.decls(from: data, file: file)
+                graphs += 1
+            }
+            guard !perPlatform.isEmpty else {
+                print(Style.red("   ✗ \(framework): no platform SDK exports this module"))
+                continue
+            }
+
+            let merged = SDKSurfaceMerger.merge(perPlatform: perPlatform)
+            let canonicalURL = "https://developer.apple.com/documentation/\(framework.lowercased())"
+            let surface = PackageSurface(
+                package: PackageProvenance(canonicalURL: canonicalURL, name: framework,
+                                           tag: xcodeName, commit: xcodeBuild),
+                manifestPlatforms: [],
+                decls: merged,
+                stats: SurfaceStats(swiftFiles: graphs, objcFiles: 0, declCount: merged.count,
+                                    parseFailures: 0, manifestUnparsed: false, hasBinaryTargets: false))
+            try FileManager.default.createDirectory(at: store.surfaces, withIntermediateDirectories: true)
+            try Data((try SurfaceBuilder.encodeJSON(surface) + "\n").utf8)
+                .write(to: store.surfaceFile(for: canonicalURL))
+            extracted += 1
+            let onVision = merged.filter { $0.resolvedPlatforms?["visionOS"] == .present }.count
+            print("   ✓ \(framework): \(merged.count) symbols from \(graphs) SDK graphs, \(onVision) present on visionOS")
+        }
+        print(Style.bold("🍦 sdk-extract complete") + " — \(extracted) framework surfaces @ \(xcodeName) (\(xcodeBuild))")
+    }
+}
+
 // MARK: - label-prep
 
 struct LabelPrep: ParsableCommand {
@@ -482,6 +830,9 @@ struct Validate: ParsableCommand {
     @Option(name: .long, help: "Where accepted records live, one file per package.")
     var recordsDir: String = "data/records/audio"
 
+    @Option(name: .long, help: "Build-verdict artifacts records may cite (from `index build-probe`).")
+    var buildVerdicts: String = "data/build-verdicts"
+
     @Flag(name: .long, help: "Move accepted records into the records dir.")
     var promote = false
 
@@ -495,6 +846,17 @@ struct Validate: ParsableCommand {
         let files = try proposedFiles(store: store)
         guard !files.isEmpty else {
             throw ScanError("no proposed records found — run `index label-prep` and write records into <bundle>/proposed/")
+        }
+
+        // Build verdicts are optional truth: load whatever artifacts exist.
+        var verdicts: [String: BuildVerdict] = [:]
+        let verdictFiles = ((try? FileManager.default.contentsOfDirectory(
+            at: URL(fileURLWithPath: buildVerdicts), includingPropertiesForKeys: nil)) ?? [])
+            .filter { $0.pathExtension == "json" }
+        for file in verdictFiles {
+            guard let data = FileManager.default.contents(atPath: file.path),
+                  let verdict = try? BuildVerdict.decode(from: data) else { continue }
+            verdicts[verdict.key] = verdict
         }
 
         var accepted = 0, rejected = 0
@@ -526,7 +888,8 @@ struct Validate: ParsableCommand {
                 }
 
                 let result = RecordValidator.validate(record, surfaces: surfaces.compactMapValues { $0 },
-                                                      digests: digests, taxonomy: taxonomyFile)
+                                                      digests: digests, buildVerdicts: verdicts,
+                                                      taxonomy: taxonomyFile)
                 let label = "\(record.package.name) × \(record.capability.id)"
                 for diagnostic in result.diagnostics {
                     let paint = diagnostic.severity == .error ? Style.red : Style.yellow

@@ -291,6 +291,7 @@
           a.href = BASE + "/package/" + p.slug + "/";
           a.setAttribute("role", "option");
           a.appendChild(el("span", null, p.name));
+          if (p.fp) a.appendChild(el("span", "pill pill-builtin", "built in"));
           a.appendChild(el("span", "muted", p.caps + " capabilit" + (p.caps === 1 ? "y" : "ies") + " mapped"));
           box.appendChild(a);
         }

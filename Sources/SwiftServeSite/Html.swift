@@ -184,7 +184,17 @@ public enum VerdictCell {
             if let condition = anchor.condition {
                 lines.append("<code class=\"evidence-guard\">#if \(Html.escape(condition))</code>")
             }
-            if let file = anchor.file, let line = anchor.line {
+            if record.package.firstParty {
+                // SDK symbols have no repo line to link — the receipt is the
+                // symbol graph; the outbound link is Apple's documentation.
+                if let symbol = anchor.symbol {
+                    let path = symbol.split(separator: ".")
+                        .map { $0.lowercased() }.joined(separator: "/")
+                    let permalink = "\(record.package.canonicalURL)/\(path)"
+                    lines.append("<span class=\"evidence-loc\">Apple SDK symbol graph · \(Html.escape(record.package.version))</span>")
+                    lines.append("<a class=\"evidence-link\" href=\"\(Html.escape(permalink))\" rel=\"noopener\">View in Apple Docs →</a>")
+                }
+            } else if let file = anchor.file, let line = anchor.line {
                 let target = anchor.package ?? record.package.canonicalURL
                 let tag = record.package.version
                 let permalink = "\(target)/blob/\(tag)/\(file)#L\(line)"

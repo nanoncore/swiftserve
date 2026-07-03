@@ -26,6 +26,9 @@ public struct PackageView: Sendable, Equatable {
     public let version: String
     public let commit: String
     public let records: [CapabilityRecord]   // sorted by capability id
+
+    /// Apple framework, pinned to an Xcode build instead of a git commit.
+    public var firstParty: Bool { records.first?.package.firstParty ?? false }
 }
 
 public struct CapabilityRow: Sendable, Equatable {

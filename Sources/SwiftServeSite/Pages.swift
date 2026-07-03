@@ -6,13 +6,64 @@ import SwiftServeCapability
 
 public enum CapabilityPage {
 
+    /// The Apple mark for first-party rows — inline so it renders everywhere
+    /// (the  glyph is a private-use codepoint that tofus off Apple devices).
+    static let appleMark = """
+    <svg class="apple-mark" viewBox="0 0 814 1000" aria-label="Apple" role="img"><path fill="currentColor" d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105.6-57-155.5-127C46.7 790.7 0 663 0 541.8c0-194.4 126.4-297.5 250.8-297.5 66.1 0 121.2 43.4 162.7 43.4 39.5 0 101.1-46 176.3-46 28.5 0 130.9 2.6 198.3 99.2zm-234-181.5c31.1-36.9 53.1-88.1 53.1-139.3 0-7.1-.6-14.3-1.9-20.1-50.6 1.9-110.8 33.7-147.1 75.8-28.5 32.4-55.1 83.6-55.1 135.5 0 7.8 1.3 15.6 1.9 18.1 3.2.6 8.4 1.3 13.6 1.3 45.4 0 102.5-30.4 135.5-71.3z"/></svg>
+    """
+
     public static func render(_ view: CapabilityView, site: Site) -> String {
         let capability = view.capability
         let headerCells = PlatformDisplay.order
             .map { "<th scope=\"col\">\(PlatformDisplay.label($0))</th>" }
             .joined()
 
-        let rows = view.rows.map { row -> String in
+        // First-party rows never interleave with packages — "you don't need
+        // a dependency" and "you need one of these" are different answers.
+        let builtIn = view.rows.filter { $0.record.package.firstParty }
+        let packageRows = view.rows.filter { !$0.record.package.firstParty }
+
+        let builtInSection: String
+        if builtIn.isEmpty {
+            builtInSection = ""
+        } else {
+            let rows = builtIn.map { row -> String in
+                let record = row.record
+                let cells = PlatformDisplay.order.map { platform in
+                    VerdictCell.cell(claim: record.platforms[platform.rawValue], platform: platform,
+                                     record: record, site: site)
+                }.joined(separator: "\n")
+                return """
+                <tr>
+                  <th scope="row">
+                    <div class="row-head">
+                      <div>
+                        \(appleMark) <a href="\(site.href("/package/\(row.slug)/"))">\(Html.escape(record.package.name))</a>
+                        <span class="pill pill-builtin">built in</span>
+                        <span class="provenance">as of \(Html.escape(record.package.version))</span>
+                      </div>
+                      <a class="details-btn" href="\(site.href("/package/\(row.slug)/"))" aria-label="\(Html.escape(record.package.name)) details">Details</a>
+                    </div>
+                    \(record.notes.map { "<p class=\"builtin-note\">\(Html.escape($0))</p>" } ?? "")
+                  </th>
+                  \(cells)
+                </tr>
+                """
+            }.joined(separator: "\n")
+            builtInSection = """
+                <section class="truth-table-wrap builtin-wrap">
+                  <h2 class="builtin-head">Built into the OS — no dependency</h2>
+                  <table class="truth-table builtin-table">
+                    <thead><tr><th scope="col">Apple framework</th>\(headerCells)</tr></thead>
+                    <tbody>
+                \(rows)
+                    </tbody>
+                  </table>
+                </section>
+            """
+        }
+
+        let rows = packageRows.map { row -> String in
             let record = row.record
             let cells = PlatformDisplay.order.map { platform in
                 VerdictCell.cell(claim: record.platforms[platform.rawValue], platform: platform,
@@ -43,7 +94,12 @@ public enum CapabilityPage {
 
         let aliases = (capability.aliases ?? []).map(Html.escape).joined(separator: " · ")
         let empty: String
-        if view.rows.isEmpty {
+        if packageRows.isEmpty && !builtIn.isEmpty {
+            empty = """
+            <p class="empty-state">No third-party package verified for this yet — the OS itself covers it (above).
+            Know one that belongs here? <a href="\(site.href("/about/#contribute"))">Tell us →</a></p>
+            """
+        } else if view.rows.isEmpty {
             if let note = capability.note {
                 empty = """
                 <p class="empty-state"><strong>Nothing on the menu — and that's the answer.</strong> \(Html.escape(note))
@@ -67,6 +123,7 @@ public enum CapabilityPage {
               \(site.categoryPills(current: capability.id.split(separator: ".").first.map(String.init)))
             </section>
             <div class="near-miss-slot" data-near-miss hidden></div>
+        \(builtInSection)
             <section class="truth-table-wrap">
               <table class="truth-table" data-capability="\(Html.escape(capability.id))">
                 <thead><tr><th scope="col">Package</th>\(headerCells)</tr></thead>
@@ -110,8 +167,9 @@ public enum PackagePage {
 
         let main = """
             <section class="page-head">
-              <p class="crumb"><a href="\(site.href("/menu/"))">Menu</a> / packages / \(Html.escape(package.slug))</p>
-              <h1>\(Html.escape(package.name))<span class="provenance-inline">as of \(Html.escape(package.version)) · <code>\(Html.escape(String(package.commit.prefix(8))))</code></span></h1>
+              <p class="crumb"><a href="\(site.href("/menu/"))">Menu</a> / \(package.firstParty ? "Apple frameworks" : "packages") / \(Html.escape(package.slug))</p>
+              <h1>\(package.firstParty ? CapabilityPage.appleMark + " " : "")\(Html.escape(package.name))\(package.firstParty ? " <span class=\"pill pill-builtin\">built in</span>" : "")<span class="provenance-inline">as of \(Html.escape(package.version)) · <code>\(Html.escape(String(package.commit.prefix(8))))</code></span></h1>
+              \(package.firstParty ? "<p class=\"builtin-note\">Ships with the OS — nothing to add to your Package.swift.</p>" : "")
               <p><a href="\(Html.escape(package.canonicalURL))" rel="noopener">\(Html.escape(package.canonicalURL))</a></p>
             </section>
             <section class="truth-table-wrap">

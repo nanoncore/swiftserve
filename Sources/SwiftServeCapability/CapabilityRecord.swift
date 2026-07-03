@@ -22,6 +22,10 @@ public enum EvidenceKind: String, Codable, Sendable {
     case manifestPlatforms
     /// Weakest: a README/docs claim. Never sufficient alone for a verdict.
     case readme
+    /// Whole-package proof: the package compiles (or fails to) for the claimed
+    /// platform at the pinned commit. Cites the `BuildVerdict` artifact for
+    /// (package, platform); the validator matches it by commit and outcome.
+    case buildVerdict
 }
 
 /// One piece of evidence. Symbol-kind anchors must name a real `SurfaceDecl`
@@ -85,27 +89,47 @@ public struct PlatformClaim: Codable, Sendable, Equatable {
     }
 }
 
-/// Which package, at which pinned truth.
+/// Which package, at which pinned truth. For Apple first-party frameworks
+/// the pin is the SDK, not a git checkout: `version` carries the Xcode
+/// marketing version, `commit` its build number, and `firstParty` is true.
 public struct RecordPackage: Sendable, Equatable {
     public let canonicalURL: String
     public let name: String
     public let aliases: [String]
-    public let version: String        // the tag the surface was extracted at
+    public let version: String        // the tag (or Xcode version) the surface was extracted at
     public let commit: String
     public let surfaceDigest: String  // ContentDigest of the surface JSON — drift detector
+    public let firstParty: Bool       // ships with the OS — no dependency to add
 
     public init(canonicalURL: String, name: String, aliases: [String], version: String,
-                commit: String, surfaceDigest: String) {
+                commit: String, surfaceDigest: String, firstParty: Bool = false) {
         self.canonicalURL = canonicalURL
         self.name = name
         self.aliases = aliases
         self.version = version
         self.commit = commit
         self.surfaceDigest = surfaceDigest
+        self.firstParty = firstParty
     }
 }
 
-extension RecordPackage: Codable {}
+extension RecordPackage: Codable {
+    private enum CodingKeys: String, CodingKey {
+        case canonicalURL, name, aliases, version, commit, surfaceDigest, firstParty
+    }
+
+    public init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        self.init(canonicalURL: try c.decode(String.self, forKey: .canonicalURL),
+                  name: try c.decode(String.self, forKey: .name),
+                  aliases: try c.decode([String].self, forKey: .aliases),
+                  version: try c.decode(String.self, forKey: .version),
+                  commit: try c.decode(String.self, forKey: .commit),
+                  surfaceDigest: try c.decode(String.self, forKey: .surfaceDigest),
+                  // The corpus predates the flag — absent means third-party.
+                  firstParty: try c.decodeIfPresent(Bool.self, forKey: .firstParty) ?? false)
+    }
+}
 
 /// A capability reference — id from the governed taxonomy, label denormalized
 /// for display.

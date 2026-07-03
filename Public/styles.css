@@ -594,3 +594,12 @@ thead th.col-focus { color: var(--accent-deep); }
 .chip-current .chip-count { background: rgba(255, 255, 255, 0.7); color: var(--accent-deep); }
 .hero .pill-bar { justify-content: center; margin-top: 14px; }
 .menu-group { scroll-margin-top: 18px; }
+
+/* ---------- First-party (Apple framework) rows ---------- */
+.pill-builtin { background: #1d1d1f; color: #f5f5f7; }
+.apple-mark { width: 0.85em; height: 0.85em; vertical-align: -0.08em; display: inline-block; }
+.builtin-wrap { margin-bottom: 6px; }
+.builtin-head { font-size: 0.95rem; letter-spacing: 0.01em; color: var(--ink-soft, #555); margin: 0 0 8px; }
+.builtin-table th[scope="row"] .builtin-note { margin: 4px 0 0; font-size: 0.82rem; font-weight: 400; color: var(--ink-soft, #666); max-width: 46ch; }
+.builtin-table tbody tr { background: linear-gradient(0deg, rgba(29, 29, 31, 0.03), rgba(29, 29, 31, 0.03)); }
+.search-results .pill-builtin { margin-left: 8px; font-size: 0.7rem; }

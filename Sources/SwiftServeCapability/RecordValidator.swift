@@ -31,6 +31,7 @@ public enum RecordValidator {
     public static func validate(_ record: CapabilityRecord,
                                 surfaces: [String: PackageSurface],
                                 digests: [String: String] = [:],
+                                buildVerdicts: [String: BuildVerdict] = [:],
                                 taxonomy: Taxonomy) -> ValidationResult {
         var diagnostics: [Diagnostic] = []
         func error(_ rule: String, _ message: String) {
@@ -115,6 +116,34 @@ public enum RecordValidator {
             }
             let presences = anchored.map { $0.1.resolvedPlatforms?[platformKey] }
 
+            // V08 — buildVerdict anchors must cite a real, matching probe.
+            // The anchor names no file; (home package, claim platform) locates
+            // the verdict, and commit + outcome must agree with the record.
+            var resolvedBuilds: [BuildVerdict] = []
+            for anchor in claim.evidence where anchor.kind == .buildVerdict {
+                if let target = anchor.package, target != home {
+                    error("V08", "\(context): buildVerdict anchors ground the home package only — \(target) needs its own record")
+                    continue
+                }
+                guard let verdict = buildVerdicts[BuildVerdict.key(canonicalURL: home, platform: platformKey)] else {
+                    error("V08", "\(context): anchor cites a build verdict but none is loaded for \(home) on \(platformKey) — run `index build-probe` first")
+                    continue
+                }
+                if verdict.commit != record.package.commit {
+                    error("V08", "\(context): build verdict is for commit \(verdict.commit.prefix(8)) but the record pins \(record.package.commit.prefix(8)) — re-probe")
+                    continue
+                }
+                if verdict.outcome == .inconclusive {
+                    error("V08", "\(context): the build probe was inconclusive (\(verdict.errorExcerpt.first ?? "no detail")) — it grounds nothing; re-probe")
+                    continue
+                }
+                if verdict.outcome == .failed, claim.status == .supported || claim.status == .conditional {
+                    error("V08", "\(context): the package does not compile for \(platformKey) — ‘\(claim.status.rawValue)’ contradicts the build verdict")
+                    continue
+                }
+                resolvedBuilds.append(verdict)
+            }
+
             // V03 — supported needs a symbol provably present.
             if claim.status == .supported {
                 let hasPresent = zip(anchored, presences).contains { pair, presence in
@@ -130,14 +159,17 @@ public enum RecordValidator {
                 }
             }
 
-            // V04 — unsupported needs a proven fence. Absence of symbols is
+            // V04 — unsupported needs a proven fence: a guard/availability
+            // anchor that resolves absent, or a failed build verdict (the
+            // package provably doesn't compile there). Absence of symbols is
             // NOT evidence of absence; that's what ‘unknown’ is for.
             if claim.status == .unsupported {
                 let hasFence = zip(anchored, presences).contains { pair, presence in
                     (pair.0.kind == .guard || pair.0.kind == .availability) && presence == .absent
                 }
-                if !hasFence {
-                    error("V04", "\(context): ‘unsupported’ needs a guard/availability anchor that resolves absent on \(platformKey) — manifest platforms and symbol absence can never ground it (say ‘unknown’)")
+                let hasFailedBuild = resolvedBuilds.contains { $0.outcome == .failed }
+                if !hasFence && !hasFailedBuild {
+                    error("V04", "\(context): ‘unsupported’ needs a guard/availability anchor that resolves absent on \(platformKey), or a failed build verdict — manifest platforms and symbol absence can never ground it (say ‘unknown’)")
                 }
             }
 
@@ -145,7 +177,11 @@ public enum RecordValidator {
             var cap = Caps.absolute
             var capReason = "absolute ceiling"
             let strongAnchors = anchored.filter { $0.0.kind != .readme && $0.0.kind != .manifestPlatforms }
-            if strongAnchors.isEmpty {
+            if strongAnchors.isEmpty && !resolvedBuilds.isEmpty {
+                // A build verdict is whole-package proof — strong on its own
+                // (grounds ‘unsupported’ via V04; ‘supported’ still needs a
+                // present symbol through V03).
+            } else if strongAnchors.isEmpty {
                 cap = min(cap, Caps.weakEvidenceOnly)
                 capReason = "readme/manifest-only evidence"
                 if claim.status != .unknown {

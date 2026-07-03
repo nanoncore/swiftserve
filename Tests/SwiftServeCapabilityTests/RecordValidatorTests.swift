@@ -204,6 +204,107 @@ import Testing
         #expect(validate(humble, binaryTargets: true).isAccepted)
     }
 
+    // MARK: - V08: the compile-the-truth channel
+
+    private func makeVerdict(outcome: BuildVerdict.Outcome, platform: String = "visionOS",
+                             commit: String = "abc123") -> [String: BuildVerdict] {
+        let verdict = BuildVerdict(
+            canonicalURL: home, commit: commit, platform: platform, outcome: outcome,
+            toolchain: "Xcode 26.6 (17F70)", sdk: "XROS26.5.sdk",
+            destination: "generic/platform=visionOS", scheme: "LiveKit",
+            errorExcerpt: outcome == .failed ? ["Options.swift:10:8: error: no such module 'UIKit'"] : [],
+            probedAt: "2026-07-03T00:00:00Z")
+        return [verdict.key: verdict]
+    }
+
+    private let buildAnchor = EvidenceAnchor(kind: .buildVerdict,
+                                             note: "probed with xcodebuild against the visionOS SDK")
+
+    @Test func v04AcceptsUnsupportedGroundedByFailedBuild() {
+        // No source fence anywhere — but the package provably doesn't compile.
+        let record = makeRecord(platforms: [
+            "visionOS": PlatformClaim(status: .unsupported, confidence: 0.9, evidence: [buildAnchor]),
+        ])
+        let result = RecordValidator.validate(record, surfaces: makeSurfaces(),
+                                              buildVerdicts: makeVerdict(outcome: .failed),
+                                              taxonomy: taxonomy)
+        #expect(result.isAccepted, "\(result.errors)")
+    }
+
+    @Test func v08RejectsBuildAnchorWithoutALoadedVerdict() {
+        let record = makeRecord(platforms: [
+            "visionOS": PlatformClaim(status: .unsupported, confidence: 0.9, evidence: [buildAnchor]),
+        ])
+        let result = validate(record)
+        #expect(result.errors.contains { $0.rule == "V08" })
+        // And with no verdict resolved, V04 still demands its fence.
+        #expect(result.errors.contains { $0.rule == "V04" })
+    }
+
+    @Test func v08RejectsVerdictAtTheWrongCommit() {
+        let record = makeRecord(platforms: [
+            "visionOS": PlatformClaim(status: .unsupported, confidence: 0.9, evidence: [buildAnchor]),
+        ])
+        let result = RecordValidator.validate(record, surfaces: makeSurfaces(),
+                                              buildVerdicts: makeVerdict(outcome: .failed, commit: "stale00"),
+                                              taxonomy: taxonomy)
+        #expect(result.errors.contains { $0.rule == "V08" && $0.message.contains("re-probe") })
+    }
+
+    @Test func v08RejectsSupportedThatContradictsAFailedBuild() {
+        // RoomOptions.url is unguarded (present on visionOS) — but the package
+        // doesn't compile there. The build verdict outranks the symbol.
+        let urlAnchor = EvidenceAnchor(kind: .symbol, symbol: "RoomOptions.url",
+                                       file: "Sources/LiveKit/Types/Options.swift", line: 30)
+        let record = makeRecord(capabilityID: "audio.noise-cancellation", platforms: [
+            "visionOS": PlatformClaim(status: .supported, confidence: 0.8,
+                                      evidence: [urlAnchor, buildAnchor]),
+        ])
+        let result = RecordValidator.validate(record, surfaces: makeSurfaces(),
+                                              buildVerdicts: makeVerdict(outcome: .failed),
+                                              taxonomy: taxonomy)
+        #expect(result.errors.contains { $0.rule == "V08" && $0.message.contains("contradicts") })
+    }
+
+    @Test func v08BuiltVerdictCorroboratesAPresentSymbol() {
+        // The Bucket-B shape: manifest silent, symbol unguarded, and the
+        // package compiles for visionOS — supported, with the receipt.
+        let urlAnchor = EvidenceAnchor(kind: .symbol, symbol: "RoomOptions.url",
+                                       file: "Sources/LiveKit/Types/Options.swift", line: 30)
+        let record = makeRecord(capabilityID: "audio.noise-cancellation", platforms: [
+            "visionOS": PlatformClaim(status: .supported, confidence: 0.85,
+                                      evidence: [urlAnchor, buildAnchor]),
+        ])
+        let result = RecordValidator.validate(record, surfaces: makeSurfaces(),
+                                              buildVerdicts: makeVerdict(outcome: .built),
+                                              taxonomy: taxonomy)
+        #expect(result.isAccepted, "\(result.errors)")
+    }
+
+    @Test func v08RejectsInconclusiveProbes_theyGroundNothing() {
+        // A broken harness (missing destination, no scheme) must never pass
+        // for "doesn't compile".
+        let record = makeRecord(platforms: [
+            "visionOS": PlatformClaim(status: .unsupported, confidence: 0.9, evidence: [buildAnchor]),
+        ])
+        let result = RecordValidator.validate(record, surfaces: makeSurfaces(),
+                                              buildVerdicts: makeVerdict(outcome: .inconclusive),
+                                              taxonomy: taxonomy)
+        #expect(result.errors.contains { $0.rule == "V08" && $0.message.contains("inconclusive") })
+        #expect(result.errors.contains { $0.rule == "V04" })
+    }
+
+    @Test func v08RejectsBuildAnchorOnACompanionPackage() {
+        let foreign = EvidenceAnchor(kind: .buildVerdict, package: companion)
+        let record = makeRecord(platforms: [
+            "visionOS": PlatformClaim(status: .unsupported, confidence: 0.9, evidence: [foreign]),
+        ])
+        let result = RecordValidator.validate(record, surfaces: makeSurfaces(),
+                                              buildVerdicts: makeVerdict(outcome: .failed),
+                                              taxonomy: taxonomy)
+        #expect(result.errors.contains { $0.rule == "V08" && $0.message.contains("home package") })
+    }
+
     @Test func v06RejectsCommitDrift() {
         let record = makeRecord(commit: "stale00", platforms: [
             "iOS": PlatformClaim(status: .supported, confidence: 0.9, evidence: [goodSymbolAnchor]),

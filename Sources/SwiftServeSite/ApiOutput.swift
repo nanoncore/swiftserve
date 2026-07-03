@@ -116,6 +116,7 @@ public enum ApiOutput {
             let slug, name: String
             let aliases: [String]
             let caps: Int
+            let fp: Bool   // Apple first-party — search results mark these
         }
         struct Index: Encodable {
             let v: Int
@@ -137,7 +138,7 @@ public enum ApiOutput {
         let packages = model.packages.map { package in
             PackageEntry(slug: package.slug, name: package.name,
                          aliases: package.records.first?.package.aliases ?? [],
-                         caps: package.records.count)
+                         caps: package.records.count, fp: package.firstParty)
         }
         return try encoder.encode(Index(v: 1, capabilities: capabilities, packages: packages))
     }
