@@ -6,6 +6,9 @@ import SwiftServeCapability
 /// on the same dataset produces zero diff.
 public enum SiteGenerator {
 
+    /// Platforms with a /on/<platform> pivot page. Order is emission order.
+    public static let pivotPlatforms: [Platform] = [.visionOS, .watchOS]
+
     public struct Output: Sendable, Equatable {
         public let path: String     // relative to the out dir
         public let bytes: Data
@@ -36,11 +39,15 @@ public enum SiteGenerator {
             add("package/\(package.slug)/index.html", PackagePage.render(package, site: site))
         }
 
-        // The platform pivot — visionOS only for now; the view is
-        // platform-parameterized so others can join when their data lands.
-        let visionPivot = OnPlatformView(model: site.model, platform: .visionOS)
-        add("on/visionos/index.html", OnPlatformPage.render(visionPivot, site: site))
-        add("api/on/visionos.json", try ApiOutput.onPlatformJSON(visionPivot, site: site))
+        // The platform pivots — one URL per platform whose story earns a
+        // page. The view is platform-parameterized; add to this list when a
+        // platform's data lands.
+        for platform in Self.pivotPlatforms {
+            let pivot = OnPlatformView(model: site.model, platform: platform)
+            let slug = platform.rawValue.lowercased()
+            add("on/\(slug)/index.html", OnPlatformPage.render(pivot, site: site))
+            add("api/on/\(slug).json", try ApiOutput.onPlatformJSON(pivot, site: site))
+        }
 
         add("api/index.json", try ApiOutput.rootIndex(site: site))
         add("api/taxonomy.json", try ApiOutput.encoder.encode(site.model.dataset.taxonomy))
@@ -94,7 +101,10 @@ public enum SiteGenerator {
 
         - Start here: \(site.basePath)/api/index.json
         - Capability pivot (the question agents ask): \(site.basePath)/api/capabilities/{id}.json
-        - Platform pivot (the state of visionOS): \(site.basePath)/on/visionos/ · JSON: \(site.basePath)/api/on/visionos.json
+        \(Self.pivotPlatforms.map { platform in
+            let slug = platform.rawValue.lowercased()
+            return "- Platform pivot (the state of \(platform.rawValue)): \(site.basePath)/on/\(slug)/ · JSON: \(site.basePath)/api/on/\(slug).json"
+        }.joined(separator: "\n"))
         - How verdicts are derived: \(site.basePath)/about/
         - For agents (CLI, skill, examples): \(site.basePath)/agents/
         - Install (plugin, skill, CLI): \(site.basePath)/get/

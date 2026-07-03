@@ -17,6 +17,11 @@ public enum OnPlatformPage {
     public static func render(_ view: OnPlatformView, site: Site) -> String {
         let platformLabel = PlatformDisplay.label(view.platform)
 
+        // The fence yard is the visionOS demo — the immersive layer renders
+        // that platform's feed, so only the visionOS pivot carries the slot
+        // and pays the one small script tag. Other pivots stay flat.
+        let immersive = view.platform == .visionOS
+
         let main = """
             <section class="page-head on-head">
               <p class="crumb"><a href="\(site.href("/menu/"))">Menu</a> / on \(platformLabel)</p>
@@ -25,7 +30,7 @@ public enum OnPlatformPage {
               every count below is derived from the records, and every verdict carries its receipt.</p>
             </section>
         \(statTiles(view))
-            <div class="xr-slot" data-xr hidden></div>
+        \(immersive ? #"    <div class="xr-slot" data-xr hidden></div>"# : "")
         \(builtInSection(view, site: site, platformLabel: platformLabel))
         \(capabilitiesSection(view, site: site, platformLabel: platformLabel))
         \(fenceSection(view, site: site, platformLabel: platformLabel))
@@ -37,12 +42,11 @@ public enum OnPlatformPage {
             </section>
         """
         // xr-entry.js is pure progressive enhancement: it feature-detects
-        // immersive support and stays silent everywhere else, so this page —
-        // and only this page — pays its one small script tag.
+        // immersive support and stays silent everywhere else.
         return site.page(title: "The state of \(platformLabel)",
                          description: "What the Swift ecosystem actually serves on \(platformLabel): \(view.supported) supported verdicts, \(view.unsupported) proven fences with compiler receipts, \(view.unknown) honest unknowns.",
                          path: path(for: view.platform), wide: true,
-                         extraHead: site.script("/xr-entry.js"), main: main)
+                         extraHead: immersive ? site.script("/xr-entry.js") : "", main: main)
     }
 
     /// "/api/on/visionos.json" — the page's one-fetch data feed.

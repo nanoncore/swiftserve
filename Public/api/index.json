@@ -4,7 +4,7 @@
     "capability" : "/api/capabilities/{id}.json",
     "package" : "/api/packages/{slug}.json",
     "packages" : "/api/packages/index.json",
-    "platformPivot" : "/api/on/visionos.json",
+    "platformPivot" : "/api/on/{platform}.json",
     "recordSchema" : "/api/schemas/capability-record-v1.json",
     "search" : "/api/search-index.json",
     "taxonomy" : "/api/taxonomy.json"

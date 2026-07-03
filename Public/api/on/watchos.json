@@ -1,0 +1,2832 @@
+{
+  "builtIn" : [
+    {
+      "capabilities" : [
+        {
+          "id" : "audio.echo-cancellation",
+          "label" : "Echo cancellation"
+        },
+        {
+          "id" : "audio.file-io",
+          "label" : "Audio file reading/writing"
+        },
+        {
+          "id" : "audio.metering",
+          "label" : "Audio level metering"
+        },
+        {
+          "id" : "audio.playback",
+          "label" : "Audio playback"
+        },
+        {
+          "id" : "audio.recording",
+          "label" : "Microphone recording"
+        },
+        {
+          "id" : "audio.session-management",
+          "label" : "Audio session management"
+        },
+        {
+          "id" : "audio.synthesis",
+          "label" : "Audio synthesis / DSP"
+        }
+      ],
+      "name" : "AVFAudio",
+      "slug" : "avfaudio",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "capabilities" : [
+        {
+          "id" : "media.streaming.hls",
+          "label" : "HLS streaming"
+        },
+        {
+          "id" : "video.playback",
+          "label" : "Video playback"
+        }
+      ],
+      "name" : "AVFoundation",
+      "slug" : "avfoundation",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "capabilities" : [
+        {
+          "id" : "storage.cloud-sync",
+          "label" : "Cloud sync"
+        }
+      ],
+      "name" : "CloudKit",
+      "slug" : "cloudkit",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "capabilities" : [
+        {
+          "id" : "storage.cloud-sync",
+          "label" : "Cloud sync"
+        },
+        {
+          "id" : "storage.document-store",
+          "label" : "Object / document store"
+        },
+        {
+          "id" : "storage.encryption",
+          "label" : "Database encryption"
+        },
+        {
+          "id" : "storage.in-memory",
+          "label" : "In-memory database"
+        },
+        {
+          "id" : "storage.migrations",
+          "label" : "Schema migrations"
+        },
+        {
+          "id" : "storage.observation",
+          "label" : "Reactive queries / change tracking"
+        },
+        {
+          "id" : "storage.query-builder",
+          "label" : "Type-safe queries"
+        }
+      ],
+      "name" : "CoreData",
+      "slug" : "coredata",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "capabilities" : [
+        {
+          "id" : "media.now-playing",
+          "label" : "Now-playing / remote controls"
+        }
+      ],
+      "name" : "MediaPlayer",
+      "slug" : "mediaplayer",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "capabilities" : [
+        {
+          "id" : "storage.keychain",
+          "label" : "Keychain storage"
+        }
+      ],
+      "name" : "Security",
+      "slug" : "security",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "capabilities" : [
+        {
+          "id" : "audio.classification",
+          "label" : "Sound classification"
+        }
+      ],
+      "name" : "SoundAnalysis",
+      "slug" : "soundanalysis",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "capabilities" : [
+        {
+          "id" : "storage.cloud-sync",
+          "label" : "Cloud sync"
+        },
+        {
+          "id" : "storage.document-store",
+          "label" : "Object / document store"
+        },
+        {
+          "id" : "storage.in-memory",
+          "label" : "In-memory database"
+        },
+        {
+          "id" : "storage.migrations",
+          "label" : "Schema migrations"
+        },
+        {
+          "id" : "storage.observation",
+          "label" : "Reactive queries / change tracking"
+        },
+        {
+          "id" : "storage.query-builder",
+          "label" : "Type-safe queries"
+        }
+      ],
+      "name" : "SwiftData",
+      "slug" : "swiftdata",
+      "version" : "Xcode 26.6"
+    }
+  ],
+  "capabilities" : [
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "audio.background-playback",
+      "label" : "Background audio playback",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/audio.background-playback/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "SwiftAudioEx",
+          "slug" : "swiftaudioex",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "SoundAnalysis"
+      ],
+      "id" : "audio.classification",
+      "label" : "Sound classification",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/audio.classification/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "SPFKSoundAnalysis",
+          "slug" : "spfk-sound-analysis",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "audio.codec.mp3",
+      "label" : "MP3 encoding/decoding",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/audio.codec.mp3/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "SwiftLAME",
+          "slug" : "swiftlame",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "audio.codec.opus",
+      "label" : "Opus encoding/decoding",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/audio.codec.opus/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "swift-opus",
+          "slug" : "swift-opus",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "audio.device-selection",
+      "label" : "Audio device selection",
+      "packages" : 2,
+      "supported" : 0,
+      "truthTable" : "/can/audio.device-selection/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "CAAudioHardware",
+          "slug" : "caaudiohardware",
+          "status" : "unknown"
+        },
+        {
+          "name" : "SPFKAudioHardware",
+          "slug" : "spfk-audio-hardware",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "AVFAudio"
+      ],
+      "id" : "audio.echo-cancellation",
+      "label" : "Echo cancellation",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/audio.echo-cancellation/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "AECAudioStream",
+          "slug" : "aecaudiostream",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "AVFAudio"
+      ],
+      "id" : "audio.file-io",
+      "label" : "Audio file reading/writing",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/audio.file-io/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "AudioKit",
+          "slug" : "audiokit",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "AVFAudio"
+      ],
+      "id" : "audio.metering",
+      "label" : "Audio level metering",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/audio.metering/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "AudioKit",
+          "slug" : "audiokit",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "audio.noise-cancellation",
+      "label" : "Noise cancellation",
+      "packages" : 2,
+      "supported" : 0,
+      "truthTable" : "/can/audio.noise-cancellation/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "LiveKit",
+          "slug" : "client-sdk-swift",
+          "status" : "unknown"
+        },
+        {
+          "name" : "LiveKitKrispNoiseFilter",
+          "slug" : "swift-krisp-noise-filter",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "audio.pitch-detection",
+      "label" : "Pitch detection",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/audio.pitch-detection/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "SoundpipeAudioKit",
+          "slug" : "soundpipeaudiokit",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "AVFAudio"
+      ],
+      "id" : "audio.playback",
+      "label" : "Audio playback",
+      "packages" : 5,
+      "supported" : 0,
+      "truthTable" : "/can/audio.playback/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "AudioManager",
+          "slug" : "audiomanager",
+          "status" : "unknown"
+        },
+        {
+          "name" : "SFBAudioEngine",
+          "slug" : "sfbaudioengine",
+          "status" : "unknown"
+        },
+        {
+          "name" : "swift-system-sound",
+          "slug" : "swift-system-sound",
+          "status" : "unknown"
+        },
+        {
+          "name" : "SwiftAudioEx",
+          "slug" : "swiftaudioex",
+          "status" : "unknown"
+        },
+        {
+          "name" : "SwiftySound",
+          "slug" : "swiftysound",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "AVFAudio"
+      ],
+      "id" : "audio.recording",
+      "label" : "Microphone recording",
+      "packages" : 3,
+      "supported" : 0,
+      "truthTable" : "/can/audio.recording/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "AudioKit",
+          "slug" : "audiokit",
+          "status" : "unknown"
+        },
+        {
+          "name" : "AudioRecorder",
+          "slug" : "audiorecorder",
+          "status" : "unknown"
+        },
+        {
+          "name" : "FDSoundActivatedRecorder",
+          "slug" : "fdsoundactivatedrecorder",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "AVFAudio"
+      ],
+      "id" : "audio.session-management",
+      "label" : "Audio session management",
+      "packages" : 2,
+      "supported" : 0,
+      "truthTable" : "/can/audio.session-management/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "LiveKit",
+          "slug" : "client-sdk-swift",
+          "status" : "unsupported"
+        },
+        {
+          "name" : "SwiftySound",
+          "slug" : "swiftysound",
+          "status" : "unsupported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "audio.spatial",
+      "label" : "Spatial audio",
+      "packages" : 0,
+      "supported" : 0,
+      "truthTable" : "/can/audio.spatial/?on=watchOS",
+      "verdicts" : [
+
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "audio.streaming",
+      "label" : "Audio streaming",
+      "packages" : 3,
+      "supported" : 0,
+      "truthTable" : "/can/audio.streaming/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "ChunkedAudioPlayer",
+          "slug" : "swift-chunked-audio-player",
+          "status" : "unknown"
+        },
+        {
+          "name" : "FRadioPlayer",
+          "slug" : "fradioplayer",
+          "status" : "unknown"
+        },
+        {
+          "name" : "SwiftAudioPlayer",
+          "slug" : "swiftaudioplayer",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "AVFAudio"
+      ],
+      "id" : "audio.synthesis",
+      "label" : "Audio synthesis / DSP",
+      "packages" : 6,
+      "supported" : 0,
+      "truthTable" : "/can/audio.synthesis/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "AudioKit",
+          "slug" : "audiokit",
+          "status" : "unknown"
+        },
+        {
+          "name" : "DevoloopAudioKit",
+          "slug" : "devoloopaudiokit",
+          "status" : "unknown"
+        },
+        {
+          "name" : "DunneAudioKit",
+          "slug" : "dunneaudiokit",
+          "status" : "unknown"
+        },
+        {
+          "name" : "SoulAudioKit",
+          "slug" : "soulaudiokit",
+          "status" : "unknown"
+        },
+        {
+          "name" : "SporthAudioKit",
+          "slug" : "sporthaudiokit",
+          "status" : "unknown"
+        },
+        {
+          "name" : "STKAudioKit",
+          "slug" : "stkaudiokit",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "audio.waveform-visualization",
+      "label" : "Waveform visualization",
+      "packages" : 4,
+      "supported" : 0,
+      "truthTable" : "/can/audio.waveform-visualization/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "AudioKit Waveform",
+          "slug" : "waveform",
+          "status" : "unknown"
+        },
+        {
+          "name" : "AudioKitUI",
+          "slug" : "audiokitui",
+          "status" : "unknown"
+        },
+        {
+          "name" : "DSWaveformImage",
+          "slug" : "dswaveformimage",
+          "status" : "unknown"
+        },
+        {
+          "name" : "FDWaveformView",
+          "slug" : "fdwaveformview",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "image.async-loading",
+      "label" : "Async image loading",
+      "packages" : 4,
+      "supported" : 3,
+      "truthTable" : "/can/image.async-loading/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "Kingfisher",
+          "slug" : "kingfisher",
+          "status" : "supported"
+        },
+        {
+          "name" : "Nuke",
+          "slug" : "nuke",
+          "status" : "supported"
+        },
+        {
+          "name" : "SDWebImageSwiftUI",
+          "slug" : "sdwebimageswiftui",
+          "status" : "supported"
+        },
+        {
+          "name" : "SDWebImage",
+          "slug" : "sdwebimage",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "image.caching",
+      "label" : "Image caching",
+      "packages" : 2,
+      "supported" : 2,
+      "truthTable" : "/can/image.caching/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "Kingfisher",
+          "slug" : "kingfisher",
+          "status" : "supported"
+        },
+        {
+          "name" : "Nuke",
+          "slug" : "nuke",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "image.downsampling",
+      "label" : "Downsampling / resizing",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/image.downsampling/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "Kingfisher",
+          "slug" : "kingfisher",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "image.gif",
+      "label" : "Animated GIF playback",
+      "packages" : 3,
+      "supported" : 0,
+      "truthTable" : "/can/image.gif/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "Kingfisher",
+          "slug" : "kingfisher",
+          "status" : "unsupported"
+        },
+        {
+          "name" : "SDWebImageSwiftUI",
+          "slug" : "sdwebimageswiftui",
+          "status" : "unsupported"
+        },
+        {
+          "name" : "Gifu",
+          "slug" : "gifu",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "image.prefetching",
+      "label" : "Prefetching",
+      "packages" : 2,
+      "supported" : 2,
+      "truthTable" : "/can/image.prefetching/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "Kingfisher",
+          "slug" : "kingfisher",
+          "status" : "supported"
+        },
+        {
+          "name" : "Nuke",
+          "slug" : "nuke",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "image.svg",
+      "label" : "SVG rendering",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/image.svg/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "SVGView",
+          "slug" : "svgview",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "image.webp",
+      "label" : "WebP decoding",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/image.webp/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "Kingfisher",
+          "slug" : "kingfisher",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "MediaPlayer"
+      ],
+      "id" : "media.now-playing",
+      "label" : "Now-playing / remote controls",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/media.now-playing/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "SwiftAudioEx",
+          "slug" : "swiftaudioex",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "AVFoundation"
+      ],
+      "id" : "media.streaming.hls",
+      "label" : "HLS streaming",
+      "packages" : 3,
+      "supported" : 1,
+      "truthTable" : "/can/media.streaming.hls/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "HLSKit",
+          "slug" : "swift-hls-kit",
+          "status" : "supported"
+        },
+        {
+          "name" : "HLSCore",
+          "slug" : "hlscore",
+          "status" : "unknown"
+        },
+        {
+          "name" : "HLSVideoCache",
+          "slug" : "hlsvideocache",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "media.streaming.rtmp",
+      "label" : "RTMP streaming",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/media.streaming.rtmp/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "RTMPKit",
+          "slug" : "swift-rtmp-kit",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "media.streaming.webrtc",
+      "label" : "WebRTC real-time streaming",
+      "packages" : 3,
+      "supported" : 0,
+      "truthTable" : "/can/media.streaming.webrtc/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "LiveKit",
+          "slug" : "client-sdk-swift",
+          "status" : "unknown"
+        },
+        {
+          "name" : "StreamVideo",
+          "slug" : "stream-video-swift",
+          "status" : "unknown"
+        },
+        {
+          "name" : "WebRTC (stasel)",
+          "slug" : "webrtc",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "midi.file",
+      "label" : "MIDI file read/write",
+      "packages" : 3,
+      "supported" : 1,
+      "truthTable" : "/can/midi.file/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "MIDIKitSMF",
+          "slug" : "swift-midi-file",
+          "status" : "supported"
+        },
+        {
+          "name" : "AudioKit",
+          "slug" : "audiokit",
+          "status" : "unknown"
+        },
+        {
+          "name" : "MidiParser",
+          "slug" : "midiparser",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "midi.io",
+      "label" : "MIDI input/output",
+      "packages" : 5,
+      "supported" : 0,
+      "truthTable" : "/can/midi.io/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "MIDIKitIO",
+          "slug" : "swift-midi-io",
+          "status" : "unsupported"
+        },
+        {
+          "name" : "AudioKit",
+          "slug" : "audiokit",
+          "status" : "unknown"
+        },
+        {
+          "name" : "CombineMIDI",
+          "slug" : "combinemidi",
+          "status" : "unknown"
+        },
+        {
+          "name" : "MorkAndMIDI",
+          "slug" : "morkandmidi",
+          "status" : "unknown"
+        },
+        {
+          "name" : "WebMIDIKit",
+          "slug" : "webmidikit",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "network.certificate-pinning",
+      "label" : "Certificate pinning",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/network.certificate-pinning/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "Alamofire",
+          "slug" : "alamofire",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "network.http-client",
+      "label" : "HTTP client",
+      "packages" : 2,
+      "supported" : 2,
+      "truthTable" : "/can/network.http-client/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "Alamofire",
+          "slug" : "alamofire",
+          "status" : "supported"
+        },
+        {
+          "name" : "Moya",
+          "slug" : "moya",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "network.logging",
+      "label" : "Network logging / inspection",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/network.logging/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "Pulse",
+          "slug" : "pulse",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "network.multipart-upload",
+      "label" : "Multipart upload",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/network.multipart-upload/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "Alamofire",
+          "slug" : "alamofire",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "network.reachability",
+      "label" : "Network reachability",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/network.reachability/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "Alamofire",
+          "slug" : "alamofire",
+          "status" : "unsupported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "network.request-mocking",
+      "label" : "Request stubbing / mocking",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/network.request-mocking/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "Moya",
+          "slug" : "moya",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "network.retry",
+      "label" : "Request retry / backoff",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/network.retry/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "Alamofire",
+          "slug" : "alamofire",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "network.server-sent-events",
+      "label" : "Server-sent events",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/network.server-sent-events/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "LDSwiftEventSource",
+          "slug" : "swift-eventsource",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "network.websockets",
+      "label" : "WebSockets",
+      "packages" : 2,
+      "supported" : 2,
+      "truthTable" : "/can/network.websockets/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "Starscream",
+          "slug" : "starscream",
+          "status" : "supported"
+        },
+        {
+          "name" : "SwiftNIO",
+          "slug" : "swift-nio",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "speech.stt",
+      "label" : "Speech-to-text",
+      "packages" : 5,
+      "supported" : 1,
+      "truthTable" : "/can/speech.stt/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "WhisperKit",
+          "slug" : "whisperkit",
+          "status" : "supported"
+        },
+        {
+          "name" : "FluidAudio",
+          "slug" : "fluidaudio",
+          "status" : "unknown"
+        },
+        {
+          "name" : "SpeziSpeech",
+          "slug" : "spezispeech",
+          "status" : "unknown"
+        },
+        {
+          "name" : "SwiftSpeech",
+          "slug" : "swiftspeech",
+          "status" : "unknown"
+        },
+        {
+          "name" : "SwiftWhisper",
+          "slug" : "swiftwhisper",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "speech.tts",
+      "label" : "Text-to-speech",
+      "packages" : 6,
+      "supported" : 1,
+      "truthTable" : "/can/speech.tts/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "MapboxSpeech",
+          "slug" : "mapbox-speech-swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "MLXAudio",
+          "slug" : "mlx-audio-swift",
+          "status" : "unknown"
+        },
+        {
+          "name" : "SpeziSpeech",
+          "slug" : "spezispeech",
+          "status" : "unknown"
+        },
+        {
+          "name" : "SwiftEdgeTTS",
+          "slug" : "swiftedgetts",
+          "status" : "unknown"
+        },
+        {
+          "name" : "SwiftTTS",
+          "slug" : "swift-tts",
+          "status" : "unknown"
+        },
+        {
+          "name" : "VOICEVOX",
+          "slug" : "voicevox-client",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "CloudKit",
+        "CoreData",
+        "SwiftData"
+      ],
+      "id" : "storage.cloud-sync",
+      "label" : "Cloud sync",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/storage.cloud-sync/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "defaults",
+          "slug" : "defaults",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "storage.codable",
+      "label" : "Codable persistence",
+      "packages" : 6,
+      "supported" : 6,
+      "truthTable" : "/can/storage.codable/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "blackbird",
+          "slug" : "blackbird",
+          "status" : "supported"
+        },
+        {
+          "name" : "boutique",
+          "slug" : "boutique",
+          "status" : "supported"
+        },
+        {
+          "name" : "cache",
+          "slug" : "cache",
+          "status" : "supported"
+        },
+        {
+          "name" : "defaults",
+          "slug" : "defaults",
+          "status" : "supported"
+        },
+        {
+          "name" : "grdb.swift",
+          "slug" : "grdb.swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "sqlite.swift",
+          "slug" : "sqlite.swift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "storage.concurrency",
+      "label" : "Concurrent access",
+      "packages" : 3,
+      "supported" : 3,
+      "truthTable" : "/can/storage.concurrency/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "blackbird",
+          "slug" : "blackbird",
+          "status" : "supported"
+        },
+        {
+          "name" : "fluent-sqlite-driver",
+          "slug" : "fluent-sqlite-driver",
+          "status" : "supported"
+        },
+        {
+          "name" : "grdb.swift",
+          "slug" : "grdb.swift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "storage.disk-cache",
+      "label" : "Disk caching",
+      "packages" : 2,
+      "supported" : 2,
+      "truthTable" : "/can/storage.disk-cache/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "boutique",
+          "slug" : "boutique",
+          "status" : "supported"
+        },
+        {
+          "name" : "cache",
+          "slug" : "cache",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "CoreData",
+        "SwiftData"
+      ],
+      "id" : "storage.document-store",
+      "label" : "Object / document store",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/storage.document-store/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "realm-swift",
+          "slug" : "realm-swift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "CoreData"
+      ],
+      "id" : "storage.encryption",
+      "label" : "Database encryption",
+      "packages" : 3,
+      "supported" : 0,
+      "truthTable" : "/can/storage.encryption/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "grdb.swift",
+          "slug" : "grdb.swift",
+          "status" : "unknown"
+        },
+        {
+          "name" : "realm-swift",
+          "slug" : "realm-swift",
+          "status" : "unknown"
+        },
+        {
+          "name" : "sqlite.swift",
+          "slug" : "sqlite.swift",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "storage.full-text-search",
+      "label" : "Full-text search",
+      "packages" : 2,
+      "supported" : 2,
+      "truthTable" : "/can/storage.full-text-search/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "grdb.swift",
+          "slug" : "grdb.swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "sqlite.swift",
+          "slug" : "sqlite.swift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "CoreData",
+        "SwiftData"
+      ],
+      "id" : "storage.in-memory",
+      "label" : "In-memory database",
+      "packages" : 6,
+      "supported" : 5,
+      "truthTable" : "/can/storage.in-memory/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "blackbird",
+          "slug" : "blackbird",
+          "status" : "supported"
+        },
+        {
+          "name" : "boutique",
+          "slug" : "boutique",
+          "status" : "supported"
+        },
+        {
+          "name" : "cache",
+          "slug" : "cache",
+          "status" : "supported"
+        },
+        {
+          "name" : "fluent-sqlite-driver",
+          "slug" : "fluent-sqlite-driver",
+          "status" : "supported"
+        },
+        {
+          "name" : "sqlite.swift",
+          "slug" : "sqlite.swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "grdb.swift",
+          "slug" : "grdb.swift",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "storage.key-value",
+      "label" : "Key-value storage",
+      "packages" : 3,
+      "supported" : 3,
+      "truthTable" : "/can/storage.key-value/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "boutique",
+          "slug" : "boutique",
+          "status" : "supported"
+        },
+        {
+          "name" : "cache",
+          "slug" : "cache",
+          "status" : "supported"
+        },
+        {
+          "name" : "defaults",
+          "slug" : "defaults",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "Security"
+      ],
+      "id" : "storage.keychain",
+      "label" : "Keychain storage",
+      "packages" : 3,
+      "supported" : 3,
+      "truthTable" : "/can/storage.keychain/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "boutique",
+          "slug" : "boutique",
+          "status" : "supported"
+        },
+        {
+          "name" : "keychainaccess",
+          "slug" : "keychainaccess",
+          "status" : "supported"
+        },
+        {
+          "name" : "valet",
+          "slug" : "valet",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "CoreData",
+        "SwiftData"
+      ],
+      "id" : "storage.migrations",
+      "label" : "Schema migrations",
+      "packages" : 5,
+      "supported" : 5,
+      "truthTable" : "/can/storage.migrations/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "blackbird",
+          "slug" : "blackbird",
+          "status" : "supported"
+        },
+        {
+          "name" : "fluent",
+          "slug" : "fluent",
+          "status" : "supported"
+        },
+        {
+          "name" : "grdb.swift",
+          "slug" : "grdb.swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "realm-swift",
+          "slug" : "realm-swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "sqlite.swift",
+          "slug" : "sqlite.swift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "CoreData",
+        "SwiftData"
+      ],
+      "id" : "storage.observation",
+      "label" : "Reactive queries / change tracking",
+      "packages" : 6,
+      "supported" : 6,
+      "truthTable" : "/can/storage.observation/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "blackbird",
+          "slug" : "blackbird",
+          "status" : "supported"
+        },
+        {
+          "name" : "boutique",
+          "slug" : "boutique",
+          "status" : "supported"
+        },
+        {
+          "name" : "cache",
+          "slug" : "cache",
+          "status" : "supported"
+        },
+        {
+          "name" : "defaults",
+          "slug" : "defaults",
+          "status" : "supported"
+        },
+        {
+          "name" : "grdb.swift",
+          "slug" : "grdb.swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "realm-swift",
+          "slug" : "realm-swift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "CoreData",
+        "SwiftData"
+      ],
+      "id" : "storage.query-builder",
+      "label" : "Type-safe queries",
+      "packages" : 5,
+      "supported" : 5,
+      "truthTable" : "/can/storage.query-builder/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "blackbird",
+          "slug" : "blackbird",
+          "status" : "supported"
+        },
+        {
+          "name" : "fluent",
+          "slug" : "fluent",
+          "status" : "supported"
+        },
+        {
+          "name" : "grdb.swift",
+          "slug" : "grdb.swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "realm-swift",
+          "slug" : "realm-swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "sqlite.swift",
+          "slug" : "sqlite.swift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "storage.sqlite",
+      "label" : "SQLite access",
+      "packages" : 4,
+      "supported" : 4,
+      "truthTable" : "/can/storage.sqlite/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "blackbird",
+          "slug" : "blackbird",
+          "status" : "supported"
+        },
+        {
+          "name" : "fluent-sqlite-driver",
+          "slug" : "fluent-sqlite-driver",
+          "status" : "supported"
+        },
+        {
+          "name" : "grdb.swift",
+          "slug" : "grdb.swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "sqlite.swift",
+          "slug" : "sqlite.swift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.autolayout-dsl",
+      "label" : "Auto Layout DSL",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/ui.autolayout-dsl/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "snapkit",
+          "slug" : "snapkit",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.bottom-sheet",
+      "label" : "Bottom sheets",
+      "packages" : 2,
+      "supported" : 0,
+      "truthTable" : "/can/ui.bottom-sheet/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "floatingpanel",
+          "slug" : "floatingpanel",
+          "status" : "unknown"
+        },
+        {
+          "name" : "popupview",
+          "slug" : "popupview",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.charts",
+      "label" : "Charts",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/ui.charts/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "charts",
+          "slug" : "charts",
+          "status" : "unsupported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.haptics",
+      "label" : "Haptic feedback",
+      "packages" : 2,
+      "supported" : 1,
+      "truthTable" : "/can/ui.haptics/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "confettiswiftui",
+          "slug" : "confettiswiftui",
+          "status" : "supported"
+        },
+        {
+          "name" : "pow",
+          "slug" : "pow",
+          "status" : "unsupported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.markdown-rendering",
+      "label" : "Markdown rendering",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/ui.markdown-rendering/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "swift-markdown-ui",
+          "slug" : "swift-markdown-ui",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.pager",
+      "label" : "Paging / carousel",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/ui.pager/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "swiftuipager",
+          "slug" : "swiftuipager",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.particle-effects",
+      "label" : "Particle effects",
+      "packages" : 3,
+      "supported" : 2,
+      "truthTable" : "/can/ui.particle-effects/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "confettiswiftui",
+          "slug" : "confettiswiftui",
+          "status" : "supported"
+        },
+        {
+          "name" : "vortex",
+          "slug" : "vortex",
+          "status" : "supported"
+        },
+        {
+          "name" : "pow",
+          "slug" : "pow",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.progress-hud",
+      "label" : "Loading indicators",
+      "packages" : 2,
+      "supported" : 0,
+      "truthTable" : "/can/ui.progress-hud/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "progresshud",
+          "slug" : "progresshud",
+          "status" : "unknown"
+        },
+        {
+          "name" : "swiftui-pull-to-refresh",
+          "slug" : "swiftui-pull-to-refresh",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.pull-to-refresh",
+      "label" : "Pull to refresh",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/ui.pull-to-refresh/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "swiftui-pull-to-refresh",
+          "slug" : "swiftui-pull-to-refresh",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.rich-text",
+      "label" : "Rich text editing",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/ui.rich-text/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "richtextkit",
+          "slug" : "richtextkit",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.skeleton-loading",
+      "label" : "Skeleton loading",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/ui.skeleton-loading/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "skeletonui",
+          "slug" : "skeletonui",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.toast",
+      "label" : "Toasts / banners",
+      "packages" : 3,
+      "supported" : 1,
+      "truthTable" : "/can/ui.toast/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "popupview",
+          "slug" : "popupview",
+          "status" : "supported"
+        },
+        {
+          "name" : "drops",
+          "slug" : "drops",
+          "status" : "unsupported"
+        },
+        {
+          "name" : "progresshud",
+          "slug" : "progresshud",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.transition-effects",
+      "label" : "View transitions / motion effects",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/ui.transition-effects/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "pow",
+          "slug" : "pow",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.vector-animation",
+      "label" : "Vector animation playback",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/ui.vector-animation/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "lottie-ios",
+          "slug" : "lottie-ios",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "video.calling",
+      "label" : "Video calling",
+      "packages" : 2,
+      "supported" : 0,
+      "truthTable" : "/can/video.calling/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "LiveKit",
+          "slug" : "client-sdk-swift",
+          "status" : "unknown"
+        },
+        {
+          "name" : "StreamVideo",
+          "slug" : "stream-video-swift",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "video.capture",
+      "label" : "Camera capture",
+      "packages" : 2,
+      "supported" : 0,
+      "truthTable" : "/can/video.capture/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "ExyteMediaPicker",
+          "slug" : "mediapicker",
+          "status" : "unknown"
+        },
+        {
+          "name" : "VideoIO",
+          "slug" : "videoio",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "AVFoundation"
+      ],
+      "id" : "video.playback",
+      "label" : "Video playback",
+      "packages" : 6,
+      "supported" : 0,
+      "truthTable" : "/can/video.playback/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "KSPlayer",
+          "slug" : "ksplayer",
+          "status" : "unknown"
+        },
+        {
+          "name" : "ModernAVPlayer",
+          "slug" : "modernavplayer",
+          "status" : "unknown"
+        },
+        {
+          "name" : "MuxPlayerSwift",
+          "slug" : "mux-player-swift",
+          "status" : "unknown"
+        },
+        {
+          "name" : "Player",
+          "slug" : "player",
+          "status" : "unknown"
+        },
+        {
+          "name" : "Swifty360Player",
+          "slug" : "swifty360player",
+          "status" : "unknown"
+        },
+        {
+          "name" : "YouTubePlayerKit",
+          "slug" : "youtubeplayerkit",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "video.screen-sharing",
+      "label" : "Screen sharing",
+      "packages" : 2,
+      "supported" : 0,
+      "truthTable" : "/can/video.screen-sharing/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "LiveKit",
+          "slug" : "client-sdk-swift",
+          "status" : "unknown"
+        },
+        {
+          "name" : "StreamVideo",
+          "slug" : "stream-video-swift",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "voice.calling",
+      "label" : "Voice calling",
+      "packages" : 2,
+      "supported" : 0,
+      "truthTable" : "/can/voice.calling/?on=watchOS",
+      "verdicts" : [
+        {
+          "name" : "LiveKit",
+          "slug" : "client-sdk-swift",
+          "status" : "unknown"
+        },
+        {
+          "name" : "StreamVideo",
+          "slug" : "stream-video-swift",
+          "status" : "unknown"
+        }
+      ]
+    }
+  ],
+  "fenced" : [
+    {
+      "fences" : [
+        {
+          "capability" : "network.reachability",
+          "capabilityLabel" : "Network reachability",
+          "compilerProven" : false,
+          "receipt" : "#if canImport(SystemConfiguration) — fenced canImport(SystemConfiguration) — the framework watchOS doesn't have",
+          "worksOn" : [
+            "iOS",
+            "macOS",
+            "tvOS",
+            "visionOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "Alamofire",
+      "slug" : "alamofire",
+      "version" : "5.12.0"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "audio.spatial",
+          "capabilityLabel" : "Spatial audio",
+          "compilerProven" : false,
+          "receipt" : "not exported by the watchOS SDK symbol graph",
+          "worksOn" : [
+            "iOS",
+            "macOS",
+            "tvOS",
+            "visionOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "AVFAudio",
+      "slug" : "avfaudio",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "ui.charts",
+          "capabilityLabel" : "Charts",
+          "compilerProven" : false,
+          "receipt" : "#if os(iOS) || os(tvOS) — Core NSUIView shim (base class of every chart view) exists only under os(iOS) || os(tvOS); surface digest marks watchOS absent.",
+          "worksOn" : [
+            "iOS",
+            "macOS",
+            "tvOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "charts",
+      "slug" : "charts",
+      "version" : "5.1.0"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "ui.haptics",
+          "capabilityLabel" : "Haptic feedback",
+          "compilerProven" : false,
+          "receipt" : "absent from the watchOS SDK symbol graphs",
+          "worksOn" : [
+            "iOS",
+            "macOS",
+            "tvOS",
+            "visionOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "CoreHaptics",
+      "slug" : "corehaptics",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "midi.io",
+          "capabilityLabel" : "MIDI input/output",
+          "compilerProven" : false,
+          "receipt" : "not exported by the watchOS SDK symbol graph",
+          "worksOn" : [
+            "iOS",
+            "macOS",
+            "visionOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "CoreMIDI",
+      "slug" : "coremidi",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "ui.toast",
+          "capabilityLabel" : "Toasts / banners",
+          "compilerProven" : false,
+          "receipt" : "#if os(iOS) — Core Drops class is guarded by #if os(iOS); surface digest resolves watchOS as absent (gap) for this decl.",
+          "worksOn" : [
+            "iOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "drops",
+      "slug" : "drops",
+      "version" : "1.7.0"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "image.gif",
+          "capabilityLabel" : "Animated GIF playback",
+          "compilerProven" : false,
+          "receipt" : "#if !os(watchOS) — fenced !os(watchOS)",
+          "worksOn" : [
+            "iOS",
+            "macOS",
+            "tvOS",
+            "visionOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "Kingfisher",
+      "slug" : "kingfisher",
+      "version" : "8.10.0"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "audio.session-management",
+          "capabilityLabel" : "Audio session management",
+          "compilerProven" : false,
+          "receipt" : "#if os(iOS) || os(visionOS) || os(tvOS)",
+          "worksOn" : [
+            "iOS",
+            "tvOS",
+            "visionOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "LiveKit",
+      "slug" : "client-sdk-swift",
+      "version" : "2.15.1"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "midi.io",
+          "capabilityLabel" : "MIDI input/output",
+          "compilerProven" : false,
+          "receipt" : "#if !os(tvOS) && !os(watchOS) — MIDI endpoint object — the I/O surface",
+          "worksOn" : [
+            "iOS",
+            "macOS",
+            "visionOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "MIDIKitIO",
+      "slug" : "swift-midi-io",
+      "version" : "1.1.0"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "ui.haptics",
+          "capabilityLabel" : "Haptic feedback",
+          "compilerProven" : false,
+          "receipt" : "#if os(iOS) — Core haptics symbol is guarded by #if os(iOS); surface digest gaps mark watchOS absent. Pow provides no watchOS haptics path (WatchKit haptics are not wrapped).",
+          "worksOn" : [
+            "iOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "pow",
+      "slug" : "pow",
+      "version" : "1.0.6"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "image.gif",
+          "capabilityLabel" : "Animated GIF playback",
+          "compilerProven" : false,
+          "receipt" : "#if !os(watchOS) — fenced !os(watchOS)",
+          "worksOn" : [
+            "iOS",
+            "macOS",
+            "tvOS",
+            "visionOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "SDWebImageSwiftUI",
+      "slug" : "sdwebimageswiftui",
+      "version" : "3.1.4"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "audio.session-management",
+          "capabilityLabel" : "Audio session management",
+          "compilerProven" : false,
+          "receipt" : "#if os(iOS) || os(tvOS) — session categories exist only where AVAudioSession does",
+          "worksOn" : [
+            "iOS",
+            "tvOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "SwiftySound",
+      "slug" : "swiftysound",
+      "version" : "1.3.0"
+    }
+  ],
+  "platform" : "watchOS",
+  "schemaVersion" : 1,
+  "stats" : {
+    "conditional" : 0,
+    "packages" : 107,
+    "records" : 201,
+    "supported" : 104,
+    "unknown" : 85,
+    "unsupported" : 12
+  },
+  "unknowns" : [
+    {
+      "capability" : "audio.echo-cancellation",
+      "capabilityLabel" : "Echo cancellation",
+      "name" : "AECAudioStream",
+      "slug" : "aecaudiostream",
+      "why" : "watchOS absent from manifest floors; no source fence"
+    },
+    {
+      "capability" : "audio.file-io",
+      "capabilityLabel" : "Audio file reading/writing",
+      "name" : "AudioKit",
+      "slug" : "audiokit",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "audio.metering",
+      "capabilityLabel" : "Audio level metering",
+      "name" : "AudioKit",
+      "slug" : "audiokit",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "audio.recording",
+      "capabilityLabel" : "Microphone recording",
+      "name" : "AudioKit",
+      "slug" : "audiokit",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "audio.synthesis",
+      "capabilityLabel" : "Audio synthesis / DSP",
+      "name" : "AudioKit",
+      "slug" : "audiokit",
+      "why" : "watchOS absent from manifest floors; no source fence proves absence"
+    },
+    {
+      "capability" : "midi.file",
+      "capabilityLabel" : "MIDI file read/write",
+      "name" : "AudioKit",
+      "slug" : "audiokit",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "midi.io",
+      "capabilityLabel" : "MIDI input/output",
+      "name" : "AudioKit",
+      "slug" : "audiokit",
+      "why" : "watchOS absent from manifest floors; MIDI symbols resolve present but intent is unstated"
+    },
+    {
+      "capability" : "audio.waveform-visualization",
+      "capabilityLabel" : "Waveform visualization",
+      "name" : "AudioKit Waveform",
+      "slug" : "waveform",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "audio.waveform-visualization",
+      "capabilityLabel" : "Waveform visualization",
+      "name" : "AudioKitUI",
+      "slug" : "audiokitui",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "audio.playback",
+      "capabilityLabel" : "Audio playback",
+      "name" : "AudioManager",
+      "slug" : "audiomanager",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "audio.recording",
+      "capabilityLabel" : "Microphone recording",
+      "name" : "AudioRecorder",
+      "slug" : "audiorecorder",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "audio.device-selection",
+      "capabilityLabel" : "Audio device selection",
+      "name" : "CAAudioHardware",
+      "slug" : "caaudiohardware",
+      "why" : "manifest declares macOS only"
+    },
+    {
+      "capability" : "audio.streaming",
+      "capabilityLabel" : "Audio streaming",
+      "name" : "ChunkedAudioPlayer",
+      "slug" : "swift-chunked-audio-player",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "midi.io",
+      "capabilityLabel" : "MIDI input/output",
+      "name" : "CombineMIDI",
+      "slug" : "combinemidi",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "audio.synthesis",
+      "capabilityLabel" : "Audio synthesis / DSP",
+      "name" : "DevoloopAudioKit",
+      "slug" : "devoloopaudiokit",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "audio.waveform-visualization",
+      "capabilityLabel" : "Waveform visualization",
+      "name" : "DSWaveformImage",
+      "slug" : "dswaveformimage",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "audio.synthesis",
+      "capabilityLabel" : "Audio synthesis / DSP",
+      "name" : "DunneAudioKit",
+      "slug" : "dunneaudiokit",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "video.capture",
+      "capabilityLabel" : "Camera capture",
+      "name" : "ExyteMediaPicker",
+      "slug" : "mediapicker",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "audio.recording",
+      "capabilityLabel" : "Microphone recording",
+      "name" : "FDSoundActivatedRecorder",
+      "slug" : "fdsoundactivatedrecorder",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "audio.waveform-visualization",
+      "capabilityLabel" : "Waveform visualization",
+      "name" : "FDWaveformView",
+      "slug" : "fdwaveformview",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "ui.bottom-sheet",
+      "capabilityLabel" : "Bottom sheets",
+      "name" : "floatingpanel",
+      "slug" : "floatingpanel",
+      "why" : "Manifest declares only .iOS(.v12); no watchOS floor. UIKit-based UIViewController surface; digest records no watchOS gap but no positive build evidence either."
+    },
+    {
+      "capability" : "speech.stt",
+      "capabilityLabel" : "Speech-to-text",
+      "name" : "FluidAudio",
+      "slug" : "fluidaudio",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "audio.streaming",
+      "capabilityLabel" : "Audio streaming",
+      "name" : "FRadioPlayer",
+      "slug" : "fradioplayer",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "image.gif",
+      "capabilityLabel" : "Animated GIF playback",
+      "name" : "Gifu",
+      "slug" : "gifu",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "storage.encryption",
+      "capabilityLabel" : "Database encryption",
+      "name" : "grdb.swift",
+      "slug" : "grdb.swift"
+    },
+    {
+      "capability" : "storage.in-memory",
+      "capabilityLabel" : "In-memory database",
+      "name" : "grdb.swift",
+      "slug" : "grdb.swift",
+      "why" : "README: 'Database queues support in-memory databases' (v7.11.1 README.md line 423)"
+    },
+    {
+      "capability" : "media.streaming.hls",
+      "capabilityLabel" : "HLS streaming",
+      "name" : "HLSCore",
+      "slug" : "hlscore",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "media.streaming.hls",
+      "capabilityLabel" : "HLS streaming",
+      "name" : "HLSVideoCache",
+      "slug" : "hlsvideocache",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "image.webp",
+      "capabilityLabel" : "WebP decoding",
+      "name" : "Kingfisher",
+      "slug" : "kingfisher",
+      "why" : "WebP needs the separate KingfisherWebP coder package — nothing in this package serves it"
+    },
+    {
+      "capability" : "video.playback",
+      "capabilityLabel" : "Video playback",
+      "name" : "KSPlayer",
+      "slug" : "ksplayer",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "audio.noise-cancellation",
+      "capabilityLabel" : "Noise cancellation",
+      "name" : "LiveKit",
+      "slug" : "client-sdk-swift",
+      "why" : "watchOS absent from the manifest platforms (iOS/macOS/macCatalyst/tvOS); the SDK's WebRTC binary dependency makes watchOS support doubtful, but nothing in source proves absence"
+    },
+    {
+      "capability" : "media.streaming.webrtc",
+      "capabilityLabel" : "WebRTC real-time streaming",
+      "name" : "LiveKit",
+      "slug" : "client-sdk-swift",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "video.calling",
+      "capabilityLabel" : "Video calling",
+      "name" : "LiveKit",
+      "slug" : "client-sdk-swift",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "video.screen-sharing",
+      "capabilityLabel" : "Screen sharing",
+      "name" : "LiveKit",
+      "slug" : "client-sdk-swift",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "voice.calling",
+      "capabilityLabel" : "Voice calling",
+      "name" : "LiveKit",
+      "slug" : "client-sdk-swift",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "audio.noise-cancellation",
+      "capabilityLabel" : "Noise cancellation",
+      "name" : "LiveKitKrispNoiseFilter",
+      "slug" : "swift-krisp-noise-filter",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "ui.vector-animation",
+      "capabilityLabel" : "Vector animation playback",
+      "name" : "lottie-ios",
+      "slug" : "lottie-ios",
+      "why" : "Package.swift declares no watchOS platform floor (iOS/macOS/tvOS/visionOS only). Missing floor is not absence evidence, so status is unknown."
+    },
+    {
+      "capability" : "midi.file",
+      "capabilityLabel" : "MIDI file read/write",
+      "name" : "MidiParser",
+      "slug" : "midiparser",
+      "why" : "empty manifest"
+    },
+    {
+      "capability" : "speech.tts",
+      "capabilityLabel" : "Text-to-speech",
+      "name" : "MLXAudio",
+      "slug" : "mlx-audio-swift",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "video.playback",
+      "capabilityLabel" : "Video playback",
+      "name" : "ModernAVPlayer",
+      "slug" : "modernavplayer",
+      "why" : "watchOS absent from manifest floors; no source fence"
+    },
+    {
+      "capability" : "midi.io",
+      "capabilityLabel" : "MIDI input/output",
+      "name" : "MorkAndMIDI",
+      "slug" : "morkandmidi",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "video.playback",
+      "capabilityLabel" : "Video playback",
+      "name" : "MuxPlayerSwift",
+      "slug" : "mux-player-swift",
+      "why" : "watchOS absent from manifest floors; no source fence"
+    },
+    {
+      "capability" : "video.playback",
+      "capabilityLabel" : "Video playback",
+      "name" : "Player",
+      "slug" : "player",
+      "why" : "watchOS absent from manifest floors; no source fence"
+    },
+    {
+      "capability" : "ui.bottom-sheet",
+      "capabilityLabel" : "Bottom sheets",
+      "name" : "popupview",
+      "slug" : "popupview",
+      "why" : "Public decl present per surface digest, but internal sheet implementation is os(iOS)-gated; behavior on watchOS unverified"
+    },
+    {
+      "capability" : "ui.particle-effects",
+      "capabilityLabel" : "Particle effects",
+      "name" : "pow",
+      "slug" : "pow",
+      "why" : "Surface shows no watchOS gap (decl is unguarded), but gaps are #if-derived, not build verdicts; manifest declares no watchOS floor and README requirements omit watchOS. No build verification, so unknown."
+    },
+    {
+      "capability" : "ui.transition-effects",
+      "capabilityLabel" : "View transitions / motion effects",
+      "name" : "pow",
+      "slug" : "pow",
+      "why" : "Surface shows no watchOS gap (decl is unguarded), but gaps are #if-derived, not build verdicts; manifest declares no watchOS floor and README requirements omit watchOS. No build verification, so unknown."
+    },
+    {
+      "capability" : "ui.progress-hud",
+      "capabilityLabel" : "Loading indicators",
+      "name" : "progresshud",
+      "slug" : "progresshud",
+      "why" : "Only .iOS(.v17) declared; missing floor is not absence evidence."
+    },
+    {
+      "capability" : "ui.toast",
+      "capabilityLabel" : "Toasts / banners",
+      "name" : "progresshud",
+      "slug" : "progresshud",
+      "why" : "Only .iOS(.v17) declared; missing floor is not absence evidence."
+    },
+    {
+      "capability" : "storage.encryption",
+      "capabilityLabel" : "Database encryption",
+      "name" : "realm-swift",
+      "slug" : "realm-swift",
+      "why" : "README 'Fully Encrypted' section demonstrates Realm.Configuration(encryptionKey: key) with a 64-byte key ('Data can be encrypted in-flight and at-rest')."
+    },
+    {
+      "capability" : "ui.rich-text",
+      "capabilityLabel" : "Rich text editing",
+      "name" : "richtextkit",
+      "slug" : "richtextkit",
+      "why" : "The core editor guard omits watchOS (with 'iOS'/'macOS' defined only for iOS/macCatalyst/macOS in Package.swift), so the editor view is compiled out on watchOS. The digest resolves this as conditional, not absent, so absence cannot be proven."
+    },
+    {
+      "capability" : "image.async-loading",
+      "capabilityLabel" : "Async image loading",
+      "name" : "SDWebImage",
+      "slug" : "sdwebimage",
+      "why" : "SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era"
+    },
+    {
+      "capability" : "audio.playback",
+      "capabilityLabel" : "Audio playback",
+      "name" : "SFBAudioEngine",
+      "slug" : "sfbaudioengine",
+      "why" : "the playback engine's primary surface is Objective-C (194 files unparsed in v1); Swift-side extraction found no anchorable player symbol — honestly unverified rather than guessed"
+    },
+    {
+      "capability" : "ui.autolayout-dsl",
+      "capabilityLabel" : "Auto Layout DSL",
+      "name" : "snapkit",
+      "slug" : "snapkit",
+      "why" : "UIView-backed DSL branch: digest gaps mark watchOS absent for this variant."
+    },
+    {
+      "capability" : "audio.synthesis",
+      "capabilityLabel" : "Audio synthesis / DSP",
+      "name" : "SoulAudioKit",
+      "slug" : "soulaudiokit",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "audio.pitch-detection",
+      "capabilityLabel" : "Pitch detection",
+      "name" : "SoundpipeAudioKit",
+      "slug" : "soundpipeaudiokit",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "speech.stt",
+      "capabilityLabel" : "Speech-to-text",
+      "name" : "SpeziSpeech",
+      "slug" : "spezispeech",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "speech.tts",
+      "capabilityLabel" : "Text-to-speech",
+      "name" : "SpeziSpeech",
+      "slug" : "spezispeech",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "audio.device-selection",
+      "capabilityLabel" : "Audio device selection",
+      "name" : "SPFKAudioHardware",
+      "slug" : "spfk-audio-hardware",
+      "why" : "manifest declares macOS only"
+    },
+    {
+      "capability" : "audio.classification",
+      "capabilityLabel" : "Sound classification",
+      "name" : "SPFKSoundAnalysis",
+      "slug" : "spfk-sound-analysis",
+      "why" : "manifest declares macOS only"
+    },
+    {
+      "capability" : "audio.synthesis",
+      "capabilityLabel" : "Audio synthesis / DSP",
+      "name" : "SporthAudioKit",
+      "slug" : "sporthaudiokit",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "storage.encryption",
+      "capabilityLabel" : "Database encryption",
+      "name" : "sqlite.swift",
+      "slug" : "sqlite.swift",
+      "why" : "SQLCipher product is linked only .when(platforms: applePlatforms, traits: [\"SQLCipher\"]); watchOS is in applePlatforms, so encryption works when the SQLCipher trait is enabled — conditional, hence unknown."
+    },
+    {
+      "capability" : "audio.synthesis",
+      "capabilityLabel" : "Audio synthesis / DSP",
+      "name" : "STKAudioKit",
+      "slug" : "stkaudiokit",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "media.streaming.webrtc",
+      "capabilityLabel" : "WebRTC real-time streaming",
+      "name" : "StreamVideo",
+      "slug" : "stream-video-swift",
+      "why" : "watchOS absent from manifest floors (iOS-only manifest)"
+    },
+    {
+      "capability" : "video.calling",
+      "capabilityLabel" : "Video calling",
+      "name" : "StreamVideo",
+      "slug" : "stream-video-swift",
+      "why" : "watchOS absent from manifest floors (iOS-only manifest)"
+    },
+    {
+      "capability" : "video.screen-sharing",
+      "capabilityLabel" : "Screen sharing",
+      "name" : "StreamVideo",
+      "slug" : "stream-video-swift",
+      "why" : "watchOS absent from manifest floors (iOS-only manifest)"
+    },
+    {
+      "capability" : "voice.calling",
+      "capabilityLabel" : "Voice calling",
+      "name" : "StreamVideo",
+      "slug" : "stream-video-swift",
+      "why" : "watchOS absent from manifest floors (iOS-only manifest)"
+    },
+    {
+      "capability" : "audio.playback",
+      "capabilityLabel" : "Audio playback",
+      "name" : "swift-system-sound",
+      "slug" : "swift-system-sound",
+      "why" : "empty manifest"
+    },
+    {
+      "capability" : "audio.background-playback",
+      "capabilityLabel" : "Background audio playback",
+      "name" : "SwiftAudioEx",
+      "slug" : "swiftaudioex",
+      "why" : "manifest declares iOS only"
+    },
+    {
+      "capability" : "audio.playback",
+      "capabilityLabel" : "Audio playback",
+      "name" : "SwiftAudioEx",
+      "slug" : "swiftaudioex",
+      "why" : "manifest declares iOS only; AVPlayer exists elsewhere but the package states no intent"
+    },
+    {
+      "capability" : "media.now-playing",
+      "capabilityLabel" : "Now-playing / remote controls",
+      "name" : "SwiftAudioEx",
+      "slug" : "swiftaudioex",
+      "why" : "manifest declares iOS only; AVPlayer exists elsewhere but the package states no intent"
+    },
+    {
+      "capability" : "audio.streaming",
+      "capabilityLabel" : "Audio streaming",
+      "name" : "SwiftAudioPlayer",
+      "slug" : "swiftaudioplayer",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "speech.tts",
+      "capabilityLabel" : "Text-to-speech",
+      "name" : "SwiftEdgeTTS",
+      "slug" : "swiftedgetts",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "audio.codec.mp3",
+      "capabilityLabel" : "MP3 encoding/decoding",
+      "name" : "SwiftLAME",
+      "slug" : "swiftlame",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "speech.stt",
+      "capabilityLabel" : "Speech-to-text",
+      "name" : "SwiftSpeech",
+      "slug" : "swiftspeech",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "speech.tts",
+      "capabilityLabel" : "Text-to-speech",
+      "name" : "SwiftTTS",
+      "slug" : "swift-tts",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "ui.progress-hud",
+      "capabilityLabel" : "Loading indicators",
+      "name" : "swiftui-pull-to-refresh",
+      "slug" : "swiftui-pull-to-refresh",
+      "why" : "Surface parses PRESENT, but UIViewRepresentable/UIActivityIndicatorView are unavailable on watchOS and the reference is unguarded; unknown."
+    },
+    {
+      "capability" : "ui.pull-to-refresh",
+      "capabilityLabel" : "Pull to refresh",
+      "name" : "swiftui-pull-to-refresh",
+      "slug" : "swiftui-pull-to-refresh",
+      "why" : "Surface parses PRESENT, but UIViewRepresentable/UIActivityIndicatorView are unavailable on watchOS and the reference is unguarded; no absence guard evidence, so unknown."
+    },
+    {
+      "capability" : "speech.stt",
+      "capabilityLabel" : "Speech-to-text",
+      "name" : "SwiftWhisper",
+      "slug" : "swiftwhisper",
+      "why" : "memory constraints make whisper.cpp doubtful; nothing proven"
+    },
+    {
+      "capability" : "video.playback",
+      "capabilityLabel" : "Video playback",
+      "name" : "Swifty360Player",
+      "slug" : "swifty360player",
+      "why" : "watchOS absent from manifest floors; no source fence"
+    },
+    {
+      "capability" : "audio.playback",
+      "capabilityLabel" : "Audio playback",
+      "name" : "SwiftySound",
+      "slug" : "swiftysound",
+      "why" : "README targets iOS/macOS/tvOS; no watchOS signal either way"
+    },
+    {
+      "capability" : "video.capture",
+      "capabilityLabel" : "Camera capture",
+      "name" : "VideoIO",
+      "slug" : "videoio",
+      "why" : "watchOS absent from manifest floors; no camera API there anyway — but nothing in source proves it"
+    },
+    {
+      "capability" : "speech.tts",
+      "capabilityLabel" : "Text-to-speech",
+      "name" : "VOICEVOX",
+      "slug" : "voicevox-client",
+      "why" : "watchOS absent from manifest floors"
+    },
+    {
+      "capability" : "midi.io",
+      "capabilityLabel" : "MIDI input/output",
+      "name" : "WebMIDIKit",
+      "slug" : "webmidikit",
+      "why" : "empty manifest"
+    },
+    {
+      "capability" : "media.streaming.webrtc",
+      "capabilityLabel" : "WebRTC real-time streaming",
+      "name" : "WebRTC (stasel)",
+      "slug" : "webrtc",
+      "why" : "binary-only"
+    },
+    {
+      "capability" : "video.playback",
+      "capabilityLabel" : "Video playback",
+      "name" : "YouTubePlayerKit",
+      "slug" : "youtubeplayerkit",
+      "why" : "watchOS absent from manifest floors; no source fence"
+    }
+  ]
+}

@@ -29,7 +29,7 @@ public enum ApiOutput {
                 "capability": "\(base)/api/capabilities/{id}.json",
                 "search": "\(base)/api/search-index.json",
                 "recordSchema": "\(base)/api/schemas/capability-record-v1.json",
-                "platformPivot": "\(base)/api/on/visionos.json",
+                "platformPivot": "\(base)/api/on/{platform}.json",
             ]))
     }
 

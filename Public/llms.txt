@@ -6,6 +6,7 @@
 - Start here: /api/index.json
 - Capability pivot (the question agents ask): /api/capabilities/{id}.json
 - Platform pivot (the state of visionOS): /on/visionos/ · JSON: /api/on/visionos.json
+- Platform pivot (the state of watchOS): /on/watchos/ · JSON: /api/on/watchos.json
 - How verdicts are derived: /about/
 - For agents (CLI, skill, examples): /agents/
 - Install (plugin, skill, CLI): /get/

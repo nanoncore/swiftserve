@@ -187,20 +187,37 @@ import SwiftServeCapability
         // page renders exactly as before the WebXR layer existed.
         #expect(pivot.contains("<div class=\"xr-slot\" data-xr hidden></div>"))
         #expect(pivot.contains("<script src=\"/xr-entry.js\" defer></script>"))
-        // No other page pays for the entry script.
+        // No other page pays for the entry script — including the other
+        // platform pivots: the yard is the visionOS demo.
         for path in ["index.html", "menu/index.html", "can/audio.playback/index.html",
-                     "package/audiokit/index.html"] {
+                     "package/audiokit/index.html", "on/watchos/index.html"] {
             let page = String(decoding: outputs.first { $0.path == path }!.bytes, as: UTF8.self)
             #expect(!page.contains("xr-entry.js"), "\(path) should not load xr-entry.js")
+            if path.hasPrefix("on/") {
+                #expect(!page.contains("xr-slot"), "\(path) should not carry the xr slot")
+            }
         }
     }
 
-    @Test func homeAndMenuLinkToThePivot() throws {
+    @Test func watchosPivotShipsPageAndFeed() throws {
+        let outputs = try SiteGenerator.plan(site: makeSite())
+        let page = String(decoding: outputs.first { $0.path == "on/watchos/index.html" }!.bytes,
+                          as: UTF8.self)
+        #expect(page.contains("The state of <em>watchOS</em>"))
+        #expect(page.contains("/api/on/watchos.json"))
+        let feed = try JSONSerialization.jsonObject(
+            with: outputs.first { $0.path == "api/on/watchos.json" }!.bytes) as! [String: Any]
+        #expect(feed["platform"] as? String == "watchOS")
+    }
+
+    @Test func homeAndMenuLinkToThePivots() throws {
         let outputs = try SiteGenerator.plan(site: makeSite())
         let home = String(decoding: outputs.first { $0.path == "index.html" }!.bytes, as: UTF8.self)
         let menu = String(decoding: outputs.first { $0.path == "menu/index.html" }!.bytes, as: UTF8.self)
         #expect(home.contains("href=\"/on/visionos/\""))
         #expect(menu.contains("href=\"/on/visionos/\""))
+        #expect(home.contains("href=\"/on/watchos/\""))
+        #expect(menu.contains("href=\"/on/watchos/\""))
     }
 
     @Test func basePathPrefixesPivotHrefs() throws {

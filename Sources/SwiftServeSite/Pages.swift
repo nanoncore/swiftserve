@@ -274,7 +274,8 @@ public enum MenuPage {
             <section class="page-head">
               <h1>The Menu</h1>
               <p>Every capability the index can answer for. Dots show platform coverage across indexed packages.</p>
-              <p>Shipping for the headset? <a href="\(site.href("/on/visionos/"))">The state of visionOS →</a></p>
+              <p>Shipping for the headset? <a href="\(site.href("/on/visionos/"))">The state of visionOS →</a>
+              &nbsp;·&nbsp; For the wrist? <a href="\(site.href("/on/watchos/"))">The state of watchOS →</a></p>
               \(site.categoryPills())
             </section>
         \(sections)
@@ -301,6 +302,7 @@ public enum HomePage {
               <div class="chips">
                 <a class="chip chip-accent" href="\(site.href("/menu/"))">Browse the Menu →</a>
                 <a class="chip" href="\(site.href("/on/visionos/"))">The state of visionOS →</a>
+                <a class="chip" href="\(site.href("/on/watchos/"))">The state of watchOS →</a>
                 <a class="chip" href="\(site.href("/get/"))">Get SwiftServe →</a>
               </div>
               \(site.categoryPills())
