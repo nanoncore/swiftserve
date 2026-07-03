@@ -151,10 +151,20 @@ public struct OnPlatformView: Sendable, Equatable {
 
     /// Per-capability coverage — each one links to /can/<id>/?on=<platform>.
     public struct CapabilityCoverage: Sendable, Equatable {
+        /// One package's verdict for this capability here — enough for a
+        /// consumer (the WebXR detail panels) to render the roster without a
+        /// second fetch.
+        public struct PackageVerdict: Sendable, Equatable {
+            public let name: String
+            public let slug: String
+            public let status: ClaimStatus
+        }
         public let capability: Taxonomy.Capability
         public let supported: Int         // third-party packages serving it here
         public let packages: Int          // third-party packages with a verdict
         public let builtInCovers: Bool    // an OS framework serves it here
+        public let builtInNames: [String] // which frameworks, when it does
+        public let verdicts: [PackageVerdict]  // third-party, best verdict first
     }
 
     /// One proven fence: the record's receipt for "not on this platform".
@@ -226,13 +236,26 @@ public struct OnPlatformView: Sendable, Equatable {
 
         capabilities = model.capabilities.filter { !$0.rows.isEmpty }.map { view in
             let thirdParty = view.rows.filter { !$0.record.package.firstParty }
+            let rank: [ClaimStatus: Int] = [.supported: 0, .conditional: 1, .unsupported: 2, .unknown: 3]
+            let verdicts = thirdParty.map { row in
+                CapabilityCoverage.PackageVerdict(
+                    name: row.record.package.name, slug: row.slug,
+                    status: row.record.platforms[key]?.status ?? .unknown)
+            }.sorted { a, b in
+                rank[a.status]! == rank[b.status]!
+                    ? a.name.lowercased() < b.name.lowercased()
+                    : rank[a.status]! < rank[b.status]!
+            }
+            let builtInNames = view.rows.filter {
+                $0.record.package.firstParty && $0.record.platforms[key]?.status == .supported
+            }.map { $0.record.package.name }
             return CapabilityCoverage(
                 capability: view.capability,
-                supported: thirdParty.filter { $0.record.platforms[key]?.status == .supported }.count,
-                packages: thirdParty.count,
-                builtInCovers: view.rows.contains {
-                    $0.record.package.firstParty && $0.record.platforms[key]?.status == .supported
-                })
+                supported: verdicts.filter { $0.status == .supported }.count,
+                packages: verdicts.count,
+                builtInCovers: !builtInNames.isEmpty,
+                builtInNames: builtInNames,
+                verdicts: verdicts)
         }
 
         // Fences and unknowns walk the packages so the lists mirror the

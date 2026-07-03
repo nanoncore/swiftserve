@@ -48,10 +48,15 @@ public enum ApiOutput {
             let slug, name, version: String
             let capabilities: [BuiltInCoverage]
         }
+        struct Verdict: Encodable {
+            let name, slug, status: String
+        }
         struct Coverage: Encodable {
             let id, label: String
             let supported, packages: Int
             let builtInCovers: Bool
+            let builtInNames: [String]
+            let verdicts: [Verdict]
             let truthTable: String
         }
         struct Fence: Encodable {
@@ -95,6 +100,10 @@ public enum ApiOutput {
                 Coverage(id: entry.capability.id, label: entry.capability.label,
                          supported: entry.supported, packages: entry.packages,
                          builtInCovers: entry.builtInCovers,
+                         builtInNames: entry.builtInNames,
+                         verdicts: entry.verdicts.map {
+                             Verdict(name: $0.name, slug: $0.slug, status: $0.status.rawValue)
+                         },
                          truthTable: "\(base)/can/\(entry.capability.id)/?on=\(view.platform.rawValue)")
             },
             fenced: view.fenced.map { package in

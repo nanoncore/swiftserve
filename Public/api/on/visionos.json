@@ -104,371 +104,1107 @@
   "capabilities" : [
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "audio.background-playback",
       "label" : "Background audio playback",
       "packages" : 1,
       "supported" : 0,
-      "truthTable" : "/can/audio.background-playback/?on=visionOS"
+      "truthTable" : "/can/audio.background-playback/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "SwiftAudioEx",
+          "slug" : "swiftaudioex",
+          "status" : "unsupported"
+        }
+      ]
     },
     {
       "builtInCovers" : true,
+      "builtInNames" : [
+        "SoundAnalysis"
+      ],
       "id" : "audio.classification",
       "label" : "Sound classification",
       "packages" : 1,
       "supported" : 1,
-      "truthTable" : "/can/audio.classification/?on=visionOS"
+      "truthTable" : "/can/audio.classification/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "SPFKSoundAnalysis",
+          "slug" : "spfk-sound-analysis",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "audio.codec.mp3",
       "label" : "MP3 encoding/decoding",
       "packages" : 1,
       "supported" : 1,
-      "truthTable" : "/can/audio.codec.mp3/?on=visionOS"
+      "truthTable" : "/can/audio.codec.mp3/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "SwiftLAME",
+          "slug" : "swiftlame",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "audio.codec.opus",
       "label" : "Opus encoding/decoding",
       "packages" : 1,
       "supported" : 0,
-      "truthTable" : "/can/audio.codec.opus/?on=visionOS"
+      "truthTable" : "/can/audio.codec.opus/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "swift-opus",
+          "slug" : "swift-opus",
+          "status" : "unknown"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "audio.device-selection",
       "label" : "Audio device selection",
       "packages" : 2,
       "supported" : 0,
-      "truthTable" : "/can/audio.device-selection/?on=visionOS"
+      "truthTable" : "/can/audio.device-selection/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "CAAudioHardware",
+          "slug" : "caaudiohardware",
+          "status" : "unknown"
+        },
+        {
+          "name" : "SPFKAudioHardware",
+          "slug" : "spfk-audio-hardware",
+          "status" : "unknown"
+        }
+      ]
     },
     {
       "builtInCovers" : true,
+      "builtInNames" : [
+        "AVFAudio"
+      ],
       "id" : "audio.echo-cancellation",
       "label" : "Echo cancellation",
       "packages" : 1,
       "supported" : 1,
-      "truthTable" : "/can/audio.echo-cancellation/?on=visionOS"
+      "truthTable" : "/can/audio.echo-cancellation/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "AECAudioStream",
+          "slug" : "aecaudiostream",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : true,
+      "builtInNames" : [
+        "AVFAudio"
+      ],
       "id" : "audio.file-io",
       "label" : "Audio file reading/writing",
       "packages" : 1,
       "supported" : 1,
-      "truthTable" : "/can/audio.file-io/?on=visionOS"
+      "truthTable" : "/can/audio.file-io/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "AudioKit",
+          "slug" : "audiokit",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : true,
+      "builtInNames" : [
+        "AVFAudio"
+      ],
       "id" : "audio.metering",
       "label" : "Audio level metering",
       "packages" : 1,
       "supported" : 1,
-      "truthTable" : "/can/audio.metering/?on=visionOS"
+      "truthTable" : "/can/audio.metering/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "AudioKit",
+          "slug" : "audiokit",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "audio.noise-cancellation",
       "label" : "Noise cancellation",
       "packages" : 2,
       "supported" : 1,
-      "truthTable" : "/can/audio.noise-cancellation/?on=visionOS"
+      "truthTable" : "/can/audio.noise-cancellation/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "LiveKit",
+          "slug" : "client-sdk-swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "LiveKitKrispNoiseFilter",
+          "slug" : "swift-krisp-noise-filter",
+          "status" : "unsupported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "audio.pitch-detection",
       "label" : "Pitch detection",
       "packages" : 1,
       "supported" : 1,
-      "truthTable" : "/can/audio.pitch-detection/?on=visionOS"
+      "truthTable" : "/can/audio.pitch-detection/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "SoundpipeAudioKit",
+          "slug" : "soundpipeaudiokit",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : true,
+      "builtInNames" : [
+        "AVFAudio"
+      ],
       "id" : "audio.playback",
       "label" : "Audio playback",
       "packages" : 5,
       "supported" : 2,
-      "truthTable" : "/can/audio.playback/?on=visionOS"
+      "truthTable" : "/can/audio.playback/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "AudioManager",
+          "slug" : "audiomanager",
+          "status" : "supported"
+        },
+        {
+          "name" : "SwiftySound",
+          "slug" : "swiftysound",
+          "status" : "supported"
+        },
+        {
+          "name" : "SFBAudioEngine",
+          "slug" : "sfbaudioengine",
+          "status" : "unsupported"
+        },
+        {
+          "name" : "swift-system-sound",
+          "slug" : "swift-system-sound",
+          "status" : "unsupported"
+        },
+        {
+          "name" : "SwiftAudioEx",
+          "slug" : "swiftaudioex",
+          "status" : "unsupported"
+        }
+      ]
     },
     {
       "builtInCovers" : true,
+      "builtInNames" : [
+        "AVFAudio"
+      ],
       "id" : "audio.recording",
       "label" : "Microphone recording",
       "packages" : 3,
       "supported" : 2,
-      "truthTable" : "/can/audio.recording/?on=visionOS"
+      "truthTable" : "/can/audio.recording/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "AudioKit",
+          "slug" : "audiokit",
+          "status" : "supported"
+        },
+        {
+          "name" : "AudioRecorder",
+          "slug" : "audiorecorder",
+          "status" : "supported"
+        },
+        {
+          "name" : "FDSoundActivatedRecorder",
+          "slug" : "fdsoundactivatedrecorder",
+          "status" : "unsupported"
+        }
+      ]
     },
     {
       "builtInCovers" : true,
+      "builtInNames" : [
+        "AVFAudio"
+      ],
       "id" : "audio.session-management",
       "label" : "Audio session management",
       "packages" : 2,
       "supported" : 1,
-      "truthTable" : "/can/audio.session-management/?on=visionOS"
+      "truthTable" : "/can/audio.session-management/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "LiveKit",
+          "slug" : "client-sdk-swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "SwiftySound",
+          "slug" : "swiftysound",
+          "status" : "unsupported"
+        }
+      ]
     },
     {
       "builtInCovers" : true,
+      "builtInNames" : [
+        "AVFAudio"
+      ],
       "id" : "audio.spatial",
       "label" : "Spatial audio",
       "packages" : 0,
       "supported" : 0,
-      "truthTable" : "/can/audio.spatial/?on=visionOS"
+      "truthTable" : "/can/audio.spatial/?on=visionOS",
+      "verdicts" : [
+
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "audio.streaming",
       "label" : "Audio streaming",
       "packages" : 3,
       "supported" : 2,
-      "truthTable" : "/can/audio.streaming/?on=visionOS"
+      "truthTable" : "/can/audio.streaming/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "ChunkedAudioPlayer",
+          "slug" : "swift-chunked-audio-player",
+          "status" : "supported"
+        },
+        {
+          "name" : "SwiftAudioPlayer",
+          "slug" : "swiftaudioplayer",
+          "status" : "supported"
+        },
+        {
+          "name" : "FRadioPlayer",
+          "slug" : "fradioplayer",
+          "status" : "unsupported"
+        }
+      ]
     },
     {
       "builtInCovers" : true,
+      "builtInNames" : [
+        "AVFAudio"
+      ],
       "id" : "audio.synthesis",
       "label" : "Audio synthesis / DSP",
       "packages" : 6,
       "supported" : 4,
-      "truthTable" : "/can/audio.synthesis/?on=visionOS"
+      "truthTable" : "/can/audio.synthesis/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "AudioKit",
+          "slug" : "audiokit",
+          "status" : "supported"
+        },
+        {
+          "name" : "DevoloopAudioKit",
+          "slug" : "devoloopaudiokit",
+          "status" : "supported"
+        },
+        {
+          "name" : "DunneAudioKit",
+          "slug" : "dunneaudiokit",
+          "status" : "supported"
+        },
+        {
+          "name" : "STKAudioKit",
+          "slug" : "stkaudiokit",
+          "status" : "supported"
+        },
+        {
+          "name" : "SoulAudioKit",
+          "slug" : "soulaudiokit",
+          "status" : "unsupported"
+        },
+        {
+          "name" : "SporthAudioKit",
+          "slug" : "sporthaudiokit",
+          "status" : "unsupported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "audio.waveform-visualization",
       "label" : "Waveform visualization",
       "packages" : 4,
       "supported" : 4,
-      "truthTable" : "/can/audio.waveform-visualization/?on=visionOS"
+      "truthTable" : "/can/audio.waveform-visualization/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "AudioKit Waveform",
+          "slug" : "waveform",
+          "status" : "supported"
+        },
+        {
+          "name" : "AudioKitUI",
+          "slug" : "audiokitui",
+          "status" : "supported"
+        },
+        {
+          "name" : "DSWaveformImage",
+          "slug" : "dswaveformimage",
+          "status" : "supported"
+        },
+        {
+          "name" : "FDWaveformView",
+          "slug" : "fdwaveformview",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "image.async-loading",
       "label" : "Async image loading",
       "packages" : 4,
       "supported" : 3,
-      "truthTable" : "/can/image.async-loading/?on=visionOS"
+      "truthTable" : "/can/image.async-loading/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "Kingfisher",
+          "slug" : "kingfisher",
+          "status" : "supported"
+        },
+        {
+          "name" : "Nuke",
+          "slug" : "nuke",
+          "status" : "supported"
+        },
+        {
+          "name" : "SDWebImageSwiftUI",
+          "slug" : "sdwebimageswiftui",
+          "status" : "supported"
+        },
+        {
+          "name" : "SDWebImage",
+          "slug" : "sdwebimage",
+          "status" : "unknown"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "image.caching",
       "label" : "Image caching",
       "packages" : 2,
       "supported" : 2,
-      "truthTable" : "/can/image.caching/?on=visionOS"
+      "truthTable" : "/can/image.caching/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "Kingfisher",
+          "slug" : "kingfisher",
+          "status" : "supported"
+        },
+        {
+          "name" : "Nuke",
+          "slug" : "nuke",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "image.downsampling",
       "label" : "Downsampling / resizing",
       "packages" : 1,
       "supported" : 1,
-      "truthTable" : "/can/image.downsampling/?on=visionOS"
+      "truthTable" : "/can/image.downsampling/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "Kingfisher",
+          "slug" : "kingfisher",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "image.gif",
       "label" : "Animated GIF playback",
       "packages" : 3,
       "supported" : 3,
-      "truthTable" : "/can/image.gif/?on=visionOS"
+      "truthTable" : "/can/image.gif/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "Gifu",
+          "slug" : "gifu",
+          "status" : "supported"
+        },
+        {
+          "name" : "Kingfisher",
+          "slug" : "kingfisher",
+          "status" : "supported"
+        },
+        {
+          "name" : "SDWebImageSwiftUI",
+          "slug" : "sdwebimageswiftui",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "image.prefetching",
       "label" : "Prefetching",
       "packages" : 2,
       "supported" : 2,
-      "truthTable" : "/can/image.prefetching/?on=visionOS"
+      "truthTable" : "/can/image.prefetching/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "Kingfisher",
+          "slug" : "kingfisher",
+          "status" : "supported"
+        },
+        {
+          "name" : "Nuke",
+          "slug" : "nuke",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "image.svg",
       "label" : "SVG rendering",
       "packages" : 1,
       "supported" : 1,
-      "truthTable" : "/can/image.svg/?on=visionOS"
+      "truthTable" : "/can/image.svg/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "SVGView",
+          "slug" : "svgview",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "image.webp",
       "label" : "WebP decoding",
       "packages" : 1,
       "supported" : 0,
-      "truthTable" : "/can/image.webp/?on=visionOS"
+      "truthTable" : "/can/image.webp/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "Kingfisher",
+          "slug" : "kingfisher",
+          "status" : "unknown"
+        }
+      ]
     },
     {
       "builtInCovers" : true,
+      "builtInNames" : [
+        "MediaPlayer"
+      ],
       "id" : "media.now-playing",
       "label" : "Now-playing / remote controls",
       "packages" : 1,
       "supported" : 0,
-      "truthTable" : "/can/media.now-playing/?on=visionOS"
+      "truthTable" : "/can/media.now-playing/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "SwiftAudioEx",
+          "slug" : "swiftaudioex",
+          "status" : "unsupported"
+        }
+      ]
     },
     {
       "builtInCovers" : true,
+      "builtInNames" : [
+        "AVFoundation"
+      ],
       "id" : "media.streaming.hls",
       "label" : "HLS streaming",
       "packages" : 3,
       "supported" : 3,
-      "truthTable" : "/can/media.streaming.hls/?on=visionOS"
+      "truthTable" : "/can/media.streaming.hls/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "HLSCore",
+          "slug" : "hlscore",
+          "status" : "supported"
+        },
+        {
+          "name" : "HLSKit",
+          "slug" : "swift-hls-kit",
+          "status" : "supported"
+        },
+        {
+          "name" : "HLSVideoCache",
+          "slug" : "hlsvideocache",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "media.streaming.rtmp",
       "label" : "RTMP streaming",
       "packages" : 1,
       "supported" : 1,
-      "truthTable" : "/can/media.streaming.rtmp/?on=visionOS"
+      "truthTable" : "/can/media.streaming.rtmp/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "RTMPKit",
+          "slug" : "swift-rtmp-kit",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "media.streaming.webrtc",
       "label" : "WebRTC real-time streaming",
       "packages" : 3,
       "supported" : 1,
-      "truthTable" : "/can/media.streaming.webrtc/?on=visionOS"
+      "truthTable" : "/can/media.streaming.webrtc/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "LiveKit",
+          "slug" : "client-sdk-swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "StreamVideo",
+          "slug" : "stream-video-swift",
+          "status" : "unsupported"
+        },
+        {
+          "name" : "WebRTC (stasel)",
+          "slug" : "webrtc",
+          "status" : "unsupported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "midi.file",
       "label" : "MIDI file read/write",
       "packages" : 3,
       "supported" : 2,
-      "truthTable" : "/can/midi.file/?on=visionOS"
+      "truthTable" : "/can/midi.file/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "AudioKit",
+          "slug" : "audiokit",
+          "status" : "supported"
+        },
+        {
+          "name" : "MIDIKitSMF",
+          "slug" : "swift-midi-file",
+          "status" : "supported"
+        },
+        {
+          "name" : "MidiParser",
+          "slug" : "midiparser",
+          "status" : "unknown"
+        }
+      ]
     },
     {
       "builtInCovers" : true,
+      "builtInNames" : [
+        "CoreMIDI"
+      ],
       "id" : "midi.io",
       "label" : "MIDI input/output",
       "packages" : 5,
       "supported" : 4,
-      "truthTable" : "/can/midi.io/?on=visionOS"
+      "truthTable" : "/can/midi.io/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "AudioKit",
+          "slug" : "audiokit",
+          "status" : "supported"
+        },
+        {
+          "name" : "CombineMIDI",
+          "slug" : "combinemidi",
+          "status" : "supported"
+        },
+        {
+          "name" : "MIDIKitIO",
+          "slug" : "swift-midi-io",
+          "status" : "supported"
+        },
+        {
+          "name" : "MorkAndMIDI",
+          "slug" : "morkandmidi",
+          "status" : "supported"
+        },
+        {
+          "name" : "WebMIDIKit",
+          "slug" : "webmidikit",
+          "status" : "unknown"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "network.certificate-pinning",
       "label" : "Certificate pinning",
       "packages" : 1,
       "supported" : 1,
-      "truthTable" : "/can/network.certificate-pinning/?on=visionOS"
+      "truthTable" : "/can/network.certificate-pinning/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "Alamofire",
+          "slug" : "alamofire",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "network.http-client",
       "label" : "HTTP client",
       "packages" : 2,
       "supported" : 1,
-      "truthTable" : "/can/network.http-client/?on=visionOS"
+      "truthTable" : "/can/network.http-client/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "Alamofire",
+          "slug" : "alamofire",
+          "status" : "supported"
+        },
+        {
+          "name" : "Moya",
+          "slug" : "moya",
+          "status" : "unsupported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "network.logging",
       "label" : "Network logging / inspection",
       "packages" : 1,
       "supported" : 1,
-      "truthTable" : "/can/network.logging/?on=visionOS"
+      "truthTable" : "/can/network.logging/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "Pulse",
+          "slug" : "pulse",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "network.multipart-upload",
       "label" : "Multipart upload",
       "packages" : 1,
       "supported" : 1,
-      "truthTable" : "/can/network.multipart-upload/?on=visionOS"
+      "truthTable" : "/can/network.multipart-upload/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "Alamofire",
+          "slug" : "alamofire",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "network.reachability",
       "label" : "Network reachability",
       "packages" : 1,
       "supported" : 1,
-      "truthTable" : "/can/network.reachability/?on=visionOS"
+      "truthTable" : "/can/network.reachability/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "Alamofire",
+          "slug" : "alamofire",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "network.request-mocking",
       "label" : "Request stubbing / mocking",
       "packages" : 1,
       "supported" : 0,
-      "truthTable" : "/can/network.request-mocking/?on=visionOS"
+      "truthTable" : "/can/network.request-mocking/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "Moya",
+          "slug" : "moya",
+          "status" : "unsupported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "network.retry",
       "label" : "Request retry / backoff",
       "packages" : 1,
       "supported" : 1,
-      "truthTable" : "/can/network.retry/?on=visionOS"
+      "truthTable" : "/can/network.retry/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "Alamofire",
+          "slug" : "alamofire",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "network.server-sent-events",
       "label" : "Server-sent events",
       "packages" : 1,
       "supported" : 1,
-      "truthTable" : "/can/network.server-sent-events/?on=visionOS"
+      "truthTable" : "/can/network.server-sent-events/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "LDSwiftEventSource",
+          "slug" : "swift-eventsource",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "network.websockets",
       "label" : "WebSockets",
       "packages" : 2,
       "supported" : 2,
-      "truthTable" : "/can/network.websockets/?on=visionOS"
+      "truthTable" : "/can/network.websockets/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "Starscream",
+          "slug" : "starscream",
+          "status" : "supported"
+        },
+        {
+          "name" : "SwiftNIO",
+          "slug" : "swift-nio",
+          "status" : "supported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "speech.stt",
       "label" : "Speech-to-text",
       "packages" : 5,
       "supported" : 3,
-      "truthTable" : "/can/speech.stt/?on=visionOS"
+      "truthTable" : "/can/speech.stt/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "SpeziSpeech",
+          "slug" : "spezispeech",
+          "status" : "supported"
+        },
+        {
+          "name" : "SwiftSpeech",
+          "slug" : "swiftspeech",
+          "status" : "supported"
+        },
+        {
+          "name" : "WhisperKit",
+          "slug" : "whisperkit",
+          "status" : "supported"
+        },
+        {
+          "name" : "FluidAudio",
+          "slug" : "fluidaudio",
+          "status" : "unsupported"
+        },
+        {
+          "name" : "SwiftWhisper",
+          "slug" : "swiftwhisper",
+          "status" : "unknown"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "speech.tts",
       "label" : "Text-to-speech",
       "packages" : 6,
       "supported" : 5,
-      "truthTable" : "/can/speech.tts/?on=visionOS"
+      "truthTable" : "/can/speech.tts/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "MapboxSpeech",
+          "slug" : "mapbox-speech-swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "MLXAudio",
+          "slug" : "mlx-audio-swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "SpeziSpeech",
+          "slug" : "spezispeech",
+          "status" : "supported"
+        },
+        {
+          "name" : "SwiftEdgeTTS",
+          "slug" : "swiftedgetts",
+          "status" : "supported"
+        },
+        {
+          "name" : "SwiftTTS",
+          "slug" : "swift-tts",
+          "status" : "supported"
+        },
+        {
+          "name" : "VOICEVOX",
+          "slug" : "voicevox-client",
+          "status" : "unsupported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "video.calling",
       "label" : "Video calling",
       "packages" : 2,
       "supported" : 1,
-      "truthTable" : "/can/video.calling/?on=visionOS"
+      "truthTable" : "/can/video.calling/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "LiveKit",
+          "slug" : "client-sdk-swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "StreamVideo",
+          "slug" : "stream-video-swift",
+          "status" : "unsupported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "video.capture",
       "label" : "Camera capture",
       "packages" : 2,
       "supported" : 0,
-      "truthTable" : "/can/video.capture/?on=visionOS"
+      "truthTable" : "/can/video.capture/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "ExyteMediaPicker",
+          "slug" : "mediapicker",
+          "status" : "unsupported"
+        },
+        {
+          "name" : "VideoIO",
+          "slug" : "videoio",
+          "status" : "unsupported"
+        }
+      ]
     },
     {
       "builtInCovers" : true,
+      "builtInNames" : [
+        "AVFoundation"
+      ],
       "id" : "video.playback",
       "label" : "Video playback",
       "packages" : 6,
       "supported" : 2,
-      "truthTable" : "/can/video.playback/?on=visionOS"
+      "truthTable" : "/can/video.playback/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "KSPlayer",
+          "slug" : "ksplayer",
+          "status" : "supported"
+        },
+        {
+          "name" : "YouTubePlayerKit",
+          "slug" : "youtubeplayerkit",
+          "status" : "supported"
+        },
+        {
+          "name" : "ModernAVPlayer",
+          "slug" : "modernavplayer",
+          "status" : "unsupported"
+        },
+        {
+          "name" : "MuxPlayerSwift",
+          "slug" : "mux-player-swift",
+          "status" : "unsupported"
+        },
+        {
+          "name" : "Player",
+          "slug" : "player",
+          "status" : "unsupported"
+        },
+        {
+          "name" : "Swifty360Player",
+          "slug" : "swifty360player",
+          "status" : "unsupported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "video.screen-sharing",
       "label" : "Screen sharing",
       "packages" : 2,
       "supported" : 1,
-      "truthTable" : "/can/video.screen-sharing/?on=visionOS"
+      "truthTable" : "/can/video.screen-sharing/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "LiveKit",
+          "slug" : "client-sdk-swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "StreamVideo",
+          "slug" : "stream-video-swift",
+          "status" : "unsupported"
+        }
+      ]
     },
     {
       "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
       "id" : "voice.calling",
       "label" : "Voice calling",
       "packages" : 2,
       "supported" : 1,
-      "truthTable" : "/can/voice.calling/?on=visionOS"
+      "truthTable" : "/can/voice.calling/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "LiveKit",
+          "slug" : "client-sdk-swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "StreamVideo",
+          "slug" : "stream-video-swift",
+          "status" : "unsupported"
+        }
+      ]
     }
   ],
   "fenced" : [

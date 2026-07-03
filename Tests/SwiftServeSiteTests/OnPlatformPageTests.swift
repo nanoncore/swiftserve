@@ -168,6 +168,15 @@ import SwiftServeCapability
         #expect(playback["packages"] as? Int == 1)
         #expect(playback["builtInCovers"] as? Bool == true)
         #expect(playback["truthTable"] as? String == "/can/audio.playback/?on=visionOS")
+
+        // The in-scene detail panels render the roster from these — the
+        // whole scene stays one fetch.
+        #expect(playback["builtInNames"] as? [String] == ["AVFAudio"])
+        let verdicts = playback["verdicts"] as! [[String: Any]]
+        #expect(verdicts.count == 1)
+        #expect(verdicts[0]["name"] as? String == "AudioKit")
+        #expect(verdicts[0]["slug"] as? String == "audiokit")
+        #expect(verdicts[0]["status"] as? String == "supported")
     }
 
     @Test func immersiveEntryIsPivotOnlyAndDegradesToNothing() throws {

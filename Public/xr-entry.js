@@ -37,9 +37,9 @@
       head.textContent = "Walk the fence line";
       const body = document.createElement("p");
       body.className = "xr-invite-body";
-      body.textContent = "This page as a place: capabilities out front, the OS shelf at your knees, and "
-        + feed.stats.unsupported + " compiler receipts nailed to a fence behind you. "
-        + "Pinch a plank to read it up close.";
+      body.textContent = "This page as a place: the capability wall, the OS shelf, and "
+        + feed.fenced.length + " packages nailed to the fence with their compiler receipts. "
+        + "Pinch and drag to spin the yard; look at anything and pinch to open it.";
       text.appendChild(head);
       text.appendChild(body);
 
