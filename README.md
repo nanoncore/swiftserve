@@ -334,7 +334,15 @@ seam is left, not built), a GitHub Action, and any auth / accounts / persistence
 
 ## License
 
-[FSL-1.1-ALv2](LICENSE.md) — Fair Source. Use it, modify it, ship it anywhere,
-including commercially; the one thing reserved is offering SwiftServe itself as
-a competing product or service. Each release becomes Apache-2.0 two years after
-it ships.
+[FSL-1.1-ALv2](LICENSE.md) — Fair Source. The distinction that matters:
+**using** SwiftServe commercially is allowed, **selling** SwiftServe is not.
+
+- ✅ Run it in your company's CI, gate releases on it, scan client projects,
+  build it into your team's workflow — commercial *use* is a Permitted Purpose.
+- ✅ Fork it, modify it, redistribute it for any of the above.
+- ❌ Offer SwiftServe (or a substitute built from it) to others as a commercial
+  product or service — that's the one reserved right ("Competing Use").
+
+Each release converts to Apache-2.0 two years after it ships, so nothing here
+can ever become abandonware hostage. The [license text](LICENSE.md) governs;
+this section is just the plain-language map.
