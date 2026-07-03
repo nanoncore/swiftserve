@@ -1,0 +1,957 @@
+{
+  "builtIn" : [
+    {
+      "capabilities" : [
+        {
+          "floor" : "visionOS 1.0+",
+          "id" : "audio.echo-cancellation",
+          "label" : "Echo cancellation"
+        },
+        {
+          "floor" : "visionOS 1.0+",
+          "id" : "audio.file-io",
+          "label" : "Audio file reading/writing"
+        },
+        {
+          "floor" : "visionOS 1.0+",
+          "id" : "audio.metering",
+          "label" : "Audio level metering"
+        },
+        {
+          "floor" : "visionOS 1.0+",
+          "id" : "audio.playback",
+          "label" : "Audio playback"
+        },
+        {
+          "floor" : "visionOS 1.0+",
+          "id" : "audio.recording",
+          "label" : "Microphone recording"
+        },
+        {
+          "floor" : "visionOS 1.0+",
+          "id" : "audio.session-management",
+          "label" : "Audio session management"
+        },
+        {
+          "floor" : "visionOS 1.0+",
+          "id" : "audio.spatial",
+          "label" : "Spatial audio"
+        },
+        {
+          "floor" : "visionOS 1.0+",
+          "id" : "audio.synthesis",
+          "label" : "Audio synthesis / DSP"
+        }
+      ],
+      "name" : "AVFAudio",
+      "slug" : "avfaudio",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "capabilities" : [
+        {
+          "floor" : "visionOS 1.0+",
+          "id" : "media.streaming.hls",
+          "label" : "HLS streaming"
+        },
+        {
+          "floor" : "visionOS 1.0+",
+          "id" : "video.playback",
+          "label" : "Video playback"
+        }
+      ],
+      "name" : "AVFoundation",
+      "slug" : "avfoundation",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "capabilities" : [
+        {
+          "floor" : "visionOS 1.0+",
+          "id" : "midi.io",
+          "label" : "MIDI input/output"
+        }
+      ],
+      "name" : "CoreMIDI",
+      "slug" : "coremidi",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "capabilities" : [
+        {
+          "floor" : "visionOS 1.0+",
+          "id" : "media.now-playing",
+          "label" : "Now-playing / remote controls"
+        }
+      ],
+      "name" : "MediaPlayer",
+      "slug" : "mediaplayer",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "capabilities" : [
+        {
+          "floor" : "visionOS 1.0+",
+          "id" : "audio.classification",
+          "label" : "Sound classification"
+        }
+      ],
+      "name" : "SoundAnalysis",
+      "slug" : "soundanalysis",
+      "version" : "Xcode 26.6"
+    }
+  ],
+  "capabilities" : [
+    {
+      "builtInCovers" : false,
+      "id" : "audio.background-playback",
+      "label" : "Background audio playback",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/audio.background-playback/?on=visionOS"
+    },
+    {
+      "builtInCovers" : true,
+      "id" : "audio.classification",
+      "label" : "Sound classification",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/audio.classification/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "audio.codec.mp3",
+      "label" : "MP3 encoding/decoding",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/audio.codec.mp3/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "audio.codec.opus",
+      "label" : "Opus encoding/decoding",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/audio.codec.opus/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "audio.device-selection",
+      "label" : "Audio device selection",
+      "packages" : 2,
+      "supported" : 0,
+      "truthTable" : "/can/audio.device-selection/?on=visionOS"
+    },
+    {
+      "builtInCovers" : true,
+      "id" : "audio.echo-cancellation",
+      "label" : "Echo cancellation",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/audio.echo-cancellation/?on=visionOS"
+    },
+    {
+      "builtInCovers" : true,
+      "id" : "audio.file-io",
+      "label" : "Audio file reading/writing",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/audio.file-io/?on=visionOS"
+    },
+    {
+      "builtInCovers" : true,
+      "id" : "audio.metering",
+      "label" : "Audio level metering",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/audio.metering/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "audio.noise-cancellation",
+      "label" : "Noise cancellation",
+      "packages" : 2,
+      "supported" : 1,
+      "truthTable" : "/can/audio.noise-cancellation/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "audio.pitch-detection",
+      "label" : "Pitch detection",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/audio.pitch-detection/?on=visionOS"
+    },
+    {
+      "builtInCovers" : true,
+      "id" : "audio.playback",
+      "label" : "Audio playback",
+      "packages" : 5,
+      "supported" : 2,
+      "truthTable" : "/can/audio.playback/?on=visionOS"
+    },
+    {
+      "builtInCovers" : true,
+      "id" : "audio.recording",
+      "label" : "Microphone recording",
+      "packages" : 3,
+      "supported" : 2,
+      "truthTable" : "/can/audio.recording/?on=visionOS"
+    },
+    {
+      "builtInCovers" : true,
+      "id" : "audio.session-management",
+      "label" : "Audio session management",
+      "packages" : 2,
+      "supported" : 1,
+      "truthTable" : "/can/audio.session-management/?on=visionOS"
+    },
+    {
+      "builtInCovers" : true,
+      "id" : "audio.spatial",
+      "label" : "Spatial audio",
+      "packages" : 0,
+      "supported" : 0,
+      "truthTable" : "/can/audio.spatial/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "audio.streaming",
+      "label" : "Audio streaming",
+      "packages" : 3,
+      "supported" : 2,
+      "truthTable" : "/can/audio.streaming/?on=visionOS"
+    },
+    {
+      "builtInCovers" : true,
+      "id" : "audio.synthesis",
+      "label" : "Audio synthesis / DSP",
+      "packages" : 6,
+      "supported" : 4,
+      "truthTable" : "/can/audio.synthesis/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "audio.waveform-visualization",
+      "label" : "Waveform visualization",
+      "packages" : 4,
+      "supported" : 4,
+      "truthTable" : "/can/audio.waveform-visualization/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "image.async-loading",
+      "label" : "Async image loading",
+      "packages" : 4,
+      "supported" : 3,
+      "truthTable" : "/can/image.async-loading/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "image.caching",
+      "label" : "Image caching",
+      "packages" : 2,
+      "supported" : 2,
+      "truthTable" : "/can/image.caching/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "image.downsampling",
+      "label" : "Downsampling / resizing",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/image.downsampling/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "image.gif",
+      "label" : "Animated GIF playback",
+      "packages" : 3,
+      "supported" : 3,
+      "truthTable" : "/can/image.gif/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "image.prefetching",
+      "label" : "Prefetching",
+      "packages" : 2,
+      "supported" : 2,
+      "truthTable" : "/can/image.prefetching/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "image.svg",
+      "label" : "SVG rendering",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/image.svg/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "image.webp",
+      "label" : "WebP decoding",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/image.webp/?on=visionOS"
+    },
+    {
+      "builtInCovers" : true,
+      "id" : "media.now-playing",
+      "label" : "Now-playing / remote controls",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/media.now-playing/?on=visionOS"
+    },
+    {
+      "builtInCovers" : true,
+      "id" : "media.streaming.hls",
+      "label" : "HLS streaming",
+      "packages" : 3,
+      "supported" : 3,
+      "truthTable" : "/can/media.streaming.hls/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "media.streaming.rtmp",
+      "label" : "RTMP streaming",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/media.streaming.rtmp/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "media.streaming.webrtc",
+      "label" : "WebRTC real-time streaming",
+      "packages" : 3,
+      "supported" : 1,
+      "truthTable" : "/can/media.streaming.webrtc/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "midi.file",
+      "label" : "MIDI file read/write",
+      "packages" : 3,
+      "supported" : 2,
+      "truthTable" : "/can/midi.file/?on=visionOS"
+    },
+    {
+      "builtInCovers" : true,
+      "id" : "midi.io",
+      "label" : "MIDI input/output",
+      "packages" : 5,
+      "supported" : 4,
+      "truthTable" : "/can/midi.io/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "network.certificate-pinning",
+      "label" : "Certificate pinning",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/network.certificate-pinning/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "network.http-client",
+      "label" : "HTTP client",
+      "packages" : 2,
+      "supported" : 1,
+      "truthTable" : "/can/network.http-client/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "network.logging",
+      "label" : "Network logging / inspection",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/network.logging/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "network.multipart-upload",
+      "label" : "Multipart upload",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/network.multipart-upload/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "network.reachability",
+      "label" : "Network reachability",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/network.reachability/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "network.request-mocking",
+      "label" : "Request stubbing / mocking",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/network.request-mocking/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "network.retry",
+      "label" : "Request retry / backoff",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/network.retry/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "network.server-sent-events",
+      "label" : "Server-sent events",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/network.server-sent-events/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "network.websockets",
+      "label" : "WebSockets",
+      "packages" : 2,
+      "supported" : 2,
+      "truthTable" : "/can/network.websockets/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "speech.stt",
+      "label" : "Speech-to-text",
+      "packages" : 5,
+      "supported" : 3,
+      "truthTable" : "/can/speech.stt/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "speech.tts",
+      "label" : "Text-to-speech",
+      "packages" : 6,
+      "supported" : 5,
+      "truthTable" : "/can/speech.tts/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "video.calling",
+      "label" : "Video calling",
+      "packages" : 2,
+      "supported" : 1,
+      "truthTable" : "/can/video.calling/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "video.capture",
+      "label" : "Camera capture",
+      "packages" : 2,
+      "supported" : 0,
+      "truthTable" : "/can/video.capture/?on=visionOS"
+    },
+    {
+      "builtInCovers" : true,
+      "id" : "video.playback",
+      "label" : "Video playback",
+      "packages" : 6,
+      "supported" : 2,
+      "truthTable" : "/can/video.playback/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "video.screen-sharing",
+      "label" : "Screen sharing",
+      "packages" : 2,
+      "supported" : 1,
+      "truthTable" : "/can/video.screen-sharing/?on=visionOS"
+    },
+    {
+      "builtInCovers" : false,
+      "id" : "voice.calling",
+      "label" : "Voice calling",
+      "packages" : 2,
+      "supported" : 1,
+      "truthTable" : "/can/voice.calling/?on=visionOS"
+    }
+  ],
+  "fenced" : [
+    {
+      "fences" : [
+        {
+          "capability" : "video.capture",
+          "capabilityLabel" : "Camera capture",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/checkouts/AnchoredPopup/Sources/AnchoredPopup/AnchoredAnimationManager.swift:223:54: error: 'UIScreen' is unavailable in visionOS — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "ExyteMediaPicker",
+      "slug" : "mediapicker",
+      "version" : "3.3.2"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "audio.recording",
+          "capabilityLabel" : "Microphone recording",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/FDSoundActivatedRecorder/FDSoundActivatedRecorder.swift:304:18: error: 'tracks(withMediaType:)' is unavailable in visionOS — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "FDSoundActivatedRecorder",
+      "slug" : "fdsoundactivatedrecorder",
+      "version" : "4.0.0"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "speech.stt",
+          "capabilityLabel" : "Speech-to-text",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/FluidAudio/TTS/PocketTTS/Pipeline/PocketTtsModelStore.swift:91:17: error: 'loadStatePipeline(languageRoot:)' is only available in visionOS 2.0 or newer — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS",
+            "macOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "FluidAudio",
+      "slug" : "fluidaudio",
+      "version" : "v0.15.4"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "audio.streaming",
+          "capabilityLabel" : "Audio streaming",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/FRadioPlayer/FRadioPlayer.swift:301:21: error: 'allowsExternalPlayback' is unavailable in visionOS — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS",
+            "macOS",
+            "tvOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "FRadioPlayer",
+      "slug" : "fradioplayer",
+      "version" : "0.2.2"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "audio.noise-cancellation",
+          "capabilityLabel" : "Noise cancellation",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): error: The package product 'LiveKit' requires minimum platform version 26.0 for the visionOS platform, but this target supports 1.0 (in target 'LiveKitKrispNoiseFilter' from projec — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS",
+            "macOS"
+          ]
+        }
+      ],
+      "name" : "LiveKitKrispNoiseFilter",
+      "slug" : "swift-krisp-noise-filter",
+      "version" : "0.0.8"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "video.playback",
+          "capabilityLabel" : "Video playback",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/Core/Components/PlayerContext.swift:136:16: error: 'allowsExternalPlayback' is unavailable in visionOS — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS",
+            "tvOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "ModernAVPlayer",
+      "slug" : "modernavplayer",
+      "version" : "1.7.3"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "network.http-client",
+          "capabilityLabel" : "HTTP client",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/checkouts/Alamofire/Source/Protected.swift:127:15: error: cannot find 'lock' in scope — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS",
+            "macOS",
+            "watchOS",
+            "tvOS",
+            "macCatalyst"
+          ]
+        },
+        {
+          "capability" : "network.request-mocking",
+          "capabilityLabel" : "Request stubbing / mocking",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/checkouts/Alamofire/Source/Protected.swift:127:15: error: cannot find 'lock' in scope — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS",
+            "macOS",
+            "watchOS",
+            "tvOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "Moya",
+      "slug" : "moya",
+      "version" : "15.0.3"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "video.playback",
+          "capabilityLabel" : "Video playback",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/MuxPlayerSwift/Lifecycle/MuxPlayerContext.swift:61:35: error: 'monitorAVPlayerLayer(_:withPlayerName:customerData:automaticErrorTracking:)' is unavailable in visionOS — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "MuxPlayerSwift",
+      "slug" : "mux-player-swift",
+      "version" : "v1.7.0"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "video.playback",
+          "capabilityLabel" : "Video playback",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/Player.swift:236:26: error: 'tracks(withMediaType:)' is unavailable in visionOS — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS",
+            "tvOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "Player",
+      "slug" : "player",
+      "version" : "0.15.0"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "audio.playback",
+          "capabilityLabel" : "Audio playback",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/artifacts/vorbis-binary-xcframework/vorbis/vorbis.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePacka — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+
+          ]
+        }
+      ],
+      "name" : "SFBAudioEngine",
+      "slug" : "sfbaudioengine",
+      "version" : "0.13.0"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "audio.synthesis",
+          "capabilityLabel" : "Audio synthesis / DSP",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/checkouts/AudioKit/Sources/AudioKit/Audio Files/Format Converter/FormatConverter+Compressed.swift:223:33: error: 'tracks(withMediaType:)' is unavailable in visio — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS",
+            "macOS",
+            "tvOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "SoulAudioKit",
+      "slug" : "soulaudiokit",
+      "version" : "5.3.0"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "audio.synthesis",
+          "capabilityLabel" : "Audio synthesis / DSP",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/checkouts/AudioKit/Sources/AudioKit/Audio Files/Format Converter/FormatConverter+Compressed.swift:223:33: error: 'tracks(withMediaType:)' is unavailable in visio — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS",
+            "macOS",
+            "tvOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "SporthAudioKit",
+      "slug" : "sporthaudiokit",
+      "version" : "5.5.1"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "media.streaming.webrtc",
+          "capabilityLabel" : "WebRTC real-time streaming",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/artifacts/stream-video-swift-webrtc/StreamWebRTC/StreamWebRTC.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS"
+          ]
+        },
+        {
+          "capability" : "video.calling",
+          "capabilityLabel" : "Video calling",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/artifacts/stream-video-swift-webrtc/StreamWebRTC/StreamWebRTC.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS"
+          ]
+        },
+        {
+          "capability" : "video.screen-sharing",
+          "capabilityLabel" : "Screen sharing",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/artifacts/stream-video-swift-webrtc/StreamWebRTC/StreamWebRTC.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS"
+          ]
+        },
+        {
+          "capability" : "voice.calling",
+          "capabilityLabel" : "Voice calling",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/artifacts/stream-video-swift-webrtc/StreamWebRTC/StreamWebRTC.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS"
+          ]
+        }
+      ],
+      "name" : "StreamVideo",
+      "slug" : "stream-video-swift",
+      "version" : "1.48.0"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "audio.playback",
+          "capabilityLabel" : "Audio playback",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/SystemSound/SystemSoundKeys.swift:185:55: error: 'endCallToneCept' is only available in visionOS 26.0 or newer — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS",
+            "macOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "swift-system-sound",
+      "slug" : "swift-system-sound",
+      "version" : "0.10.0"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "audio.background-playback",
+          "capabilityLabel" : "Background audio playback",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/SwiftAudioEx/AVPlayerWrapper/AVPlayerWrapper.swift:252:33: error: 'availableChapterLocales' is unavailable in visionOS — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS",
+            "macCatalyst"
+          ]
+        },
+        {
+          "capability" : "audio.playback",
+          "capabilityLabel" : "Audio playback",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/SwiftAudioEx/AVPlayerWrapper/AVPlayerWrapper.swift:252:33: error: 'availableChapterLocales' is unavailable in visionOS — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS",
+            "macCatalyst"
+          ]
+        },
+        {
+          "capability" : "media.now-playing",
+          "capabilityLabel" : "Now-playing / remote controls",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/SwiftAudioEx/AVPlayerWrapper/AVPlayerWrapper.swift:252:33: error: 'availableChapterLocales' is unavailable in visionOS — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "SwiftAudioEx",
+      "slug" : "swiftaudioex",
+      "version" : "1.1.0"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "video.playback",
+          "capabilityLabel" : "Video playback",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Swifty360Player/Swifty360Window.swift:35:41: error: 'statusBarOrientation' is unavailable in visionOS — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "Swifty360Player",
+      "slug" : "swifty360player",
+      "version" : "0.2.7"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "audio.session-management",
+          "capabilityLabel" : "Audio session management",
+          "compilerProven" : false,
+          "receipt" : "#if os(iOS) || os(tvOS) — session categories exist only where AVAudioSession does",
+          "worksOn" : [
+            "iOS",
+            "tvOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "SwiftySound",
+      "slug" : "swiftysound",
+      "version" : "1.3.0"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "video.capture",
+          "capabilityLabel" : "Camera capture",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/VideoIO/Camera+FocusExposure.swift:16:101: error: 'FocusMode' is unavailable in visionOS — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS",
+            "macOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "VideoIO",
+      "slug" : "videoio",
+      "version" : "2.3.1"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "speech.tts",
+          "capabilityLabel" : "Text-to-speech",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/voicevox_common/Exported.swift:4:19: error: unable to resolve module dependency: 'voicevox_core' — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+            "iOS",
+            "macOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "VOICEVOX",
+      "slug" : "voicevox-client",
+      "version" : "1.2.2"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "media.streaming.webrtc",
+          "capabilityLabel" : "WebRTC real-time streaming",
+          "compilerProven" : true,
+          "receipt" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/artifacts/stasel__webrtc/WebRTC/WebRTC.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePackages/artifac — the same commit builds for iOS, so the fence is real",
+          "worksOn" : [
+
+          ]
+        }
+      ],
+      "name" : "WebRTC (stasel)",
+      "slug" : "webrtc",
+      "version" : "149.0.0"
+    }
+  ],
+  "platform" : "visionOS",
+  "schemaVersion" : 1,
+  "stats" : {
+    "conditional" : 0,
+    "packages" : 76,
+    "records" : 114,
+    "supported" : 80,
+    "unknown" : 8,
+    "unsupported" : 26
+  },
+  "unknowns" : [
+    {
+      "capability" : "audio.device-selection",
+      "capabilityLabel" : "Audio device selection",
+      "name" : "CAAudioHardware",
+      "slug" : "caaudiohardware",
+      "why" : "manifest declares macOS only"
+    },
+    {
+      "capability" : "image.webp",
+      "capabilityLabel" : "WebP decoding",
+      "name" : "Kingfisher",
+      "slug" : "kingfisher",
+      "why" : "WebP needs the separate KingfisherWebP coder package — nothing in this package serves it"
+    },
+    {
+      "capability" : "midi.file",
+      "capabilityLabel" : "MIDI file read/write",
+      "name" : "MidiParser",
+      "slug" : "midiparser",
+      "why" : "empty manifest"
+    },
+    {
+      "capability" : "image.async-loading",
+      "capabilityLabel" : "Async image loading",
+      "name" : "SDWebImage",
+      "slug" : "sdwebimage",
+      "why" : "SDWebImage's surface is Objective-C (214 files unparsed in v1) — honestly unverified rather than guessed; manifest floors: iOS 9 / macOS 10.11 era"
+    },
+    {
+      "capability" : "audio.device-selection",
+      "capabilityLabel" : "Audio device selection",
+      "name" : "SPFKAudioHardware",
+      "slug" : "spfk-audio-hardware",
+      "why" : "manifest declares macOS only"
+    },
+    {
+      "capability" : "audio.codec.opus",
+      "capabilityLabel" : "Opus encoding/decoding",
+      "name" : "swift-opus",
+      "slug" : "swift-opus",
+      "why" : "visionOS absent from manifest floors (package predates it)"
+    },
+    {
+      "capability" : "speech.stt",
+      "capabilityLabel" : "Speech-to-text",
+      "name" : "SwiftWhisper",
+      "slug" : "swiftwhisper",
+      "why" : "empty manifest"
+    },
+    {
+      "capability" : "midi.io",
+      "capabilityLabel" : "MIDI input/output",
+      "name" : "WebMIDIKit",
+      "slug" : "webmidikit",
+      "why" : "empty manifest"
+    }
+  ]
+}

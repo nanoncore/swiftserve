@@ -274,6 +274,7 @@ public enum MenuPage {
             <section class="page-head">
               <h1>The Menu</h1>
               <p>Every capability the index can answer for. Dots show platform coverage across indexed packages.</p>
+              <p>Shipping for the headset? <a href="\(site.href("/on/visionos/"))">The state of visionOS →</a></p>
               \(site.categoryPills())
             </section>
         \(sections)
@@ -287,7 +288,6 @@ public enum MenuPage {
 public enum HomePage {
 
     public static func render(site: Site) -> String {
-        let model = site.model
         let main = """
             <section class="hero">
               <img class="swiftee-sprite hero-sprite" src="\(site.href("/swiftee/swiftee-idle.png"))" alt="Swiftee, the SwiftServe mascot" width="180" height="180" />
@@ -300,6 +300,7 @@ public enum HomePage {
               <div class="results-slot" data-results hidden></div>
               <div class="chips">
                 <a class="chip chip-accent" href="\(site.href("/menu/"))">Browse the Menu →</a>
+                <a class="chip" href="\(site.href("/on/visionos/"))">The state of visionOS →</a>
                 <a class="chip" href="\(site.href("/get/"))">Get SwiftServe →</a>
               </div>
               \(site.categoryPills())

@@ -29,7 +29,88 @@ public enum ApiOutput {
                 "capability": "\(base)/api/capabilities/{id}.json",
                 "search": "\(base)/api/search-index.json",
                 "recordSchema": "\(base)/api/schemas/capability-record-v1.json",
+                "platformPivot": "\(base)/api/on/visionos.json",
             ]))
+    }
+
+    /// `/api/on/{platform}.json` — the platform pivot as one fetch: counts,
+    /// what the OS covers, per-capability coverage, fences with receipts,
+    /// unknowns with reasons. The future WebXR layer renders from this alone.
+    public static func onPlatformJSON(_ view: OnPlatformView, site: Site) throws -> Data {
+        struct Stats: Encodable {
+            let supported, conditional, unsupported, unknown, records, packages: Int
+        }
+        struct BuiltInCoverage: Encodable {
+            let id, label: String
+            let floor: String?
+        }
+        struct BuiltIn: Encodable {
+            let slug, name, version: String
+            let capabilities: [BuiltInCoverage]
+        }
+        struct Coverage: Encodable {
+            let id, label: String
+            let supported, packages: Int
+            let builtInCovers: Bool
+            let truthTable: String
+        }
+        struct Fence: Encodable {
+            let capability, capabilityLabel, receipt: String
+            let compilerProven: Bool
+            let worksOn: [String]
+        }
+        struct FencedPackage: Encodable {
+            let slug, name, version: String
+            let fences: [Fence]
+        }
+        struct Unknown: Encodable {
+            let slug, name, capability, capabilityLabel: String
+            let why: String?
+        }
+        struct Payload: Encodable {
+            let schemaVersion: Int
+            let platform: String
+            let stats: Stats
+            let builtIn: [BuiltIn]
+            let capabilities: [Coverage]
+            let fenced: [FencedPackage]
+            let unknowns: [Unknown]
+        }
+
+        let base = site.basePath
+        return try encoder.encode(Payload(
+            schemaVersion: 1,
+            platform: view.platform.rawValue,
+            stats: Stats(supported: view.supported, conditional: view.conditional,
+                         unsupported: view.unsupported, unknown: view.unknown,
+                         records: view.recordCount, packages: view.packageCount),
+            builtIn: view.builtIn.map { framework in
+                BuiltIn(slug: framework.slug, name: framework.name, version: framework.version,
+                        capabilities: framework.coverage.map {
+                            BuiltInCoverage(id: $0.capability.id, label: $0.capability.label,
+                                            floor: $0.floor)
+                        })
+            },
+            capabilities: view.capabilities.map { entry in
+                Coverage(id: entry.capability.id, label: entry.capability.label,
+                         supported: entry.supported, packages: entry.packages,
+                         builtInCovers: entry.builtInCovers,
+                         truthTable: "\(base)/can/\(entry.capability.id)/?on=\(view.platform.rawValue)")
+            },
+            fenced: view.fenced.map { package in
+                FencedPackage(slug: package.slug, name: package.name, version: package.version,
+                              fences: package.fences.map { fence in
+                                  Fence(capability: fence.capability.id,
+                                        capabilityLabel: fence.capability.label,
+                                        receipt: fence.receipt,
+                                        compilerProven: fence.compilerProven,
+                                        worksOn: fence.worksOn.map(\.rawValue))
+                              })
+            },
+            unknowns: view.unknowns.map { entry in
+                Unknown(slug: entry.slug, name: entry.name, capability: entry.capability.id,
+                        capabilityLabel: entry.capability.label, why: entry.why)
+            }))
     }
 
     /// `/api/packages/index.json` — slug → name/url/version map.

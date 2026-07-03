@@ -36,6 +36,12 @@ public enum SiteGenerator {
             add("package/\(package.slug)/index.html", PackagePage.render(package, site: site))
         }
 
+        // The platform pivot — visionOS only for now; the view is
+        // platform-parameterized so others can join when their data lands.
+        let visionPivot = OnPlatformView(model: site.model, platform: .visionOS)
+        add("on/visionos/index.html", OnPlatformPage.render(visionPivot, site: site))
+        add("api/on/visionos.json", try ApiOutput.onPlatformJSON(visionPivot, site: site))
+
         add("api/index.json", try ApiOutput.rootIndex(site: site))
         add("api/taxonomy.json", try ApiOutput.encoder.encode(site.model.dataset.taxonomy))
         add("api/packages/index.json", try ApiOutput.packagesIndex(site: site))
@@ -88,6 +94,7 @@ public enum SiteGenerator {
 
         - Start here: \(site.basePath)/api/index.json
         - Capability pivot (the question agents ask): \(site.basePath)/api/capabilities/{id}.json
+        - Platform pivot (the state of visionOS): \(site.basePath)/on/visionos/ · JSON: \(site.basePath)/api/on/visionos.json
         - How verdicts are derived: \(site.basePath)/about/
         - For agents (CLI, skill, examples): \(site.basePath)/agents/
         - Install (plugin, skill, CLI): \(site.basePath)/get/

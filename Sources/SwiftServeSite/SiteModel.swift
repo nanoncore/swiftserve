@@ -130,3 +130,159 @@ public struct SiteModel: Sendable {
 
     public var recordCount: Int { dataset.records.count }
 }
+
+/// The /on/<platform> pivot: one page's worth of answers to "what is the
+/// state of <platform> in the Swift ecosystem?" — derived from the records at
+/// generation time, never hand-counted. Parameterized by platform so other
+/// pivots can ship later; only visionOS is generated today.
+public struct OnPlatformView: Sendable, Equatable {
+
+    /// One first-party framework and what it already covers here.
+    public struct BuiltIn: Sendable, Equatable {
+        public struct Coverage: Sendable, Equatable {
+            public let capability: CapabilityRef
+            public let floor: String?     // availability floor, e.g. "visionOS 1.0+"
+        }
+        public let slug: String
+        public let name: String
+        public let version: String        // the SDK pin, e.g. "Xcode 26.6"
+        public let coverage: [Coverage]   // sorted by capability id
+    }
+
+    /// Per-capability coverage — each one links to /can/<id>/?on=<platform>.
+    public struct CapabilityCoverage: Sendable, Equatable {
+        public let capability: Taxonomy.Capability
+        public let supported: Int         // third-party packages serving it here
+        public let packages: Int          // third-party packages with a verdict
+        public let builtInCovers: Bool    // an OS framework serves it here
+    }
+
+    /// One proven fence: the record's receipt for "not on this platform".
+    public struct Fence: Sendable, Equatable {
+        public let capability: CapabilityRef
+        public let receipt: String        // compiler one-liner, or the source guard
+        public let compilerProven: Bool   // grounded in a build verdict
+        public let worksOn: [Platform]    // where the same record IS supported
+    }
+
+    /// A package with at least one fence, grouped for display.
+    public struct FencedPackage: Sendable, Equatable {
+        public let slug: String
+        public let name: String
+        public let version: String
+        public let fences: [Fence]        // in capability-id order
+    }
+
+    /// A verdict we refuse to guess: unknown, with the reason on record.
+    public struct Unknown: Sendable, Equatable {
+        public let slug: String
+        public let name: String
+        public let capability: CapabilityRef
+        public let why: String?           // the evidence note
+    }
+
+    public let platform: Platform
+    public let supported: Int             // records, first-party included
+    public let conditional: Int
+    public let unsupported: Int
+    public let unknown: Int               // unknown claims + records with no claim
+    public let recordCount: Int
+    public let packageCount: Int
+    public let builtIn: [BuiltIn]                  // sorted by name
+    public let capabilities: [CapabilityCoverage]  // every capability with rows, by id
+    public let fenced: [FencedPackage]             // sorted by name
+    public let unknowns: [Unknown]                 // by name, then capability id
+
+    public init(model: SiteModel, platform: Platform) {
+        self.platform = platform
+        let key = platform.rawValue
+
+        var supported = 0, conditional = 0, unsupported = 0, unknown = 0
+        for record in model.dataset.records {
+            switch record.platforms[key]?.status {
+            case .supported: supported += 1
+            case .conditional: conditional += 1
+            case .unsupported: unsupported += 1
+            case .unknown, nil: unknown += 1
+            }
+        }
+        self.supported = supported
+        self.conditional = conditional
+        self.unsupported = unsupported
+        self.unknown = unknown
+        recordCount = model.recordCount
+        packageCount = model.packages.count
+
+        builtIn = model.packages.filter(\.firstParty).compactMap { package -> BuiltIn? in
+            let coverage = package.records.compactMap { record -> BuiltIn.Coverage? in
+                guard let claim = record.platforms[key], claim.status == .supported else { return nil }
+                return BuiltIn.Coverage(capability: record.capability,
+                                        floor: claim.evidence.compactMap(\.note).first)
+            }
+            guard !coverage.isEmpty else { return nil }
+            return BuiltIn(slug: package.slug, name: package.name,
+                           version: package.version, coverage: coverage)
+        }
+
+        capabilities = model.capabilities.filter { !$0.rows.isEmpty }.map { view in
+            let thirdParty = view.rows.filter { !$0.record.package.firstParty }
+            return CapabilityCoverage(
+                capability: view.capability,
+                supported: thirdParty.filter { $0.record.platforms[key]?.status == .supported }.count,
+                packages: thirdParty.count,
+                builtInCovers: view.rows.contains {
+                    $0.record.package.firstParty && $0.record.platforms[key]?.status == .supported
+                })
+        }
+
+        // Fences and unknowns walk the packages so the lists mirror the
+        // headline counts exactly — same records, same totals, no drift.
+        var fenced: [FencedPackage] = []
+        var unknowns: [Unknown] = []
+        for package in model.packages {
+            var fences: [Fence] = []
+            for record in package.records {
+                let claim = record.platforms[key]
+                switch claim?.status {
+                case .unsupported:
+                    fences.append(Fence(
+                        capability: record.capability,
+                        receipt: Self.receipt(for: claim!),
+                        compilerProven: claim!.evidence.contains { $0.kind == .buildVerdict },
+                        worksOn: PlatformDisplay.order.filter {
+                            record.platforms[$0.rawValue]?.status == .supported
+                        }))
+                case .unknown, nil:
+                    unknowns.append(Unknown(slug: package.slug, name: package.name,
+                                            capability: record.capability,
+                                            why: claim?.evidence.compactMap(\.note).first))
+                default:
+                    break
+                }
+            }
+            if !fences.isEmpty {
+                fenced.append(FencedPackage(slug: package.slug, name: package.name,
+                                            version: package.version, fences: fences))
+            }
+        }
+        self.fenced = fenced
+        self.unknowns = unknowns
+    }
+
+    /// The one-liner that proves a fence: the compiler's own words when a
+    /// build verdict grounds the claim, otherwise the source guard or
+    /// availability fence that decides it.
+    static func receipt(for claim: PlatformClaim) -> String {
+        if let note = claim.evidence.first(where: { $0.kind == .buildVerdict })?.note {
+            return note
+        }
+        if let anchor = claim.evidence.first(where: { $0.kind == .guard }) {
+            return [anchor.condition.map { "#if \($0)" }, anchor.note]
+                .compactMap { $0 }.joined(separator: " — ")
+        }
+        if let anchor = claim.evidence.first(where: { $0.kind == .availability }) {
+            return [anchor.availability, anchor.note].compactMap { $0 }.joined(separator: " — ")
+        }
+        return claim.evidence.compactMap(\.note).first ?? ""
+    }
+}
