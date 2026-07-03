@@ -4,7 +4,7 @@
       "id" : "media.streaming.webrtc",
       "label" : "WebRTC real-time streaming"
     },
-    "labeledAt" : "2026-07-02T17:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Prebuilt Google WebRTC binaries. Verdicts wait for xcframework Info.plist extraction (a planned extractor upgrade) — listed so searchers know it exists.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/stasel/webrtc",
       "commit" : "ff4647dc67f00d037c199c69e1a1ee8ceda88236",
+      "firstParty" : false,
       "name" : "WebRTC (stasel)",
       "surfaceDigest" : "fnv1a64:ccc0b190c304d235",
       "version" : "149.0.0"
@@ -99,20 +100,20 @@
         "status" : "unknown"
       },
       "visionOS" : {
-        "confidence" : 0.15,
+        "confidence" : 0.8,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "binary-only",
+            "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/artifacts/stasel__webrtc/WebRTC/WebRTC.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePackages/artifac — the same commit builds for iOS, so the fence is real",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "unsupported"
       },
       "watchOS" : {
         "confidence" : 0.15,

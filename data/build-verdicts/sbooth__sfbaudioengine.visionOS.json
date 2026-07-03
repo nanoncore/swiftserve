@@ -1,0 +1,26 @@
+{
+  "canonicalURL" : "https://github.com/sbooth/sfbaudioengine",
+  "commit" : "5a74dde3089060bac35f0a16970d91fc8402e751",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    ".dd/SourcePackages/artifacts/vorbis-binary-xcframework/vorbis/vorbis.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePackages/artifacts/vorbis-binary-xcframework/vorbis/vorbis.xcframework'. (in target 'vorbis' from project 'vorbis-binary-xcframework')",
+    ".dd/SourcePackages/artifacts/lame-binary-xcframework/lame/lame.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePackages/artifacts/lame-binary-xcframework/lame/lame.xcframework'. (in target 'lame' from project 'lame-binary-xcframework')",
+    ".dd/SourcePackages/artifacts/mpg123-binary-xcframework/mpg123/mpg123.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePackages/artifacts/mpg123-binary-xcframework/mpg123/mpg123.xcframework'. (in target 'mpg123' from project 'mpg123-binary-xcframework')",
+    ".dd/SourcePackages/artifacts/opus-binary-xcframework/opus/opus.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePackages/artifacts/opus-binary-xcframework/opus/opus.xcframework'. (in target 'opus' from project 'opus-binary-xcframework')",
+    ".dd/SourcePackages/artifacts/tta-cpp-binary-xcframework/tta-cpp/tta-cpp.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePackages/artifacts/tta-cpp-binary-xcframework/tta-cpp/tta-cpp.xcframework'. (in target 'tta-cpp' from project 'tta-cpp-binary-xcframework')",
+    ".dd/SourcePackages/artifacts/wavpack-binary-xcframework/wavpack/wavpack.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePackages/artifacts/wavpack-binary-xcframework/wavpack/wavpack.xcframework'. (in target 'SFBAudioEngine' from project 'SFBAudioEngine')",
+    ".dd/SourcePackages/artifacts/ogg-binary-xcframework/ogg/ogg.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePackages/artifacts/ogg-binary-xcframework/ogg/ogg.xcframework'. (in target 'SFBAudioEngine' from project 'SFBAudioEngine')",
+    ".dd/SourcePackages/artifacts/flac-binary-xcframework/FLAC/FLAC.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePackages/artifacts/flac-binary-xcframework/FLAC/FLAC.xcframework'. (in target 'SFBAudioEngine' from project 'SFBAudioEngine')",
+    ".dd/SourcePackages/artifacts/opus-binary-xcframework/opus/opus.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePackages/artifacts/opus-binary-xcframework/opus/opus.xcframework'. (in target 'SFBAudioEngine' from project 'SFBAudioEngine')",
+    ".dd/SourcePackages/artifacts/vorbis-binary-xcframework/vorbis/vorbis.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePackages/artifacts/vorbis-binary-xcframework/vorbis/vorbis.xcframework'. (in target 'SFBAudioEngine' from project 'SFBAudioEngine')",
+    ".dd/SourcePackages/artifacts/lame-binary-xcframework/lame/lame.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePackages/artifacts/lame-binary-xcframework/lame/lame.xcframework'. (in target 'SFBAudioEngine' from project 'SFBAudioEngine')",
+    ".dd/SourcePackages/artifacts/mpc-binary-xcframework/mpc/mpc.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePackages/artifacts/mpc-binary-xcframework/mpc/mpc.xcframework'. (in target 'SFBAudioEngine' from project 'SFBAudioEngine')"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:27:38Z",
+  "scheme" : "SFBAudioEngine",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

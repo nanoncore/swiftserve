@@ -91,14 +91,22 @@
           "status" : "supported"
         },
         "visionOS" : {
-          "confidence" : 0.3,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors at this tag"
+              "file" : "Sources/Image/ImageProcessor.swift",
+              "kind" : "symbol",
+              "line" : 786,
+              "note" : "ImageIO-based downsampling before decode",
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Image/ImageProcessor.swift#L786",
+              "symbol" : "DownsamplingImageProcessor"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme Kingfisher"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.7999999999999999,

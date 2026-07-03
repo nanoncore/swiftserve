@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/tattn/voicevox-client",
+  "commit" : "22ffcef8ea5eaf88bcd602f044af74a2ebe56fca",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:43:57Z",
+  "scheme" : "VOICEVOX",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

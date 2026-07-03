@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/ryanfrancesconi/spfk-audio-hardware",
+  "commit" : "ebe07274a6cd4c77f390b2726b9ebfd85ea5cf13",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+    "error: The package product 'SPFKBase' requires minimum platform version 16.0 for the iOS platform, but this target supports 12.0 (in target 'SPFKAudioHardware' from project 'spfk-audio-hardware')"
+  ],
+  "outcome" : "failed",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:36:11Z",
+  "scheme" : "spfk-audio-hardware",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

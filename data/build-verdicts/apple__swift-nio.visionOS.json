@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/apple/swift-nio",
+  "commit" : "cd3e1152083706d77b223fb29110e590efcc70c0",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:41:52Z",
+  "scheme" : "_NIOConcurrency",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

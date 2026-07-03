@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/kaishin/gifu",
       "commit" : "f19726eaf0dfa4dbce4d3f80293c9d38c2acba53",
+      "firstParty" : false,
       "name" : "Gifu",
       "surfaceDigest" : "fnv1a64:e2f1e9ed17060665",
       "version" : "v4.0.1"

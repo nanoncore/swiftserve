@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/dmrschmidt/dswaveformimage",
+  "commit" : "00afb7930863b9cc3bd011389d601735e548093c",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:25:07Z",
+  "scheme" : "DSWaveformImage",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

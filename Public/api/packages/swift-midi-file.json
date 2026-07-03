@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/orchetect/swift-midi-file",
       "commit" : "7d5ac32c068cfa288362a85bdf340653a4d242ee",
+      "firstParty" : false,
       "name" : "MIDIKitSMF",
       "surfaceDigest" : "fnv1a64:b71f2ad4e37fce95",
       "version" : "1.0.2"

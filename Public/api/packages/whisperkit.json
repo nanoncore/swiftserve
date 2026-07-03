@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/argmaxinc/whisperkit",
       "commit" : "25c62997041c134b03ca82731ce2f6fd2cae1eb9",
+      "firstParty" : false,
       "name" : "WhisperKit",
       "surfaceDigest" : "fnv1a64:216ebcb72ab973ad",
       "version" : "v1.0.0"

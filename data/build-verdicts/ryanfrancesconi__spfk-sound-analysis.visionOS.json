@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/ryanfrancesconi/spfk-sound-analysis",
+  "commit" : "279b9489ee4ffaf2a60e03acd90c0d980c84bb23",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:27:59Z",
+  "scheme" : "spfk-sound-analysis",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/exyte/svgview",
+  "commit" : "6465962facdd25cb96eaebc35603afa2f15d2c0d",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:27:21Z",
+  "scheme" : "SVGView",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

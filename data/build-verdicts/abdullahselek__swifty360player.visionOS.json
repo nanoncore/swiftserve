@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/abdullahselek/swifty360player",
+  "commit" : "a3a9249e34ce1bdcfa20c0780fdbec26a6396ddb",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    "Swifty360Player/Swifty360Window.swift:35:41: error: 'statusBarOrientation' is unavailable in visionOS"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:23:47Z",
+  "scheme" : "Swifty360Player",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

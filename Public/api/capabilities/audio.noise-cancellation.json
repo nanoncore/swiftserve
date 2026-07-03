@@ -190,14 +190,14 @@
           "status" : "unknown"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.8,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "kind" : "buildVerdict",
+              "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): error: The package product 'LiveKit' requires minimum platform version 26.0 for the visionOS platform, but this target supports 1.0 (in target 'LiveKitKrispNoiseFilter' from projec — the same commit builds for iOS, so the fence is real"
             }
           ],
-          "status" : "unknown"
+          "status" : "unsupported"
         },
         "watchOS" : {
           "confidence" : 0.2,

@@ -72,6 +72,32 @@
     "version" : "1.0.0"
   },
   {
+    "canonicalURL" : "https://developer.apple.com/documentation/avfaudio",
+    "capabilities" : [
+      "audio.echo-cancellation",
+      "audio.file-io",
+      "audio.metering",
+      "audio.playback",
+      "audio.recording",
+      "audio.session-management",
+      "audio.spatial",
+      "audio.synthesis"
+    ],
+    "name" : "AVFAudio",
+    "slug" : "avfaudio",
+    "version" : "Xcode 26.6"
+  },
+  {
+    "canonicalURL" : "https://developer.apple.com/documentation/avfoundation",
+    "capabilities" : [
+      "media.streaming.hls",
+      "video.playback"
+    ],
+    "name" : "AVFoundation",
+    "slug" : "avfoundation",
+    "version" : "Xcode 26.6"
+  },
+  {
     "canonicalURL" : "https://github.com/sbooth/caaudiohardware",
     "capabilities" : [
       "audio.device-selection"
@@ -97,6 +123,15 @@
     "name" : "CombineMIDI",
     "slug" : "combinemidi",
     "version" : "0.3.0"
+  },
+  {
+    "canonicalURL" : "https://developer.apple.com/documentation/coremidi",
+    "capabilities" : [
+      "midi.io"
+    ],
+    "name" : "CoreMIDI",
+    "slug" : "coremidi",
+    "version" : "Xcode 26.6"
   },
   {
     "canonicalURL" : "https://github.com/audiokit/devoloopaudiokit",
@@ -271,6 +306,15 @@
     "version" : "v2.1.1"
   },
   {
+    "canonicalURL" : "https://developer.apple.com/documentation/mediaplayer",
+    "capabilities" : [
+      "media.now-playing"
+    ],
+    "name" : "MediaPlayer",
+    "slug" : "mediaplayer",
+    "version" : "Xcode 26.6"
+  },
+  {
     "canonicalURL" : "https://github.com/orchetect/swift-midi-io",
     "capabilities" : [
       "midi.io"
@@ -417,6 +461,15 @@
     "name" : "SoulAudioKit",
     "slug" : "soulaudiokit",
     "version" : "5.3.0"
+  },
+  {
+    "canonicalURL" : "https://developer.apple.com/documentation/soundanalysis",
+    "capabilities" : [
+      "audio.classification"
+    ],
+    "name" : "SoundAnalysis",
+    "slug" : "soundanalysis",
+    "version" : "Xcode 26.6"
   },
   {
     "canonicalURL" : "https://github.com/audiokit/soundpipeaudiokit",

@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/orchetect/swift-midi-io",
+  "commit" : "54ac94028e3825bd8e622d373b0698d196927212",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:43:34Z",
+  "scheme" : "swift-midi-io",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

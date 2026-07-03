@@ -1,0 +1,1106 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.echo-cancellation",
+      "label" : "Echo cancellation"
+    },
+    "labeledAt" : "2026-07-03T11:30:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "System voice processing (echo cancellation + noise suppression for voice chat) — not Krisp-style ML denoising.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/avfaudio",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "AVFAudio",
+      "surfaceDigest" : "fnv1a64:129421f3267b2336",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 384,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioIONode.setVoiceProcessingEnabled(_:)"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "availability",
+            "line" : 384,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioIONode.setVoiceProcessingEnabled(_:)"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 384,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioIONode.setVoiceProcessingEnabled(_:)"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 384,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioIONode.setVoiceProcessingEnabled(_:)"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 384,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioIONode.setVoiceProcessingEnabled(_:)"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 384,
+            "note" : "visionOS 1.0+",
+            "package" : null,
+            "symbol" : "AVAudioIONode.setVoiceProcessingEnabled(_:)"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 384,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioIONode.setVoiceProcessingEnabled(_:)"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "audio.file-io",
+      "label" : "Audio file reading/writing"
+    },
+    "labeledAt" : "2026-07-03T11:30:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Read/write Core Audio formats (CAF, WAV, AIFF, m4a…).",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/avfaudio",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "AVFAudio",
+      "surfaceDigest" : "fnv1a64:129421f3267b2336",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 339,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioFile"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "availability",
+            "line" : 339,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioFile"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 339,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioFile"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 339,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioFile"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 339,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioFile"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 339,
+            "note" : "visionOS 1.0+",
+            "package" : null,
+            "symbol" : "AVAudioFile"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 339,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioFile"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "audio.metering",
+      "label" : "Audio level metering"
+    },
+    "labeledAt" : "2026-07-03T11:30:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Built-in level metering on AVAudioPlayer/AVAudioRecorder.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/avfaudio",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "AVFAudio",
+      "surfaceDigest" : "fnv1a64:129421f3267b2336",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 455,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioPlayer.isMeteringEnabled"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "availability",
+            "line" : 455,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioPlayer.isMeteringEnabled"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 455,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioPlayer.isMeteringEnabled"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 455,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioPlayer.isMeteringEnabled"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 455,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioPlayer.isMeteringEnabled"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 455,
+            "note" : "visionOS 1.0+",
+            "package" : null,
+            "symbol" : "AVAudioPlayer.isMeteringEnabled"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 455,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioPlayer.isMeteringEnabled"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "audio.playback",
+      "label" : "Audio playback"
+    },
+    "labeledAt" : "2026-07-03T11:30:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "AVAudioPlayer for files/buffers; AVAudioEngine for graphs. Built into the OS — no dependency.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/avfaudio",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "AVFAudio",
+      "surfaceDigest" : "fnv1a64:129421f3267b2336",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 438,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioPlayer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "availability",
+            "line" : 438,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioPlayer"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 438,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioPlayer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 438,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioPlayer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 438,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioPlayer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 438,
+            "note" : "visionOS 1.0+",
+            "package" : null,
+            "symbol" : "AVAudioPlayer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 438,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioPlayer"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "audio.recording",
+      "label" : "Microphone recording"
+    },
+    "labeledAt" : "2026-07-03T11:30:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "AVAudioRecorder for files; AVAudioEngine.inputNode for buffers.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/avfaudio",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "AVFAudio",
+      "surfaceDigest" : "fnv1a64:129421f3267b2336",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 552,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioRecorder"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "availability",
+            "line" : 552,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioRecorder"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 552,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioRecorder"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 552,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioRecorder"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 552,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioRecorder"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 552,
+            "note" : "visionOS 1.0+",
+            "package" : null,
+            "symbol" : "AVAudioRecorder"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 552,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioRecorder"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "audio.session-management",
+      "label" : "Audio session management"
+    },
+    "labeledAt" : "2026-07-03T11:30:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "The system audio session itself — category, activation, routing.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/avfaudio",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "AVFAudio",
+      "surfaceDigest" : "fnv1a64:129421f3267b2336",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 637,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioSession"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "availability",
+            "line" : 637,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioSession"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 637,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioSession"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "not exported by the macOS SDK symbol graph",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "availability",
+            "line" : 637,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioSession"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 637,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioSession"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 637,
+            "note" : "visionOS 1.0+",
+            "package" : null,
+            "symbol" : "AVAudioSession"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 637,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioSession"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "audio.spatial",
+      "label" : "Spatial audio"
+    },
+    "labeledAt" : "2026-07-03T11:30:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "3D positional mixing via AVAudioEnvironmentNode and spatial mixing attributes.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/avfaudio",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "AVFAudio",
+      "surfaceDigest" : "fnv1a64:129421f3267b2336",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 314,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioEnvironmentNode"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "availability",
+            "line" : 314,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioEnvironmentNode"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 314,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioEnvironmentNode"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 314,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioEnvironmentNode"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 314,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioEnvironmentNode"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 314,
+            "note" : "visionOS 1.0+",
+            "package" : null,
+            "symbol" : "AVAudioEnvironmentNode"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "not exported by the watchOS SDK symbol graph",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "availability",
+            "line" : 314,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioEnvironmentNode"
+          }
+        ],
+        "status" : "unsupported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "audio.synthesis",
+      "label" : "Audio synthesis / DSP"
+    },
+    "labeledAt" : "2026-07-03T11:30:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Render-block synthesis via AVAudioSourceNode; AVAudioUnit hosts DSP.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/avfaudio",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "AVFAudio",
+      "surfaceDigest" : "fnv1a64:129421f3267b2336",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 1115,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioSourceNode"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "availability",
+            "line" : 1115,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioSourceNode"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 1115,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioSourceNode"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 1115,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioSourceNode"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 1115,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioSourceNode"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 1115,
+            "note" : "visionOS 1.0+",
+            "package" : null,
+            "symbol" : "AVAudioSourceNode"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+            "kind" : "symbol",
+            "line" : 1115,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVAudioSourceNode"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

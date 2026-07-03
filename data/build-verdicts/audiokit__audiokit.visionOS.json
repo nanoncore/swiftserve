@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/audiokit/audiokit",
+  "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:33:18Z",
+  "scheme" : "AudioKit",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

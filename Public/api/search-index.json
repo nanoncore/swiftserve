@@ -28,15 +28,15 @@
       "domain" : "audio",
       "id" : "audio.classification",
       "label" : "Sound classification",
-      "n" : 1,
+      "n" : 2,
       "p" : {
-        "iOS" : 0,
+        "iOS" : 1,
         "linux" : 0,
-        "macCatalyst" : 0,
-        "macOS" : 1,
-        "tvOS" : 0,
-        "visionOS" : 0,
-        "watchOS" : 0
+        "macCatalyst" : 1,
+        "macOS" : 2,
+        "tvOS" : 1,
+        "visionOS" : 2,
+        "watchOS" : 1
       }
     },
     {
@@ -54,7 +54,7 @@
         "macCatalyst" : 1,
         "macOS" : 1,
         "tvOS" : 0,
-        "visionOS" : 0,
+        "visionOS" : 1,
         "watchOS" : 0
       }
     },
@@ -104,15 +104,15 @@
       "domain" : "audio",
       "id" : "audio.echo-cancellation",
       "label" : "Echo cancellation",
-      "n" : 1,
+      "n" : 2,
       "p" : {
-        "iOS" : 1,
+        "iOS" : 2,
         "linux" : 0,
-        "macCatalyst" : 1,
-        "macOS" : 1,
-        "tvOS" : 1,
-        "visionOS" : 0,
-        "watchOS" : 0
+        "macCatalyst" : 2,
+        "macOS" : 2,
+        "tvOS" : 2,
+        "visionOS" : 2,
+        "watchOS" : 1
       }
     },
     {
@@ -125,15 +125,15 @@
       "domain" : "audio",
       "id" : "audio.file-io",
       "label" : "Audio file reading/writing",
-      "n" : 1,
+      "n" : 2,
       "p" : {
-        "iOS" : 1,
+        "iOS" : 2,
         "linux" : 0,
-        "macCatalyst" : 1,
-        "macOS" : 1,
-        "tvOS" : 1,
-        "visionOS" : 1,
-        "watchOS" : 0
+        "macCatalyst" : 2,
+        "macOS" : 2,
+        "tvOS" : 2,
+        "visionOS" : 2,
+        "watchOS" : 1
       }
     },
     {
@@ -145,15 +145,15 @@
       "domain" : "audio",
       "id" : "audio.metering",
       "label" : "Audio level metering",
-      "n" : 1,
+      "n" : 2,
       "p" : {
-        "iOS" : 1,
+        "iOS" : 2,
         "linux" : 0,
-        "macCatalyst" : 1,
-        "macOS" : 1,
-        "tvOS" : 1,
-        "visionOS" : 1,
-        "watchOS" : 0
+        "macCatalyst" : 2,
+        "macOS" : 2,
+        "tvOS" : 2,
+        "visionOS" : 2,
+        "watchOS" : 1
       }
     },
     {
@@ -205,15 +205,15 @@
       "domain" : "audio",
       "id" : "audio.playback",
       "label" : "Audio playback",
-      "n" : 5,
+      "n" : 6,
       "p" : {
-        "iOS" : 4,
+        "iOS" : 5,
         "linux" : 0,
-        "macCatalyst" : 4,
-        "macOS" : 3,
-        "tvOS" : 2,
-        "visionOS" : 1,
-        "watchOS" : 0
+        "macCatalyst" : 5,
+        "macOS" : 4,
+        "tvOS" : 3,
+        "visionOS" : 3,
+        "watchOS" : 1
       }
     },
     {
@@ -225,15 +225,15 @@
       "domain" : "audio",
       "id" : "audio.recording",
       "label" : "Microphone recording",
-      "n" : 3,
+      "n" : 4,
       "p" : {
-        "iOS" : 3,
+        "iOS" : 4,
         "linux" : 0,
-        "macCatalyst" : 3,
-        "macOS" : 2,
-        "tvOS" : 0,
-        "visionOS" : 1,
-        "watchOS" : 0
+        "macCatalyst" : 4,
+        "macOS" : 3,
+        "tvOS" : 1,
+        "visionOS" : 3,
+        "watchOS" : 1
       }
     },
     {
@@ -245,15 +245,15 @@
       "domain" : "audio",
       "id" : "audio.session-management",
       "label" : "Audio session management",
-      "n" : 2,
+      "n" : 3,
       "p" : {
-        "iOS" : 2,
+        "iOS" : 3,
         "linux" : 0,
-        "macCatalyst" : 2,
+        "macCatalyst" : 3,
         "macOS" : 0,
-        "tvOS" : 2,
-        "visionOS" : 1,
-        "watchOS" : 0
+        "tvOS" : 3,
+        "visionOS" : 2,
+        "watchOS" : 1
       }
     },
     {
@@ -265,14 +265,14 @@
       "domain" : "audio",
       "id" : "audio.spatial",
       "label" : "Spatial audio",
-      "n" : 0,
+      "n" : 1,
       "p" : {
-        "iOS" : 0,
+        "iOS" : 1,
         "linux" : 0,
-        "macCatalyst" : 0,
-        "macOS" : 0,
-        "tvOS" : 0,
-        "visionOS" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
         "watchOS" : 0
       }
     },
@@ -291,7 +291,7 @@
         "macCatalyst" : 3,
         "macOS" : 2,
         "tvOS" : 3,
-        "visionOS" : 1,
+        "visionOS" : 2,
         "watchOS" : 0
       }
     },
@@ -305,15 +305,15 @@
       "domain" : "audio",
       "id" : "audio.synthesis",
       "label" : "Audio synthesis / DSP",
-      "n" : 6,
+      "n" : 7,
       "p" : {
-        "iOS" : 6,
+        "iOS" : 7,
         "linux" : 0,
-        "macCatalyst" : 6,
-        "macOS" : 6,
-        "tvOS" : 6,
-        "visionOS" : 1,
-        "watchOS" : 0
+        "macCatalyst" : 7,
+        "macOS" : 7,
+        "tvOS" : 7,
+        "visionOS" : 5,
+        "watchOS" : 1
       }
     },
     {
@@ -332,7 +332,7 @@
         "macCatalyst" : 4,
         "macOS" : 3,
         "tvOS" : 0,
-        "visionOS" : 1,
+        "visionOS" : 4,
         "watchOS" : 0
       }
     },
@@ -352,7 +352,7 @@
         "macCatalyst" : 3,
         "macOS" : 3,
         "tvOS" : 3,
-        "visionOS" : 1,
+        "visionOS" : 3,
         "watchOS" : 3
       }
     },
@@ -372,7 +372,7 @@
         "macCatalyst" : 2,
         "macOS" : 2,
         "tvOS" : 2,
-        "visionOS" : 1,
+        "visionOS" : 2,
         "watchOS" : 2
       }
     },
@@ -392,7 +392,7 @@
         "macCatalyst" : 1,
         "macOS" : 1,
         "tvOS" : 1,
-        "visionOS" : 0,
+        "visionOS" : 1,
         "watchOS" : 1
       }
     },
@@ -412,7 +412,7 @@
         "macCatalyst" : 3,
         "macOS" : 2,
         "tvOS" : 3,
-        "visionOS" : 1,
+        "visionOS" : 3,
         "watchOS" : 0
       }
     },
@@ -431,7 +431,7 @@
         "macCatalyst" : 2,
         "macOS" : 2,
         "tvOS" : 2,
-        "visionOS" : 1,
+        "visionOS" : 2,
         "watchOS" : 2
       }
     },
@@ -470,7 +470,7 @@
         "macCatalyst" : 1,
         "macOS" : 1,
         "tvOS" : 0,
-        "visionOS" : 0,
+        "visionOS" : 1,
         "watchOS" : 1
       }
     },
@@ -501,15 +501,15 @@
       "domain" : "media",
       "id" : "media.now-playing",
       "label" : "Now-playing / remote controls",
-      "n" : 1,
+      "n" : 2,
       "p" : {
-        "iOS" : 1,
+        "iOS" : 2,
         "linux" : 0,
-        "macCatalyst" : 1,
-        "macOS" : 0,
-        "tvOS" : 0,
-        "visionOS" : 0,
-        "watchOS" : 0
+        "macCatalyst" : 2,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 1
       }
     },
     {
@@ -521,15 +521,15 @@
       "domain" : "media",
       "id" : "media.streaming.hls",
       "label" : "HLS streaming",
-      "n" : 3,
+      "n" : 4,
       "p" : {
-        "iOS" : 3,
+        "iOS" : 4,
         "linux" : 0,
-        "macCatalyst" : 3,
-        "macOS" : 2,
-        "tvOS" : 2,
-        "visionOS" : 1,
-        "watchOS" : 1
+        "macCatalyst" : 4,
+        "macOS" : 3,
+        "tvOS" : 3,
+        "visionOS" : 4,
+        "watchOS" : 2
       }
     },
     {
@@ -600,14 +600,14 @@
       "domain" : "midi",
       "id" : "midi.io",
       "label" : "MIDI input/output",
-      "n" : 5,
+      "n" : 6,
       "p" : {
-        "iOS" : 5,
+        "iOS" : 6,
         "linux" : 0,
-        "macCatalyst" : 5,
-        "macOS" : 5,
+        "macCatalyst" : 6,
+        "macOS" : 6,
         "tvOS" : 0,
-        "visionOS" : 2,
+        "visionOS" : 5,
         "watchOS" : 0
       }
     },
@@ -646,7 +646,7 @@
         "macCatalyst" : 1,
         "macOS" : 1,
         "tvOS" : 1,
-        "visionOS" : 0,
+        "visionOS" : 1,
         "watchOS" : 1
       }
     },
@@ -666,7 +666,7 @@
         "macCatalyst" : 2,
         "macOS" : 2,
         "tvOS" : 2,
-        "visionOS" : 0,
+        "visionOS" : 1,
         "watchOS" : 2
       }
     },
@@ -705,7 +705,7 @@
         "macCatalyst" : 1,
         "macOS" : 1,
         "tvOS" : 1,
-        "visionOS" : 0,
+        "visionOS" : 1,
         "watchOS" : 1
       }
     },
@@ -763,7 +763,7 @@
         "macCatalyst" : 1,
         "macOS" : 1,
         "tvOS" : 1,
-        "visionOS" : 0,
+        "visionOS" : 1,
         "watchOS" : 1
       }
     },
@@ -783,7 +783,7 @@
         "macCatalyst" : 1,
         "macOS" : 1,
         "tvOS" : 1,
-        "visionOS" : 0,
+        "visionOS" : 1,
         "watchOS" : 1
       }
     },
@@ -824,7 +824,7 @@
         "macCatalyst" : 5,
         "macOS" : 5,
         "tvOS" : 0,
-        "visionOS" : 2,
+        "visionOS" : 3,
         "watchOS" : 1
       }
     },
@@ -843,7 +843,7 @@
         "macCatalyst" : 5,
         "macOS" : 6,
         "tvOS" : 1,
-        "visionOS" : 1,
+        "visionOS" : 5,
         "watchOS" : 1
       }
     },
@@ -893,15 +893,15 @@
       "domain" : "video",
       "id" : "video.playback",
       "label" : "Video playback",
-      "n" : 6,
+      "n" : 7,
       "p" : {
-        "iOS" : 6,
+        "iOS" : 7,
         "linux" : 0,
-        "macCatalyst" : 6,
-        "macOS" : 2,
-        "tvOS" : 3,
-        "visionOS" : 2,
-        "watchOS" : 0
+        "macCatalyst" : 7,
+        "macOS" : 3,
+        "tvOS" : 4,
+        "visionOS" : 3,
+        "watchOS" : 1
       }
     },
     {
@@ -920,7 +920,7 @@
         "macCatalyst" : 1,
         "macOS" : 1,
         "tvOS" : 0,
-        "visionOS" : 0,
+        "visionOS" : 1,
         "watchOS" : 0
       }
     },
@@ -951,6 +951,7 @@
         "kasimok/AECAudioStream"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "AECAudioStream",
       "slug" : "aecaudiostream"
     },
@@ -960,6 +961,7 @@
         "AF"
       ],
       "caps" : 5,
+      "fp" : false,
       "name" : "Alamofire",
       "slug" : "alamofire"
     },
@@ -968,6 +970,7 @@
         "AudioKit/AudioKit"
       ],
       "caps" : 6,
+      "fp" : false,
       "name" : "AudioKit",
       "slug" : "audiokit"
     },
@@ -976,6 +979,7 @@
         "AudioKit/Waveform"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "AudioKit Waveform",
       "slug" : "waveform"
     },
@@ -984,6 +988,7 @@
         "AudioKit/AudioKitUI"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "AudioKitUI",
       "slug" : "audiokitui"
     },
@@ -992,6 +997,7 @@
         "markbattistella/AudioManager"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "AudioManager",
       "slug" : "audiomanager"
     },
@@ -1000,14 +1006,34 @@
         "atacan/AudioRecorder"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "AudioRecorder",
       "slug" : "audiorecorder"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 8,
+      "fp" : true,
+      "name" : "AVFAudio",
+      "slug" : "avfaudio"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 2,
+      "fp" : true,
+      "name" : "AVFoundation",
+      "slug" : "avfoundation"
     },
     {
       "aliases" : [
         "sbooth/CAAudioHardware"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "CAAudioHardware",
       "slug" : "caaudiohardware"
     },
@@ -1016,6 +1042,7 @@
         "mihai8804858/swift-chunked-audio-player"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "ChunkedAudioPlayer",
       "slug" : "swift-chunked-audio-player"
     },
@@ -1024,14 +1051,25 @@
         "mkj-is/CombineMIDI"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "CombineMIDI",
       "slug" : "combinemidi"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 1,
+      "fp" : true,
+      "name" : "CoreMIDI",
+      "slug" : "coremidi"
     },
     {
       "aliases" : [
         "audiokit/devoloopaudiokit"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "DevoloopAudioKit",
       "slug" : "devoloopaudiokit"
     },
@@ -1040,6 +1078,7 @@
         "dmrschmidt/DSWaveformImage"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "DSWaveformImage",
       "slug" : "dswaveformimage"
     },
@@ -1048,6 +1087,7 @@
         "audiokit/dunneaudiokit"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "DunneAudioKit",
       "slug" : "dunneaudiokit"
     },
@@ -1056,6 +1096,7 @@
         "exyte/MediaPicker"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "ExyteMediaPicker",
       "slug" : "mediapicker"
     },
@@ -1064,6 +1105,7 @@
         "fulldecent/FDSoundActivatedRecorder"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "FDSoundActivatedRecorder",
       "slug" : "fdsoundactivatedrecorder"
     },
@@ -1072,6 +1114,7 @@
         "fulldecent/FDWaveformView"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "FDWaveformView",
       "slug" : "fdwaveformview"
     },
@@ -1080,6 +1123,7 @@
         "FluidInference/FluidAudio"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "FluidAudio",
       "slug" : "fluidaudio"
     },
@@ -1088,6 +1132,7 @@
         "fethica/FRadioPlayer"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "FRadioPlayer",
       "slug" : "fradioplayer"
     },
@@ -1096,6 +1141,7 @@
         "kaishin/Gifu"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "Gifu",
       "slug" : "gifu"
     },
@@ -1104,6 +1150,7 @@
         "fcanas/hlscore"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "HLSCore",
       "slug" : "hlscore"
     },
@@ -1112,6 +1159,7 @@
         "atelier-socle/swift-hls-kit"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "HLSKit",
       "slug" : "swift-hls-kit"
     },
@@ -1120,6 +1168,7 @@
         "garynewby/HLSVideoCache"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "HLSVideoCache",
       "slug" : "hlsvideocache"
     },
@@ -1129,6 +1178,7 @@
         "KF"
       ],
       "caps" : 6,
+      "fp" : false,
       "name" : "Kingfisher",
       "slug" : "kingfisher"
     },
@@ -1137,6 +1187,7 @@
         "kingslay/KSPlayer"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "KSPlayer",
       "slug" : "ksplayer"
     },
@@ -1146,6 +1197,7 @@
         "swift-eventsource"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "LDSwiftEventSource",
       "slug" : "swift-eventsource"
     },
@@ -1156,6 +1208,7 @@
         "client-sdk-swift"
       ],
       "caps" : 6,
+      "fp" : false,
       "name" : "LiveKit",
       "slug" : "client-sdk-swift"
     },
@@ -1164,6 +1217,7 @@
         "livekit/swift-krisp-noise-filter"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "LiveKitKrispNoiseFilter",
       "slug" : "swift-krisp-noise-filter"
     },
@@ -1172,8 +1226,18 @@
         "mapbox/mapbox-speech-swift"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "MapboxSpeech",
       "slug" : "mapbox-speech-swift"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 1,
+      "fp" : true,
+      "name" : "MediaPlayer",
+      "slug" : "mediaplayer"
     },
     {
       "aliases" : [
@@ -1181,6 +1245,7 @@
         "swift-midi-io"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "MIDIKitIO",
       "slug" : "swift-midi-io"
     },
@@ -1189,6 +1254,7 @@
         "orchetect/swift-midi-file"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "MIDIKitSMF",
       "slug" : "swift-midi-file"
     },
@@ -1197,6 +1263,7 @@
         "matsune/MidiParser"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "MidiParser",
       "slug" : "midiparser"
     },
@@ -1205,6 +1272,7 @@
         "Blaizzy/mlx-audio-swift"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "MLXAudio",
       "slug" : "mlx-audio-swift"
     },
@@ -1213,6 +1281,7 @@
         "noreasonprojects/modernavplayer"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "ModernAVPlayer",
       "slug" : "modernavplayer"
     },
@@ -1221,6 +1290,7 @@
         "bradhowes/morkandmidi"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "MorkAndMIDI",
       "slug" : "morkandmidi"
     },
@@ -1229,6 +1299,7 @@
         "Moya/Moya"
       ],
       "caps" : 2,
+      "fp" : false,
       "name" : "Moya",
       "slug" : "moya"
     },
@@ -1237,6 +1308,7 @@
         "muxinc/mux-player-swift"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "MuxPlayerSwift",
       "slug" : "mux-player-swift"
     },
@@ -1245,6 +1317,7 @@
         "kean/Nuke"
       ],
       "caps" : 3,
+      "fp" : false,
       "name" : "Nuke",
       "slug" : "nuke"
     },
@@ -1253,6 +1326,7 @@
         "piemonte/player"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "Player",
       "slug" : "player"
     },
@@ -1261,6 +1335,7 @@
         "kean/Pulse"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "Pulse",
       "slug" : "pulse"
     },
@@ -1269,6 +1344,7 @@
         "atelier-socle/swift-rtmp-kit"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "RTMPKit",
       "slug" : "swift-rtmp-kit"
     },
@@ -1277,6 +1353,7 @@
         "SDWebImage/SDWebImage"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "SDWebImage",
       "slug" : "sdwebimage"
     },
@@ -1285,6 +1362,7 @@
         "SDWebImage/SDWebImageSwiftUI"
       ],
       "caps" : 2,
+      "fp" : false,
       "name" : "SDWebImageSwiftUI",
       "slug" : "sdwebimageswiftui"
     },
@@ -1293,6 +1371,7 @@
         "sbooth/SFBAudioEngine"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "SFBAudioEngine",
       "slug" : "sfbaudioengine"
     },
@@ -1301,14 +1380,25 @@
         "audiokit/soulaudiokit"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "SoulAudioKit",
       "slug" : "soulaudiokit"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 1,
+      "fp" : true,
+      "name" : "SoundAnalysis",
+      "slug" : "soundanalysis"
     },
     {
       "aliases" : [
         "AudioKit/SoundpipeAudioKit"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "SoundpipeAudioKit",
       "slug" : "soundpipeaudiokit"
     },
@@ -1317,6 +1407,7 @@
         "StanfordSpezi/SpeziSpeech"
       ],
       "caps" : 2,
+      "fp" : false,
       "name" : "SpeziSpeech",
       "slug" : "spezispeech"
     },
@@ -1325,6 +1416,7 @@
         "ryanfrancesconi/spfk-audio-hardware"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "SPFKAudioHardware",
       "slug" : "spfk-audio-hardware"
     },
@@ -1333,6 +1425,7 @@
         "ryanfrancesconi/spfk-sound-analysis"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "SPFKSoundAnalysis",
       "slug" : "spfk-sound-analysis"
     },
@@ -1341,6 +1434,7 @@
         "audiokit/sporthaudiokit"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "SporthAudioKit",
       "slug" : "sporthaudiokit"
     },
@@ -1349,6 +1443,7 @@
         "daltoniam/Starscream"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "Starscream",
       "slug" : "starscream"
     },
@@ -1357,6 +1452,7 @@
         "audiokit/stkaudiokit"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "STKAudioKit",
       "slug" : "stkaudiokit"
     },
@@ -1365,6 +1461,7 @@
         "GetStream/stream-video-swift"
       ],
       "caps" : 4,
+      "fp" : false,
       "name" : "StreamVideo",
       "slug" : "stream-video-swift"
     },
@@ -1373,6 +1470,7 @@
         "exyte/SVGView"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "SVGView",
       "slug" : "svgview"
     },
@@ -1381,6 +1479,7 @@
         "alta/swift-opus"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "swift-opus",
       "slug" : "swift-opus"
     },
@@ -1389,6 +1488,7 @@
         "p-x9/swift-system-sound"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "swift-system-sound",
       "slug" : "swift-system-sound"
     },
@@ -1397,6 +1497,7 @@
         "DoubleSymmetry/SwiftAudioEx"
       ],
       "caps" : 3,
+      "fp" : false,
       "name" : "SwiftAudioEx",
       "slug" : "swiftaudioex"
     },
@@ -1405,6 +1506,7 @@
         "tanhakabir/SwiftAudioPlayer"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "SwiftAudioPlayer",
       "slug" : "swiftaudioplayer"
     },
@@ -1413,6 +1515,7 @@
         "herrkaefer/SwiftEdgeTTS"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "SwiftEdgeTTS",
       "slug" : "swiftedgetts"
     },
@@ -1421,6 +1524,7 @@
         "hidden-spectrum/SwiftLAME"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "SwiftLAME",
       "slug" : "swiftlame"
     },
@@ -1431,6 +1535,7 @@
         "NIO"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "SwiftNIO",
       "slug" : "swift-nio"
     },
@@ -1439,6 +1544,7 @@
         "Cay-Zhang/SwiftSpeech"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "SwiftSpeech",
       "slug" : "swiftspeech"
     },
@@ -1447,6 +1553,7 @@
         "renaudjenny/swift-tts"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "SwiftTTS",
       "slug" : "swift-tts"
     },
@@ -1455,6 +1562,7 @@
         "exPHAT/SwiftWhisper"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "SwiftWhisper",
       "slug" : "swiftwhisper"
     },
@@ -1463,6 +1571,7 @@
         "abdullahselek/swifty360player"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "Swifty360Player",
       "slug" : "swifty360player"
     },
@@ -1471,6 +1580,7 @@
         "adamcichy/SwiftySound"
       ],
       "caps" : 2,
+      "fp" : false,
       "name" : "SwiftySound",
       "slug" : "swiftysound"
     },
@@ -1479,6 +1589,7 @@
         "MetalPetal/VideoIO"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "VideoIO",
       "slug" : "videoio"
     },
@@ -1487,6 +1598,7 @@
         "tattn/voicevox-client"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "VOICEVOX",
       "slug" : "voicevox-client"
     },
@@ -1495,6 +1607,7 @@
         "adamnemecek/webmidikit"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "WebMIDIKit",
       "slug" : "webmidikit"
     },
@@ -1503,6 +1616,7 @@
         "stasel/WebRTC"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "WebRTC (stasel)",
       "slug" : "webrtc"
     },
@@ -1511,6 +1625,7 @@
         "argmaxinc/WhisperKit"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "WhisperKit",
       "slug" : "whisperkit"
     },
@@ -1519,6 +1634,7 @@
         "sventiigi/youtubeplayerkit"
       ],
       "caps" : 1,
+      "fp" : false,
       "name" : "YouTubePlayerKit",
       "slug" : "youtubeplayerkit"
     }

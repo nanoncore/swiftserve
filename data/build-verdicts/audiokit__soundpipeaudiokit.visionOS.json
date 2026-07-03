@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/audiokit/soundpipeaudiokit",
+  "commit" : "d8afd31b3710a0efd5f9ecb11f1169ca493795e9",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:42:01Z",
+  "scheme" : "SoundpipeAudioKit",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

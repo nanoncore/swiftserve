@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/audiokit/sporthaudiokit",
+  "commit" : "638c95036430ce23ba2810101de319ed31f481bb",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:42:26Z",
+  "scheme" : "SporthAudioKit",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

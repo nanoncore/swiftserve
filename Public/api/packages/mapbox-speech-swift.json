@@ -4,7 +4,7 @@
       "id" : "speech.tts",
       "label" : "Text-to-speech"
     },
-    "labeledAt" : "2026-07-02T15:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Network TTS — audio comes from the Mapbox Voice API, not on-device synthesis. Empty manifest = default floors on all platforms.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/mapbox/mapbox-speech-swift",
       "commit" : "a9ef284deae227c6111c27a3535098c1e9a9d8e3",
+      "firstParty" : false,
       "name" : "MapboxSpeech",
       "surfaceDigest" : "fnv1a64:48f7b348d564c300",
       "version" : "v2.1.1"
@@ -99,20 +100,30 @@
         "status" : "supported"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Sources/MapboxSpeech/MapboxSpeech.swift",
+            "kind" : "symbol",
+            "line" : 78,
+            "note" : "Mapbox Voice API client",
+            "package" : null,
+            "symbol" : "SpeechSynthesizer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "predates visionOS; symbols unguarded but untested",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme MapboxSpeech",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.65,

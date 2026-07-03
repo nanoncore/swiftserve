@@ -210,14 +210,14 @@
           "status" : "supported"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "kind" : "buildVerdict",
+              "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/FRadioPlayer/FRadioPlayer.swift:301:21: error: 'allowsExternalPlayback' is unavailable in visionOS — the same commit builds for iOS, so the fence is real"
             }
           ],
-          "status" : "unknown"
+          "status" : "unsupported"
         },
         "watchOS" : {
           "confidence" : 0.25,
@@ -313,14 +313,22 @@
           "status" : "supported"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "file" : "Source/SAPlayer.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "note" : "streams remote audio with real-time effects",
+              "permalink" : "https://github.com/tanhakabir/swiftaudioplayer/blob/7.6.0/Source/SAPlayer.swift#L29",
+              "symbol" : "SAPlayer"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme SwiftAudioPlayer"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.2,

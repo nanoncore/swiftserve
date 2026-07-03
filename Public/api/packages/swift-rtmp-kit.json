@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/atelier-socle/swift-rtmp-kit",
       "commit" : "163eea45fe8d66b0047d028c92de9ef993bd2ace",
+      "firstParty" : false,
       "name" : "RTMPKit",
       "surfaceDigest" : "fnv1a64:37c88ab1caa51ae7",
       "version" : "0.3.1"

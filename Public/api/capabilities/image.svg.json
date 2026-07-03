@@ -83,14 +83,22 @@
           "status" : "unknown"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "file" : "Source/Parser/SVG/SVGView.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "parse + render SVG in SwiftUI",
+              "permalink" : "https://github.com/exyte/svgview/blob/1.0.6/Source/Parser/SVG/SVGView.swift#L10",
+              "symbol" : "SVGView"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme SVGView"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.75,

@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/stasel/webrtc",
+  "commit" : "ff4647dc67f00d037c199c69e1a1ee8ceda88236",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    ".dd/SourcePackages/artifacts/stasel__webrtc/WebRTC/WebRTC.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePackages/artifacts/stasel__webrtc/WebRTC/WebRTC.xcframework'. (in target 'WebRTC' from project 'WebRTC')"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:26:33Z",
+  "scheme" : "WebRTC",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

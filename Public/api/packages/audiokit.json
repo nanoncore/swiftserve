@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/audiokit/audiokit",
       "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+      "firstParty" : false,
       "name" : "AudioKit",
       "surfaceDigest" : "fnv1a64:bf6eb5e879b0cd61",
       "version" : "5.7.2"
@@ -150,6 +151,7 @@
       ],
       "canonicalURL" : "https://github.com/audiokit/audiokit",
       "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+      "firstParty" : false,
       "name" : "AudioKit",
       "surfaceDigest" : "fnv1a64:bf6eb5e879b0cd61",
       "version" : "5.7.2"
@@ -287,6 +289,7 @@
       ],
       "canonicalURL" : "https://github.com/audiokit/audiokit",
       "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+      "firstParty" : false,
       "name" : "AudioKit",
       "surfaceDigest" : "fnv1a64:bf6eb5e879b0cd61",
       "version" : "5.7.2"
@@ -424,6 +427,7 @@
       ],
       "canonicalURL" : "https://github.com/audiokit/audiokit",
       "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+      "firstParty" : false,
       "name" : "AudioKit",
       "surfaceDigest" : "fnv1a64:bf6eb5e879b0cd61",
       "version" : "5.7.2"
@@ -601,6 +605,7 @@
       ],
       "canonicalURL" : "https://github.com/audiokit/audiokit",
       "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+      "firstParty" : false,
       "name" : "AudioKit",
       "surfaceDigest" : "fnv1a64:bf6eb5e879b0cd61",
       "version" : "5.7.2"
@@ -738,6 +743,7 @@
       ],
       "canonicalURL" : "https://github.com/audiokit/audiokit",
       "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
+      "firstParty" : false,
       "name" : "AudioKit",
       "surfaceDigest" : "fnv1a64:bf6eb5e879b0cd61",
       "version" : "5.7.2"

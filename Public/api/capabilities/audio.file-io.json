@@ -9,6 +9,111 @@
   "label" : "Audio file reading/writing",
   "packages" : [
     {
+      "commit" : "17F113",
+      "notes" : "Read/write Core Audio formats (CAF, WAV, AIFF, m4a…).",
+      "package" : "https://developer.apple.com/documentation/avfaudio",
+      "packageName" : "AVFAudio",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 339,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L339",
+              "symbol" : "AVAudioFile"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "availability",
+              "line" : 339,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L339",
+              "symbol" : "AVAudioFile"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 339,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L339",
+              "symbol" : "AVAudioFile"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 339,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L339",
+              "symbol" : "AVAudioFile"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 339,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L339",
+              "symbol" : "AVAudioFile"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 339,
+              "note" : "visionOS 1.0+",
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L339",
+              "symbol" : "AVAudioFile"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 339,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L339",
+              "symbol" : "AVAudioFile"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "avfaudio",
+      "version" : "Xcode 26.6"
+    },
+    {
       "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
       "notes" : "Read/write/convert audio files (wav, aiff, caf, m4a…) via FormatConverter + AVAudioFile helpers.",
       "package" : "https://github.com/audiokit/audiokit",

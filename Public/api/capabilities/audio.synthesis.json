@@ -9,6 +9,111 @@
   "label" : "Audio synthesis / DSP",
   "packages" : [
     {
+      "commit" : "17F113",
+      "notes" : "Render-block synthesis via AVAudioSourceNode; AVAudioUnit hosts DSP.",
+      "package" : "https://developer.apple.com/documentation/avfaudio",
+      "packageName" : "AVFAudio",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 1115,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L1115",
+              "symbol" : "AVAudioSourceNode"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "availability",
+              "line" : 1115,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L1115",
+              "symbol" : "AVAudioSourceNode"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 1115,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L1115",
+              "symbol" : "AVAudioSourceNode"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 1115,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L1115",
+              "symbol" : "AVAudioSourceNode"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 1115,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L1115",
+              "symbol" : "AVAudioSourceNode"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 1115,
+              "note" : "visionOS 1.0+",
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L1115",
+              "symbol" : "AVAudioSourceNode"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 1115,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L1115",
+              "symbol" : "AVAudioSourceNode"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "avfaudio",
+      "version" : "Xcode 26.6"
+    },
+    {
       "commit" : "97a35fe04cd8e3d13b8744e1216b8673f825bef6",
       "notes" : "The audio-synthesis anchor package: AudioEngine over AVAudioEngine, node graph, DSP.",
       "package" : "https://github.com/audiokit/audiokit",
@@ -243,14 +348,22 @@
           "status" : "supported"
         },
         "visionOS" : {
-          "confidence" : 0.2,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "file" : "Sources/DevoloopAudioKit/RhinoGuitarProcessor.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "guitar amp/distortion",
+              "permalink" : "https://github.com/audiokit/devoloopaudiokit/blob/5.5.1/Sources/DevoloopAudioKit/RhinoGuitarProcessor.swift#L10",
+              "symbol" : "RhinoGuitarProcessor"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme DevoloopAudioKit"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.2,
@@ -358,14 +471,22 @@
           "status" : "supported"
         },
         "visionOS" : {
-          "confidence" : 0.2,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "file" : "Sources/DunneAudioKit/Sampler.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "polyphonic sampler instrument",
+              "permalink" : "https://github.com/audiokit/dunneaudiokit/blob/5.6.2/Sources/DunneAudioKit/Sampler.swift#L9",
+              "symbol" : "Sampler"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme DunneAudioKit"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.2,
@@ -383,6 +504,161 @@
       ],
       "slug" : "dunneaudiokit",
       "version" : "5.6.2"
+    },
+    {
+      "commit" : "e6af9e24eb599d4ff34d5776b0801cf0068142bc",
+      "notes" : "Stanford STK physical models (191 C++ files unparsed — heavy blind spot, confidence modest).",
+      "package" : "https://github.com/audiokit/stkaudiokit",
+      "packageName" : "STKAudioKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "physical-model instrument",
+              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L22",
+              "symbol" : "Clarinet"
+            },
+            {
+              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+              "kind" : "symbol",
+              "line" : 40,
+              "note" : "physical-model instrument",
+              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L40",
+              "symbol" : "RhodesPianoKey"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "Apple-frameworks based"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "physical-model instrument",
+              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L22",
+              "symbol" : "Clarinet"
+            },
+            {
+              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+              "kind" : "symbol",
+              "line" : 40,
+              "note" : "physical-model instrument",
+              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L40",
+              "symbol" : "RhodesPianoKey"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macCatalyst"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "physical-model instrument",
+              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L22",
+              "symbol" : "Clarinet"
+            },
+            {
+              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+              "kind" : "symbol",
+              "line" : 40,
+              "note" : "physical-model instrument",
+              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L40",
+              "symbol" : "RhodesPianoKey"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "physical-model instrument",
+              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L22",
+              "symbol" : "Clarinet"
+            },
+            {
+              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+              "kind" : "symbol",
+              "line" : 40,
+              "note" : "physical-model instrument",
+              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L40",
+              "symbol" : "RhodesPianoKey"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "physical-model instrument",
+              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L22",
+              "symbol" : "Clarinet"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme STKAudioKit"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "stkaudiokit",
+      "version" : "5.5.4"
     },
     {
       "commit" : "e0334228042814216ff12b81499f911632440104",
@@ -473,14 +749,14 @@
           "status" : "supported"
         },
         "visionOS" : {
-          "confidence" : 0.2,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "kind" : "buildVerdict",
+              "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/checkouts/AudioKit/Sources/AudioKit/Audio Files/Format Converter/FormatConverter+Compressed.swift:223:33: error: 'tracks(withMediaType:)' is unavailable in visio — the same commit builds for iOS, so the fence is real"
             }
           ],
-          "status" : "unknown"
+          "status" : "unsupported"
         },
         "watchOS" : {
           "confidence" : 0.2,
@@ -620,14 +896,14 @@
           "status" : "supported"
         },
         "visionOS" : {
-          "confidence" : 0.2,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "kind" : "buildVerdict",
+              "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/checkouts/AudioKit/Sources/AudioKit/Audio Files/Format Converter/FormatConverter+Compressed.swift:223:33: error: 'tracks(withMediaType:)' is unavailable in visio — the same commit builds for iOS, so the fence is real"
             }
           ],
-          "status" : "unknown"
+          "status" : "unsupported"
         },
         "watchOS" : {
           "confidence" : 0.2,
@@ -645,153 +921,6 @@
       ],
       "slug" : "sporthaudiokit",
       "version" : "5.5.1"
-    },
-    {
-      "commit" : "e6af9e24eb599d4ff34d5776b0801cf0068142bc",
-      "notes" : "Stanford STK physical models (191 C++ files unparsed — heavy blind spot, confidence modest).",
-      "package" : "https://github.com/audiokit/stkaudiokit",
-      "packageName" : "STKAudioKit",
-      "platforms" : {
-        "iOS" : {
-          "confidence" : 0.65,
-          "evidence" : [
-            {
-              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
-              "kind" : "symbol",
-              "line" : 22,
-              "note" : "physical-model instrument",
-              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L22",
-              "symbol" : "Clarinet"
-            },
-            {
-              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
-              "kind" : "symbol",
-              "line" : 40,
-              "note" : "physical-model instrument",
-              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L40",
-              "symbol" : "RhodesPianoKey"
-            },
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "manifest declares iOS"
-            }
-          ],
-          "status" : "supported"
-        },
-        "linux" : {
-          "confidence" : 0.1,
-          "evidence" : [
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "Apple-frameworks based"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "macCatalyst" : {
-          "confidence" : 0.6,
-          "evidence" : [
-            {
-              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
-              "kind" : "symbol",
-              "line" : 22,
-              "note" : "physical-model instrument",
-              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L22",
-              "symbol" : "Clarinet"
-            },
-            {
-              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
-              "kind" : "symbol",
-              "line" : 40,
-              "note" : "physical-model instrument",
-              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L40",
-              "symbol" : "RhodesPianoKey"
-            },
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "manifest declares macCatalyst"
-            }
-          ],
-          "status" : "supported"
-        },
-        "macOS" : {
-          "confidence" : 0.65,
-          "evidence" : [
-            {
-              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
-              "kind" : "symbol",
-              "line" : 22,
-              "note" : "physical-model instrument",
-              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L22",
-              "symbol" : "Clarinet"
-            },
-            {
-              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
-              "kind" : "symbol",
-              "line" : 40,
-              "note" : "physical-model instrument",
-              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L40",
-              "symbol" : "RhodesPianoKey"
-            },
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "manifest declares macOS"
-            }
-          ],
-          "status" : "supported"
-        },
-        "tvOS" : {
-          "confidence" : 0.6,
-          "evidence" : [
-            {
-              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
-              "kind" : "symbol",
-              "line" : 22,
-              "note" : "physical-model instrument",
-              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L22",
-              "symbol" : "Clarinet"
-            },
-            {
-              "file" : "Sources/STKAudioKit/STKPhysicalModels.swift",
-              "kind" : "symbol",
-              "line" : 40,
-              "note" : "physical-model instrument",
-              "permalink" : "https://github.com/audiokit/stkaudiokit/blob/5.5.4/Sources/STKAudioKit/STKPhysicalModels.swift#L40",
-              "symbol" : "RhodesPianoKey"
-            },
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "manifest declares tvOS"
-            }
-          ],
-          "status" : "supported"
-        },
-        "visionOS" : {
-          "confidence" : 0.2,
-          "evidence" : [
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "watchOS" : {
-          "confidence" : 0.2,
-          "evidence" : [
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "watchOS absent from manifest floors"
-            }
-          ],
-          "status" : "unknown"
-        }
-      },
-      "requiresCompanion" : [
-
-      ],
-      "slug" : "stkaudiokit",
-      "version" : "5.5.4"
     }
   ]
 }

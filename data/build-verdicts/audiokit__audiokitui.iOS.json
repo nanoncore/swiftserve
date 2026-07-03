@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/audiokit/audiokitui",
+  "commit" : "1a61e8a96c7ee24c3e5abe06dc3334a31fd7571d",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:34:55Z",
+  "scheme" : "AudioKitUI",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/mihai8804858/swift-chunked-audio-player",
+  "commit" : "7a46fa1bfb88c4b4ea47ee656e6b2abd1cd7fed8",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:33:50Z",
+  "scheme" : "swift-chunked-audio-player",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

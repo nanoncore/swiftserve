@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/markbattistella/audiomanager",
       "commit" : "d93afd7a48885f9a92bbe7c0eb6b692afbafce66",
+      "firstParty" : false,
       "name" : "AudioManager",
       "surfaceDigest" : "fnv1a64:15a0bc6ae2909fe6",
       "version" : "26.6.11"

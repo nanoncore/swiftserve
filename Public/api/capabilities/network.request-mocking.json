@@ -76,14 +76,14 @@
           "status" : "supported"
         },
         "visionOS" : {
-          "confidence" : 0.3,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "kind" : "buildVerdict",
+              "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/checkouts/Alamofire/Source/Protected.swift:127:15: error: cannot find 'lock' in scope — the same commit builds for iOS, so the fence is real"
             }
           ],
-          "status" : "unknown"
+          "status" : "unsupported"
         },
         "watchOS" : {
           "confidence" : 0.8,

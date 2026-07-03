@@ -92,14 +92,22 @@
           "status" : "supported"
         },
         "visionOS" : {
-          "confidence" : 0.3,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "file" : "Source/Core/Session.swift",
+              "kind" : "symbol",
+              "line" : 30,
+              "note" : "the request-making core",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Core/Session.swift#L30",
+              "symbol" : "Session"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme Alamofire"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.85,
@@ -207,14 +215,14 @@
           "status" : "supported"
         },
         "visionOS" : {
-          "confidence" : 0.3,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "kind" : "buildVerdict",
+              "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/checkouts/Alamofire/Source/Protected.swift:127:15: error: cannot find 'lock' in scope — the same commit builds for iOS, so the fence is real"
             }
           ],
-          "status" : "unknown"
+          "status" : "unsupported"
         },
         "watchOS" : {
           "confidence" : 0.75,

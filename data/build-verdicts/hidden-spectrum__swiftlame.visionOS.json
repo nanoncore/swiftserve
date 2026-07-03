@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/hidden-spectrum/swiftlame",
+  "commit" : "45d1b021c2bd2bbd38b9669934c0584cda0d1b6b",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:25:56Z",
+  "scheme" : "SwiftLAME",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

@@ -4,7 +4,7 @@
       "id" : "network.certificate-pinning",
       "label" : "Certificate pinning"
     },
-    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "ServerTrustManager evaluates per-host trust: pinned certificates, public keys, revocation.",
     "package" : {
@@ -14,6 +14,7 @@
       ],
       "canonicalURL" : "https://github.com/alamofire/alamofire",
       "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
+      "firstParty" : false,
       "name" : "Alamofire",
       "surfaceDigest" : "fnv1a64:b899c02e2a546ac7",
       "version" : "5.12.0"
@@ -130,20 +131,30 @@
         "status" : "supported"
       },
       "visionOS" : {
-        "confidence" : 0.3,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Source/Features/ServerTrustEvaluation.swift",
+            "kind" : "symbol",
+            "line" : 31,
+            "note" : "per-host trust evaluators incl. pinned certs/keys",
+            "package" : null,
+            "symbol" : "ServerTrustManager"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme Alamofire",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.7999999999999999,
@@ -182,7 +193,7 @@
       "id" : "network.http-client",
       "label" : "HTTP client"
     },
-    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "The Swift HTTP client. Session wraps URLSession with the full request pipeline.",
     "package" : {
@@ -192,6 +203,7 @@
       ],
       "canonicalURL" : "https://github.com/alamofire/alamofire",
       "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
+      "firstParty" : false,
       "name" : "Alamofire",
       "surfaceDigest" : "fnv1a64:b899c02e2a546ac7",
       "version" : "5.12.0"
@@ -308,20 +320,30 @@
         "status" : "supported"
       },
       "visionOS" : {
-        "confidence" : 0.3,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Source/Core/Session.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : "the request-making core",
+            "package" : null,
+            "symbol" : "Session"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme Alamofire",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.85,
@@ -360,7 +382,7 @@
       "id" : "network.multipart-upload",
       "label" : "Multipart upload"
     },
-    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "First-class multipart form data encoding + streaming upload.",
     "package" : {
@@ -370,6 +392,7 @@
       ],
       "canonicalURL" : "https://github.com/alamofire/alamofire",
       "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
+      "firstParty" : false,
       "name" : "Alamofire",
       "surfaceDigest" : "fnv1a64:b899c02e2a546ac7",
       "version" : "5.12.0"
@@ -486,20 +509,30 @@
         "status" : "supported"
       },
       "visionOS" : {
-        "confidence" : 0.3,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Source/Features/MultipartFormData.swift",
+            "kind" : "symbol",
+            "line" : 45,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MultipartFormData"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme Alamofire",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.7999999999999999,
@@ -548,6 +581,7 @@
       ],
       "canonicalURL" : "https://github.com/alamofire/alamofire",
       "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
+      "firstParty" : false,
       "name" : "Alamofire",
       "surfaceDigest" : "fnv1a64:b899c02e2a546ac7",
       "version" : "5.12.0"
@@ -696,7 +730,7 @@
       "id" : "network.retry",
       "label" : "Request retry / backoff"
     },
-    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "RetryPolicy + RequestInterceptor give configurable retry with exponential backoff.",
     "package" : {
@@ -706,6 +740,7 @@
       ],
       "canonicalURL" : "https://github.com/alamofire/alamofire",
       "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
+      "firstParty" : false,
       "name" : "Alamofire",
       "surfaceDigest" : "fnv1a64:b899c02e2a546ac7",
       "version" : "5.12.0"
@@ -862,20 +897,30 @@
         "status" : "supported"
       },
       "visionOS" : {
-        "confidence" : 0.3,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Source/Features/RetryPolicy.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : "exponential backoff with retryable status/error sets",
+            "package" : null,
+            "symbol" : "RetryPolicy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme Alamofire",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.7999999999999999,

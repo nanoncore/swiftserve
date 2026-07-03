@@ -4,7 +4,7 @@
       "id" : "audio.classification",
       "label" : "Sound classification"
     },
-    "labeledAt" : "2026-07-02T17:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Identify sounds (music, speech, noise types) via Apple's SoundAnalysis classifier.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/ryanfrancesconi/spfk-sound-analysis",
       "commit" : "279b9489ee4ffaf2a60e03acd90c0d980c84bb23",
+      "firstParty" : false,
       "name" : "SPFKSoundAnalysis",
       "surfaceDigest" : "fnv1a64:aa089a10b3620057",
       "version" : "1.0.3"
@@ -109,20 +110,30 @@
         "status" : "unknown"
       },
       "visionOS" : {
-        "confidence" : 0.2,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Sources/SPFKSoundAnalysis/SoundClassification.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "SoundAnalysis (SNClassifySoundRequest) wrapper",
+            "package" : null,
+            "symbol" : "SoundClassification"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "manifest declares macOS only",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme spfk-sound-analysis",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.2,

@@ -1,0 +1,278 @@
+[
+  {
+    "capability" : {
+      "id" : "media.streaming.hls",
+      "label" : "HLS streaming"
+    },
+    "labeledAt" : "2026-07-03T11:30:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "HLS is native to AVPlayer via AVURLAsset on an m3u8 URL — no package needed for playback.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/avfoundation",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "AVFoundation",
+      "surfaceDigest" : "fnv1a64:12c9fcfffa5e57ee",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+            "kind" : "symbol",
+            "line" : 3775,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVURLAsset"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+            "kind" : "availability",
+            "line" : 3775,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVURLAsset"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+            "kind" : "symbol",
+            "line" : 3775,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVURLAsset"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+            "kind" : "symbol",
+            "line" : 3775,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVURLAsset"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+            "kind" : "symbol",
+            "line" : 3775,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVURLAsset"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+            "kind" : "symbol",
+            "line" : 3775,
+            "note" : "visionOS 1.0+",
+            "package" : null,
+            "symbol" : "AVURLAsset"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+            "kind" : "symbol",
+            "line" : 3775,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVURLAsset"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "video.playback",
+      "label" : "Video playback"
+    },
+    "labeledAt" : "2026-07-03T11:30:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "AVPlayer/AVPlayerItem — the system media engine.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/avfoundation",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "AVFoundation",
+      "surfaceDigest" : "fnv1a64:12c9fcfffa5e57ee",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+            "kind" : "symbol",
+            "line" : 2892,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVPlayer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+            "kind" : "availability",
+            "line" : 2892,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVPlayer"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+            "kind" : "symbol",
+            "line" : 2892,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVPlayer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+            "kind" : "symbol",
+            "line" : 2892,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVPlayer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+            "kind" : "symbol",
+            "line" : 2892,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVPlayer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+            "kind" : "symbol",
+            "line" : 2892,
+            "note" : "visionOS 1.0+",
+            "package" : null,
+            "symbol" : "AVPlayer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+            "kind" : "symbol",
+            "line" : 2892,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AVPlayer"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

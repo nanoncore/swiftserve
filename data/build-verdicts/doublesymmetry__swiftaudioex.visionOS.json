@@ -1,0 +1,21 @@
+{
+  "canonicalURL" : "https://github.com/doublesymmetry/swiftaudioex",
+  "commit" : "7b506bebabd68b542256c0e1e55519fab5f4c092",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    "Sources/SwiftAudioEx/AVPlayerWrapper/AVPlayerWrapper.swift:252:33: error: 'availableChapterLocales' is unavailable in visionOS",
+    "Sources/SwiftAudioEx/AVPlayerWrapper/AVPlayerWrapper.swift:253:48: error: 'availableChapterLocales' is unavailable in visionOS",
+    "Sources/SwiftAudioEx/AVPlayerWrapper/AVPlayerWrapper.swift:254:53: error: 'chapterMetadataGroups(withTitleLocale:containingItemsWithCommonKeys:)' is unavailable in visionOS",
+    "Sources/SwiftAudioEx/AVPlayerWrapper/AVPlayerWrapper.swift:260:78: error: 'metadata(forFormat:)' is unavailable in visionOS",
+    "let keyStatus = pendingAsset.statusOfValue(forKey: key, error: &error)",
+    "Sources/SwiftAudioEx/AVPlayerWrapper/AVPlayerWrapper.swift:289:39: error: 'isPlayable' is unavailable in visionOS",
+    "Sources/SwiftAudioEx/AVPlayerWrapper/AVPlayerWrapper.swift:411:18: error: 'allowsExternalPlayback' is unavailable in visionOS"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:26:11Z",
+  "scheme" : "SwiftAudioEx",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

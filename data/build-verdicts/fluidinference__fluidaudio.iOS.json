@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/fluidinference/fluidaudio",
+  "commit" : "b9d43724cbdb5a980e441fd54180964e94d470f7",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:36:39Z",
+  "scheme" : "FluidAudio",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

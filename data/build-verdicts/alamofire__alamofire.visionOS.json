@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/alamofire/alamofire",
+  "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:28:03Z",
+  "scheme" : "Alamofire",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

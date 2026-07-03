@@ -4,7 +4,7 @@
       "id" : "image.async-loading",
       "label" : "Async image loading"
     },
-    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "The de-facto standard for remote images: download, cache, set — one line.",
     "package" : {
@@ -14,6 +14,7 @@
       ],
       "canonicalURL" : "https://github.com/onevcat/kingfisher",
       "commit" : "ac632bd26a1c00f139ff62fd01806f21cf67325e",
+      "firstParty" : false,
       "name" : "Kingfisher",
       "surfaceDigest" : "fnv1a64:f3759a71b9baa209",
       "version" : "8.10.0"
@@ -130,20 +131,30 @@
         "status" : "supported"
       },
       "visionOS" : {
-        "confidence" : 0.3,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Sources/General/KingfisherManager.swift",
+            "kind" : "symbol",
+            "line" : 138,
+            "note" : "download + cache orchestration",
+            "package" : null,
+            "symbol" : "KingfisherManager"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors at this tag",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme Kingfisher",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.85,
@@ -182,7 +193,7 @@
       "id" : "image.caching",
       "label" : "Image caching"
     },
-    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : null,
     "package" : {
@@ -192,6 +203,7 @@
       ],
       "canonicalURL" : "https://github.com/onevcat/kingfisher",
       "commit" : "ac632bd26a1c00f139ff62fd01806f21cf67325e",
+      "firstParty" : false,
       "name" : "Kingfisher",
       "surfaceDigest" : "fnv1a64:f3759a71b9baa209",
       "version" : "8.10.0"
@@ -308,20 +320,30 @@
         "status" : "supported"
       },
       "visionOS" : {
-        "confidence" : 0.3,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Sources/Cache/ImageCache.swift",
+            "kind" : "symbol",
+            "line" : 154,
+            "note" : "hybrid memory + disk cache",
+            "package" : null,
+            "symbol" : "ImageCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors at this tag",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme Kingfisher",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.7999999999999999,
@@ -360,7 +382,7 @@
       "id" : "image.downsampling",
       "label" : "Downsampling / resizing"
     },
-    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : null,
     "package" : {
@@ -370,6 +392,7 @@
       ],
       "canonicalURL" : "https://github.com/onevcat/kingfisher",
       "commit" : "ac632bd26a1c00f139ff62fd01806f21cf67325e",
+      "firstParty" : false,
       "name" : "Kingfisher",
       "surfaceDigest" : "fnv1a64:f3759a71b9baa209",
       "version" : "8.10.0"
@@ -486,20 +509,30 @@
         "status" : "supported"
       },
       "visionOS" : {
-        "confidence" : 0.3,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Sources/Image/ImageProcessor.swift",
+            "kind" : "symbol",
+            "line" : 786,
+            "note" : "ImageIO-based downsampling before decode",
+            "package" : null,
+            "symbol" : "DownsamplingImageProcessor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors at this tag",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme Kingfisher",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.7999999999999999,
@@ -538,7 +571,7 @@
       "id" : "image.gif",
       "label" : "Animated GIF playback"
     },
-    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "AnimatedImageView plays GIFs with frame buffering — and is provably fenced off watchOS.",
     "package" : {
@@ -548,6 +581,7 @@
       ],
       "canonicalURL" : "https://github.com/onevcat/kingfisher",
       "commit" : "ac632bd26a1c00f139ff62fd01806f21cf67325e",
+      "firstParty" : false,
       "name" : "Kingfisher",
       "surfaceDigest" : "fnv1a64:f3759a71b9baa209",
       "version" : "8.10.0"
@@ -634,20 +668,30 @@
         "status" : "supported"
       },
       "visionOS" : {
-        "confidence" : 0.3,
+        "confidence" : 0.85,
         "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(watchOS)",
+            "file" : "Sources/Views/AnimatedImageView.swift",
+            "kind" : "symbol",
+            "line" : 78,
+            "note" : "frame-buffered GIF view",
+            "package" : null,
+            "symbol" : "AnimatedImageView"
+          },
           {
             "availability" : null,
             "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme Kingfisher",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.85,
@@ -676,7 +720,7 @@
       "id" : "image.prefetching",
       "label" : "Prefetching"
     },
-    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : null,
     "package" : {
@@ -686,6 +730,7 @@
       ],
       "canonicalURL" : "https://github.com/onevcat/kingfisher",
       "commit" : "ac632bd26a1c00f139ff62fd01806f21cf67325e",
+      "firstParty" : false,
       "name" : "Kingfisher",
       "surfaceDigest" : "fnv1a64:f3759a71b9baa209",
       "version" : "8.10.0"
@@ -802,20 +847,30 @@
         "status" : "supported"
       },
       "visionOS" : {
-        "confidence" : 0.3,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Sources/Networking/ImagePrefetcher.swift",
+            "kind" : "symbol",
+            "line" : 75,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ImagePrefetcher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors at this tag",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme Kingfisher",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.7999999999999999,
@@ -864,6 +919,7 @@
       ],
       "canonicalURL" : "https://github.com/onevcat/kingfisher",
       "commit" : "ac632bd26a1c00f139ff62fd01806f21cf67325e",
+      "firstParty" : false,
       "name" : "Kingfisher",
       "surfaceDigest" : "fnv1a64:f3759a71b9baa209",
       "version" : "8.10.0"

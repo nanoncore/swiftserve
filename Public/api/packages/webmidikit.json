@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/adamnemecek/webmidikit",
       "commit" : "b40e74e47f34ecba4c4e7c60f9c56f2e208b0031",
+      "firstParty" : false,
       "name" : "WebMIDIKit",
       "surfaceDigest" : "fnv1a64:9f52aab1822f7e5b",
       "version" : "1.0.5"

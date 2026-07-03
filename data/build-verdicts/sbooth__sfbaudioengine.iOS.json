@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/sbooth/sfbaudioengine",
+  "commit" : "5a74dde3089060bac35f0a16970d91fc8402e751",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:37:00Z",
+  "scheme" : "SFBAudioEngine",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

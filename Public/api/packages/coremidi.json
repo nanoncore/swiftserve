@@ -1,0 +1,140 @@
+[
+  {
+    "capability" : {
+      "id" : "midi.io",
+      "label" : "MIDI input/output"
+    },
+    "labeledAt" : "2026-07-03T11:30:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "The system MIDI service — clients, ports, endpoints, MIDI 2.0 UMP.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/coremidi",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "CoreMIDI",
+      "surfaceDigest" : "fnv1a64:8c64363c14b6d316",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json",
+            "kind" : "symbol",
+            "line" : 310,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MIDIClientCreate(_:_:_:_:)"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json",
+            "kind" : "availability",
+            "line" : 310,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MIDIClientCreate(_:_:_:_:)"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json",
+            "kind" : "symbol",
+            "line" : 310,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MIDIClientCreate(_:_:_:_:)"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json",
+            "kind" : "symbol",
+            "line" : 310,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MIDIClientCreate(_:_:_:_:)"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "not exported by the tvOS SDK symbol graph",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json",
+            "kind" : "availability",
+            "line" : 310,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MIDIClientCreate(_:_:_:_:)"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json",
+            "kind" : "symbol",
+            "line" : 310,
+            "note" : "visionOS 1.0+",
+            "package" : null,
+            "symbol" : "MIDIClientCreate(_:_:_:_:)"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "not exported by the watchOS SDK symbol graph",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json",
+            "kind" : "availability",
+            "line" : 310,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MIDIClientCreate(_:_:_:_:)"
+          }
+        ],
+        "status" : "unsupported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

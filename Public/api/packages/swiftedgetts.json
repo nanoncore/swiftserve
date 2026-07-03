@@ -4,7 +4,7 @@
       "id" : "speech.tts",
       "label" : "Text-to-speech"
     },
-    "labeledAt" : "2026-07-02T15:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Network TTS via Microsoft Edge's speech service.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/herrkaefer/swiftedgetts",
       "commit" : "6fafd2dd66e45358812c98e3bb2fa28b2757e614",
+      "firstParty" : false,
       "name" : "SwiftEdgeTTS",
       "surfaceDigest" : "fnv1a64:35a33ef68dbc8e93",
       "version" : "v1.3.0"
@@ -119,20 +120,30 @@
         "status" : "unknown"
       },
       "visionOS" : {
-        "confidence" : 0.2,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Sources/SwiftEdgeTTS/EdgeTTSClient.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "EdgeTTSClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme SwiftEdgeTTS",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.2,

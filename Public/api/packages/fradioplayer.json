@@ -4,7 +4,7 @@
       "id" : "audio.streaming",
       "label" : "Audio streaming"
     },
-    "labeledAt" : "2026-07-02T14:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Internet-radio streaming over AVPlayer with metadata (artist/track) parsing.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/fethica/fradioplayer",
       "commit" : "243cd9246b79a186c39b3c53dbe725c8c01bab59",
+      "firstParty" : false,
       "name" : "FRadioPlayer",
       "surfaceDigest" : "fnv1a64:e4d794912a7a7e62",
       "version" : "0.2.2"
@@ -129,20 +130,20 @@
         "status" : "supported"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/FRadioPlayer/FRadioPlayer.swift:301:21: error: 'allowsExternalPlayback' is unavailable in visionOS — the same commit builds for iOS, so the fence is real",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "unsupported"
       },
       "watchOS" : {
         "confidence" : 0.25,

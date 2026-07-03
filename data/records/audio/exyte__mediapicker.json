@@ -4,7 +4,7 @@
       "id" : "video.capture",
       "label" : "Camera capture"
     },
-    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "SwiftUI media picker with live camera capture and album browsing.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/exyte/mediapicker",
       "commit" : "ce2eda6300337d1478a78fc033bce8dd9bf4bb2c",
+      "firstParty" : false,
       "name" : "ExyteMediaPicker",
       "surfaceDigest" : "fnv1a64:a4b6ef2504de499b",
       "version" : "3.3.2"
@@ -109,20 +110,20 @@
         "status" : "unknown"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/checkouts/AnchoredPopup/Sources/AnchoredPopup/AnchoredAnimationManager.swift:223:54: error: 'UIScreen' is unavailable in visionOS — the same commit builds for iOS, so the fence is real",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "unsupported"
       },
       "watchOS" : {
         "confidence" : 0.2,

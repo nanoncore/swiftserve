@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="327.9" height="20" role="img" aria-label="Multipart upload platform support — SwiftServe">
+<svg xmlns="http://www.w3.org/2000/svg" width="331.9" height="20" role="img" aria-label="Multipart upload platform support — SwiftServe">
   <title>Multipart upload — verified by SwiftServe</title>
-  <clipPath id="r"><rect width="327.9" height="20" rx="4"/></clipPath>
+  <clipPath id="r"><rect width="331.9" height="20" rx="4"/></clipPath>
   <g clip-path="url(#r)">
     <rect width="119.2" height="20" fill="#2c2724"/>
     <g transform="translate(5.0,3.0) scale(0.6)">
@@ -13,9 +13,9 @@
 <text x="134.1" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">iOS</text><rect x="149.0" width="34.6" height="20" fill="#5fb37a"/>
 <text x="166.3" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">mac</text><rect x="183.6" width="44.3" height="20" fill="#5fb37a"/>
 <text x="205.8" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">watch</text><rect x="227.9" width="24.0" height="20" fill="#5fb37a"/>
-<text x="239.9" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">tv</text><rect x="251.9" width="24.0" height="20" fill="#a49a8f"/>
-<text x="263.9" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="275.9" width="24.0" height="20" fill="#a49a8f"/>
-<text x="287.9" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="299.9" width="28.0" height="20" fill="#5fb37a"/>
-<text x="313.9" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">cat</text>
+<text x="239.9" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">tv</text><rect x="251.9" width="28.0" height="20" fill="#5fb37a"/>
+<text x="265.9" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">vis</text><rect x="279.9" width="24.0" height="20" fill="#a49a8f"/>
+<text x="291.9" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="303.9" width="28.0" height="20" fill="#5fb37a"/>
+<text x="317.9" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">cat</text>
   </g>
 </svg>

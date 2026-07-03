@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/adamcichy/swiftysound",
+  "commit" : "72dbeaf4b4496b105bc731db05819dd16edc9449",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:22:37Z",
+  "scheme" : "SwiftySound",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

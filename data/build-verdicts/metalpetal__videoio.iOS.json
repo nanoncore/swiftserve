@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/metalpetal/videoio",
+  "commit" : "22f7c00083b7e16c7e15ace1adcdb90fb5ffe006",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:36:50Z",
+  "scheme" : "VideoIO",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

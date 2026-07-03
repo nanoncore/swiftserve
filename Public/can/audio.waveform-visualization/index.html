@@ -7,8 +7,8 @@
   <title>Waveform visualization — can Swift packages do this? — SwiftServe</title>
   <meta name="description" content="Which Swift packages actually serve waveform visualization, on which Apple platforms — verdicts with source-line receipts." />
   <link rel="icon" href="/swiftee/swiftee-idle.png" />
-  <link rel="stylesheet" href="/styles.css?v=2gw7c9at0swe5" />
-  <script src="/site.js?v=2gw7c9at0swe5" defer></script>
+  <link rel="stylesheet" href="/styles.css?v=98z1nu1h0go2" />
+  <script src="/site.js?v=98z1nu1h0go2" defer></script>
 </head>
 <body class="site wide">
   <header class="top-nav">
@@ -30,7 +30,7 @@
       <h1>Can Swift packages do <em>waveform visualization</em>?</h1>
       <p class="aliases">also known as: waveform view · audio visualization · spectrogram</p>
       <nav class="pill-bar" aria-label="Categories">
-  <a class="chip chip-current" href="/menu/#audio" aria-current="true">Audio<span class="chip-count">16</span></a>
+  <a class="chip chip-current" href="/menu/#audio" aria-current="true">Audio<span class="chip-count">17</span></a>
           <a class="chip" href="/menu/#image">Images<span class="chip-count">7</span></a>
           <a class="chip" href="/menu/#media">Media<span class="chip-count">4</span></a>
           <a class="chip" href="/menu/#midi">MIDI<span class="chip-count">2</span></a>
@@ -41,11 +41,12 @@
 </nav>
     </section>
     <div class="near-miss-slot" data-near-miss hidden></div>
+
     <section class="truth-table-wrap">
       <table class="truth-table" data-capability="audio.waveform-visualization">
         <thead><tr><th scope="col">Package</th><th scope="col">iOS</th><th scope="col">macOS</th><th scope="col">watchOS</th><th scope="col">tvOS</th><th scope="col">visionOS</th><th scope="col">Linux</th><th scope="col">Catalyst</th></tr></thead>
         <tbody>
-<tr data-package="waveform" data-supported="iOS macOS Catalyst">
+<tr data-package="waveform" data-supported="iOS macOS visionOS Catalyst">
   <th scope="row">
     <div class="row-head">
       <div>
@@ -91,12 +92,12 @@
     </div>
   </details>
 </td>
-<td class="cell-unknown">
+<td class="cell-good">
   <details class="evidence">
-    <summary aria-label="not verified yet on visionOS, confidence 0.25"><span class="cell-glyph">?</span></summary>
+    <summary aria-label="serves it on visionOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
     <div class="evidence-pop">
-      <p class="evidence-verdict">not verified yet · confidence 0.25 · as of 1.0.3</p>
-      <ul><li><span class="evidence-note">visionOS absent from manifest floors</span></li></ul>
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 1.0.3</p>
+      <ul><li><code>Waveform</code><br /><code class="evidence-guard">#if !os(macOS)</code><br /><span class="evidence-loc">Sources/Waveform/Waveform.swift:68</span><br /><a class="evidence-link" href="https://github.com/audiokit/waveform/blob/1.0.3/Sources/Waveform/Waveform.swift#L68" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">the !os(macOS) side of the split pair</span></li><li><span class="evidence-note">compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme Waveform</span></li></ul>
     </div>
   </details>
 </td>
@@ -119,7 +120,7 @@
   </details>
 </td>
 </tr>
-<tr data-package="audiokitui" data-supported="iOS macOS Catalyst">
+<tr data-package="audiokitui" data-supported="iOS macOS visionOS Catalyst">
   <th scope="row">
     <div class="row-head">
       <div>
@@ -165,12 +166,12 @@
     </div>
   </details>
 </td>
-<td class="cell-unknown">
+<td class="cell-good">
   <details class="evidence">
-    <summary aria-label="not verified yet on visionOS, confidence 0.25"><span class="cell-glyph">?</span></summary>
+    <summary aria-label="serves it on visionOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
     <div class="evidence-pop">
-      <p class="evidence-verdict">not verified yet · confidence 0.25 · as of 0.3.7</p>
-      <ul><li><span class="evidence-note">visionOS absent from manifest floors</span></li></ul>
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 0.3.7</p>
+      <ul><li><code>AudioWaveform</code><br /><span class="evidence-loc">Sources/AudioKitUI/Visualizations/AudioWaveform.swift:5</span><br /><a class="evidence-link" href="https://github.com/audiokit/audiokitui/blob/0.3.7/Sources/AudioKitUI/Visualizations/AudioWaveform.swift#L5" rel="noopener">View the line on GitHub →</a><br /><span class="evidence-note">waveform shape view</span></li><li><span class="evidence-note">compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme AudioKitUI</span></li></ul>
     </div>
   </details>
 </td>
@@ -193,7 +194,7 @@
   </details>
 </td>
 </tr>
-<tr data-package="dswaveformimage" data-supported="iOS macOS Catalyst">
+<tr data-package="dswaveformimage" data-supported="iOS macOS visionOS Catalyst">
   <th scope="row">
     <div class="row-head">
       <div>
@@ -239,12 +240,12 @@
     </div>
   </details>
 </td>
-<td class="cell-unknown">
+<td class="cell-good">
   <details class="evidence">
-    <summary aria-label="not verified yet on visionOS, confidence 0.25"><span class="cell-glyph">?</span></summary>
+    <summary aria-label="serves it on visionOS, confidence 0.85"><span class="cell-glyph">✓</span></summary>
     <div class="evidence-pop">
-      <p class="evidence-verdict">not verified yet · confidence 0.25 · as of 14.5.0</p>
-      <ul><li><span class="evidence-note">visionOS absent from manifest floors</span></li></ul>
+      <p class="evidence-verdict">serves it · confidence 0.85 · as of 14.5.0</p>
+      <ul><li><code>WaveformImageDrawer</code><br /><span class="evidence-loc">Sources/DSWaveformImage/WaveformImageDrawer.swift:6</span><br /><a class="evidence-link" href="https://github.com/dmrschmidt/dswaveformimage/blob/14.5.0/Sources/DSWaveformImage/WaveformImageDrawer.swift#L6" rel="noopener">View the line on GitHub →</a></li><li><span class="evidence-note">compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme DSWaveformImage</span></li></ul>
     </div>
   </details>
 </td>
@@ -348,7 +349,7 @@
     </section>
   </main>
   <footer class="site-footer">
-    <p>Served fresh · 45 capabilities × 71 packages · 101 records · data v1</p>
+    <p>Served fresh · 46 capabilities × 76 packages · 114 records · data v1</p>
     <p>Every verdict links to the exact source line that decides it. <a href="/about/">How it works</a></p>
     <p>Made refreshingly cool from Paris, France</p>
   </footer>

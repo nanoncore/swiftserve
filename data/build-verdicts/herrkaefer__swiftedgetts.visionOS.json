@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/herrkaefer/swiftedgetts",
+  "commit" : "6fafd2dd66e45358812c98e3bb2fa28b2757e614",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:25:34Z",
+  "scheme" : "SwiftEdgeTTS",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

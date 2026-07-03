@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/fethica/fradioplayer",
+  "commit" : "243cd9246b79a186c39b3c53dbe725c8c01bab59",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:35:14Z",
+  "scheme" : "FRadioPlayer",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

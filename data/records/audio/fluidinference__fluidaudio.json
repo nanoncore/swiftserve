@@ -4,7 +4,7 @@
       "id" : "speech.stt",
       "label" : "Speech-to-text"
     },
-    "labeledAt" : "2026-07-02T14:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "On-device ASR (Parakeet), VAD, and speaker diarization over CoreML.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/fluidinference/fluidaudio",
       "commit" : "b9d43724cbdb5a980e441fd54180964e94d470f7",
+      "firstParty" : false,
       "name" : "FluidAudio",
       "surfaceDigest" : "fnv1a64:afc5915b62afddd8",
       "version" : "v0.15.4"
@@ -119,20 +120,20 @@
         "status" : "unknown"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/FluidAudio/TTS/PocketTTS/Pipeline/PocketTtsModelStore.swift:91:17: error: 'loadStatePipeline(languageRoot:)' is only available in visionOS 2.0 or newer — the same commit builds for iOS, so the fence is real",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "unsupported"
       },
       "watchOS" : {
         "confidence" : 0.2,

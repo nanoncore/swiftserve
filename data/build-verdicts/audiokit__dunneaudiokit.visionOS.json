@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/audiokit/dunneaudiokit",
+  "commit" : "f6cee064ab82b95b36d8b9242a11bd06cb390256",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:23:59Z",
+  "scheme" : "DunneAudioKit",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

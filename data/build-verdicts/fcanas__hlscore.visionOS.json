@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/fcanas/hlscore",
+  "commit" : "2835209970afdaaaf137fd7073d9c0ab2beb2905",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:25:19Z",
+  "scheme" : "HLSCore",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

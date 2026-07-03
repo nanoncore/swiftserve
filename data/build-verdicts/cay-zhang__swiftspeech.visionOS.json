@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/cay-zhang/swiftspeech",
+  "commit" : "6e41f289f5ccc1751ef5674972d46b48b326c4c6",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:25:24Z",
+  "scheme" : "SwiftSpeech",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

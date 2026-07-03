@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/renaudjenny/swift-tts",
+  "commit" : "01ed546e43f75e45eee49ed91f5a449d86e48fa3",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:27:26Z",
+  "scheme" : "SwiftTTS",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

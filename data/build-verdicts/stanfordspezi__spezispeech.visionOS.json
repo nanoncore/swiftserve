@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/stanfordspezi/spezispeech",
+  "commit" : "6c51d4165d2cabb6102aa61233c480fb75c167f6",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:46:17Z",
+  "scheme" : "SpeziSpeechRecognizer",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

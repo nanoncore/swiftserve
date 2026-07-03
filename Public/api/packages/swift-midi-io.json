@@ -14,6 +14,7 @@
       ],
       "canonicalURL" : "https://github.com/orchetect/swift-midi-io",
       "commit" : "54ac94028e3825bd8e622d373b0698d196927212",
+      "firstParty" : false,
       "name" : "MIDIKitIO",
       "surfaceDigest" : "fnv1a64:26b2b36169cf62d6",
       "version" : "1.1.0"

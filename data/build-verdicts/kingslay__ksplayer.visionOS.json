@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/kingslay/ksplayer",
+  "commit" : "bdfa2da39bb18865b317c4ffd08cdef5f8efc043",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:34:36Z",
+  "scheme" : "KSPlayer",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

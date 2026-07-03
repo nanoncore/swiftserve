@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/piemonte/player",
+  "commit" : "df1e48f95d26b3ee0a861037052e836ea63cbd8c",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:36:16Z",
+  "scheme" : "Player",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

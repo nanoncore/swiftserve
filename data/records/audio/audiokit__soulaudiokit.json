@@ -4,7 +4,7 @@
       "id" : "audio.synthesis",
       "label" : "Audio synthesis / DSP"
     },
-    "labeledAt" : "2026-07-02T17:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Single SOUL-generated processor (thin surface).",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/audiokit/soulaudiokit",
       "commit" : "e0334228042814216ff12b81499f911632440104",
+      "firstParty" : false,
       "name" : "SoulAudioKit",
       "surfaceDigest" : "fnv1a64:ab5ba2d97b405ea9",
       "version" : "5.3.0"
@@ -139,20 +140,20 @@
         "status" : "supported"
       },
       "visionOS" : {
-        "confidence" : 0.2,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/checkouts/AudioKit/Sources/AudioKit/Audio Files/Format Converter/FormatConverter+Compressed.swift:223:33: error: 'tracks(withMediaType:)' is unavailable in visio — the same commit builds for iOS, so the fence is real",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "unsupported"
       },
       "watchOS" : {
         "confidence" : 0.2,

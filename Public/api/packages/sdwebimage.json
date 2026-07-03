@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/sdwebimage/sdwebimage",
       "commit" : "2de3a496eaf6df9a1312862adcfd54acd73c39c0",
+      "firstParty" : false,
       "name" : "SDWebImage",
       "surfaceDigest" : "fnv1a64:ef3970fcce22bb85",
       "version" : "5.21.7"

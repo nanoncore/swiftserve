@@ -1,0 +1,19 @@
+{
+  "canonicalURL" : "https://github.com/exyte/mediapicker",
+  "commit" : "ce2eda6300337d1478a78fc033bce8dd9bf4bb2c",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    ".dd/SourcePackages/checkouts/AnchoredPopup/Sources/AnchoredPopup/AnchoredAnimationManager.swift:223:54: error: 'UIScreen' is unavailable in visionOS",
+    ".dd/SourcePackages/checkouts/AnchoredPopup/Sources/AnchoredPopup/AnchoredAnimationManager.swift:224:54: error: 'UIScreen' is unavailable in visionOS",
+    ".dd/SourcePackages/checkouts/AnchoredPopup/Sources/AnchoredPopup/AnchoredAnimationManager.swift:354:22: error: 'UIScreen' is unavailable in visionOS",
+    ".dd/SourcePackages/checkouts/AnchoredPopup/Sources/AnchoredPopup/AnchoredAnimationManager.swift:355:22: error: 'UIScreen' is unavailable in visionOS",
+    ".dd/SourcePackages/checkouts/AnchoredPopup/Sources/AnchoredPopup/AnchoredAnimationManager.swift:467:16: error: 'UIScreen' is unavailable in visionOS"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:42:31Z",
+  "scheme" : "ExyteMediaPicker",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

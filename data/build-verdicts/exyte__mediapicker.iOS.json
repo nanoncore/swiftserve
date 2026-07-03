@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/exyte/mediapicker",
+  "commit" : "ce2eda6300337d1478a78fc033bce8dd9bf4bb2c",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:42:19Z",
+  "scheme" : "ExyteMediaPicker",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

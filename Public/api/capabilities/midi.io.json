@@ -119,6 +119,222 @@
       "version" : "5.7.2"
     },
     {
+      "commit" : "c044ae3f65f14f27b2842908ef3eb550e2782bff",
+      "notes" : "MIDI messages as a Combine publisher.",
+      "package" : "https://github.com/mkj-is/combinemidi",
+      "packageName" : "CombineMIDI",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/CombineMIDI/MIDIClient.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "CoreMIDI client → Combine publisher",
+              "permalink" : "https://github.com/mkj-is/combinemidi/blob/0.3.0/Sources/CombineMIDI/MIDIClient.swift#L5",
+              "symbol" : "MIDIClient"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "CoreMIDI is Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/CombineMIDI/MIDIClient.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "CoreMIDI client → Combine publisher",
+              "permalink" : "https://github.com/mkj-is/combinemidi/blob/0.3.0/Sources/CombineMIDI/MIDIClient.swift#L5",
+              "symbol" : "MIDIClient"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/CombineMIDI/MIDIClient.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "CoreMIDI client → Combine publisher",
+              "permalink" : "https://github.com/mkj-is/combinemidi/blob/0.3.0/Sources/CombineMIDI/MIDIClient.swift#L5",
+              "symbol" : "MIDIClient"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/CombineMIDI/MIDIClient.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "CoreMIDI client → Combine publisher",
+              "permalink" : "https://github.com/mkj-is/combinemidi/blob/0.3.0/Sources/CombineMIDI/MIDIClient.swift#L5",
+              "symbol" : "MIDIClient"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme CombineMIDI"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "combinemidi",
+      "version" : "0.3.0"
+    },
+    {
+      "commit" : "17F113",
+      "notes" : "The system MIDI service — clients, ports, endpoints, MIDI 2.0 UMP.",
+      "package" : "https://developer.apple.com/documentation/coremidi",
+      "packageName" : "CoreMIDI",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json",
+              "kind" : "symbol",
+              "line" : 310,
+              "permalink" : "https://developer.apple.com/documentation/coremidi/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json#L310",
+              "symbol" : "MIDIClientCreate(_:_:_:_:)"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json",
+              "kind" : "availability",
+              "line" : 310,
+              "permalink" : "https://developer.apple.com/documentation/coremidi/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json#L310",
+              "symbol" : "MIDIClientCreate(_:_:_:_:)"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json",
+              "kind" : "symbol",
+              "line" : 310,
+              "permalink" : "https://developer.apple.com/documentation/coremidi/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json#L310",
+              "symbol" : "MIDIClientCreate(_:_:_:_:)"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json",
+              "kind" : "symbol",
+              "line" : 310,
+              "permalink" : "https://developer.apple.com/documentation/coremidi/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json#L310",
+              "symbol" : "MIDIClientCreate(_:_:_:_:)"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json",
+              "kind" : "availability",
+              "line" : 310,
+              "permalink" : "https://developer.apple.com/documentation/coremidi/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json#L310",
+              "symbol" : "MIDIClientCreate(_:_:_:_:)"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json",
+              "kind" : "symbol",
+              "line" : 310,
+              "note" : "visionOS 1.0+",
+              "permalink" : "https://developer.apple.com/documentation/coremidi/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json#L310",
+              "symbol" : "MIDIClientCreate(_:_:_:_:)"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json",
+              "kind" : "availability",
+              "line" : 310,
+              "permalink" : "https://developer.apple.com/documentation/coremidi/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreMIDI.symbols.json#L310",
+              "symbol" : "MIDIClientCreate(_:_:_:_:)"
+            }
+          ],
+          "status" : "unsupported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "coremidi",
+      "version" : "Xcode 26.6"
+    },
+    {
       "commit" : "54ac94028e3825bd8e622d373b0698d196927212",
       "notes" : "Note the trap this catches: the manifest DECLARES tvOS 12 and watchOS 4 floors, but the actual MIDI I/O objects are fenced `#if !os(tvOS) && !os(watchOS)` — it compiles there, the capability doesn't exist there.",
       "package" : "https://github.com/orchetect/swift-midi-io",
@@ -232,109 +448,6 @@
       "version" : "1.1.0"
     },
     {
-      "commit" : "c044ae3f65f14f27b2842908ef3eb550e2782bff",
-      "notes" : "MIDI messages as a Combine publisher.",
-      "package" : "https://github.com/mkj-is/combinemidi",
-      "packageName" : "CombineMIDI",
-      "platforms" : {
-        "iOS" : {
-          "confidence" : 0.8,
-          "evidence" : [
-            {
-              "file" : "Sources/CombineMIDI/MIDIClient.swift",
-              "kind" : "symbol",
-              "line" : 5,
-              "note" : "CoreMIDI client → Combine publisher",
-              "permalink" : "https://github.com/mkj-is/combinemidi/blob/0.3.0/Sources/CombineMIDI/MIDIClient.swift#L5",
-              "symbol" : "MIDIClient"
-            },
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "manifest declares iOS 13"
-            }
-          ],
-          "status" : "supported"
-        },
-        "linux" : {
-          "confidence" : 0.1,
-          "evidence" : [
-            {
-              "kind" : "readme",
-              "note" : "CoreMIDI is Apple-only"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "macCatalyst" : {
-          "confidence" : 0.7,
-          "evidence" : [
-            {
-              "file" : "Sources/CombineMIDI/MIDIClient.swift",
-              "kind" : "symbol",
-              "line" : 5,
-              "note" : "CoreMIDI client → Combine publisher",
-              "permalink" : "https://github.com/mkj-is/combinemidi/blob/0.3.0/Sources/CombineMIDI/MIDIClient.swift#L5",
-              "symbol" : "MIDIClient"
-            }
-          ],
-          "status" : "supported"
-        },
-        "macOS" : {
-          "confidence" : 0.8,
-          "evidence" : [
-            {
-              "file" : "Sources/CombineMIDI/MIDIClient.swift",
-              "kind" : "symbol",
-              "line" : 5,
-              "note" : "CoreMIDI client → Combine publisher",
-              "permalink" : "https://github.com/mkj-is/combinemidi/blob/0.3.0/Sources/CombineMIDI/MIDIClient.swift#L5",
-              "symbol" : "MIDIClient"
-            },
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "manifest declares macOS 10.15"
-            }
-          ],
-          "status" : "supported"
-        },
-        "tvOS" : {
-          "confidence" : 0.2,
-          "evidence" : [
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "tvOS absent from manifest floors"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "visionOS" : {
-          "confidence" : 0.25,
-          "evidence" : [
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "watchOS" : {
-          "confidence" : 0.2,
-          "evidence" : [
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "watchOS absent from manifest floors"
-            }
-          ],
-          "status" : "unknown"
-        }
-      },
-      "requiresCompanion" : [
-
-      ],
-      "slug" : "combinemidi",
-      "version" : "0.3.0"
-    },
-    {
       "commit" : "07cdd56620f6948a9e30aa3519b30268daea4b6f",
       "notes" : "Lightweight CoreMIDI wrapper: discovery, connections, MIDI 1/2 parsing.",
       "package" : "https://github.com/bradhowes/morkandmidi",
@@ -411,14 +524,22 @@
           "status" : "unknown"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "file" : "Sources/MorkAndMIDI/MIDI.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "CoreMIDI connection manager",
+              "permalink" : "https://github.com/bradhowes/morkandmidi/blob/5.1.0/Sources/MorkAndMIDI/MIDI.swift#L10",
+              "symbol" : "MIDI"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme MorkAndMIDI"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.2,

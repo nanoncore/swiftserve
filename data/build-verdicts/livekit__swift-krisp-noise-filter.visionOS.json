@@ -1,0 +1,16 @@
+{
+  "canonicalURL" : "https://github.com/livekit/swift-krisp-noise-filter",
+  "commit" : "c12a41f2afc95ee67994faf2ea7c87cde6d65cc6",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    "error: The package product 'LiveKit' requires minimum platform version 26.0 for the visionOS platform, but this target supports 1.0 (in target 'LiveKitKrispNoiseFilter' from project 'LiveKitKrispNoiseFilter')",
+    ".dd/SourcePackages/artifacts/livekit__swift-krisp-noise-filter/KrispNoiseFilter/KrispNoiseFilter.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePackages/artifacts/livekit__swift-krisp-noise-filter/KrispNoiseFilter/KrispNoiseFilter.xcframework'. (in target 'LiveKitKrispNoiseFilter' from project 'LiveKitKrispNoiseFilter')"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:44:34Z",
+  "scheme" : "LiveKitKrispNoiseFilter",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

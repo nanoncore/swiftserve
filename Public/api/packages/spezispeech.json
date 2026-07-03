@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/stanfordspezi/spezispeech",
       "commit" : "6c51d4165d2cabb6102aa61233c480fb75c167f6",
+      "firstParty" : false,
       "name" : "SpeziSpeech",
       "surfaceDigest" : "fnv1a64:6167582d247802af",
       "version" : "1.1.2"
@@ -180,6 +181,7 @@
       ],
       "canonicalURL" : "https://github.com/stanfordspezi/spezispeech",
       "commit" : "6c51d4165d2cabb6102aa61233c480fb75c167f6",
+      "firstParty" : false,
       "name" : "SpeziSpeech",
       "surfaceDigest" : "fnv1a64:6167582d247802af",
       "version" : "1.1.2"

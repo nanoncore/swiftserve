@@ -4,7 +4,7 @@
       "id" : "media.streaming.hls",
       "label" : "HLS streaming"
     },
-    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "HLS playlist parsing/serialization primitives (not a player).",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/fcanas/hlscore",
       "commit" : "2835209970afdaaaf137fd7073d9c0ab2beb2905",
+      "firstParty" : false,
       "name" : "HLSCore",
       "surfaceDigest" : "fnv1a64:a5a043e6cf32475f",
       "version" : "0.2.1"
@@ -129,20 +130,30 @@
         "status" : "supported"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Sources/Parsing/MasterPlaylistParser.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : "M3U8 master playlist parser",
+            "package" : null,
+            "symbol" : "parseMasterPlaylist"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors (predates it)",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme HLSCore",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.25,

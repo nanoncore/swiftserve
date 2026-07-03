@@ -4,7 +4,7 @@
       "id" : "video.playback",
       "label" : "Video playback"
     },
-    "labeledAt" : "2026-07-02T15:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Simple AVPlayer wrapper for video playback.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/piemonte/player",
       "commit" : "df1e48f95d26b3ee0a861037052e836ea63cbd8c",
+      "firstParty" : false,
       "name" : "Player",
       "surfaceDigest" : "fnv1a64:661fd4550f30442b",
       "version" : "0.15.0"
@@ -149,20 +150,20 @@
         "status" : "supported"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors; no source fence",
+            "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/Player.swift:236:26: error: 'tracks(withMediaType:)' is unavailable in visionOS — the same commit builds for iOS, so the fence is real",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "unsupported"
       },
       "watchOS" : {
         "confidence" : 0.25,

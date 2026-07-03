@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/audiokit/audiokitex",
+  "commit" : "c33dac0f581e4ef5bf179e550394f3152aafabfd",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:33:18Z",
+  "scheme" : "AudioKitEX",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

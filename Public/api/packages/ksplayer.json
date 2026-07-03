@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/kingslay/ksplayer",
       "commit" : "bdfa2da39bb18865b317c4ffd08cdef5f8efc043",
+      "firstParty" : false,
       "name" : "KSPlayer",
       "surfaceDigest" : "fnv1a64:b62b71daf8e24cb9",
       "version" : "2.3.4"

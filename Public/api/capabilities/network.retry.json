@@ -119,14 +119,22 @@
           "status" : "supported"
         },
         "visionOS" : {
-          "confidence" : 0.3,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "file" : "Source/Features/RetryPolicy.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "note" : "exponential backoff with retryable status/error sets",
+              "permalink" : "https://github.com/alamofire/alamofire/blob/5.12.0/Source/Features/RetryPolicy.swift#L29",
+              "symbol" : "RetryPolicy"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme Alamofire"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.7999999999999999,

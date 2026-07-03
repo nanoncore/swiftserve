@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/sdwebimage/sdwebimageswiftui",
+  "commit" : "0e331457ca9af2f0b08bcaa138a91ffb907b004f",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:26:45Z",
+  "scheme" : "SDWebImageSwiftUI",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

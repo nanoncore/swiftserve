@@ -1,0 +1,26 @@
+{
+  "canonicalURL" : "https://github.com/sbooth/caaudiohardware",
+  "commit" : "d927963dcfbb819da6ed6f17b83f17ffbc689280",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    "Sources/CAAudioHardware/AudioObject.swift:19:19: error: cannot find type 'AudioObjectID' in scope",
+    "Sources/CAAudioHardware/PropertyScope.swift:36:45: error: cannot find 'kAudioObjectPropertyScopeGlobal' in scope",
+    "Sources/CAAudioHardware/PropertyScope.swift:17:23: error: cannot find type 'AudioObjectPropertyScope' in scope",
+    "Sources/CAAudioHardware/PropertyScope.swift:36:31: error: no exact matches in call to initializer",
+    "Sources/CAAudioHardware/PropertyElement.swift:36:45: error: cannot find 'kAudioObjectPropertyElementMain' in scope",
+    "Sources/CAAudioHardware/PropertyElement.swift:17:23: error: cannot find type 'AudioObjectPropertyElement' in scope",
+    "Sources/CAAudioHardware/PropertyElement.swift:36:29: error: no exact matches in call to initializer",
+    "Sources/CAAudioHardware/AudioAggregateDevice.swift:177:60: error: cannot find 'kAudioAggregateDevicePropertyFullSubDeviceList' in scope",
+    "Sources/CAAudioHardware/AudioObject.swift:462:16: error: cannot find type 'AudioObjectPropertySelector' in scope",
+    "Sources/CAAudioHardware/AudioAggregateDevice.swift:179:62: error: cannot find 'kAudioAggregateDevicePropertyActiveSubDeviceList' in scope",
+    "Sources/CAAudioHardware/AudioAggregateDevice.swift:181:54: error: cannot find 'kAudioAggregateDevicePropertyComposition' in scope",
+    "Sources/CAAudioHardware/AudioAggregateDevice.swift:183:56: error: cannot find 'kAudioAggregateDevicePropertyMainSubDevice' in scope"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:26:30Z",
+  "scheme" : "CAAudioHardware",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

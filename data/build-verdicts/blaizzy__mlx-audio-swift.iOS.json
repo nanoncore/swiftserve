@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/blaizzy/mlx-audio-swift",
+  "commit" : "fcbd04daa1bfebe881932f630af2ba6ce9af3274",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:43:08Z",
+  "scheme" : "MLXAudio",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

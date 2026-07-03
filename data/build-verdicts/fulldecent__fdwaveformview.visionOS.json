@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/fulldecent/fdwaveformview",
+  "commit" : "8e7ab7eba27317c0a0aa49de367279375e4c4da2",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:34:28Z",
+  "scheme" : "FDWaveformView",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

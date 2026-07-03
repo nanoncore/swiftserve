@@ -1,0 +1,16 @@
+{
+  "canonicalURL" : "https://github.com/exphat/swiftwhisper",
+  "commit" : "a192004db08de7c6eaa169eede77f1625e7d23fb",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+    "Sources/SwiftWhisper/Whisper.swift:2:8: error: unable to resolve module dependency: 'whisper_cpp'",
+    "Sources/SwiftWhisper/Whisper.swift:2:8: error: Unable to resolve module dependency: 'whisper_cpp'"
+  ],
+  "outcome" : "failed",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:35:42Z",
+  "scheme" : "SwiftWhisper",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

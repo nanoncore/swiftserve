@@ -100,14 +100,22 @@
           "status" : "supported"
         },
         "visionOS" : {
-          "confidence" : 0.3,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "file" : "Source/LDSwiftEventSource.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "note" : "SSE client with reconnection/backoff",
+              "permalink" : "https://github.com/launchdarkly/swift-eventsource/blob/3.3.0/Source/LDSwiftEventSource.swift#L18",
+              "symbol" : "EventSource"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme LDSwiftEventSource"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.8,

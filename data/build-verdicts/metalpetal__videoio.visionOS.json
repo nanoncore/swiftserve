@@ -1,0 +1,26 @@
+{
+  "canonicalURL" : "https://github.com/metalpetal/videoio",
+  "commit" : "22f7c00083b7e16c7e15ace1adcdb90fb5ffe006",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    "Sources/VideoIO/Camera+FocusExposure.swift:16:101: error: 'FocusMode' is unavailable in visionOS",
+    "Sources/VideoIO/Camera+FocusExposure.swift:16:165: error: 'ExposureMode' is unavailable in visionOS",
+    "Sources/VideoIO/Camera+FocusExposure.swift:33:101: error: 'FocusMode' is unavailable in visionOS",
+    "Sources/VideoIO/Camera+FocusExposure.swift:33:165: error: 'ExposureMode' is unavailable in visionOS",
+    "Sources/VideoIO/Camera+PhotoCapture.swift:20:40: error: 'AVCaptureResolvedPhotoSettings' is unavailable in visionOS",
+    "Sources/VideoIO/Camera+PhotoCapture.swift:21:50: error: 'AVCapturePhoto' is unavailable in visionOS",
+    "Sources/VideoIO/Camera+PhotoCapture.swift:22:36: error: 'AVCapturePhotoOutput' is unavailable in visionOS",
+    "Sources/VideoIO/Camera+PhotoCapture.swift:22:96: error: 'AVCaptureResolvedPhotoSettings' is unavailable in visionOS",
+    "Sources/VideoIO/Camera+PhotoCapture.swift:25:36: error: 'AVCapturePhotoOutput' is unavailable in visionOS",
+    "func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Swift.Error?) {",
+    "Sources/VideoIO/Camera+PhotoCapture.swift:25:90: error: 'AVCapturePhoto' is unavailable in visionOS",
+    "Sources/VideoIO/Camera+PhotoCapture.swift:19:58: error: 'AVCapturePhotoCaptureDelegate' is unavailable in visionOS"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:27:47Z",
+  "scheme" : "VideoIO",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

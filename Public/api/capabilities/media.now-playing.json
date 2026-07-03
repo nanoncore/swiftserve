@@ -8,6 +8,111 @@
   "label" : "Now-playing / remote controls",
   "packages" : [
     {
+      "commit" : "17F113",
+      "notes" : "Now-playing info + remote command center live here.",
+      "package" : "https://developer.apple.com/documentation/mediaplayer",
+      "packageName" : "MediaPlayer",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json",
+              "kind" : "symbol",
+              "line" : 465,
+              "permalink" : "https://developer.apple.com/documentation/mediaplayer/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json#L465",
+              "symbol" : "MPNowPlayingInfoCenter"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json",
+              "kind" : "availability",
+              "line" : 465,
+              "permalink" : "https://developer.apple.com/documentation/mediaplayer/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json#L465",
+              "symbol" : "MPNowPlayingInfoCenter"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json",
+              "kind" : "symbol",
+              "line" : 465,
+              "permalink" : "https://developer.apple.com/documentation/mediaplayer/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json#L465",
+              "symbol" : "MPNowPlayingInfoCenter"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json",
+              "kind" : "symbol",
+              "line" : 465,
+              "permalink" : "https://developer.apple.com/documentation/mediaplayer/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json#L465",
+              "symbol" : "MPNowPlayingInfoCenter"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json",
+              "kind" : "symbol",
+              "line" : 465,
+              "permalink" : "https://developer.apple.com/documentation/mediaplayer/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json#L465",
+              "symbol" : "MPNowPlayingInfoCenter"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json",
+              "kind" : "symbol",
+              "line" : 465,
+              "note" : "visionOS 1.0+",
+              "permalink" : "https://developer.apple.com/documentation/mediaplayer/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json#L465",
+              "symbol" : "MPNowPlayingInfoCenter"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json",
+              "kind" : "symbol",
+              "line" : 465,
+              "permalink" : "https://developer.apple.com/documentation/mediaplayer/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json#L465",
+              "symbol" : "MPNowPlayingInfoCenter"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "mediaplayer",
+      "version" : "Xcode 26.6"
+    },
+    {
       "commit" : "7b506bebabd68b542256c0e1e55519fab5f4c092",
       "notes" : "Lock-screen/control-center integration built in (MPNowPlayingInfoCenter + MPRemoteCommandCenter).",
       "package" : "https://github.com/doublesymmetry/swiftaudioex",
@@ -77,14 +182,14 @@
           "status" : "unknown"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "manifest declares iOS only; AVPlayer exists elsewhere but the package states no intent"
+              "kind" : "buildVerdict",
+              "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/SwiftAudioEx/AVPlayerWrapper/AVPlayerWrapper.swift:252:33: error: 'availableChapterLocales' is unavailable in visionOS — the same commit builds for iOS, so the fence is real"
             }
           ],
-          "status" : "unknown"
+          "status" : "unsupported"
         },
         "watchOS" : {
           "confidence" : 0.25,

@@ -4,7 +4,7 @@
       "id" : "audio.playback",
       "label" : "Audio playback"
     },
-    "labeledAt" : "2026-07-02T14:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "A serious multi-format playback/decoding engine (FLAC, Ogg, MP3, DSD…). v1 extraction is Swift-only and this package is ObjC-first — verdicts wait for the ObjC extractor; manifest floors: macOS 11 / iOS 15 / tvOS 15.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/sbooth/sfbaudioengine",
       "commit" : "5a74dde3089060bac35f0a16970d91fc8402e751",
+      "firstParty" : false,
       "name" : "SFBAudioEngine",
       "surfaceDigest" : "fnv1a64:37928950a6c45c4f",
       "version" : "0.13.0"
@@ -99,20 +100,20 @@
         "status" : "unknown"
       },
       "visionOS" : {
-        "confidence" : 0.2,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
             "file" : null,
-            "kind" : "readme",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "the playback engine's primary surface is Objective-C (194 files unparsed in v1); Swift-side extraction found no anchorable player symbol — honestly unverified rather than guessed",
+            "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/artifacts/vorbis-binary-xcframework/vorbis/vorbis.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePacka — the same commit builds for iOS, so the fence is real",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "unsupported"
       },
       "watchOS" : {
         "confidence" : 0.2,

@@ -4,7 +4,7 @@
       "id" : "audio.echo-cancellation",
       "label" : "Echo cancellation"
     },
-    "labeledAt" : "2026-07-02T14:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Wraps Apple's Voice-Processing I/O unit to strip echo (and optionally apply AGC) from mic capture.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/kasimok/aecaudiostream",
       "commit" : "c5d16bbb9f3c4282523d6d6039c0009480b72c25",
+      "firstParty" : false,
       "name" : "AECAudioStream",
       "surfaceDigest" : "fnv1a64:863235b8b87e2546",
       "version" : "1.0.1"
@@ -129,20 +130,30 @@
         "status" : "supported"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Sources/AECAudioStream/AECAudioStream.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : "Voice-Processing I/O (AEC) audio unit stream",
+            "package" : null,
+            "symbol" : "AECAudioStream"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors; no source fence",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme AECAudioStream",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.25,

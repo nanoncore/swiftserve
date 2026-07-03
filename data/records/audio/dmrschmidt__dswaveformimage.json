@@ -4,7 +4,7 @@
       "id" : "audio.waveform-visualization",
       "label" : "Waveform visualization"
     },
-    "labeledAt" : "2026-07-02T14:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Renders waveform images and live SwiftUI waveforms from audio files.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/dmrschmidt/dswaveformimage",
       "commit" : "00afb7930863b9cc3bd011389d601735e548093c",
+      "firstParty" : false,
       "name" : "DSWaveformImage",
       "surfaceDigest" : "fnv1a64:3d5bce46f4c88b3c",
       "version" : "14.5.0"
@@ -129,20 +130,30 @@
         "status" : "unknown"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Sources/DSWaveformImage/WaveformImageDrawer.swift",
+            "kind" : "symbol",
+            "line" : 6,
+            "note" : null,
+            "package" : null,
+            "symbol" : "WaveformImageDrawer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme DSWaveformImage",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.25,

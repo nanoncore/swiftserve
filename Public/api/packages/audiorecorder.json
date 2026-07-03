@@ -4,7 +4,7 @@
       "id" : "audio.recording",
       "label" : "Microphone recording"
     },
-    "labeledAt" : "2026-07-02T15:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Microphone recording with output to file, with a dependency-client interface.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/atacan/audiorecorder",
       "commit" : "fade972c21f3665fdbfa3f0525ef0961b3e56566",
+      "firstParty" : false,
       "name" : "AudioRecorder",
       "surfaceDigest" : "fnv1a64:708f9a0642a03587",
       "version" : "1.0.0"
@@ -119,20 +120,30 @@
         "status" : "unknown"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Sources/AudioRecorderClient/AudioRecorderClient+LiveKey.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "TCA-style recording client",
+            "package" : null,
+            "symbol" : "AudioRecorderClient"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme AudioRecorder",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.2,

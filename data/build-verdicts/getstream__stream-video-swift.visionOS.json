@@ -1,0 +1,16 @@
+{
+  "canonicalURL" : "https://github.com/getstream/stream-video-swift",
+  "commit" : "eab7c4eb73b9f242af6a1991cbb21413ba3cc6a0",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    ".dd/SourcePackages/artifacts/stream-video-swift-webrtc/StreamWebRTC/StreamWebRTC.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePackages/artifacts/stream-video-swift-webrtc/StreamWebRTC/StreamWebRTC.xcframework'. (in target 'StreamVideo' from project 'StreamVideo')",
+    ".dd/SourcePackages/artifacts/stream-video-swift-webrtc/StreamWebRTC/StreamWebRTC.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePackages/artifacts/stream-video-swift-webrtc/StreamWebRTC/StreamWebRTC.xcframework'. (in target 'StreamWebRTC' from project 'StreamWebRTC')"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:43:35Z",
+  "scheme" : "StreamVideo",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/fulldecent/fdwaveformview",
       "commit" : "8e7ab7eba27317c0a0aa49de367279375e4c4da2",
+      "firstParty" : false,
       "name" : "FDWaveformView",
       "surfaceDigest" : "fnv1a64:f8786ef472651a76",
       "version" : "5.1.1"

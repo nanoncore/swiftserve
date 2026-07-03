@@ -7,6 +7,111 @@
   "label" : "Echo cancellation",
   "packages" : [
     {
+      "commit" : "17F113",
+      "notes" : "System voice processing (echo cancellation + noise suppression for voice chat) — not Krisp-style ML denoising.",
+      "package" : "https://developer.apple.com/documentation/avfaudio",
+      "packageName" : "AVFAudio",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 384,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L384",
+              "symbol" : "AVAudioIONode.setVoiceProcessingEnabled(_:)"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "availability",
+              "line" : 384,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L384",
+              "symbol" : "AVAudioIONode.setVoiceProcessingEnabled(_:)"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 384,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L384",
+              "symbol" : "AVAudioIONode.setVoiceProcessingEnabled(_:)"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 384,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L384",
+              "symbol" : "AVAudioIONode.setVoiceProcessingEnabled(_:)"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 384,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L384",
+              "symbol" : "AVAudioIONode.setVoiceProcessingEnabled(_:)"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 384,
+              "note" : "visionOS 1.0+",
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L384",
+              "symbol" : "AVAudioIONode.setVoiceProcessingEnabled(_:)"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 384,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L384",
+              "symbol" : "AVAudioIONode.setVoiceProcessingEnabled(_:)"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "avfaudio",
+      "version" : "Xcode 26.6"
+    },
+    {
       "commit" : "c5d16bbb9f3c4282523d6d6039c0009480b72c25",
       "notes" : "Wraps Apple's Voice-Processing I/O unit to strip echo (and optionally apply AGC) from mic capture.",
       "package" : "https://github.com/kasimok/aecaudiostream",
@@ -91,14 +196,22 @@
           "status" : "supported"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors; no source fence"
+              "file" : "Sources/AECAudioStream/AECAudioStream.swift",
+              "kind" : "symbol",
+              "line" : 19,
+              "note" : "Voice-Processing I/O (AEC) audio unit stream",
+              "permalink" : "https://github.com/kasimok/aecaudiostream/blob/1.0.1/Sources/AECAudioStream/AECAudioStream.swift#L19",
+              "symbol" : "AECAudioStream"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme AECAudioStream"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.25,

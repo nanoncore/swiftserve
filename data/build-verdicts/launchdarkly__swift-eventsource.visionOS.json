@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/launchdarkly/swift-eventsource",
+  "commit" : "57051701c58a93603ffa2051f8e9cf0c8cff7814",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:45:52Z",
+  "scheme" : "LDSwiftEventSource",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

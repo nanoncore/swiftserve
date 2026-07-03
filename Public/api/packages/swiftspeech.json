@@ -4,7 +4,7 @@
       "id" : "speech.stt",
       "label" : "Speech-to-text"
     },
-    "labeledAt" : "2026-07-02T14:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "SwiftUI-first speech recognition over SFSpeechRecognizer.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/cay-zhang/swiftspeech",
       "commit" : "6e41f289f5ccc1751ef5674972d46b48b326c4c6",
+      "firstParty" : false,
       "name" : "SwiftSpeech",
       "surfaceDigest" : "fnv1a64:6bee321e704d1f0b",
       "version" : "v0.9.3"
@@ -119,20 +120,30 @@
         "status" : "unknown"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Sources/SwiftSpeech/SwiftSpeech.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : "SwiftUI wrapper over SFSpeechRecognizer",
+            "package" : null,
+            "symbol" : "SwiftSpeech"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors (package predates it)",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme SwiftSpeech",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.2,

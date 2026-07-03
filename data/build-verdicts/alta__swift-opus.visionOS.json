@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/alta/swift-opus",
+  "commit" : "5f0164b8915fb9001265c54413aa0f0efbd3df06",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    "xcodebuild -list found no schemes"
+  ],
+  "outcome" : "inconclusive",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:41:49Z",
+  "scheme" : "",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

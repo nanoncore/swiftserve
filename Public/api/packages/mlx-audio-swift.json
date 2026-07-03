@@ -4,7 +4,7 @@
       "id" : "speech.tts",
       "label" : "Text-to-speech"
     },
-    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "On-device TTS over MLX (Apple silicon). Semantic tie is via generation types — main API surface is model-specific, hence modest confidence.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/blaizzy/mlx-audio-swift",
       "commit" : "fcbd04daa1bfebe881932f630af2ba6ce9af3274",
+      "firstParty" : false,
       "name" : "MLXAudio",
       "surfaceDigest" : "fnv1a64:559413d6ed013e1c",
       "version" : "v0.1.2"
@@ -119,20 +120,30 @@
         "status" : "unknown"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Sources/MLXAudioCore/Generation/GenerationTypes.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : "TTS generation pipeline types (Kokoro/Orpheus models)",
+            "package" : null,
+            "symbol" : "AudioGenerationInfo"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme MLXAudio",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.2,

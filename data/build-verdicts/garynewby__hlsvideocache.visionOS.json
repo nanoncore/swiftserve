@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/garynewby/hlsvideocache",
+  "commit" : "41291ed4f88aecd8e9dc885693f908ea58888257",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:25:29Z",
+  "scheme" : "HLSVideoCache",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

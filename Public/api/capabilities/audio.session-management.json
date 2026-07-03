@@ -8,6 +8,111 @@
   "label" : "Audio session management",
   "packages" : [
     {
+      "commit" : "17F113",
+      "notes" : "The system audio session itself — category, activation, routing.",
+      "package" : "https://developer.apple.com/documentation/avfaudio",
+      "packageName" : "AVFAudio",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 637,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L637",
+              "symbol" : "AVAudioSession"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "availability",
+              "line" : 637,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L637",
+              "symbol" : "AVAudioSession"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 637,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L637",
+              "symbol" : "AVAudioSession"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "availability",
+              "line" : 637,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L637",
+              "symbol" : "AVAudioSession"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 637,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L637",
+              "symbol" : "AVAudioSession"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 637,
+              "note" : "visionOS 1.0+",
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L637",
+              "symbol" : "AVAudioSession"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 637,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L637",
+              "symbol" : "AVAudioSession"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "avfaudio",
+      "version" : "Xcode 26.6"
+    },
+    {
       "commit" : "7f3af1488411a9787e1e94ddd66b0bed2057bed3",
       "notes" : "A textbook feature×platform gap caught from source: LiveKit's automatic audio-session handling exists only where AVAudioSession does (iOS/visionOS/tvOS, plus Catalyst via os(iOS)). On macOS you configure audio routing yourself.",
       "package" : "https://github.com/livekit/client-sdk-swift",

@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/abdullahselek/swifty360player",
+  "commit" : "a3a9249e34ce1bdcfa20c0780fdbec26a6396ddb",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:34:18Z",
+  "scheme" : "Swifty360Player",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

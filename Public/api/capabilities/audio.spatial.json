@@ -1,0 +1,116 @@
+{
+  "aliases" : [
+    "3d audio",
+    "ambisonics",
+    "binaural"
+  ],
+  "id" : "audio.spatial",
+  "label" : "Spatial audio",
+  "packages" : [
+    {
+      "commit" : "17F113",
+      "notes" : "3D positional mixing via AVAudioEnvironmentNode and spatial mixing attributes.",
+      "package" : "https://developer.apple.com/documentation/avfaudio",
+      "packageName" : "AVFAudio",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 314,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L314",
+              "symbol" : "AVAudioEnvironmentNode"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "availability",
+              "line" : 314,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L314",
+              "symbol" : "AVAudioEnvironmentNode"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 314,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L314",
+              "symbol" : "AVAudioEnvironmentNode"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 314,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L314",
+              "symbol" : "AVAudioEnvironmentNode"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 314,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L314",
+              "symbol" : "AVAudioEnvironmentNode"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "symbol",
+              "line" : 314,
+              "note" : "visionOS 1.0+",
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L314",
+              "symbol" : "AVAudioEnvironmentNode"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json",
+              "kind" : "availability",
+              "line" : 314,
+              "permalink" : "https://developer.apple.com/documentation/avfaudio/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFAudio.symbols.json#L314",
+              "symbol" : "AVAudioEnvironmentNode"
+            }
+          ],
+          "status" : "unsupported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "avfaudio",
+      "version" : "Xcode 26.6"
+    }
+  ]
+}

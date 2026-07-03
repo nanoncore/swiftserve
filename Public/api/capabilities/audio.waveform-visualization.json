@@ -87,14 +87,23 @@
           "status" : "unknown"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "condition" : "!os(macOS)",
+              "file" : "Sources/Waveform/Waveform.swift",
+              "kind" : "symbol",
+              "line" : 68,
+              "note" : "the !os(macOS) side of the split pair",
+              "permalink" : "https://github.com/audiokit/waveform/blob/1.0.3/Sources/Waveform/Waveform.swift#L68",
+              "symbol" : "Waveform"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme Waveform"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.2,
@@ -206,14 +215,22 @@
           "status" : "unknown"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "file" : "Sources/AudioKitUI/Visualizations/AudioWaveform.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "waveform shape view",
+              "permalink" : "https://github.com/audiokit/audiokitui/blob/0.3.7/Sources/AudioKitUI/Visualizations/AudioWaveform.swift#L5",
+              "symbol" : "AudioWaveform"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme AudioKitUI"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.2,
@@ -313,14 +330,21 @@
           "status" : "unknown"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "file" : "Sources/DSWaveformImage/WaveformImageDrawer.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "permalink" : "https://github.com/dmrschmidt/dswaveformimage/blob/14.5.0/Sources/DSWaveformImage/WaveformImageDrawer.swift#L6",
+              "symbol" : "WaveformImageDrawer"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme DSWaveformImage"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.25,

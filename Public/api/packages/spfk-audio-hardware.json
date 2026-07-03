@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/ryanfrancesconi/spfk-audio-hardware",
       "commit" : "ebe07274a6cd4c77f390b2726b9ebfd85ea5cf13",
+      "firstParty" : false,
       "name" : "SPFKAudioHardware",
       "surfaceDigest" : "fnv1a64:cadbceda056d6e79",
       "version" : "5.2.0"

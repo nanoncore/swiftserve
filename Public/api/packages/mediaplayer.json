@@ -1,0 +1,140 @@
+[
+  {
+    "capability" : {
+      "id" : "media.now-playing",
+      "label" : "Now-playing / remote controls"
+    },
+    "labeledAt" : "2026-07-03T11:30:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Now-playing info + remote command center live here.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/mediaplayer",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "MediaPlayer",
+      "surfaceDigest" : "fnv1a64:6aaefcf7033d408c",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json",
+            "kind" : "symbol",
+            "line" : 465,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MPNowPlayingInfoCenter"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json",
+            "kind" : "availability",
+            "line" : 465,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MPNowPlayingInfoCenter"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json",
+            "kind" : "symbol",
+            "line" : 465,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MPNowPlayingInfoCenter"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json",
+            "kind" : "symbol",
+            "line" : 465,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MPNowPlayingInfoCenter"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json",
+            "kind" : "symbol",
+            "line" : 465,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MPNowPlayingInfoCenter"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json",
+            "kind" : "symbol",
+            "line" : 465,
+            "note" : "visionOS 1.0+",
+            "package" : null,
+            "symbol" : "MPNowPlayingInfoCenter"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/MediaPlayer.symbols.json",
+            "kind" : "symbol",
+            "line" : 465,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MPNowPlayingInfoCenter"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

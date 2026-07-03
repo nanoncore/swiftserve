@@ -1,0 +1,22 @@
+{
+  "canonicalURL" : "https://github.com/moya/moya",
+  "commit" : "c263811c1f3dbf002be9bd83107f7cdc38992b26",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    ".dd/SourcePackages/checkouts/Alamofire/Source/Protected.swift:127:15: error: cannot find 'lock' in scope",
+    ".dd/SourcePackages/checkouts/Alamofire/Source/Protected.swift:128:15: error: cannot find 'lock' in scope",
+    ".dd/SourcePackages/checkouts/Alamofire/Source/Protected.swift:143:9: error: cannot find 'lock' in scope",
+    ".dd/SourcePackages/checkouts/Alamofire/Source/Protected.swift:153:9: error: cannot find 'lock' in scope",
+    ".dd/SourcePackages/checkouts/Alamofire/Source/Protected.swift:157:15: error: cannot find 'lock' in scope",
+    ".dd/SourcePackages/checkouts/Alamofire/Source/Protected.swift:158:15: error: cannot find 'lock' in scope",
+    ".dd/SourcePackages/checkouts/Alamofire/Source/Protected.swift:209:9: error: cannot find 'lock' in scope",
+    ".dd/SourcePackages/checkouts/Alamofire/Source/Protected.swift:222:9: error: cannot find 'lock' in scope"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:45:02Z",
+  "scheme" : "Moya",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

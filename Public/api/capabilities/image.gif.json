@@ -8,6 +8,240 @@
   "label" : "Animated GIF playback",
   "packages" : [
     {
+      "commit" : "ac632bd26a1c00f139ff62fd01806f21cf67325e",
+      "notes" : "AnimatedImageView plays GIFs with frame buffering — and is provably fenced off watchOS.",
+      "package" : "https://github.com/onevcat/kingfisher",
+      "packageName" : "Kingfisher",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "condition" : "!os(watchOS)",
+              "file" : "Sources/Views/AnimatedImageView.swift",
+              "kind" : "symbol",
+              "line" : 78,
+              "note" : "frame-buffered GIF view",
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Views/AnimatedImageView.swift#L78",
+              "symbol" : "AnimatedImageView"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "Apple imaging stacks only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "condition" : "!os(watchOS)",
+              "file" : "Sources/Views/AnimatedImageView.swift",
+              "kind" : "symbol",
+              "line" : 78,
+              "note" : "frame-buffered GIF view",
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Views/AnimatedImageView.swift#L78",
+              "symbol" : "AnimatedImageView"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "condition" : "!os(watchOS)",
+              "file" : "Sources/Views/AnimatedImageView.swift",
+              "kind" : "symbol",
+              "line" : 78,
+              "note" : "frame-buffered GIF view",
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Views/AnimatedImageView.swift#L78",
+              "symbol" : "AnimatedImageView"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "condition" : "!os(watchOS)",
+              "file" : "Sources/Views/AnimatedImageView.swift",
+              "kind" : "symbol",
+              "line" : 78,
+              "note" : "frame-buffered GIF view",
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Views/AnimatedImageView.swift#L78",
+              "symbol" : "AnimatedImageView"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "condition" : "!os(watchOS)",
+              "file" : "Sources/Views/AnimatedImageView.swift",
+              "kind" : "symbol",
+              "line" : 78,
+              "note" : "frame-buffered GIF view",
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Views/AnimatedImageView.swift#L78",
+              "symbol" : "AnimatedImageView"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme Kingfisher"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "condition" : "!os(watchOS)",
+              "file" : "Sources/Views/AnimatedImageView.swift",
+              "kind" : "guard",
+              "line" : 78,
+              "note" : "fenced !os(watchOS)",
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Views/AnimatedImageView.swift#L78",
+              "symbol" : "AnimatedImageView"
+            }
+          ],
+          "status" : "unsupported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "kingfisher",
+      "version" : "8.10.0"
+    },
+    {
+      "commit" : "0e331457ca9af2f0b08bcaa138a91ffb907b004f",
+      "notes" : "AnimatedImage plays GIF/APNG/WebP animations — fenced !os(watchOS), same gap as Kingfisher's.",
+      "package" : "https://github.com/sdwebimage/sdwebimageswiftui",
+      "packageName" : "SDWebImageSwiftUI",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "condition" : "!os(watchOS)",
+              "file" : "SDWebImageSwiftUI/Classes/AnimatedImage.swift",
+              "kind" : "symbol",
+              "line" : 109,
+              "note" : "animated image view",
+              "permalink" : "https://github.com/sdwebimage/sdwebimageswiftui/blob/3.1.4/SDWebImageSwiftUI/Classes/AnimatedImage.swift#L109",
+              "symbol" : "AnimatedImage"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "Apple-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "condition" : "!os(watchOS)",
+              "file" : "SDWebImageSwiftUI/Classes/AnimatedImage.swift",
+              "kind" : "symbol",
+              "line" : 109,
+              "note" : "animated image view",
+              "permalink" : "https://github.com/sdwebimage/sdwebimageswiftui/blob/3.1.4/SDWebImageSwiftUI/Classes/AnimatedImage.swift#L109",
+              "symbol" : "AnimatedImage"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "condition" : "!os(watchOS)",
+              "file" : "SDWebImageSwiftUI/Classes/AnimatedImage.swift",
+              "kind" : "symbol",
+              "line" : 109,
+              "note" : "animated image view",
+              "permalink" : "https://github.com/sdwebimage/sdwebimageswiftui/blob/3.1.4/SDWebImageSwiftUI/Classes/AnimatedImage.swift#L109",
+              "symbol" : "AnimatedImage"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "condition" : "!os(watchOS)",
+              "file" : "SDWebImageSwiftUI/Classes/AnimatedImage.swift",
+              "kind" : "symbol",
+              "line" : 109,
+              "note" : "animated image view",
+              "permalink" : "https://github.com/sdwebimage/sdwebimageswiftui/blob/3.1.4/SDWebImageSwiftUI/Classes/AnimatedImage.swift#L109",
+              "symbol" : "AnimatedImage"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "condition" : "!os(watchOS)",
+              "file" : "SDWebImageSwiftUI/Classes/AnimatedImage.swift",
+              "kind" : "symbol",
+              "line" : 109,
+              "note" : "animated image view",
+              "permalink" : "https://github.com/sdwebimage/sdwebimageswiftui/blob/3.1.4/SDWebImageSwiftUI/Classes/AnimatedImage.swift#L109",
+              "symbol" : "AnimatedImage"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme SDWebImageSwiftUI"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "condition" : "!os(watchOS)",
+              "file" : "SDWebImageSwiftUI/Classes/AnimatedImage.swift",
+              "kind" : "guard",
+              "line" : 109,
+              "note" : "fenced !os(watchOS)",
+              "permalink" : "https://github.com/sdwebimage/sdwebimageswiftui/blob/3.1.4/SDWebImageSwiftUI/Classes/AnimatedImage.swift#L109",
+              "symbol" : "AnimatedImage"
+            }
+          ],
+          "status" : "unsupported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "sdwebimageswiftui",
+      "version" : "3.1.4"
+    },
+    {
       "commit" : "f19726eaf0dfa4dbce4d3f80293c9d38c2acba53",
       "notes" : "Performance-focused GIF playback with lazy frame buffering.",
       "package" : "https://github.com/kaishin/gifu",
@@ -117,222 +351,6 @@
       ],
       "slug" : "gifu",
       "version" : "v4.0.1"
-    },
-    {
-      "commit" : "ac632bd26a1c00f139ff62fd01806f21cf67325e",
-      "notes" : "AnimatedImageView plays GIFs with frame buffering — and is provably fenced off watchOS.",
-      "package" : "https://github.com/onevcat/kingfisher",
-      "packageName" : "Kingfisher",
-      "platforms" : {
-        "iOS" : {
-          "confidence" : 0.85,
-          "evidence" : [
-            {
-              "condition" : "!os(watchOS)",
-              "file" : "Sources/Views/AnimatedImageView.swift",
-              "kind" : "symbol",
-              "line" : 78,
-              "note" : "frame-buffered GIF view",
-              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Views/AnimatedImageView.swift#L78",
-              "symbol" : "AnimatedImageView"
-            }
-          ],
-          "status" : "supported"
-        },
-        "linux" : {
-          "confidence" : 0.1,
-          "evidence" : [
-            {
-              "kind" : "readme",
-              "note" : "Apple imaging stacks only"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "macCatalyst" : {
-          "confidence" : 0.75,
-          "evidence" : [
-            {
-              "condition" : "!os(watchOS)",
-              "file" : "Sources/Views/AnimatedImageView.swift",
-              "kind" : "symbol",
-              "line" : 78,
-              "note" : "frame-buffered GIF view",
-              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Views/AnimatedImageView.swift#L78",
-              "symbol" : "AnimatedImageView"
-            }
-          ],
-          "status" : "supported"
-        },
-        "macOS" : {
-          "confidence" : 0.8,
-          "evidence" : [
-            {
-              "condition" : "!os(watchOS)",
-              "file" : "Sources/Views/AnimatedImageView.swift",
-              "kind" : "symbol",
-              "line" : 78,
-              "note" : "frame-buffered GIF view",
-              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Views/AnimatedImageView.swift#L78",
-              "symbol" : "AnimatedImageView"
-            }
-          ],
-          "status" : "supported"
-        },
-        "tvOS" : {
-          "confidence" : 0.8,
-          "evidence" : [
-            {
-              "condition" : "!os(watchOS)",
-              "file" : "Sources/Views/AnimatedImageView.swift",
-              "kind" : "symbol",
-              "line" : 78,
-              "note" : "frame-buffered GIF view",
-              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Views/AnimatedImageView.swift#L78",
-              "symbol" : "AnimatedImageView"
-            }
-          ],
-          "status" : "supported"
-        },
-        "visionOS" : {
-          "confidence" : 0.3,
-          "evidence" : [
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "watchOS" : {
-          "confidence" : 0.85,
-          "evidence" : [
-            {
-              "condition" : "!os(watchOS)",
-              "file" : "Sources/Views/AnimatedImageView.swift",
-              "kind" : "guard",
-              "line" : 78,
-              "note" : "fenced !os(watchOS)",
-              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/Views/AnimatedImageView.swift#L78",
-              "symbol" : "AnimatedImageView"
-            }
-          ],
-          "status" : "unsupported"
-        }
-      },
-      "requiresCompanion" : [
-
-      ],
-      "slug" : "kingfisher",
-      "version" : "8.10.0"
-    },
-    {
-      "commit" : "0e331457ca9af2f0b08bcaa138a91ffb907b004f",
-      "notes" : "AnimatedImage plays GIF/APNG/WebP animations — fenced !os(watchOS), same gap as Kingfisher's.",
-      "package" : "https://github.com/sdwebimage/sdwebimageswiftui",
-      "packageName" : "SDWebImageSwiftUI",
-      "platforms" : {
-        "iOS" : {
-          "confidence" : 0.8,
-          "evidence" : [
-            {
-              "condition" : "!os(watchOS)",
-              "file" : "SDWebImageSwiftUI/Classes/AnimatedImage.swift",
-              "kind" : "symbol",
-              "line" : 109,
-              "note" : "animated image view",
-              "permalink" : "https://github.com/sdwebimage/sdwebimageswiftui/blob/3.1.4/SDWebImageSwiftUI/Classes/AnimatedImage.swift#L109",
-              "symbol" : "AnimatedImage"
-            }
-          ],
-          "status" : "supported"
-        },
-        "linux" : {
-          "confidence" : 0.1,
-          "evidence" : [
-            {
-              "kind" : "readme",
-              "note" : "Apple-only"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "macCatalyst" : {
-          "confidence" : 0.7,
-          "evidence" : [
-            {
-              "condition" : "!os(watchOS)",
-              "file" : "SDWebImageSwiftUI/Classes/AnimatedImage.swift",
-              "kind" : "symbol",
-              "line" : 109,
-              "note" : "animated image view",
-              "permalink" : "https://github.com/sdwebimage/sdwebimageswiftui/blob/3.1.4/SDWebImageSwiftUI/Classes/AnimatedImage.swift#L109",
-              "symbol" : "AnimatedImage"
-            }
-          ],
-          "status" : "supported"
-        },
-        "macOS" : {
-          "confidence" : 0.8,
-          "evidence" : [
-            {
-              "condition" : "!os(watchOS)",
-              "file" : "SDWebImageSwiftUI/Classes/AnimatedImage.swift",
-              "kind" : "symbol",
-              "line" : 109,
-              "note" : "animated image view",
-              "permalink" : "https://github.com/sdwebimage/sdwebimageswiftui/blob/3.1.4/SDWebImageSwiftUI/Classes/AnimatedImage.swift#L109",
-              "symbol" : "AnimatedImage"
-            }
-          ],
-          "status" : "supported"
-        },
-        "tvOS" : {
-          "confidence" : 0.75,
-          "evidence" : [
-            {
-              "condition" : "!os(watchOS)",
-              "file" : "SDWebImageSwiftUI/Classes/AnimatedImage.swift",
-              "kind" : "symbol",
-              "line" : 109,
-              "note" : "animated image view",
-              "permalink" : "https://github.com/sdwebimage/sdwebimageswiftui/blob/3.1.4/SDWebImageSwiftUI/Classes/AnimatedImage.swift#L109",
-              "symbol" : "AnimatedImage"
-            }
-          ],
-          "status" : "supported"
-        },
-        "visionOS" : {
-          "confidence" : 0.3,
-          "evidence" : [
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "watchOS" : {
-          "confidence" : 0.8,
-          "evidence" : [
-            {
-              "condition" : "!os(watchOS)",
-              "file" : "SDWebImageSwiftUI/Classes/AnimatedImage.swift",
-              "kind" : "guard",
-              "line" : 109,
-              "note" : "fenced !os(watchOS)",
-              "permalink" : "https://github.com/sdwebimage/sdwebimageswiftui/blob/3.1.4/SDWebImageSwiftUI/Classes/AnimatedImage.swift#L109",
-              "symbol" : "AnimatedImage"
-            }
-          ],
-          "status" : "unsupported"
-        }
-      },
-      "requiresCompanion" : [
-
-      ],
-      "slug" : "sdwebimageswiftui",
-      "version" : "3.1.4"
     }
   ]
 }

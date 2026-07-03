@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/tanhakabir/swiftaudioplayer",
+  "commit" : "2fdfc62ce9f5d8b818ee1b2a9ac061fce4f64af9",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:28:20Z",
+  "scheme" : "SwiftAudioPlayer",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

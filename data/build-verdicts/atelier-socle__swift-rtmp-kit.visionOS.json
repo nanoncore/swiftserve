@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/atelier-socle/swift-rtmp-kit",
+  "commit" : "163eea45fe8d66b0047d028c92de9ef993bd2ace",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:42:09Z",
+  "scheme" : "RTMPKit",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/audiokit/waveform",
+  "commit" : "357de1945a36e62a27f74a9b3b8f5e45904659d9",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:34:28Z",
+  "scheme" : "Waveform",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

@@ -7,6 +7,111 @@
   "label" : "Video playback",
   "packages" : [
     {
+      "commit" : "17F113",
+      "notes" : "AVPlayer/AVPlayerItem — the system media engine.",
+      "package" : "https://developer.apple.com/documentation/avfoundation",
+      "packageName" : "AVFoundation",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+              "kind" : "symbol",
+              "line" : 2892,
+              "permalink" : "https://developer.apple.com/documentation/avfoundation/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json#L2892",
+              "symbol" : "AVPlayer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+              "kind" : "availability",
+              "line" : 2892,
+              "permalink" : "https://developer.apple.com/documentation/avfoundation/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json#L2892",
+              "symbol" : "AVPlayer"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+              "kind" : "symbol",
+              "line" : 2892,
+              "permalink" : "https://developer.apple.com/documentation/avfoundation/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json#L2892",
+              "symbol" : "AVPlayer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+              "kind" : "symbol",
+              "line" : 2892,
+              "permalink" : "https://developer.apple.com/documentation/avfoundation/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json#L2892",
+              "symbol" : "AVPlayer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+              "kind" : "symbol",
+              "line" : 2892,
+              "permalink" : "https://developer.apple.com/documentation/avfoundation/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json#L2892",
+              "symbol" : "AVPlayer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+              "kind" : "symbol",
+              "line" : 2892,
+              "note" : "visionOS 1.0+",
+              "permalink" : "https://developer.apple.com/documentation/avfoundation/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json#L2892",
+              "symbol" : "AVPlayer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+              "kind" : "symbol",
+              "line" : 2892,
+              "permalink" : "https://developer.apple.com/documentation/avfoundation/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json#L2892",
+              "symbol" : "AVPlayer"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "avfoundation",
+      "version" : "Xcode 26.6"
+    },
+    {
       "commit" : "bdfa2da39bb18865b317c4ffd08cdef5f8efc043",
       "notes" : "AVPlayer + FFmpeg-based player (subtitles, HDR, multiple audio tracks).",
       "package" : "https://github.com/kingslay/ksplayer",
@@ -331,14 +436,14 @@
           "status" : "supported"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors; no source fence"
+              "kind" : "buildVerdict",
+              "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/Core/Components/PlayerContext.swift:136:16: error: 'allowsExternalPlayback' is unavailable in visionOS — the same commit builds for iOS, so the fence is real"
             }
           ],
-          "status" : "unknown"
+          "status" : "unsupported"
         },
         "watchOS" : {
           "confidence" : 0.25,
@@ -452,14 +557,14 @@
           "status" : "supported"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors; no source fence"
+              "kind" : "buildVerdict",
+              "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/Player.swift:236:26: error: 'tracks(withMediaType:)' is unavailable in visionOS — the same commit builds for iOS, so the fence is real"
             }
           ],
-          "status" : "unknown"
+          "status" : "unsupported"
         },
         "watchOS" : {
           "confidence" : 0.25,
@@ -545,14 +650,14 @@
           "status" : "unknown"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors; no source fence"
+              "kind" : "buildVerdict",
+              "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/MuxPlayerSwift/Lifecycle/MuxPlayerContext.swift:61:35: error: 'monitorAVPlayerLayer(_:withPlayerName:customerData:automaticErrorTracking:)' is unavailable in visionOS — the same commit builds for iOS, so the fence is real"
             }
           ],
-          "status" : "unknown"
+          "status" : "unsupported"
         },
         "watchOS" : {
           "confidence" : 0.25,
@@ -638,14 +743,14 @@
           "status" : "unknown"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors; no source fence"
+              "kind" : "buildVerdict",
+              "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Swifty360Player/Swifty360Window.swift:35:41: error: 'statusBarOrientation' is unavailable in visionOS — the same commit builds for iOS, so the fence is real"
             }
           ],
-          "status" : "unknown"
+          "status" : "unsupported"
         },
         "watchOS" : {
           "confidence" : 0.25,

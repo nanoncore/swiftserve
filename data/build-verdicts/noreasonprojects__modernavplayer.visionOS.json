@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/noreasonprojects/modernavplayer",
+  "commit" : "ab16588b7b8e297255e2d8a7407eb89506af265b",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    "Sources/Core/Components/PlayerContext.swift:136:16: error: 'allowsExternalPlayback' is unavailable in visionOS"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:25:51Z",
+  "scheme" : "ModernAVPlayer",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

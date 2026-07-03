@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/kean/pulse",
+  "commit" : "94b92731d370c129bb771e9c18f69b0a44ccca5c",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:34:00Z",
+  "scheme" : "Pulse",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

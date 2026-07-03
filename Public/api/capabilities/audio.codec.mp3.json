@@ -83,14 +83,22 @@
           "status" : "unknown"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "file" : "Sources/SwiftLAME/SwiftLameEncoder.swift",
+              "kind" : "symbol",
+              "line" : 6,
+              "note" : "async PCM→MP3 encoding over LAME",
+              "permalink" : "https://github.com/hidden-spectrum/swiftlame/blob/0.1.0/Sources/SwiftLAME/SwiftLameEncoder.swift#L6",
+              "symbol" : "SwiftLameEncoder"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme SwiftLAME"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.2,

@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/sdwebimage/sdwebimage",
+  "commit" : "2de3a496eaf6df9a1312862adcfd54acd73c39c0",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:26:45Z",
+  "scheme" : "SDWebImage",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

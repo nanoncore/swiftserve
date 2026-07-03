@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/moya/moya",
+  "commit" : "c263811c1f3dbf002be9bd83107f7cdc38992b26",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:44:46Z",
+  "scheme" : "Moya",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

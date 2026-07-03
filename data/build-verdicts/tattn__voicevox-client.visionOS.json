@@ -1,0 +1,16 @@
+{
+  "canonicalURL" : "https://github.com/tattn/voicevox-client",
+  "commit" : "22ffcef8ea5eaf88bcd602f044af74a2ebe56fca",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    "Sources/voicevox_common/Exported.swift:4:19: error: unable to resolve module dependency: 'voicevox_core'",
+    "Sources/voicevox_common/Exported.swift:4:19: error: Unable to resolve module dependency: 'voicevox_core'"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:44:40Z",
+  "scheme" : "VOICEVOX",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

@@ -79,14 +79,22 @@
           "status" : "supported"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "predates visionOS; symbols unguarded but untested"
+              "file" : "Sources/MapboxSpeech/MapboxSpeech.swift",
+              "kind" : "symbol",
+              "line" : 78,
+              "note" : "Mapbox Voice API client",
+              "permalink" : "https://github.com/mapbox/mapbox-speech-swift/blob/v2.1.1/Sources/MapboxSpeech/MapboxSpeech.swift#L78",
+              "symbol" : "SpeechSynthesizer"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme MapboxSpeech"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.65,
@@ -294,14 +302,21 @@
           "status" : "unknown"
         },
         "visionOS" : {
-          "confidence" : 0.2,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "file" : "Sources/SwiftEdgeTTS/EdgeTTSClient.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/herrkaefer/swiftedgetts/blob/v1.3.0/Sources/SwiftEdgeTTS/EdgeTTSClient.swift#L4",
+              "symbol" : "EdgeTTSClient"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme SwiftEdgeTTS"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.2,
@@ -394,14 +409,21 @@
           "status" : "unknown"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "file" : "Sources/SwiftTTS/SwiftTTS.swift",
+              "kind" : "symbol",
+              "line" : 7,
+              "permalink" : "https://github.com/renaudjenny/swift-tts/blob/2.1.2/Sources/SwiftTTS/SwiftTTS.swift#L7",
+              "symbol" : "SwiftTTS"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme SwiftTTS"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.25,
@@ -419,6 +441,113 @@
       ],
       "slug" : "swift-tts",
       "version" : "2.1.2"
+    },
+    {
+      "commit" : "fcbd04daa1bfebe881932f630af2ba6ce9af3274",
+      "notes" : "On-device TTS over MLX (Apple silicon). Semantic tie is via generation types — main API surface is model-specific, hence modest confidence.",
+      "package" : "https://github.com/blaizzy/mlx-audio-swift",
+      "packageName" : "MLXAudio",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/MLXAudioCore/Generation/GenerationTypes.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "TTS generation pipeline types (Kokoro/Orpheus models)",
+              "permalink" : "https://github.com/blaizzy/mlx-audio-swift/blob/v0.1.2/Sources/MLXAudioCore/Generation/GenerationTypes.swift#L14",
+              "symbol" : "AudioGenerationInfo"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 17"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "MLX is Apple-silicon-only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "MLX requires Apple-silicon GPU paths; Catalyst unverified"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/MLXAudioCore/Generation/GenerationTypes.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "TTS generation pipeline types (Kokoro/Orpheus models)",
+              "permalink" : "https://github.com/blaizzy/mlx-audio-swift/blob/v0.1.2/Sources/MLXAudioCore/Generation/GenerationTypes.swift#L14",
+              "symbol" : "AudioGenerationInfo"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 14"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "tvOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/MLXAudioCore/Generation/GenerationTypes.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "TTS generation pipeline types (Kokoro/Orpheus models)",
+              "permalink" : "https://github.com/blaizzy/mlx-audio-swift/blob/v0.1.2/Sources/MLXAudioCore/Generation/GenerationTypes.swift#L14",
+              "symbol" : "AudioGenerationInfo"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme MLXAudio"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "watchOS absent from manifest floors"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "mlx-audio-swift",
+      "version" : "v0.1.2"
     },
     {
       "commit" : "22ffcef8ea5eaf88bcd602f044af74a2ebe56fca",
@@ -494,14 +623,14 @@
           "status" : "unknown"
         },
         "visionOS" : {
-          "confidence" : 0.2,
+          "confidence" : 0.8,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "kind" : "buildVerdict",
+              "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/voicevox_common/Exported.swift:4:19: error: unable to resolve module dependency: 'voicevox_core' — the same commit builds for iOS, so the fence is real"
             }
           ],
-          "status" : "unknown"
+          "status" : "unsupported"
         },
         "watchOS" : {
           "confidence" : 0.2,
@@ -519,105 +648,6 @@
       ],
       "slug" : "voicevox-client",
       "version" : "1.2.2"
-    },
-    {
-      "commit" : "fcbd04daa1bfebe881932f630af2ba6ce9af3274",
-      "notes" : "On-device TTS over MLX (Apple silicon). Semantic tie is via generation types — main API surface is model-specific, hence modest confidence.",
-      "package" : "https://github.com/blaizzy/mlx-audio-swift",
-      "packageName" : "MLXAudio",
-      "platforms" : {
-        "iOS" : {
-          "confidence" : 0.65,
-          "evidence" : [
-            {
-              "file" : "Sources/MLXAudioCore/Generation/GenerationTypes.swift",
-              "kind" : "symbol",
-              "line" : 14,
-              "note" : "TTS generation pipeline types (Kokoro/Orpheus models)",
-              "permalink" : "https://github.com/blaizzy/mlx-audio-swift/blob/v0.1.2/Sources/MLXAudioCore/Generation/GenerationTypes.swift#L14",
-              "symbol" : "AudioGenerationInfo"
-            },
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "manifest declares iOS 17"
-            }
-          ],
-          "status" : "supported"
-        },
-        "linux" : {
-          "confidence" : 0.1,
-          "evidence" : [
-            {
-              "kind" : "readme",
-              "note" : "MLX is Apple-silicon-only"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "macCatalyst" : {
-          "confidence" : 0.25,
-          "evidence" : [
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "MLX requires Apple-silicon GPU paths; Catalyst unverified"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "macOS" : {
-          "confidence" : 0.65,
-          "evidence" : [
-            {
-              "file" : "Sources/MLXAudioCore/Generation/GenerationTypes.swift",
-              "kind" : "symbol",
-              "line" : 14,
-              "note" : "TTS generation pipeline types (Kokoro/Orpheus models)",
-              "permalink" : "https://github.com/blaizzy/mlx-audio-swift/blob/v0.1.2/Sources/MLXAudioCore/Generation/GenerationTypes.swift#L14",
-              "symbol" : "AudioGenerationInfo"
-            },
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "manifest declares macOS 14"
-            }
-          ],
-          "status" : "supported"
-        },
-        "tvOS" : {
-          "confidence" : 0.2,
-          "evidence" : [
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "tvOS absent from manifest floors"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "visionOS" : {
-          "confidence" : 0.25,
-          "evidence" : [
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "watchOS" : {
-          "confidence" : 0.2,
-          "evidence" : [
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "watchOS absent from manifest floors"
-            }
-          ],
-          "status" : "unknown"
-        }
-      },
-      "requiresCompanion" : [
-
-      ],
-      "slug" : "mlx-audio-swift",
-      "version" : "v0.1.2"
     }
   ]
 }

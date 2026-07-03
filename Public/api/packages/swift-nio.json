@@ -15,6 +15,7 @@
       ],
       "canonicalURL" : "https://github.com/apple/swift-nio",
       "commit" : "cd3e1152083706d77b223fb29110e590efcc70c0",
+      "firstParty" : false,
       "name" : "SwiftNIO",
       "surfaceDigest" : "fnv1a64:9d214699c82fc4a4",
       "version" : "2.101.2"

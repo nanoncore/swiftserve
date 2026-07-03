@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/markbattistella/audiomanager",
+  "commit" : "d93afd7a48885f9a92bbe7c0eb6b692afbafce66",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:33:55Z",
+  "scheme" : "AudioManager",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

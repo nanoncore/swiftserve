@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/audiokit/waveform",
+  "commit" : "357de1945a36e62a27f74a9b3b8f5e45904659d9",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:36:13Z",
+  "scheme" : "Waveform",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

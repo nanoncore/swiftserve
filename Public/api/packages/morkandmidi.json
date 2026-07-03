@@ -4,7 +4,7 @@
       "id" : "midi.io",
       "label" : "MIDI input/output"
     },
-    "labeledAt" : "2026-07-02T15:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Lightweight CoreMIDI wrapper: discovery, connections, MIDI 1/2 parsing.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/bradhowes/morkandmidi",
       "commit" : "07cdd56620f6948a9e30aa3519b30268daea4b6f",
+      "firstParty" : false,
       "name" : "MorkAndMIDI",
       "surfaceDigest" : "fnv1a64:83f2db859805cb3d",
       "version" : "5.1.0"
@@ -119,20 +120,30 @@
         "status" : "unknown"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Sources/MorkAndMIDI/MIDI.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : "CoreMIDI connection manager",
+            "package" : null,
+            "symbol" : "MIDI"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme MorkAndMIDI",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.2,

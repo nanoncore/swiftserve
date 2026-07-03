@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/bradhowes/morkandmidi",
+  "commit" : "07cdd56620f6948a9e30aa3519b30268daea4b6f",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:25:07Z",
+  "scheme" : "MorkAndMIDI",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/audiokit/soulaudiokit",
+  "commit" : "e0334228042814216ff12b81499f911632440104",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:36:21Z",
+  "scheme" : "SoulAudioKit",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

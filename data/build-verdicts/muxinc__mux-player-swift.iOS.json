@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/muxinc/mux-player-swift",
+  "commit" : "974bb44689a8b3bc541eb082728c1317f65af197",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:35:29Z",
+  "scheme" : "MuxPlayerSwift",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

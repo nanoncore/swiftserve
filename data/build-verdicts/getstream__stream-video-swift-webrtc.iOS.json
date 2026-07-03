@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/getstream/stream-video-swift-webrtc",
+  "commit" : "fd9610ccf90332b2bc80f61b1e76cf1b25c25227",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:43:02Z",
+  "scheme" : "StreamWebRTC",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/mapbox/mapbox-speech-swift",
+  "commit" : "a9ef284deae227c6111c27a3535098c1e9a9d8e3",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:45:57Z",
+  "scheme" : "MapboxSpeech",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

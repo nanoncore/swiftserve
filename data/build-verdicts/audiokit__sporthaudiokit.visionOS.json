@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/audiokit/sporthaudiokit",
+  "commit" : "638c95036430ce23ba2810101de319ed31f481bb",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    ".dd/SourcePackages/checkouts/AudioKit/Sources/AudioKit/Audio Files/Format Converter/FormatConverter+Compressed.swift:223:33: error: 'tracks(withMediaType:)' is unavailable in visionOS"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:42:48Z",
+  "scheme" : "SporthAudioKit",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

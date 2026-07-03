@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/audiokit/soulaudiokit",
+  "commit" : "e0334228042814216ff12b81499f911632440104",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    ".dd/SourcePackages/checkouts/AudioKit/Sources/AudioKit/Audio Files/Format Converter/FormatConverter+Compressed.swift:223:33: error: 'tracks(withMediaType:)' is unavailable in visionOS"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:24:14Z",
+  "scheme" : "SoulAudioKit",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

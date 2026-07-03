@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/livekit/swift-krisp-noise-filter",
+  "commit" : "c12a41f2afc95ee67994faf2ea7c87cde6d65cc6",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:43:54Z",
+  "scheme" : "LiveKitKrispNoiseFilter",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

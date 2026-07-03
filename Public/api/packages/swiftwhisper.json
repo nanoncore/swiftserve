@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/exphat/swiftwhisper",
       "commit" : "a192004db08de7c6eaa169eede77f1625e7d23fb",
+      "firstParty" : false,
       "name" : "SwiftWhisper",
       "surfaceDigest" : "fnv1a64:f9cde65626da4e40",
       "version" : "1.2.0"

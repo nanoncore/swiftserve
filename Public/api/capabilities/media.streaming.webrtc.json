@@ -195,14 +195,14 @@
           "status" : "unknown"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors (iOS-only manifest)"
+              "kind" : "buildVerdict",
+              "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/artifacts/stream-video-swift-webrtc/StreamWebRTC/StreamWebRTC.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd — the same commit builds for iOS, so the fence is real"
             }
           ],
-          "status" : "unknown"
+          "status" : "unsupported"
         },
         "watchOS" : {
           "confidence" : 0.25,
@@ -278,14 +278,14 @@
           "status" : "unknown"
         },
         "visionOS" : {
-          "confidence" : 0.15,
+          "confidence" : 0.8,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "binary-only"
+              "kind" : "buildVerdict",
+              "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/artifacts/stasel__webrtc/WebRTC/WebRTC.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd/SourcePackages/artifac — the same commit builds for iOS, so the fence is real"
             }
           ],
-          "status" : "unknown"
+          "status" : "unsupported"
         },
         "watchOS" : {
           "confidence" : 0.15,

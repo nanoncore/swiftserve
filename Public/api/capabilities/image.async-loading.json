@@ -8,6 +8,133 @@
   "label" : "Async image loading",
   "packages" : [
     {
+      "commit" : "ac632bd26a1c00f139ff62fd01806f21cf67325e",
+      "notes" : "The de-facto standard for remote images: download, cache, set — one line.",
+      "package" : "https://github.com/onevcat/kingfisher",
+      "packageName" : "Kingfisher",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/General/KingfisherManager.swift",
+              "kind" : "symbol",
+              "line" : 138,
+              "note" : "download + cache orchestration",
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/General/KingfisherManager.swift#L138",
+              "symbol" : "KingfisherManager"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares iOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "kind" : "readme",
+              "note" : "Apple imaging stacks only"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/General/KingfisherManager.swift",
+              "kind" : "symbol",
+              "line" : 138,
+              "note" : "download + cache orchestration",
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/General/KingfisherManager.swift#L138",
+              "symbol" : "KingfisherManager"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/General/KingfisherManager.swift",
+              "kind" : "symbol",
+              "line" : 138,
+              "note" : "download + cache orchestration",
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/General/KingfisherManager.swift#L138",
+              "symbol" : "KingfisherManager"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares macOS 10.15"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/General/KingfisherManager.swift",
+              "kind" : "symbol",
+              "line" : 138,
+              "note" : "download + cache orchestration",
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/General/KingfisherManager.swift#L138",
+              "symbol" : "KingfisherManager"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares tvOS 13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/General/KingfisherManager.swift",
+              "kind" : "symbol",
+              "line" : 138,
+              "note" : "download + cache orchestration",
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/General/KingfisherManager.swift#L138",
+              "symbol" : "KingfisherManager"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme Kingfisher"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/General/KingfisherManager.swift",
+              "kind" : "symbol",
+              "line" : 138,
+              "note" : "download + cache orchestration",
+              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/General/KingfisherManager.swift#L138",
+              "symbol" : "KingfisherManager"
+            },
+            {
+              "kind" : "manifestPlatforms",
+              "note" : "manifest declares watchOS 6"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "kingfisher",
+      "version" : "8.10.0"
+    },
+    {
       "commit" : "63a8fcbd6621340a2410bc3e9575ac97058615f4",
       "notes" : "Performance-first image pipeline with coalescing, priorities, resumable downloads.",
       "package" : "https://github.com/kean/nuke",
@@ -135,125 +262,6 @@
       "version" : "13.0.6"
     },
     {
-      "commit" : "ac632bd26a1c00f139ff62fd01806f21cf67325e",
-      "notes" : "The de-facto standard for remote images: download, cache, set — one line.",
-      "package" : "https://github.com/onevcat/kingfisher",
-      "packageName" : "Kingfisher",
-      "platforms" : {
-        "iOS" : {
-          "confidence" : 0.9,
-          "evidence" : [
-            {
-              "file" : "Sources/General/KingfisherManager.swift",
-              "kind" : "symbol",
-              "line" : 138,
-              "note" : "download + cache orchestration",
-              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/General/KingfisherManager.swift#L138",
-              "symbol" : "KingfisherManager"
-            },
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "manifest declares iOS 13"
-            }
-          ],
-          "status" : "supported"
-        },
-        "linux" : {
-          "confidence" : 0.1,
-          "evidence" : [
-            {
-              "kind" : "readme",
-              "note" : "Apple imaging stacks only"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "macCatalyst" : {
-          "confidence" : 0.8,
-          "evidence" : [
-            {
-              "file" : "Sources/General/KingfisherManager.swift",
-              "kind" : "symbol",
-              "line" : 138,
-              "note" : "download + cache orchestration",
-              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/General/KingfisherManager.swift#L138",
-              "symbol" : "KingfisherManager"
-            }
-          ],
-          "status" : "supported"
-        },
-        "macOS" : {
-          "confidence" : 0.9,
-          "evidence" : [
-            {
-              "file" : "Sources/General/KingfisherManager.swift",
-              "kind" : "symbol",
-              "line" : 138,
-              "note" : "download + cache orchestration",
-              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/General/KingfisherManager.swift#L138",
-              "symbol" : "KingfisherManager"
-            },
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "manifest declares macOS 10.15"
-            }
-          ],
-          "status" : "supported"
-        },
-        "tvOS" : {
-          "confidence" : 0.85,
-          "evidence" : [
-            {
-              "file" : "Sources/General/KingfisherManager.swift",
-              "kind" : "symbol",
-              "line" : 138,
-              "note" : "download + cache orchestration",
-              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/General/KingfisherManager.swift#L138",
-              "symbol" : "KingfisherManager"
-            },
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "manifest declares tvOS 13"
-            }
-          ],
-          "status" : "supported"
-        },
-        "visionOS" : {
-          "confidence" : 0.3,
-          "evidence" : [
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors at this tag"
-            }
-          ],
-          "status" : "unknown"
-        },
-        "watchOS" : {
-          "confidence" : 0.85,
-          "evidence" : [
-            {
-              "file" : "Sources/General/KingfisherManager.swift",
-              "kind" : "symbol",
-              "line" : 138,
-              "note" : "download + cache orchestration",
-              "permalink" : "https://github.com/onevcat/kingfisher/blob/8.10.0/Sources/General/KingfisherManager.swift#L138",
-              "symbol" : "KingfisherManager"
-            },
-            {
-              "kind" : "manifestPlatforms",
-              "note" : "manifest declares watchOS 6"
-            }
-          ],
-          "status" : "supported"
-        }
-      },
-      "requiresCompanion" : [
-
-      ],
-      "slug" : "kingfisher",
-      "version" : "8.10.0"
-    },
-    {
       "commit" : "0e331457ca9af2f0b08bcaa138a91ffb907b004f",
       "notes" : "WebImage — SwiftUI view with SDWebImage's loading + caching underneath.",
       "package" : "https://github.com/sdwebimage/sdwebimageswiftui",
@@ -334,14 +342,22 @@
           "status" : "supported"
         },
         "visionOS" : {
-          "confidence" : 0.3,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "file" : "SDWebImageSwiftUI/Classes/WebImage.swift",
+              "kind" : "symbol",
+              "line" : 82,
+              "note" : "SwiftUI async image view over SDWebImage",
+              "permalink" : "https://github.com/sdwebimage/sdwebimageswiftui/blob/3.1.4/SDWebImageSwiftUI/Classes/WebImage.swift#L82",
+              "symbol" : "WebImage"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme SDWebImageSwiftUI"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.75,

@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/blaizzy/mlx-audio-swift",
+  "commit" : "fcbd04daa1bfebe881932f630af2ba6ce9af3274",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:44:39Z",
+  "scheme" : "MLXAudio",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

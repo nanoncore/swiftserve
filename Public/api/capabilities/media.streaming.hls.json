@@ -8,6 +8,111 @@
   "label" : "HLS streaming",
   "packages" : [
     {
+      "commit" : "17F113",
+      "notes" : "HLS is native to AVPlayer via AVURLAsset on an m3u8 URL — no package needed for playback.",
+      "package" : "https://developer.apple.com/documentation/avfoundation",
+      "packageName" : "AVFoundation",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+              "kind" : "symbol",
+              "line" : 3775,
+              "permalink" : "https://developer.apple.com/documentation/avfoundation/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json#L3775",
+              "symbol" : "AVURLAsset"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+              "kind" : "availability",
+              "line" : 3775,
+              "permalink" : "https://developer.apple.com/documentation/avfoundation/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json#L3775",
+              "symbol" : "AVURLAsset"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+              "kind" : "symbol",
+              "line" : 3775,
+              "permalink" : "https://developer.apple.com/documentation/avfoundation/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json#L3775",
+              "symbol" : "AVURLAsset"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+              "kind" : "symbol",
+              "line" : 3775,
+              "permalink" : "https://developer.apple.com/documentation/avfoundation/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json#L3775",
+              "symbol" : "AVURLAsset"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+              "kind" : "symbol",
+              "line" : 3775,
+              "permalink" : "https://developer.apple.com/documentation/avfoundation/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json#L3775",
+              "symbol" : "AVURLAsset"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+              "kind" : "symbol",
+              "line" : 3775,
+              "note" : "visionOS 1.0+",
+              "permalink" : "https://developer.apple.com/documentation/avfoundation/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json#L3775",
+              "symbol" : "AVURLAsset"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json",
+              "kind" : "symbol",
+              "line" : 3775,
+              "permalink" : "https://developer.apple.com/documentation/avfoundation/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/AVFoundation.symbols.json#L3775",
+              "symbol" : "AVURLAsset"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "avfoundation",
+      "version" : "Xcode 26.6"
+    },
+    {
       "commit" : "36e481e70ca02b18828ba02a512d0e621f629d5d",
       "notes" : "HLS toolkit: parse/build master + media playlists, live subtitles, VOD/live workflows.",
       "package" : "https://github.com/atelier-socle/swift-hls-kit",
@@ -223,14 +328,22 @@
           "status" : "supported"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors (predates it)"
+              "file" : "Sources/Parsing/MasterPlaylistParser.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "note" : "M3U8 master playlist parser",
+              "permalink" : "https://github.com/fcanas/hlscore/blob/0.2.1/Sources/Parsing/MasterPlaylistParser.swift#L28",
+              "symbol" : "parseMasterPlaylist"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme HLSCore"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.25,
@@ -318,14 +431,22 @@
           "status" : "unknown"
         },
         "visionOS" : {
-          "confidence" : 0.25,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "visionOS absent from manifest floors"
+              "file" : "Source/HLSVideoCache.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "local proxy that caches HLS segments",
+              "permalink" : "https://github.com/garynewby/hlsvideocache/blob/1.0.0/Source/HLSVideoCache.swift#L22",
+              "symbol" : "HLSVideoCache"
+            },
+            {
+              "kind" : "buildVerdict",
+              "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme HLSVideoCache"
             }
           ],
-          "status" : "unknown"
+          "status" : "supported"
         },
         "watchOS" : {
           "confidence" : 0.2,

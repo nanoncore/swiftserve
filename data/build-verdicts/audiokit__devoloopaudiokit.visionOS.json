@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/audiokit/devoloopaudiokit",
+  "commit" : "3dfb80b2ee280c5edb19b2e4e340142521fcafdf",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:23:55Z",
+  "scheme" : "DevoloopAudioKit",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

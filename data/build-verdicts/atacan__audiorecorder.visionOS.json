@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/atacan/audiorecorder",
+  "commit" : "fade972c21f3665fdbfa3f0525ef0961b3e56566",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:23:53Z",
+  "scheme" : "AudioRecorder",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

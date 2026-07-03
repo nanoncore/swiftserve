@@ -4,7 +4,7 @@
       "id" : "video.capture",
       "label" : "Camera capture"
     },
-    "labeledAt" : "2026-07-02T14:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Camera capture, movie recording, and video processing utilities. The Camera class is explicitly marked unavailable on tvOS — no cameras on Apple TV.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/metalpetal/videoio",
       "commit" : "22f7c00083b7e16c7e15ace1adcdb90fb5ffe006",
+      "firstParty" : false,
       "name" : "VideoIO",
       "surfaceDigest" : "fnv1a64:e598b7f0a667c7b0",
       "version" : "2.3.1"
@@ -119,20 +120,20 @@
         "status" : "unsupported"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/VideoIO/Camera+FocusExposure.swift:16:101: error: 'FocusMode' is unavailable in visionOS — the same commit builds for iOS, so the fence is real",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "unsupported"
       },
       "watchOS" : {
         "confidence" : 0.2,

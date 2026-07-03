@@ -1,0 +1,16 @@
+{
+  "canonicalURL" : "https://github.com/fluidinference/fluidaudio",
+  "commit" : "b9d43724cbdb5a980e441fd54180964e94d470f7",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    "Sources/FluidAudio/TTS/PocketTTS/Pipeline/PocketTtsModelStore.swift:91:17: error: 'loadStatePipeline(languageRoot:)' is only available in visionOS 2.0 or newer",
+    "Sources/FluidAudio/TTS/PocketTTS/Pipeline/PocketTtsSession.swift:267:23: error: 'generateChunkStateful(text:isMidSentence:chunkIndex:chunkCount:utteranceIndex:)' is only available in visionOS 2.0 or newer"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:25:23Z",
+  "scheme" : "FluidAudio",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

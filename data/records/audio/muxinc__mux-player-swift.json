@@ -4,7 +4,7 @@
       "id" : "video.playback",
       "label" : "Video playback"
     },
-    "labeledAt" : "2026-07-02T15:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Mux video player over AVPlayerViewController/AVPlayerLayer.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/muxinc/mux-player-swift",
       "commit" : "974bb44689a8b3bc541eb082728c1317f65af197",
+      "firstParty" : false,
       "name" : "MuxPlayerSwift",
       "surfaceDigest" : "fnv1a64:0671fd884e491880",
       "version" : "v1.7.0"
@@ -109,20 +110,20 @@
         "status" : "unknown"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors; no source fence",
+            "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/MuxPlayerSwift/Lifecycle/MuxPlayerContext.swift:61:35: error: 'monitorAVPlayerLayer(_:withPlayerName:customerData:automaticErrorTracking:)' is unavailable in visionOS — the same commit builds for iOS, so the fence is real",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "unsupported"
       },
       "watchOS" : {
         "confidence" : 0.25,

@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="349.6" height="20" role="img" aria-label="MP3 encoding/decoding platform support — SwiftServe">
+<svg xmlns="http://www.w3.org/2000/svg" width="353.6" height="20" role="img" aria-label="MP3 encoding/decoding platform support — SwiftServe">
   <title>MP3 encoding/decoding — verified by SwiftServe</title>
-  <clipPath id="r"><rect width="349.6" height="20" rx="4"/></clipPath>
+  <clipPath id="r"><rect width="353.6" height="20" rx="4"/></clipPath>
   <g clip-path="url(#r)">
     <rect width="161.2" height="20" fill="#2c2724"/>
     <g transform="translate(5.0,3.0) scale(0.6)">
@@ -13,9 +13,9 @@
 <text x="176.1" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">iOS</text><rect x="191.0" width="34.6" height="20" fill="#5fb37a"/>
 <text x="208.3" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">mac</text><rect x="225.6" width="24.0" height="20" fill="#a49a8f"/>
 <text x="237.6" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="249.6" width="24.0" height="20" fill="#a49a8f"/>
-<text x="261.6" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="273.6" width="24.0" height="20" fill="#a49a8f"/>
-<text x="285.6" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="297.6" width="24.0" height="20" fill="#a49a8f"/>
-<text x="309.6" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="321.6" width="28.0" height="20" fill="#5fb37a"/>
-<text x="335.6" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">cat</text>
+<text x="261.6" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="273.6" width="28.0" height="20" fill="#5fb37a"/>
+<text x="287.6" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">vis</text><rect x="301.6" width="24.0" height="20" fill="#a49a8f"/>
+<text x="313.6" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="325.6" width="28.0" height="20" fill="#5fb37a"/>
+<text x="339.6" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">cat</text>
   </g>
 </svg>

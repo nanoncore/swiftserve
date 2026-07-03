@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/onevcat/kingfisher",
+  "commit" : "ac632bd26a1c00f139ff62fd01806f21cf67325e",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:28:10Z",
+  "scheme" : "Kingfisher",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

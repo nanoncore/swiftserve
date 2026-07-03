@@ -1,0 +1,16 @@
+{
+  "canonicalURL" : "https://github.com/piemonte/player",
+  "commit" : "df1e48f95d26b3ee0a861037052e836ea63cbd8c",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    "Sources/Player.swift:236:26: error: 'tracks(withMediaType:)' is unavailable in visionOS",
+    "Sources/Player.swift:329:49: error: 'tracks(withMediaType:)' is unavailable in visionOS"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:26:19Z",
+  "scheme" : "Player",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

@@ -4,7 +4,7 @@
       "id" : "media.streaming.webrtc",
       "label" : "WebRTC real-time streaming"
     },
-    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "WebRTC transport via the stream-video-swift-webrtc binary companion.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/getstream/stream-video-swift",
       "commit" : "eab7c4eb73b9f242af6a1991cbb21413ba3cc6a0",
+      "firstParty" : false,
       "name" : "StreamVideo",
       "surfaceDigest" : "fnv1a64:3483aca7e627b067",
       "version" : "1.48.0"
@@ -109,20 +110,20 @@
         "status" : "unknown"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors (iOS-only manifest)",
+            "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/artifacts/stream-video-swift-webrtc/StreamWebRTC/StreamWebRTC.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd — the same commit builds for iOS, so the fence is real",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "unsupported"
       },
       "watchOS" : {
         "confidence" : 0.25,
@@ -151,7 +152,7 @@
       "id" : "video.calling",
       "label" : "Video calling"
     },
-    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Stream's video-calling SDK over a bundled WebRTC binary.",
     "package" : {
@@ -160,6 +161,7 @@
       ],
       "canonicalURL" : "https://github.com/getstream/stream-video-swift",
       "commit" : "eab7c4eb73b9f242af6a1991cbb21413ba3cc6a0",
+      "firstParty" : false,
       "name" : "StreamVideo",
       "surfaceDigest" : "fnv1a64:3483aca7e627b067",
       "version" : "1.48.0"
@@ -266,20 +268,20 @@
         "status" : "unknown"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors (iOS-only manifest)",
+            "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/artifacts/stream-video-swift-webrtc/StreamWebRTC/StreamWebRTC.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd — the same commit builds for iOS, so the fence is real",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "unsupported"
       },
       "watchOS" : {
         "confidence" : 0.25,
@@ -308,7 +310,7 @@
       "id" : "video.screen-sharing",
       "label" : "Screen sharing"
     },
-    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "In-call screen sharing (in-app and broadcast-extension modes).",
     "package" : {
@@ -317,6 +319,7 @@
       ],
       "canonicalURL" : "https://github.com/getstream/stream-video-swift",
       "commit" : "eab7c4eb73b9f242af6a1991cbb21413ba3cc6a0",
+      "firstParty" : false,
       "name" : "StreamVideo",
       "surfaceDigest" : "fnv1a64:3483aca7e627b067",
       "version" : "1.48.0"
@@ -423,20 +426,20 @@
         "status" : "unknown"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors (iOS-only manifest)",
+            "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/artifacts/stream-video-swift-webrtc/StreamWebRTC/StreamWebRTC.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd — the same commit builds for iOS, so the fence is real",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "unsupported"
       },
       "watchOS" : {
         "confidence" : 0.25,
@@ -465,7 +468,7 @@
       "id" : "voice.calling",
       "label" : "Voice calling"
     },
-    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Audio-only calls ride the same Call machinery + CallKit.",
     "package" : {
@@ -474,6 +477,7 @@
       ],
       "canonicalURL" : "https://github.com/getstream/stream-video-swift",
       "commit" : "eab7c4eb73b9f242af6a1991cbb21413ba3cc6a0",
+      "firstParty" : false,
       "name" : "StreamVideo",
       "surfaceDigest" : "fnv1a64:3483aca7e627b067",
       "version" : "1.48.0"
@@ -580,20 +584,20 @@
         "status" : "unknown"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors (iOS-only manifest)",
+            "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/artifacts/stream-video-swift-webrtc/StreamWebRTC/StreamWebRTC.xcframework:1:1: error: While building for visionOS, no library for this platform was found in '.dd — the same commit builds for iOS, so the fence is real",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "unsupported"
       },
       "watchOS" : {
         "confidence" : 0.25,

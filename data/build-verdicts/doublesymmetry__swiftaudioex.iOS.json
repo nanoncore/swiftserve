@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/doublesymmetry/swiftaudioex",
+  "commit" : "7b506bebabd68b542256c0e1e55519fab5f4c092",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:36:32Z",
+  "scheme" : "SwiftAudioEx",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

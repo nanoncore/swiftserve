@@ -1,0 +1,16 @@
+{
+  "canonicalURL" : "https://github.com/muxinc/mux-player-swift",
+  "commit" : "974bb44689a8b3bc541eb082728c1317f65af197",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    "Sources/MuxPlayerSwift/Lifecycle/MuxPlayerContext.swift:61:35: error: 'monitorAVPlayerLayer(_:withPlayerName:customerData:automaticErrorTracking:)' is unavailable in visionOS",
+    "Sources/MuxPlayerSwift/Monitoring/Monitor.swift:34:21: error: 'monitorAVPlayerLayer(_:withPlayerName:customerData:automaticErrorTracking:)' is unavailable in visionOS"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:26:10Z",
+  "scheme" : "MuxPlayerSwift",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

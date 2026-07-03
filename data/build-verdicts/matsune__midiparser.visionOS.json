@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/matsune/midiparser",
+  "commit" : "a8b0a071781a4f99837b2b621f651b1a1b9d4d8e",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    "xcodebuild -list found no schemes"
+  ],
+  "outcome" : "inconclusive",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:43:33Z",
+  "scheme" : "",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

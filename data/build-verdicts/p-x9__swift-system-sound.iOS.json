@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/p-x9/swift-system-sound",
+  "commit" : "e3f44c2d5766b0a7c3cdaacd4d61b5e1c8804794",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:45:20Z",
+  "scheme" : "SystemSound",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

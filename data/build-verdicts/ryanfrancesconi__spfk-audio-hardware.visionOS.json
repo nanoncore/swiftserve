@@ -1,0 +1,16 @@
+{
+  "canonicalURL" : "https://github.com/ryanfrancesconi/spfk-audio-hardware",
+  "commit" : "ebe07274a6cd4c77f390b2726b9ebfd85ea5cf13",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    "Sources/SPFKAudioHardware/Public/Definitions/TransportType.swift:5:8: error: unable to resolve module dependency: 'IOKit'",
+    "Sources/SPFKAudioHardware/Public/Definitions/TransportType.swift:5:8: error: Unable to resolve module dependency: 'IOKit'"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:26:08Z",
+  "scheme" : "spfk-audio-hardware",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

@@ -4,7 +4,7 @@
       "id" : "media.streaming.hls",
       "label" : "HLS streaming"
     },
-    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Segment-level HLS caching through a local reverse proxy.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/garynewby/hlsvideocache",
       "commit" : "41291ed4f88aecd8e9dc885693f908ea58888257",
+      "firstParty" : false,
       "name" : "HLSVideoCache",
       "surfaceDigest" : "fnv1a64:ca32f0c1f35d2278",
       "version" : "1.0.0"
@@ -109,20 +110,30 @@
         "status" : "unknown"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Source/HLSVideoCache.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : "local proxy that caches HLS segments",
+            "package" : null,
+            "symbol" : "HLSVideoCache"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme HLSVideoCache",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.2,

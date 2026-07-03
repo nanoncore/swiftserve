@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/matsune/midiparser",
       "commit" : "a8b0a071781a4f99837b2b621f651b1a1b9d4d8e",
+      "firstParty" : false,
       "name" : "MidiParser",
       "surfaceDigest" : "fnv1a64:684dd8ee7d1f2fb0",
       "version" : "0.2"

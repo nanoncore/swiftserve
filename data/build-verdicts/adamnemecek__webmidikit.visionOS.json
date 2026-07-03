@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/adamnemecek/webmidikit",
+  "commit" : "b40e74e47f34ecba4c4e7c60f9c56f2e208b0031",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    "xcodebuild -list found no schemes"
+  ],
+  "outcome" : "inconclusive",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:41:47Z",
+  "scheme" : "",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

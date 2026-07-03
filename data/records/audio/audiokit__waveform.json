@@ -4,7 +4,7 @@
       "id" : "audio.waveform-visualization",
       "label" : "Waveform visualization"
     },
-    "labeledAt" : "2026-07-02T17:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "GPU (Metal) waveform rendering. Implemented as an os(macOS)/!os(macOS) split pair of same-named types — each platform claim anchors its own side.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/audiokit/waveform",
       "commit" : "357de1945a36e62a27f74a9b3b8f5e45904659d9",
+      "firstParty" : false,
       "name" : "AudioKit Waveform",
       "surfaceDigest" : "fnv1a64:cacbaf79f75fc06f",
       "version" : "1.0.3"
@@ -119,20 +120,30 @@
         "status" : "unknown"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "!os(macOS)",
+            "file" : "Sources/Waveform/Waveform.swift",
+            "kind" : "symbol",
+            "line" : 68,
+            "note" : "the !os(macOS) side of the split pair",
+            "package" : null,
+            "symbol" : "Waveform"
+          },
           {
             "availability" : null,
             "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme Waveform",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.2,

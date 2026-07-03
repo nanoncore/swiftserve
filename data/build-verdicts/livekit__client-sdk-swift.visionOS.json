@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/livekit/client-sdk-swift",
+  "commit" : "7f3af1488411a9787e1e94ddd66b0bed2057bed3",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:42:45Z",
+  "scheme" : "LiveKit",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

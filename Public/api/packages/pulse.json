@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/kean/pulse",
       "commit" : "94b92731d370c129bb771e9c18f69b0a44ccca5c",
+      "firstParty" : false,
       "name" : "Pulse",
       "surfaceDigest" : "fnv1a64:f71b138797654859",
       "version" : "5.2.3"

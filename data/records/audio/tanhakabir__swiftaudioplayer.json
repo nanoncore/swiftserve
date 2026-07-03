@@ -4,7 +4,7 @@
       "id" : "audio.streaming",
       "label" : "Audio streaming"
     },
-    "labeledAt" : "2026-07-02T16:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Streams + saves remote audio via AVAudioEngine, with EQ/effects while streaming.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/tanhakabir/swiftaudioplayer",
       "commit" : "2fdfc62ce9f5d8b818ee1b2a9ac061fce4f64af9",
+      "firstParty" : false,
       "name" : "SwiftAudioPlayer",
       "surfaceDigest" : "fnv1a64:87fa5a71ecf47a56",
       "version" : "7.6.0"
@@ -119,20 +120,30 @@
         "status" : "supported"
       },
       "visionOS" : {
-        "confidence" : 0.25,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Source/SAPlayer.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : "streams remote audio with real-time effects",
+            "package" : null,
+            "symbol" : "SAPlayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme SwiftAudioPlayer",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.2,

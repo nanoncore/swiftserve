@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/fulldecent/fdsoundactivatedrecorder",
+  "commit" : "997c7b6de74782ee478676b2bf9c2706438cb82c",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:35:46Z",
+  "scheme" : "FDSoundActivatedRecorder",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

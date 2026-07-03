@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/mkj-is/combinemidi",
+  "commit" : "c044ae3f65f14f27b2842908ef3eb550e2782bff",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:26:10Z",
+  "scheme" : "CombineMIDI",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

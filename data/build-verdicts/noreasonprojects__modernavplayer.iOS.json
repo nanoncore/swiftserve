@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/noreasonprojects/modernavplayer",
+  "commit" : "ab16588b7b8e297255e2d8a7407eb89506af265b",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:35:52Z",
+  "scheme" : "ModernAVPlayer",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

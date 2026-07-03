@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/stasel/webrtc",
+  "commit" : "ff4647dc67f00d037c199c69e1a1ee8ceda88236",
+  "destination" : "generic/platform=iOS",
+  "errorExcerpt" : [
+
+  ],
+  "outcome" : "built",
+  "platform" : "iOS",
+  "probedAt" : "2026-07-03T08:36:24Z",
+  "scheme" : "WebRTC",
+  "sdk" : "iPhoneOS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

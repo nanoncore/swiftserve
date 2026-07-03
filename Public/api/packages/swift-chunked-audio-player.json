@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/mihai8804858/swift-chunked-audio-player",
       "commit" : "7a46fa1bfb88c4b4ea47ee656e6b2abd1cd7fed8",
+      "firstParty" : false,
       "name" : "ChunkedAudioPlayer",
       "surfaceDigest" : "fnv1a64:fa637ad1655a3b39",
       "version" : "1.1.2"

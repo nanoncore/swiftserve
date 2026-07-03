@@ -1,0 +1,26 @@
+{
+  "canonicalURL" : "https://github.com/p-x9/swift-system-sound",
+  "commit" : "e3f44c2d5766b0a7c3cdaacd4d61b5e1c8804794",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    "Sources/SystemSound/SystemSoundKeys.swift:185:55: error: 'endCallToneCept' is only available in visionOS 26.0 or newer",
+    "Sources/SystemSound/SystemSoundKeys.swift:2957:55: error: 'liveTranslationStart' is only available in visionOS 26.0 or newer",
+    "Sources/SystemSound/SystemSoundKeys.swift:2958:55: error: 'liveTranslationStop' is only available in visionOS 26.0 or newer",
+    "Sources/SystemSound/SystemSoundKeys.swift:2959:55: error: 'dualBudLongPressFailure' is only available in visionOS 26.0 or newer",
+    "Sources/SystemSound/SystemSoundKeys.swift:5557:55: error: 'satelliteMessageSent' is only available in visionOS 26.0 or newer",
+    "Sources/SystemSound/SystemSoundKeys.swift:5848:28: error: 'photoShutter' is only available in visionOS 26.0 or newer",
+    "Sources/SystemSound/SystemSoundKeys.swift:5851:28: error: 'beginRecord' is only available in visionOS 26.0 or newer",
+    "Sources/SystemSound/SystemSoundKeys.swift:5854:28: error: 'endRecord' is only available in visionOS 26.0 or newer",
+    "Sources/SystemSound/SystemSoundKeys.swift:5857:28: error: 'nfcCardProvisioned' is only available in visionOS 2.0 or newer",
+    "Sources/SystemSound/SystemSoundKeys.swift:5860:28: error: 'nfcCardComplete' is only available in visionOS 2.0 or newer",
+    "Sources/SystemSound/SystemSoundKeys.swift:5863:28: error: 'nfcCardError' is only available in visionOS 2.0 or newer",
+    "Sources/SystemSound/SystemSoundKeys.swift:5866:28: error: 'headGesturesDoubleNod' is only available in visionOS 2.0 or newer"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:45:30Z",
+  "scheme" : "SystemSound",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

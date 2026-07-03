@@ -4,7 +4,7 @@
       "id" : "network.http-client",
       "label" : "HTTP client"
     },
-    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Type-safe abstraction over Alamofire: define API targets as enums.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/moya/moya",
       "commit" : "c263811c1f3dbf002be9bd83107f7cdc38992b26",
+      "firstParty" : false,
       "name" : "Moya",
       "surfaceDigest" : "fnv1a64:199fe44d9eeb63e3",
       "version" : "15.0.3"
@@ -119,20 +120,20 @@
         "status" : "supported"
       },
       "visionOS" : {
-        "confidence" : 0.3,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/checkouts/Alamofire/Source/Protected.swift:127:15: error: cannot find 'lock' in scope — the same commit builds for iOS, so the fence is real",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "unsupported"
       },
       "watchOS" : {
         "confidence" : 0.75,
@@ -161,7 +162,7 @@
       "id" : "network.request-mocking",
       "label" : "Request stubbing / mocking"
     },
-    "labeledAt" : "2026-07-02T18:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Built-in stubbing: every target carries sampleData; StubBehavior swaps the network out in tests.",
     "package" : {
@@ -170,6 +171,7 @@
       ],
       "canonicalURL" : "https://github.com/moya/moya",
       "commit" : "c263811c1f3dbf002be9bd83107f7cdc38992b26",
+      "firstParty" : false,
       "name" : "Moya",
       "surfaceDigest" : "fnv1a64:199fe44d9eeb63e3",
       "version" : "15.0.3"
@@ -256,20 +258,20 @@
         "status" : "supported"
       },
       "visionOS" : {
-        "confidence" : 0.3,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): .dd/SourcePackages/checkouts/Alamofire/Source/Protected.swift:127:15: error: cannot find 'lock' in scope — the same commit builds for iOS, so the fence is real",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "unsupported"
       },
       "watchOS" : {
         "confidence" : 0.8,

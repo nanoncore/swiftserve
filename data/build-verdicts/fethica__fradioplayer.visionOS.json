@@ -1,0 +1,15 @@
+{
+  "canonicalURL" : "https://github.com/fethica/fradioplayer",
+  "commit" : "243cd9246b79a186c39b3c53dbe725c8c01bab59",
+  "destination" : "generic/platform=visionOS",
+  "errorExcerpt" : [
+    "Sources/FRadioPlayer/FRadioPlayer.swift:301:21: error: 'allowsExternalPlayback' is unavailable in visionOS"
+  ],
+  "outcome" : "failed",
+  "platform" : "visionOS",
+  "probedAt" : "2026-07-03T08:26:19Z",
+  "scheme" : "FRadioPlayer",
+  "sdk" : "XROS26.5.sdk",
+  "toolchain" : "Xcode 26.6 (17F113)",
+  "verdictVersion" : 1
+}

@@ -83,14 +83,14 @@
           "status" : "unknown"
         },
         "visionOS" : {
-          "confidence" : 0.2,
+          "confidence" : 0.85,
           "evidence" : [
             {
-              "kind" : "manifestPlatforms",
-              "note" : "manifest declares iOS only"
+              "kind" : "buildVerdict",
+              "note" : "does not compile for visionOS (Xcode 26.6 (17F113), XROS26.5.sdk): Sources/SwiftAudioEx/AVPlayerWrapper/AVPlayerWrapper.swift:252:33: error: 'availableChapterLocales' is unavailable in visionOS — the same commit builds for iOS, so the fence is real"
             }
           ],
-          "status" : "unknown"
+          "status" : "unsupported"
         },
         "watchOS" : {
           "confidence" : 0.2,

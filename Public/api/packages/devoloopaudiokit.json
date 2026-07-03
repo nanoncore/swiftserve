@@ -4,7 +4,7 @@
       "id" : "audio.synthesis",
       "label" : "Audio synthesis / DSP"
     },
-    "labeledAt" : "2026-07-02T17:00:00Z",
+    "labeledAt" : "2026-07-03T11:30:00Z",
     "labeledBy" : "claude-code-session",
     "notes" : "Guitar-oriented DSP processors.",
     "package" : {
@@ -13,6 +13,7 @@
       ],
       "canonicalURL" : "https://github.com/audiokit/devoloopaudiokit",
       "commit" : "3dfb80b2ee280c5edb19b2e4e340142521fcafdf",
+      "firstParty" : false,
       "name" : "DevoloopAudioKit",
       "surfaceDigest" : "fnv1a64:5bf67af6a57f555a",
       "version" : "5.5.1"
@@ -179,20 +180,30 @@
         "status" : "supported"
       },
       "visionOS" : {
-        "confidence" : 0.2,
+        "confidence" : 0.85,
         "evidence" : [
           {
             "availability" : null,
             "condition" : null,
+            "file" : "Sources/DevoloopAudioKit/RhinoGuitarProcessor.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : "guitar amp/distortion",
+            "package" : null,
+            "symbol" : "RhinoGuitarProcessor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
             "file" : null,
-            "kind" : "manifestPlatforms",
+            "kind" : "buildVerdict",
             "line" : null,
-            "note" : "visionOS absent from manifest floors",
+            "note" : "compiles for visionOS — Xcode 26.6 (17F113), XROS26.5.sdk, scheme DevoloopAudioKit",
             "package" : null,
             "symbol" : null
           }
         ],
-        "status" : "unknown"
+        "status" : "supported"
       },
       "watchOS" : {
         "confidence" : 0.2,
