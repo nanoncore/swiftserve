@@ -17,12 +17,20 @@ jobs:
     runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
-      - name: Build universal binary
-        run: swift build -c release --product swiftserve --arch arm64 --arch x86_64
+      # One build per arch, lipo'd together: passing both --arch flags at once
+      # routes through the Xcode build system, where SwiftPM rejects deps that
+      # declare swiftLanguageVersions: [.v5] ("given: [5], supported: []").
+      - name: Build (arm64 + x86_64)
+        run: |
+          swift build -c release --product swiftserve --arch arm64
+          swift build -c release --product swiftserve --arch x86_64
       - name: Package
         run: |
           mkdir -p dist
-          cp .build/apple/Products/Release/swiftserve dist/
+          lipo -create \
+            .build/arm64-apple-macosx/release/swiftserve \
+            .build/x86_64-apple-macosx/release/swiftserve \
+            -output dist/swiftserve
           tar -czf "swiftserve-$GITHUB_REF_NAME-macos-universal.tar.gz" -C dist swiftserve
       - uses: actions/upload-artifact@v4
         with:
