@@ -33,11 +33,11 @@
       <div class="swiftee-stage">
         <img id="idle-sprite" class="swiftee-sprite" src="/swiftee/swiftee-idle.png" alt="Swiftee, the SwiftServe mascot" />
       </div>
-      <p id="idle-voice" class="voice-line">Drop your Package.resolved — let's take a look.</p>
+      <p id="idle-voice" class="voice-line">Drop your project — let's take a look.</p>
 
-      <div id="dropzone" class="dropzone" role="button" tabindex="0" aria-label="Choose your Package.resolved file">
-        <span class="dropzone-title">Drop your <code>Package.resolved</code> here</span>
-        <span class="dropzone-sub">or click to choose a file</span>
+      <div id="dropzone" class="dropzone" role="button" tabindex="0" aria-label="Drop your project folder, .xcodeproj, or Package.resolved">
+        <span class="dropzone-title">Drop your <strong>project folder</strong>, <code>.xcodeproj</code>, or <code>Package.resolved</code></span>
+        <span class="dropzone-sub">Swiftee finds the right resolved file — or click to choose one</span>
       </div>
       <input id="file-input" type="file" accept=".resolved,application/json,.json" hidden />
 
@@ -58,6 +58,8 @@
     <span>Made refreshingly cool from Paris, France</span>
   </footer>
 
-  <script src="/scoop/app.js"></script>
+  <!-- Bump ?v= by hand when app.js changes — this page is static, so it
+       doesn't ride the generator's content-hashed asset query. -->
+  <script src="/scoop/app.js?v=2"></script>
 </body>
 </html>

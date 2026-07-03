@@ -28,6 +28,44 @@ const FLAG_LABELS = {
 };
 const ALERT_FLAGS = new Set(["branchPin", "revisionPin", "archived", "noLicense"]);
 
+// --- Resolved discovery (pure — everything above the boundary is node-testable)
+//
+// Xcode scatters Package.resolved: every local package keeps its own subgraph
+// copy, while the FULL workspace resolution hides inside
+// *.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/. People drop the wrong
+// one and silently scan a partial graph — so the scoop accepts a whole project
+// folder (or the .xcodeproj itself), finds every candidate, and picks the
+// workspace resolution when one exists, the fullest graph otherwise.
+
+const SKIP_DIRS = new Set([
+  ".git", ".build", "DerivedData", "node_modules", "Pods", "Carthage",
+  "checkouts", ".Trash",
+]);
+
+function pinCount(text) {
+  try {
+    const parsed = JSON.parse(text);
+    return Array.isArray(parsed.pins) ? parsed.pins.length : -1;
+  } catch {
+    return -1;
+  }
+}
+
+function pickResolved(candidates) {
+  const valid = candidates.filter((c) => c.count >= 0);
+  if (!valid.length) return null;
+  const workspace = valid.filter((c) => c.path.includes("xcshareddata/swiftpm"));
+  const pool = workspace.length ? workspace : valid;
+  return pool.slice().sort((a, b) => (b.count - a.count) || (a.path.length - b.path.length))[0];
+}
+
+function trimPath(path) {
+  const parts = String(path).split("/").filter(Boolean);
+  return parts.length <= 4 ? parts.join("/") : "…/" + parts.slice(-4).join("/");
+}
+
+// __PURE_BOUNDARY__ — DOM and network only below this line.
+
 const landing = document.getElementById("landing");
 const scoop = document.getElementById("scoop");
 const dropzone = document.getElementById("dropzone");
@@ -60,9 +98,65 @@ fileInput.addEventListener("change", () => {
   })
 );
 dropzone.addEventListener("drop", (e) => {
+  // Grab entries synchronously — the DataTransfer is neutered once the
+  // handler yields, so this must happen before any await.
+  const items = e.dataTransfer.items ? Array.from(e.dataTransfer.items) : [];
+  const entries = items
+    .map((item) => (item.webkitGetAsEntry ? item.webkitGetAsEntry() : null))
+    .filter(Boolean);
+
+  if (entries.some((entry) => entry.isDirectory) || entries.length > 1) {
+    handleDroppedTree(entries);
+    return;
+  }
   const file = e.dataTransfer.files && e.dataTransfer.files[0];
   if (file) handleFile(file);
 });
+
+// A folder, an .xcodeproj, or several files at once: walk it, gather every
+// Package.resolved, scan the best one, and say which one was used.
+async function handleDroppedTree(entries) {
+  hideError();
+  setScanning(true);
+  const found = await collectResolved(entries);
+  setScanning(false);
+  const best = pickResolved(found);
+  if (!best) {
+    return showError("No Package.resolved in there — point me at the project folder (or the .xcodeproj) that has one.");
+  }
+  await scan(best.text, {
+    path: best.path,
+    count: best.count,
+    others: found.filter((c) => c !== best && c.count >= 0),
+  });
+}
+
+async function collectResolved(entries) {
+  const found = [];
+  let budget = 5000;   // entries visited — a project tree, not a home folder
+
+  async function walk(entry, depth) {
+    if (!entry || budget-- <= 0 || depth > 12) return;
+    if (entry.isFile) {
+      if (entry.name !== "Package.resolved") return;
+      const file = await new Promise((resolve) => entry.file(resolve, () => resolve(null)));
+      if (!file) return;
+      const text = await file.text().catch(() => null);
+      if (text != null) found.push({ path: entry.fullPath || entry.name, text, count: pinCount(text) });
+      return;
+    }
+    if (!entry.isDirectory || SKIP_DIRS.has(entry.name)) return;
+    const reader = entry.createReader();
+    for (;;) {   // readEntries hands back batches until an empty one
+      const batch = await new Promise((resolve) => reader.readEntries(resolve, () => resolve([])));
+      if (!batch.length) break;
+      for (const child of batch) await walk(child, depth + 1);
+    }
+  }
+
+  for (const entry of entries) await walk(entry, 0);
+  return found;
+}
 
 async function handleFile(file) {
   hideError();
@@ -75,7 +169,7 @@ async function handleFile(file) {
   await scan(text);
 }
 
-async function scan(text) {
+async function scan(text, source) {
   setScanning(true);
   try {
     const res = await fetch("/analyze", {
@@ -88,11 +182,24 @@ async function scan(text) {
       return showError(report.error || "Swiftee couldn't read that one.");
     }
     render(report);
+    if (source) prependSourceNote(source);
   } catch {
     showError("Couldn't reach the scanner. Is the server running?");
   } finally {
     setScanning(false);
   }
+}
+
+// Which file the verdicts came from — a partial graph should LOOK partial.
+function prependSourceNote(source) {
+  const note = el("p", "fine-print source-note");
+  let text = `Scanned ${trimPath(source.path)} — ${source.count} package${source.count === 1 ? "" : "s"}.`;
+  if (source.others.length) {
+    const alt = source.others.slice().sort((a, b) => b.count - a.count)[0];
+    text += ` Also found ${trimPath(alt.path)} (${alt.count}) — drop it alone to scan that graph instead.`;
+  }
+  note.textContent = text;
+  scoop.prepend(note);
 }
 
 function setScanning(on) {
