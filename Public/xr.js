@@ -37,6 +37,10 @@ const MONO = "ui-monospace, 'SF Mono', Menlo, monospace";
 const GLYPH = { supported: "✓", conditional: "◐", unsupported: "✕", unknown: "?" };
 const GLYPH_COLOR = { supported: GOOD, conditional: WARN, unsupported: LOW, unknown: MUTED };
 
+// Column order + labels mirror PlatformDisplay in the generator.
+const PLATFORMS = ["iOS", "macOS", "watchOS", "tvOS", "visionOS", "linux", "macCatalyst"];
+const PLATFORM_LABEL = { linux: "Linux", macCatalyst: "Catalyst" };
+
 // Drag feel: hand-angle → yard-angle gain, and the movement past which a
 // pinch stops being a tap. ~1.7 lets a small wrist arc walk the whole fence.
 const DRAG_GAIN = 1.7;
@@ -174,14 +178,69 @@ function errorCore(receipt) {
 
 // ---------- panel painters ----------
 
+// A round accent badge with a hand-drawn line icon — gesture hints need to
+// catch the eye, not read as body text.
+function iconBadge(ctx, cx, cy, r, draw) {
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(cx, cy, r, 0, Math.PI * 2);
+  ctx.fillStyle = "#fdf2e6";   // --accent-wash
+  ctx.fill();
+  ctx.strokeStyle = ACCENT_DEEP;
+  ctx.fillStyle = ACCENT_DEEP;
+  ctx.lineWidth = 9;
+  ctx.lineCap = "round";
+  ctx.lineJoin = "round";
+  draw(ctx, cx, cy, r);
+  ctx.restore();
+}
+
+function drawSpinIcon(ctx, cx, cy, r) {
+  const a = r * 0.52;
+  ctx.beginPath();
+  ctx.arc(cx, cy, a, -Math.PI * 0.7, Math.PI * 0.75);
+  ctx.stroke();
+  // Arrowhead at the arc's end.
+  const ex = cx + a * Math.cos(Math.PI * 0.75), ey = cy + a * Math.sin(Math.PI * 0.75);
+  ctx.beginPath();
+  ctx.moveTo(ex - 22, ey - 4);
+  ctx.lineTo(ex, ey);
+  ctx.lineTo(ex + 4, ey - 26);
+  ctx.stroke();
+}
+
+function drawGazeIcon(ctx, cx, cy, r) {
+  ctx.beginPath();
+  ctx.arc(cx, cy, r * 0.5, 0, Math.PI * 2);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(cx, cy, r * 0.14, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+function drawCrownIcon(ctx, cx, cy, r) {
+  // The Digital Crown: a disc with its winder on the side.
+  ctx.beginPath();
+  ctx.arc(cx - r * 0.08, cy, r * 0.42, 0, Math.PI * 2);
+  ctx.stroke();
+  const wx = cx + r * 0.42;
+  ctx.beginPath();
+  ctx.moveTo(wx, cy - r * 0.2);
+  ctx.lineTo(wx + r * 0.22, cy - r * 0.2);
+  ctx.lineTo(wx + r * 0.22, cy + r * 0.2);
+  ctx.lineTo(wx, cy + r * 0.2);
+  ctx.closePath();
+  ctx.stroke();
+}
+
 function paintHero(stats) {
   const ctx = makeCtx(1900, 1000);
   cardBase(ctx);
   ctx.fillStyle = INK;
-  ctx.font = "700 128px " + SANS;
-  ctx.fillText("The state of visionOS", 90, 190);
+  ctx.font = "700 122px " + SANS;
+  ctx.fillText("The state of visionOS", 90, 184);
 
-  ctx.font = "600 74px " + SANS;
+  ctx.font = "600 72px " + SANS;
   const parts = [
     [stats.supported + " serve it", GOOD],
     ["   ", MUTED],
@@ -192,32 +251,37 @@ function paintHero(stats) {
   let x = 90;
   for (const [text, color] of parts) {
     ctx.fillStyle = color;
-    ctx.fillText(text, x, 330);
+    ctx.fillText(text, x, 316);
     x += ctx.measureText(text).width;
   }
 
-  ctx.font = "500 52px " + SANS;
-  ctx.fillStyle = INK_SOFT;
   const guide = [
-    ["✓", GOOD, "The green wall, both sides — what packages serve, capability by capability."],
+    ["✓", GOOD, "The green wall, both sides — who serves what, capability by capability."],
     ["", INK_SOFT, "The dark shelf below — what the OS covers before any dependency."],
     ["✕", LOW, "The fence, around back — packages that don't compile, receipts nailed on."],
   ];
   guide.forEach(([glyph, color, text], i) => {
     ctx.fillStyle = color;
-    ctx.font = "700 52px " + SANS;
-    ctx.fillText(glyph, 90, 470 + i * 92);
+    ctx.font = "700 48px " + SANS;
+    ctx.fillText(glyph, 90, 436 + i * 78);
     ctx.fillStyle = INK_SOFT;
-    ctx.font = "500 52px " + SANS;
-    ctx.fillText(text, 170, 470 + i * 92);
+    ctx.font = "500 48px " + SANS;
+    ctx.fillText(text, 164, 436 + i * 78);
   });
 
-  ctx.fillStyle = ACCENT_DEEP;
-  ctx.font = "600 52px " + SANS;
-  ctx.fillText("Pinch & drag anywhere to spin the yard.", 90, 796);
-  ctx.fillText("Look at anything, pinch to open it.", 90, 868);
-  ctx.fillStyle = MUTED;
-  ctx.fillText("The crown takes you home.", 90, 940);
+  // Gesture hints, badged so they read as controls, not copy.
+  const hints = [
+    [drawSpinIcon, "Pinch & drag — spin the yard"],
+    [drawGazeIcon, "Look + pinch — open it right here"],
+    [drawCrownIcon, "Crown — back to Safari"],
+  ];
+  hints.forEach(([icon, text], i) => {
+    const y = 738 + i * 96;
+    iconBadge(ctx, 132, y, 42, icon);
+    ctx.fillStyle = i === 2 ? MUTED : ACCENT_DEEP;
+    ctx.font = "600 54px " + SANS;
+    ctx.fillText(text, 204, y + 19);
+  });
   return ctx.canvas;
 }
 
@@ -346,7 +410,7 @@ function paintPanel(detail) {
     if (y > 1100) {
       ctx.fillStyle = MUTED;
       ctx.font = "500 42px " + SANS;
-      ctx.fillText("… more on the flat page", 64, y);
+      ctx.fillText("… more — pinch Open ↗", 64, y);
       break;
     }
     if (row.glyph) {
@@ -363,11 +427,17 @@ function paintPanel(detail) {
   return ctx.canvas;
 }
 
+// Chips size themselves to their label — a fixed canvas stretched into a
+// differently-proportioned quad is exactly how buttons get mangled.
+const CHIP_H = 160;                       // canvas px
+const CHIP_SCALE = 0.115 / CHIP_H;        // metres per canvas px (chip is 0.115 m tall)
+
 function paintChip(label, accent) {
-  const ctx = makeCtx(576, 160);
-  const { width, height } = ctx.canvas;
-  ctx.clearRect(0, 0, width, height);
-  roundRect(ctx, 5, 5, width - 10, height - 10, 75);
+  const measure = makeCtx(8, 8);
+  measure.font = "600 58px " + SANS;
+  const width = Math.ceil(measure.measureText(label).width) + 140;
+  const ctx = makeCtx(width, CHIP_H);
+  roundRect(ctx, 5, 5, width - 10, CHIP_H - 10, (CHIP_H - 10) / 2);
   ctx.fillStyle = accent ? ACCENT : SURFACE;
   ctx.fill();
   if (!accent) {
@@ -379,7 +449,6 @@ function paintChip(label, accent) {
   ctx.font = "600 58px " + SANS;
   ctx.textAlign = "center";
   ctx.fillText(label, width / 2, 100);
-  ctx.textAlign = "left";
   return ctx.canvas;
 }
 
@@ -580,13 +649,13 @@ function detailFor(action) {
       rows.push({ glyph: GLYPH[v.status] || "?", glyphColor: GLYPH_COLOR[v.status] || MUTED, text: v.name });
     }
     if ((entry.verdicts || []).length > 8) {
-      rows.push({ text: "+ " + (entry.verdicts.length - 8) + " more on the truth table", color: MUTED });
+      rows.push({ text: "+ " + (entry.verdicts.length - 8) + " more — pinch Open", color: MUTED });
     }
     return {
       title: entry.label,
       sub: entry.supported + " of " + entry.packages + " packages serve this on visionOS",
       rows,
-      link: { label: "Open the truth table ↗", href: entry.truthTable },
+      sheet: { kind: "capability", id: entry.id, title: entry.label, href: entry.truthTable },
     };
   }
   if (action.type === "plank") {
@@ -597,7 +666,7 @@ function detailFor(action) {
       rows.push({ text: fence.receipt, mono: true, maxLines: 4 });
     }
     if (plank.fences.length > 2) {
-      rows.push({ text: "+ " + (plank.fences.length - 2) + " more on the package page", color: MUTED });
+      rows.push({ text: "+ " + (plank.fences.length - 2) + " more — pinch Open", color: MUTED });
     }
     if (plank.worksOn.length) {
       rows.push({ glyph: "✓", glyphColor: GOOD, text: "serves it on " + plank.worksOn.join(" · "), color: GOOD });
@@ -607,7 +676,7 @@ function detailFor(action) {
       title: plank.name,
       sub: "proven off visionOS · as of " + plank.version,
       rows,
-      link: { label: "Open " + plank.name + " ↗", href: "/package/" + plank.slug + "/" },
+      sheet: { kind: "package", slug: plank.slug, title: plank.name, href: "/package/" + plank.slug + "/" },
     };
   }
   if (action.type === "ghost") {
@@ -619,7 +688,7 @@ function detailFor(action) {
         { text: unknown.why || "no claim recorded for this platform yet", maxLines: 6 },
         { text: "When the toolchain or the extractor catches up, this gets a verdict.", color: MUTED, maxLines: 3 },
       ],
-      link: { label: "Open " + unknown.name + " ↗", href: "/package/" + unknown.slug + "/" },
+      sheet: { kind: "package", slug: unknown.slug, title: unknown.name, href: "/package/" + unknown.slug + "/" },
     };
   }
   // plaque
@@ -632,8 +701,144 @@ function detailFor(action) {
       glyph: "✓", glyphColor: GOOD,
       text: c.label + (c.floor ? "  —  " + c.floor : ""),
     })),
-    link: { label: "Open " + framework.name + " ↗", href: "/package/" + framework.slug + "/" },
+    sheet: { kind: "package", slug: framework.slug, title: framework.name, href: "/package/" + framework.slug + "/" },
   };
+}
+
+// ---------- the sub-page window (native-feeling, distinct from the modal) ----------
+// A visionOS-style window: glass surface, soft shadow, a real header, the
+// truth table as a grid — and its controls DETACHED beneath it (round ✕ +
+// a Safari pill), the way the system hangs a window bar under real windows.
+
+const WINDOW_W = 2048, WINDOW_H = 1310;   // canvas px → 1.8 × 1.15 m quad
+const WINDOW_INSET = 56;                  // canvas margin that holds the shadow
+
+function windowBase(ctx, title, sub) {
+  const { width, height } = ctx.canvas;
+  ctx.clearRect(0, 0, width, height);
+  ctx.save();
+  ctx.shadowColor = "rgba(74, 52, 30, 0.30)";
+  ctx.shadowBlur = 44;
+  ctx.shadowOffsetY = 16;
+  roundRect(ctx, WINDOW_INSET, WINDOW_INSET - 16, width - WINDOW_INSET * 2, height - WINDOW_INSET * 2 - 16, 64);
+  ctx.fillStyle = "rgba(255, 255, 255, 0.90)";   // glass, not card
+  ctx.fill();
+  ctx.restore();
+
+  ctx.fillStyle = INK;
+  ctx.font = "700 88px " + SANS;
+  wrap(ctx, title, width - 300, 1).forEach((line) => ctx.fillText(line, 130, 196));
+  ctx.fillStyle = MUTED;
+  ctx.font = "600 42px " + SANS;
+  ctx.fillText(sub, 130, 272);
+  ctx.strokeStyle = HAIRLINE;
+  ctx.lineWidth = 4;
+  ctx.beginPath();
+  ctx.moveTo(130, 316);
+  ctx.lineTo(width - 130, 316);
+  ctx.stroke();
+}
+
+function paintWindowLoading(title) {
+  const ctx = makeCtx(WINDOW_W, WINDOW_H);
+  windowBase(ctx, title, "fetching the receipts…");
+  return ctx.canvas;
+}
+
+// rows: [{ name, firstParty, cells: {platform → status|undefined} }]
+function paintWindowSheet(title, sub, rows, note) {
+  const ctx = makeCtx(WINDOW_W, WINDOW_H);
+  windowBase(ctx, title, sub);
+  const colX = (i) => 820 + i * 168;
+  const topY = 380, rowH = 74, maxRows = 10;
+
+  // The visionOS column wears the accent — this is, after all, its page.
+  const visionIndex = PLATFORMS.indexOf("visionOS");
+  roundRect(ctx, colX(visionIndex) - 76, topY - 60, 152, Math.min(rows.length, maxRows) * rowH + 96, 26);
+  ctx.fillStyle = "#fdf2e6";   // --accent-wash
+  ctx.fill();
+
+  ctx.textAlign = "center";
+  PLATFORMS.forEach((platform, i) => {
+    ctx.fillStyle = i === visionIndex ? ACCENT_DEEP : MUTED;
+    ctx.font = "600 34px " + SANS;
+    ctx.fillText(PLATFORM_LABEL[platform] || platform, colX(i), topY - 14);
+  });
+  ctx.textAlign = "left";
+
+  rows.slice(0, maxRows).forEach((row, r) => {
+    const y = topY + 44 + r * rowH;
+    if (r % 2 === 1) {
+      ctx.fillStyle = "rgba(251, 247, 240, 0.75)";   // --surface-2 wash
+      ctx.fillRect(120, y - 46, colX(0) - 200, 62);
+    }
+    ctx.fillStyle = INK;
+    ctx.font = "600 42px " + SANS;
+    ctx.fillText((row.firstParty ? " " : "") + wrap(ctx, row.name, 620, 1)[0], 130, y);
+    ctx.textAlign = "center";
+    PLATFORMS.forEach((platform, i) => {
+      const status = row.cells[platform];
+      ctx.fillStyle = GLYPH_COLOR[status] || MUTED;
+      ctx.font = "700 46px " + SANS;
+      ctx.fillText(status ? GLYPH[status] : "?", colX(i), y);
+    });
+    ctx.textAlign = "left";
+  });
+
+  ctx.fillStyle = MUTED;
+  ctx.font = "500 36px " + SANS;
+  const legend = "✓ serves it · ◐ with conditions · ✕ proven no · ? not verified"
+    + (rows.length > maxRows ? "   ·   +" + (rows.length - maxRows) + " more in Safari" : "")
+    + (note ? "   ·   " + note : "");
+  ctx.fillText(legend, 130, WINDOW_H - 130);
+  return ctx.canvas;
+}
+
+function paintCloseCircle() {
+  const ctx = makeCtx(160, 160);
+  ctx.beginPath();
+  ctx.arc(80, 80, 72, 0, Math.PI * 2);
+  ctx.fillStyle = SURFACE;
+  ctx.fill();
+  ctx.lineWidth = 4;
+  ctx.strokeStyle = HAIRLINE;
+  ctx.stroke();
+  ctx.strokeStyle = INK;
+  ctx.lineWidth = 10;
+  ctx.lineCap = "round";
+  ctx.beginPath();
+  ctx.moveTo(56, 56); ctx.lineTo(104, 104);
+  ctx.moveTo(104, 56); ctx.lineTo(56, 104);
+  ctx.stroke();
+  return ctx.canvas;
+}
+
+// Turn fetched JSON into window rows.
+function windowRows(sheet, json) {
+  if (sheet.kind === "capability") {
+    return (json.packages || []).map((p) => {
+      const cells = {};
+      for (const platform of PLATFORMS) {
+        cells[platform] = p.platforms && p.platforms[platform] && p.platforms[platform].status;
+      }
+      return { name: p.packageName, firstParty: String(p.package || "").indexOf("developer.apple.com") >= 0, cells };
+    });
+  }
+  return (Array.isArray(json) ? json : []).map((record) => {
+    const cells = {};
+    for (const platform of PLATFORMS) {
+      cells[platform] = record.platforms && record.platforms[platform] && record.platforms[platform].status;
+    }
+    return { name: record.capability.label, firstParty: false, cells };
+  });
+}
+
+function windowSub(sheet, json) {
+  if (sheet.kind === "capability") {
+    return "who serves it, where — receipts on the flat page";
+  }
+  const first = Array.isArray(json) && json[0];
+  return first ? "as of " + first.package.version + " — what it serves, where" : "";
 }
 
 // ---------- picking (transient-pointer ray vs quads) ----------
@@ -698,7 +903,8 @@ function tick(freq) {
 
 let sharedCanvas = null;
 let sharedGL = null;
-let yardCache = null;   // survives re-entry: textures are expensive to bake
+let yardCache = null;             // survives re-entry: textures are expensive to bake
+const sheetJSONCache = new Map(); // fetched sub-page JSON, by URL
 
 export default async function enter(feed, BASE) {
   // Session first — this call must stay inside the user-activation window.
@@ -740,52 +946,115 @@ export default async function enter(feed, BASE) {
     let drag = null;           // the active transient-pointer, while pinched
     let lastHead = { x: 0, y: 1.5 + yOff, z: 0, fx: 0, fz: -1 };
 
+    let sheetSeq = 0;   // bumps on every overlay change; stale fetches check it
+
     const closePanel = () => {
+      sheetSeq++;
       for (const q of overlay) gl.deleteTexture(q.tex);
       overlay = [];
+    };
+
+    // Spawn geometry facing wherever the user is looking RIGHT NOW — the v1
+    // bug was a fixed spawn the user could have their back to.
+    const facingSpot = (distance, dropY) => {
+      const phi = azimuthOf(lastHead.fx, lastHead.fz);
+      const dirX = Math.sin(phi), dirZ = -Math.cos(phi);
+      return {
+        phi, yaw: -phi,
+        px: lastHead.x + distance * dirX,
+        pz: lastHead.z + distance * dirZ,
+        py: Math.min(Math.max(lastHead.y - dropY, 1.05 + yOff), 1.7 + yOff),
+        ax: Math.cos(phi), az: Math.sin(phi),           // the panel's local X
+        nx: -0.02 * dirX, nz: -0.02 * dirZ,             // nudge toward the user
+      };
+    };
+
+    // A centered row of self-sized controls hung under a panel — chips are
+    // never stretched into a shape their label didn't ask for.
+    const hangControls = (spot, underY, controls, openedAt) => {
+      const widths = controls.map((c) => c.canvas.width * CHIP_SCALE);
+      const gap = 0.05;
+      const total = widths.reduce((a, b) => a + b, 0) + gap * (controls.length - 1);
+      let edge = -total / 2;
+      controls.forEach((control, i) => {
+        const center = edge + widths[i] / 2;
+        overlay.push(quad(gl, isWebGL2, control.canvas,
+          spot.px + center * spot.ax + spot.nx, underY, spot.pz + center * spot.az + spot.nz,
+          spot.yaw, widths[i], control.canvas.height * CHIP_SCALE,
+          { openedAt, action: control.action }));
+        edge += widths[i] + gap;
+      });
     };
 
     const openPanel = (action) => {
       closePanel();
       const detail = detailFor(action);
-      // Spawn facing wherever the user is looking RIGHT NOW — the v1 bug was
-      // a fixed spawn the user could have their back to.
-      const phi = azimuthOf(lastHead.fx, lastHead.fz);
-      const dirX = Math.sin(phi), dirZ = -Math.cos(phi);
-      const px = lastHead.x + 1.35 * dirX;
-      const pz = lastHead.z + 1.35 * dirZ;
-      const py = Math.min(Math.max(lastHead.y - 0.06, 1.0 + yOff), 1.75 + yOff);
-      const yaw = -phi;
+      const spot = facingSpot(1.35, 0.06);
       const openedAt = performance.now();
-      const panel = quad(gl, isWebGL2, paintPanel(detail), px, py, pz, yaw, 1.1, 0.95,
-        { noPick: true, openedAt });
-      // Chips sit just under the panel, nudged toward the user so they
-      // always pick first.
-      const ax = Math.cos(phi), az = Math.sin(phi);   // panel's local X in world
-      const chipY = py - 0.95 / 2 - 0.09;
-      const nudgeX = -0.02 * dirX, nudgeZ = -0.02 * dirZ;
-      overlay = [panel];
-      if (detail.link) {
-        overlay.push(quad(gl, isWebGL2, paintChip(detail.link.label, true),
-          px - 0.24 * ax + nudgeX, chipY, pz - 0.24 * az + nudgeZ, yaw, 0.42, 0.115,
-          { openedAt, action: { type: "link", href: detail.link.href } }));
+      overlay = [quad(gl, isWebGL2, paintPanel(detail), spot.px, spot.py, spot.pz, spot.yaw,
+        1.1, 0.95, { noPick: true, openedAt })];
+      const controls = [];
+      if (detail.sheet) {
+        controls.push({ canvas: paintChip("Open ↗", true), action: { type: "open", sheet: detail.sheet } });
       }
-      overlay.push(quad(gl, isWebGL2, paintChip("Close ✕", false),
-        px + 0.24 * ax + nudgeX, chipY, pz + 0.24 * az + nudgeZ, yaw, 0.28, 0.115,
-        { openedAt, action: { type: "close" } }));
+      controls.push({ canvas: paintChip("Close ✕", false), action: { type: "close" } });
+      hangControls(spot, spot.py - 0.95 / 2 - 0.09, controls, openedAt);
       tick(660);
+    };
+
+    // The sub-page, as a window in the yard: the launching modal is
+    // dismissed, the truth table renders in place, and Safari becomes the
+    // explicit escape hatch — never the default.
+    const openWindow = (sheet) => {
+      closePanel();
+      const seq = sheetSeq;
+      const url = sheet.kind === "capability"
+        ? BASE + "/api/capabilities/" + sheet.id + ".json"
+        : BASE + "/api/packages/" + sheet.slug + ".json";
+      const spot = facingSpot(1.9, 0.02);
+      const openedAt = performance.now();
+      const win = quad(gl, isWebGL2, paintWindowLoading(sheet.title), spot.px, spot.py, spot.pz,
+        spot.yaw, 1.8, 1.15, { noPick: true, openedAt });
+      overlay = [win];
+      hangControls(spot, spot.py - 1.15 / 2 - 0.08, [
+        { canvas: paintCloseCircle(), action: { type: "close" } },
+        { canvas: paintChip("Open in Safari ↗", false), action: { type: "safari", href: sheet.href } },
+      ], openedAt);
+      tick(660);
+
+      const show = (json) => {
+        if (seq !== sheetSeq) return;   // the user moved on — drop it
+        gl.deleteTexture(win.tex);
+        win.tex = texFromCanvas(gl, paintWindowSheet(sheet.title, windowSub(sheet, json),
+          windowRows(sheet, json)), isWebGL2);
+      };
+      if (sheetJSONCache.has(url)) {
+        show(sheetJSONCache.get(url));
+        return;
+      }
+      fetch(url).then((r) => { if (!r.ok) throw new Error("" + r.status); return r.json(); })
+        .then((json) => { sheetJSONCache.set(url, json); show(json); })
+        .catch(() => {
+          if (seq !== sheetSeq) return;
+          gl.deleteTexture(win.tex);
+          win.tex = texFromCanvas(gl, paintWindowSheet(sheet.title,
+            "couldn't fetch this here — Safari has it", []), isWebGL2);
+        });
     };
 
     const tapAt = (rayMatrix) => {
       const overlayHit = pick(rayMatrix, overlay);
       if (overlayHit) {
         overlayHit.pulseAt = performance.now();
-        if (overlayHit.action.type === "close") {
+        const action = overlayHit.action;
+        if (action.type === "close") {
           closePanel();
           tick(440);
-        } else if (overlayHit.action.type === "link") {
-          const href = overlayHit.action.href;
-          navigateTo = href.indexOf("/") === 0 && href.indexOf(BASE) !== 0 ? BASE + href : href;
+        } else if (action.type === "open") {
+          openWindow(action.sheet);
+        } else if (action.type === "safari") {
+          navigateTo = action.href.indexOf("/") === 0 && action.href.indexOf(BASE) !== 0
+            ? BASE + action.href : action.href;
           session.end();
         }
         return;
