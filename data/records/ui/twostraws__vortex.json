@@ -1,0 +1,270 @@
+[
+  {
+    "capability" : {
+      "id" : "ui.particle-effects",
+      "label" : "Particle effects"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Vortex is a SwiftUI particle system library (VortexSystem + VortexView, with confetti/fire/fireworks/rain/smoke/snow/spark/splash/magic/fireflies presets). All 105 surface decls are unconditional (no gaps, no #if conditions).",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/twostraws/vortex",
+      "commit" : "9d9d9016ceace579455f01f8e0bd59facae7d252",
+      "firstParty" : false,
+      "name" : "vortex",
+      "surfaceDigest" : "fnv1a64:29955fe9ddb76d0a",
+      "version" : "1.0.4"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vortex/System/VortexSystem.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "Core particle system generator class; unconditional in surface (no gaps).",
+            "package" : null,
+            "symbol" : "VortexSystem"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vortex/Views/VortexView.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "SwiftUI view that renders a Vortex particle system; unconditional in surface.",
+            "package" : null,
+            "symbol" : "VortexView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vortex/Presets/Confetti.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : "Built-in confetti preset; unconditional in surface.",
+            "package" : null,
+            "symbol" : "VortexSystem.confetti"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Manifest declares .iOS(.v15).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README lists only iOS, macOS, tvOS, watchOS, visionOS. Module imports SwiftUI throughout, which is unavailable on Linux toolchains, but the surface carries no os() guard marking linux absent, and symbol/manifest silence is not absence evidence.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vortex/System/VortexSystem.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "Core particle system generator class; unconditional in surface (no gaps).",
+            "package" : null,
+            "symbol" : "VortexSystem"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vortex/Views/VortexView.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "SwiftUI view that renders a Vortex particle system; unconditional in surface.",
+            "package" : null,
+            "symbol" : "VortexView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Manifest explicitly declares .macCatalyst(.v15); README does not mention Catalyst, hence slightly lower confidence.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vortex/System/VortexSystem.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "Core particle system generator class; unconditional in surface (no gaps).",
+            "package" : null,
+            "symbol" : "VortexSystem"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vortex/Views/VortexView.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "SwiftUI view that renders a Vortex particle system; unconditional in surface.",
+            "package" : null,
+            "symbol" : "VortexView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Manifest declares .macOS(.v12).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vortex/System/VortexSystem.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "Core particle system generator class; unconditional in surface (no gaps).",
+            "package" : null,
+            "symbol" : "VortexSystem"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vortex/Views/VortexView.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "SwiftUI view that renders a Vortex particle system; unconditional in surface.",
+            "package" : null,
+            "symbol" : "VortexView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Manifest declares .tvOS(.v15).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vortex/System/VortexSystem.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "Core particle system generator class; unconditional in surface (no gaps).",
+            "package" : null,
+            "symbol" : "VortexSystem"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vortex/Views/VortexView.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "SwiftUI view that renders a Vortex particle system; unconditional in surface.",
+            "package" : null,
+            "symbol" : "VortexView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Manifest declares .visionOS(.v1).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vortex/System/VortexSystem.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "Core particle system generator class; unconditional in surface (no gaps).",
+            "package" : null,
+            "symbol" : "VortexSystem"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Vortex/Views/VortexView.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "SwiftUI view that renders a Vortex particle system; unconditional in surface. Internal #if os(watchOS) branch in the render loop, but the public decl carries no gap.",
+            "package" : null,
+            "symbol" : "VortexView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Manifest declares .watchOS(.v8).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

@@ -1,0 +1,270 @@
+{
+  "aliases" : [
+    "lottie",
+    "after effects animation",
+    "bodymovin"
+  ],
+  "id" : "ui.vector-animation",
+  "label" : "Vector animation playback",
+  "packages" : [
+    {
+      "commit" : "f4db77d7feacba0c2360b84a40c38a6ce8ff399d",
+      "notes" : "Core symbols (LottieAnimationView, LottieAnimationView.play, LottieAnimation.named) are syntactically unguarded, so the surface digest resolves them present even on watchOS/linux; those two platforms are labeled unknown rather than supported because the manifest declares no floor there and the unconditional QuartzCore import leaves compilability unverified.",
+      "package" : "https://github.com/airbnb/lottie-ios",
+      "packageName" : "lottie-ios",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+              "kind" : "symbol",
+              "line" : 91,
+              "note" : "Core rendering view; unconditional decl, no platform gaps in surface digest.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Sources/Public/Animation/LottieAnimationView.swift#L91",
+              "symbol" : "LottieAnimationView"
+            },
+            {
+              "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+              "kind" : "symbol",
+              "line" : 229,
+              "note" : "Playback entry point; unconditional, no platform gaps.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Sources/Public/Animation/LottieAnimationView.swift#L229",
+              "symbol" : "LottieAnimationView.play"
+            },
+            {
+              "file" : "Sources/Public/Animation/LottieAnimationHelpers.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "note" : "Animation loading API; unconditional, no platform gaps.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Sources/Public/Animation/LottieAnimationHelpers.swift#L39",
+              "symbol" : "LottieAnimation.named"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Package.swift declares .iOS(\"13.0\") platform floor.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Package.swift#L7"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: 'Lottie is a cross-platform library for iOS, macOS, tvOS, visionOS, Android, and Web that natively renders vector-based animations'.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/README.md#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README platform list omits Linux; 191 of 759 surface decls carry guards resolving absent on linux, and core files import QuartzCore unconditionally, but there is no guard/availability evidence of absence for the core symbols, so status is unknown.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/README.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+              "kind" : "symbol",
+              "line" : 91,
+              "note" : "Core rendering view; unconditional decl, no platform gaps in surface digest.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Sources/Public/Animation/LottieAnimationView.swift#L91",
+              "symbol" : "LottieAnimationView"
+            },
+            {
+              "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+              "kind" : "symbol",
+              "line" : 229,
+              "note" : "Playback entry point; unconditional, no platform gaps.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Sources/Public/Animation/LottieAnimationView.swift#L229",
+              "symbol" : "LottieAnimationView.play"
+            },
+            {
+              "file" : "Sources/Public/Animation/LottieAnimationHelpers.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "note" : "Animation loading API; unconditional, no platform gaps.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Sources/Public/Animation/LottieAnimationHelpers.swift#L39",
+              "symbol" : "LottieAnimation.named"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "No explicit macCatalyst floor in Package.swift; Catalyst inherits the .iOS(\"13.0\") floor. Core decls resolve present with no counter-guards in the digest.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+              "kind" : "symbol",
+              "line" : 91,
+              "note" : "Core rendering view; unconditional decl, no platform gaps in surface digest.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Sources/Public/Animation/LottieAnimationView.swift#L91",
+              "symbol" : "LottieAnimationView"
+            },
+            {
+              "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+              "kind" : "symbol",
+              "line" : 229,
+              "note" : "Playback entry point; unconditional, no platform gaps.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Sources/Public/Animation/LottieAnimationView.swift#L229",
+              "symbol" : "LottieAnimationView.play"
+            },
+            {
+              "file" : "Sources/Public/Animation/LottieAnimationHelpers.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "note" : "Animation loading API; unconditional, no platform gaps.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Sources/Public/Animation/LottieAnimationHelpers.swift#L39",
+              "symbol" : "LottieAnimation.named"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Package.swift declares .macOS(\"10.15\") platform floor.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Package.swift#L7"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: 'Lottie is a cross-platform library for iOS, macOS, tvOS, visionOS, Android, and Web that natively renders vector-based animations'.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/README.md#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+              "kind" : "symbol",
+              "line" : 91,
+              "note" : "Core rendering view; unconditional decl, no platform gaps in surface digest.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Sources/Public/Animation/LottieAnimationView.swift#L91",
+              "symbol" : "LottieAnimationView"
+            },
+            {
+              "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+              "kind" : "symbol",
+              "line" : 229,
+              "note" : "Playback entry point; unconditional, no platform gaps.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Sources/Public/Animation/LottieAnimationView.swift#L229",
+              "symbol" : "LottieAnimationView.play"
+            },
+            {
+              "file" : "Sources/Public/Animation/LottieAnimationHelpers.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "note" : "Animation loading API; unconditional, no platform gaps.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Sources/Public/Animation/LottieAnimationHelpers.swift#L39",
+              "symbol" : "LottieAnimation.named"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Package.swift declares .tvOS(\"13.0\") platform floor.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Package.swift#L7"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: 'Lottie is a cross-platform library for iOS, macOS, tvOS, visionOS, Android, and Web that natively renders vector-based animations'.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/README.md#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+              "kind" : "symbol",
+              "line" : 91,
+              "note" : "Core rendering view; unconditional decl, no platform gaps in surface digest.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Sources/Public/Animation/LottieAnimationView.swift#L91",
+              "symbol" : "LottieAnimationView"
+            },
+            {
+              "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+              "kind" : "symbol",
+              "line" : 229,
+              "note" : "Playback entry point; unconditional, no platform gaps.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Sources/Public/Animation/LottieAnimationView.swift#L229",
+              "symbol" : "LottieAnimationView.play"
+            },
+            {
+              "file" : "Sources/Public/Animation/LottieAnimationHelpers.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "note" : "Animation loading API; unconditional, no platform gaps.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Sources/Public/Animation/LottieAnimationHelpers.swift#L39",
+              "symbol" : "LottieAnimation.named"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Package.swift declares .visionOS(\"1.0\") platform floor (visionOS support shipped in Lottie 4.4; this pin is 4.6.1).",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Package.swift#L7"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: 'Lottie is a cross-platform library for iOS, macOS, tvOS, visionOS, Android, and Web that natively renders vector-based animations'.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/README.md#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Package.swift declares no watchOS platform floor (iOS/macOS/tvOS/visionOS only). Missing floor is not absence evidence, so status is unknown.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/Package.swift#L7"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README platform list (iOS, macOS, tvOS, visionOS, Android, Web) omits watchOS.",
+              "permalink" : "https://github.com/airbnb/lottie-ios/blob/4.6.1/README.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "lottie-ios",
+      "version" : "4.6.1"
+    }
+  ]
+}

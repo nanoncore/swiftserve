@@ -1,0 +1,200 @@
+[
+  {
+    "capability" : {
+      "id" : "storage.cloud-sync",
+      "label" : "Cloud sync"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "CloudKit record sync; CKSyncEngine is the modern sync channel.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/cloudkit",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "CloudKit",
+      "surfaceDigest" : "fnv1a64:af7491a24935ebfb",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+            "kind" : "symbol",
+            "line" : 1043,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CKSyncEngine"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+            "kind" : "symbol",
+            "line" : 133,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CKDatabase"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+            "kind" : "availability",
+            "line" : 1043,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CKSyncEngine"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+            "kind" : "symbol",
+            "line" : 1043,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CKSyncEngine"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+            "kind" : "symbol",
+            "line" : 133,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CKDatabase"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+            "kind" : "symbol",
+            "line" : 1043,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CKSyncEngine"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+            "kind" : "symbol",
+            "line" : 133,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CKDatabase"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+            "kind" : "symbol",
+            "line" : 1043,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CKSyncEngine"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+            "kind" : "symbol",
+            "line" : 133,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CKDatabase"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+            "kind" : "symbol",
+            "line" : 1043,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CKSyncEngine"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+            "kind" : "symbol",
+            "line" : 133,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CKDatabase"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+            "kind" : "symbol",
+            "line" : 1043,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CKSyncEngine"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+            "kind" : "symbol",
+            "line" : 133,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CKDatabase"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

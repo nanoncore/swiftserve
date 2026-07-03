@@ -1,0 +1,1365 @@
+{
+  "aliases" : [
+    "memory database",
+    "transient store"
+  ],
+  "id" : "storage.in-memory",
+  "label" : "In-memory database",
+  "packages" : [
+    {
+      "commit" : "24e47109e31b2031cb26e25cc1b81b607496066c",
+      "notes" : "Taxonomy label reads 'In-memory database'; Cache's MemoryStorage is an in-memory cache layer (fits the 'transient store' alias), not a database engine.",
+      "package" : "https://github.com/hyperoslo/cache",
+      "packageName" : "cache",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/MemoryStorage.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/MemoryStorage.swift#L3",
+              "symbol" : "MemoryStorage"
+            },
+            {
+              "file" : "Source/Shared/Configuration/MemoryConfig.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Configuration/MemoryConfig.swift#L3",
+              "symbol" : "MemoryConfig"
+            },
+            {
+              "file" : "Source/Shared/Storage/MemoryStorage.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/MemoryStorage.swift#L42",
+              "symbol" : "MemoryStorage.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L46",
+              "symbol" : "Storage.removeInMemoryObject"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/MemoryStorage.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "note" : "Surface digest resolves this decl present on linux (no gap); source is Foundation-only under Source/Shared with no os() guards, but there is no Linux CI or README corroboration - confidence reduced.",
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/MemoryStorage.swift#L3",
+              "symbol" : "MemoryStorage"
+            },
+            {
+              "file" : "Source/Shared/Configuration/MemoryConfig.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Configuration/MemoryConfig.swift#L3",
+              "symbol" : "MemoryConfig"
+            },
+            {
+              "file" : "Source/Shared/Storage/MemoryStorage.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/MemoryStorage.swift#L42",
+              "symbol" : "MemoryStorage.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L46",
+              "symbol" : "Storage.removeInMemoryObject"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/MemoryStorage.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/MemoryStorage.swift#L3",
+              "symbol" : "MemoryStorage"
+            },
+            {
+              "file" : "Source/Shared/Configuration/MemoryConfig.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Configuration/MemoryConfig.swift#L3",
+              "symbol" : "MemoryConfig"
+            },
+            {
+              "file" : "Source/Shared/Storage/MemoryStorage.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/MemoryStorage.swift#L42",
+              "symbol" : "MemoryStorage.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L46",
+              "symbol" : "Storage.removeInMemoryObject"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/MemoryStorage.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/MemoryStorage.swift#L3",
+              "symbol" : "MemoryStorage"
+            },
+            {
+              "file" : "Source/Shared/Configuration/MemoryConfig.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Configuration/MemoryConfig.swift#L3",
+              "symbol" : "MemoryConfig"
+            },
+            {
+              "file" : "Source/Shared/Storage/MemoryStorage.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/MemoryStorage.swift#L42",
+              "symbol" : "MemoryStorage.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L46",
+              "symbol" : "Storage.removeInMemoryObject"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/MemoryStorage.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/MemoryStorage.swift#L3",
+              "symbol" : "MemoryStorage"
+            },
+            {
+              "file" : "Source/Shared/Configuration/MemoryConfig.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Configuration/MemoryConfig.swift#L3",
+              "symbol" : "MemoryConfig"
+            },
+            {
+              "file" : "Source/Shared/Storage/MemoryStorage.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/MemoryStorage.swift#L42",
+              "symbol" : "MemoryStorage.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L46",
+              "symbol" : "Storage.removeInMemoryObject"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/MemoryStorage.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/MemoryStorage.swift#L3",
+              "symbol" : "MemoryStorage"
+            },
+            {
+              "file" : "Source/Shared/Configuration/MemoryConfig.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Configuration/MemoryConfig.swift#L3",
+              "symbol" : "MemoryConfig"
+            },
+            {
+              "file" : "Source/Shared/Storage/MemoryStorage.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/MemoryStorage.swift#L42",
+              "symbol" : "MemoryStorage.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L46",
+              "symbol" : "Storage.removeInMemoryObject"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/MemoryStorage.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/MemoryStorage.swift#L3",
+              "symbol" : "MemoryStorage"
+            },
+            {
+              "file" : "Source/Shared/Configuration/MemoryConfig.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Configuration/MemoryConfig.swift#L3",
+              "symbol" : "MemoryConfig"
+            },
+            {
+              "file" : "Source/Shared/Storage/MemoryStorage.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/MemoryStorage.swift#L42",
+              "symbol" : "MemoryStorage.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L46",
+              "symbol" : "Storage.removeInMemoryObject"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "cache",
+      "version" : "7.4.0"
+    },
+    {
+      "commit" : "e227d94dc3fe7099a096ac2ca28cad1f69bd8d5b",
+      "notes" : "In-memory SQLite is a first-class configuration: SQLiteConfiguration.memory is public and every DatabaseConfigurationFactory.sqlite overload defaults to .memory.",
+      "package" : "https://github.com/vapor/fluent-sqlite-driver",
+      "packageName" : "fluent-sqlite-driver",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 125,
+              "note" : "Dedicated in-memory SQLite configuration (storage: .memory); unconditional, no platform gaps.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L125",
+              "symbol" : "SQLiteConfiguration.memory"
+            },
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "Factory defaults to .memory configuration (config: SQLiteConfiguration = .memory).",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L14",
+              "symbol" : "DatabaseConfigurationFactory.sqlite"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Manifest declares .iOS(.v13) floor.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 125,
+              "note" : "Unconditional public decl; surface digest lists no linux gap. Vapor server-side package, CI tested on Linux.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L125",
+              "symbol" : "SQLiteConfiguration.memory"
+            },
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "Factory defaults to .memory configuration (config: SQLiteConfiguration = .memory).",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L14",
+              "symbol" : "DatabaseConfigurationFactory.sqlite"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 125,
+              "note" : "Unconditional public decl; surface digest lists no macCatalyst gap. No explicit macCatalyst manifest floor, so confidence lowered.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L125",
+              "symbol" : "SQLiteConfiguration.memory"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 125,
+              "note" : "Dedicated in-memory SQLite configuration (storage: .memory); unconditional, no platform gaps.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L125",
+              "symbol" : "SQLiteConfiguration.memory"
+            },
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "Factory defaults to .memory configuration (config: SQLiteConfiguration = .memory).",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L14",
+              "symbol" : "DatabaseConfigurationFactory.sqlite"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Manifest declares .macOS(.v10_15) floor.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 125,
+              "note" : "Dedicated in-memory SQLite configuration (storage: .memory); unconditional, no platform gaps.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L125",
+              "symbol" : "SQLiteConfiguration.memory"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Manifest declares .tvOS(.v13) floor.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 125,
+              "note" : "Unconditional public decl; surface digest lists no visionOS gap. No explicit visionOS manifest floor, so confidence lowered.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L125",
+              "symbol" : "SQLiteConfiguration.memory"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 125,
+              "note" : "Dedicated in-memory SQLite configuration (storage: .memory); unconditional, no platform gaps.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L125",
+              "symbol" : "SQLiteConfiguration.memory"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Manifest declares .watchOS(.v6) floor.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+        "https://github.com/vapor/fluent"
+      ],
+      "slug" : "fluent-sqlite-driver",
+      "version" : "4.9.0"
+    },
+    {
+      "commit" : "964c300fb0736699ce945c9edb56ecd62eba27a3",
+      "notes" : "Connection.Location.inMemory is an unconditional enum case and the default Connection location.",
+      "package" : "https://github.com/stephencelis/sqlite.swift",
+      "packageName" : "sqlite.swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L46",
+              "symbol" : "Connection.Location.inMemory"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 106,
+              "note" : "init(_ location: Location = .inMemory, readonly: Bool = false) throws — in-memory is the default location.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L106",
+              "symbol" : "Connection.init"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 39,
+              "note" : "Package.swift declares a iOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L39"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L46",
+              "symbol" : "Connection.Location.inMemory"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 106,
+              "note" : "init(_ location: Location = .inMemory, readonly: Bool = false) throws — in-memory is the default location.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L106",
+              "symbol" : "Connection.init"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 31,
+              "note" : "Package.swift has an explicit #if os(Linux) branch enabling the SQLiteSwiftCSQLite default trait (bundled SQLite for Linux builds).",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L31"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 23,
+              "note" : "README: 'Works on Linux (with some limitations)'.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/README.md#L23"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L46",
+              "symbol" : "Connection.Location.inMemory"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 106,
+              "note" : "init(_ location: Location = .inMemory, readonly: Bool = false) throws — in-memory is the default location.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L106",
+              "symbol" : "Connection.init"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 38,
+              "note" : "Package.swift does not declare a macCatalyst floor, but all anchor symbols are unconditional (no platform gaps) in the extracted surface.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L38"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L46",
+              "symbol" : "Connection.Location.inMemory"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 106,
+              "note" : "init(_ location: Location = .inMemory, readonly: Bool = false) throws — in-memory is the default location.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L106",
+              "symbol" : "Connection.init"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 40,
+              "note" : "Package.swift declares a macOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L40"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L46",
+              "symbol" : "Connection.Location.inMemory"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 106,
+              "note" : "init(_ location: Location = .inMemory, readonly: Bool = false) throws — in-memory is the default location.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L106",
+              "symbol" : "Connection.init"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 42,
+              "note" : "Package.swift declares a tvOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L42"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L46",
+              "symbol" : "Connection.Location.inMemory"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 106,
+              "note" : "init(_ location: Location = .inMemory, readonly: Bool = false) throws — in-memory is the default location.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L106",
+              "symbol" : "Connection.init"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 43,
+              "note" : "Package.swift declares a visionOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L43"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L46",
+              "symbol" : "Connection.Location.inMemory"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 106,
+              "note" : "init(_ location: Location = .inMemory, readonly: Bool = false) throws — in-memory is the default location.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L106",
+              "symbol" : "Connection.init"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 41,
+              "note" : "Package.swift declares a watchOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L41"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "sqlite.swift",
+      "version" : "0.16.0"
+    },
+    {
+      "commit" : "e2bf935089cd7620031ea342eaf96bf4ba3a22dc",
+      "package" : "https://github.com/marcoarment/blackbird",
+      "packageName" : "blackbird",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 351,
+              "note" : "Doc: 'Instantiates a new SQLite database in memory, without persisting to a file.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L351",
+              "symbol" : "Blackbird.Database.inMemoryDatabase"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 327,
+              "note" : "Doc: path is 'nil for in-memory databases'.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L327",
+              "symbol" : "Blackbird.Database.path"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Package.swift declares .iOS(.v15) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms list contains only Apple platforms; Surface digest records no platform gaps, but sources unconditionally import Combine, SwiftUI, OSLog and SQLite3 with no os() guards, and Package.swift declares no Linux support; Linux buildability is unverified. Symbol absence is not absence evidence, so status is unknown.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L7"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 351,
+              "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L351",
+              "symbol" : "Blackbird.Database.inMemoryDatabase"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 327,
+              "note" : "Doc: path is 'nil for in-memory databases'.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L327",
+              "symbol" : "Blackbird.Database.path"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 351,
+              "note" : "Doc: 'Instantiates a new SQLite database in memory, without persisting to a file.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L351",
+              "symbol" : "Blackbird.Database.inMemoryDatabase"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 327,
+              "note" : "Doc: path is 'nil for in-memory databases'.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L327",
+              "symbol" : "Blackbird.Database.path"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Package.swift declares .macOS(.v12) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 351,
+              "note" : "Doc: 'Instantiates a new SQLite database in memory, without persisting to a file.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L351",
+              "symbol" : "Blackbird.Database.inMemoryDatabase"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 327,
+              "note" : "Doc: path is 'nil for in-memory databases'.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L327",
+              "symbol" : "Blackbird.Database.path"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 11,
+              "note" : "Package.swift declares .tvOS(.v15) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L11"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 351,
+              "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L351",
+              "symbol" : "Blackbird.Database.inMemoryDatabase"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 327,
+              "note" : "Doc: path is 'nil for in-memory databases'.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L327",
+              "symbol" : "Blackbird.Database.path"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 351,
+              "note" : "Doc: 'Instantiates a new SQLite database in memory, without persisting to a file.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L351",
+              "symbol" : "Blackbird.Database.inMemoryDatabase"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 327,
+              "note" : "Doc: path is 'nil for in-memory databases'.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L327",
+              "symbol" : "Blackbird.Database.path"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Package.swift declares .watchOS(.v8) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "blackbird",
+      "version" : "0.5"
+    },
+    {
+      "commit" : "ba6848908ca930521484727b2de2399f68413f40",
+      "notes" : "Caveat: the in-memory layer is always paired with a StorageEngine; the only purely transient store in the public surface (previewStore) is DEBUG-only. Confidence lowered accordingly — Boutique is not a standalone in-memory database.",
+      "package" : "https://github.com/mergesort/boutique",
+      "packageName" : "boutique",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "note" : "var items: [Item] — items are held in and read synchronously from the Store's in-memory cache layer (dual-layer memory + disk architecture)",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L64",
+              "symbol" : "Store.items"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "note" : "doc: 'persisting items to a memory cache' — memory layer is intrinsic to every Store",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L102",
+              "symbol" : "Store.init"
+            },
+            {
+              "condition" : "DEBUG",
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 304,
+              "note" : "DEBUG-only transient Store that only holds items in memory (SwiftUI Previews); no files written to disk",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L304",
+              "symbol" : "Store.previewStore"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Package.swift declares .iOS(.v17) platform floor",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "note" : "Surface digest resolves this decl present on linux (no os() conditions anywhere in the public surface), but the module unconditionally imports SwiftUI, Security, and Observation; Package.swift and README declare only iOS 17+/macOS 14+. Linux buildability unverified — honest answer is unknown.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L64",
+              "symbol" : "Store.items"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "note" : "var items: [Item] — items are held in and read synchronously from the Store's in-memory cache layer (dual-layer memory + disk architecture) No explicit macCatalyst floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on macCatalyst.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L64",
+              "symbol" : "Store.items"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "note" : "doc: 'persisting items to a memory cache' — memory layer is intrinsic to every Store",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L102",
+              "symbol" : "Store.init"
+            },
+            {
+              "condition" : "DEBUG",
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 304,
+              "note" : "DEBUG-only transient Store that only holds items in memory (SwiftUI Previews); no files written to disk",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L304",
+              "symbol" : "Store.previewStore"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "note" : "var items: [Item] — items are held in and read synchronously from the Store's in-memory cache layer (dual-layer memory + disk architecture)",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L64",
+              "symbol" : "Store.items"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "note" : "doc: 'persisting items to a memory cache' — memory layer is intrinsic to every Store",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L102",
+              "symbol" : "Store.init"
+            },
+            {
+              "condition" : "DEBUG",
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 304,
+              "note" : "DEBUG-only transient Store that only holds items in memory (SwiftUI Previews); no files written to disk",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L304",
+              "symbol" : "Store.previewStore"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Package.swift declares .macOS(.v14) platform floor",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "note" : "var items: [Item] — items are held in and read synchronously from the Store's in-memory cache layer (dual-layer memory + disk architecture) No explicit tvOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on tvOS.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L64",
+              "symbol" : "Store.items"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "note" : "doc: 'persisting items to a memory cache' — memory layer is intrinsic to every Store",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L102",
+              "symbol" : "Store.init"
+            },
+            {
+              "condition" : "DEBUG",
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 304,
+              "note" : "DEBUG-only transient Store that only holds items in memory (SwiftUI Previews); no files written to disk",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L304",
+              "symbol" : "Store.previewStore"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "note" : "var items: [Item] — items are held in and read synchronously from the Store's in-memory cache layer (dual-layer memory + disk architecture) No explicit visionOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on visionOS.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L64",
+              "symbol" : "Store.items"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "note" : "doc: 'persisting items to a memory cache' — memory layer is intrinsic to every Store",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L102",
+              "symbol" : "Store.init"
+            },
+            {
+              "condition" : "DEBUG",
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 304,
+              "note" : "DEBUG-only transient Store that only holds items in memory (SwiftUI Previews); no files written to disk",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L304",
+              "symbol" : "Store.previewStore"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "note" : "var items: [Item] — items are held in and read synchronously from the Store's in-memory cache layer (dual-layer memory + disk architecture) No explicit watchOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on watchOS.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L64",
+              "symbol" : "Store.items"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "note" : "doc: 'persisting items to a memory cache' — memory layer is intrinsic to every Store",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L102",
+              "symbol" : "Store.init"
+            },
+            {
+              "condition" : "DEBUG",
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 304,
+              "note" : "DEBUG-only transient Store that only holds items in memory (SwiftUI Previews); no files written to disk",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L304",
+              "symbol" : "Store.previewStore"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "boutique",
+      "version" : "3.0.2"
+    },
+    {
+      "commit" : "17F113",
+      "notes" : "NSInMemoryStoreType persistent store.",
+      "package" : "https://developer.apple.com/documentation/coredata",
+      "packageName" : "CoreData",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 424,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L424",
+              "symbol" : "NSInMemoryStoreType"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "availability",
+              "line" : 424,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L424",
+              "symbol" : "NSInMemoryStoreType"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 424,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L424",
+              "symbol" : "NSInMemoryStoreType"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 424,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L424",
+              "symbol" : "NSInMemoryStoreType"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 424,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L424",
+              "symbol" : "NSInMemoryStoreType"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 424,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L424",
+              "symbol" : "NSInMemoryStoreType"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 424,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L424",
+              "symbol" : "NSInMemoryStoreType"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "coredata",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "commit" : "17F113",
+      "notes" : "In-memory container via ModelConfiguration(isStoredInMemoryOnly:).",
+      "package" : "https://developer.apple.com/documentation/swiftdata",
+      "packageName" : "SwiftData",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 425,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L425",
+              "symbol" : "ModelConfiguration.isStoredInMemoryOnly"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "availability",
+              "line" : 425,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L425",
+              "symbol" : "ModelConfiguration.isStoredInMemoryOnly"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 425,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L425",
+              "symbol" : "ModelConfiguration.isStoredInMemoryOnly"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 425,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L425",
+              "symbol" : "ModelConfiguration.isStoredInMemoryOnly"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 425,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L425",
+              "symbol" : "ModelConfiguration.isStoredInMemoryOnly"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 425,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L425",
+              "symbol" : "ModelConfiguration.isStoredInMemoryOnly"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 425,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L425",
+              "symbol" : "ModelConfiguration.isStoredInMemoryOnly"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swiftdata",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "commit" : "b83108d10f42680d78f23fe4d4d80fc88dab3212",
+      "notes" : "GRDB documents in-memory databases (DatabaseQueue(named:) / DatabaseQueue() in the checkout at GRDB/Core/DatabaseQueue.swift), but no DatabaseQueue declaration made it into the truncated surface digest (800/2706 decls), so no symbol anchor is available. README-only evidence: status unknown, confidence capped at 0.3.",
+      "package" : "https://github.com/groue/grdb.swift",
+      "packageName" : "grdb.swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 423,
+              "note" : "README: 'Database queues support in-memory databases' (v7.11.1 README.md line 423)",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/README.md#L423"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "linux" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 423,
+              "note" : "README: 'Database queues support in-memory databases' (v7.11.1 README.md line 423)",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/README.md#L423"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 423,
+              "note" : "README: 'Database queues support in-memory databases' (v7.11.1 README.md line 423)",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/README.md#L423"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 423,
+              "note" : "README: 'Database queues support in-memory databases' (v7.11.1 README.md line 423)",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/README.md#L423"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 423,
+              "note" : "README: 'Database queues support in-memory databases' (v7.11.1 README.md line 423)",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/README.md#L423"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 423,
+              "note" : "README: 'Database queues support in-memory databases' (v7.11.1 README.md line 423)",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/README.md#L423"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 423,
+              "note" : "README: 'Database queues support in-memory databases' (v7.11.1 README.md line 423)",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/README.md#L423"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "grdb.swift",
+      "version" : "v7.11.1"
+    }
+  ]
+}

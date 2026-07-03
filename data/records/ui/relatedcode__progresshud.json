@@ -1,0 +1,518 @@
+[
+  {
+    "capability" : {
+      "id" : "ui.progress-hud",
+      "label" : "Loading indicators"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "SPM target builds SwiftUI/Sources only (Package.swift path: 'SwiftUI/Sources'); the ProgressHUD/Sources UIKit copy in the digest is the legacy manual-integration variant, not part of the SPM product. Surface has no #if os() conditions anywhere, so no absence evidence exists for any platform.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/relatedcode/progresshud",
+      "commit" : "44e04c79ae75ed5e979df517ab13d8a1aa9b41a5",
+      "firstParty" : false,
+      "name" : "progresshud",
+      "surfaceDigest" : "fnv1a64:0e72a466d7d54a43",
+      "version" : "15.0.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SwiftUI/Sources/ProgressHUD.swift",
+            "kind" : "symbol",
+            "line" : 24,
+            "note" : "Core HUD singleton class; unconditional, in the SPM target (SwiftUI/Sources).",
+            "package" : null,
+            "symbol" : "ProgressHUD"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SwiftUI/Sources/ProgressHUD+Public.swift",
+            "kind" : "symbol",
+            "line" : 146,
+            "note" : "Shows an animated loading HUD.",
+            "package" : null,
+            "symbol" : "ProgressHUD.animate"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SwiftUI/Sources/ProgressHUD+Public.swift",
+            "kind" : "symbol",
+            "line" : 189,
+            "note" : "Determinate progress HUD (0..1).",
+            "package" : null,
+            "symbol" : "ProgressHUD.progress"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SwiftUI/Sources/ProgressHUD.swift",
+            "kind" : "symbol",
+            "line" : 275,
+            "note" : "SwiftUI root-view modifier that hosts the HUD.",
+            "package" : null,
+            "symbol" : "View.progressHUD"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SwiftUI/Sources/ProgressHUD+Enums.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "18 built-in spinner/indicator animation styles.",
+            "package" : null,
+            "symbol" : "AnimationType"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Manifest declares platforms: [.iOS(.v17)].",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README: 'a convenient and intuitive HUD tool designed specifically for iOS'; requirements iOS 17.0+.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Only .iOS(.v17) declared. Target depends on SwiftUI (unavailable on Linux) but the surface contains no os() guard proving absence, so unknown.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README positions the library as iOS-only.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Only .iOS(.v17) declared; Catalyst often inherits iOS targets but no manifest or surface evidence confirms it.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README positions the library as iOS-only.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Only .iOS(.v17) declared; missing floor is not absence evidence. No os() guards in the surface to prove absence either way.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README positions the library as iOS-only ('designed specifically for iOS').",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "tvOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Only .iOS(.v17) declared; missing floor is not absence evidence.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README positions the library as iOS-only.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Only .iOS(.v17) declared; SwiftUI-based target might compile for visionOS but nothing in the surface or manifest confirms it.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README positions the library as iOS-only.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Only .iOS(.v17) declared; missing floor is not absence evidence.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README positions the library as iOS-only.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "ui.toast",
+      "label" : "Toasts / banners"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Banner API is a first-class surface: show/hide functions, a dedicated ProgressBannerView + View.progressBanner modifier, and five appearance properties. Anchored on SwiftUI/Sources decls because Package.swift builds only that path; the ProgressHUD/Sources UIKit duplicates are the legacy manual-integration copy.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/relatedcode/progresshud",
+      "commit" : "44e04c79ae75ed5e979df517ab13d8a1aa9b41a5",
+      "firstParty" : false,
+      "name" : "progresshud",
+      "surfaceDigest" : "fnv1a64:0e72a466d7d54a43",
+      "version" : "15.0.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SwiftUI/Sources/ProgressHUD+Public.swift",
+            "kind" : "symbol",
+            "line" : 301,
+            "note" : "Shows a title+message banner with auto-hide delay (default 3.0s).",
+            "package" : null,
+            "symbol" : "ProgressHUD.banner"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SwiftUI/Sources/ProgressHUD+Public.swift",
+            "kind" : "symbol",
+            "line" : 317,
+            "note" : "Dismisses the banner programmatically.",
+            "package" : null,
+            "symbol" : "ProgressHUD.bannerHide"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SwiftUI/Sources/ProgressHUD+Banner.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "Dedicated SwiftUI banner view.",
+            "package" : null,
+            "symbol" : "ProgressBannerView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SwiftUI/Sources/ProgressHUD+Banner.swift",
+            "kind" : "symbol",
+            "line" : 83,
+            "note" : "SwiftUI modifier hosting the banner layer.",
+            "package" : null,
+            "symbol" : "View.progressBanner"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "SwiftUI/Sources/ProgressHUD+Public.swift",
+            "kind" : "symbol",
+            "line" : 91,
+            "note" : "Banner appearance customization (with colorBannerTitle, colorBannerMessage, fontBannerTitle, fontBannerMessage).",
+            "package" : null,
+            "symbol" : "ProgressHUD.colorBanner"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Manifest declares platforms: [.iOS(.v17)].",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README documents ProgressHUD.banner(\"Banner title\", \"Banner message to display.\") usage.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Only .iOS(.v17) declared. Target depends on SwiftUI (unavailable on Linux) but no os() guard in the surface proves absence, so unknown.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README positions the library as iOS-only.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Only .iOS(.v17) declared; Catalyst often inherits iOS targets but no evidence confirms it.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README positions the library as iOS-only.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Only .iOS(.v17) declared; missing floor is not absence evidence. No os() guards in the surface.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README positions the library as iOS-only ('designed specifically for iOS').",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "tvOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Only .iOS(.v17) declared; missing floor is not absence evidence.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README positions the library as iOS-only.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Only .iOS(.v17) declared; SwiftUI-based target might compile for visionOS but nothing confirms it.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README positions the library as iOS-only.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Only .iOS(.v17) declared; missing floor is not absence evidence.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : null,
+            "note" : "README positions the library as iOS-only.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

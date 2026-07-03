@@ -1,0 +1,585 @@
+{
+  "aliases" : [
+    "icloud sync",
+    "cloudkit sync",
+    "remote sync"
+  ],
+  "id" : "storage.cloud-sync",
+  "label" : "Cloud sync",
+  "packages" : [
+    {
+      "commit" : "17F113",
+      "notes" : "CloudKit record sync; CKSyncEngine is the modern sync channel.",
+      "package" : "https://developer.apple.com/documentation/cloudkit",
+      "packageName" : "CloudKit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+              "kind" : "symbol",
+              "line" : 1043,
+              "permalink" : "https://developer.apple.com/documentation/cloudkit/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json#L1043",
+              "symbol" : "CKSyncEngine"
+            },
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+              "kind" : "symbol",
+              "line" : 133,
+              "permalink" : "https://developer.apple.com/documentation/cloudkit/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json#L133",
+              "symbol" : "CKDatabase"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+              "kind" : "availability",
+              "line" : 1043,
+              "permalink" : "https://developer.apple.com/documentation/cloudkit/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json#L1043",
+              "symbol" : "CKSyncEngine"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+              "kind" : "symbol",
+              "line" : 1043,
+              "permalink" : "https://developer.apple.com/documentation/cloudkit/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json#L1043",
+              "symbol" : "CKSyncEngine"
+            },
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+              "kind" : "symbol",
+              "line" : 133,
+              "permalink" : "https://developer.apple.com/documentation/cloudkit/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json#L133",
+              "symbol" : "CKDatabase"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+              "kind" : "symbol",
+              "line" : 1043,
+              "permalink" : "https://developer.apple.com/documentation/cloudkit/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json#L1043",
+              "symbol" : "CKSyncEngine"
+            },
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+              "kind" : "symbol",
+              "line" : 133,
+              "permalink" : "https://developer.apple.com/documentation/cloudkit/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json#L133",
+              "symbol" : "CKDatabase"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+              "kind" : "symbol",
+              "line" : 1043,
+              "permalink" : "https://developer.apple.com/documentation/cloudkit/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json#L1043",
+              "symbol" : "CKSyncEngine"
+            },
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+              "kind" : "symbol",
+              "line" : 133,
+              "permalink" : "https://developer.apple.com/documentation/cloudkit/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json#L133",
+              "symbol" : "CKDatabase"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+              "kind" : "symbol",
+              "line" : 1043,
+              "permalink" : "https://developer.apple.com/documentation/cloudkit/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json#L1043",
+              "symbol" : "CKSyncEngine"
+            },
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+              "kind" : "symbol",
+              "line" : 133,
+              "permalink" : "https://developer.apple.com/documentation/cloudkit/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json#L133",
+              "symbol" : "CKDatabase"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+              "kind" : "symbol",
+              "line" : 1043,
+              "permalink" : "https://developer.apple.com/documentation/cloudkit/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json#L1043",
+              "symbol" : "CKSyncEngine"
+            },
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json",
+              "kind" : "symbol",
+              "line" : 133,
+              "permalink" : "https://developer.apple.com/documentation/cloudkit/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CloudKit.symbols.json#L133",
+              "symbol" : "CKDatabase"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "cloudkit",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "commit" : "17F113",
+      "notes" : "CloudKit mirroring via NSPersistentCloudKitContainer.",
+      "package" : "https://developer.apple.com/documentation/coredata",
+      "packageName" : "CoreData",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 732,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L732",
+              "symbol" : "NSPersistentCloudKitContainer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "availability",
+              "line" : 732,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L732",
+              "symbol" : "NSPersistentCloudKitContainer"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 732,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L732",
+              "symbol" : "NSPersistentCloudKitContainer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 732,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L732",
+              "symbol" : "NSPersistentCloudKitContainer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 732,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L732",
+              "symbol" : "NSPersistentCloudKitContainer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 732,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L732",
+              "symbol" : "NSPersistentCloudKitContainer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 732,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L732",
+              "symbol" : "NSPersistentCloudKitContainer"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "coredata",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "commit" : "00a7465a0668a87fa159e779b9d80f1f9652357e",
+      "notes" : "Dedicated Defaults.iCloud namespace (add/remove/removeAll/waitForSyncCompletion) plus per-key opt-in via Key.init(iCloud:). Runtime sync additionally requires the app to have the iCloud key-value store entitlement; symbol surface is unconditional, hence confidence 0.85 rather than higher. linux left unknown per absence-evidence rules.",
+      "package" : "https://github.com/sindresorhus/defaults",
+      "packageName" : "defaults",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Defaults+iCloud.swift",
+              "kind" : "symbol",
+              "line" : 58,
+              "note" : "Synchronize values across devices using iCloud; no per-platform gaps recorded.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+iCloud.swift#L58",
+              "symbol" : "Defaults.iCloud"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+iCloud.swift",
+              "kind" : "symbol",
+              "line" : 87,
+              "note" : "Add keys to be automatically synced.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+iCloud.swift#L87",
+              "symbol" : "Defaults.iCloud.add"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+iCloud.swift",
+              "kind" : "symbol",
+              "line" : 138,
+              "note" : "Await completion of synchronization.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+iCloud.swift#L138",
+              "symbol" : "Defaults.iCloud.waitForSyncCompletion"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 114,
+              "note" : "Key initializer takes iCloud: Bool = false to opt a key into sync.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L114",
+              "symbol" : "Defaults.Key.init"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.15,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Manifest lists Apple platforms only (not absence evidence). Digest records no os() gaps, so unsupported cannot be claimed; iCloud sync is built on NSUbiquitousKeyValueStore and the file imports Combine/OSLog/UIKit-or-AppKit, making linux presence unverified and very doubtful.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Package.swift#L7"
+            },
+            {
+              "file" : "readme.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README Compatibility section lists macOS/iOS/tvOS/watchOS/visionOS only; linux never mentioned.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/readme.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Defaults+iCloud.swift",
+              "kind" : "symbol",
+              "line" : 58,
+              "note" : "No macCatalyst gap recorded in surface digest; decl resolves present.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+iCloud.swift#L58",
+              "symbol" : "Defaults.iCloud"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+iCloud.swift",
+              "kind" : "symbol",
+              "line" : 87,
+              "note" : "No macCatalyst gap recorded in surface digest; decl resolves present.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+iCloud.swift#L87",
+              "symbol" : "Defaults.iCloud.add"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "No explicit macCatalyst floor; Catalyst inherits the .iOS(.v14) floor by SwiftPM default. Confidence lowered accordingly.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Defaults+iCloud.swift",
+              "kind" : "symbol",
+              "line" : 58,
+              "note" : "Synchronize values across devices using iCloud; no per-platform gaps recorded.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+iCloud.swift#L58",
+              "symbol" : "Defaults.iCloud"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+iCloud.swift",
+              "kind" : "symbol",
+              "line" : 87,
+              "note" : "Add keys to be automatically synced.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+iCloud.swift#L87",
+              "symbol" : "Defaults.iCloud.add"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+iCloud.swift",
+              "kind" : "symbol",
+              "line" : 138,
+              "note" : "Await completion of synchronization.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+iCloud.swift#L138",
+              "symbol" : "Defaults.iCloud.waitForSyncCompletion"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Defaults+iCloud.swift",
+              "kind" : "symbol",
+              "line" : 58,
+              "note" : "Synchronize values across devices using iCloud; no per-platform gaps recorded.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+iCloud.swift#L58",
+              "symbol" : "Defaults.iCloud"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+iCloud.swift",
+              "kind" : "symbol",
+              "line" : 87,
+              "note" : "Add keys to be automatically synced.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+iCloud.swift#L87",
+              "symbol" : "Defaults.iCloud.add"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+iCloud.swift",
+              "kind" : "symbol",
+              "line" : 138,
+              "note" : "Await completion of synchronization.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+iCloud.swift#L138",
+              "symbol" : "Defaults.iCloud.waitForSyncCompletion"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Defaults+iCloud.swift",
+              "kind" : "symbol",
+              "line" : 58,
+              "note" : "Synchronize values across devices using iCloud; no per-platform gaps recorded.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+iCloud.swift#L58",
+              "symbol" : "Defaults.iCloud"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+iCloud.swift",
+              "kind" : "symbol",
+              "line" : 87,
+              "note" : "Add keys to be automatically synced.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+iCloud.swift#L87",
+              "symbol" : "Defaults.iCloud.add"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+iCloud.swift",
+              "kind" : "symbol",
+              "line" : 138,
+              "note" : "Await completion of synchronization.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+iCloud.swift#L138",
+              "symbol" : "Defaults.iCloud.waitForSyncCompletion"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Defaults+iCloud.swift",
+              "kind" : "symbol",
+              "line" : 58,
+              "note" : "Synchronize values across devices using iCloud; no per-platform gaps recorded. Manifest floor watchOS 9 matches NSUbiquitousKeyValueStore availability.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+iCloud.swift#L58",
+              "symbol" : "Defaults.iCloud"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+iCloud.swift",
+              "kind" : "symbol",
+              "line" : 87,
+              "note" : "Add keys to be automatically synced.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+iCloud.swift#L87",
+              "symbol" : "Defaults.iCloud.add"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+iCloud.swift",
+              "kind" : "symbol",
+              "line" : 138,
+              "note" : "Await completion of synchronization.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+iCloud.swift#L138",
+              "symbol" : "Defaults.iCloud.waitForSyncCompletion"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "defaults",
+      "version" : "9.0.9"
+    },
+    {
+      "commit" : "17F113",
+      "notes" : "CloudKit-backed sync via ModelConfiguration.CloudKitDatabase.",
+      "package" : "https://developer.apple.com/documentation/swiftdata",
+      "packageName" : "SwiftData",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 402,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L402",
+              "symbol" : "ModelConfiguration.CloudKitDatabase"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "availability",
+              "line" : 402,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L402",
+              "symbol" : "ModelConfiguration.CloudKitDatabase"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 402,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L402",
+              "symbol" : "ModelConfiguration.CloudKitDatabase"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 402,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L402",
+              "symbol" : "ModelConfiguration.CloudKitDatabase"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 402,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L402",
+              "symbol" : "ModelConfiguration.CloudKitDatabase"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 402,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L402",
+              "symbol" : "ModelConfiguration.CloudKitDatabase"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 402,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L402",
+              "symbol" : "ModelConfiguration.CloudKitDatabase"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swiftdata",
+      "version" : "Xcode 26.6"
+    }
+  ]
+}

@@ -1,0 +1,968 @@
+[
+  {
+    "capability" : {
+      "id" : "storage.cloud-sync",
+      "label" : "Cloud sync"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "CloudKit mirroring via NSPersistentCloudKitContainer.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/coredata",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "CoreData",
+      "surfaceDigest" : "fnv1a64:0fd32772cfc4231d",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 732,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentCloudKitContainer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "availability",
+            "line" : 732,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentCloudKitContainer"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 732,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentCloudKitContainer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 732,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentCloudKitContainer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 732,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentCloudKitContainer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 732,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentCloudKitContainer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 732,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentCloudKitContainer"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.document-store",
+      "label" : "Object / document store"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Managed object-graph persistence (NSPersistentContainer).",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/coredata",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "CoreData",
+      "surfaceDigest" : "fnv1a64:0fd32772cfc4231d",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 801,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentContainer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "availability",
+            "line" : 801,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentContainer"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 801,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentContainer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 801,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentContainer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 801,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentContainer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 801,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentContainer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 801,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentContainer"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.encryption",
+      "label" : "Database encryption"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Data Protection (file-protection) encryption at rest; the key is absent from the macOS SDK — macOS stores are not file-protected this way.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/coredata",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "CoreData",
+      "surfaceDigest" : "fnv1a64:0fd32772cfc4231d",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 976,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentStoreFileProtectionKey"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "availability",
+            "line" : 976,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentStoreFileProtectionKey"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 976,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentStoreFileProtectionKey"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "absent from the macOS SDK symbol graphs",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "availability",
+            "line" : 976,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentStoreFileProtectionKey"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 976,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentStoreFileProtectionKey"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 976,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentStoreFileProtectionKey"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 976,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSPersistentStoreFileProtectionKey"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.in-memory",
+      "label" : "In-memory database"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "NSInMemoryStoreType persistent store.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/coredata",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "CoreData",
+      "surfaceDigest" : "fnv1a64:0fd32772cfc4231d",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 424,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSInMemoryStoreType"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "availability",
+            "line" : 424,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSInMemoryStoreType"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 424,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSInMemoryStoreType"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 424,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSInMemoryStoreType"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 424,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSInMemoryStoreType"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 424,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSInMemoryStoreType"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 424,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSInMemoryStoreType"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.migrations",
+      "label" : "Schema migrations"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Model versioning + NSMigrationManager / mapping models.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/coredata",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "CoreData",
+      "surfaceDigest" : "fnv1a64:0fd32772cfc4231d",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 702,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSMigrationManager"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "availability",
+            "line" : 702,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSMigrationManager"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 702,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSMigrationManager"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 702,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSMigrationManager"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 702,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSMigrationManager"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 702,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSMigrationManager"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 702,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSMigrationManager"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.observation",
+      "label" : "Reactive queries / change tracking"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "NSFetchedResultsController change tracking for UI.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/coredata",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "CoreData",
+      "surfaceDigest" : "fnv1a64:0fd32772cfc4231d",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 394,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSFetchedResultsController"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "availability",
+            "line" : 394,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSFetchedResultsController"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 394,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSFetchedResultsController"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 394,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSFetchedResultsController"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 394,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSFetchedResultsController"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 394,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSFetchedResultsController"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 394,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSFetchedResultsController"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.query-builder",
+      "label" : "Type-safe queries"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "NSFetchRequest + NSPredicate typed fetches.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/coredata",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "CoreData",
+      "surfaceDigest" : "fnv1a64:0fd32772cfc4231d",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 323,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSFetchRequest"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "availability",
+            "line" : 323,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSFetchRequest"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 323,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSFetchRequest"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 323,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSFetchRequest"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 323,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSFetchRequest"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 323,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSFetchRequest"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+            "kind" : "symbol",
+            "line" : 323,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NSFetchRequest"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

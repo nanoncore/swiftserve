@@ -1,0 +1,2918 @@
+[
+  {
+    "capability" : {
+      "id" : "storage.codable",
+      "label" : "Codable persistence"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Coding.swift surfaces Encodable insert/insertMany/upsert/update and Decodable Row.decode; all unconditional.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/stephencelis/sqlite.swift",
+      "commit" : "964c300fb0736699ce945c9edb56ecd62eba27a3",
+      "firstParty" : false,
+      "name" : "sqlite.swift",
+      "surfaceDigest" : "fnv1a64:4e48c224eaf269c3",
+      "version" : "0.16.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 87,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insertMany"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 123,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.upsert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 161,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Row.decode"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 39,
+            "note" : "Package.swift declares a iOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 87,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insertMany"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 123,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.upsert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 161,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Row.decode"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 31,
+            "note" : "Package.swift has an explicit #if os(Linux) branch enabling the SQLiteSwiftCSQLite default trait (bundled SQLite for Linux builds).",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 23,
+            "note" : "README: 'Works on Linux (with some limitations)'.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 87,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insertMany"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 123,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.upsert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 161,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Row.decode"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 38,
+            "note" : "Package.swift does not declare a macCatalyst floor, but all anchor symbols are unconditional (no platform gaps) in the extracted surface.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 87,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insertMany"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 123,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.upsert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 161,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Row.decode"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 40,
+            "note" : "Package.swift declares a macOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 87,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insertMany"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 123,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.upsert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 161,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Row.decode"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 42,
+            "note" : "Package.swift declares a tvOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 87,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insertMany"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 123,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.upsert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 161,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Row.decode"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 43,
+            "note" : "Package.swift declares a visionOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 87,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insertMany"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 123,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.upsert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Coding.swift",
+            "kind" : "symbol",
+            "line" : 161,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Row.decode"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 41,
+            "note" : "Package.swift declares a watchOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.encryption",
+      "label" : "Database encryption"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Entire Cipher.swift surface is gated behind the SQLCipher package trait (#if SQLCipher); no platform resolves the symbols unconditionally present, so no platform can be marked supported. All-conditional confidence cap 0.6 respected.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/stephencelis/sqlite.swift",
+      "commit" : "964c300fb0736699ce945c9edb56ecd62eba27a3",
+      "firstParty" : false,
+      "name" : "sqlite.swift",
+      "surfaceDigest" : "fnv1a64:4e48c224eaf269c3",
+      "version" : "0.16.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.55,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 66,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.key"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.rekey"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 113,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.sqlcipher_export"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 11,
+            "note" : "SQLCipher product is linked only .when(platforms: applePlatforms, traits: [\"SQLCipher\"]); iOS is in applePlatforms, so encryption works when the SQLCipher trait is enabled — conditional, hence unknown.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "linux" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 66,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.key"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.rekey"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 113,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.sqlcipher_export"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 11,
+            "note" : "The SQLCipher dependency is linked only on Apple platforms, so the trait-gated Cipher API is unlikely to be functional on Linux — but manifest scoping is not absence evidence, so status stays unknown.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.4,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 66,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.key"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.rekey"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 113,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.sqlcipher_export"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 3,
+            "note" : "applePlatforms ([.iOS, .macOS, .watchOS, .tvOS, .visionOS]) does not list .macCatalyst; whether the SQLCipher product condition extends to Catalyst is unclear.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macOS" : {
+        "confidence" : 0.55,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 66,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.key"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.rekey"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 113,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.sqlcipher_export"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 11,
+            "note" : "SQLCipher product is linked only .when(platforms: applePlatforms, traits: [\"SQLCipher\"]); macOS is in applePlatforms, so encryption works when the SQLCipher trait is enabled — conditional, hence unknown.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "tvOS" : {
+        "confidence" : 0.55,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 66,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.key"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.rekey"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 113,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.sqlcipher_export"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 11,
+            "note" : "SQLCipher product is linked only .when(platforms: applePlatforms, traits: [\"SQLCipher\"]); tvOS is in applePlatforms, so encryption works when the SQLCipher trait is enabled — conditional, hence unknown.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.55,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 66,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.key"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.rekey"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 113,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.sqlcipher_export"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 11,
+            "note" : "SQLCipher product is linked only .when(platforms: applePlatforms, traits: [\"SQLCipher\"]); visionOS is in applePlatforms, so encryption works when the SQLCipher trait is enabled — conditional, hence unknown.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.55,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 66,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.key"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.rekey"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Sources/SQLite/Extensions/Cipher.swift",
+            "kind" : "symbol",
+            "line" : 113,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.sqlcipher_export"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLCipher",
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 11,
+            "note" : "SQLCipher product is linked only .when(platforms: applePlatforms, traits: [\"SQLCipher\"]); watchOS is in applePlatforms, so encryption works when the SQLCipher trait is enabled — conditional, hence unknown.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.full-text-search",
+      "label" : "Full-text search"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "FTS4/FTS5 Swift API is unconditional in the surface. Runtime availability of the FTS module depends on the linked SQLite build: the manifest's FTS5 trait is only supported with the bundled SQLiteSwiftCSQLite; system SQLite on Apple platforms ships FTS support per OS version.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/stephencelis/sqlite.swift",
+      "commit" : "964c300fb0736699ce945c9edb56ecd62eba27a3",
+      "firstParty" : false,
+      "name" : "sqlite.swift",
+      "surfaceDigest" : "fnv1a64:4e48c224eaf269c3",
+      "version" : "0.16.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS5.swift",
+            "kind" : "symbol",
+            "line" : 35,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS5Config"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 255,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS4Config"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS5.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Module.FTS5"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 54,
+            "note" : null,
+            "package" : null,
+            "symbol" : "VirtualTable.match"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 39,
+            "note" : "Package.swift declares a iOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS5.swift",
+            "kind" : "symbol",
+            "line" : 35,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS5Config"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 255,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS4Config"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS5.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Module.FTS5"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 54,
+            "note" : null,
+            "package" : null,
+            "symbol" : "VirtualTable.match"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 31,
+            "note" : "Package.swift has an explicit #if os(Linux) branch enabling the SQLiteSwiftCSQLite default trait (bundled SQLite for Linux builds).",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 23,
+            "note" : "README: 'Works on Linux (with some limitations)'.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS5.swift",
+            "kind" : "symbol",
+            "line" : 35,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS5Config"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 255,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS4Config"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS5.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Module.FTS5"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 54,
+            "note" : null,
+            "package" : null,
+            "symbol" : "VirtualTable.match"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 38,
+            "note" : "Package.swift does not declare a macCatalyst floor, but all anchor symbols are unconditional (no platform gaps) in the extracted surface.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS5.swift",
+            "kind" : "symbol",
+            "line" : 35,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS5Config"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 255,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS4Config"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS5.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Module.FTS5"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 54,
+            "note" : null,
+            "package" : null,
+            "symbol" : "VirtualTable.match"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 40,
+            "note" : "Package.swift declares a macOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS5.swift",
+            "kind" : "symbol",
+            "line" : 35,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS5Config"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 255,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS4Config"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS5.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Module.FTS5"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 54,
+            "note" : null,
+            "package" : null,
+            "symbol" : "VirtualTable.match"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 42,
+            "note" : "Package.swift declares a tvOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS5.swift",
+            "kind" : "symbol",
+            "line" : 35,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS5Config"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 255,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS4Config"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS5.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Module.FTS5"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 54,
+            "note" : null,
+            "package" : null,
+            "symbol" : "VirtualTable.match"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 43,
+            "note" : "Package.swift declares a visionOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS5.swift",
+            "kind" : "symbol",
+            "line" : 35,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS5Config"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 255,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS4Config"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS5.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Module.FTS5"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Extensions/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 54,
+            "note" : null,
+            "package" : null,
+            "symbol" : "VirtualTable.match"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 41,
+            "note" : "Package.swift declares a watchOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.in-memory",
+      "label" : "In-memory database"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Connection.Location.inMemory is an unconditional enum case and the default Connection location.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/stephencelis/sqlite.swift",
+      "commit" : "964c300fb0736699ce945c9edb56ecd62eba27a3",
+      "firstParty" : false,
+      "name" : "sqlite.swift",
+      "surfaceDigest" : "fnv1a64:4e48c224eaf269c3",
+      "version" : "0.16.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.Location.inMemory"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 106,
+            "note" : "init(_ location: Location = .inMemory, readonly: Bool = false) throws — in-memory is the default location.",
+            "package" : null,
+            "symbol" : "Connection.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 39,
+            "note" : "Package.swift declares a iOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.Location.inMemory"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 106,
+            "note" : "init(_ location: Location = .inMemory, readonly: Bool = false) throws — in-memory is the default location.",
+            "package" : null,
+            "symbol" : "Connection.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 31,
+            "note" : "Package.swift has an explicit #if os(Linux) branch enabling the SQLiteSwiftCSQLite default trait (bundled SQLite for Linux builds).",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 23,
+            "note" : "README: 'Works on Linux (with some limitations)'.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.Location.inMemory"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 106,
+            "note" : "init(_ location: Location = .inMemory, readonly: Bool = false) throws — in-memory is the default location.",
+            "package" : null,
+            "symbol" : "Connection.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 38,
+            "note" : "Package.swift does not declare a macCatalyst floor, but all anchor symbols are unconditional (no platform gaps) in the extracted surface.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.Location.inMemory"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 106,
+            "note" : "init(_ location: Location = .inMemory, readonly: Bool = false) throws — in-memory is the default location.",
+            "package" : null,
+            "symbol" : "Connection.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 40,
+            "note" : "Package.swift declares a macOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.Location.inMemory"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 106,
+            "note" : "init(_ location: Location = .inMemory, readonly: Bool = false) throws — in-memory is the default location.",
+            "package" : null,
+            "symbol" : "Connection.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 42,
+            "note" : "Package.swift declares a tvOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.Location.inMemory"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 106,
+            "note" : "init(_ location: Location = .inMemory, readonly: Bool = false) throws — in-memory is the default location.",
+            "package" : null,
+            "symbol" : "Connection.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 43,
+            "note" : "Package.swift declares a visionOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.Location.inMemory"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 106,
+            "note" : "init(_ location: Location = .inMemory, readonly: Bool = false) throws — in-memory is the default location.",
+            "package" : null,
+            "symbol" : "Connection.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 41,
+            "note" : "Package.swift declares a watchOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.migrations",
+      "label" : "Schema migrations"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Genuinely surfaced but modest in scope: user_version pragma helper (Connection.userVersion) plus SchemaChanger for ALTER-style schema changes. No versioned migration runner/registry; confidence reduced accordingly.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/stephencelis/sqlite.swift",
+      "commit" : "964c300fb0736699ce945c9edb56ecd62eba27a3",
+      "firstParty" : false,
+      "name" : "sqlite.swift",
+      "surfaceDigest" : "fnv1a64:4e48c224eaf269c3",
+      "version" : "0.16.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection+Pragmas.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.userVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 198,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger.alter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 227,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger.run"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 39,
+            "note" : "Package.swift declares a iOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection+Pragmas.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.userVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 198,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger.alter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 227,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger.run"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 31,
+            "note" : "Package.swift has an explicit #if os(Linux) branch enabling the SQLiteSwiftCSQLite default trait (bundled SQLite for Linux builds).",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 23,
+            "note" : "README: 'Works on Linux (with some limitations)'.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection+Pragmas.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.userVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 198,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger.alter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 227,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger.run"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 38,
+            "note" : "Package.swift does not declare a macCatalyst floor, but all anchor symbols are unconditional (no platform gaps) in the extracted surface.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection+Pragmas.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.userVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 198,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger.alter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 227,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger.run"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 40,
+            "note" : "Package.swift declares a macOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection+Pragmas.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.userVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 198,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger.alter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 227,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger.run"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 42,
+            "note" : "Package.swift declares a tvOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection+Pragmas.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.userVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 198,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger.alter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 227,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger.run"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 43,
+            "note" : "Package.swift declares a visionOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection+Pragmas.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.userVersion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 29,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 198,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger.alter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+            "kind" : "symbol",
+            "line" : 227,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaChanger.run"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 41,
+            "note" : "Package.swift declares a watchOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.query-builder",
+      "label" : "Type-safe queries"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Typed query DSL (Table/Expression/QueryType) is the package's headline feature; all anchors unconditional in the surface.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/stephencelis/sqlite.swift",
+      "commit" : "964c300fb0736699ce945c9edb56ecd62eba27a3",
+      "firstParty" : false,
+      "name" : "sqlite.swift",
+      "surfaceDigest" : "fnv1a64:4e48c224eaf269c3",
+      "version" : "0.16.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 881,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Table"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Expression.swift",
+            "kind" : "symbol",
+            "line" : 56,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Expression"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 314,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.filter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 695,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaType.select"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 39,
+            "note" : "Package.swift declares a iOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 881,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Table"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Expression.swift",
+            "kind" : "symbol",
+            "line" : 56,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Expression"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 314,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.filter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 695,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaType.select"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 31,
+            "note" : "Package.swift has an explicit #if os(Linux) branch enabling the SQLiteSwiftCSQLite default trait (bundled SQLite for Linux builds).",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 23,
+            "note" : "README: 'Works on Linux (with some limitations)'.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 881,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Table"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Expression.swift",
+            "kind" : "symbol",
+            "line" : 56,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Expression"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 314,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.filter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 695,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaType.select"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 38,
+            "note" : "Package.swift does not declare a macCatalyst floor, but all anchor symbols are unconditional (no platform gaps) in the extracted surface.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 881,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Table"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Expression.swift",
+            "kind" : "symbol",
+            "line" : 56,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Expression"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 314,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.filter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 695,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaType.select"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 40,
+            "note" : "Package.swift declares a macOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 881,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Table"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Expression.swift",
+            "kind" : "symbol",
+            "line" : 56,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Expression"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 314,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.filter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 695,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaType.select"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 42,
+            "note" : "Package.swift declares a tvOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 881,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Table"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Expression.swift",
+            "kind" : "symbol",
+            "line" : 56,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Expression"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 314,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.filter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 695,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaType.select"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 43,
+            "note" : "Package.swift declares a visionOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 881,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Table"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Expression.swift",
+            "kind" : "symbol",
+            "line" : 56,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Expression"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 314,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.filter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 695,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryType.insert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Typed/Query.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaType.select"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 41,
+            "note" : "Package.swift declares a watchOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.sqlite",
+      "label" : "SQLite access"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Core SQLite wrapper (Connection/Statement) is unconditional across the extracted surface. Digest truncated at 800/968 decls and 1 ObjC file unparsed; anchors verified in the digest.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/stephencelis/sqlite.swift",
+      "commit" : "964c300fb0736699ce945c9edb56ecd62eba27a3",
+      "firstParty" : false,
+      "name" : "sqlite.swift",
+      "surfaceDigest" : "fnv1a64:4e48c224eaf269c3",
+      "version" : "0.16.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 38,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 189,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.prepare"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.run"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 290,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.scalar"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Statement.swift",
+            "kind" : "symbol",
+            "line" : 36,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Statement"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 39,
+            "note" : "Package.swift declares a iOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 38,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 189,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.prepare"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.run"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 290,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.scalar"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Statement.swift",
+            "kind" : "symbol",
+            "line" : 36,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Statement"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 31,
+            "note" : "Package.swift has an explicit #if os(Linux) branch enabling the SQLiteSwiftCSQLite default trait (bundled SQLite for Linux builds).",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 23,
+            "note" : "README: 'Works on Linux (with some limitations)'.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 38,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 189,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.prepare"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.run"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 290,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.scalar"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Statement.swift",
+            "kind" : "symbol",
+            "line" : 36,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Statement"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 38,
+            "note" : "Package.swift does not declare a macCatalyst floor, but all anchor symbols are unconditional (no platform gaps) in the extracted surface.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 38,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 189,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.prepare"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.run"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 290,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.scalar"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Statement.swift",
+            "kind" : "symbol",
+            "line" : 36,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Statement"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 40,
+            "note" : "Package.swift declares a macOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 38,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 189,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.prepare"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.run"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 290,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.scalar"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Statement.swift",
+            "kind" : "symbol",
+            "line" : 36,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Statement"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 42,
+            "note" : "Package.swift declares a tvOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 38,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 189,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.prepare"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.run"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 290,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.scalar"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Statement.swift",
+            "kind" : "symbol",
+            "line" : 36,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Statement"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 43,
+            "note" : "Package.swift declares a visionOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 38,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 189,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.prepare"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 233,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.run"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Connection.swift",
+            "kind" : "symbol",
+            "line" : 290,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Connection.scalar"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SQLite/Core/Statement.swift",
+            "kind" : "symbol",
+            "line" : 36,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Statement"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 41,
+            "note" : "Package.swift declares a watchOS platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

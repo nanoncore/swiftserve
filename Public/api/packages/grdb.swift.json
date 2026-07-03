@@ -1,0 +1,2994 @@
+[
+  {
+    "capability" : {
+      "id" : "storage.codable",
+      "label" : "Codable persistence"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Codable bridging is first-class: FetchableRecordDecoder (the Decodable row decoder) plus the FetchableRecord / PersistableRecord / EncodableRecord protocols are unconditional on all platforms. Codable structs conforming to these protocols get persistence and fetching for free (as shown in the README quick start).",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/groue/grdb.swift",
+      "commit" : "b83108d10f42680d78f23fe4d4d80fc88dab3212",
+      "firstParty" : false,
+      "name" : "grdb.swift",
+      "surfaceDigest" : "fnv1a64:937b10415d6046f8",
+      "version" : "v7.11.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/FetchableRecord+Decodable.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchableRecordDecoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/FetchableRecord.swift",
+            "kind" : "symbol",
+            "line" : 110,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/PersistableRecord.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : null,
+            "package" : null,
+            "symbol" : "PersistableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/EncodableRecord.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "EncodableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 51,
+            "note" : "Package.swift declares iOS minimum .v13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/FetchableRecord+Decodable.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchableRecordDecoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/FetchableRecord.swift",
+            "kind" : "symbol",
+            "line" : 110,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/PersistableRecord.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : null,
+            "package" : null,
+            "symbol" : "PersistableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/EncodableRecord.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "EncodableRecord"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/FetchableRecord+Decodable.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchableRecordDecoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/FetchableRecord.swift",
+            "kind" : "symbol",
+            "line" : 110,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/PersistableRecord.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : null,
+            "package" : null,
+            "symbol" : "PersistableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/EncodableRecord.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "EncodableRecord"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/FetchableRecord+Decodable.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchableRecordDecoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/FetchableRecord.swift",
+            "kind" : "symbol",
+            "line" : 110,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/PersistableRecord.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : null,
+            "package" : null,
+            "symbol" : "PersistableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/EncodableRecord.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "EncodableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 52,
+            "note" : "Package.swift declares macOS minimum .v10_15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/FetchableRecord+Decodable.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchableRecordDecoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/FetchableRecord.swift",
+            "kind" : "symbol",
+            "line" : 110,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/PersistableRecord.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : null,
+            "package" : null,
+            "symbol" : "PersistableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/EncodableRecord.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "EncodableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 53,
+            "note" : "Package.swift declares tvOS minimum .v13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/FetchableRecord+Decodable.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchableRecordDecoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/FetchableRecord.swift",
+            "kind" : "symbol",
+            "line" : 110,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/PersistableRecord.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : null,
+            "package" : null,
+            "symbol" : "PersistableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/EncodableRecord.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "EncodableRecord"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/FetchableRecord+Decodable.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchableRecordDecoder"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/FetchableRecord.swift",
+            "kind" : "symbol",
+            "line" : 110,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/PersistableRecord.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : null,
+            "package" : null,
+            "symbol" : "PersistableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/EncodableRecord.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "EncodableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 54,
+            "note" : "Package.swift declares watchOS minimum .v7",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.concurrency",
+      "label" : "Concurrent access"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "WAL-based DatabasePool (anchored via DatabasePool.path; the class decl itself fell outside the truncated digest), DatabaseSnapshot and reader/writer protocols are unconditional on all platforms. DatabasePool.makeSnapshotPool is gated behind SQLITE_ENABLE_SNAPSHOT && !SQLITE_DISABLE_SNAPSHOT, and Package.swift defines SQLITE_DISABLE_SNAPSHOT on .linux (Package.swift:19), so snapshot pools are unavailable on Linux — a peripheral feature; core concurrent access remains, with Linux confidence reduced accordingly.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/groue/grdb.swift",
+      "commit" : "b83108d10f42680d78f23fe4d4d80fc88dab3212",
+      "firstParty" : false,
+      "name" : "grdb.swift",
+      "surfaceDigest" : "fnv1a64:937b10415d6046f8",
+      "version" : "v7.11.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabasePool.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabasePool.path"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseSnapshot.swift",
+            "kind" : "symbol",
+            "line" : 77,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseSnapshot"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseReader.swift",
+            "kind" : "symbol",
+            "line" : 713,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseSnapshotReader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseWriter.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseWriter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 51,
+            "note" : "Package.swift declares iOS minimum .v13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabasePool.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabasePool.path"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseSnapshot.swift",
+            "kind" : "symbol",
+            "line" : 77,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseSnapshot"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseReader.swift",
+            "kind" : "symbol",
+            "line" : 713,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseSnapshotReader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseWriter.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseWriter"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabasePool.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabasePool.path"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseSnapshot.swift",
+            "kind" : "symbol",
+            "line" : 77,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseSnapshot"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseReader.swift",
+            "kind" : "symbol",
+            "line" : 713,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseSnapshotReader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseWriter.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseWriter"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabasePool.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabasePool.path"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseSnapshot.swift",
+            "kind" : "symbol",
+            "line" : 77,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseSnapshot"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseReader.swift",
+            "kind" : "symbol",
+            "line" : 713,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseSnapshotReader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseWriter.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseWriter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 52,
+            "note" : "Package.swift declares macOS minimum .v10_15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabasePool.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabasePool.path"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseSnapshot.swift",
+            "kind" : "symbol",
+            "line" : 77,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseSnapshot"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseReader.swift",
+            "kind" : "symbol",
+            "line" : 713,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseSnapshotReader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseWriter.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseWriter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 53,
+            "note" : "Package.swift declares tvOS minimum .v13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabasePool.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabasePool.path"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseSnapshot.swift",
+            "kind" : "symbol",
+            "line" : 77,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseSnapshot"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseReader.swift",
+            "kind" : "symbol",
+            "line" : 713,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseSnapshotReader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseWriter.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseWriter"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabasePool.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabasePool.path"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseSnapshot.swift",
+            "kind" : "symbol",
+            "line" : 77,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseSnapshot"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseReader.swift",
+            "kind" : "symbol",
+            "line" : 713,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseSnapshotReader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseWriter.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseWriter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 54,
+            "note" : "Package.swift declares watchOS minimum .v7",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.encryption",
+      "label" : "Database encryption"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "SQLCipher API (usePassphrase, changePassphrase, SQLCipher log configuration) exists in the surface but every declaration is gated behind SQLITE_HAS_CODEC, which the standard SwiftPM build never defines; encryption requires a SQLCipher-enabled distribution (e.g. the GRDB.swift/SQLCipher CocoaPods flavor or a custom build). No platform has an unconditionally present encryption symbol, so status is unknown on all platforms with all-conditional evidence (confidence capped at 0.6).",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/groue/grdb.swift",
+      "commit" : "b83108d10f42680d78f23fe4d4d80fc88dab3212",
+      "firstParty" : false,
+      "name" : "grdb.swift",
+      "surfaceDigest" : "fnv1a64:937b10415d6046f8",
+      "version" : "v7.11.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.5,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 99,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.usePassphrase"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 128,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.changePassphrase"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 16,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.SQLCipherLogTarget"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "linux" : {
+        "confidence" : 0.5,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 99,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.usePassphrase"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 128,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.changePassphrase"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 16,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.SQLCipherLogTarget"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.5,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 99,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.usePassphrase"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 128,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.changePassphrase"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 16,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.SQLCipherLogTarget"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macOS" : {
+        "confidence" : 0.5,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 99,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.usePassphrase"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 128,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.changePassphrase"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 16,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.SQLCipherLogTarget"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "tvOS" : {
+        "confidence" : 0.5,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 99,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.usePassphrase"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 128,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.changePassphrase"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 16,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.SQLCipherLogTarget"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.5,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 99,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.usePassphrase"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 128,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.changePassphrase"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 16,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.SQLCipherLogTarget"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.5,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 99,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.usePassphrase"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 128,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.changePassphrase"
+          },
+          {
+            "availability" : null,
+            "condition" : "SQLITE_HAS_CODEC",
+            "file" : "GRDB/Core/Database+SQLCipher.swift",
+            "kind" : "symbol",
+            "line" : 16,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.SQLCipherLogTarget"
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.full-text-search",
+      "label" : "Full-text search"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "FTS3/FTS4 virtual table modules and pattern API are unconditional on every platform. FTS5 (FTS5 struct, FTS5Pattern, tokenizers) is entirely gated behind SQLITE_ENABLE_FTS5 and is only available with custom SQLite / SQLCipher builds; supported status here rests on FTS3/FTS4. Linux confidence lower because runtime FTS availability depends on the linked system SQLite build.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/groue/grdb.swift",
+      "commit" : "b83108d10f42680d78f23fe4d4d80fc88dab3212",
+      "firstParty" : false,
+      "name" : "grdb.swift",
+      "surfaceDigest" : "fnv1a64:937b10415d6046f8",
+      "version" : "v7.11.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS4"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3Pattern.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3Pattern"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3TableDefinition"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 51,
+            "note" : "Package.swift declares iOS minimum .v13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS4"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3Pattern.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3Pattern"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3TableDefinition"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS4"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3Pattern.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3Pattern"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3TableDefinition"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS4"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3Pattern.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3Pattern"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3TableDefinition"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 52,
+            "note" : "Package.swift declares macOS minimum .v10_15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS4"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3Pattern.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3Pattern"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3TableDefinition"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 53,
+            "note" : "Package.swift declares tvOS minimum .v13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS4"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3Pattern.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3Pattern"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3TableDefinition"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS4.swift",
+            "kind" : "symbol",
+            "line" : 22,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS4"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3Pattern.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3Pattern"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/FTS/FTS3.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FTS3TableDefinition"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 54,
+            "note" : "Package.swift declares watchOS minimum .v7",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.in-memory",
+      "label" : "In-memory database"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "GRDB documents in-memory databases (DatabaseQueue(named:) / DatabaseQueue() in the checkout at GRDB/Core/DatabaseQueue.swift), but no DatabaseQueue declaration made it into the truncated surface digest (800/2706 decls), so no symbol anchor is available. README-only evidence: status unknown, confidence capped at 0.3.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/groue/grdb.swift",
+      "commit" : "b83108d10f42680d78f23fe4d4d80fc88dab3212",
+      "firstParty" : false,
+      "name" : "grdb.swift",
+      "surfaceDigest" : "fnv1a64:937b10415d6046f8",
+      "version" : "v7.11.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 423,
+            "note" : "README: 'Database queues support in-memory databases' (v7.11.1 README.md line 423)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "linux" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 423,
+            "note" : "README: 'Database queues support in-memory databases' (v7.11.1 README.md line 423)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 423,
+            "note" : "README: 'Database queues support in-memory databases' (v7.11.1 README.md line 423)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 423,
+            "note" : "README: 'Database queues support in-memory databases' (v7.11.1 README.md line 423)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "tvOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 423,
+            "note" : "README: 'Database queues support in-memory databases' (v7.11.1 README.md line 423)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 423,
+            "note" : "README: 'Database queues support in-memory databases' (v7.11.1 README.md line 423)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 423,
+            "note" : "README: 'Database queues support in-memory databases' (v7.11.1 README.md line 423)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.migrations",
+      "label" : "Schema migrations"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "DatabaseMigrator is unconditional on all platforms. Only the Combine convenience DatabaseMigrator.migratePublisher (DatabaseMigrator.swift:678, canImport(Combine)) is absent on Linux; that is a peripheral convenience and does not affect the core migration capability.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/groue/grdb.swift",
+      "commit" : "b83108d10f42680d78f23fe4d4d80fc88dab3212",
+      "firstParty" : false,
+      "name" : "grdb.swift",
+      "surfaceDigest" : "fnv1a64:937b10415d6046f8",
+      "version" : "v7.11.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Migration/DatabaseMigrator.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseMigrator"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Migration/DatabaseMigrator.swift",
+            "kind" : "symbol",
+            "line" : 50,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseMigrator.ForeignKeyChecks"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 51,
+            "note" : "Package.swift declares iOS minimum .v13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Migration/DatabaseMigrator.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseMigrator"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Migration/DatabaseMigrator.swift",
+            "kind" : "symbol",
+            "line" : 50,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseMigrator.ForeignKeyChecks"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Migration/DatabaseMigrator.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseMigrator"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Migration/DatabaseMigrator.swift",
+            "kind" : "symbol",
+            "line" : 50,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseMigrator.ForeignKeyChecks"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Migration/DatabaseMigrator.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseMigrator"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Migration/DatabaseMigrator.swift",
+            "kind" : "symbol",
+            "line" : 50,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseMigrator.ForeignKeyChecks"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 52,
+            "note" : "Package.swift declares macOS minimum .v10_15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Migration/DatabaseMigrator.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseMigrator"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Migration/DatabaseMigrator.swift",
+            "kind" : "symbol",
+            "line" : 50,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseMigrator.ForeignKeyChecks"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 53,
+            "note" : "Package.swift declares tvOS minimum .v13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Migration/DatabaseMigrator.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseMigrator"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Migration/DatabaseMigrator.swift",
+            "kind" : "symbol",
+            "line" : 50,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseMigrator.ForeignKeyChecks"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Migration/DatabaseMigrator.swift",
+            "kind" : "symbol",
+            "line" : 48,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseMigrator"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Migration/DatabaseMigrator.swift",
+            "kind" : "symbol",
+            "line" : 50,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseMigrator.ForeignKeyChecks"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 54,
+            "note" : "Package.swift declares watchOS minimum .v7",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.observation",
+      "label" : "Reactive queries / change tracking"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "ValueObservation machinery (shared/async observation, schedulers) and transaction observation types are unconditional on all platforms. Combine publishers (ValueObservation.publisher, DatabaseRegionObservation.publisher, canImport(Combine)) are absent on Linux, but async-sequence and callback observation remain. The ValueObservation base type itself is not in the truncated digest (800/2706 decls); anchors are its sibling observation types, hence confidence slightly reduced.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/groue/grdb.swift",
+      "commit" : "b83108d10f42680d78f23fe4d4d80fc88dab3212",
+      "firstParty" : false,
+      "name" : "grdb.swift",
+      "surfaceDigest" : "fnv1a64:937b10415d6046f8",
+      "version" : "v7.11.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/ValueObservation/SharedValueObservation.swift",
+            "kind" : "symbol",
+            "line" : 167,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SharedValueObservation"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/ValueObservation/ValueObservation.swift",
+            "kind" : "symbol",
+            "line" : 382,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AsyncValueObservation"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/TransactionObserver.swift",
+            "kind" : "symbol",
+            "line" : 757,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseEventObservationStrategy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/TransactionObserver.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.TransactionObservationExtent"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 51,
+            "note" : "Package.swift declares iOS minimum .v13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/ValueObservation/SharedValueObservation.swift",
+            "kind" : "symbol",
+            "line" : 167,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SharedValueObservation"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/ValueObservation/ValueObservation.swift",
+            "kind" : "symbol",
+            "line" : 382,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AsyncValueObservation"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/TransactionObserver.swift",
+            "kind" : "symbol",
+            "line" : 757,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseEventObservationStrategy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/TransactionObserver.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.TransactionObservationExtent"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/ValueObservation/SharedValueObservation.swift",
+            "kind" : "symbol",
+            "line" : 167,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SharedValueObservation"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/ValueObservation/ValueObservation.swift",
+            "kind" : "symbol",
+            "line" : 382,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AsyncValueObservation"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/TransactionObserver.swift",
+            "kind" : "symbol",
+            "line" : 757,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseEventObservationStrategy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/TransactionObserver.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.TransactionObservationExtent"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/ValueObservation/SharedValueObservation.swift",
+            "kind" : "symbol",
+            "line" : 167,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SharedValueObservation"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/ValueObservation/ValueObservation.swift",
+            "kind" : "symbol",
+            "line" : 382,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AsyncValueObservation"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/TransactionObserver.swift",
+            "kind" : "symbol",
+            "line" : 757,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseEventObservationStrategy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/TransactionObserver.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.TransactionObservationExtent"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 52,
+            "note" : "Package.swift declares macOS minimum .v10_15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/ValueObservation/SharedValueObservation.swift",
+            "kind" : "symbol",
+            "line" : 167,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SharedValueObservation"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/ValueObservation/ValueObservation.swift",
+            "kind" : "symbol",
+            "line" : 382,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AsyncValueObservation"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/TransactionObserver.swift",
+            "kind" : "symbol",
+            "line" : 757,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseEventObservationStrategy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/TransactionObserver.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.TransactionObservationExtent"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 53,
+            "note" : "Package.swift declares tvOS minimum .v13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/ValueObservation/SharedValueObservation.swift",
+            "kind" : "symbol",
+            "line" : 167,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SharedValueObservation"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/ValueObservation/ValueObservation.swift",
+            "kind" : "symbol",
+            "line" : 382,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AsyncValueObservation"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/TransactionObserver.swift",
+            "kind" : "symbol",
+            "line" : 757,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseEventObservationStrategy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/TransactionObserver.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.TransactionObservationExtent"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/ValueObservation/SharedValueObservation.swift",
+            "kind" : "symbol",
+            "line" : 167,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SharedValueObservation"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/ValueObservation/ValueObservation.swift",
+            "kind" : "symbol",
+            "line" : 382,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AsyncValueObservation"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/TransactionObserver.swift",
+            "kind" : "symbol",
+            "line" : 757,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseEventObservationStrategy"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/TransactionObserver.swift",
+            "kind" : "symbol",
+            "line" : 153,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.TransactionObservationExtent"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 54,
+            "note" : "Package.swift declares watchOS minimum .v7",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.query-builder",
+      "label" : "Type-safe queries"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Query interface DSL (QueryInterfaceRequest, Column, TableRecord) and type-safe SQLRequest are unconditional on all platforms in the surface. A few peripheral request methods (e.g. QueryInterfaceRequest.deleteAndFetchStatement) are gated behind GRDBCUSTOMSQLITE || SQLITE_HAS_CODEC; the core builder is not.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/groue/grdb.swift",
+      "commit" : "b83108d10f42680d78f23fe4d4d80fc88dab3212",
+      "firstParty" : false,
+      "name" : "grdb.swift",
+      "surfaceDigest" : "fnv1a64:937b10415d6046f8",
+      "version" : "v7.11.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/QueryInterface/Request/QueryInterfaceRequest.swift",
+            "kind" : "symbol",
+            "line" : 98,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryInterfaceRequest"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/QueryInterface/SQL/Column.swift",
+            "kind" : "symbol",
+            "line" : 126,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Column"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/TableRecord.swift",
+            "kind" : "symbol",
+            "line" : 137,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/SQLRequest.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SQLRequest"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 51,
+            "note" : "Package.swift declares iOS minimum .v13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/QueryInterface/Request/QueryInterfaceRequest.swift",
+            "kind" : "symbol",
+            "line" : 98,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryInterfaceRequest"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/QueryInterface/SQL/Column.swift",
+            "kind" : "symbol",
+            "line" : 126,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Column"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/TableRecord.swift",
+            "kind" : "symbol",
+            "line" : 137,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/SQLRequest.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SQLRequest"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/QueryInterface/Request/QueryInterfaceRequest.swift",
+            "kind" : "symbol",
+            "line" : 98,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryInterfaceRequest"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/QueryInterface/SQL/Column.swift",
+            "kind" : "symbol",
+            "line" : 126,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Column"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/TableRecord.swift",
+            "kind" : "symbol",
+            "line" : 137,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/SQLRequest.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SQLRequest"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/QueryInterface/Request/QueryInterfaceRequest.swift",
+            "kind" : "symbol",
+            "line" : 98,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryInterfaceRequest"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/QueryInterface/SQL/Column.swift",
+            "kind" : "symbol",
+            "line" : 126,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Column"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/TableRecord.swift",
+            "kind" : "symbol",
+            "line" : 137,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/SQLRequest.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SQLRequest"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 52,
+            "note" : "Package.swift declares macOS minimum .v10_15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/QueryInterface/Request/QueryInterfaceRequest.swift",
+            "kind" : "symbol",
+            "line" : 98,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryInterfaceRequest"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/QueryInterface/SQL/Column.swift",
+            "kind" : "symbol",
+            "line" : 126,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Column"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/TableRecord.swift",
+            "kind" : "symbol",
+            "line" : 137,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/SQLRequest.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SQLRequest"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 53,
+            "note" : "Package.swift declares tvOS minimum .v13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/QueryInterface/Request/QueryInterfaceRequest.swift",
+            "kind" : "symbol",
+            "line" : 98,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryInterfaceRequest"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/QueryInterface/SQL/Column.swift",
+            "kind" : "symbol",
+            "line" : 126,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Column"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/TableRecord.swift",
+            "kind" : "symbol",
+            "line" : 137,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/SQLRequest.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SQLRequest"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/QueryInterface/Request/QueryInterfaceRequest.swift",
+            "kind" : "symbol",
+            "line" : 98,
+            "note" : null,
+            "package" : null,
+            "symbol" : "QueryInterfaceRequest"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/QueryInterface/SQL/Column.swift",
+            "kind" : "symbol",
+            "line" : 126,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Column"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Record/TableRecord.swift",
+            "kind" : "symbol",
+            "line" : 137,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TableRecord"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/SQLRequest.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SQLRequest"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 54,
+            "note" : "Package.swift declares watchOS minimum .v7",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.sqlite",
+      "label" : "SQLite access"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Core SQLite access API (Database, execute, reader/writer protocols) is unconditional across the surface. Package.swift declares iOS 13 / macOS 10.15 / tvOS 13 / watchOS 7 floors and explicitly configures the .linux platform (SQLITE_DISABLE_SNAPSHOT define, Package.swift:19), so Linux is a maintained platform. Digest truncated (800/2706 decls) and 9 ObjC files unparsed; confidence held below cap accordingly.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/groue/grdb.swift",
+      "commit" : "b83108d10f42680d78f23fe4d4d80fc88dab3212",
+      "firstParty" : false,
+      "name" : "grdb.swift",
+      "surfaceDigest" : "fnv1a64:937b10415d6046f8",
+      "version" : "v7.11.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/Database.swift",
+            "kind" : "symbol",
+            "line" : 146,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/Database+Statements.swift",
+            "kind" : "symbol",
+            "line" : 324,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseReader.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseReader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseWriter.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseWriter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 51,
+            "note" : "Package.swift declares iOS minimum .v13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/Database.swift",
+            "kind" : "symbol",
+            "line" : 146,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/Database+Statements.swift",
+            "kind" : "symbol",
+            "line" : 324,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseReader.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseReader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseWriter.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseWriter"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/Database.swift",
+            "kind" : "symbol",
+            "line" : 146,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/Database+Statements.swift",
+            "kind" : "symbol",
+            "line" : 324,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseReader.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseReader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseWriter.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseWriter"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/Database.swift",
+            "kind" : "symbol",
+            "line" : 146,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/Database+Statements.swift",
+            "kind" : "symbol",
+            "line" : 324,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseReader.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseReader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseWriter.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseWriter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 52,
+            "note" : "Package.swift declares macOS minimum .v10_15",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/Database.swift",
+            "kind" : "symbol",
+            "line" : 146,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/Database+Statements.swift",
+            "kind" : "symbol",
+            "line" : 324,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseReader.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseReader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseWriter.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseWriter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 53,
+            "note" : "Package.swift declares tvOS minimum .v13",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/Database.swift",
+            "kind" : "symbol",
+            "line" : 146,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/Database+Statements.swift",
+            "kind" : "symbol",
+            "line" : 324,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseReader.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseReader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseWriter.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseWriter"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/Database.swift",
+            "kind" : "symbol",
+            "line" : 146,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/Database+Statements.swift",
+            "kind" : "symbol",
+            "line" : 324,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Database.execute"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseReader.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseReader"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "GRDB/Core/DatabaseWriter.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DatabaseWriter"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 54,
+            "note" : "Package.swift declares watchOS minimum .v7",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

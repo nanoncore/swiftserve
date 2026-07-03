@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "domain": "ui",
+  "packages": [
+    {
+      "url": "https://github.com/airbnb/lottie-ios",
+      "name": "airbnb/lottie-ios",
+      "source": "seed",
+      "why": "vector animation anchor — visionOS support landed in 4.4 (truth-changed candidate)",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/snapkit/snapkit",
+      "name": "SnapKit/SnapKit",
+      "source": "seed",
+      "why": "the Auto Layout DSL anchor",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/emergetools/pow",
+      "name": "EmergeTools/Pow",
+      "source": "seed",
+      "why": "SwiftUI transition and motion effects",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/twostraws/vortex",
+      "name": "twostraws/Vortex",
+      "source": "seed",
+      "why": "SwiftUI particle effects",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/simibac/confettiswiftui",
+      "name": "simibac/ConfettiSwiftUI",
+      "source": "seed",
+      "why": "confetti effects in SwiftUI",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/danielgindi/charts",
+      "name": "danielgindi/Charts",
+      "source": "seed",
+      "why": "the charting giant (DGCharts)",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/gonzalezreal/swift-markdown-ui",
+      "name": "gonzalezreal/swift-markdown-ui",
+      "source": "seed",
+      "why": "MarkdownUI — GitHub-flavored Markdown in SwiftUI",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/danielsaidi/richtextkit",
+      "name": "danielsaidi/RichTextKit",
+      "source": "seed",
+      "why": "rich text editing for SwiftUI/UIKit/AppKit",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/scenee/floatingpanel",
+      "name": "scenee/FloatingPanel",
+      "source": "seed",
+      "why": "bottom sheet / floating panel",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/omaralbeik/drops",
+      "name": "omaralbeik/Drops",
+      "source": "seed",
+      "why": "toast banners",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/exyte/popupview",
+      "name": "exyte/PopupView",
+      "source": "seed",
+      "why": "popups and toasts in SwiftUI",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/siteline/swiftui-introspect",
+      "name": "siteline/SwiftUI-Introspect",
+      "source": "seed",
+      "why": "introspection — reach the underlying UIKit/AppKit views",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/csolanam/skeletonui",
+      "name": "CSolanaM/SkeletonUI",
+      "source": "seed",
+      "why": "skeleton loading in SwiftUI",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/fermoya/swiftuipager",
+      "name": "fermoya/SwiftUIPager",
+      "source": "seed",
+      "why": "paging / carousel in SwiftUI",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/relatedcode/progresshud",
+      "name": "relatedcode/ProgressHUD",
+      "source": "seed",
+      "why": "Swift-native progress HUD",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/globulus/swiftui-pull-to-refresh",
+      "name": "globulus/swiftui-pull-to-refresh",
+      "source": "seed",
+      "why": "pull to refresh for SwiftUI",
+      "companionOf": null
+    }
+  ]
+}

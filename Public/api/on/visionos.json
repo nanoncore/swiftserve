@@ -67,6 +67,63 @@
     {
       "capabilities" : [
         {
+          "id" : "storage.cloud-sync",
+          "label" : "Cloud sync"
+        }
+      ],
+      "name" : "CloudKit",
+      "slug" : "cloudkit",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "capabilities" : [
+        {
+          "id" : "storage.cloud-sync",
+          "label" : "Cloud sync"
+        },
+        {
+          "id" : "storage.document-store",
+          "label" : "Object / document store"
+        },
+        {
+          "id" : "storage.encryption",
+          "label" : "Database encryption"
+        },
+        {
+          "id" : "storage.in-memory",
+          "label" : "In-memory database"
+        },
+        {
+          "id" : "storage.migrations",
+          "label" : "Schema migrations"
+        },
+        {
+          "id" : "storage.observation",
+          "label" : "Reactive queries / change tracking"
+        },
+        {
+          "id" : "storage.query-builder",
+          "label" : "Type-safe queries"
+        }
+      ],
+      "name" : "CoreData",
+      "slug" : "coredata",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "capabilities" : [
+        {
+          "id" : "ui.haptics",
+          "label" : "Haptic feedback"
+        }
+      ],
+      "name" : "CoreHaptics",
+      "slug" : "corehaptics",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "capabilities" : [
+        {
           "floor" : "visionOS 1.0+",
           "id" : "midi.io",
           "label" : "MIDI input/output"
@@ -91,6 +148,17 @@
     {
       "capabilities" : [
         {
+          "id" : "storage.keychain",
+          "label" : "Keychain storage"
+        }
+      ],
+      "name" : "Security",
+      "slug" : "security",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "capabilities" : [
+        {
           "floor" : "visionOS 1.0+",
           "id" : "audio.classification",
           "label" : "Sound classification"
@@ -98,6 +166,37 @@
       ],
       "name" : "SoundAnalysis",
       "slug" : "soundanalysis",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "capabilities" : [
+        {
+          "id" : "storage.cloud-sync",
+          "label" : "Cloud sync"
+        },
+        {
+          "id" : "storage.document-store",
+          "label" : "Object / document store"
+        },
+        {
+          "id" : "storage.in-memory",
+          "label" : "In-memory database"
+        },
+        {
+          "id" : "storage.migrations",
+          "label" : "Schema migrations"
+        },
+        {
+          "id" : "storage.observation",
+          "label" : "Reactive queries / change tracking"
+        },
+        {
+          "id" : "storage.query-builder",
+          "label" : "Type-safe queries"
+        }
+      ],
+      "name" : "SwiftData",
+      "slug" : "swiftdata",
       "version" : "Xcode 26.6"
     }
   ],
@@ -1072,6 +1171,732 @@
       ]
     },
     {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "CloudKit",
+        "CoreData",
+        "SwiftData"
+      ],
+      "id" : "storage.cloud-sync",
+      "label" : "Cloud sync",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/storage.cloud-sync/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "defaults",
+          "slug" : "defaults",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "storage.codable",
+      "label" : "Codable persistence",
+      "packages" : 6,
+      "supported" : 6,
+      "truthTable" : "/can/storage.codable/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "blackbird",
+          "slug" : "blackbird",
+          "status" : "supported"
+        },
+        {
+          "name" : "boutique",
+          "slug" : "boutique",
+          "status" : "supported"
+        },
+        {
+          "name" : "cache",
+          "slug" : "cache",
+          "status" : "supported"
+        },
+        {
+          "name" : "defaults",
+          "slug" : "defaults",
+          "status" : "supported"
+        },
+        {
+          "name" : "grdb.swift",
+          "slug" : "grdb.swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "sqlite.swift",
+          "slug" : "sqlite.swift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "storage.concurrency",
+      "label" : "Concurrent access",
+      "packages" : 3,
+      "supported" : 3,
+      "truthTable" : "/can/storage.concurrency/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "blackbird",
+          "slug" : "blackbird",
+          "status" : "supported"
+        },
+        {
+          "name" : "fluent-sqlite-driver",
+          "slug" : "fluent-sqlite-driver",
+          "status" : "supported"
+        },
+        {
+          "name" : "grdb.swift",
+          "slug" : "grdb.swift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "storage.disk-cache",
+      "label" : "Disk caching",
+      "packages" : 2,
+      "supported" : 2,
+      "truthTable" : "/can/storage.disk-cache/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "boutique",
+          "slug" : "boutique",
+          "status" : "supported"
+        },
+        {
+          "name" : "cache",
+          "slug" : "cache",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "CoreData",
+        "SwiftData"
+      ],
+      "id" : "storage.document-store",
+      "label" : "Object / document store",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/storage.document-store/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "realm-swift",
+          "slug" : "realm-swift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "CoreData"
+      ],
+      "id" : "storage.encryption",
+      "label" : "Database encryption",
+      "packages" : 3,
+      "supported" : 0,
+      "truthTable" : "/can/storage.encryption/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "grdb.swift",
+          "slug" : "grdb.swift",
+          "status" : "unknown"
+        },
+        {
+          "name" : "realm-swift",
+          "slug" : "realm-swift",
+          "status" : "unknown"
+        },
+        {
+          "name" : "sqlite.swift",
+          "slug" : "sqlite.swift",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "storage.full-text-search",
+      "label" : "Full-text search",
+      "packages" : 2,
+      "supported" : 2,
+      "truthTable" : "/can/storage.full-text-search/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "grdb.swift",
+          "slug" : "grdb.swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "sqlite.swift",
+          "slug" : "sqlite.swift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "CoreData",
+        "SwiftData"
+      ],
+      "id" : "storage.in-memory",
+      "label" : "In-memory database",
+      "packages" : 6,
+      "supported" : 5,
+      "truthTable" : "/can/storage.in-memory/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "blackbird",
+          "slug" : "blackbird",
+          "status" : "supported"
+        },
+        {
+          "name" : "boutique",
+          "slug" : "boutique",
+          "status" : "supported"
+        },
+        {
+          "name" : "cache",
+          "slug" : "cache",
+          "status" : "supported"
+        },
+        {
+          "name" : "fluent-sqlite-driver",
+          "slug" : "fluent-sqlite-driver",
+          "status" : "supported"
+        },
+        {
+          "name" : "sqlite.swift",
+          "slug" : "sqlite.swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "grdb.swift",
+          "slug" : "grdb.swift",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "storage.key-value",
+      "label" : "Key-value storage",
+      "packages" : 3,
+      "supported" : 3,
+      "truthTable" : "/can/storage.key-value/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "boutique",
+          "slug" : "boutique",
+          "status" : "supported"
+        },
+        {
+          "name" : "cache",
+          "slug" : "cache",
+          "status" : "supported"
+        },
+        {
+          "name" : "defaults",
+          "slug" : "defaults",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "Security"
+      ],
+      "id" : "storage.keychain",
+      "label" : "Keychain storage",
+      "packages" : 3,
+      "supported" : 3,
+      "truthTable" : "/can/storage.keychain/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "boutique",
+          "slug" : "boutique",
+          "status" : "supported"
+        },
+        {
+          "name" : "keychainaccess",
+          "slug" : "keychainaccess",
+          "status" : "supported"
+        },
+        {
+          "name" : "valet",
+          "slug" : "valet",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "CoreData",
+        "SwiftData"
+      ],
+      "id" : "storage.migrations",
+      "label" : "Schema migrations",
+      "packages" : 5,
+      "supported" : 5,
+      "truthTable" : "/can/storage.migrations/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "blackbird",
+          "slug" : "blackbird",
+          "status" : "supported"
+        },
+        {
+          "name" : "fluent",
+          "slug" : "fluent",
+          "status" : "supported"
+        },
+        {
+          "name" : "grdb.swift",
+          "slug" : "grdb.swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "realm-swift",
+          "slug" : "realm-swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "sqlite.swift",
+          "slug" : "sqlite.swift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "CoreData",
+        "SwiftData"
+      ],
+      "id" : "storage.observation",
+      "label" : "Reactive queries / change tracking",
+      "packages" : 6,
+      "supported" : 6,
+      "truthTable" : "/can/storage.observation/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "blackbird",
+          "slug" : "blackbird",
+          "status" : "supported"
+        },
+        {
+          "name" : "boutique",
+          "slug" : "boutique",
+          "status" : "supported"
+        },
+        {
+          "name" : "cache",
+          "slug" : "cache",
+          "status" : "supported"
+        },
+        {
+          "name" : "defaults",
+          "slug" : "defaults",
+          "status" : "supported"
+        },
+        {
+          "name" : "grdb.swift",
+          "slug" : "grdb.swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "realm-swift",
+          "slug" : "realm-swift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "CoreData",
+        "SwiftData"
+      ],
+      "id" : "storage.query-builder",
+      "label" : "Type-safe queries",
+      "packages" : 5,
+      "supported" : 5,
+      "truthTable" : "/can/storage.query-builder/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "blackbird",
+          "slug" : "blackbird",
+          "status" : "supported"
+        },
+        {
+          "name" : "fluent",
+          "slug" : "fluent",
+          "status" : "supported"
+        },
+        {
+          "name" : "grdb.swift",
+          "slug" : "grdb.swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "realm-swift",
+          "slug" : "realm-swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "sqlite.swift",
+          "slug" : "sqlite.swift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "storage.sqlite",
+      "label" : "SQLite access",
+      "packages" : 4,
+      "supported" : 4,
+      "truthTable" : "/can/storage.sqlite/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "blackbird",
+          "slug" : "blackbird",
+          "status" : "supported"
+        },
+        {
+          "name" : "fluent-sqlite-driver",
+          "slug" : "fluent-sqlite-driver",
+          "status" : "supported"
+        },
+        {
+          "name" : "grdb.swift",
+          "slug" : "grdb.swift",
+          "status" : "supported"
+        },
+        {
+          "name" : "sqlite.swift",
+          "slug" : "sqlite.swift",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.autolayout-dsl",
+      "label" : "Auto Layout DSL",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/ui.autolayout-dsl/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "snapkit",
+          "slug" : "snapkit",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.bottom-sheet",
+      "label" : "Bottom sheets",
+      "packages" : 2,
+      "supported" : 0,
+      "truthTable" : "/can/ui.bottom-sheet/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "floatingpanel",
+          "slug" : "floatingpanel",
+          "status" : "unknown"
+        },
+        {
+          "name" : "popupview",
+          "slug" : "popupview",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.charts",
+      "label" : "Charts",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/ui.charts/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "charts",
+          "slug" : "charts",
+          "status" : "unsupported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : true,
+      "builtInNames" : [
+        "CoreHaptics"
+      ],
+      "id" : "ui.haptics",
+      "label" : "Haptic feedback",
+      "packages" : 2,
+      "supported" : 0,
+      "truthTable" : "/can/ui.haptics/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "pow",
+          "slug" : "pow",
+          "status" : "unsupported"
+        },
+        {
+          "name" : "confettiswiftui",
+          "slug" : "confettiswiftui",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.markdown-rendering",
+      "label" : "Markdown rendering",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/ui.markdown-rendering/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "swift-markdown-ui",
+          "slug" : "swift-markdown-ui",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.pager",
+      "label" : "Paging / carousel",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/ui.pager/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "swiftuipager",
+          "slug" : "swiftuipager",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.particle-effects",
+      "label" : "Particle effects",
+      "packages" : 3,
+      "supported" : 3,
+      "truthTable" : "/can/ui.particle-effects/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "confettiswiftui",
+          "slug" : "confettiswiftui",
+          "status" : "supported"
+        },
+        {
+          "name" : "pow",
+          "slug" : "pow",
+          "status" : "supported"
+        },
+        {
+          "name" : "vortex",
+          "slug" : "vortex",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.progress-hud",
+      "label" : "Loading indicators",
+      "packages" : 2,
+      "supported" : 0,
+      "truthTable" : "/can/ui.progress-hud/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "progresshud",
+          "slug" : "progresshud",
+          "status" : "unknown"
+        },
+        {
+          "name" : "swiftui-pull-to-refresh",
+          "slug" : "swiftui-pull-to-refresh",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.pull-to-refresh",
+      "label" : "Pull to refresh",
+      "packages" : 1,
+      "supported" : 0,
+      "truthTable" : "/can/ui.pull-to-refresh/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "swiftui-pull-to-refresh",
+          "slug" : "swiftui-pull-to-refresh",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.rich-text",
+      "label" : "Rich text editing",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/ui.rich-text/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "richtextkit",
+          "slug" : "richtextkit",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.skeleton-loading",
+      "label" : "Skeleton loading",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/ui.skeleton-loading/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "skeletonui",
+          "slug" : "skeletonui",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.toast",
+      "label" : "Toasts / banners",
+      "packages" : 3,
+      "supported" : 1,
+      "truthTable" : "/can/ui.toast/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "popupview",
+          "slug" : "popupview",
+          "status" : "supported"
+        },
+        {
+          "name" : "drops",
+          "slug" : "drops",
+          "status" : "unsupported"
+        },
+        {
+          "name" : "progresshud",
+          "slug" : "progresshud",
+          "status" : "unknown"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.transition-effects",
+      "label" : "View transitions / motion effects",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/ui.transition-effects/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "pow",
+          "slug" : "pow",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
+      "builtInCovers" : false,
+      "builtInNames" : [
+
+      ],
+      "id" : "ui.vector-animation",
+      "label" : "Vector animation playback",
+      "packages" : 1,
+      "supported" : 1,
+      "truthTable" : "/can/ui.vector-animation/?on=visionOS",
+      "verdicts" : [
+        {
+          "name" : "lottie-ios",
+          "slug" : "lottie-ios",
+          "status" : "supported"
+        }
+      ]
+    },
+    {
       "builtInCovers" : false,
       "builtInNames" : [
 
@@ -1208,6 +2033,42 @@
     }
   ],
   "fenced" : [
+    {
+      "fences" : [
+        {
+          "capability" : "ui.charts",
+          "capabilityLabel" : "Charts",
+          "compilerProven" : false,
+          "receipt" : "#if os(iOS) || os(tvOS) — Core NSUIView shim (base class of every chart view) exists only under os(iOS) || os(tvOS); surface digest marks visionOS absent.",
+          "worksOn" : [
+            "iOS",
+            "macOS",
+            "tvOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "charts",
+      "slug" : "charts",
+      "version" : "5.1.0"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "ui.toast",
+          "capabilityLabel" : "Toasts / banners",
+          "compilerProven" : false,
+          "receipt" : "#if os(iOS) — Core Drops class is guarded by #if os(iOS); os(iOS) is false when compiling for the visionOS SDK, and the surface digest resolves visionOS as absent (gap).",
+          "worksOn" : [
+            "iOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "drops",
+      "slug" : "drops",
+      "version" : "1.7.0"
+    },
     {
       "fences" : [
         {
@@ -1381,6 +2242,23 @@
       "name" : "Player",
       "slug" : "player",
       "version" : "0.15.0"
+    },
+    {
+      "fences" : [
+        {
+          "capability" : "ui.haptics",
+          "capabilityLabel" : "Haptic feedback",
+          "compilerProven" : false,
+          "receipt" : "#if os(iOS) — Core haptics symbol is guarded by #if os(iOS); surface digest gaps mark visionOS absent.",
+          "worksOn" : [
+            "iOS",
+            "macCatalyst"
+          ]
+        }
+      ],
+      "name" : "pow",
+      "slug" : "pow",
+      "version" : "1.0.6"
     },
     {
       "fences" : [
@@ -1626,11 +2504,11 @@
   "schemaVersion" : 1,
   "stats" : {
     "conditional" : 0,
-    "packages" : 76,
-    "records" : 114,
-    "supported" : 80,
-    "unknown" : 8,
-    "unsupported" : 26
+    "packages" : 107,
+    "records" : 201,
+    "supported" : 153,
+    "unknown" : 19,
+    "unsupported" : 29
   },
   "unknowns" : [
     {
@@ -1639,6 +2517,33 @@
       "name" : "CAAudioHardware",
       "slug" : "caaudiohardware",
       "why" : "manifest declares macOS only"
+    },
+    {
+      "capability" : "ui.haptics",
+      "capabilityLabel" : "Haptic feedback",
+      "name" : "confettiswiftui",
+      "slug" : "confettiswiftui",
+      "why" : "hapticFeedback parameter is present, but checkout source excludes visionOS from haptic playback via an internal !os(visionOS) guard not visible in the public surface; likely a no-op."
+    },
+    {
+      "capability" : "ui.bottom-sheet",
+      "capabilityLabel" : "Bottom sheets",
+      "name" : "floatingpanel",
+      "slug" : "floatingpanel",
+      "why" : "Manifest declares only .iOS(.v12). Digest records no visionOS gaps, but Sources/Extensions.swift uses UIScreen.main unconditionally (UIScreen is unavailable on visionOS), so a visionOS build is doubtful; no guard evidence either way."
+    },
+    {
+      "capability" : "storage.encryption",
+      "capabilityLabel" : "Database encryption",
+      "name" : "grdb.swift",
+      "slug" : "grdb.swift"
+    },
+    {
+      "capability" : "storage.in-memory",
+      "capabilityLabel" : "In-memory database",
+      "name" : "grdb.swift",
+      "slug" : "grdb.swift",
+      "why" : "README: 'Database queues support in-memory databases' (v7.11.1 README.md line 423)"
     },
     {
       "capability" : "image.webp",
@@ -1655,6 +2560,34 @@
       "why" : "empty manifest"
     },
     {
+      "capability" : "ui.bottom-sheet",
+      "capabilityLabel" : "Bottom sheets",
+      "name" : "popupview",
+      "slug" : "popupview",
+      "why" : "Public decl present per surface digest, but internal sheet implementation is os(iOS)-gated (os(iOS) is false on native visionOS); no visionOS floor in manifest"
+    },
+    {
+      "capability" : "ui.progress-hud",
+      "capabilityLabel" : "Loading indicators",
+      "name" : "progresshud",
+      "slug" : "progresshud",
+      "why" : "Only .iOS(.v17) declared; SwiftUI-based target might compile for visionOS but nothing in the surface or manifest confirms it."
+    },
+    {
+      "capability" : "ui.toast",
+      "capabilityLabel" : "Toasts / banners",
+      "name" : "progresshud",
+      "slug" : "progresshud",
+      "why" : "Only .iOS(.v17) declared; SwiftUI-based target might compile for visionOS but nothing confirms it."
+    },
+    {
+      "capability" : "storage.encryption",
+      "capabilityLabel" : "Database encryption",
+      "name" : "realm-swift",
+      "slug" : "realm-swift",
+      "why" : "README 'Fully Encrypted' section demonstrates Realm.Configuration(encryptionKey: key) with a 64-byte key ('Data can be encrypted in-flight and at-rest'). README does not name visionOS."
+    },
+    {
       "capability" : "image.async-loading",
       "capabilityLabel" : "Async image loading",
       "name" : "SDWebImage",
@@ -1669,11 +2602,32 @@
       "why" : "manifest declares macOS only"
     },
     {
+      "capability" : "storage.encryption",
+      "capabilityLabel" : "Database encryption",
+      "name" : "sqlite.swift",
+      "slug" : "sqlite.swift",
+      "why" : "SQLCipher product is linked only .when(platforms: applePlatforms, traits: [\"SQLCipher\"]); visionOS is in applePlatforms, so encryption works when the SQLCipher trait is enabled — conditional, hence unknown."
+    },
+    {
       "capability" : "audio.codec.opus",
       "capabilityLabel" : "Opus encoding/decoding",
       "name" : "swift-opus",
       "slug" : "swift-opus",
       "why" : "visionOS absent from manifest floors (package predates it)"
+    },
+    {
+      "capability" : "ui.progress-hud",
+      "capabilityLabel" : "Loading indicators",
+      "name" : "swiftui-pull-to-refresh",
+      "slug" : "swiftui-pull-to-refresh",
+      "why" : "Surface parses PRESENT and the referenced UIKit types are generally available on visionOS, but there is no visionOS-specific evidence or build verdict."
+    },
+    {
+      "capability" : "ui.pull-to-refresh",
+      "capabilityLabel" : "Pull to refresh",
+      "name" : "swiftui-pull-to-refresh",
+      "slug" : "swiftui-pull-to-refresh",
+      "why" : "Surface parses PRESENT and the SwiftUI+UIKit types used are generally available on visionOS, so compilation is plausible, but there is no visionOS-specific evidence or build verdict."
     },
     {
       "capability" : "speech.stt",

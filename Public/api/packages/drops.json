@@ -1,0 +1,220 @@
+[
+  {
+    "capability" : {
+      "id" : "ui.toast",
+      "label" : "Toasts / banners"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Entire public surface (44/44 decls) sits behind #if os(iOS). Supported claims (iOS, macCatalyst) are therefore all-conditional and capped at 0.6 confidence. Unsupported claims use the os(iOS) guard as absence evidence per digest gaps.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/omaralbeik/drops",
+      "commit" : "a183ee6f79f21c940092a19c2cba756555422371",
+      "firstParty" : false,
+      "name" : "drops",
+      "surfaceDigest" : "fnv1a64:bfdd9dab4a6dc4c8",
+      "version" : "1.7.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Drops.swift",
+            "kind" : "symbol",
+            "line" : 41,
+            "note" : "Core show API for presenting a drop (toast/banner); guarded by #if os(iOS), which holds on iOS.",
+            "package" : null,
+            "symbol" : "Drops.show"
+          },
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Drop.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : "The drop model (title/subtitle/icon/position/duration) — the toast payload; present on iOS.",
+            "package" : null,
+            "symbol" : "Drop"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 30,
+            "note" : "Package.swift declares platforms: [.iOS(.v13)]; README states iOS 13+. Secondary evidence only.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Drops.swift",
+            "kind" : "guard",
+            "line" : 30,
+            "note" : "Core Drops class is guarded by #if os(iOS); surface digest resolves linux as absent (gap) for this decl.",
+            "package" : null,
+            "symbol" : "Drops"
+          },
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Drop.swift",
+            "kind" : "guard",
+            "line" : 28,
+            "note" : "Drop model guarded by #if os(iOS); linux marked absent. All 44 public decls carry this guard (UIKit-based) — no surface exists on Linux.",
+            "package" : null,
+            "symbol" : "Drop"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.5,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Drops.swift",
+            "kind" : "symbol",
+            "line" : 41,
+            "note" : "os(iOS) evaluates true under Mac Catalyst; the surface digest records no macCatalyst gap for this decl, so the show API resolves present there.",
+            "package" : null,
+            "symbol" : "Drops.show"
+          },
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Drop.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : "Drop model present under Mac Catalyst (no gap recorded; os(iOS) holds on Catalyst). Manifest does not name Catalyst, so confidence held below the 0.6 conditional cap.",
+            "package" : null,
+            "symbol" : "Drop"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Drops.swift",
+            "kind" : "guard",
+            "line" : 30,
+            "note" : "Core Drops class is guarded by #if os(iOS); surface digest resolves macOS as absent (gap) for this decl.",
+            "package" : null,
+            "symbol" : "Drops"
+          },
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Drop.swift",
+            "kind" : "guard",
+            "line" : 28,
+            "note" : "Drop model guarded by #if os(iOS); macOS marked absent. All 44 public decls carry this guard — no surface exists on macOS.",
+            "package" : null,
+            "symbol" : "Drop"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Drops.swift",
+            "kind" : "guard",
+            "line" : 30,
+            "note" : "Core Drops class is guarded by #if os(iOS); surface digest resolves tvOS as absent (gap) for this decl.",
+            "package" : null,
+            "symbol" : "Drops"
+          },
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Drop.swift",
+            "kind" : "guard",
+            "line" : 28,
+            "note" : "Drop model guarded by #if os(iOS); tvOS marked absent. All 44 public decls carry this guard — no surface exists on tvOS.",
+            "package" : null,
+            "symbol" : "Drop"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Drops.swift",
+            "kind" : "guard",
+            "line" : 30,
+            "note" : "Core Drops class is guarded by #if os(iOS); os(iOS) is false when compiling for the visionOS SDK, and the surface digest resolves visionOS as absent (gap).",
+            "package" : null,
+            "symbol" : "Drops"
+          },
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Drop.swift",
+            "kind" : "guard",
+            "line" : 28,
+            "note" : "Drop model guarded by #if os(iOS); visionOS marked absent. All 44 public decls carry this guard — no surface exists on native visionOS (iOS-compatibility mode aside).",
+            "package" : null,
+            "symbol" : "Drop"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Drops.swift",
+            "kind" : "guard",
+            "line" : 30,
+            "note" : "Core Drops class is guarded by #if os(iOS); surface digest resolves watchOS as absent (gap) for this decl.",
+            "package" : null,
+            "symbol" : "Drops"
+          },
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Drop.swift",
+            "kind" : "guard",
+            "line" : 28,
+            "note" : "Drop model guarded by #if os(iOS); watchOS marked absent. All 44 public decls carry this guard — no surface exists on watchOS.",
+            "package" : null,
+            "symbol" : "Drop"
+          }
+        ],
+        "status" : "unsupported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

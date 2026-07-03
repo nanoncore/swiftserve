@@ -1,0 +1,280 @@
+[
+  {
+    "capability" : {
+      "id" : "storage.keychain",
+      "label" : "Keychain storage"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Core capability of the package. Extraction blind spot: 2 ObjC files unparsed (Swift-only extraction), so confidence is held below the 0.95 cap. SecureEnclaveValet/SinglePromptSecureEnclaveValet variants carry tvOS/watchOS gaps, but plain Valet keychain read/write is unconditional across the surface.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/square/valet",
+      "commit" : "246baf6be3f9e3ff116dc05251a08f69dd7c7b9d",
+      "firstParty" : false,
+      "name" : "valet",
+      "surfaceDigest" : "fnv1a64:a2a491698026afca",
+      "version" : "5.1.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Valet/Valet.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : "Core class, doc: 'Reads and writes keychain elements.' Unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "Valet"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Valet/Valet.swift",
+            "kind" : "symbol",
+            "line" : 248,
+            "note" : "Keychain write API, present on all platforms per surface digest.",
+            "package" : null,
+            "symbol" : "Valet.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Valet/Valet.swift",
+            "kind" : "symbol",
+            "line" : 270,
+            "note" : "Keychain read API, present on all platforms per surface digest.",
+            "package" : null,
+            "symbol" : "Valet.object"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Manifest declares .iOS(.v12).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Linux is not declared in the manifest (not absence evidence per rules). Core decls carry no os() guards so they resolve textually present on linux, but the Keychain depends on Apple's Security framework and Swift-parse extraction cannot establish Linux compilability. No guard/availability evidence of absence exists, so status stays unknown.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Valet/Valet.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : "Core class resolves PRESENT on macCatalyst (no gap); Catalyst builds from the unguarded iOS surface.",
+            "package" : null,
+            "symbol" : "Valet"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Valet/Valet.swift",
+            "kind" : "symbol",
+            "line" : 248,
+            "note" : "Keychain write API, present on all platforms per surface digest.",
+            "package" : null,
+            "symbol" : "Valet.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "No explicit macCatalyst floor; iOS 12 floor covers Catalyst builds.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Valet/Valet.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : "Core class, unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "Valet"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Valet/Valet.swift",
+            "kind" : "symbol",
+            "line" : 248,
+            "note" : "Keychain write API, present on all platforms per surface digest.",
+            "package" : null,
+            "symbol" : "Valet.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : "os(macOS)",
+            "file" : "Sources/Valet/Valet.swift",
+            "kind" : "symbol",
+            "line" : 525,
+            "note" : "macOS-only keychain migration API corroborates first-class macOS keychain support.",
+            "package" : null,
+            "symbol" : "Valet.migrateObjectsFromPreCatalina"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 12,
+            "note" : "Manifest declares .macOS(.v10_13).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Valet/Valet.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : "Core class, unconditional, no platform gaps. Secure Enclave variants are tvOS-gapped, but plain Valet keychain access is not.",
+            "package" : null,
+            "symbol" : "Valet"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Valet/Valet.swift",
+            "kind" : "symbol",
+            "line" : 248,
+            "note" : "Keychain write API, present on all platforms per surface digest.",
+            "package" : null,
+            "symbol" : "Valet.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Manifest declares .tvOS(.v12).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Valet/Valet.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : "Core class resolves PRESENT on visionOS (no gap). The extractor models visionOS explicitly (conditional decls elsewhere list it), so absence of a gap here is meaningful.",
+            "package" : null,
+            "symbol" : "Valet"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Valet/Valet.swift",
+            "kind" : "symbol",
+            "line" : 248,
+            "note" : "Keychain write API, present on all platforms per surface digest.",
+            "package" : null,
+            "symbol" : "Valet.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "No visionOS floor declared in Package.swift; confidence lowered accordingly.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Valet/Valet.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : "Core class, unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "Valet"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Valet/Valet.swift",
+            "kind" : "symbol",
+            "line" : 248,
+            "note" : "Keychain write API, present on all platforms per surface digest.",
+            "package" : null,
+            "symbol" : "Valet.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 11,
+            "note" : "Manifest declares .watchOS(.v4).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

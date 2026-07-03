@@ -1,0 +1,213 @@
+{
+  "aliases" : [
+    "shimmer",
+    "placeholder loading",
+    "loading skeleton"
+  ],
+  "id" : "ui.skeleton-loading",
+  "label" : "Skeleton loading",
+  "packages" : [
+    {
+      "commit" : "f025e9ba5d051374d7344efa8859df5b9399a181",
+      "notes" : "Core skeleton-loading API (View.skeleton, SkeletonModifier, SkeletonList, SkeletonForEach, AnimationType/AppearanceType/ShapeType) is unconditional across the surface; the only os()-guarded decls are ancillary Image/NSImage initializer branches, not skeleton capability gates.",
+      "package" : "https://github.com/csolanam/skeletonui",
+      "packageName" : "skeletonui",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.95,
+          "evidence" : [
+            {
+              "file" : "Sources/SkeletonUI/Extensions/View+SkeletonModifier.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Primary skeleton API; unconditional decl, no platform gaps.",
+              "permalink" : "https://github.com/csolanam/skeletonui/blob/2.0.2/Sources/SkeletonUI/Extensions/View+SkeletonModifier.swift#L5",
+              "symbol" : "View.skeleton"
+            },
+            {
+              "file" : "Sources/SkeletonUI/Skeleton/SkeletonList.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "note" : "Skeleton list container; unconditional decl, no platform gaps.",
+              "permalink" : "https://github.com/csolanam/skeletonui/blob/2.0.2/Sources/SkeletonUI/Skeleton/SkeletonList.swift#L3",
+              "symbol" : "SkeletonList"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Manifest declares .iOS(.v13) platform floor.",
+              "permalink" : "https://github.com/csolanam/skeletonui/blob/2.0.2/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Manifest platforms list omits Linux and the package is pure SwiftUI (unavailable on Linux), but a missing manifest floor is not absence evidence and core skeleton symbols carry no os() guard excluding Linux; honest status is unknown.",
+              "permalink" : "https://github.com/csolanam/skeletonui/blob/2.0.2/Package.swift#L7"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/SkeletonUI/Extensions/View+SkeletonModifier.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Primary skeleton API; unconditional decl, no macCatalyst gap.",
+              "permalink" : "https://github.com/csolanam/skeletonui/blob/2.0.2/Sources/SkeletonUI/Extensions/View+SkeletonModifier.swift#L5",
+              "symbol" : "View.skeleton"
+            },
+            {
+              "file" : "Sources/SkeletonUI/Skeleton/SkeletonList.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "note" : "Skeleton list container; unconditional decl, no macCatalyst gap.",
+              "permalink" : "https://github.com/csolanam/skeletonui/blob/2.0.2/Sources/SkeletonUI/Skeleton/SkeletonList.swift#L3",
+              "symbol" : "SkeletonList"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "iOS 13 manifest floor applies to Mac Catalyst; no Catalyst-specific exclusions in the surface.",
+              "permalink" : "https://github.com/csolanam/skeletonui/blob/2.0.2/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SkeletonUI/Extensions/View+SkeletonModifier.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Primary skeleton API; unconditional decl, no platform gaps.",
+              "permalink" : "https://github.com/csolanam/skeletonui/blob/2.0.2/Sources/SkeletonUI/Extensions/View+SkeletonModifier.swift#L5",
+              "symbol" : "View.skeleton"
+            },
+            {
+              "file" : "Sources/SkeletonUI/Modifiers/SkeletonModifier.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "note" : "Core modifier type; unconditional decl, no platform gaps.",
+              "permalink" : "https://github.com/csolanam/skeletonui/blob/2.0.2/Sources/SkeletonUI/Modifiers/SkeletonModifier.swift#L4",
+              "symbol" : "SkeletonModifier"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 11,
+              "note" : "Manifest declares .macOS(.v10_15) platform floor; macOS-specific Image init branch (nsImage) exists in the surface.",
+              "permalink" : "https://github.com/csolanam/skeletonui/blob/2.0.2/Package.swift#L11"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SkeletonUI/Extensions/View+SkeletonModifier.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Primary skeleton API; unconditional decl, no platform gaps.",
+              "permalink" : "https://github.com/csolanam/skeletonui/blob/2.0.2/Sources/SkeletonUI/Extensions/View+SkeletonModifier.swift#L5",
+              "symbol" : "View.skeleton"
+            },
+            {
+              "file" : "Sources/SkeletonUI/Skeleton/SkeletonList.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "note" : "Skeleton list container; unconditional decl, no platform gaps.",
+              "permalink" : "https://github.com/csolanam/skeletonui/blob/2.0.2/Sources/SkeletonUI/Skeleton/SkeletonList.swift#L3",
+              "symbol" : "SkeletonList"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Manifest declares .tvOS(.v13) platform floor.",
+              "permalink" : "https://github.com/csolanam/skeletonui/blob/2.0.2/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/SkeletonUI/Extensions/View+SkeletonModifier.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Primary skeleton API; unconditional decl, no visionOS gap.",
+              "permalink" : "https://github.com/csolanam/skeletonui/blob/2.0.2/Sources/SkeletonUI/Extensions/View+SkeletonModifier.swift#L5",
+              "symbol" : "View.skeleton"
+            },
+            {
+              "file" : "Sources/SkeletonUI/Modifiers/SkeletonModifier.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "note" : "Core modifier type; unconditional decl, no visionOS gap.",
+              "permalink" : "https://github.com/csolanam/skeletonui/blob/2.0.2/Sources/SkeletonUI/Modifiers/SkeletonModifier.swift#L4",
+              "symbol" : "SkeletonModifier"
+            },
+            {
+              "condition" : "os(iOS) || os(tvOS) || os(watchOS) || os(visionOS)",
+              "file" : "Sources/SkeletonUI/Extensions/Image+OptionalType.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Conditional branch explicitly includes os(visionOS), positive evidence the package targets visionOS; not listed in manifest platforms, so confidence reduced.",
+              "permalink" : "https://github.com/csolanam/skeletonui/blob/2.0.2/Sources/SkeletonUI/Extensions/Image+OptionalType.swift#L5",
+              "symbol" : "Image.init"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SkeletonUI/Extensions/View+SkeletonModifier.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Primary skeleton API; unconditional decl, no platform gaps.",
+              "permalink" : "https://github.com/csolanam/skeletonui/blob/2.0.2/Sources/SkeletonUI/Extensions/View+SkeletonModifier.swift#L5",
+              "symbol" : "View.skeleton"
+            },
+            {
+              "file" : "Sources/SkeletonUI/Skeleton/SkeletonForEach.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "note" : "Skeleton repeating container; unconditional decl, no platform gaps.",
+              "permalink" : "https://github.com/csolanam/skeletonui/blob/2.0.2/Sources/SkeletonUI/Skeleton/SkeletonForEach.swift#L3",
+              "symbol" : "SkeletonForEach"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Manifest declares .watchOS(.v6) platform floor.",
+              "permalink" : "https://github.com/csolanam/skeletonui/blob/2.0.2/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "skeletonui",
+      "version" : "2.0.2"
+    }
+  ]
+}

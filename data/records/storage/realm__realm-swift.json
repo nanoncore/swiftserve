@@ -1,0 +1,1492 @@
+[
+  {
+    "capability" : {
+      "id" : "storage.document-store",
+      "label" : "Object / document store"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Core Realm object database: Realm struct, Object base type, List collection all unconditional in the surface. Swift-only extraction; 215 ObjC files unparsed and digest truncated (800 of 1463 decls). No platform-specific os() gaps exist anywhere in this digest.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/realm/realm-swift",
+      "commit" : "ca03df491ec5e4bb8af0bca1e9957d08c10ec2da",
+      "firstParty" : false,
+      "name" : "realm-swift",
+      "surfaceDigest" : "fnv1a64:028d514dfa231c02",
+      "version" : "v20.0.5"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Realm.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Realm"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Object.swift",
+            "kind" : "symbol",
+            "line" : 83,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Object"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/List.swift",
+            "kind" : "symbol",
+            "line" : 35,
+            "note" : null,
+            "package" : null,
+            "symbol" : "List"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 47,
+            "note" : "Manifest platform floor .iOS(.v12)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Realm.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : "Surface digest resolves this Swift decl present on linux at parse level, but RealmSwift sits on the Realm ObjC core (215 ObjC files unparsed - declared blind spot); no manifest, README, or CI evidence of Linux builds. Under-claiming as unknown.",
+            "package" : null,
+            "symbol" : "Realm"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Realm.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Realm"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Object.swift",
+            "kind" : "symbol",
+            "line" : 83,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Object"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/List.swift",
+            "kind" : "symbol",
+            "line" : 35,
+            "note" : null,
+            "package" : null,
+            "symbol" : "List"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 144,
+            "note" : "Package.swift explicitly targets macCatalyst: .linkedFramework(\"UIKit\", .when(platforms: [.iOS, .macCatalyst, .tvOS, .watchOS]))",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Realm.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Realm"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Object.swift",
+            "kind" : "symbol",
+            "line" : 83,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Object"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/List.swift",
+            "kind" : "symbol",
+            "line" : 35,
+            "note" : null,
+            "package" : null,
+            "symbol" : "List"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 46,
+            "note" : "Manifest platform floor .macOS(.v10_13)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Realm.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Realm"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Object.swift",
+            "kind" : "symbol",
+            "line" : 83,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Object"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/List.swift",
+            "kind" : "symbol",
+            "line" : 35,
+            "note" : null,
+            "package" : null,
+            "symbol" : "List"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 48,
+            "note" : "Manifest platform floor .tvOS(.v12)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Realm.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : "Decl unconditional in surface digest (no os() gate) and resolves present on visionOS. Supplementary: build.sh at this tag has dedicated visionOS build/test targets (generic/platform=visionOS, xrsimulator 'Apple Vision Pro'). visionOS is not listed in Package.swift platform floors and README names only iOS/macOS/tvOS/watchOS, hence reduced confidence.",
+            "package" : null,
+            "symbol" : "Realm"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Object.swift",
+            "kind" : "symbol",
+            "line" : 83,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Object"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/List.swift",
+            "kind" : "symbol",
+            "line" : 35,
+            "note" : null,
+            "package" : null,
+            "symbol" : "List"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Realm.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Realm"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Object.swift",
+            "kind" : "symbol",
+            "line" : 83,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Object"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/List.swift",
+            "kind" : "symbol",
+            "line" : 35,
+            "note" : null,
+            "package" : null,
+            "symbol" : "List"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 49,
+            "note" : "Manifest platform floor .watchOS(.v4)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.encryption",
+      "label" : "Database encryption"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Realm.Configuration.encryptionKey exists in the checkout (RealmSwift/RealmConfiguration.swift init parameter and property) but fell outside the truncated surface digest (800 of 1463 decls), so no admissible symbol anchor; readme-only evidence caps status at unknown, confidence 0.3.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/realm/realm-swift",
+      "commit" : "ca03df491ec5e4bb8af0bca1e9957d08c10ec2da",
+      "firstParty" : false,
+      "name" : "realm-swift",
+      "surfaceDigest" : "fnv1a64:028d514dfa231c02",
+      "version" : "v20.0.5"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README 'Fully Encrypted' section demonstrates Realm.Configuration(encryptionKey: key) with a 64-byte key ('Data can be encrypted in-flight and at-rest').",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README 'Fully Encrypted' section demonstrates Realm.Configuration(encryptionKey: key) with a 64-byte key ('Data can be encrypted in-flight and at-rest'). README does not name linux and no Linux build evidence exists.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.15,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README 'Fully Encrypted' section demonstrates Realm.Configuration(encryptionKey: key) with a 64-byte key ('Data can be encrypted in-flight and at-rest'). README does not name macCatalyst.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README 'Fully Encrypted' section demonstrates Realm.Configuration(encryptionKey: key) with a 64-byte key ('Data can be encrypted in-flight and at-rest').",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "tvOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README 'Fully Encrypted' section demonstrates Realm.Configuration(encryptionKey: key) with a 64-byte key ('Data can be encrypted in-flight and at-rest').",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.15,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README 'Fully Encrypted' section demonstrates Realm.Configuration(encryptionKey: key) with a 64-byte key ('Data can be encrypted in-flight and at-rest'). README does not name visionOS.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README 'Fully Encrypted' section demonstrates Realm.Configuration(encryptionKey: key) with a 64-byte key ('Data can be encrypted in-flight and at-rest').",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.migrations",
+      "label" : "Schema migrations"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Full migration surface (Migration typealias over RLMMigration, enumerateObjects/create/delete/renameProperty, performMigration, schemaVersionAtURL), all unconditional. Swift-only extraction; 215 ObjC files unparsed and digest truncated (800 of 1463 decls). No platform-specific os() gaps exist anywhere in this digest.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/realm/realm-swift",
+      "commit" : "ca03df491ec5e4bb8af0bca1e9957d08c10ec2da",
+      "firstParty" : false,
+      "name" : "realm-swift",
+      "surfaceDigest" : "fnv1a64:028d514dfa231c02",
+      "version" : "v20.0.5"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 83,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Migration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Migration.enumerateObjects"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Realm.performMigration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 53,
+            "note" : null,
+            "package" : null,
+            "symbol" : "schemaVersionAtURL"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 47,
+            "note" : "Manifest platform floor .iOS(.v12)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 83,
+            "note" : "Surface digest resolves this Swift decl present on linux at parse level, but RealmSwift sits on the Realm ObjC core (215 ObjC files unparsed - declared blind spot); no manifest, README, or CI evidence of Linux builds. Under-claiming as unknown.",
+            "package" : null,
+            "symbol" : "Migration"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 83,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Migration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Migration.enumerateObjects"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Realm.performMigration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 53,
+            "note" : null,
+            "package" : null,
+            "symbol" : "schemaVersionAtURL"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 144,
+            "note" : "Package.swift explicitly targets macCatalyst: .linkedFramework(\"UIKit\", .when(platforms: [.iOS, .macCatalyst, .tvOS, .watchOS]))",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 83,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Migration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Migration.enumerateObjects"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Realm.performMigration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 53,
+            "note" : null,
+            "package" : null,
+            "symbol" : "schemaVersionAtURL"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 46,
+            "note" : "Manifest platform floor .macOS(.v10_13)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 83,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Migration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Migration.enumerateObjects"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Realm.performMigration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 53,
+            "note" : null,
+            "package" : null,
+            "symbol" : "schemaVersionAtURL"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 48,
+            "note" : "Manifest platform floor .tvOS(.v12)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 83,
+            "note" : "Decl unconditional in surface digest (no os() gate) and resolves present on visionOS. Supplementary: build.sh at this tag has dedicated visionOS build/test targets (generic/platform=visionOS, xrsimulator 'Apple Vision Pro'). visionOS is not listed in Package.swift platform floors and README names only iOS/macOS/tvOS/watchOS, hence reduced confidence.",
+            "package" : null,
+            "symbol" : "Migration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Migration.enumerateObjects"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Realm.performMigration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 53,
+            "note" : null,
+            "package" : null,
+            "symbol" : "schemaVersionAtURL"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 83,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Migration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Migration.enumerateObjects"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Realm.performMigration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Migration.swift",
+            "kind" : "symbol",
+            "line" : 53,
+            "note" : null,
+            "package" : null,
+            "symbol" : "schemaVersionAtURL"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 49,
+            "note" : "Manifest platform floor .watchOS(.v4)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.observation",
+      "label" : "Reactive queries / change tracking"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Unconditional observe API plus Combine publishers and SwiftUI @ObservedResults. Additional observe overloads exist behind compiler(<6)/!compiler(<6) version gates (compiler-version, not platform, conditions). Swift-only extraction; 215 ObjC files unparsed and digest truncated (800 of 1463 decls). No platform-specific os() gaps exist anywhere in this digest.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/realm/realm-swift",
+      "commit" : "ca03df491ec5e4bb8af0bca1e9957d08c10ec2da",
+      "firstParty" : false,
+      "name" : "realm-swift",
+      "surfaceDigest" : "fnv1a64:028d514dfa231c02",
+      "version" : "v20.0.5"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Object.swift",
+            "kind" : "symbol",
+            "line" : 322,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Object.observe"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Aliases.swift",
+            "kind" : "symbol",
+            "line" : 59,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NotificationToken"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Combine.swift",
+            "kind" : "symbol",
+            "line" : 936,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RealmPublishers"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/SwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 491,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ObservedResults"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 47,
+            "note" : "Manifest platform floor .iOS(.v12)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Object.swift",
+            "kind" : "symbol",
+            "line" : 322,
+            "note" : "Surface digest resolves this Swift decl present on linux at parse level, but RealmSwift sits on the Realm ObjC core (215 ObjC files unparsed - declared blind spot); no manifest, README, or CI evidence of Linux builds. Under-claiming as unknown.",
+            "package" : null,
+            "symbol" : "Object.observe"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Object.swift",
+            "kind" : "symbol",
+            "line" : 322,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Object.observe"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Aliases.swift",
+            "kind" : "symbol",
+            "line" : 59,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NotificationToken"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Combine.swift",
+            "kind" : "symbol",
+            "line" : 936,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RealmPublishers"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/SwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 491,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ObservedResults"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 144,
+            "note" : "Package.swift explicitly targets macCatalyst: .linkedFramework(\"UIKit\", .when(platforms: [.iOS, .macCatalyst, .tvOS, .watchOS]))",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Object.swift",
+            "kind" : "symbol",
+            "line" : 322,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Object.observe"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Aliases.swift",
+            "kind" : "symbol",
+            "line" : 59,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NotificationToken"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Combine.swift",
+            "kind" : "symbol",
+            "line" : 936,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RealmPublishers"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/SwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 491,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ObservedResults"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 46,
+            "note" : "Manifest platform floor .macOS(.v10_13)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Object.swift",
+            "kind" : "symbol",
+            "line" : 322,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Object.observe"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Aliases.swift",
+            "kind" : "symbol",
+            "line" : 59,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NotificationToken"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Combine.swift",
+            "kind" : "symbol",
+            "line" : 936,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RealmPublishers"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/SwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 491,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ObservedResults"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 48,
+            "note" : "Manifest platform floor .tvOS(.v12)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Object.swift",
+            "kind" : "symbol",
+            "line" : 322,
+            "note" : "Decl unconditional in surface digest (no os() gate) and resolves present on visionOS. Supplementary: build.sh at this tag has dedicated visionOS build/test targets (generic/platform=visionOS, xrsimulator 'Apple Vision Pro'). visionOS is not listed in Package.swift platform floors and README names only iOS/macOS/tvOS/watchOS, hence reduced confidence.",
+            "package" : null,
+            "symbol" : "Object.observe"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Aliases.swift",
+            "kind" : "symbol",
+            "line" : 59,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NotificationToken"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Combine.swift",
+            "kind" : "symbol",
+            "line" : 936,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RealmPublishers"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/SwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 491,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ObservedResults"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Object.swift",
+            "kind" : "symbol",
+            "line" : 322,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Object.observe"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Aliases.swift",
+            "kind" : "symbol",
+            "line" : 59,
+            "note" : null,
+            "package" : null,
+            "symbol" : "NotificationToken"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Combine.swift",
+            "kind" : "symbol",
+            "line" : 936,
+            "note" : null,
+            "package" : null,
+            "symbol" : "RealmPublishers"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/SwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 491,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ObservedResults"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 49,
+            "note" : "Manifest platform floor .watchOS(.v4)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.query-builder",
+      "label" : "Type-safe queries"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Type-safe Query DSL (Query struct with ~90 operator/predicate members in surface), Results, SortDescriptor, all unconditional. Swift-only extraction; 215 ObjC files unparsed and digest truncated (800 of 1463 decls). No platform-specific os() gaps exist anywhere in this digest.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/realm/realm-swift",
+      "commit" : "ca03df491ec5e4bb8af0bca1e9957d08c10ec2da",
+      "firstParty" : false,
+      "name" : "realm-swift",
+      "surfaceDigest" : "fnv1a64:028d514dfa231c02",
+      "version" : "v20.0.5"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Query.swift",
+            "kind" : "symbol",
+            "line" : 103,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Query"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Results.swift",
+            "kind" : "symbol",
+            "line" : 112,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Results"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/SortDescriptor.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SortDescriptor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 47,
+            "note" : "Manifest platform floor .iOS(.v12)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Query.swift",
+            "kind" : "symbol",
+            "line" : 103,
+            "note" : "Surface digest resolves this Swift decl present on linux at parse level, but RealmSwift sits on the Realm ObjC core (215 ObjC files unparsed - declared blind spot); no manifest, README, or CI evidence of Linux builds. Under-claiming as unknown.",
+            "package" : null,
+            "symbol" : "Query"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Query.swift",
+            "kind" : "symbol",
+            "line" : 103,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Query"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Results.swift",
+            "kind" : "symbol",
+            "line" : 112,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Results"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/SortDescriptor.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SortDescriptor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 144,
+            "note" : "Package.swift explicitly targets macCatalyst: .linkedFramework(\"UIKit\", .when(platforms: [.iOS, .macCatalyst, .tvOS, .watchOS]))",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Query.swift",
+            "kind" : "symbol",
+            "line" : 103,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Query"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Results.swift",
+            "kind" : "symbol",
+            "line" : 112,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Results"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/SortDescriptor.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SortDescriptor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 46,
+            "note" : "Manifest platform floor .macOS(.v10_13)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Query.swift",
+            "kind" : "symbol",
+            "line" : 103,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Query"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Results.swift",
+            "kind" : "symbol",
+            "line" : 112,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Results"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/SortDescriptor.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SortDescriptor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 48,
+            "note" : "Manifest platform floor .tvOS(.v12)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Query.swift",
+            "kind" : "symbol",
+            "line" : 103,
+            "note" : "Decl unconditional in surface digest (no os() gate) and resolves present on visionOS. Supplementary: build.sh at this tag has dedicated visionOS build/test targets (generic/platform=visionOS, xrsimulator 'Apple Vision Pro'). visionOS is not listed in Package.swift platform floors and README names only iOS/macOS/tvOS/watchOS, hence reduced confidence.",
+            "package" : null,
+            "symbol" : "Query"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Results.swift",
+            "kind" : "symbol",
+            "line" : 112,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Results"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/SortDescriptor.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SortDescriptor"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Query.swift",
+            "kind" : "symbol",
+            "line" : 103,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Query"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/Results.swift",
+            "kind" : "symbol",
+            "line" : 112,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Results"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "RealmSwift/SortDescriptor.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SortDescriptor"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 49,
+            "note" : "Manifest platform floor .watchOS(.v4)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

@@ -1,0 +1,325 @@
+{
+  "aliases" : [
+    "spinner",
+    "hud",
+    "activity indicator"
+  ],
+  "id" : "ui.progress-hud",
+  "label" : "Loading indicators",
+  "packages" : [
+    {
+      "commit" : "1852a4eb7e7a12a768c64b25b1bd905993ced4eb",
+      "notes" : "Ancillary capability: RefreshActivityIndicator is a public, standalone-usable UIActivityIndicatorView wrapper shipped as the package's default pull-to-refresh progress view. The package's primary capability is ui.pull-to-refresh; claim kept at moderate confidence because the spinner is a supporting component, not the package's headline offering.",
+      "package" : "https://github.com/globulus/swiftui-pull-to-refresh",
+      "packageName" : "swiftui-pull-to-refresh",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 193,
+              "note" : "Public UIViewRepresentable spinner; README documents it as a standalone, configurable default progress indicator.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L193",
+              "symbol" : "RefreshActivityIndicator"
+            },
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 194,
+              "note" : "typealias UIView = UIActivityIndicatorView — a genuine activity indicator.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L194",
+              "symbol" : "RefreshActivityIndicator.UIView"
+            },
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 198,
+              "note" : "init(isAnimating:configuration:) allows direct use of the spinner in any view.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L198",
+              "symbol" : "RefreshActivityIndicator.init"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 193,
+              "note" : "Declared in a module that unconditionally imports SwiftUI (nonexistent on Linux) and wraps UIKit; no os() guard in the digest, so unsupported cannot be claimed — but Linux support is implausible.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L193",
+              "symbol" : "RefreshActivityIndicator"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 193,
+              "note" : "Unguarded, PRESENT on macCatalyst per surface; Mac Catalyst provides UIViewRepresentable and UIActivityIndicatorView.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L193",
+              "symbol" : "RefreshActivityIndicator"
+            },
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 198,
+              "note" : "Unguarded initializer, PRESENT on macCatalyst per surface.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L198",
+              "symbol" : "RefreshActivityIndicator.init"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 205,
+              "note" : "Surface parses PRESENT (no os() guards), but UIViewRepresentable/UIActivityIndicatorView do not exist on macOS AppKit; no guard/availability absence evidence, so unknown.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L205",
+              "symbol" : "RefreshActivityIndicator.makeUIView"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 193,
+              "note" : "UIActivityIndicatorView and UIViewRepresentable exist on tvOS, but whole-module compilation is doubtful because UIImpactFeedbackGenerator (unavailable on tvOS) is used unguarded elsewhere in the same file; unknown.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L193",
+              "symbol" : "RefreshActivityIndicator"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.4,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 193,
+              "note" : "Surface parses PRESENT and the referenced UIKit types are generally available on visionOS, but there is no visionOS-specific evidence or build verdict.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L193",
+              "symbol" : "RefreshActivityIndicator"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 205,
+              "note" : "Surface parses PRESENT, but UIViewRepresentable/UIActivityIndicatorView are unavailable on watchOS and the reference is unguarded; unknown.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L205",
+              "symbol" : "RefreshActivityIndicator.makeUIView"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swiftui-pull-to-refresh",
+      "version" : "1.1.9"
+    },
+    {
+      "commit" : "44e04c79ae75ed5e979df517ab13d8a1aa9b41a5",
+      "notes" : "SPM target builds SwiftUI/Sources only (Package.swift path: 'SwiftUI/Sources'); the ProgressHUD/Sources UIKit copy in the digest is the legacy manual-integration variant, not part of the SPM product. Surface has no #if os() conditions anywhere, so no absence evidence exists for any platform.",
+      "package" : "https://github.com/relatedcode/progresshud",
+      "packageName" : "progresshud",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "SwiftUI/Sources/ProgressHUD.swift",
+              "kind" : "symbol",
+              "line" : 24,
+              "note" : "Core HUD singleton class; unconditional, in the SPM target (SwiftUI/Sources).",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/SwiftUI/Sources/ProgressHUD.swift#L24",
+              "symbol" : "ProgressHUD"
+            },
+            {
+              "file" : "SwiftUI/Sources/ProgressHUD+Public.swift",
+              "kind" : "symbol",
+              "line" : 146,
+              "note" : "Shows an animated loading HUD.",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/SwiftUI/Sources/ProgressHUD+Public.swift#L146",
+              "symbol" : "ProgressHUD.animate"
+            },
+            {
+              "file" : "SwiftUI/Sources/ProgressHUD+Public.swift",
+              "kind" : "symbol",
+              "line" : 189,
+              "note" : "Determinate progress HUD (0..1).",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/SwiftUI/Sources/ProgressHUD+Public.swift#L189",
+              "symbol" : "ProgressHUD.progress"
+            },
+            {
+              "file" : "SwiftUI/Sources/ProgressHUD.swift",
+              "kind" : "symbol",
+              "line" : 275,
+              "note" : "SwiftUI root-view modifier that hosts the HUD.",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/SwiftUI/Sources/ProgressHUD.swift#L275",
+              "symbol" : "View.progressHUD"
+            },
+            {
+              "file" : "SwiftUI/Sources/ProgressHUD+Enums.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "18 built-in spinner/indicator animation styles.",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/SwiftUI/Sources/ProgressHUD+Enums.swift#L15",
+              "symbol" : "AnimationType"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Manifest declares platforms: [.iOS(.v17)].",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/Package.swift#L9"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "note" : "README: 'a convenient and intuitive HUD tool designed specifically for iOS'; requirements iOS 17.0+."
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Only .iOS(.v17) declared. Target depends on SwiftUI (unavailable on Linux) but the surface contains no os() guard proving absence, so unknown.",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/Package.swift#L9"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "note" : "README positions the library as iOS-only."
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Only .iOS(.v17) declared; Catalyst often inherits iOS targets but no manifest or surface evidence confirms it.",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/Package.swift#L9"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "note" : "README positions the library as iOS-only."
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Only .iOS(.v17) declared; missing floor is not absence evidence. No os() guards in the surface to prove absence either way.",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/Package.swift#L9"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "note" : "README positions the library as iOS-only ('designed specifically for iOS')."
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Only .iOS(.v17) declared; missing floor is not absence evidence.",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/Package.swift#L9"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "note" : "README positions the library as iOS-only."
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Only .iOS(.v17) declared; SwiftUI-based target might compile for visionOS but nothing in the surface or manifest confirms it.",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/Package.swift#L9"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "note" : "README positions the library as iOS-only."
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Only .iOS(.v17) declared; missing floor is not absence evidence.",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/Package.swift#L9"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "note" : "README positions the library as iOS-only."
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "progresshud",
+      "version" : "15.0.1"
+    }
+  ]
+}

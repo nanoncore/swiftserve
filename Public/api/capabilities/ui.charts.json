@@ -1,0 +1,266 @@
+{
+  "aliases" : [
+    "graphs",
+    "plotting",
+    "bar chart",
+    "line chart"
+  ],
+  "id" : "ui.charts",
+  "label" : "Charts",
+  "packages" : [
+    {
+      "commit" : "dd9c72e3d7e751e769971092a6bd72d39198ae63",
+      "notes" : "DGCharts (renamed from Charts in 5.0) is a full charting library: line, bar, pie, radar, scatter, candle-stick, bubble, combined, horizontal bar chart views all present unconditionally in the Swift surface. Verdicts derived from the truncated surface digest (800 of 1876 decls) plus Package.swift; the 61 unparsed ObjC files belong to the demo apps, not the SwiftPM target (Source/Charts), so the library surface is believed covered. Extractor quirk observed: decls gated os(OSX) are marked absent on ALL platforms including macOS (OSX apparently not mapped to macOS); macOS support is therefore anchored on unconditional decls plus the manifest floor. unsupported verdicts for visionOS/watchOS/linux rest on the NSUI shim layer (Platform.swift) existing only under os(iOS) || os(tvOS) and os(OSX) branches, confirmed by grep over the checkout showing zero os(visionOS)/watchOS/Linux branches at 5.1.0.",
+      "package" : "https://github.com/danielgindi/charts",
+      "packageName" : "charts",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Charts/Charts/LineChartView.swift",
+              "kind" : "symbol",
+              "line" : 16,
+              "note" : "Unconditional public chart view class; no iOS gap in surface digest.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Charts/LineChartView.swift#L16",
+              "symbol" : "LineChartView"
+            },
+            {
+              "file" : "Source/Charts/Charts/BarChartView.swift",
+              "kind" : "symbol",
+              "line" : 16,
+              "note" : "Unconditional public chart view class; no iOS gap in surface digest.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Charts/BarChartView.swift#L16",
+              "symbol" : "BarChartView"
+            },
+            {
+              "file" : "Source/Charts/Charts/PieChartView.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "note" : "Unconditional public chart view class; no iOS gap in surface digest.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Charts/PieChartView.swift#L20",
+              "symbol" : "PieChartView"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Manifest declares .iOS(.v12) platform floor.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Source/Charts/Utils/Platform.swift",
+              "kind" : "guard",
+              "line" : 35,
+              "note" : "Core NSUIView shim (base class of every chart view) exists only under os(iOS) || os(tvOS); surface digest marks linux absent.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Utils/Platform.swift#L35",
+              "symbol" : "NSUIView"
+            },
+            {
+              "condition" : "os(OSX)",
+              "file" : "Source/Charts/Utils/Platform.swift",
+              "kind" : "guard",
+              "line" : 190,
+              "note" : "The only other NSUIView branch is os(OSX); also absent on linux. No Linux-capable branch of the view/rendering layer exists.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Utils/Platform.swift#L190",
+              "symbol" : "NSUIView"
+            },
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Source/Charts/Utils/Platform.swift",
+              "kind" : "guard",
+              "line" : 13,
+              "note" : "Font shim required for all chart text rendering; absent on linux.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Utils/Platform.swift#L13",
+              "symbol" : "NSUIFont"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Source/Charts/Charts/LineChartView.swift",
+              "kind" : "symbol",
+              "line" : 16,
+              "note" : "Unconditional public chart view class; no macCatalyst gap in surface digest.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Charts/LineChartView.swift#L16",
+              "symbol" : "LineChartView"
+            },
+            {
+              "file" : "Source/Charts/Charts/BarChartView.swift",
+              "kind" : "symbol",
+              "line" : 16,
+              "note" : "Unconditional public chart view class; no macCatalyst gap in surface digest.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Charts/BarChartView.swift#L16",
+              "symbol" : "BarChartView"
+            },
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Source/Charts/Utils/Platform.swift",
+              "kind" : "symbol",
+              "line" : 35,
+              "note" : "Core view shim resolves PRESENT on macCatalyst (os(iOS) holds on Catalyst); AppKit branches elsewhere explicitly exclude Catalyst via !targetEnvironment(macCatalyst), routing it to the UIKit path. No explicit manifest floor, hence reduced confidence.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Utils/Platform.swift#L35",
+              "symbol" : "NSUIView"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Charts/Charts/LineChartView.swift",
+              "kind" : "symbol",
+              "line" : 16,
+              "note" : "Unconditional public chart view class; no macOS gap in surface digest.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Charts/LineChartView.swift#L16",
+              "symbol" : "LineChartView"
+            },
+            {
+              "file" : "Source/Charts/Charts/BarChartView.swift",
+              "kind" : "symbol",
+              "line" : 16,
+              "note" : "Unconditional public chart view class; no macOS gap in surface digest.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Charts/BarChartView.swift#L16",
+              "symbol" : "BarChartView"
+            },
+            {
+              "file" : "Source/Charts/Charts/PieChartView.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "note" : "Unconditional public chart view class; no macOS gap in surface digest.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Charts/PieChartView.swift#L20",
+              "symbol" : "PieChartView"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Manifest declares .macOS(.v10_12) platform floor; AppKit backing exists via the os(OSX) NSUI branch in Source/Charts/Utils/Platform.swift.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Charts/Charts/LineChartView.swift",
+              "kind" : "symbol",
+              "line" : 16,
+              "note" : "Unconditional public chart view class; no tvOS gap in surface digest.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Charts/LineChartView.swift#L16",
+              "symbol" : "LineChartView"
+            },
+            {
+              "file" : "Source/Charts/Charts/BarChartView.swift",
+              "kind" : "symbol",
+              "line" : 16,
+              "note" : "Unconditional public chart view class; no tvOS gap in surface digest.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Charts/BarChartView.swift#L16",
+              "symbol" : "BarChartView"
+            },
+            {
+              "file" : "Source/Charts/Charts/PieChartView.swift",
+              "kind" : "symbol",
+              "line" : 20,
+              "note" : "Unconditional public chart view class; no tvOS gap in surface digest.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Charts/PieChartView.swift#L20",
+              "symbol" : "PieChartView"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Manifest declares .tvOS(.v12) platform floor. Pinch/rotation gestures are excluded on tvOS (canImport(UIKit) && !os(tvOS)) but chart rendering is intact.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Source/Charts/Utils/Platform.swift",
+              "kind" : "guard",
+              "line" : 35,
+              "note" : "Core NSUIView shim (base class of every chart view) exists only under os(iOS) || os(tvOS); surface digest marks visionOS absent.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Utils/Platform.swift#L35",
+              "symbol" : "NSUIView"
+            },
+            {
+              "condition" : "os(OSX)",
+              "file" : "Source/Charts/Utils/Platform.swift",
+              "kind" : "guard",
+              "line" : 190,
+              "note" : "The only other NSUIView branch is os(OSX); also absent on visionOS. No os(visionOS)/xrOS condition exists anywhere in Source at 5.1.0, so a native visionOS build cannot resolve the view layer. iOS builds may still run in 'Designed for iPad' compatibility mode.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Utils/Platform.swift#L190",
+              "symbol" : "NSUIView"
+            },
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Source/Charts/Utils/Platform.swift",
+              "kind" : "guard",
+              "line" : 13,
+              "note" : "Font shim required for all chart text rendering; absent on visionOS.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Utils/Platform.swift#L13",
+              "symbol" : "NSUIFont"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "watchOS" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Source/Charts/Utils/Platform.swift",
+              "kind" : "guard",
+              "line" : 35,
+              "note" : "Core NSUIView shim (base class of every chart view) exists only under os(iOS) || os(tvOS); surface digest marks watchOS absent.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Utils/Platform.swift#L35",
+              "symbol" : "NSUIView"
+            },
+            {
+              "condition" : "os(OSX)",
+              "file" : "Source/Charts/Utils/Platform.swift",
+              "kind" : "guard",
+              "line" : 190,
+              "note" : "The only other NSUIView branch is os(OSX); also absent on watchOS. No watchOS branch exists anywhere in Source, and the manifest declares no watchOS floor.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Utils/Platform.swift#L190",
+              "symbol" : "NSUIView"
+            },
+            {
+              "condition" : "os(iOS) || os(tvOS)",
+              "file" : "Source/Charts/Utils/Platform.swift",
+              "kind" : "guard",
+              "line" : 13,
+              "note" : "Font shim required for all chart text rendering; absent on watchOS.",
+              "permalink" : "https://github.com/danielgindi/charts/blob/5.1.0/Source/Charts/Utils/Platform.swift#L13",
+              "symbol" : "NSUIFont"
+            }
+          ],
+          "status" : "unsupported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "charts",
+      "version" : "5.1.0"
+    }
+  ]
+}

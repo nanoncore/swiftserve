@@ -1,0 +1,320 @@
+[
+  {
+    "capability" : {
+      "id" : "storage.keychain",
+      "label" : "Keychain storage"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "KeychainAccess is a single-purpose wrapper over Security.framework keychain services. Anchors taken from the SPM target file Lib/KeychainAccess/Keychain.swift (Sources/Keychain.swift is an identical duplicate in the digest). One ObjC file is unparsed (Swift-only extraction) per bundle blind spots; it does not affect these Swift anchors. No other storage taxonomy capability is credibly present (no key-value/defaults wrapper, no disk cache; iCloud keychain synchronizable flag is keychain sync, not storage.cloud-sync).",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/kishikawakatsumi/keychainaccess",
+      "commit" : "84e546727d66f1adc5439debad16270d0fdd04e7",
+      "firstParty" : false,
+      "name" : "keychainaccess",
+      "surfaceDigest" : "fnv1a64:8c9603e5bf91e7cd",
+      "version" : "v4.2.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Lib/KeychainAccess/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 409,
+            "note" : "Core Keychain wrapper class; unconditional, no platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "Keychain"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Lib/KeychainAccess/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 664,
+            "note" : "func set(_ value: String, key:) throws — unconditional write path.",
+            "package" : null,
+            "symbol" : "Keychain.set"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Lib/KeychainAccess/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 595,
+            "note" : "func get(_ key:) throws -> String? — unconditional read path.",
+            "package" : null,
+            "symbol" : "Keychain.get"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Lib/KeychainAccess/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 814,
+            "note" : "func remove(_ key:) throws — unconditional delete path.",
+            "package" : null,
+            "symbol" : "Keychain.remove"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 15,
+            "note" : "Manifest declares .iOS(.v8) platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 15,
+            "note" : "Manifest lists only Apple platform floors (macOS/iOS/tvOS/watchOS); that is not absence evidence. The digest has no os() guard excluding linux from core CRUD symbols, but the target unconditionally imports the Security framework, which the surface digest does not model — build feasibility on Linux is unverified, so status stays unknown.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Lib/KeychainAccess/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 409,
+            "note" : "Core class present on macCatalyst. Only deprecated Accessibility.always / Accessibility.alwaysThisDeviceOnly cases and iOS-only shared-web-credential conveniences are macCatalyst-absent.",
+            "package" : null,
+            "symbol" : "Keychain"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Lib/KeychainAccess/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 664,
+            "note" : "Unconditional write path, no macCatalyst gap.",
+            "package" : null,
+            "symbol" : "Keychain.set"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Lib/KeychainAccess/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 595,
+            "note" : "Unconditional read path, no macCatalyst gap.",
+            "package" : null,
+            "symbol" : "Keychain.get"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README explicitly lists 'Mac Catalyst is supported'.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Lib/KeychainAccess/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 409,
+            "note" : "Core Keychain wrapper class; unconditional, no platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "Keychain"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Lib/KeychainAccess/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 664,
+            "note" : "Unconditional write path.",
+            "package" : null,
+            "symbol" : "Keychain.set"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Lib/KeychainAccess/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 595,
+            "note" : "Unconditional read path.",
+            "package" : null,
+            "symbol" : "Keychain.get"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 15,
+            "note" : "Manifest declares .macOS(.v10_10) platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Lib/KeychainAccess/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 409,
+            "note" : "Core class present on tvOS (no tvOS gap).",
+            "package" : null,
+            "symbol" : "Keychain"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Lib/KeychainAccess/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 664,
+            "note" : "Unconditional write path, no tvOS gap.",
+            "package" : null,
+            "symbol" : "Keychain.set"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Lib/KeychainAccess/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 595,
+            "note" : "Unconditional read path, no tvOS gap.",
+            "package" : null,
+            "symbol" : "Keychain.get"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 15,
+            "note" : "Manifest declares .tvOS(.v9) platform floor; README states tvOS is supported.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Lib/KeychainAccess/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 409,
+            "note" : "Core class resolves PRESENT on visionOS (no visionOS gap, no os() condition on core CRUD).",
+            "package" : null,
+            "symbol" : "Keychain"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Lib/KeychainAccess/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 664,
+            "note" : "Unconditional write path, no visionOS gap.",
+            "package" : null,
+            "symbol" : "Keychain.set"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Lib/KeychainAccess/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 595,
+            "note" : "Unconditional read path, no visionOS gap.",
+            "package" : null,
+            "symbol" : "Keychain.get"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Lib/KeychainAccess/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 409,
+            "note" : "Core class present on watchOS (no watchOS gap). Only auth-UI conveniences (e.g. Keychain.authenticationPolicy, Keychain.authenticationPrompt) are watchOS-absent; core CRUD is not.",
+            "package" : null,
+            "symbol" : "Keychain"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Lib/KeychainAccess/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 664,
+            "note" : "Unconditional write path, no watchOS gap.",
+            "package" : null,
+            "symbol" : "Keychain.set"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Lib/KeychainAccess/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 595,
+            "note" : "Unconditional read path, no watchOS gap.",
+            "package" : null,
+            "symbol" : "Keychain.get"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 15,
+            "note" : "Manifest declares .watchOS(.v2) platform floor; README states watchOS is supported.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

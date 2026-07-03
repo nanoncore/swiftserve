@@ -1,0 +1,1458 @@
+{
+  "aliases" : [
+    "database migration",
+    "schema versioning"
+  ],
+  "id" : "storage.migrations",
+  "label" : "Schema migrations",
+  "packages" : [
+    {
+      "commit" : "2fe9e36daf4bdb5edcf193e0d0806ba2074d2864",
+      "notes" : "Rich migration surface at this layer: Application.migrations registry, Application.migrator, autoMigrate/autoRevert in both EventLoopFuture (Sources/Fluent/FluentProvider.swift:71,79) and async/await (Sources/Fluent/Concurrency/FluentProvider+Concurrency.swift:7,15) forms, Application.Fluent.migrationLogLevel, and the MigrateCommand CLI command. All decls unconditional (no #if, no per-platform gaps).",
+      "package" : "https://github.com/vapor/fluent",
+      "packageName" : "fluent",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "note" : "Migrations registry; unconditional decl, no platform gaps in surface digest.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L55",
+              "symbol" : "Application.migrations"
+            },
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Runs forward migrations; unconditional in surface.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L71",
+              "symbol" : "Application.autoMigrate"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "manifestPlatforms: .iOS(.v13) floor declared.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "note" : "Unconditional decl; zero os() conditions in the entire surface, so present on linux. Server-side Vapor package; Linux is the primary deployment target and CI-tested (GitHub Actions test badge in README).",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L55",
+              "symbol" : "Application.migrations"
+            },
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Runs forward migrations; unconditional in surface.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L71",
+              "symbol" : "Application.autoMigrate"
+            },
+            {
+              "file" : "Sources/Fluent/MigrateCommand.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "CLI `migrate` command for running/reverting migrations; unconditional.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/MigrateCommand.swift#L5",
+              "symbol" : "MigrateCommand"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "note" : "Unconditional decl; surface digest lists no macCatalyst gap for any decl. Catalyst inherits the iOS 13 manifest floor.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L55",
+              "symbol" : "Application.migrations"
+            },
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Runs forward migrations; unconditional in surface.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L71",
+              "symbol" : "Application.autoMigrate"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "note" : "Migrations registry; unconditional decl, no platform gaps in surface digest.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L55",
+              "symbol" : "Application.migrations"
+            },
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Runs forward migrations; unconditional in surface.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L71",
+              "symbol" : "Application.autoMigrate"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "manifestPlatforms: .macOS(.v10_15) floor declared.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "note" : "Migrations registry; unconditional decl, no platform gaps in surface digest.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L55",
+              "symbol" : "Application.migrations"
+            },
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Runs forward migrations; unconditional in surface.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L71",
+              "symbol" : "Application.autoMigrate"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "manifestPlatforms: .tvOS(.v13) floor declared.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "note" : "Unconditional decl; surface digest lists no visionOS gap for any decl. No explicit visionOS manifest floor (inherits default).",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L55",
+              "symbol" : "Application.migrations"
+            },
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Runs forward migrations; unconditional in surface.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L71",
+              "symbol" : "Application.autoMigrate"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "note" : "Migrations registry; unconditional decl, no platform gaps in surface digest.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L55",
+              "symbol" : "Application.migrations"
+            },
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Runs forward migrations; unconditional in surface.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L71",
+              "symbol" : "Application.autoMigrate"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "manifestPlatforms: .watchOS(.v6) floor declared. Server-side framework; watchOS floor exists but practical use there is atypical.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "fluent",
+      "version" : "4.13.0"
+    },
+    {
+      "commit" : "b83108d10f42680d78f23fe4d4d80fc88dab3212",
+      "notes" : "DatabaseMigrator is unconditional on all platforms. Only the Combine convenience DatabaseMigrator.migratePublisher (DatabaseMigrator.swift:678, canImport(Combine)) is absent on Linux; that is a peripheral convenience and does not affect the core migration capability.",
+      "package" : "https://github.com/groue/grdb.swift",
+      "packageName" : "grdb.swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/Migration/DatabaseMigrator.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Migration/DatabaseMigrator.swift#L48",
+              "symbol" : "DatabaseMigrator"
+            },
+            {
+              "file" : "GRDB/Migration/DatabaseMigrator.swift",
+              "kind" : "symbol",
+              "line" : 50,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Migration/DatabaseMigrator.swift#L50",
+              "symbol" : "DatabaseMigrator.ForeignKeyChecks"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 51,
+              "note" : "Package.swift declares iOS minimum .v13",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L51"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "GRDB/Migration/DatabaseMigrator.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Migration/DatabaseMigrator.swift#L48",
+              "symbol" : "DatabaseMigrator"
+            },
+            {
+              "file" : "GRDB/Migration/DatabaseMigrator.swift",
+              "kind" : "symbol",
+              "line" : 50,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Migration/DatabaseMigrator.swift#L50",
+              "symbol" : "DatabaseMigrator.ForeignKeyChecks"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "GRDB/Migration/DatabaseMigrator.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Migration/DatabaseMigrator.swift#L48",
+              "symbol" : "DatabaseMigrator"
+            },
+            {
+              "file" : "GRDB/Migration/DatabaseMigrator.swift",
+              "kind" : "symbol",
+              "line" : 50,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Migration/DatabaseMigrator.swift#L50",
+              "symbol" : "DatabaseMigrator.ForeignKeyChecks"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/Migration/DatabaseMigrator.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Migration/DatabaseMigrator.swift#L48",
+              "symbol" : "DatabaseMigrator"
+            },
+            {
+              "file" : "GRDB/Migration/DatabaseMigrator.swift",
+              "kind" : "symbol",
+              "line" : 50,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Migration/DatabaseMigrator.swift#L50",
+              "symbol" : "DatabaseMigrator.ForeignKeyChecks"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 52,
+              "note" : "Package.swift declares macOS minimum .v10_15",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L52"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/Migration/DatabaseMigrator.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Migration/DatabaseMigrator.swift#L48",
+              "symbol" : "DatabaseMigrator"
+            },
+            {
+              "file" : "GRDB/Migration/DatabaseMigrator.swift",
+              "kind" : "symbol",
+              "line" : 50,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Migration/DatabaseMigrator.swift#L50",
+              "symbol" : "DatabaseMigrator.ForeignKeyChecks"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 53,
+              "note" : "Package.swift declares tvOS minimum .v13",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L53"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "GRDB/Migration/DatabaseMigrator.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Migration/DatabaseMigrator.swift#L48",
+              "symbol" : "DatabaseMigrator"
+            },
+            {
+              "file" : "GRDB/Migration/DatabaseMigrator.swift",
+              "kind" : "symbol",
+              "line" : 50,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Migration/DatabaseMigrator.swift#L50",
+              "symbol" : "DatabaseMigrator.ForeignKeyChecks"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/Migration/DatabaseMigrator.swift",
+              "kind" : "symbol",
+              "line" : 48,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Migration/DatabaseMigrator.swift#L48",
+              "symbol" : "DatabaseMigrator"
+            },
+            {
+              "file" : "GRDB/Migration/DatabaseMigrator.swift",
+              "kind" : "symbol",
+              "line" : 50,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Migration/DatabaseMigrator.swift#L50",
+              "symbol" : "DatabaseMigrator.ForeignKeyChecks"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 54,
+              "note" : "Package.swift declares watchOS minimum .v7",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L54"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "grdb.swift",
+      "version" : "v7.11.1"
+    },
+    {
+      "commit" : "964c300fb0736699ce945c9edb56ecd62eba27a3",
+      "notes" : "Genuinely surfaced but modest in scope: user_version pragma helper (Connection.userVersion) plus SchemaChanger for ALTER-style schema changes. No versioned migration runner/registry; confidence reduced accordingly.",
+      "package" : "https://github.com/stephencelis/sqlite.swift",
+      "packageName" : "sqlite.swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection+Pragmas.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection+Pragmas.swift#L8",
+              "symbol" : "Connection.userVersion"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L29",
+              "symbol" : "SchemaChanger"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 198,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L198",
+              "symbol" : "SchemaChanger.alter"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 227,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L227",
+              "symbol" : "SchemaChanger.run"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 39,
+              "note" : "Package.swift declares a iOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L39"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection+Pragmas.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection+Pragmas.swift#L8",
+              "symbol" : "Connection.userVersion"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L29",
+              "symbol" : "SchemaChanger"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 198,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L198",
+              "symbol" : "SchemaChanger.alter"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 227,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L227",
+              "symbol" : "SchemaChanger.run"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 31,
+              "note" : "Package.swift has an explicit #if os(Linux) branch enabling the SQLiteSwiftCSQLite default trait (bundled SQLite for Linux builds).",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L31"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 23,
+              "note" : "README: 'Works on Linux (with some limitations)'.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/README.md#L23"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection+Pragmas.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection+Pragmas.swift#L8",
+              "symbol" : "Connection.userVersion"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L29",
+              "symbol" : "SchemaChanger"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 198,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L198",
+              "symbol" : "SchemaChanger.alter"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 227,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L227",
+              "symbol" : "SchemaChanger.run"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 38,
+              "note" : "Package.swift does not declare a macCatalyst floor, but all anchor symbols are unconditional (no platform gaps) in the extracted surface.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L38"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection+Pragmas.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection+Pragmas.swift#L8",
+              "symbol" : "Connection.userVersion"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L29",
+              "symbol" : "SchemaChanger"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 198,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L198",
+              "symbol" : "SchemaChanger.alter"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 227,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L227",
+              "symbol" : "SchemaChanger.run"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 40,
+              "note" : "Package.swift declares a macOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L40"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection+Pragmas.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection+Pragmas.swift#L8",
+              "symbol" : "Connection.userVersion"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L29",
+              "symbol" : "SchemaChanger"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 198,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L198",
+              "symbol" : "SchemaChanger.alter"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 227,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L227",
+              "symbol" : "SchemaChanger.run"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 42,
+              "note" : "Package.swift declares a tvOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L42"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection+Pragmas.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection+Pragmas.swift#L8",
+              "symbol" : "Connection.userVersion"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L29",
+              "symbol" : "SchemaChanger"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 198,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L198",
+              "symbol" : "SchemaChanger.alter"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 227,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L227",
+              "symbol" : "SchemaChanger.run"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 43,
+              "note" : "Package.swift declares a visionOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L43"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection+Pragmas.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection+Pragmas.swift#L8",
+              "symbol" : "Connection.userVersion"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 29,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L29",
+              "symbol" : "SchemaChanger"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 198,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L198",
+              "symbol" : "SchemaChanger.alter"
+            },
+            {
+              "file" : "Sources/SQLite/Schema/SchemaChanger.swift",
+              "kind" : "symbol",
+              "line" : 227,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Schema/SchemaChanger.swift#L227",
+              "symbol" : "SchemaChanger.run"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 41,
+              "note" : "Package.swift declares a watchOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L41"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "sqlite.swift",
+      "version" : "0.16.0"
+    },
+    {
+      "commit" : "e2bf935089cd7620031ea342eaf96bf4ba3a22dc",
+      "notes" : "Migrations are automatic (schema derived from the model type); there is no user-defined migration DSL.",
+      "package" : "https://github.com/marcoarment/blackbird",
+      "packageName" : "blackbird",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 908,
+              "note" : "Doc: 'Performs setup and any necessary schema migrations.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L908",
+              "symbol" : "BlackbirdModel.resolveSchema"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 217,
+              "note" : "Row-level migration failure handling.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L217",
+              "symbol" : "BlackbirdModelMigrationErrorAction"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 214,
+              "note" : "How row-level migration failures should be handled.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L214",
+              "symbol" : "BlackbirdModel.invalidRowDataMigrationResolution"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 227,
+              "note" : "Error case: schema migration is impossible for the specified type.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L227",
+              "symbol" : "BlackbirdTableError.impossibleMigration"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Package.swift declares .iOS(.v15) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms list contains only Apple platforms; Surface digest records no platform gaps, but sources unconditionally import Combine, SwiftUI, OSLog and SQLite3 with no os() guards, and Package.swift declares no Linux support; Linux buildability is unverified. Symbol absence is not absence evidence, so status is unknown.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L7"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 908,
+              "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L908",
+              "symbol" : "BlackbirdModel.resolveSchema"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 217,
+              "note" : "Row-level migration failure handling.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L217",
+              "symbol" : "BlackbirdModelMigrationErrorAction"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 214,
+              "note" : "How row-level migration failures should be handled.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L214",
+              "symbol" : "BlackbirdModel.invalidRowDataMigrationResolution"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 227,
+              "note" : "Error case: schema migration is impossible for the specified type.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L227",
+              "symbol" : "BlackbirdTableError.impossibleMigration"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 908,
+              "note" : "Doc: 'Performs setup and any necessary schema migrations.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L908",
+              "symbol" : "BlackbirdModel.resolveSchema"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 217,
+              "note" : "Row-level migration failure handling.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L217",
+              "symbol" : "BlackbirdModelMigrationErrorAction"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 214,
+              "note" : "How row-level migration failures should be handled.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L214",
+              "symbol" : "BlackbirdModel.invalidRowDataMigrationResolution"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 227,
+              "note" : "Error case: schema migration is impossible for the specified type.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L227",
+              "symbol" : "BlackbirdTableError.impossibleMigration"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Package.swift declares .macOS(.v12) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 908,
+              "note" : "Doc: 'Performs setup and any necessary schema migrations.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L908",
+              "symbol" : "BlackbirdModel.resolveSchema"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 217,
+              "note" : "Row-level migration failure handling.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L217",
+              "symbol" : "BlackbirdModelMigrationErrorAction"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 214,
+              "note" : "How row-level migration failures should be handled.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L214",
+              "symbol" : "BlackbirdModel.invalidRowDataMigrationResolution"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 227,
+              "note" : "Error case: schema migration is impossible for the specified type.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L227",
+              "symbol" : "BlackbirdTableError.impossibleMigration"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 11,
+              "note" : "Package.swift declares .tvOS(.v15) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L11"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 908,
+              "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L908",
+              "symbol" : "BlackbirdModel.resolveSchema"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 217,
+              "note" : "Row-level migration failure handling.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L217",
+              "symbol" : "BlackbirdModelMigrationErrorAction"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 214,
+              "note" : "How row-level migration failures should be handled.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L214",
+              "symbol" : "BlackbirdModel.invalidRowDataMigrationResolution"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 227,
+              "note" : "Error case: schema migration is impossible for the specified type.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L227",
+              "symbol" : "BlackbirdTableError.impossibleMigration"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 908,
+              "note" : "Doc: 'Performs setup and any necessary schema migrations.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L908",
+              "symbol" : "BlackbirdModel.resolveSchema"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 217,
+              "note" : "Row-level migration failure handling.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L217",
+              "symbol" : "BlackbirdModelMigrationErrorAction"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 214,
+              "note" : "How row-level migration failures should be handled.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L214",
+              "symbol" : "BlackbirdModel.invalidRowDataMigrationResolution"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 227,
+              "note" : "Error case: schema migration is impossible for the specified type.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L227",
+              "symbol" : "BlackbirdTableError.impossibleMigration"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Package.swift declares .watchOS(.v8) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "blackbird",
+      "version" : "0.5"
+    },
+    {
+      "commit" : "17F113",
+      "notes" : "Model versioning + NSMigrationManager / mapping models.",
+      "package" : "https://developer.apple.com/documentation/coredata",
+      "packageName" : "CoreData",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 702,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L702",
+              "symbol" : "NSMigrationManager"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "availability",
+              "line" : 702,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L702",
+              "symbol" : "NSMigrationManager"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 702,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L702",
+              "symbol" : "NSMigrationManager"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 702,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L702",
+              "symbol" : "NSMigrationManager"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 702,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L702",
+              "symbol" : "NSMigrationManager"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 702,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L702",
+              "symbol" : "NSMigrationManager"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 702,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L702",
+              "symbol" : "NSMigrationManager"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "coredata",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "commit" : "ca03df491ec5e4bb8af0bca1e9957d08c10ec2da",
+      "notes" : "Full migration surface (Migration typealias over RLMMigration, enumerateObjects/create/delete/renameProperty, performMigration, schemaVersionAtURL), all unconditional. Swift-only extraction; 215 ObjC files unparsed and digest truncated (800 of 1463 decls). No platform-specific os() gaps exist anywhere in this digest.",
+      "package" : "https://github.com/realm/realm-swift",
+      "packageName" : "realm-swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 83,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L83",
+              "symbol" : "Migration"
+            },
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L102",
+              "symbol" : "Migration.enumerateObjects"
+            },
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L71",
+              "symbol" : "Realm.performMigration"
+            },
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 53,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L53",
+              "symbol" : "schemaVersionAtURL"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 47,
+              "note" : "Manifest platform floor .iOS(.v12)",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L47"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 83,
+              "note" : "Surface digest resolves this Swift decl present on linux at parse level, but RealmSwift sits on the Realm ObjC core (215 ObjC files unparsed - declared blind spot); no manifest, README, or CI evidence of Linux builds. Under-claiming as unknown.",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L83",
+              "symbol" : "Migration"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 83,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L83",
+              "symbol" : "Migration"
+            },
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L102",
+              "symbol" : "Migration.enumerateObjects"
+            },
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L71",
+              "symbol" : "Realm.performMigration"
+            },
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 53,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L53",
+              "symbol" : "schemaVersionAtURL"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 144,
+              "note" : "Package.swift explicitly targets macCatalyst: .linkedFramework(\"UIKit\", .when(platforms: [.iOS, .macCatalyst, .tvOS, .watchOS]))",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L144"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 83,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L83",
+              "symbol" : "Migration"
+            },
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L102",
+              "symbol" : "Migration.enumerateObjects"
+            },
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L71",
+              "symbol" : "Realm.performMigration"
+            },
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 53,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L53",
+              "symbol" : "schemaVersionAtURL"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 46,
+              "note" : "Manifest platform floor .macOS(.v10_13)",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L46"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 83,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L83",
+              "symbol" : "Migration"
+            },
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L102",
+              "symbol" : "Migration.enumerateObjects"
+            },
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L71",
+              "symbol" : "Realm.performMigration"
+            },
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 53,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L53",
+              "symbol" : "schemaVersionAtURL"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 48,
+              "note" : "Manifest platform floor .tvOS(.v12)",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L48"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 83,
+              "note" : "Decl unconditional in surface digest (no os() gate) and resolves present on visionOS. Supplementary: build.sh at this tag has dedicated visionOS build/test targets (generic/platform=visionOS, xrsimulator 'Apple Vision Pro'). visionOS is not listed in Package.swift platform floors and README names only iOS/macOS/tvOS/watchOS, hence reduced confidence.",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L83",
+              "symbol" : "Migration"
+            },
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L102",
+              "symbol" : "Migration.enumerateObjects"
+            },
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L71",
+              "symbol" : "Realm.performMigration"
+            },
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 53,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L53",
+              "symbol" : "schemaVersionAtURL"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 83,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L83",
+              "symbol" : "Migration"
+            },
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L102",
+              "symbol" : "Migration.enumerateObjects"
+            },
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L71",
+              "symbol" : "Realm.performMigration"
+            },
+            {
+              "file" : "RealmSwift/Migration.swift",
+              "kind" : "symbol",
+              "line" : 53,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Migration.swift#L53",
+              "symbol" : "schemaVersionAtURL"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 49,
+              "note" : "Manifest platform floor .watchOS(.v4)",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L49"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "realm-swift",
+      "version" : "v20.0.5"
+    },
+    {
+      "commit" : "17F113",
+      "notes" : "Versioned schemas with SchemaMigrationPlan / MigrationStage.",
+      "package" : "https://developer.apple.com/documentation/swiftdata",
+      "packageName" : "SwiftData",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 770,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L770",
+              "symbol" : "SchemaMigrationPlan"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "availability",
+              "line" : 770,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L770",
+              "symbol" : "SchemaMigrationPlan"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 770,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L770",
+              "symbol" : "SchemaMigrationPlan"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 770,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L770",
+              "symbol" : "SchemaMigrationPlan"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 770,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L770",
+              "symbol" : "SchemaMigrationPlan"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 770,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L770",
+              "symbol" : "SchemaMigrationPlan"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 770,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L770",
+              "symbol" : "SchemaMigrationPlan"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swiftdata",
+      "version" : "Xcode 26.6"
+    }
+  ]
+}

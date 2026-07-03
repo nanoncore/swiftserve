@@ -1,0 +1,222 @@
+{
+  "aliases" : [
+    "text editor",
+    "attributed string editing",
+    "wysiwyg"
+  ],
+  "id" : "ui.rich-text",
+  "label" : "Rich text editing",
+  "packages" : [
+    {
+      "commit" : "8aa44cfa645404ad84e52e3ab7723ecf4b82f92b",
+      "notes" : "RichTextKit's guards use custom compilation conditions defined in Package.swift ('iOS' for [.iOS, .macCatalyst], 'macOS' for [.macOS]), which the surface extractor cannot resolve — hence the core editor decls (RichTextEditor, RichTextViewer, RichTextCoordinator, RichTextView) read 'conditional' on iOS/macOS/macCatalyst but resolve present on tvOS/visionOS where plain os() conditions are used. Manifest platforms: iOS 15, macOS 12, tvOS 15, watchOS 8, visionOS 1.",
+      "package" : "https://github.com/danielsaidi/richtextkit",
+      "packageName" : "richtextkit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/RichTextKit/_Essential/RichTextContext.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "Observable editing context that drives the rich text editor; unguarded, resolves present on iOS.",
+              "permalink" : "https://github.com/danielsaidi/richtextkit/blob/1.2/Sources/RichTextKit/_Essential/RichTextContext.swift#L22",
+              "symbol" : "RichTextContext"
+            },
+            {
+              "file" : "Sources/RichTextKit/Bridging/RichTextViewComponent.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "note" : "Shared protocol for all RichTextView editor implementations; unguarded, present on iOS.",
+              "permalink" : "https://github.com/danielsaidi/richtextkit/blob/1.2/Sources/RichTextKit/Bridging/RichTextViewComponent.swift#L26",
+              "symbol" : "RichTextViewComponent"
+            },
+            {
+              "condition" : "iOS || macOS || os(tvOS) || os(visionOS)",
+              "file" : "Sources/RichTextKit/_Essential/RichTextEditor.swift",
+              "kind" : "guard",
+              "line" : 55,
+              "note" : "Core SwiftUI editor. 'iOS' is a custom compilation condition defined in Package.swift via .define(\"iOS\", .when(platforms: [.iOS, .macCatalyst])), so this guard is active on iOS; the extractor cannot resolve the custom flag and leaves it conditional. Manifest floor .iOS(.v15); README shows the demo app running on iOS.",
+              "permalink" : "https://github.com/danielsaidi/richtextkit/blob/1.2/Sources/RichTextKit/_Essential/RichTextEditor.swift#L55",
+              "symbol" : "RichTextEditor"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "condition" : "iOS || macOS || os(tvOS) || os(visionOS)",
+              "file" : "Sources/RichTextKit/_Essential/RichTextEditor.swift",
+              "kind" : "guard",
+              "line" : 55,
+              "note" : "The core editor guard omits linux, and the package is built on SwiftUI/UIKit/AppKit, none of which exist on linux. Unguarded model-layer decls resolve present only because the extractor does not model import availability; SwiftPM manifests cannot exclude linux, so absence cannot be proven.",
+              "permalink" : "https://github.com/danielsaidi/richtextkit/blob/1.2/Sources/RichTextKit/_Essential/RichTextEditor.swift#L55",
+              "symbol" : "RichTextEditor"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/RichTextKit/_Essential/RichTextContext.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "Unguarded editing context; resolves present on macCatalyst.",
+              "permalink" : "https://github.com/danielsaidi/richtextkit/blob/1.2/Sources/RichTextKit/_Essential/RichTextContext.swift#L22",
+              "symbol" : "RichTextContext"
+            },
+            {
+              "condition" : "canImport(UIKit)",
+              "file" : "Sources/RichTextKit/Fonts/FontRepresentable.swift",
+              "kind" : "symbol",
+              "line" : 13,
+              "note" : "UIKit branch resolves present on macCatalyst in the digest (absent only on macOS/watchOS/linux).",
+              "permalink" : "https://github.com/danielsaidi/richtextkit/blob/1.2/Sources/RichTextKit/Fonts/FontRepresentable.swift#L13",
+              "symbol" : "FontRepresentable"
+            },
+            {
+              "condition" : "iOS || macOS || os(tvOS) || os(visionOS)",
+              "file" : "Sources/RichTextKit/_Essential/RichTextEditor.swift",
+              "kind" : "guard",
+              "line" : 55,
+              "note" : "Package.swift defines the 'iOS' compilation condition for platforms [.iOS, .macCatalyst], so the core editor guard is active on macCatalyst; the extractor leaves it conditional. Confidence lowered because the manifest declares no explicit macCatalyst floor and the editor anchor stays conditional in the digest.",
+              "permalink" : "https://github.com/danielsaidi/richtextkit/blob/1.2/Sources/RichTextKit/_Essential/RichTextEditor.swift#L55",
+              "symbol" : "RichTextEditor"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/RichTextKit/_Essential/RichTextContext.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "Observable editing context that drives the rich text editor; unguarded, resolves present on macOS.",
+              "permalink" : "https://github.com/danielsaidi/richtextkit/blob/1.2/Sources/RichTextKit/_Essential/RichTextContext.swift#L22",
+              "symbol" : "RichTextContext"
+            },
+            {
+              "condition" : "macOS",
+              "file" : "Sources/RichTextKit/Bridging/RichTextView_AppKit.swift",
+              "kind" : "guard",
+              "line" : 22,
+              "note" : "NSTextView-based editor view. 'macOS' is a custom compilation condition defined in Package.swift via .define(\"macOS\", .when(platforms: [.macOS])), so this guard is active on macOS; the extractor leaves it conditional.",
+              "permalink" : "https://github.com/danielsaidi/richtextkit/blob/1.2/Sources/RichTextKit/Bridging/RichTextView_AppKit.swift#L22",
+              "symbol" : "RichTextView"
+            },
+            {
+              "condition" : "iOS || macOS || os(tvOS) || os(visionOS)",
+              "file" : "Sources/RichTextKit/_Essential/RichTextEditor.swift",
+              "kind" : "guard",
+              "line" : 55,
+              "note" : "Core SwiftUI editor; guard active on macOS via the custom 'macOS' flag. Manifest floor .macOS(.v12); README shows the demo app running on macOS.",
+              "permalink" : "https://github.com/danielsaidi/richtextkit/blob/1.2/Sources/RichTextKit/_Essential/RichTextEditor.swift#L55",
+              "symbol" : "RichTextEditor"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "condition" : "iOS || macOS || os(tvOS) || os(visionOS)",
+              "file" : "Sources/RichTextKit/_Essential/RichTextEditor.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "note" : "Guard resolves present on tvOS via os(tvOS). Manifest floor .tvOS(.v15).",
+              "permalink" : "https://github.com/danielsaidi/richtextkit/blob/1.2/Sources/RichTextKit/_Essential/RichTextEditor.swift#L55",
+              "symbol" : "RichTextEditor"
+            },
+            {
+              "condition" : "iOS || os(tvOS) || os(visionOS)",
+              "file" : "Sources/RichTextKit/Bridging/RichTextView_UIKit.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "note" : "UITextView-based editor view; guard resolves present on tvOS.",
+              "permalink" : "https://github.com/danielsaidi/richtextkit/blob/1.2/Sources/RichTextKit/Bridging/RichTextView_UIKit.swift#L28",
+              "symbol" : "RichTextView"
+            },
+            {
+              "file" : "Sources/RichTextKit/_Essential/RichTextContext.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "Unguarded editing context; present on tvOS.",
+              "permalink" : "https://github.com/danielsaidi/richtextkit/blob/1.2/Sources/RichTextKit/_Essential/RichTextContext.swift#L22",
+              "symbol" : "RichTextContext"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "condition" : "iOS || macOS || os(tvOS) || os(visionOS)",
+              "file" : "Sources/RichTextKit/_Essential/RichTextEditor.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "note" : "Guard resolves present on visionOS via os(visionOS). Manifest floor .visionOS(.v1).",
+              "permalink" : "https://github.com/danielsaidi/richtextkit/blob/1.2/Sources/RichTextKit/_Essential/RichTextEditor.swift#L55",
+              "symbol" : "RichTextEditor"
+            },
+            {
+              "condition" : "iOS || macOS || os(tvOS) || os(visionOS)",
+              "file" : "Sources/RichTextKit/_Essential/RichTextViewer.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "Read-only rich text viewer; guard resolves present on visionOS.",
+              "permalink" : "https://github.com/danielsaidi/richtextkit/blob/1.2/Sources/RichTextKit/_Essential/RichTextViewer.swift#L14",
+              "symbol" : "RichTextViewer"
+            },
+            {
+              "file" : "Sources/RichTextKit/_Essential/RichTextContext.swift",
+              "kind" : "symbol",
+              "line" : 22,
+              "note" : "Unguarded editing context; present on visionOS.",
+              "permalink" : "https://github.com/danielsaidi/richtextkit/blob/1.2/Sources/RichTextKit/_Essential/RichTextContext.swift#L22",
+              "symbol" : "RichTextContext"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.35,
+          "evidence" : [
+            {
+              "condition" : "iOS || macOS || os(tvOS) || os(visionOS)",
+              "file" : "Sources/RichTextKit/_Essential/RichTextEditor.swift",
+              "kind" : "guard",
+              "line" : 55,
+              "note" : "The core editor guard omits watchOS (with 'iOS'/'macOS' defined only for iOS/macCatalyst/macOS in Package.swift), so the editor view is compiled out on watchOS. The digest resolves this as conditional, not absent, so absence cannot be proven.",
+              "permalink" : "https://github.com/danielsaidi/richtextkit/blob/1.2/Sources/RichTextKit/_Essential/RichTextEditor.swift#L55",
+              "symbol" : "RichTextEditor"
+            },
+            {
+              "condition" : "iOS || os(tvOS) || os(visionOS)",
+              "file" : "Sources/RichTextKit/Bridging/RichTextView_UIKit.swift",
+              "kind" : "guard",
+              "line" : 28,
+              "note" : "Neither the UIKit nor the AppKit variant of the bridged text view has a watchOS branch. Manifest declares .watchOS(.v8), and unguarded model-layer types (RichTextContext, RichTextStyle) resolve present, but the editing UI itself appears unavailable on watchOS.",
+              "permalink" : "https://github.com/danielsaidi/richtextkit/blob/1.2/Sources/RichTextKit/Bridging/RichTextView_UIKit.swift#L28",
+              "symbol" : "RichTextView"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "richtextkit",
+      "version" : "1.2"
+    }
+  ]
+}

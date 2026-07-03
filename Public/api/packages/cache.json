@@ -1,0 +1,1672 @@
+[
+  {
+    "capability" : {
+      "id" : "storage.codable",
+      "label" : "Codable persistence"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Any Codable value is persistable via TransformerFactory.forCodable / Storage.transformCodable, wrapped in TypeWrapper; README: 'utilizes Codable in Swift 4 to perform serialization'.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/hyperoslo/cache",
+      "commit" : "24e47109e31b2031cb26e25cc1b81b607496066c",
+      "firstParty" : false,
+      "name" : "cache",
+      "surfaceDigest" : "fnv1a64:dae9b6eb4c30c223",
+      "version" : "7.4.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Library/TransformerFactory.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TransformerFactory.forCodable"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage+Transform.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.transformCodable"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Library/TypeWrapper.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TypeWrapper"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Library/TransformerFactory.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : "Surface digest resolves this decl present on linux (no gap); source is Foundation-only under Source/Shared with no os() guards, but there is no Linux CI or README corroboration - confidence reduced.",
+            "package" : null,
+            "symbol" : "TransformerFactory.forCodable"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage+Transform.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.transformCodable"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Library/TypeWrapper.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TypeWrapper"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Library/TransformerFactory.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TransformerFactory.forCodable"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage+Transform.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.transformCodable"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Library/TypeWrapper.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TypeWrapper"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Library/TransformerFactory.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TransformerFactory.forCodable"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage+Transform.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.transformCodable"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Library/TypeWrapper.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TypeWrapper"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Library/TransformerFactory.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TransformerFactory.forCodable"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage+Transform.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.transformCodable"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Library/TypeWrapper.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TypeWrapper"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Library/TransformerFactory.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TransformerFactory.forCodable"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage+Transform.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.transformCodable"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Library/TypeWrapper.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TypeWrapper"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Library/TransformerFactory.swift",
+            "kind" : "symbol",
+            "line" : 28,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TransformerFactory.forCodable"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage+Transform.swift",
+            "kind" : "symbol",
+            "line" : 19,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.transformCodable"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Library/TypeWrapper.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "TypeWrapper"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.disk-cache",
+      "label" : "Disk caching"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "DiskStorage persists entries as files via FileManager; Storage composes memory+disk via HybridStorage. Package.swift declares no platforms block (no floors); README key features list iOS, tvOS and macOS.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/hyperoslo/cache",
+      "commit" : "24e47109e31b2031cb26e25cc1b81b607496066c",
+      "firstParty" : false,
+      "name" : "cache",
+      "surfaceDigest" : "fnv1a64:dae9b6eb4c30c223",
+      "version" : "7.4.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/DiskStorage.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskStorage"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Configuration/DiskConfig.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskConfig"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/DiskStorage.swift",
+            "kind" : "symbol",
+            "line" : 79,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskStorage.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.init"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/DiskStorage.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : "Surface digest resolves this decl present on linux (no gap); source is Foundation-only under Source/Shared with no os() guards, but there is no Linux CI or README corroboration - confidence reduced.",
+            "package" : null,
+            "symbol" : "DiskStorage"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Configuration/DiskConfig.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskConfig"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/DiskStorage.swift",
+            "kind" : "symbol",
+            "line" : 79,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskStorage.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.init"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/DiskStorage.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskStorage"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Configuration/DiskConfig.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskConfig"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/DiskStorage.swift",
+            "kind" : "symbol",
+            "line" : 79,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskStorage.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.init"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/DiskStorage.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskStorage"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Configuration/DiskConfig.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskConfig"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/DiskStorage.swift",
+            "kind" : "symbol",
+            "line" : 79,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskStorage.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.init"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/DiskStorage.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskStorage"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Configuration/DiskConfig.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskConfig"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/DiskStorage.swift",
+            "kind" : "symbol",
+            "line" : 79,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskStorage.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.init"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/DiskStorage.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskStorage"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Configuration/DiskConfig.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskConfig"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/DiskStorage.swift",
+            "kind" : "symbol",
+            "line" : 79,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskStorage.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.init"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/DiskStorage.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskStorage"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Configuration/DiskConfig.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskConfig"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/DiskStorage.swift",
+            "kind" : "symbol",
+            "line" : 79,
+            "note" : null,
+            "package" : null,
+            "symbol" : "DiskStorage.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 18,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.init"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.in-memory",
+      "label" : "In-memory database"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Taxonomy label reads 'In-memory database'; Cache's MemoryStorage is an in-memory cache layer (fits the 'transient store' alias), not a database engine.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/hyperoslo/cache",
+      "commit" : "24e47109e31b2031cb26e25cc1b81b607496066c",
+      "firstParty" : false,
+      "name" : "cache",
+      "surfaceDigest" : "fnv1a64:dae9b6eb4c30c223",
+      "version" : "7.4.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/MemoryStorage.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryStorage"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Configuration/MemoryConfig.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryConfig"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/MemoryStorage.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryStorage.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.removeInMemoryObject"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/MemoryStorage.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : "Surface digest resolves this decl present on linux (no gap); source is Foundation-only under Source/Shared with no os() guards, but there is no Linux CI or README corroboration - confidence reduced.",
+            "package" : null,
+            "symbol" : "MemoryStorage"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Configuration/MemoryConfig.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryConfig"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/MemoryStorage.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryStorage.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.removeInMemoryObject"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/MemoryStorage.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryStorage"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Configuration/MemoryConfig.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryConfig"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/MemoryStorage.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryStorage.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.removeInMemoryObject"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/MemoryStorage.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryStorage"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Configuration/MemoryConfig.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryConfig"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/MemoryStorage.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryStorage.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.removeInMemoryObject"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/MemoryStorage.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryStorage"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Configuration/MemoryConfig.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryConfig"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/MemoryStorage.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryStorage.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.removeInMemoryObject"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/MemoryStorage.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryStorage"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Configuration/MemoryConfig.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryConfig"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/MemoryStorage.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryStorage.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.removeInMemoryObject"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/MemoryStorage.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryStorage"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Configuration/MemoryConfig.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryConfig"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/MemoryStorage.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "MemoryStorage.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.removeInMemoryObject"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.key-value",
+      "label" : "Key-value storage"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "All storages expose a generic key-value API: setObject(_:forKey:), object(forKey:), allKeys, with generic Key/Value type parameters.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/hyperoslo/cache",
+      "commit" : "24e47109e31b2031cb26e25cc1b81b607496066c",
+      "firstParty" : false,
+      "name" : "cache",
+      "surfaceDigest" : "fnv1a64:dae9b6eb4c30c223",
+      "version" : "7.4.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 23,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.object"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.allKeys"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 66,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.setObject"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : "Surface digest resolves this decl present on linux (no gap); source is Foundation-only under Source/Shared with no os() guards, but there is no Linux CI or README corroboration - confidence reduced.",
+            "package" : null,
+            "symbol" : "StorageAware.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 23,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.object"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.allKeys"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 66,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.setObject"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 23,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.object"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.allKeys"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 66,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.setObject"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 23,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.object"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.allKeys"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 66,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.setObject"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 23,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.object"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.allKeys"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 66,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.setObject"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 23,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.object"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.allKeys"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 66,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.setObject"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 44,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.setObject"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 23,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.object"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageAware.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageAware.allKeys"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 66,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.setObject"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.observation",
+      "label" : "Reactive queries / change tracking"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Per-key and storage-wide change observation (addObserver / addStorageObserver with KeyChange / StorageChange, ObservationToken). Matches the 'change tracking' facet of the taxonomy label; there are no reactive queries.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/hyperoslo/cache",
+      "commit" : "24e47109e31b2031cb26e25cc1b81b607496066c",
+      "firstParty" : false,
+      "name" : "cache",
+      "surfaceDigest" : "fnv1a64:dae9b6eb4c30c223",
+      "version" : "7.4.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 86,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.addStorageObserver"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 103,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.addObserver"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/KeyObservationRegistry.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "KeyObservationRegistry"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageObservationRegistry.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageChange"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 86,
+            "note" : "Surface digest resolves this decl present on linux (no gap); source is Foundation-only under Source/Shared with no os() guards, but there is no Linux CI or README corroboration - confidence reduced.",
+            "package" : null,
+            "symbol" : "Storage.addStorageObserver"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 103,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.addObserver"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/KeyObservationRegistry.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "KeyObservationRegistry"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageObservationRegistry.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageChange"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 86,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.addStorageObserver"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 103,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.addObserver"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/KeyObservationRegistry.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "KeyObservationRegistry"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageObservationRegistry.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageChange"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 86,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.addStorageObserver"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 103,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.addObserver"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/KeyObservationRegistry.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "KeyObservationRegistry"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageObservationRegistry.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageChange"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 86,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.addStorageObserver"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 103,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.addObserver"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/KeyObservationRegistry.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "KeyObservationRegistry"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageObservationRegistry.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageChange"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 86,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.addStorageObserver"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 103,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.addObserver"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/KeyObservationRegistry.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "KeyObservationRegistry"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageObservationRegistry.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageChange"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 86,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.addStorageObserver"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/Storage.swift",
+            "kind" : "symbol",
+            "line" : 103,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Storage.addObserver"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/KeyObservationRegistry.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : null,
+            "package" : null,
+            "symbol" : "KeyObservationRegistry"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Source/Shared/Storage/StorageObservationRegistry.swift",
+            "kind" : "symbol",
+            "line" : 26,
+            "note" : null,
+            "package" : null,
+            "symbol" : "StorageChange"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

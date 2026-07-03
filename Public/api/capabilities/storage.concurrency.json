@@ -1,0 +1,712 @@
+{
+  "aliases" : [
+    "wal",
+    "database pool",
+    "reader writer",
+    "write-ahead logging"
+  ],
+  "id" : "storage.concurrency",
+  "label" : "Concurrent access",
+  "packages" : [
+    {
+      "commit" : "e227d94dc3fe7099a096ac2ca28cad1f69bd8d5b",
+      "notes" : "Concurrent access is via event-loop connection pooling (taxonomy alias 'database pool'): maxConnectionsPerEventLoop and connectionPoolTimeout are public factory parameters, with AsyncKit pooling per the README. No WAL-mode or reader/writer API is surfaced by this driver itself, hence capped confidence.",
+      "package" : "https://github.com/vapor/fluent-sqlite-driver",
+      "packageName" : "fluent-sqlite-driver",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Connection pooling surfaced directly in the public API: maxConnectionsPerEventLoop: Int and connectionPoolTimeout: TimeAmount parameters. Pool-based concurrent access, not WAL-specific.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L71",
+              "symbol" : "DatabaseConfigurationFactory.sqlite"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Manifest declares .iOS(.v13) floor.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Connection pooling parameters (maxConnectionsPerEventLoop, connectionPoolTimeout); unconditional decl, no linux gap in surface. Vapor server-side package, CI tested on Linux.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L71",
+              "symbol" : "DatabaseConfigurationFactory.sqlite"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Connection pooling parameters (maxConnectionsPerEventLoop, connectionPoolTimeout); unconditional decl, no macCatalyst gap in surface. No explicit macCatalyst manifest floor, so confidence lowered.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L71",
+              "symbol" : "DatabaseConfigurationFactory.sqlite"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Connection pooling surfaced directly in the public API: maxConnectionsPerEventLoop: Int and connectionPoolTimeout: TimeAmount parameters. Pool-based concurrent access, not WAL-specific.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L71",
+              "symbol" : "DatabaseConfigurationFactory.sqlite"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Manifest declares .macOS(.v10_15) floor.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Connection pooling surfaced directly in the public API: maxConnectionsPerEventLoop: Int and connectionPoolTimeout: TimeAmount parameters. Pool-based concurrent access, not WAL-specific.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L71",
+              "symbol" : "DatabaseConfigurationFactory.sqlite"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Manifest declares .tvOS(.v13) floor.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Connection pooling parameters (maxConnectionsPerEventLoop, connectionPoolTimeout); unconditional decl, no visionOS gap in surface. No explicit visionOS manifest floor, so confidence lowered.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L71",
+              "symbol" : "DatabaseConfigurationFactory.sqlite"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Connection pooling surfaced directly in the public API: maxConnectionsPerEventLoop: Int and connectionPoolTimeout: TimeAmount parameters. Pool-based concurrent access, not WAL-specific.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L71",
+              "symbol" : "DatabaseConfigurationFactory.sqlite"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Manifest declares .watchOS(.v6) floor.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+        "https://github.com/vapor/fluent"
+      ],
+      "slug" : "fluent-sqlite-driver",
+      "version" : "4.9.0"
+    },
+    {
+      "commit" : "b83108d10f42680d78f23fe4d4d80fc88dab3212",
+      "notes" : "WAL-based DatabasePool (anchored via DatabasePool.path; the class decl itself fell outside the truncated digest), DatabaseSnapshot and reader/writer protocols are unconditional on all platforms. DatabasePool.makeSnapshotPool is gated behind SQLITE_ENABLE_SNAPSHOT && !SQLITE_DISABLE_SNAPSHOT, and Package.swift defines SQLITE_DISABLE_SNAPSHOT on .linux (Package.swift:19), so snapshot pools are unavailable on Linux — a peripheral feature; core concurrent access remains, with Linux confidence reduced accordingly.",
+      "package" : "https://github.com/groue/grdb.swift",
+      "packageName" : "grdb.swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/Core/DatabasePool.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabasePool.swift#L26",
+              "symbol" : "DatabasePool.path"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseSnapshot.swift",
+              "kind" : "symbol",
+              "line" : 77,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseSnapshot.swift#L77",
+              "symbol" : "DatabaseSnapshot"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseReader.swift",
+              "kind" : "symbol",
+              "line" : 713,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseReader.swift#L713",
+              "symbol" : "DatabaseSnapshotReader"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseWriter.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseWriter.swift#L64",
+              "symbol" : "DatabaseWriter"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 51,
+              "note" : "Package.swift declares iOS minimum .v13",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L51"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "GRDB/Core/DatabasePool.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabasePool.swift#L26",
+              "symbol" : "DatabasePool.path"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseSnapshot.swift",
+              "kind" : "symbol",
+              "line" : 77,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseSnapshot.swift#L77",
+              "symbol" : "DatabaseSnapshot"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseReader.swift",
+              "kind" : "symbol",
+              "line" : 713,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseReader.swift#L713",
+              "symbol" : "DatabaseSnapshotReader"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseWriter.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseWriter.swift#L64",
+              "symbol" : "DatabaseWriter"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "GRDB/Core/DatabasePool.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabasePool.swift#L26",
+              "symbol" : "DatabasePool.path"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseSnapshot.swift",
+              "kind" : "symbol",
+              "line" : 77,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseSnapshot.swift#L77",
+              "symbol" : "DatabaseSnapshot"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseReader.swift",
+              "kind" : "symbol",
+              "line" : 713,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseReader.swift#L713",
+              "symbol" : "DatabaseSnapshotReader"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseWriter.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseWriter.swift#L64",
+              "symbol" : "DatabaseWriter"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/Core/DatabasePool.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabasePool.swift#L26",
+              "symbol" : "DatabasePool.path"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseSnapshot.swift",
+              "kind" : "symbol",
+              "line" : 77,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseSnapshot.swift#L77",
+              "symbol" : "DatabaseSnapshot"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseReader.swift",
+              "kind" : "symbol",
+              "line" : 713,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseReader.swift#L713",
+              "symbol" : "DatabaseSnapshotReader"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseWriter.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseWriter.swift#L64",
+              "symbol" : "DatabaseWriter"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 52,
+              "note" : "Package.swift declares macOS minimum .v10_15",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L52"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/Core/DatabasePool.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabasePool.swift#L26",
+              "symbol" : "DatabasePool.path"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseSnapshot.swift",
+              "kind" : "symbol",
+              "line" : 77,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseSnapshot.swift#L77",
+              "symbol" : "DatabaseSnapshot"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseReader.swift",
+              "kind" : "symbol",
+              "line" : 713,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseReader.swift#L713",
+              "symbol" : "DatabaseSnapshotReader"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseWriter.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseWriter.swift#L64",
+              "symbol" : "DatabaseWriter"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 53,
+              "note" : "Package.swift declares tvOS minimum .v13",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L53"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "GRDB/Core/DatabasePool.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabasePool.swift#L26",
+              "symbol" : "DatabasePool.path"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseSnapshot.swift",
+              "kind" : "symbol",
+              "line" : 77,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseSnapshot.swift#L77",
+              "symbol" : "DatabaseSnapshot"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseReader.swift",
+              "kind" : "symbol",
+              "line" : 713,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseReader.swift#L713",
+              "symbol" : "DatabaseSnapshotReader"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseWriter.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseWriter.swift#L64",
+              "symbol" : "DatabaseWriter"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/Core/DatabasePool.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabasePool.swift#L26",
+              "symbol" : "DatabasePool.path"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseSnapshot.swift",
+              "kind" : "symbol",
+              "line" : 77,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseSnapshot.swift#L77",
+              "symbol" : "DatabaseSnapshot"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseReader.swift",
+              "kind" : "symbol",
+              "line" : 713,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseReader.swift#L713",
+              "symbol" : "DatabaseSnapshotReader"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseWriter.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseWriter.swift#L64",
+              "symbol" : "DatabaseWriter"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 54,
+              "note" : "Package.swift declares watchOS minimum .v7",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L54"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "grdb.swift",
+      "version" : "v7.11.1"
+    },
+    {
+      "commit" : "e2bf935089cd7620031ea342eaf96bf4ba3a22dc",
+      "notes" : "Concurrency is Swift-actor based (single serialized Core actor per database), not a multi-connection reader/writer pool.",
+      "package" : "https://github.com/marcoarment/blackbird",
+      "packageName" : "blackbird",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 485,
+              "note" : "Doc: 'An actor for protected concurrent access to a database.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L485",
+              "symbol" : "Blackbird.Database.Core"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 465,
+              "note" : "Actor-isolated transactions.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L465",
+              "symbol" : "Blackbird.Database.transaction"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 468,
+              "note" : "Cancellable actor-isolated transactions.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L468",
+              "symbol" : "Blackbird.Database.cancellableTransaction"
+            },
+            {
+              "file" : "Sources/Blackbird/Blackbird.swift",
+              "kind" : "symbol",
+              "line" : 282,
+              "note" : "Locked-value utility for Sendable conformance.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/Blackbird.swift#L282",
+              "symbol" : "Blackbird.Locked"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Package.swift declares .iOS(.v15) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms list contains only Apple platforms; Surface digest records no platform gaps, but sources unconditionally import Combine, SwiftUI, OSLog and SQLite3 with no os() guards, and Package.swift declares no Linux support; Linux buildability is unverified. Symbol absence is not absence evidence, so status is unknown.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L7"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 485,
+              "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L485",
+              "symbol" : "Blackbird.Database.Core"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 465,
+              "note" : "Actor-isolated transactions.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L465",
+              "symbol" : "Blackbird.Database.transaction"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 468,
+              "note" : "Cancellable actor-isolated transactions.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L468",
+              "symbol" : "Blackbird.Database.cancellableTransaction"
+            },
+            {
+              "file" : "Sources/Blackbird/Blackbird.swift",
+              "kind" : "symbol",
+              "line" : 282,
+              "note" : "Locked-value utility for Sendable conformance.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/Blackbird.swift#L282",
+              "symbol" : "Blackbird.Locked"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 485,
+              "note" : "Doc: 'An actor for protected concurrent access to a database.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L485",
+              "symbol" : "Blackbird.Database.Core"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 465,
+              "note" : "Actor-isolated transactions.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L465",
+              "symbol" : "Blackbird.Database.transaction"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 468,
+              "note" : "Cancellable actor-isolated transactions.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L468",
+              "symbol" : "Blackbird.Database.cancellableTransaction"
+            },
+            {
+              "file" : "Sources/Blackbird/Blackbird.swift",
+              "kind" : "symbol",
+              "line" : 282,
+              "note" : "Locked-value utility for Sendable conformance.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/Blackbird.swift#L282",
+              "symbol" : "Blackbird.Locked"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Package.swift declares .macOS(.v12) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 485,
+              "note" : "Doc: 'An actor for protected concurrent access to a database.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L485",
+              "symbol" : "Blackbird.Database.Core"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 465,
+              "note" : "Actor-isolated transactions.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L465",
+              "symbol" : "Blackbird.Database.transaction"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 468,
+              "note" : "Cancellable actor-isolated transactions.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L468",
+              "symbol" : "Blackbird.Database.cancellableTransaction"
+            },
+            {
+              "file" : "Sources/Blackbird/Blackbird.swift",
+              "kind" : "symbol",
+              "line" : 282,
+              "note" : "Locked-value utility for Sendable conformance.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/Blackbird.swift#L282",
+              "symbol" : "Blackbird.Locked"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 11,
+              "note" : "Package.swift declares .tvOS(.v15) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L11"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 485,
+              "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L485",
+              "symbol" : "Blackbird.Database.Core"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 465,
+              "note" : "Actor-isolated transactions.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L465",
+              "symbol" : "Blackbird.Database.transaction"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 468,
+              "note" : "Cancellable actor-isolated transactions.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L468",
+              "symbol" : "Blackbird.Database.cancellableTransaction"
+            },
+            {
+              "file" : "Sources/Blackbird/Blackbird.swift",
+              "kind" : "symbol",
+              "line" : 282,
+              "note" : "Locked-value utility for Sendable conformance.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/Blackbird.swift#L282",
+              "symbol" : "Blackbird.Locked"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 485,
+              "note" : "Doc: 'An actor for protected concurrent access to a database.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L485",
+              "symbol" : "Blackbird.Database.Core"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 465,
+              "note" : "Actor-isolated transactions.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L465",
+              "symbol" : "Blackbird.Database.transaction"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 468,
+              "note" : "Cancellable actor-isolated transactions.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L468",
+              "symbol" : "Blackbird.Database.cancellableTransaction"
+            },
+            {
+              "file" : "Sources/Blackbird/Blackbird.swift",
+              "kind" : "symbol",
+              "line" : 282,
+              "note" : "Locked-value utility for Sendable conformance.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/Blackbird.swift#L282",
+              "symbol" : "Blackbird.Locked"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Package.swift declares .watchOS(.v8) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "blackbird",
+      "version" : "0.5"
+    }
+  ]
+}

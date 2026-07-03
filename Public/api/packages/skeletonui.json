@@ -1,0 +1,260 @@
+[
+  {
+    "capability" : {
+      "id" : "ui.skeleton-loading",
+      "label" : "Skeleton loading"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Core skeleton-loading API (View.skeleton, SkeletonModifier, SkeletonList, SkeletonForEach, AnimationType/AppearanceType/ShapeType) is unconditional across the surface; the only os()-guarded decls are ancillary Image/NSImage initializer branches, not skeleton capability gates.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/csolanam/skeletonui",
+      "commit" : "f025e9ba5d051374d7344efa8859df5b9399a181",
+      "firstParty" : false,
+      "name" : "skeletonui",
+      "surfaceDigest" : "fnv1a64:e67d9fb7dc7f3971",
+      "version" : "2.0.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.95,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SkeletonUI/Extensions/View+SkeletonModifier.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Primary skeleton API; unconditional decl, no platform gaps.",
+            "package" : null,
+            "symbol" : "View.skeleton"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SkeletonUI/Skeleton/SkeletonList.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : "Skeleton list container; unconditional decl, no platform gaps.",
+            "package" : null,
+            "symbol" : "SkeletonList"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Manifest declares .iOS(.v13) platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Manifest platforms list omits Linux and the package is pure SwiftUI (unavailable on Linux), but a missing manifest floor is not absence evidence and core skeleton symbols carry no os() guard excluding Linux; honest status is unknown.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SkeletonUI/Extensions/View+SkeletonModifier.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Primary skeleton API; unconditional decl, no macCatalyst gap.",
+            "package" : null,
+            "symbol" : "View.skeleton"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SkeletonUI/Skeleton/SkeletonList.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : "Skeleton list container; unconditional decl, no macCatalyst gap.",
+            "package" : null,
+            "symbol" : "SkeletonList"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "iOS 13 manifest floor applies to Mac Catalyst; no Catalyst-specific exclusions in the surface.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SkeletonUI/Extensions/View+SkeletonModifier.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Primary skeleton API; unconditional decl, no platform gaps.",
+            "package" : null,
+            "symbol" : "View.skeleton"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SkeletonUI/Modifiers/SkeletonModifier.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : "Core modifier type; unconditional decl, no platform gaps.",
+            "package" : null,
+            "symbol" : "SkeletonModifier"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 11,
+            "note" : "Manifest declares .macOS(.v10_15) platform floor; macOS-specific Image init branch (nsImage) exists in the surface.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SkeletonUI/Extensions/View+SkeletonModifier.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Primary skeleton API; unconditional decl, no platform gaps.",
+            "package" : null,
+            "symbol" : "View.skeleton"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SkeletonUI/Skeleton/SkeletonList.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : "Skeleton list container; unconditional decl, no platform gaps.",
+            "package" : null,
+            "symbol" : "SkeletonList"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Manifest declares .tvOS(.v13) platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SkeletonUI/Extensions/View+SkeletonModifier.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Primary skeleton API; unconditional decl, no visionOS gap.",
+            "package" : null,
+            "symbol" : "View.skeleton"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SkeletonUI/Modifiers/SkeletonModifier.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : "Core modifier type; unconditional decl, no visionOS gap.",
+            "package" : null,
+            "symbol" : "SkeletonModifier"
+          },
+          {
+            "availability" : null,
+            "condition" : "os(iOS) || os(tvOS) || os(watchOS) || os(visionOS)",
+            "file" : "Sources/SkeletonUI/Extensions/Image+OptionalType.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Conditional branch explicitly includes os(visionOS), positive evidence the package targets visionOS; not listed in manifest platforms, so confidence reduced.",
+            "package" : null,
+            "symbol" : "Image.init"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SkeletonUI/Extensions/View+SkeletonModifier.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Primary skeleton API; unconditional decl, no platform gaps.",
+            "package" : null,
+            "symbol" : "View.skeleton"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SkeletonUI/Skeleton/SkeletonForEach.swift",
+            "kind" : "symbol",
+            "line" : 3,
+            "note" : "Skeleton repeating container; unconditional decl, no platform gaps.",
+            "package" : null,
+            "symbol" : "SkeletonForEach"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Manifest declares .watchOS(.v6) platform floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

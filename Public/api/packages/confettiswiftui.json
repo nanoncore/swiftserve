@@ -1,0 +1,378 @@
+[
+  {
+    "capability" : {
+      "id" : "ui.haptics",
+      "label" : "Haptic feedback"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Secondary capability: hapticFeedback parameter (default true) on the confetti API. Checkout source plays haptics only on UIKit platforms excluding tvOS/visionOS (UIImpactFeedbackGenerator) and on watchOS (WKInterfaceDevice.play). The gating guard is internal, so excluded platforms are labeled unknown rather than unsupported.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/simibac/confettiswiftui",
+      "commit" : "9ae5bc2ce2149980884d4612321c3a266d6bf82c",
+      "firstParty" : false,
+      "name" : "confettiswiftui",
+      "surfaceDigest" : "fnv1a64:6e5789046aec25d1",
+      "version" : "3.0.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/View+ConfettiCannon.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "Public API exposes hapticFeedback: Bool = true; checkout source plays UIImpactFeedbackGenerator(.heavy) on each explosion on iOS.",
+            "package" : null,
+            "symbol" : "View.confettiCannon"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ConfettiSwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 77,
+            "note" : "hapticFeedback parameter in initializer signature.",
+            "package" : null,
+            "symbol" : "ConfettiCannon.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README: haptic feedback on each confetti explosion (hapticFeedback parameter, default true).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.15,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/View+ConfettiCannon.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "SwiftUI-only module; no haptics API on Linux; no surface-level absence evidence, so status stays unknown.",
+            "package" : null,
+            "symbol" : "View.confettiCannon"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.4,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/View+ConfettiCannon.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "UIImpactFeedbackGenerator path compiles on Catalyst (UIKit importable), but whether it produces actual haptic output on Mac hardware is unverified.",
+            "package" : null,
+            "symbol" : "View.confettiCannon"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/View+ConfettiCannon.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "hapticFeedback parameter is present, but the haptic playback in the checkout is internally compiled out on macOS (canImport(UIKit) guard, not visible in the public surface), so no surface-level absence evidence exists; likely a no-op.",
+            "package" : null,
+            "symbol" : "View.confettiCannon"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "tvOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/View+ConfettiCannon.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "hapticFeedback parameter is present, but checkout source excludes tvOS from haptic playback via an internal !os(tvOS) guard not visible in the public surface; likely a no-op.",
+            "package" : null,
+            "symbol" : "View.confettiCannon"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/View+ConfettiCannon.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "hapticFeedback parameter is present, but checkout source excludes visionOS from haptic playback via an internal !os(visionOS) guard not visible in the public surface; likely a no-op.",
+            "package" : null,
+            "symbol" : "View.confettiCannon"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/View+ConfettiCannon.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "hapticFeedback parameter present; checkout source has a dedicated os(watchOS) branch playing WKInterfaceDevice.current().play(.click).",
+            "package" : null,
+            "symbol" : "View.confettiCannon"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "ui.particle-effects",
+      "label" : "Particle effects"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Core purpose of the package: configurable confetti particle animation (shapes, emojis, SF Symbols, text) in pure SwiftUI. All 23 public decls are unconditional with no per-platform gaps.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/simibac/confettiswiftui",
+      "commit" : "9ae5bc2ce2149980884d4612321c3a266d6bf82c",
+      "firstParty" : false,
+      "name" : "confettiswiftui",
+      "surfaceDigest" : "fnv1a64:6e5789046aec25d1",
+      "version" : "3.0.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/View+ConfettiCannon.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "Unconditional public SwiftUI modifier rendering configurable confetti animation; no per-platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "View.confettiCannon"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ConfettiSwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 77,
+            "note" : "Core confetti view initializer, unconditional.",
+            "package" : null,
+            "symbol" : "ConfettiCannon.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 0,
+            "note" : "Manifest declares .iOS(.v14).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/View+ConfettiCannon.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "Surface digest records no linux gap, but the module is SwiftUI-only and SwiftUI is not available on Linux; no guard/availability anchor exists to prove absence, so status stays unknown.",
+            "package" : null,
+            "symbol" : "View.confettiCannon"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/View+ConfettiCannon.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "No macCatalyst gap in surface digest; iOS 14 manifest floor covers Catalyst.",
+            "package" : null,
+            "symbol" : "View.confettiCannon"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 0,
+            "note" : "Manifest declares .iOS(.v14); Catalyst inherits the iOS floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/View+ConfettiCannon.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "No macOS gap in surface digest; pure SwiftUI implementation.",
+            "package" : null,
+            "symbol" : "View.confettiCannon"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ConfettiSwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 51,
+            "note" : "Core confetti view struct, unconditional.",
+            "package" : null,
+            "symbol" : "ConfettiCannon"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 0,
+            "note" : "Manifest declares .macOS(.v11).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/View+ConfettiCannon.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "No tvOS gap in surface digest.",
+            "package" : null,
+            "symbol" : "View.confettiCannon"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 0,
+            "note" : "Manifest declares .tvOS(.v14).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/View+ConfettiCannon.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "No visionOS gap in surface digest; pure SwiftUI surface. Manifest has no visionOS floor (not absence evidence), hence reduced confidence.",
+            "package" : null,
+            "symbol" : "View.confettiCannon"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/ConfettiSwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 77,
+            "note" : "Unconditional on visionOS per surface digest.",
+            "package" : null,
+            "symbol" : "ConfettiCannon.init"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/View+ConfettiCannon.swift",
+            "kind" : "symbol",
+            "line" : 47,
+            "note" : "No watchOS gap in surface digest.",
+            "package" : null,
+            "symbol" : "View.confettiCannon"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 0,
+            "note" : "Manifest declares .watchOS(.v7).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

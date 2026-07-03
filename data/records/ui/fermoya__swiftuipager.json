@@ -1,0 +1,240 @@
+[
+  {
+    "capability" : {
+      "id" : "ui.pager",
+      "label" : "Paging / carousel"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "SwiftUIPager is a pure-SwiftUI pager/carousel; the core Pager view is unconditional across Apple platforms. tvOS lacks the !os(tvOS)-gated drag modifiers (dragForwardOnly, sensitivity, delaysTouches, bounces, onDragging*), so interaction options are reduced there. watchOS adds Digital Crown paging. Blind spot: 1 ObjC file unparsed by extraction.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/fermoya/swiftuipager",
+      "commit" : "4ddc04c801aac143090bb14cf26603a3bf9c74cb",
+      "firstParty" : false,
+      "name" : "swiftuipager",
+      "surfaceDigest" : "fnv1a64:62db0cf6fa9d5a9e",
+      "version" : "2.5.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftUIPager/Pager.swift",
+            "kind" : "symbol",
+            "line" : 34,
+            "note" : "Core paging view, declared unconditionally; no iOS gap in surface digest",
+            "package" : null,
+            "symbol" : "Pager"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftUIPager/Pager.swift",
+            "kind" : "symbol",
+            "line" : 181,
+            "note" : "Public initializer present on iOS",
+            "package" : null,
+            "symbol" : "Pager.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Manifest declares .iOS(.v13)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftUIPager/Pager.swift",
+            "kind" : "symbol",
+            "line" : 34,
+            "note" : "Surface digest lists no linux gap, but the Swift-only extraction does not model the SwiftUI import, which is not available on Linux; no build verdict, so presence cannot be trusted here",
+            "package" : null,
+            "symbol" : "Pager"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftUIPager/Pager.swift",
+            "kind" : "symbol",
+            "line" : 34,
+            "note" : "No macCatalyst gap in surface digest; the extractor does model macCatalyst (digital-crown decls list it absent), so gap absence here is a genuine presence signal",
+            "package" : null,
+            "symbol" : "Pager"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftUIPager/Pager.swift",
+            "kind" : "symbol",
+            "line" : 181,
+            "note" : "Public initializer present on macCatalyst",
+            "package" : null,
+            "symbol" : "Pager.init"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftUIPager/Pager.swift",
+            "kind" : "symbol",
+            "line" : 34,
+            "note" : "Core paging view, declared unconditionally; no macOS gap in surface digest",
+            "package" : null,
+            "symbol" : "Pager"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftUIPager/Pager.swift",
+            "kind" : "symbol",
+            "line" : 181,
+            "note" : "Public initializer present on macOS",
+            "package" : null,
+            "symbol" : "Pager.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Manifest declares .macOS(.v10_15)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftUIPager/Pager.swift",
+            "kind" : "symbol",
+            "line" : 34,
+            "note" : "Core paging view has no tvOS gap; drag-gesture modifiers (e.g. Pager.dragForwardOnly, Pager.sensitivity) are gated !os(tvOS), so swipe interaction is reduced on tvOS",
+            "package" : null,
+            "symbol" : "Pager"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftUIPager/Pager.swift",
+            "kind" : "symbol",
+            "line" : 181,
+            "note" : "Public initializer present on tvOS",
+            "package" : null,
+            "symbol" : "Pager.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 12,
+            "note" : "Manifest declares .tvOS(.v13)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftUIPager/Pager.swift",
+            "kind" : "symbol",
+            "line" : 34,
+            "note" : "Core paging view has no visionOS gap in surface digest; no visionOS-specific handling in source and no manifest floor, hence reduced confidence",
+            "package" : null,
+            "symbol" : "Pager"
+          },
+          {
+            "availability" : "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)",
+            "condition" : null,
+            "file" : "Sources/SwiftUIPager/PageConfiguration/PagingAnimation.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : "Trailing-* availability covers visionOS",
+            "package" : null,
+            "symbol" : "DraggingAnimation"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftUIPager/Pager.swift",
+            "kind" : "symbol",
+            "line" : 34,
+            "note" : "Core paging view, declared unconditionally; no watchOS gap in surface digest",
+            "package" : null,
+            "symbol" : "Pager"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/SwiftUIPager/Pager+Buildable.swift",
+            "kind" : "symbol",
+            "line" : 168,
+            "note" : "watchOS-specific paging input (Digital Crown); digest gaps mark it absent on iOS/macOS/macCatalyst/tvOS but present on watchOS",
+            "package" : null,
+            "symbol" : "Pager.onDigitalCrownRotated"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 11,
+            "note" : "Manifest declares .watchOS(.v6)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

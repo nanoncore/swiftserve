@@ -1,0 +1,227 @@
+{
+  "aliases" : [
+    "markdown view",
+    "commonmark",
+    "gfm"
+  ],
+  "id" : "ui.markdown-rendering",
+  "label" : "Markdown rendering",
+  "packages" : [
+    {
+      "commit" : "5f613358148239d0292c0cef674a3c2314737f9e",
+      "notes" : "Package is a SwiftUI Markdown renderer (GFM-compatible). All non-deprecated public decls in the surface are unconditional (0 #if conditions); the only gapped decls are @available(*, unavailable) deprecation shims absent on every platform. Read-only rendering: does not qualify for ui.rich-text (editing).",
+      "package" : "https://github.com/gonzalezreal/swift-markdown-ui",
+      "packageName" : "swift-markdown-ui",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/MarkdownUI/Views/Markdown.swift",
+              "kind" : "symbol",
+              "line" : 191,
+              "note" : "SwiftUI view that displays read-only Markdown content; unconditional in the surface (no #if gaps)",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Sources/MarkdownUI/Views/Markdown.swift#L191",
+              "symbol" : "Markdown"
+            },
+            {
+              "file" : "Sources/MarkdownUI/Views/Markdown.swift",
+              "kind" : "symbol",
+              "line" : 237,
+              "note" : "init(_ markdown: String, baseURL: URL? = nil, imageBaseURL: URL? = nil)",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Sources/MarkdownUI/Views/Markdown.swift#L237",
+              "symbol" : "Markdown.init"
+            },
+            {
+              "file" : "Sources/MarkdownUI/DSL/Blocks/MarkdownContent.swift",
+              "kind" : "symbol",
+              "line" : 62,
+              "note" : "Pre-parsed GFM-compatible Markdown content value",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Sources/MarkdownUI/DSL/Blocks/MarkdownContent.swift#L62",
+              "symbol" : "MarkdownContent"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 0,
+              "note" : "Manifest declares .iOS(.v15) floor",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Package.swift#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Sources/MarkdownUI/Views/Markdown.swift",
+              "kind" : "symbol",
+              "line" : 191,
+              "note" : "Surface shows no linux gap (no os() guards), but the core view imports SwiftUI, which does not exist on Linux; no guard-based absence evidence, so status stays unknown",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Sources/MarkdownUI/Views/Markdown.swift#L191",
+              "symbol" : "Markdown"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README minimum-requirements list covers only macOS/iOS/tvOS/watchOS; Linux not mentioned",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/README.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/MarkdownUI/Views/Markdown.swift",
+              "kind" : "symbol",
+              "line" : 191,
+              "note" : "Unconditional in the surface; no macCatalyst gap",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Sources/MarkdownUI/Views/Markdown.swift#L191",
+              "symbol" : "Markdown"
+            },
+            {
+              "file" : "Sources/MarkdownUI/DSL/Blocks/MarkdownContent.swift",
+              "kind" : "symbol",
+              "line" : 62,
+              "note" : "No macCatalyst gap",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Sources/MarkdownUI/DSL/Blocks/MarkdownContent.swift#L62",
+              "symbol" : "MarkdownContent"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 0,
+              "note" : "Manifest declares .macCatalyst(.v15) floor",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Package.swift#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/MarkdownUI/Views/Markdown.swift",
+              "kind" : "symbol",
+              "line" : 191,
+              "note" : "Unconditional in the surface; no macOS gap",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Sources/MarkdownUI/Views/Markdown.swift#L191",
+              "symbol" : "Markdown"
+            },
+            {
+              "file" : "Sources/MarkdownUI/DSL/Blocks/MarkdownContent.swift",
+              "kind" : "symbol",
+              "line" : 62,
+              "note" : "No macOS gap",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Sources/MarkdownUI/DSL/Blocks/MarkdownContent.swift#L62",
+              "symbol" : "MarkdownContent"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 0,
+              "note" : "Manifest declares .macOS(.v12) floor",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Package.swift#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/MarkdownUI/Views/Markdown.swift",
+              "kind" : "symbol",
+              "line" : 191,
+              "note" : "Unconditional in the surface; no tvOS gap",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Sources/MarkdownUI/Views/Markdown.swift#L191",
+              "symbol" : "Markdown"
+            },
+            {
+              "file" : "Sources/MarkdownUI/DSL/Blocks/MarkdownContent.swift",
+              "kind" : "symbol",
+              "line" : 62,
+              "note" : "No tvOS gap",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Sources/MarkdownUI/DSL/Blocks/MarkdownContent.swift#L62",
+              "symbol" : "MarkdownContent"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 0,
+              "note" : "Manifest declares .tvOS(.v15) floor",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Package.swift#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/MarkdownUI/Views/Markdown.swift",
+              "kind" : "symbol",
+              "line" : 191,
+              "note" : "Unconditional in the surface; no visionOS gap and no os() guards anywhere in the live surface",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Sources/MarkdownUI/Views/Markdown.swift#L191",
+              "symbol" : "Markdown"
+            },
+            {
+              "file" : "Sources/MarkdownUI/DSL/Blocks/MarkdownContent.swift",
+              "kind" : "symbol",
+              "line" : 62,
+              "note" : "No visionOS gap",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Sources/MarkdownUI/DSL/Blocks/MarkdownContent.swift#L62",
+              "symbol" : "MarkdownContent"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 0,
+              "note" : "No visionOS floor declared (swift-tools-version 5.6 predates visionOS); iOS 15 floor applies via iOS compatibility — confidence reduced",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Package.swift#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/MarkdownUI/Views/Markdown.swift",
+              "kind" : "symbol",
+              "line" : 191,
+              "note" : "Unconditional in the surface; no watchOS gap",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Sources/MarkdownUI/Views/Markdown.swift#L191",
+              "symbol" : "Markdown"
+            },
+            {
+              "file" : "Sources/MarkdownUI/DSL/Blocks/MarkdownContent.swift",
+              "kind" : "symbol",
+              "line" : 62,
+              "note" : "No watchOS gap",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Sources/MarkdownUI/DSL/Blocks/MarkdownContent.swift#L62",
+              "symbol" : "MarkdownContent"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 0,
+              "note" : "Manifest declares .watchOS(.v8) floor; README notes tables/multi-image paragraphs need watchOS 9+",
+              "permalink" : "https://github.com/gonzalezreal/swift-markdown-ui/blob/2.4.1/Package.swift#L0"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swift-markdown-ui",
+      "version" : "2.4.1"
+    }
+  ]
+}

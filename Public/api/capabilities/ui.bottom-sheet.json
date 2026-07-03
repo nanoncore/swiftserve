@@ -1,0 +1,288 @@
+{
+  "aliases" : [
+    "drawer",
+    "floating panel",
+    "modal sheet"
+  ],
+  "id" : "ui.bottom-sheet",
+  "label" : "Bottom sheets",
+  "packages" : [
+    {
+      "commit" : "7efcc769e0ffe62f530e9276ab26309f758b7cc3",
+      "notes" : "FloatingPanel is a UIKit bottom-sheet/drawer container (Apple Maps style) with SwiftUI wrappers. Digest blind spot: core UIKit decls carry no per-platform gaps because 'import UIKit' is unconditional, so digest presence on macOS/watchOS/tvOS/visionOS/linux overstates buildability; statuses above under-claim accordingly. linux unsupported rests on the SwiftUI-wing guard anchors (gaps mark linux absent); the UIKit core has no linux guard, hence confidence 0.5. Checkout observations (not anchors): UIScreen.main used unconditionally in Sources/Extensions.swift; childForHomeIndicatorAutoHidden overridden in Sources/Controller.swift. 1 ObjC file unparsed per bundle blind-spot note.",
+      "package" : "https://github.com/scenee/floatingpanel",
+      "packageName" : "floatingpanel",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Controller.swift",
+              "kind" : "symbol",
+              "line" : 145,
+              "note" : "Container view controller that displays a panel; core bottom-sheet entry point, unconditioned in source.",
+              "permalink" : "https://github.com/scenee/floatingpanel/blob/3.2.2/Sources/Controller.swift#L145",
+              "symbol" : "FloatingPanelController"
+            },
+            {
+              "file" : "Sources/Layout.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "note" : "Doc: 'A layout object that lays out a panel in bottom sheet style.'",
+              "permalink" : "https://github.com/scenee/floatingpanel/blob/3.2.2/Sources/Layout.swift#L25",
+              "symbol" : "FloatingPanelBottomLayout"
+            },
+            {
+              "file" : "Sources/Controller.swift",
+              "kind" : "symbol",
+              "line" : 529,
+              "note" : "Adds the panel as a child of a parent view controller.",
+              "permalink" : "https://github.com/scenee/floatingpanel/blob/3.2.2/Sources/Controller.swift#L529",
+              "symbol" : "FloatingPanelController.addPanel"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "note" : "Manifest declares platforms: [.iOS(.v12)]; README states 'compatible with iOS 12.0+'."
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.5,
+          "evidence" : [
+            {
+              "condition" : "canImport(SwiftUI)",
+              "file" : "Sources/SwiftUI/View+floatingPanel.swift",
+              "kind" : "guard",
+              "line" : 51,
+              "note" : "Digest gaps mark linux absent for this core bottom-sheet entry point (canImport(SwiftUI) resolves false on linux).",
+              "permalink" : "https://github.com/scenee/floatingpanel/blob/3.2.2/Sources/SwiftUI/View+floatingPanel.swift#L51",
+              "symbol" : "View.floatingPanel"
+            },
+            {
+              "condition" : "canImport(SwiftUI)",
+              "file" : "Sources/SwiftUI/FloatingPanelProxy.swift",
+              "kind" : "guard",
+              "line" : 31,
+              "note" : "Digest gaps mark linux absent (canImport(SwiftUI)).",
+              "permalink" : "https://github.com/scenee/floatingpanel/blob/3.2.2/Sources/SwiftUI/FloatingPanelProxy.swift#L31",
+              "symbol" : "FloatingPanelProxy"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Controller.swift",
+              "kind" : "symbol",
+              "line" : 145,
+              "note" : "No macCatalyst gap in the digest; pure-UIKit surface is available under Mac Catalyst. No explicit manifest floor, so confidence is held below the symbol-presence ceiling.",
+              "permalink" : "https://github.com/scenee/floatingpanel/blob/3.2.2/Sources/Controller.swift#L145",
+              "symbol" : "FloatingPanelController"
+            },
+            {
+              "file" : "Sources/Layout.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "note" : "Bottom sheet layout object; no macCatalyst gap in the digest.",
+              "permalink" : "https://github.com/scenee/floatingpanel/blob/3.2.2/Sources/Layout.swift#L25",
+              "symbol" : "FloatingPanelBottomLayout"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "note" : "Manifest declares only .iOS(.v12); no macOS floor. Sources import UIKit unconditionally, which the Swift-only extraction does not model as a macOS gap — no absence evidence, so unknown."
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "note" : "Manifest declares only .iOS(.v12). Digest records no tvOS gaps, but the source unconditionally overrides childForHomeIndicatorAutoHidden (iOS-family API not on tvOS), so a tvOS build is doubtful; no guard evidence either way."
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "note" : "Manifest declares only .iOS(.v12). Digest records no visionOS gaps, but Sources/Extensions.swift uses UIScreen.main unconditionally (UIScreen is unavailable on visionOS), so a visionOS build is doubtful; no guard evidence either way."
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "note" : "Manifest declares only .iOS(.v12); no watchOS floor. UIKit-based UIViewController surface; digest records no watchOS gap but no positive build evidence either."
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "floatingpanel",
+      "version" : "3.2.2"
+    },
+    {
+      "commit" : "e56e89614d86b4bc21ffb36bf435cc52c60a8c13",
+      "notes" : "Bottom-sheet capability is delivered by the v5 scrollPopup modifier family (ScrollPopupParameters, ScrollPopupPosition.bottom/center with drag-to-dismiss and header). Public decls are unconditional in the digest, but the checkout shows Sources/PopupView/Utils/ScrollPopupModifier.swift wrapped in #if os(iOS), so non-iOS/non-Catalyst platforms are labeled unknown rather than supported. Popup.DisplayMode.sheet was NOT used as evidence: it selects a presentation mechanism (fullscreenSheet), not a bottom-sheet UI.",
+      "package" : "https://github.com/exyte/popupview",
+      "packageName" : "popupview",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/PopupView/PublicModifiers.swift",
+              "kind" : "symbol",
+              "line" : 61,
+              "note" : "Scrollable, drag-dismissable, header-equipped popup — a bottom-sheet/drawer component; internal implementation (ScrollPopupModifier) is iOS-targeted",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicModifiers.swift#L61",
+              "symbol" : "View.scrollPopup"
+            },
+            {
+              "file" : "Sources/PopupView/PublicAPI.swift",
+              "kind" : "symbol",
+              "line" : 116,
+              "note" : "Explicit bottom sheet positioning with top padding",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicAPI.swift#L116",
+              "symbol" : "Popup.ScrollPopupPosition.bottom"
+            },
+            {
+              "file" : "Sources/PopupView/PublicAPI.swift",
+              "kind" : "symbol",
+              "line" : 322,
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicAPI.swift#L322",
+              "symbol" : "Popup.ScrollPopupParameters.position"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README markets a 'Sheets' popup style with demo gif",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/README.md#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "No linux support signal; SwiftUI-only library, but no os() guard evidence of absence in the surface, so status stays unknown",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Package.swift#L7"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/PopupView/PublicModifiers.swift",
+              "kind" : "symbol",
+              "line" : 61,
+              "note" : "Present per surface digest; os(iOS)-gated internals compile on Mac Catalyst since os(iOS) evaluates true there",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicModifiers.swift#L61",
+              "symbol" : "View.scrollPopup"
+            },
+            {
+              "file" : "Sources/PopupView/PublicAPI.swift",
+              "kind" : "symbol",
+              "line" : 116,
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicAPI.swift#L116",
+              "symbol" : "Popup.ScrollPopupPosition.bottom"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.35,
+          "evidence" : [
+            {
+              "file" : "Sources/PopupView/PublicModifiers.swift",
+              "kind" : "symbol",
+              "line" : 61,
+              "note" : "Public decl is unconditional and present on macOS per surface digest, but the internal sheet implementation (ScrollPopupModifier) is compiled only under os(iOS); actual sheet behavior on macOS unverified",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicModifiers.swift#L61",
+              "symbol" : "View.scrollPopup"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "Sources/PopupView/PublicModifiers.swift",
+              "kind" : "symbol",
+              "line" : 61,
+              "note" : "Public decl present per surface digest, but internal sheet implementation is os(iOS)-gated; behavior on tvOS unverified",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicModifiers.swift#L61",
+              "symbol" : "View.scrollPopup"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "Sources/PopupView/PublicModifiers.swift",
+              "kind" : "symbol",
+              "line" : 61,
+              "note" : "Public decl present per surface digest, but internal sheet implementation is os(iOS)-gated (os(iOS) is false on native visionOS); no visionOS floor in manifest",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicModifiers.swift#L61",
+              "symbol" : "View.scrollPopup"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "Sources/PopupView/PublicModifiers.swift",
+              "kind" : "symbol",
+              "line" : 61,
+              "note" : "Public decl present per surface digest, but internal sheet implementation is os(iOS)-gated; behavior on watchOS unverified",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicModifiers.swift#L61",
+              "symbol" : "View.scrollPopup"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "popupview",
+      "version" : "5.0.2"
+    }
+  ]
+}

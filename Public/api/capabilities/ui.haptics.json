@@ -1,0 +1,429 @@
+{
+  "aliases" : [
+    "core haptics",
+    "vibration",
+    "taptic"
+  ],
+  "id" : "ui.haptics",
+  "label" : "Haptic feedback",
+  "packages" : [
+    {
+      "commit" : "17F113",
+      "notes" : "Custom haptic patterns via CHHapticEngine. Present in the visionOS and tvOS SDKs; absent from the watchOS SDK (WatchKit WKInterfaceDevice.play is the watch path).",
+      "package" : "https://developer.apple.com/documentation/corehaptics",
+      "packageName" : "CoreHaptics",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://developer.apple.com/documentation/corehaptics/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json#L42",
+              "symbol" : "CHHapticEngine"
+            },
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+              "kind" : "symbol",
+              "line" : 84,
+              "permalink" : "https://developer.apple.com/documentation/corehaptics/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json#L84",
+              "symbol" : "CHHapticEngine.start()"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+              "kind" : "availability",
+              "line" : 42,
+              "permalink" : "https://developer.apple.com/documentation/corehaptics/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json#L42",
+              "symbol" : "CHHapticEngine"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://developer.apple.com/documentation/corehaptics/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json#L42",
+              "symbol" : "CHHapticEngine"
+            },
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+              "kind" : "symbol",
+              "line" : 84,
+              "permalink" : "https://developer.apple.com/documentation/corehaptics/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json#L84",
+              "symbol" : "CHHapticEngine.start()"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://developer.apple.com/documentation/corehaptics/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json#L42",
+              "symbol" : "CHHapticEngine"
+            },
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+              "kind" : "symbol",
+              "line" : 84,
+              "permalink" : "https://developer.apple.com/documentation/corehaptics/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json#L84",
+              "symbol" : "CHHapticEngine.start()"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://developer.apple.com/documentation/corehaptics/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json#L42",
+              "symbol" : "CHHapticEngine"
+            },
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+              "kind" : "symbol",
+              "line" : 84,
+              "permalink" : "https://developer.apple.com/documentation/corehaptics/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json#L84",
+              "symbol" : "CHHapticEngine.start()"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://developer.apple.com/documentation/corehaptics/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json#L42",
+              "symbol" : "CHHapticEngine"
+            },
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+              "kind" : "symbol",
+              "line" : 84,
+              "permalink" : "https://developer.apple.com/documentation/corehaptics/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json#L84",
+              "symbol" : "CHHapticEngine.start()"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+              "kind" : "availability",
+              "line" : 42,
+              "permalink" : "https://developer.apple.com/documentation/corehaptics/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json#L42",
+              "symbol" : "CHHapticEngine"
+            }
+          ],
+          "status" : "unsupported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "corehaptics",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "commit" : "9ae5bc2ce2149980884d4612321c3a266d6bf82c",
+      "notes" : "Secondary capability: hapticFeedback parameter (default true) on the confetti API. Checkout source plays haptics only on UIKit platforms excluding tvOS/visionOS (UIImpactFeedbackGenerator) and on watchOS (WKInterfaceDevice.play). The gating guard is internal, so excluded platforms are labeled unknown rather than unsupported.",
+      "package" : "https://github.com/simibac/confettiswiftui",
+      "packageName" : "confettiswiftui",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/View+ConfettiCannon.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "Public API exposes hapticFeedback: Bool = true; checkout source plays UIImpactFeedbackGenerator(.heavy) on each explosion on iOS.",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Sources/View+ConfettiCannon.swift#L47",
+              "symbol" : "View.confettiCannon"
+            },
+            {
+              "file" : "Sources/ConfettiSwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 77,
+              "note" : "hapticFeedback parameter in initializer signature.",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Sources/ConfettiSwiftUI.swift#L77",
+              "symbol" : "ConfettiCannon.init"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: haptic feedback on each confetti explosion (hapticFeedback parameter, default true).",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/README.md#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.15,
+          "evidence" : [
+            {
+              "file" : "Sources/View+ConfettiCannon.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "SwiftUI-only module; no haptics API on Linux; no surface-level absence evidence, so status stays unknown.",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Sources/View+ConfettiCannon.swift#L47",
+              "symbol" : "View.confettiCannon"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.4,
+          "evidence" : [
+            {
+              "file" : "Sources/View+ConfettiCannon.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "UIImpactFeedbackGenerator path compiles on Catalyst (UIKit importable), but whether it produces actual haptic output on Mac hardware is unverified.",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Sources/View+ConfettiCannon.swift#L47",
+              "symbol" : "View.confettiCannon"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "Sources/View+ConfettiCannon.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "hapticFeedback parameter is present, but the haptic playback in the checkout is internally compiled out on macOS (canImport(UIKit) guard, not visible in the public surface), so no surface-level absence evidence exists; likely a no-op.",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Sources/View+ConfettiCannon.swift#L47",
+              "symbol" : "View.confettiCannon"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "Sources/View+ConfettiCannon.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "hapticFeedback parameter is present, but checkout source excludes tvOS from haptic playback via an internal !os(tvOS) guard not visible in the public surface; likely a no-op.",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Sources/View+ConfettiCannon.swift#L47",
+              "symbol" : "View.confettiCannon"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "Sources/View+ConfettiCannon.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "hapticFeedback parameter is present, but checkout source excludes visionOS from haptic playback via an internal !os(visionOS) guard not visible in the public surface; likely a no-op.",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Sources/View+ConfettiCannon.swift#L47",
+              "symbol" : "View.confettiCannon"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/View+ConfettiCannon.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "hapticFeedback parameter present; checkout source has a dedicated os(watchOS) branch playing WKInterfaceDevice.current().play(.click).",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Sources/View+ConfettiCannon.swift#L47",
+              "symbol" : "View.confettiCannon"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "confettiswiftui",
+      "version" : "3.0.0"
+    },
+    {
+      "commit" : "1b4b1dda28c50b95f0872927ee2226fe8b58950e",
+      "notes" : "Haptics are exposed as change effects (UINotificationFeedbackGenerator / UIImpactFeedbackGenerator wrappers) and exist only inside #if os(iOS): present on iOS and macCatalyst, explicitly absent elsewhere per surface digest gaps. Related os(iOS)-only SoundEffect audio feedback exists but has no taxonomy id.",
+      "package" : "https://github.com/emergetools/pow",
+      "packageName" : "pow",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "note" : "Triggers haptic feedback whenever a value changes; decl guarded by #if os(iOS), resolves present on iOS. All evidence conditional, so capped at 0.6.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/HapticFeedbackEffect.swift#L8",
+              "symbol" : "AnyChangeEffect.hapticFeedback"
+            },
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+              "kind" : "symbol",
+              "line" : 32,
+              "note" : "Selection-change haptic.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/HapticFeedbackEffect.swift#L32",
+              "symbol" : "AnyChangeEffect.feedbackHapticSelection"
+            },
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "note" : "feedback(hapticImpact:) using UIImpactFeedbackGenerator.FeedbackStyle.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/HapticFeedbackEffect.swift#L25",
+              "symbol" : "AnyChangeEffect.feedback"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+              "kind" : "guard",
+              "line" : 8,
+              "note" : "Core haptics symbol is guarded by #if os(iOS); surface digest gaps mark linux absent.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/HapticFeedbackEffect.swift#L8",
+              "symbol" : "AnyChangeEffect.hapticFeedback"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+              "kind" : "symbol",
+              "line" : 8,
+              "note" : "os(iOS) holds when building for Mac Catalyst; surface digest lists no macCatalyst gap for this decl. API compiles and is callable, though runtime haptic hardware on Mac is limited. All evidence conditional, so capped at 0.6.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/HapticFeedbackEffect.swift#L8",
+              "symbol" : "AnyChangeEffect.hapticFeedback"
+            },
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+              "kind" : "symbol",
+              "line" : 32,
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/HapticFeedbackEffect.swift#L32",
+              "symbol" : "AnyChangeEffect.feedbackHapticSelection"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+              "kind" : "guard",
+              "line" : 8,
+              "note" : "Core haptics symbol is guarded by #if os(iOS); surface digest gaps mark macOS absent.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/HapticFeedbackEffect.swift#L8",
+              "symbol" : "AnyChangeEffect.hapticFeedback"
+            },
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+              "kind" : "guard",
+              "line" : 32,
+              "note" : "Also absent on macOS per surface digest gaps.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/HapticFeedbackEffect.swift#L32",
+              "symbol" : "AnyChangeEffect.feedbackHapticSelection"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "tvOS" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+              "kind" : "guard",
+              "line" : 8,
+              "note" : "Core haptics symbol is guarded by #if os(iOS); surface digest gaps mark tvOS absent.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/HapticFeedbackEffect.swift#L8",
+              "symbol" : "AnyChangeEffect.hapticFeedback"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "visionOS" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+              "kind" : "guard",
+              "line" : 8,
+              "note" : "Core haptics symbol is guarded by #if os(iOS); surface digest gaps mark visionOS absent.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/HapticFeedbackEffect.swift#L8",
+              "symbol" : "AnyChangeEffect.hapticFeedback"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "watchOS" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+              "kind" : "guard",
+              "line" : 8,
+              "note" : "Core haptics symbol is guarded by #if os(iOS); surface digest gaps mark watchOS absent. Pow provides no watchOS haptics path (WatchKit haptics are not wrapped).",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/HapticFeedbackEffect.swift#L8",
+              "symbol" : "AnyChangeEffect.hapticFeedback"
+            }
+          ],
+          "status" : "unsupported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "pow",
+      "version" : "1.0.6"
+    }
+  ]
+}

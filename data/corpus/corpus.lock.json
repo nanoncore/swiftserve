@@ -15,6 +15,11 @@
       "fetchedAt" : "2026-07-02T09:01:21Z",
       "tag" : "1.0.5"
     },
+    "https://github.com/airbnb/lottie-ios" : {
+      "commit" : "f4db77d7feacba0c2360b84a40c38a6ce8ff399d",
+      "fetchedAt" : "2026-07-03T12:52:29Z",
+      "tag" : "4.6.1"
+    },
     "https://github.com/alamofire/alamofire" : {
       "commit" : "7595cbcf59809f9977c5f6378500de2ad73b7ddb",
       "fetchedAt" : "2026-07-02T10:25:48Z",
@@ -115,10 +120,25 @@
       "fetchedAt" : "2026-07-02T09:01:48Z",
       "tag" : "v0.9.3"
     },
+    "https://github.com/csolanam/skeletonui" : {
+      "commit" : "f025e9ba5d051374d7344efa8859df5b9399a181",
+      "fetchedAt" : "2026-07-03T12:52:49Z",
+      "tag" : "2.0.2"
+    },
     "https://github.com/daltoniam/starscream" : {
       "commit" : "c6bfd1af48efcc9a9ad203665db12375ba6b145a",
       "fetchedAt" : "2026-07-02T10:25:49Z",
       "tag" : "4.0.8"
+    },
+    "https://github.com/danielgindi/charts" : {
+      "commit" : "dd9c72e3d7e751e769971092a6bd72d39198ae63",
+      "fetchedAt" : "2026-07-03T12:52:41Z",
+      "tag" : "5.1.0"
+    },
+    "https://github.com/danielsaidi/richtextkit" : {
+      "commit" : "8aa44cfa645404ad84e52e3ab7723ecf4b82f92b",
+      "fetchedAt" : "2026-07-03T12:52:43Z",
+      "tag" : "1.2"
     },
     "https://github.com/dmrschmidt/dswaveformimage" : {
       "commit" : "00afb7930863b9cc3bd011389d601735e548093c",
@@ -130,6 +150,11 @@
       "fetchedAt" : "2026-07-02T08:42:47Z",
       "tag" : "1.1.0"
     },
+    "https://github.com/emergetools/pow" : {
+      "commit" : "1b4b1dda28c50b95f0872927ee2226fe8b58950e",
+      "fetchedAt" : "2026-07-03T12:52:32Z",
+      "tag" : "1.0.6"
+    },
     "https://github.com/exphat/swiftwhisper" : {
       "commit" : "a192004db08de7c6eaa169eede77f1625e7d23fb",
       "fetchedAt" : "2026-07-02T08:42:51Z",
@@ -140,6 +165,11 @@
       "fetchedAt" : "2026-07-02T09:02:07Z",
       "tag" : "3.3.2"
     },
+    "https://github.com/exyte/popupview" : {
+      "commit" : "e56e89614d86b4bc21ffb36bf435cc52c60a8c13",
+      "fetchedAt" : "2026-07-03T12:52:47Z",
+      "tag" : "5.0.2"
+    },
     "https://github.com/exyte/svgview" : {
       "commit" : "6465962facdd25cb96eaebc35603afa2f15d2c0d",
       "fetchedAt" : "2026-07-02T10:26:03Z",
@@ -149,6 +179,11 @@
       "commit" : "2835209970afdaaaf137fd7073d9c0ab2beb2905",
       "fetchedAt" : "2026-07-02T09:02:04Z",
       "tag" : "0.2.1"
+    },
+    "https://github.com/fermoya/swiftuipager" : {
+      "commit" : "4ddc04c801aac143090bb14cf26603a3bf9c74cb",
+      "fetchedAt" : "2026-07-03T12:52:51Z",
+      "tag" : "2.5.0"
     },
     "https://github.com/fethica/fradioplayer" : {
       "commit" : "243cd9246b79a186c39b3c53dbe725c8c01bab59",
@@ -185,6 +220,21 @@
       "fetchedAt" : "2026-07-02T09:02:13Z",
       "tag" : "145.10.0"
     },
+    "https://github.com/globulus/swiftui-pull-to-refresh" : {
+      "commit" : "1852a4eb7e7a12a768c64b25b1bd905993ced4eb",
+      "fetchedAt" : "2026-07-03T12:54:59Z",
+      "tag" : "1.1.9"
+    },
+    "https://github.com/gonzalezreal/swift-markdown-ui" : {
+      "commit" : "5f613358148239d0292c0cef674a3c2314737f9e",
+      "fetchedAt" : "2026-07-03T12:52:42Z",
+      "tag" : "2.4.1"
+    },
+    "https://github.com/groue/grdb.swift" : {
+      "commit" : "b83108d10f42680d78f23fe4d4d80fc88dab3212",
+      "fetchedAt" : "2026-07-03T12:52:10Z",
+      "tag" : "v7.11.1"
+    },
     "https://github.com/herrkaefer/swiftedgetts" : {
       "commit" : "6fafd2dd66e45358812c98e3bb2fa28b2757e614",
       "fetchedAt" : "2026-07-02T09:01:55Z",
@@ -194,6 +244,11 @@
       "commit" : "45d1b021c2bd2bbd38b9669934c0584cda0d1b6b",
       "fetchedAt" : "2026-07-02T09:46:38Z",
       "tag" : "0.1.0"
+    },
+    "https://github.com/hyperoslo/cache" : {
+      "commit" : "24e47109e31b2031cb26e25cc1b81b607496066c",
+      "fetchedAt" : "2026-07-03T12:52:21Z",
+      "tag" : "7.4.0"
     },
     "https://github.com/kaishin/gifu" : {
       "commit" : "f19726eaf0dfa4dbce4d3f80293c9d38c2acba53",
@@ -220,6 +275,11 @@
       "fetchedAt" : "2026-07-02T09:01:23Z",
       "tag" : "2.3.4"
     },
+    "https://github.com/kishikawakatsumi/keychainaccess" : {
+      "commit" : "84e546727d66f1adc5439debad16270d0fdd04e7",
+      "fetchedAt" : "2026-07-03T12:52:19Z",
+      "tag" : "v4.2.2"
+    },
     "https://github.com/launchdarkly/swift-eventsource" : {
       "commit" : "57051701c58a93603ffa2051f8e9cf0c8cff7814",
       "fetchedAt" : "2026-07-02T10:25:53Z",
@@ -245,6 +305,11 @@
       "fetchedAt" : "2026-07-02T09:01:52Z",
       "tag" : "v2.1.1"
     },
+    "https://github.com/marcoarment/blackbird" : {
+      "commit" : "e2bf935089cd7620031ea342eaf96bf4ba3a22dc",
+      "fetchedAt" : "2026-07-03T12:52:15Z",
+      "tag" : "0.5"
+    },
     "https://github.com/markbattistella/audiomanager" : {
       "commit" : "d93afd7a48885f9a92bbe7c0eb6b692afbafce66",
       "fetchedAt" : "2026-07-02T09:02:10Z",
@@ -254,6 +319,11 @@
       "commit" : "a8b0a071781a4f99837b2b621f651b1a1b9d4d8e",
       "fetchedAt" : "2026-07-02T09:01:18Z",
       "tag" : "0.2"
+    },
+    "https://github.com/mergesort/boutique" : {
+      "commit" : "ba6848908ca930521484727b2de2399f68413f40",
+      "fetchedAt" : "2026-07-03T12:52:17Z",
+      "tag" : "3.0.2"
     },
     "https://github.com/metalpetal/videoio" : {
       "commit" : "22f7c00083b7e16c7e15ace1adcdb90fb5ffe006",
@@ -285,6 +355,11 @@
       "fetchedAt" : "2026-07-02T09:01:27Z",
       "tag" : "1.7.3"
     },
+    "https://github.com/omaralbeik/drops" : {
+      "commit" : "a183ee6f79f21c940092a19c2cba756555422371",
+      "fetchedAt" : "2026-07-03T12:52:46Z",
+      "tag" : "1.7.0"
+    },
     "https://github.com/onevcat/kingfisher" : {
       "commit" : "ac632bd26a1c00f139ff62fd01806f21cf67325e",
       "fetchedAt" : "2026-07-02T10:25:55Z",
@@ -314,6 +389,16 @@
       "commit" : "df1e48f95d26b3ee0a861037052e836ea63cbd8c",
       "fetchedAt" : "2026-07-02T09:01:24Z",
       "tag" : "0.15.0"
+    },
+    "https://github.com/realm/realm-swift" : {
+      "commit" : "ca03df491ec5e4bb8af0bca1e9957d08c10ec2da",
+      "fetchedAt" : "2026-07-03T12:52:14Z",
+      "tag" : "v20.0.5"
+    },
+    "https://github.com/relatedcode/progresshud" : {
+      "commit" : "44e04c79ae75ed5e979df517ab13d8a1aa9b41a5",
+      "fetchedAt" : "2026-07-03T12:54:58Z",
+      "tag" : "15.0.1"
     },
     "https://github.com/renaudjenny/swift-speech-recognizer" : {
       "commit" : "7a7947a6f9fb1edaa48ee0e8d1c523f5fd8e9bd8",
@@ -355,6 +440,11 @@
       "fetchedAt" : "2026-07-02T09:01:12Z",
       "tag" : "0.13.0"
     },
+    "https://github.com/scenee/floatingpanel" : {
+      "commit" : "7efcc769e0ffe62f530e9276ab26309f758b7cc3",
+      "fetchedAt" : "2026-07-03T12:52:45Z",
+      "tag" : "3.2.2"
+    },
     "https://github.com/sdwebimage/sdwebimage" : {
       "commit" : "2de3a496eaf6df9a1312862adcfd54acd73c39c0",
       "fetchedAt" : "2026-07-02T10:25:58Z",
@@ -365,6 +455,31 @@
       "fetchedAt" : "2026-07-02T10:26:00Z",
       "tag" : "3.1.4"
     },
+    "https://github.com/simibac/confettiswiftui" : {
+      "commit" : "9ae5bc2ce2149980884d4612321c3a266d6bf82c",
+      "fetchedAt" : "2026-07-03T12:52:39Z",
+      "tag" : "3.0.0"
+    },
+    "https://github.com/sindresorhus/defaults" : {
+      "commit" : "00a7465a0668a87fa159e779b9d80f1f9652357e",
+      "fetchedAt" : "2026-07-03T12:52:18Z",
+      "tag" : "9.0.9"
+    },
+    "https://github.com/siteline/swiftui-introspect" : {
+      "commit" : "26986a57e31c813f98262ddb62d4b07d40008535",
+      "fetchedAt" : "2026-07-03T12:52:48Z",
+      "tag" : "26.0.1"
+    },
+    "https://github.com/snapkit/snapkit" : {
+      "commit" : "e27a338a03a5f388de759da63f9baf7988ed9e00",
+      "fetchedAt" : "2026-07-03T12:52:30Z",
+      "tag" : "6.0.0"
+    },
+    "https://github.com/square/valet" : {
+      "commit" : "246baf6be3f9e3ff116dc05251a08f69dd7c7b9d",
+      "fetchedAt" : "2026-07-03T12:52:20Z",
+      "tag" : "5.1.0"
+    },
     "https://github.com/stanfordspezi/spezispeech" : {
       "commit" : "6c51d4165d2cabb6102aa61233c480fb75c167f6",
       "fetchedAt" : "2026-07-02T09:01:53Z",
@@ -374,6 +489,11 @@
       "commit" : "ff4647dc67f00d037c199c69e1a1ee8ceda88236",
       "fetchedAt" : "2026-07-02T08:42:53Z",
       "tag" : "149.0.0"
+    },
+    "https://github.com/stephencelis/sqlite.swift" : {
+      "commit" : "964c300fb0736699ce945c9edb56ecd62eba27a3",
+      "fetchedAt" : "2026-07-03T12:52:11Z",
+      "tag" : "0.16.0"
     },
     "https://github.com/sventiigi/youtubeplayerkit" : {
       "commit" : "1ae827573024ab13dd6adea33b25d3eef6ff667c",
@@ -389,6 +509,21 @@
       "commit" : "22ffcef8ea5eaf88bcd602f044af74a2ebe56fca",
       "fetchedAt" : "2026-07-02T09:01:56Z",
       "tag" : "1.2.2"
+    },
+    "https://github.com/twostraws/vortex" : {
+      "commit" : "9d9d9016ceace579455f01f8e0bd59facae7d252",
+      "fetchedAt" : "2026-07-03T12:52:35Z",
+      "tag" : "1.0.4"
+    },
+    "https://github.com/vapor/fluent" : {
+      "commit" : "2fe9e36daf4bdb5edcf193e0d0806ba2074d2864",
+      "fetchedAt" : "2026-07-03T12:52:22Z",
+      "tag" : "4.13.0"
+    },
+    "https://github.com/vapor/fluent-sqlite-driver" : {
+      "commit" : "e227d94dc3fe7099a096ac2ca28cad1f69bd8d5b",
+      "fetchedAt" : "2026-07-03T12:52:24Z",
+      "tag" : "4.9.0"
     }
   },
   "version" : 1

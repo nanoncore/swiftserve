@@ -1,0 +1,132 @@
+{
+  "_comment": "Storage domain. Records may only claim ids that exist here (V01).",
+  "taxonomyVersion": 1,
+  "domain": "storage",
+  "capabilities": [
+    {
+      "id": "storage.sqlite",
+      "label": "SQLite access",
+      "aliases": [
+        "sqlite database",
+        "sql database",
+        "sqlite3"
+      ]
+    },
+    {
+      "id": "storage.query-builder",
+      "label": "Type-safe queries",
+      "aliases": [
+        "query dsl",
+        "orm",
+        "query interface"
+      ]
+    },
+    {
+      "id": "storage.migrations",
+      "label": "Schema migrations",
+      "aliases": [
+        "database migration",
+        "schema versioning"
+      ]
+    },
+    {
+      "id": "storage.observation",
+      "label": "Reactive queries / change tracking",
+      "aliases": [
+        "live queries",
+        "value observation",
+        "database observation"
+      ]
+    },
+    {
+      "id": "storage.full-text-search",
+      "label": "Full-text search",
+      "aliases": [
+        "fts",
+        "fts5",
+        "text search"
+      ]
+    },
+    {
+      "id": "storage.encryption",
+      "label": "Database encryption",
+      "aliases": [
+        "sqlcipher",
+        "encrypted database",
+        "encryption at rest"
+      ]
+    },
+    {
+      "id": "storage.concurrency",
+      "label": "Concurrent access",
+      "aliases": [
+        "wal",
+        "database pool",
+        "reader writer",
+        "write-ahead logging"
+      ]
+    },
+    {
+      "id": "storage.codable",
+      "label": "Codable persistence",
+      "aliases": [
+        "record types",
+        "persist codable",
+        "struct persistence"
+      ]
+    },
+    {
+      "id": "storage.key-value",
+      "label": "Key-value storage",
+      "aliases": [
+        "defaults wrapper",
+        "user defaults",
+        "preferences"
+      ]
+    },
+    {
+      "id": "storage.keychain",
+      "label": "Keychain storage",
+      "aliases": [
+        "secure storage",
+        "credentials",
+        "secrets"
+      ]
+    },
+    {
+      "id": "storage.disk-cache",
+      "label": "Disk caching",
+      "aliases": [
+        "on-disk cache",
+        "file cache",
+        "persistent cache"
+      ]
+    },
+    {
+      "id": "storage.cloud-sync",
+      "label": "Cloud sync",
+      "aliases": [
+        "icloud sync",
+        "cloudkit sync",
+        "remote sync"
+      ]
+    },
+    {
+      "id": "storage.in-memory",
+      "label": "In-memory database",
+      "aliases": [
+        "memory database",
+        "transient store"
+      ]
+    },
+    {
+      "id": "storage.document-store",
+      "label": "Object / document store",
+      "aliases": [
+        "nosql",
+        "object database",
+        "document database"
+      ]
+    }
+  ]
+}

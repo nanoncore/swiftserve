@@ -1,0 +1,526 @@
+{
+  "aliases" : [
+    "on-disk cache",
+    "file cache",
+    "persistent cache"
+  ],
+  "id" : "storage.disk-cache",
+  "label" : "Disk caching",
+  "packages" : [
+    {
+      "commit" : "24e47109e31b2031cb26e25cc1b81b607496066c",
+      "notes" : "DiskStorage persists entries as files via FileManager; Storage composes memory+disk via HybridStorage. Package.swift declares no platforms block (no floors); README key features list iOS, tvOS and macOS.",
+      "package" : "https://github.com/hyperoslo/cache",
+      "packageName" : "cache",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/DiskStorage.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/DiskStorage.swift#L4",
+              "symbol" : "DiskStorage"
+            },
+            {
+              "file" : "Source/Shared/Configuration/DiskConfig.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Configuration/DiskConfig.swift#L3",
+              "symbol" : "DiskConfig"
+            },
+            {
+              "file" : "Source/Shared/Storage/DiskStorage.swift",
+              "kind" : "symbol",
+              "line" : 79,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/DiskStorage.swift#L79",
+              "symbol" : "DiskStorage.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L18",
+              "symbol" : "Storage.init"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/DiskStorage.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "note" : "Surface digest resolves this decl present on linux (no gap); source is Foundation-only under Source/Shared with no os() guards, but there is no Linux CI or README corroboration - confidence reduced.",
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/DiskStorage.swift#L4",
+              "symbol" : "DiskStorage"
+            },
+            {
+              "file" : "Source/Shared/Configuration/DiskConfig.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Configuration/DiskConfig.swift#L3",
+              "symbol" : "DiskConfig"
+            },
+            {
+              "file" : "Source/Shared/Storage/DiskStorage.swift",
+              "kind" : "symbol",
+              "line" : 79,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/DiskStorage.swift#L79",
+              "symbol" : "DiskStorage.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L18",
+              "symbol" : "Storage.init"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/DiskStorage.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/DiskStorage.swift#L4",
+              "symbol" : "DiskStorage"
+            },
+            {
+              "file" : "Source/Shared/Configuration/DiskConfig.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Configuration/DiskConfig.swift#L3",
+              "symbol" : "DiskConfig"
+            },
+            {
+              "file" : "Source/Shared/Storage/DiskStorage.swift",
+              "kind" : "symbol",
+              "line" : 79,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/DiskStorage.swift#L79",
+              "symbol" : "DiskStorage.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L18",
+              "symbol" : "Storage.init"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/DiskStorage.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/DiskStorage.swift#L4",
+              "symbol" : "DiskStorage"
+            },
+            {
+              "file" : "Source/Shared/Configuration/DiskConfig.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Configuration/DiskConfig.swift#L3",
+              "symbol" : "DiskConfig"
+            },
+            {
+              "file" : "Source/Shared/Storage/DiskStorage.swift",
+              "kind" : "symbol",
+              "line" : 79,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/DiskStorage.swift#L79",
+              "symbol" : "DiskStorage.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L18",
+              "symbol" : "Storage.init"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/DiskStorage.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/DiskStorage.swift#L4",
+              "symbol" : "DiskStorage"
+            },
+            {
+              "file" : "Source/Shared/Configuration/DiskConfig.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Configuration/DiskConfig.swift#L3",
+              "symbol" : "DiskConfig"
+            },
+            {
+              "file" : "Source/Shared/Storage/DiskStorage.swift",
+              "kind" : "symbol",
+              "line" : 79,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/DiskStorage.swift#L79",
+              "symbol" : "DiskStorage.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L18",
+              "symbol" : "Storage.init"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/DiskStorage.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/DiskStorage.swift#L4",
+              "symbol" : "DiskStorage"
+            },
+            {
+              "file" : "Source/Shared/Configuration/DiskConfig.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Configuration/DiskConfig.swift#L3",
+              "symbol" : "DiskConfig"
+            },
+            {
+              "file" : "Source/Shared/Storage/DiskStorage.swift",
+              "kind" : "symbol",
+              "line" : 79,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/DiskStorage.swift#L79",
+              "symbol" : "DiskStorage.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L18",
+              "symbol" : "Storage.init"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/DiskStorage.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/DiskStorage.swift#L4",
+              "symbol" : "DiskStorage"
+            },
+            {
+              "file" : "Source/Shared/Configuration/DiskConfig.swift",
+              "kind" : "symbol",
+              "line" : 3,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Configuration/DiskConfig.swift#L3",
+              "symbol" : "DiskConfig"
+            },
+            {
+              "file" : "Source/Shared/Storage/DiskStorage.swift",
+              "kind" : "symbol",
+              "line" : 79,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/DiskStorage.swift#L79",
+              "symbol" : "DiskStorage.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 18,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L18",
+              "symbol" : "Storage.init"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "cache",
+      "version" : "7.4.0"
+    },
+    {
+      "commit" : "ba6848908ca930521484727b2de2399f68413f40",
+      "notes" : "Disk persistence is delivered through the StorageEngine protocol from the Bodega dependency (pinned 2.1.3); Boutique's own surface drives it unconditionally.",
+      "package" : "https://github.com/mergesort/boutique",
+      "packageName" : "boutique",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "note" : "init(storage: StorageEngine, cacheIdentifier:) — persists items to a memory cache and a storage engine (disk persistence via Bodega StorageEngine, e.g. SQLiteStorageEngine)",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L102",
+              "symbol" : "Store.init"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 244,
+              "note" : "doc: 'Removes all items from the store's memory cache and storage engine'",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L244",
+              "symbol" : "Store.removeAll"
+            },
+            {
+              "file" : "Sources/Boutique/Store+Identifiable.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "note" : "init(storage: StorageEngine) — Identifiable convenience, same dual-layer disk persistence",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store+Identifiable.swift#L39",
+              "symbol" : "Store.init"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: 'dual-layered memory + disk caching architecture ... full offline storage'",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/README.md#L0"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Package.swift declares .iOS(.v17) platform floor",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "note" : "Surface digest resolves this decl present on linux (no os() conditions anywhere in the public surface), but the module unconditionally imports SwiftUI, Security, and Observation; Package.swift and README declare only iOS 17+/macOS 14+. Linux buildability unverified — honest answer is unknown.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L102",
+              "symbol" : "Store.init"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "note" : "init(storage: StorageEngine, cacheIdentifier:) — persists items to a memory cache and a storage engine (disk persistence via Bodega StorageEngine, e.g. SQLiteStorageEngine) No explicit macCatalyst floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on macCatalyst.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L102",
+              "symbol" : "Store.init"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 244,
+              "note" : "doc: 'Removes all items from the store's memory cache and storage engine'",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L244",
+              "symbol" : "Store.removeAll"
+            },
+            {
+              "file" : "Sources/Boutique/Store+Identifiable.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "note" : "init(storage: StorageEngine) — Identifiable convenience, same dual-layer disk persistence",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store+Identifiable.swift#L39",
+              "symbol" : "Store.init"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: 'dual-layered memory + disk caching architecture ... full offline storage'",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/README.md#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "note" : "init(storage: StorageEngine, cacheIdentifier:) — persists items to a memory cache and a storage engine (disk persistence via Bodega StorageEngine, e.g. SQLiteStorageEngine)",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L102",
+              "symbol" : "Store.init"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 244,
+              "note" : "doc: 'Removes all items from the store's memory cache and storage engine'",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L244",
+              "symbol" : "Store.removeAll"
+            },
+            {
+              "file" : "Sources/Boutique/Store+Identifiable.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "note" : "init(storage: StorageEngine) — Identifiable convenience, same dual-layer disk persistence",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store+Identifiable.swift#L39",
+              "symbol" : "Store.init"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: 'dual-layered memory + disk caching architecture ... full offline storage'",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/README.md#L0"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Package.swift declares .macOS(.v14) platform floor",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "note" : "init(storage: StorageEngine, cacheIdentifier:) — persists items to a memory cache and a storage engine (disk persistence via Bodega StorageEngine, e.g. SQLiteStorageEngine) No explicit tvOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on tvOS.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L102",
+              "symbol" : "Store.init"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 244,
+              "note" : "doc: 'Removes all items from the store's memory cache and storage engine'",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L244",
+              "symbol" : "Store.removeAll"
+            },
+            {
+              "file" : "Sources/Boutique/Store+Identifiable.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "note" : "init(storage: StorageEngine) — Identifiable convenience, same dual-layer disk persistence",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store+Identifiable.swift#L39",
+              "symbol" : "Store.init"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: 'dual-layered memory + disk caching architecture ... full offline storage'",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/README.md#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "note" : "init(storage: StorageEngine, cacheIdentifier:) — persists items to a memory cache and a storage engine (disk persistence via Bodega StorageEngine, e.g. SQLiteStorageEngine) No explicit visionOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on visionOS.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L102",
+              "symbol" : "Store.init"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 244,
+              "note" : "doc: 'Removes all items from the store's memory cache and storage engine'",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L244",
+              "symbol" : "Store.removeAll"
+            },
+            {
+              "file" : "Sources/Boutique/Store+Identifiable.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "note" : "init(storage: StorageEngine) — Identifiable convenience, same dual-layer disk persistence",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store+Identifiable.swift#L39",
+              "symbol" : "Store.init"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: 'dual-layered memory + disk caching architecture ... full offline storage'",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/README.md#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.65,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "note" : "init(storage: StorageEngine, cacheIdentifier:) — persists items to a memory cache and a storage engine (disk persistence via Bodega StorageEngine, e.g. SQLiteStorageEngine) No explicit watchOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on watchOS.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L102",
+              "symbol" : "Store.init"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 244,
+              "note" : "doc: 'Removes all items from the store's memory cache and storage engine'",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L244",
+              "symbol" : "Store.removeAll"
+            },
+            {
+              "file" : "Sources/Boutique/Store+Identifiable.swift",
+              "kind" : "symbol",
+              "line" : 39,
+              "note" : "init(storage: StorageEngine) — Identifiable convenience, same dual-layer disk persistence",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store+Identifiable.swift#L39",
+              "symbol" : "Store.init"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README: 'dual-layered memory + disk caching architecture ... full offline storage'",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/README.md#L0"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "boutique",
+      "version" : "3.0.2"
+    }
+  ]
+}

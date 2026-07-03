@@ -1,0 +1,444 @@
+{
+  "aliases" : [
+    "nosql",
+    "object database",
+    "document database"
+  ],
+  "id" : "storage.document-store",
+  "label" : "Object / document store",
+  "packages" : [
+    {
+      "commit" : "17F113",
+      "notes" : "Managed object-graph persistence (NSPersistentContainer).",
+      "package" : "https://developer.apple.com/documentation/coredata",
+      "packageName" : "CoreData",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 801,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L801",
+              "symbol" : "NSPersistentContainer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "availability",
+              "line" : 801,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L801",
+              "symbol" : "NSPersistentContainer"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 801,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L801",
+              "symbol" : "NSPersistentContainer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 801,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L801",
+              "symbol" : "NSPersistentContainer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 801,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L801",
+              "symbol" : "NSPersistentContainer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 801,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L801",
+              "symbol" : "NSPersistentContainer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 801,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L801",
+              "symbol" : "NSPersistentContainer"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "coredata",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "commit" : "ca03df491ec5e4bb8af0bca1e9957d08c10ec2da",
+      "notes" : "Core Realm object database: Realm struct, Object base type, List collection all unconditional in the surface. Swift-only extraction; 215 ObjC files unparsed and digest truncated (800 of 1463 decls). No platform-specific os() gaps exist anywhere in this digest.",
+      "package" : "https://github.com/realm/realm-swift",
+      "packageName" : "realm-swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Realm.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Realm.swift#L46",
+              "symbol" : "Realm"
+            },
+            {
+              "file" : "RealmSwift/Object.swift",
+              "kind" : "symbol",
+              "line" : 83,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Object.swift#L83",
+              "symbol" : "Object"
+            },
+            {
+              "file" : "RealmSwift/List.swift",
+              "kind" : "symbol",
+              "line" : 35,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/List.swift#L35",
+              "symbol" : "List"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 47,
+              "note" : "Manifest platform floor .iOS(.v12)",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L47"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Realm.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "note" : "Surface digest resolves this Swift decl present on linux at parse level, but RealmSwift sits on the Realm ObjC core (215 ObjC files unparsed - declared blind spot); no manifest, README, or CI evidence of Linux builds. Under-claiming as unknown.",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Realm.swift#L46",
+              "symbol" : "Realm"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Realm.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Realm.swift#L46",
+              "symbol" : "Realm"
+            },
+            {
+              "file" : "RealmSwift/Object.swift",
+              "kind" : "symbol",
+              "line" : 83,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Object.swift#L83",
+              "symbol" : "Object"
+            },
+            {
+              "file" : "RealmSwift/List.swift",
+              "kind" : "symbol",
+              "line" : 35,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/List.swift#L35",
+              "symbol" : "List"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 144,
+              "note" : "Package.swift explicitly targets macCatalyst: .linkedFramework(\"UIKit\", .when(platforms: [.iOS, .macCatalyst, .tvOS, .watchOS]))",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L144"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Realm.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Realm.swift#L46",
+              "symbol" : "Realm"
+            },
+            {
+              "file" : "RealmSwift/Object.swift",
+              "kind" : "symbol",
+              "line" : 83,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Object.swift#L83",
+              "symbol" : "Object"
+            },
+            {
+              "file" : "RealmSwift/List.swift",
+              "kind" : "symbol",
+              "line" : 35,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/List.swift#L35",
+              "symbol" : "List"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 46,
+              "note" : "Manifest platform floor .macOS(.v10_13)",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L46"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Realm.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Realm.swift#L46",
+              "symbol" : "Realm"
+            },
+            {
+              "file" : "RealmSwift/Object.swift",
+              "kind" : "symbol",
+              "line" : 83,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Object.swift#L83",
+              "symbol" : "Object"
+            },
+            {
+              "file" : "RealmSwift/List.swift",
+              "kind" : "symbol",
+              "line" : 35,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/List.swift#L35",
+              "symbol" : "List"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 48,
+              "note" : "Manifest platform floor .tvOS(.v12)",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L48"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Realm.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "note" : "Decl unconditional in surface digest (no os() gate) and resolves present on visionOS. Supplementary: build.sh at this tag has dedicated visionOS build/test targets (generic/platform=visionOS, xrsimulator 'Apple Vision Pro'). visionOS is not listed in Package.swift platform floors and README names only iOS/macOS/tvOS/watchOS, hence reduced confidence.",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Realm.swift#L46",
+              "symbol" : "Realm"
+            },
+            {
+              "file" : "RealmSwift/Object.swift",
+              "kind" : "symbol",
+              "line" : 83,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Object.swift#L83",
+              "symbol" : "Object"
+            },
+            {
+              "file" : "RealmSwift/List.swift",
+              "kind" : "symbol",
+              "line" : 35,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/List.swift#L35",
+              "symbol" : "List"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Realm.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Realm.swift#L46",
+              "symbol" : "Realm"
+            },
+            {
+              "file" : "RealmSwift/Object.swift",
+              "kind" : "symbol",
+              "line" : 83,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Object.swift#L83",
+              "symbol" : "Object"
+            },
+            {
+              "file" : "RealmSwift/List.swift",
+              "kind" : "symbol",
+              "line" : 35,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/List.swift#L35",
+              "symbol" : "List"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 49,
+              "note" : "Manifest platform floor .watchOS(.v4)",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L49"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "realm-swift",
+      "version" : "v20.0.5"
+    },
+    {
+      "commit" : "17F113",
+      "notes" : "Schema-managed object persistence; SwiftData model store on top of SQLite. Floors: iOS 17 / macOS 14.",
+      "package" : "https://developer.apple.com/documentation/swiftdata",
+      "packageName" : "SwiftData",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 431,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L431",
+              "symbol" : "ModelContainer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "availability",
+              "line" : 431,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L431",
+              "symbol" : "ModelContainer"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 431,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L431",
+              "symbol" : "ModelContainer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 431,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L431",
+              "symbol" : "ModelContainer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 431,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L431",
+              "symbol" : "ModelContainer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 431,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L431",
+              "symbol" : "ModelContainer"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 431,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L431",
+              "symbol" : "ModelContainer"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swiftdata",
+      "version" : "Xcode 26.6"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "domain": "storage",
+  "packages": [
+    {
+      "url": "https://github.com/groue/grdb.swift",
+      "name": "groue/GRDB.swift",
+      "source": "seed",
+      "why": "the SQLite toolkit anchor — pools, observation, FTS, migrations",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/stephencelis/sqlite.swift",
+      "name": "stephencelis/SQLite.swift",
+      "source": "seed",
+      "why": "type-safe SQLite layer with Linux support",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/realm/realm-swift",
+      "name": "realm/realm-swift",
+      "source": "seed",
+      "why": "object database — the platform-support question mark (visionOS?)",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/marcoarment/blackbird",
+      "name": "marcoarment/Blackbird",
+      "source": "seed",
+      "why": "modern async SQLite with Codable rows",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/mergesort/boutique",
+      "name": "mergesort/Boutique",
+      "source": "seed",
+      "why": "Codable store with observation for SwiftUI",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/sindresorhus/defaults",
+      "name": "sindresorhus/Defaults",
+      "source": "seed",
+      "why": "typed UserDefaults wrapper — Apple-platforms-only truth",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/kishikawakatsumi/keychainaccess",
+      "name": "kishikawakatsumi/KeychainAccess",
+      "source": "seed",
+      "why": "the keychain wrapper anchor",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/square/valet",
+      "name": "square/Valet",
+      "source": "seed",
+      "why": "Square's keychain library — shared-access-group story",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/hyperoslo/cache",
+      "name": "hyperoslo/Cache",
+      "source": "seed",
+      "why": "disk + memory caching for Codable",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/vapor/fluent",
+      "name": "vapor/Fluent",
+      "source": "seed",
+      "why": "server-side ORM — the Linux truth story",
+      "companionOf": null
+    },
+    {
+      "url": "https://github.com/vapor/fluent-sqlite-driver",
+      "name": "vapor/FluentSQLiteDriver",
+      "source": "seed",
+      "why": "companion: Fluent's SQLite driver",
+      "companionOf": "https://github.com/vapor/fluent"
+    }
+  ]
+}

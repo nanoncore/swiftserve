@@ -849,6 +849,565 @@
     },
     {
       "aliases" : [
+        "icloud sync",
+        "cloudkit sync",
+        "remote sync"
+      ],
+      "domain" : "storage",
+      "id" : "storage.cloud-sync",
+      "label" : "Cloud sync",
+      "n" : 4,
+      "p" : {
+        "iOS" : 4,
+        "linux" : 0,
+        "macCatalyst" : 4,
+        "macOS" : 4,
+        "tvOS" : 4,
+        "visionOS" : 4,
+        "watchOS" : 4
+      }
+    },
+    {
+      "aliases" : [
+        "record types",
+        "persist codable",
+        "struct persistence"
+      ],
+      "domain" : "storage",
+      "id" : "storage.codable",
+      "label" : "Codable persistence",
+      "n" : 6,
+      "p" : {
+        "iOS" : 6,
+        "linux" : 3,
+        "macCatalyst" : 6,
+        "macOS" : 6,
+        "tvOS" : 6,
+        "visionOS" : 6,
+        "watchOS" : 6
+      }
+    },
+    {
+      "aliases" : [
+        "wal",
+        "database pool",
+        "reader writer",
+        "write-ahead logging"
+      ],
+      "domain" : "storage",
+      "id" : "storage.concurrency",
+      "label" : "Concurrent access",
+      "n" : 3,
+      "p" : {
+        "iOS" : 3,
+        "linux" : 2,
+        "macCatalyst" : 3,
+        "macOS" : 3,
+        "tvOS" : 3,
+        "visionOS" : 3,
+        "watchOS" : 3
+      }
+    },
+    {
+      "aliases" : [
+        "on-disk cache",
+        "file cache",
+        "persistent cache"
+      ],
+      "domain" : "storage",
+      "id" : "storage.disk-cache",
+      "label" : "Disk caching",
+      "n" : 2,
+      "p" : {
+        "iOS" : 2,
+        "linux" : 1,
+        "macCatalyst" : 2,
+        "macOS" : 2,
+        "tvOS" : 2,
+        "visionOS" : 2,
+        "watchOS" : 2
+      }
+    },
+    {
+      "aliases" : [
+        "nosql",
+        "object database",
+        "document database"
+      ],
+      "domain" : "storage",
+      "id" : "storage.document-store",
+      "label" : "Object / document store",
+      "n" : 3,
+      "p" : {
+        "iOS" : 3,
+        "linux" : 0,
+        "macCatalyst" : 3,
+        "macOS" : 3,
+        "tvOS" : 3,
+        "visionOS" : 3,
+        "watchOS" : 3
+      }
+    },
+    {
+      "aliases" : [
+        "sqlcipher",
+        "encrypted database",
+        "encryption at rest"
+      ],
+      "domain" : "storage",
+      "id" : "storage.encryption",
+      "label" : "Database encryption",
+      "n" : 4,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 0,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "fts",
+        "fts5",
+        "text search"
+      ],
+      "domain" : "storage",
+      "id" : "storage.full-text-search",
+      "label" : "Full-text search",
+      "n" : 2,
+      "p" : {
+        "iOS" : 2,
+        "linux" : 2,
+        "macCatalyst" : 2,
+        "macOS" : 2,
+        "tvOS" : 2,
+        "visionOS" : 2,
+        "watchOS" : 2
+      }
+    },
+    {
+      "aliases" : [
+        "memory database",
+        "transient store"
+      ],
+      "domain" : "storage",
+      "id" : "storage.in-memory",
+      "label" : "In-memory database",
+      "n" : 8,
+      "p" : {
+        "iOS" : 7,
+        "linux" : 3,
+        "macCatalyst" : 7,
+        "macOS" : 7,
+        "tvOS" : 7,
+        "visionOS" : 7,
+        "watchOS" : 7
+      }
+    },
+    {
+      "aliases" : [
+        "defaults wrapper",
+        "user defaults",
+        "preferences"
+      ],
+      "domain" : "storage",
+      "id" : "storage.key-value",
+      "label" : "Key-value storage",
+      "n" : 3,
+      "p" : {
+        "iOS" : 3,
+        "linux" : 1,
+        "macCatalyst" : 3,
+        "macOS" : 3,
+        "tvOS" : 3,
+        "visionOS" : 3,
+        "watchOS" : 3
+      }
+    },
+    {
+      "aliases" : [
+        "secure storage",
+        "credentials",
+        "secrets"
+      ],
+      "domain" : "storage",
+      "id" : "storage.keychain",
+      "label" : "Keychain storage",
+      "n" : 4,
+      "p" : {
+        "iOS" : 4,
+        "linux" : 0,
+        "macCatalyst" : 4,
+        "macOS" : 4,
+        "tvOS" : 4,
+        "visionOS" : 4,
+        "watchOS" : 4
+      }
+    },
+    {
+      "aliases" : [
+        "database migration",
+        "schema versioning"
+      ],
+      "domain" : "storage",
+      "id" : "storage.migrations",
+      "label" : "Schema migrations",
+      "n" : 7,
+      "p" : {
+        "iOS" : 7,
+        "linux" : 3,
+        "macCatalyst" : 7,
+        "macOS" : 7,
+        "tvOS" : 7,
+        "visionOS" : 7,
+        "watchOS" : 7
+      }
+    },
+    {
+      "aliases" : [
+        "live queries",
+        "value observation",
+        "database observation"
+      ],
+      "domain" : "storage",
+      "id" : "storage.observation",
+      "label" : "Reactive queries / change tracking",
+      "n" : 8,
+      "p" : {
+        "iOS" : 8,
+        "linux" : 2,
+        "macCatalyst" : 8,
+        "macOS" : 8,
+        "tvOS" : 8,
+        "visionOS" : 8,
+        "watchOS" : 8
+      }
+    },
+    {
+      "aliases" : [
+        "query dsl",
+        "orm",
+        "query interface"
+      ],
+      "domain" : "storage",
+      "id" : "storage.query-builder",
+      "label" : "Type-safe queries",
+      "n" : 7,
+      "p" : {
+        "iOS" : 7,
+        "linux" : 3,
+        "macCatalyst" : 7,
+        "macOS" : 7,
+        "tvOS" : 7,
+        "visionOS" : 7,
+        "watchOS" : 7
+      }
+    },
+    {
+      "aliases" : [
+        "sqlite database",
+        "sql database",
+        "sqlite3"
+      ],
+      "domain" : "storage",
+      "id" : "storage.sqlite",
+      "label" : "SQLite access",
+      "n" : 4,
+      "p" : {
+        "iOS" : 4,
+        "linux" : 3,
+        "macCatalyst" : 4,
+        "macOS" : 4,
+        "tvOS" : 4,
+        "visionOS" : 4,
+        "watchOS" : 4
+      }
+    },
+    {
+      "aliases" : [
+        "constraints dsl",
+        "layout anchors",
+        "snap constraints"
+      ],
+      "domain" : "ui",
+      "id" : "ui.autolayout-dsl",
+      "label" : "Auto Layout DSL",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "drawer",
+        "floating panel",
+        "modal sheet"
+      ],
+      "domain" : "ui",
+      "id" : "ui.bottom-sheet",
+      "label" : "Bottom sheets",
+      "n" : 2,
+      "p" : {
+        "iOS" : 2,
+        "linux" : 0,
+        "macCatalyst" : 2,
+        "macOS" : 0,
+        "tvOS" : 0,
+        "visionOS" : 0,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "graphs",
+        "plotting",
+        "bar chart",
+        "line chart"
+      ],
+      "domain" : "ui",
+      "id" : "ui.charts",
+      "label" : "Charts",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 0,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "core haptics",
+        "vibration",
+        "taptic"
+      ],
+      "domain" : "ui",
+      "id" : "ui.haptics",
+      "label" : "Haptic feedback",
+      "n" : 3,
+      "p" : {
+        "iOS" : 3,
+        "linux" : 0,
+        "macCatalyst" : 2,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "markdown view",
+        "commonmark",
+        "gfm"
+      ],
+      "domain" : "ui",
+      "id" : "ui.markdown-rendering",
+      "label" : "Markdown rendering",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "carousel",
+        "page view",
+        "swipeable pages"
+      ],
+      "domain" : "ui",
+      "id" : "ui.pager",
+      "label" : "Paging / carousel",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "confetti",
+        "particles",
+        "sparkles"
+      ],
+      "domain" : "ui",
+      "id" : "ui.particle-effects",
+      "label" : "Particle effects",
+      "n" : 3,
+      "p" : {
+        "iOS" : 3,
+        "linux" : 0,
+        "macCatalyst" : 3,
+        "macOS" : 3,
+        "tvOS" : 3,
+        "visionOS" : 3,
+        "watchOS" : 2
+      }
+    },
+    {
+      "aliases" : [
+        "spinner",
+        "hud",
+        "activity indicator"
+      ],
+      "domain" : "ui",
+      "id" : "ui.progress-hud",
+      "label" : "Loading indicators",
+      "n" : 2,
+      "p" : {
+        "iOS" : 2,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 0,
+        "tvOS" : 0,
+        "visionOS" : 0,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "refresh control",
+        "swipe to refresh"
+      ],
+      "domain" : "ui",
+      "id" : "ui.pull-to-refresh",
+      "label" : "Pull to refresh",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 0,
+        "tvOS" : 0,
+        "visionOS" : 0,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "text editor",
+        "attributed string editing",
+        "wysiwyg"
+      ],
+      "domain" : "ui",
+      "id" : "ui.rich-text",
+      "label" : "Rich text editing",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "shimmer",
+        "placeholder loading",
+        "loading skeleton"
+      ],
+      "domain" : "ui",
+      "id" : "ui.skeleton-loading",
+      "label" : "Skeleton loading",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "snackbar",
+        "in-app notification",
+        "banner"
+      ],
+      "domain" : "ui",
+      "id" : "ui.toast",
+      "label" : "Toasts / banners",
+      "n" : 3,
+      "p" : {
+        "iOS" : 3,
+        "linux" : 0,
+        "macCatalyst" : 2,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 1
+      }
+    },
+    {
+      "aliases" : [
+        "view animations",
+        "transition",
+        "motion design"
+      ],
+      "domain" : "ui",
+      "id" : "ui.transition-effects",
+      "label" : "View transitions / motion effects",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
+        "lottie",
+        "after effects animation",
+        "bodymovin"
+      ],
+      "domain" : "ui",
+      "id" : "ui.vector-animation",
+      "label" : "Vector animation playback",
+      "n" : 1,
+      "p" : {
+        "iOS" : 1,
+        "linux" : 0,
+        "macCatalyst" : 1,
+        "macOS" : 1,
+        "tvOS" : 1,
+        "visionOS" : 1,
+        "watchOS" : 0
+      }
+    },
+    {
+      "aliases" : [
         "video chat",
         "video conference"
       ],
@@ -1030,6 +1589,24 @@
     },
     {
       "aliases" : [
+
+      ],
+      "caps" : 7,
+      "fp" : false,
+      "name" : "blackbird",
+      "slug" : "blackbird"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 6,
+      "fp" : false,
+      "name" : "boutique",
+      "slug" : "boutique"
+    },
+    {
+      "aliases" : [
         "sbooth/CAAudioHardware"
       ],
       "caps" : 1,
@@ -1039,12 +1616,39 @@
     },
     {
       "aliases" : [
+
+      ],
+      "caps" : 5,
+      "fp" : false,
+      "name" : "cache",
+      "slug" : "cache"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 1,
+      "fp" : false,
+      "name" : "charts",
+      "slug" : "charts"
+    },
+    {
+      "aliases" : [
         "mihai8804858/swift-chunked-audio-player"
       ],
       "caps" : 1,
       "fp" : false,
       "name" : "ChunkedAudioPlayer",
       "slug" : "swift-chunked-audio-player"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 1,
+      "fp" : true,
+      "name" : "CloudKit",
+      "slug" : "cloudkit"
     },
     {
       "aliases" : [
@@ -1059,10 +1663,46 @@
       "aliases" : [
 
       ],
+      "caps" : 2,
+      "fp" : false,
+      "name" : "confettiswiftui",
+      "slug" : "confettiswiftui"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 7,
+      "fp" : true,
+      "name" : "CoreData",
+      "slug" : "coredata"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 1,
+      "fp" : true,
+      "name" : "CoreHaptics",
+      "slug" : "corehaptics"
+    },
+    {
+      "aliases" : [
+
+      ],
       "caps" : 1,
       "fp" : true,
       "name" : "CoreMIDI",
       "slug" : "coremidi"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 4,
+      "fp" : false,
+      "name" : "defaults",
+      "slug" : "defaults"
     },
     {
       "aliases" : [
@@ -1072,6 +1712,15 @@
       "fp" : false,
       "name" : "DevoloopAudioKit",
       "slug" : "devoloopaudiokit"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 1,
+      "fp" : false,
+      "name" : "drops",
+      "slug" : "drops"
     },
     {
       "aliases" : [
@@ -1120,6 +1769,33 @@
     },
     {
       "aliases" : [
+
+      ],
+      "caps" : 1,
+      "fp" : false,
+      "name" : "floatingpanel",
+      "slug" : "floatingpanel"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 2,
+      "fp" : false,
+      "name" : "fluent",
+      "slug" : "fluent"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 3,
+      "fp" : false,
+      "name" : "fluent-sqlite-driver",
+      "slug" : "fluent-sqlite-driver"
+    },
+    {
+      "aliases" : [
         "FluidInference/FluidAudio"
       ],
       "caps" : 1,
@@ -1147,6 +1823,15 @@
     },
     {
       "aliases" : [
+
+      ],
+      "caps" : 9,
+      "fp" : false,
+      "name" : "grdb.swift",
+      "slug" : "grdb.swift"
+    },
+    {
+      "aliases" : [
         "fcanas/hlscore"
       ],
       "caps" : 1,
@@ -1171,6 +1856,15 @@
       "fp" : false,
       "name" : "HLSVideoCache",
       "slug" : "hlsvideocache"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 1,
+      "fp" : false,
+      "name" : "keychainaccess",
+      "slug" : "keychainaccess"
     },
     {
       "aliases" : [
@@ -1220,6 +1914,15 @@
       "fp" : false,
       "name" : "LiveKitKrispNoiseFilter",
       "slug" : "swift-krisp-noise-filter"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 1,
+      "fp" : false,
+      "name" : "lottie-ios",
+      "slug" : "lottie-ios"
     },
     {
       "aliases" : [
@@ -1332,12 +2035,57 @@
     },
     {
       "aliases" : [
+
+      ],
+      "caps" : 2,
+      "fp" : false,
+      "name" : "popupview",
+      "slug" : "popupview"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 3,
+      "fp" : false,
+      "name" : "pow",
+      "slug" : "pow"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 2,
+      "fp" : false,
+      "name" : "progresshud",
+      "slug" : "progresshud"
+    },
+    {
+      "aliases" : [
         "kean/Pulse"
       ],
       "caps" : 1,
       "fp" : false,
       "name" : "Pulse",
       "slug" : "pulse"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 5,
+      "fp" : false,
+      "name" : "realm-swift",
+      "slug" : "realm-swift"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 1,
+      "fp" : false,
+      "name" : "richtextkit",
+      "slug" : "richtextkit"
     },
     {
       "aliases" : [
@@ -1368,12 +2116,39 @@
     },
     {
       "aliases" : [
+
+      ],
+      "caps" : 1,
+      "fp" : true,
+      "name" : "Security",
+      "slug" : "security"
+    },
+    {
+      "aliases" : [
         "sbooth/SFBAudioEngine"
       ],
       "caps" : 1,
       "fp" : false,
       "name" : "SFBAudioEngine",
       "slug" : "sfbaudioengine"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 1,
+      "fp" : false,
+      "name" : "skeletonui",
+      "slug" : "skeletonui"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 1,
+      "fp" : false,
+      "name" : "snapkit",
+      "slug" : "snapkit"
     },
     {
       "aliases" : [
@@ -1440,6 +2215,15 @@
     },
     {
       "aliases" : [
+
+      ],
+      "caps" : 7,
+      "fp" : false,
+      "name" : "sqlite.swift",
+      "slug" : "sqlite.swift"
+    },
+    {
+      "aliases" : [
         "daltoniam/Starscream"
       ],
       "caps" : 1,
@@ -1476,6 +2260,15 @@
     },
     {
       "aliases" : [
+
+      ],
+      "caps" : 1,
+      "fp" : false,
+      "name" : "swift-markdown-ui",
+      "slug" : "swift-markdown-ui"
+    },
+    {
+      "aliases" : [
         "alta/swift-opus"
       ],
       "caps" : 1,
@@ -1509,6 +2302,15 @@
       "fp" : false,
       "name" : "SwiftAudioPlayer",
       "slug" : "swiftaudioplayer"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 6,
+      "fp" : true,
+      "name" : "SwiftData",
+      "slug" : "swiftdata"
     },
     {
       "aliases" : [
@@ -1559,6 +2361,24 @@
     },
     {
       "aliases" : [
+
+      ],
+      "caps" : 2,
+      "fp" : false,
+      "name" : "swiftui-pull-to-refresh",
+      "slug" : "swiftui-pull-to-refresh"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 1,
+      "fp" : false,
+      "name" : "swiftuipager",
+      "slug" : "swiftuipager"
+    },
+    {
+      "aliases" : [
         "exPHAT/SwiftWhisper"
       ],
       "caps" : 1,
@@ -1586,6 +2406,15 @@
     },
     {
       "aliases" : [
+
+      ],
+      "caps" : 1,
+      "fp" : false,
+      "name" : "valet",
+      "slug" : "valet"
+    },
+    {
+      "aliases" : [
         "MetalPetal/VideoIO"
       ],
       "caps" : 1,
@@ -1601,6 +2430,15 @@
       "fp" : false,
       "name" : "VOICEVOX",
       "slug" : "voicevox-client"
+    },
+    {
+      "aliases" : [
+
+      ],
+      "caps" : 1,
+      "fp" : false,
+      "name" : "vortex",
+      "slug" : "vortex"
     },
     {
       "aliases" : [

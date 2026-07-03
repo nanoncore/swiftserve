@@ -377,6 +377,257 @@
     },
     {
       "aliases" : [
+        "icloud sync",
+        "cloudkit sync",
+        "remote sync"
+      ],
+      "id" : "storage.cloud-sync",
+      "label" : "Cloud sync"
+    },
+    {
+      "aliases" : [
+        "record types",
+        "persist codable",
+        "struct persistence"
+      ],
+      "id" : "storage.codable",
+      "label" : "Codable persistence"
+    },
+    {
+      "aliases" : [
+        "wal",
+        "database pool",
+        "reader writer",
+        "write-ahead logging"
+      ],
+      "id" : "storage.concurrency",
+      "label" : "Concurrent access"
+    },
+    {
+      "aliases" : [
+        "on-disk cache",
+        "file cache",
+        "persistent cache"
+      ],
+      "id" : "storage.disk-cache",
+      "label" : "Disk caching"
+    },
+    {
+      "aliases" : [
+        "nosql",
+        "object database",
+        "document database"
+      ],
+      "id" : "storage.document-store",
+      "label" : "Object / document store"
+    },
+    {
+      "aliases" : [
+        "sqlcipher",
+        "encrypted database",
+        "encryption at rest"
+      ],
+      "id" : "storage.encryption",
+      "label" : "Database encryption"
+    },
+    {
+      "aliases" : [
+        "fts",
+        "fts5",
+        "text search"
+      ],
+      "id" : "storage.full-text-search",
+      "label" : "Full-text search"
+    },
+    {
+      "aliases" : [
+        "memory database",
+        "transient store"
+      ],
+      "id" : "storage.in-memory",
+      "label" : "In-memory database"
+    },
+    {
+      "aliases" : [
+        "defaults wrapper",
+        "user defaults",
+        "preferences"
+      ],
+      "id" : "storage.key-value",
+      "label" : "Key-value storage"
+    },
+    {
+      "aliases" : [
+        "secure storage",
+        "credentials",
+        "secrets"
+      ],
+      "id" : "storage.keychain",
+      "label" : "Keychain storage"
+    },
+    {
+      "aliases" : [
+        "database migration",
+        "schema versioning"
+      ],
+      "id" : "storage.migrations",
+      "label" : "Schema migrations"
+    },
+    {
+      "aliases" : [
+        "live queries",
+        "value observation",
+        "database observation"
+      ],
+      "id" : "storage.observation",
+      "label" : "Reactive queries / change tracking"
+    },
+    {
+      "aliases" : [
+        "query dsl",
+        "orm",
+        "query interface"
+      ],
+      "id" : "storage.query-builder",
+      "label" : "Type-safe queries"
+    },
+    {
+      "aliases" : [
+        "sqlite database",
+        "sql database",
+        "sqlite3"
+      ],
+      "id" : "storage.sqlite",
+      "label" : "SQLite access"
+    },
+    {
+      "aliases" : [
+        "constraints dsl",
+        "layout anchors",
+        "snap constraints"
+      ],
+      "id" : "ui.autolayout-dsl",
+      "label" : "Auto Layout DSL"
+    },
+    {
+      "aliases" : [
+        "drawer",
+        "floating panel",
+        "modal sheet"
+      ],
+      "id" : "ui.bottom-sheet",
+      "label" : "Bottom sheets"
+    },
+    {
+      "aliases" : [
+        "graphs",
+        "plotting",
+        "bar chart",
+        "line chart"
+      ],
+      "id" : "ui.charts",
+      "label" : "Charts"
+    },
+    {
+      "aliases" : [
+        "core haptics",
+        "vibration",
+        "taptic"
+      ],
+      "id" : "ui.haptics",
+      "label" : "Haptic feedback"
+    },
+    {
+      "aliases" : [
+        "markdown view",
+        "commonmark",
+        "gfm"
+      ],
+      "id" : "ui.markdown-rendering",
+      "label" : "Markdown rendering"
+    },
+    {
+      "aliases" : [
+        "carousel",
+        "page view",
+        "swipeable pages"
+      ],
+      "id" : "ui.pager",
+      "label" : "Paging / carousel"
+    },
+    {
+      "aliases" : [
+        "confetti",
+        "particles",
+        "sparkles"
+      ],
+      "id" : "ui.particle-effects",
+      "label" : "Particle effects"
+    },
+    {
+      "aliases" : [
+        "spinner",
+        "hud",
+        "activity indicator"
+      ],
+      "id" : "ui.progress-hud",
+      "label" : "Loading indicators"
+    },
+    {
+      "aliases" : [
+        "refresh control",
+        "swipe to refresh"
+      ],
+      "id" : "ui.pull-to-refresh",
+      "label" : "Pull to refresh"
+    },
+    {
+      "aliases" : [
+        "text editor",
+        "attributed string editing",
+        "wysiwyg"
+      ],
+      "id" : "ui.rich-text",
+      "label" : "Rich text editing"
+    },
+    {
+      "aliases" : [
+        "shimmer",
+        "placeholder loading",
+        "loading skeleton"
+      ],
+      "id" : "ui.skeleton-loading",
+      "label" : "Skeleton loading"
+    },
+    {
+      "aliases" : [
+        "snackbar",
+        "in-app notification",
+        "banner"
+      ],
+      "id" : "ui.toast",
+      "label" : "Toasts / banners"
+    },
+    {
+      "aliases" : [
+        "view animations",
+        "transition",
+        "motion design"
+      ],
+      "id" : "ui.transition-effects",
+      "label" : "View transitions / motion effects"
+    },
+    {
+      "aliases" : [
+        "lottie",
+        "after effects animation",
+        "bodymovin"
+      ],
+      "id" : "ui.vector-animation",
+      "label" : "Vector animation playback"
+    },
+    {
+      "aliases" : [
         "video chat",
         "video conference"
       ],
@@ -418,6 +669,6 @@
       "label" : "Voice calling"
     }
   ],
-  "domain" : "audio+images+networking",
+  "domain" : "audio+images+networking+storage+ui",
   "taxonomyVersion" : 1
 }

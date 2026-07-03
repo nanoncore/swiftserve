@@ -1,0 +1,200 @@
+{
+  "aliases" : [
+    "view animations",
+    "transition",
+    "motion design"
+  ],
+  "id" : "ui.transition-effects",
+  "label" : "View transitions / motion effects",
+  "packages" : [
+    {
+      "commit" : "1b4b1dda28c50b95f0872927ee2226fe8b58950e",
+      "notes" : "Pow's core: SwiftUI AnyTransition.movingParts transitions plus changeEffect motion effects. All anchors are unconditioned in the surface digest; watchOS/linux left unknown because digest gaps are condition-derived and neither platform is declared by manifest or README.",
+      "package" : "https://github.com/emergetools/pow",
+      "packageName" : "pow",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Pow/Infrastructure/Namespace.swift",
+              "kind" : "symbol",
+              "line" : 21,
+              "note" : "Namespace for 16+ SwiftUI transitions (anvil, blinds, blur, boing, clock, flicker, flip, glare, iris, move, poof, pop, skid, swoosh, vanish, wipe); unconditioned, present on iOS.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Infrastructure/Namespace.swift#L21",
+              "symbol" : "AnyTransition.movingParts"
+            },
+            {
+              "file" : "Sources/Pow/Transitions/Anvil.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Transitions/Anvil.swift#L10",
+              "symbol" : "AnyTransition.MovingParts.anvil"
+            },
+            {
+              "file" : "Sources/Pow/Infrastructure/OnChangeEffect.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "Motion change-effects entry point (shake, spin, wiggle, jump, shine, glow...).",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Infrastructure/OnChangeEffect.swift#L14",
+              "symbol" : "View.changeEffect"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 11,
+              "note" : "Manifest declares .iOS(.v15).",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Package.swift#L11"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Sources/Pow/Infrastructure/Namespace.swift",
+              "kind" : "symbol",
+              "line" : 21,
+              "note" : "Surface shows no linux gap only because gaps are #if-derived; the package unconditionally imports SwiftUI, which is unavailable on Linux, so it almost certainly does not build there. No guard evidence of absence, so unknown rather than unsupported.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Infrastructure/Namespace.swift#L21",
+              "symbol" : "AnyTransition.movingParts"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Pow/Infrastructure/Namespace.swift",
+              "kind" : "symbol",
+              "line" : 21,
+              "note" : "Unconditioned; no macCatalyst gap in surface digest.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Infrastructure/Namespace.swift#L21",
+              "symbol" : "AnyTransition.movingParts"
+            },
+            {
+              "file" : "Sources/Pow/Infrastructure/OnChangeEffect.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Infrastructure/OnChangeEffect.swift#L14",
+              "symbol" : "View.changeEffect"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 13,
+              "note" : "Manifest declares .macCatalyst(.v15).",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Package.swift#L13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Pow/Infrastructure/Namespace.swift",
+              "kind" : "symbol",
+              "line" : 21,
+              "note" : "Unconditioned; no macOS gap in surface digest.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Infrastructure/Namespace.swift#L21",
+              "symbol" : "AnyTransition.movingParts"
+            },
+            {
+              "file" : "Sources/Pow/Transitions/Flip.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Transitions/Flip.swift#L11",
+              "symbol" : "AnyTransition.MovingParts.flip"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 12,
+              "note" : "Manifest declares .macOS(.v12).",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Package.swift#L12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Pow/Infrastructure/Namespace.swift",
+              "kind" : "symbol",
+              "line" : 21,
+              "note" : "Unconditioned; no tvOS gap in surface digest.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Infrastructure/Namespace.swift#L21",
+              "symbol" : "AnyTransition.movingParts"
+            },
+            {
+              "file" : "Sources/Pow/Transitions/Anvil.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Transitions/Anvil.swift#L10",
+              "symbol" : "AnyTransition.MovingParts.anvil"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 14,
+              "note" : "Manifest declares .tvOS(.v15).",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Package.swift#L14"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Pow/Infrastructure/Namespace.swift",
+              "kind" : "symbol",
+              "line" : 21,
+              "note" : "Unconditioned; no visionOS gap in surface digest.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Infrastructure/Namespace.swift#L21",
+              "symbol" : "AnyTransition.movingParts"
+            },
+            {
+              "file" : "Sources/Pow/Transitions/Flip.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Transitions/Flip.swift#L11",
+              "symbol" : "AnyTransition.MovingParts.flip"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README Requirements list 'visionOS beta 6 (requires Xcode 15.1 beta 3)'. No manifest floor (tools 5.7 predates visionOS in PackageDescription), hence 0.8 not 0.9.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/README.md#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.4,
+          "evidence" : [
+            {
+              "file" : "Sources/Pow/Infrastructure/Namespace.swift",
+              "kind" : "symbol",
+              "line" : 21,
+              "note" : "Surface shows no watchOS gap (decl is unguarded), but gaps are #if-derived, not build verdicts; manifest declares no watchOS floor and README requirements omit watchOS. No build verification, so unknown.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Infrastructure/Namespace.swift#L21",
+              "symbol" : "AnyTransition.movingParts"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "pow",
+      "version" : "1.0.6"
+    }
+  ]
+}

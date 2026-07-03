@@ -1,0 +1,721 @@
+{
+  "aliases" : [
+    "sqlcipher",
+    "encrypted database",
+    "encryption at rest"
+  ],
+  "id" : "storage.encryption",
+  "label" : "Database encryption",
+  "packages" : [
+    {
+      "commit" : "17F113",
+      "notes" : "Data Protection (file-protection) encryption at rest; the key is absent from the macOS SDK — macOS stores are not file-protected this way.",
+      "package" : "https://developer.apple.com/documentation/coredata",
+      "packageName" : "CoreData",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 976,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L976",
+              "symbol" : "NSPersistentStoreFileProtectionKey"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "availability",
+              "line" : 976,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L976",
+              "symbol" : "NSPersistentStoreFileProtectionKey"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 976,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L976",
+              "symbol" : "NSPersistentStoreFileProtectionKey"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "availability",
+              "line" : 976,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L976",
+              "symbol" : "NSPersistentStoreFileProtectionKey"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 976,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L976",
+              "symbol" : "NSPersistentStoreFileProtectionKey"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 976,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L976",
+              "symbol" : "NSPersistentStoreFileProtectionKey"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 976,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L976",
+              "symbol" : "NSPersistentStoreFileProtectionKey"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "coredata",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "commit" : "b83108d10f42680d78f23fe4d4d80fc88dab3212",
+      "notes" : "SQLCipher API (usePassphrase, changePassphrase, SQLCipher log configuration) exists in the surface but every declaration is gated behind SQLITE_HAS_CODEC, which the standard SwiftPM build never defines; encryption requires a SQLCipher-enabled distribution (e.g. the GRDB.swift/SQLCipher CocoaPods flavor or a custom build). No platform has an unconditionally present encryption symbol, so status is unknown on all platforms with all-conditional evidence (confidence capped at 0.6).",
+      "package" : "https://github.com/groue/grdb.swift",
+      "packageName" : "grdb.swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.5,
+          "evidence" : [
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 99,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L99",
+              "symbol" : "Database.usePassphrase"
+            },
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 128,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L128",
+              "symbol" : "Database.changePassphrase"
+            },
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 16,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L16",
+              "symbol" : "Database.SQLCipherLogTarget"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "linux" : {
+          "confidence" : 0.5,
+          "evidence" : [
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 99,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L99",
+              "symbol" : "Database.usePassphrase"
+            },
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 128,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L128",
+              "symbol" : "Database.changePassphrase"
+            },
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 16,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L16",
+              "symbol" : "Database.SQLCipherLogTarget"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.5,
+          "evidence" : [
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 99,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L99",
+              "symbol" : "Database.usePassphrase"
+            },
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 128,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L128",
+              "symbol" : "Database.changePassphrase"
+            },
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 16,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L16",
+              "symbol" : "Database.SQLCipherLogTarget"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macOS" : {
+          "confidence" : 0.5,
+          "evidence" : [
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 99,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L99",
+              "symbol" : "Database.usePassphrase"
+            },
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 128,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L128",
+              "symbol" : "Database.changePassphrase"
+            },
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 16,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L16",
+              "symbol" : "Database.SQLCipherLogTarget"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.5,
+          "evidence" : [
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 99,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L99",
+              "symbol" : "Database.usePassphrase"
+            },
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 128,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L128",
+              "symbol" : "Database.changePassphrase"
+            },
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 16,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L16",
+              "symbol" : "Database.SQLCipherLogTarget"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.5,
+          "evidence" : [
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 99,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L99",
+              "symbol" : "Database.usePassphrase"
+            },
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 128,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L128",
+              "symbol" : "Database.changePassphrase"
+            },
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 16,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L16",
+              "symbol" : "Database.SQLCipherLogTarget"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.5,
+          "evidence" : [
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 99,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L99",
+              "symbol" : "Database.usePassphrase"
+            },
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 128,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L128",
+              "symbol" : "Database.changePassphrase"
+            },
+            {
+              "condition" : "SQLITE_HAS_CODEC",
+              "file" : "GRDB/Core/Database+SQLCipher.swift",
+              "kind" : "symbol",
+              "line" : 16,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+SQLCipher.swift#L16",
+              "symbol" : "Database.SQLCipherLogTarget"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "grdb.swift",
+      "version" : "v7.11.1"
+    },
+    {
+      "commit" : "ca03df491ec5e4bb8af0bca1e9957d08c10ec2da",
+      "notes" : "Realm.Configuration.encryptionKey exists in the checkout (RealmSwift/RealmConfiguration.swift init parameter and property) but fell outside the truncated surface digest (800 of 1463 decls), so no admissible symbol anchor; readme-only evidence caps status at unknown, confidence 0.3.",
+      "package" : "https://github.com/realm/realm-swift",
+      "packageName" : "realm-swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README 'Fully Encrypted' section demonstrates Realm.Configuration(encryptionKey: key) with a 64-byte key ('Data can be encrypted in-flight and at-rest').",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/README.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README 'Fully Encrypted' section demonstrates Realm.Configuration(encryptionKey: key) with a 64-byte key ('Data can be encrypted in-flight and at-rest'). README does not name linux and no Linux build evidence exists.",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/README.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.15,
+          "evidence" : [
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README 'Fully Encrypted' section demonstrates Realm.Configuration(encryptionKey: key) with a 64-byte key ('Data can be encrypted in-flight and at-rest'). README does not name macCatalyst.",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/README.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README 'Fully Encrypted' section demonstrates Realm.Configuration(encryptionKey: key) with a 64-byte key ('Data can be encrypted in-flight and at-rest').",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/README.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README 'Fully Encrypted' section demonstrates Realm.Configuration(encryptionKey: key) with a 64-byte key ('Data can be encrypted in-flight and at-rest').",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/README.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.15,
+          "evidence" : [
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README 'Fully Encrypted' section demonstrates Realm.Configuration(encryptionKey: key) with a 64-byte key ('Data can be encrypted in-flight and at-rest'). README does not name visionOS.",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/README.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README 'Fully Encrypted' section demonstrates Realm.Configuration(encryptionKey: key) with a 64-byte key ('Data can be encrypted in-flight and at-rest').",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/README.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "realm-swift",
+      "version" : "v20.0.5"
+    },
+    {
+      "commit" : "964c300fb0736699ce945c9edb56ecd62eba27a3",
+      "notes" : "Entire Cipher.swift surface is gated behind the SQLCipher package trait (#if SQLCipher); no platform resolves the symbols unconditionally present, so no platform can be marked supported. All-conditional confidence cap 0.6 respected.",
+      "package" : "https://github.com/stephencelis/sqlite.swift",
+      "packageName" : "sqlite.swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.55,
+          "evidence" : [
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 66,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L66",
+              "symbol" : "Connection.key"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L102",
+              "symbol" : "Connection.rekey"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 113,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L113",
+              "symbol" : "Connection.sqlcipher_export"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 11,
+              "note" : "SQLCipher product is linked only .when(platforms: applePlatforms, traits: [\"SQLCipher\"]); iOS is in applePlatforms, so encryption works when the SQLCipher trait is enabled — conditional, hence unknown.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L11"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "linux" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 66,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L66",
+              "symbol" : "Connection.key"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L102",
+              "symbol" : "Connection.rekey"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 113,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L113",
+              "symbol" : "Connection.sqlcipher_export"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 11,
+              "note" : "The SQLCipher dependency is linked only on Apple platforms, so the trait-gated Cipher API is unlikely to be functional on Linux — but manifest scoping is not absence evidence, so status stays unknown.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L11"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.4,
+          "evidence" : [
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 66,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L66",
+              "symbol" : "Connection.key"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L102",
+              "symbol" : "Connection.rekey"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 113,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L113",
+              "symbol" : "Connection.sqlcipher_export"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 3,
+              "note" : "applePlatforms ([.iOS, .macOS, .watchOS, .tvOS, .visionOS]) does not list .macCatalyst; whether the SQLCipher product condition extends to Catalyst is unclear.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L3"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macOS" : {
+          "confidence" : 0.55,
+          "evidence" : [
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 66,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L66",
+              "symbol" : "Connection.key"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L102",
+              "symbol" : "Connection.rekey"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 113,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L113",
+              "symbol" : "Connection.sqlcipher_export"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 11,
+              "note" : "SQLCipher product is linked only .when(platforms: applePlatforms, traits: [\"SQLCipher\"]); macOS is in applePlatforms, so encryption works when the SQLCipher trait is enabled — conditional, hence unknown.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L11"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.55,
+          "evidence" : [
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 66,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L66",
+              "symbol" : "Connection.key"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L102",
+              "symbol" : "Connection.rekey"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 113,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L113",
+              "symbol" : "Connection.sqlcipher_export"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 11,
+              "note" : "SQLCipher product is linked only .when(platforms: applePlatforms, traits: [\"SQLCipher\"]); tvOS is in applePlatforms, so encryption works when the SQLCipher trait is enabled — conditional, hence unknown.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L11"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.55,
+          "evidence" : [
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 66,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L66",
+              "symbol" : "Connection.key"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L102",
+              "symbol" : "Connection.rekey"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 113,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L113",
+              "symbol" : "Connection.sqlcipher_export"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 11,
+              "note" : "SQLCipher product is linked only .when(platforms: applePlatforms, traits: [\"SQLCipher\"]); visionOS is in applePlatforms, so encryption works when the SQLCipher trait is enabled — conditional, hence unknown.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L11"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.55,
+          "evidence" : [
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 66,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L66",
+              "symbol" : "Connection.key"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 102,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L102",
+              "symbol" : "Connection.rekey"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Sources/SQLite/Extensions/Cipher.swift",
+              "kind" : "symbol",
+              "line" : 113,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Extensions/Cipher.swift#L113",
+              "symbol" : "Connection.sqlcipher_export"
+            },
+            {
+              "condition" : "SQLCipher",
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 11,
+              "note" : "SQLCipher product is linked only .when(platforms: applePlatforms, traits: [\"SQLCipher\"]); watchOS is in applePlatforms, so encryption works when the SQLCipher trait is enabled — conditional, hence unknown.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L11"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "sqlite.swift",
+      "version" : "0.16.0"
+    }
+  ]
+}

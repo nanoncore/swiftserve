@@ -1,0 +1,676 @@
+[
+  {
+    "capability" : {
+      "id" : "ui.haptics",
+      "label" : "Haptic feedback"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Haptics are exposed as change effects (UINotificationFeedbackGenerator / UIImpactFeedbackGenerator wrappers) and exist only inside #if os(iOS): present on iOS and macCatalyst, explicitly absent elsewhere per surface digest gaps. Related os(iOS)-only SoundEffect audio feedback exists but has no taxonomy id.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/emergetools/pow",
+      "commit" : "1b4b1dda28c50b95f0872927ee2226fe8b58950e",
+      "firstParty" : false,
+      "name" : "pow",
+      "surfaceDigest" : "fnv1a64:72b300bc8816696f",
+      "version" : "1.0.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : "Triggers haptic feedback whenever a value changes; decl guarded by #if os(iOS), resolves present on iOS. All evidence conditional, so capped at 0.6.",
+            "package" : null,
+            "symbol" : "AnyChangeEffect.hapticFeedback"
+          },
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+            "kind" : "symbol",
+            "line" : 32,
+            "note" : "Selection-change haptic.",
+            "package" : null,
+            "symbol" : "AnyChangeEffect.feedbackHapticSelection"
+          },
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : "feedback(hapticImpact:) using UIImpactFeedbackGenerator.FeedbackStyle.",
+            "package" : null,
+            "symbol" : "AnyChangeEffect.feedback"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+            "kind" : "guard",
+            "line" : 8,
+            "note" : "Core haptics symbol is guarded by #if os(iOS); surface digest gaps mark linux absent.",
+            "package" : null,
+            "symbol" : "AnyChangeEffect.hapticFeedback"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+            "kind" : "symbol",
+            "line" : 8,
+            "note" : "os(iOS) holds when building for Mac Catalyst; surface digest lists no macCatalyst gap for this decl. API compiles and is callable, though runtime haptic hardware on Mac is limited. All evidence conditional, so capped at 0.6.",
+            "package" : null,
+            "symbol" : "AnyChangeEffect.hapticFeedback"
+          },
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+            "kind" : "symbol",
+            "line" : 32,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AnyChangeEffect.feedbackHapticSelection"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+            "kind" : "guard",
+            "line" : 8,
+            "note" : "Core haptics symbol is guarded by #if os(iOS); surface digest gaps mark macOS absent.",
+            "package" : null,
+            "symbol" : "AnyChangeEffect.hapticFeedback"
+          },
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+            "kind" : "guard",
+            "line" : 32,
+            "note" : "Also absent on macOS per surface digest gaps.",
+            "package" : null,
+            "symbol" : "AnyChangeEffect.feedbackHapticSelection"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "tvOS" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+            "kind" : "guard",
+            "line" : 8,
+            "note" : "Core haptics symbol is guarded by #if os(iOS); surface digest gaps mark tvOS absent.",
+            "package" : null,
+            "symbol" : "AnyChangeEffect.hapticFeedback"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "visionOS" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+            "kind" : "guard",
+            "line" : 8,
+            "note" : "Core haptics symbol is guarded by #if os(iOS); surface digest gaps mark visionOS absent.",
+            "package" : null,
+            "symbol" : "AnyChangeEffect.hapticFeedback"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "watchOS" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS)",
+            "file" : "Sources/Pow/Effects/HapticFeedbackEffect.swift",
+            "kind" : "guard",
+            "line" : 8,
+            "note" : "Core haptics symbol is guarded by #if os(iOS); surface digest gaps mark watchOS absent. Pow provides no watchOS haptics path (WatchKit haptics are not wrapped).",
+            "package" : null,
+            "symbol" : "AnyChangeEffect.hapticFeedback"
+          }
+        ],
+        "status" : "unsupported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "ui.particle-effects",
+      "label" : "Particle effects"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Particle capability is view-level (SwiftUI particle change effects: spray, rise, smoke, vanish, plus ParticleLayer contexts), not a general-purpose particle engine. watchOS/linux left unknown because digest gaps are condition-derived and neither platform is declared by manifest or README.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/emergetools/pow",
+      "commit" : "1b4b1dda28c50b95f0872927ee2226fe8b58950e",
+      "firstParty" : false,
+      "name" : "pow",
+      "surfaceDigest" : "fnv1a64:72b300bc8816696f",
+      "version" : "1.0.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Effects/SprayEffect.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "Confetti-style effect emitting multiple particles from an origin point; unconditioned in surface.",
+            "package" : null,
+            "symbol" : "AnyChangeEffect.spray"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Effects/RisingParticleEffect.swift",
+            "kind" : "symbol",
+            "line" : 12,
+            "note" : "Emits particles that float up from the origin point.",
+            "package" : null,
+            "symbol" : "AnyChangeEffect.rise"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Infrastructure/ParticleLayer.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : "Dedicated particle rendering context type.",
+            "package" : null,
+            "symbol" : "ParticleLayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 11,
+            "note" : "Manifest declares .iOS(.v15).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Effects/SprayEffect.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "Surface shows no linux gap only because gaps are #if-derived; the package unconditionally imports SwiftUI, which is unavailable on Linux, so it almost certainly does not build there. No guard evidence of absence, so unknown rather than unsupported.",
+            "package" : null,
+            "symbol" : "AnyChangeEffect.spray"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Effects/SprayEffect.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "Unconditioned; no macCatalyst gap in surface digest.",
+            "package" : null,
+            "symbol" : "AnyChangeEffect.spray"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Infrastructure/ParticleLayer.swift",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ParticleLayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 13,
+            "note" : "Manifest declares .macCatalyst(.v15).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Effects/SprayEffect.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "Unconditioned; no macOS gap in surface digest.",
+            "package" : null,
+            "symbol" : "AnyChangeEffect.spray"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Transitions/Vanish.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : "Dissolves the view into many small particles.",
+            "package" : null,
+            "symbol" : "AnyTransition.MovingParts.vanish"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 12,
+            "note" : "Manifest declares .macOS(.v12).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Effects/SprayEffect.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "Unconditioned; no tvOS gap in surface digest.",
+            "package" : null,
+            "symbol" : "AnyChangeEffect.spray"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Infrastructure/ParticleLayer.swift",
+            "kind" : "symbol",
+            "line" : 9,
+            "note" : null,
+            "package" : null,
+            "symbol" : "View.particleLayer"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 14,
+            "note" : "Manifest declares .tvOS(.v15).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Effects/SprayEffect.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "Unconditioned; no visionOS gap in surface digest.",
+            "package" : null,
+            "symbol" : "AnyChangeEffect.spray"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Effects/RisingParticleEffect.swift",
+            "kind" : "symbol",
+            "line" : 12,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AnyChangeEffect.rise"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README Requirements list 'visionOS beta 6 (requires Xcode 15.1 beta 3)'. No manifest floor, hence 0.8 not 0.9.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.4,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Effects/SprayEffect.swift",
+            "kind" : "symbol",
+            "line" : 15,
+            "note" : "Surface shows no watchOS gap (decl is unguarded), but gaps are #if-derived, not build verdicts; manifest declares no watchOS floor and README requirements omit watchOS. No build verification, so unknown.",
+            "package" : null,
+            "symbol" : "AnyChangeEffect.spray"
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "ui.transition-effects",
+      "label" : "View transitions / motion effects"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Pow's core: SwiftUI AnyTransition.movingParts transitions plus changeEffect motion effects. All anchors are unconditioned in the surface digest; watchOS/linux left unknown because digest gaps are condition-derived and neither platform is declared by manifest or README.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/emergetools/pow",
+      "commit" : "1b4b1dda28c50b95f0872927ee2226fe8b58950e",
+      "firstParty" : false,
+      "name" : "pow",
+      "surfaceDigest" : "fnv1a64:72b300bc8816696f",
+      "version" : "1.0.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Infrastructure/Namespace.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : "Namespace for 16+ SwiftUI transitions (anvil, blinds, blur, boing, clock, flicker, flip, glare, iris, move, poof, pop, skid, swoosh, vanish, wipe); unconditioned, present on iOS.",
+            "package" : null,
+            "symbol" : "AnyTransition.movingParts"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Transitions/Anvil.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AnyTransition.MovingParts.anvil"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Infrastructure/OnChangeEffect.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : "Motion change-effects entry point (shake, spin, wiggle, jump, shine, glow...).",
+            "package" : null,
+            "symbol" : "View.changeEffect"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 11,
+            "note" : "Manifest declares .iOS(.v15).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Infrastructure/Namespace.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : "Surface shows no linux gap only because gaps are #if-derived; the package unconditionally imports SwiftUI, which is unavailable on Linux, so it almost certainly does not build there. No guard evidence of absence, so unknown rather than unsupported.",
+            "package" : null,
+            "symbol" : "AnyTransition.movingParts"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Infrastructure/Namespace.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : "Unconditioned; no macCatalyst gap in surface digest.",
+            "package" : null,
+            "symbol" : "AnyTransition.movingParts"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Infrastructure/OnChangeEffect.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : null,
+            "package" : null,
+            "symbol" : "View.changeEffect"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 13,
+            "note" : "Manifest declares .macCatalyst(.v15).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Infrastructure/Namespace.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : "Unconditioned; no macOS gap in surface digest.",
+            "package" : null,
+            "symbol" : "AnyTransition.movingParts"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Transitions/Flip.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AnyTransition.MovingParts.flip"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 12,
+            "note" : "Manifest declares .macOS(.v12).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Infrastructure/Namespace.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : "Unconditioned; no tvOS gap in surface digest.",
+            "package" : null,
+            "symbol" : "AnyTransition.movingParts"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Transitions/Anvil.swift",
+            "kind" : "symbol",
+            "line" : 10,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AnyTransition.MovingParts.anvil"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 14,
+            "note" : "Manifest declares .tvOS(.v15).",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Infrastructure/Namespace.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : "Unconditioned; no visionOS gap in surface digest.",
+            "package" : null,
+            "symbol" : "AnyTransition.movingParts"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Transitions/Flip.swift",
+            "kind" : "symbol",
+            "line" : 11,
+            "note" : null,
+            "package" : null,
+            "symbol" : "AnyTransition.MovingParts.flip"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README Requirements list 'visionOS beta 6 (requires Xcode 15.1 beta 3)'. No manifest floor (tools 5.7 predates visionOS in PackageDescription), hence 0.8 not 0.9.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.4,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Pow/Infrastructure/Namespace.swift",
+            "kind" : "symbol",
+            "line" : 21,
+            "note" : "Surface shows no watchOS gap (decl is unguarded), but gaps are #if-derived, not build verdicts; manifest declares no watchOS floor and README requirements omit watchOS. No build verification, so unknown.",
+            "package" : null,
+            "symbol" : "AnyTransition.movingParts"
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

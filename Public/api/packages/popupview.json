@@ -1,0 +1,448 @@
+[
+  {
+    "capability" : {
+      "id" : "ui.bottom-sheet",
+      "label" : "Bottom sheets"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Bottom-sheet capability is delivered by the v5 scrollPopup modifier family (ScrollPopupParameters, ScrollPopupPosition.bottom/center with drag-to-dismiss and header). Public decls are unconditional in the digest, but the checkout shows Sources/PopupView/Utils/ScrollPopupModifier.swift wrapped in #if os(iOS), so non-iOS/non-Catalyst platforms are labeled unknown rather than supported. Popup.DisplayMode.sheet was NOT used as evidence: it selects a presentation mechanism (fullscreenSheet), not a bottom-sheet UI.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/exyte/popupview",
+      "commit" : "e56e89614d86b4bc21ffb36bf435cc52c60a8c13",
+      "firstParty" : false,
+      "name" : "popupview",
+      "surfaceDigest" : "fnv1a64:2e08557e41a33ee9",
+      "version" : "5.0.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicModifiers.swift",
+            "kind" : "symbol",
+            "line" : 61,
+            "note" : "Scrollable, drag-dismissable, header-equipped popup — a bottom-sheet/drawer component; internal implementation (ScrollPopupModifier) is iOS-targeted",
+            "package" : null,
+            "symbol" : "View.scrollPopup"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicAPI.swift",
+            "kind" : "symbol",
+            "line" : 116,
+            "note" : "Explicit bottom sheet positioning with top padding",
+            "package" : null,
+            "symbol" : "Popup.ScrollPopupPosition.bottom"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicAPI.swift",
+            "kind" : "symbol",
+            "line" : 322,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Popup.ScrollPopupParameters.position"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README markets a 'Sheets' popup style with demo gif",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "No linux support signal; SwiftUI-only library, but no os() guard evidence of absence in the surface, so status stays unknown",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicModifiers.swift",
+            "kind" : "symbol",
+            "line" : 61,
+            "note" : "Present per surface digest; os(iOS)-gated internals compile on Mac Catalyst since os(iOS) evaluates true there",
+            "package" : null,
+            "symbol" : "View.scrollPopup"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicAPI.swift",
+            "kind" : "symbol",
+            "line" : 116,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Popup.ScrollPopupPosition.bottom"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.35,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicModifiers.swift",
+            "kind" : "symbol",
+            "line" : 61,
+            "note" : "Public decl is unconditional and present on macOS per surface digest, but the internal sheet implementation (ScrollPopupModifier) is compiled only under os(iOS); actual sheet behavior on macOS unverified",
+            "package" : null,
+            "symbol" : "View.scrollPopup"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "tvOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicModifiers.swift",
+            "kind" : "symbol",
+            "line" : 61,
+            "note" : "Public decl present per surface digest, but internal sheet implementation is os(iOS)-gated; behavior on tvOS unverified",
+            "package" : null,
+            "symbol" : "View.scrollPopup"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicModifiers.swift",
+            "kind" : "symbol",
+            "line" : 61,
+            "note" : "Public decl present per surface digest, but internal sheet implementation is os(iOS)-gated (os(iOS) is false on native visionOS); no visionOS floor in manifest",
+            "package" : null,
+            "symbol" : "View.scrollPopup"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.3,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicModifiers.swift",
+            "kind" : "symbol",
+            "line" : 61,
+            "note" : "Public decl present per surface digest, but internal sheet implementation is os(iOS)-gated; behavior on watchOS unverified",
+            "package" : null,
+            "symbol" : "View.scrollPopup"
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "ui.toast",
+      "label" : "Toasts / banners"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Toast capability is first-class: PopupType.toast case, isToast property, autohideIn auto-dismiss, and top/bottom banner positioning via Popup.Position. README markets 'Toasts' explicitly. All public decls are unconditional in the surface digest.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/exyte/popupview",
+      "commit" : "e56e89614d86b4bc21ffb36bf435cc52c60a8c13",
+      "firstParty" : false,
+      "name" : "popupview",
+      "surfaceDigest" : "fnv1a64:2e08557e41a33ee9",
+      "version" : "5.0.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicAPI.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : "Dedicated toast popup type; decl is unconditional (no gaps) in surface digest",
+            "package" : null,
+            "symbol" : "Popup.PopupType.toast"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicAPI.swift",
+            "kind" : "symbol",
+            "line" : 188,
+            "note" : "Auto-hide timer, the defining toast/banner behavior",
+            "package" : null,
+            "symbol" : "Popup.BasePopupParameters.autohideIn"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicModifiers.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : "SwiftUI entry-point modifier that presents toast-type popups",
+            "package" : null,
+            "symbol" : "View.popup"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Manifest declares .iOS(.v17)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.1,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "No linux support signal; library is SwiftUI-only, which is unavailable on linux, but there is no os() guard evidence of absence in the surface, so status stays unknown",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicAPI.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : "Unconditional decl, present on macCatalyst per surface digest; iOS code paths (os(iOS)) also compile on Catalyst",
+            "package" : null,
+            "symbol" : "Popup.PopupType.toast"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicAPI.swift",
+            "kind" : "symbol",
+            "line" : 188,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Popup.BasePopupParameters.autohideIn"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "No explicit macCatalyst floor; iOS floor governs Catalyst builds",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicAPI.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : "Unconditional decl, present on macOS per surface digest",
+            "package" : null,
+            "symbol" : "Popup.PopupType.toast"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicAPI.swift",
+            "kind" : "symbol",
+            "line" : 188,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Popup.BasePopupParameters.autohideIn"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Manifest declares .macOS(.v14)",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicAPI.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : "Unconditional decl, present on tvOS per surface digest",
+            "package" : null,
+            "symbol" : "Popup.PopupType.toast"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicModifiers.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : null,
+            "package" : null,
+            "symbol" : "View.popup"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Manifest declares .tvOS(.v17); drag-based dismissal internals are iOS-gated, so confidence moderated",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicAPI.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : "Unconditional decl, present on visionOS per surface digest (no gaps)",
+            "package" : null,
+            "symbol" : "Popup.PopupType.toast"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicModifiers.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : null,
+            "package" : null,
+            "symbol" : "View.popup"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "No visionOS floor declared in manifest; support inferred from unconditional SwiftUI-only decls, confidence moderated",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicAPI.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : "Unconditional decl, present on watchOS per surface digest",
+            "package" : null,
+            "symbol" : "Popup.PopupType.toast"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/PopupView/PublicModifiers.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : null,
+            "package" : null,
+            "symbol" : "View.popup"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 11,
+            "note" : "Manifest declares .watchOS(.v10); some interaction internals are iOS-gated, so confidence moderated",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

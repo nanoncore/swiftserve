@@ -1,0 +1,787 @@
+{
+  "aliases" : [
+    "defaults wrapper",
+    "user defaults",
+    "preferences"
+  ],
+  "id" : "storage.key-value",
+  "label" : "Key-value storage",
+  "packages" : [
+    {
+      "commit" : "24e47109e31b2031cb26e25cc1b81b607496066c",
+      "notes" : "All storages expose a generic key-value API: setObject(_:forKey:), object(forKey:), allKeys, with generic Key/Value type parameters.",
+      "package" : "https://github.com/hyperoslo/cache",
+      "packageName" : "cache",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L44",
+              "symbol" : "StorageAware.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 23,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L23",
+              "symbol" : "StorageAware.object"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L11",
+              "symbol" : "StorageAware.allKeys"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 66,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L66",
+              "symbol" : "Storage.setObject"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "note" : "Surface digest resolves this decl present on linux (no gap); source is Foundation-only under Source/Shared with no os() guards, but there is no Linux CI or README corroboration - confidence reduced.",
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L44",
+              "symbol" : "StorageAware.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 23,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L23",
+              "symbol" : "StorageAware.object"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L11",
+              "symbol" : "StorageAware.allKeys"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 66,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L66",
+              "symbol" : "Storage.setObject"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L44",
+              "symbol" : "StorageAware.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 23,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L23",
+              "symbol" : "StorageAware.object"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L11",
+              "symbol" : "StorageAware.allKeys"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 66,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L66",
+              "symbol" : "Storage.setObject"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L44",
+              "symbol" : "StorageAware.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 23,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L23",
+              "symbol" : "StorageAware.object"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L11",
+              "symbol" : "StorageAware.allKeys"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 66,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L66",
+              "symbol" : "Storage.setObject"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L44",
+              "symbol" : "StorageAware.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 23,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L23",
+              "symbol" : "StorageAware.object"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L11",
+              "symbol" : "StorageAware.allKeys"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 66,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L66",
+              "symbol" : "Storage.setObject"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L44",
+              "symbol" : "StorageAware.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 23,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L23",
+              "symbol" : "StorageAware.object"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L11",
+              "symbol" : "StorageAware.allKeys"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 66,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L66",
+              "symbol" : "Storage.setObject"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L44",
+              "symbol" : "StorageAware.setObject"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 23,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L23",
+              "symbol" : "StorageAware.object"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageAware.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageAware.swift#L11",
+              "symbol" : "StorageAware.allKeys"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 66,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L66",
+              "symbol" : "Storage.setObject"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "cache",
+      "version" : "7.4.0"
+    },
+    {
+      "commit" : "ba6848908ca930521484727b2de2399f68413f40",
+      "notes" : "UserDefaults-backed @StoredValue (plus Keychain-backed @SecurelyStoredValue, recorded separately under storage.keychain).",
+      "package" : "https://github.com/mergesort/boutique",
+      "packageName" : "boutique",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 56,
+              "note" : "@StoredValue property wrapper persists a single Item in UserDefaults",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L56",
+              "symbol" : "StoredValue"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 73,
+              "note" : "init(wrappedValue:key:storage: UserDefaults = .standard) — key-value storage keyed by String",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L73",
+              "symbol" : "StoredValue.init"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 135,
+              "note" : "func set(_ item: Item) — writes the value for the wrapper's key",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L135",
+              "symbol" : "StoredValue.set"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 159,
+              "note" : "func reset() — resets the stored value to its default",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L159",
+              "symbol" : "StoredValue.reset"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Package.swift declares .iOS(.v17) platform floor",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 56,
+              "note" : "Surface digest resolves this decl present on linux (no os() conditions anywhere in the public surface), but the module unconditionally imports SwiftUI, Security, and Observation; Package.swift and README declare only iOS 17+/macOS 14+. Linux buildability unverified — honest answer is unknown.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L56",
+              "symbol" : "StoredValue"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 56,
+              "note" : "@StoredValue property wrapper persists a single Item in UserDefaults No explicit macCatalyst floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on macCatalyst.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L56",
+              "symbol" : "StoredValue"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 73,
+              "note" : "init(wrappedValue:key:storage: UserDefaults = .standard) — key-value storage keyed by String",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L73",
+              "symbol" : "StoredValue.init"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 135,
+              "note" : "func set(_ item: Item) — writes the value for the wrapper's key",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L135",
+              "symbol" : "StoredValue.set"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 159,
+              "note" : "func reset() — resets the stored value to its default",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L159",
+              "symbol" : "StoredValue.reset"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 56,
+              "note" : "@StoredValue property wrapper persists a single Item in UserDefaults",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L56",
+              "symbol" : "StoredValue"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 73,
+              "note" : "init(wrappedValue:key:storage: UserDefaults = .standard) — key-value storage keyed by String",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L73",
+              "symbol" : "StoredValue.init"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 135,
+              "note" : "func set(_ item: Item) — writes the value for the wrapper's key",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L135",
+              "symbol" : "StoredValue.set"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 159,
+              "note" : "func reset() — resets the stored value to its default",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L159",
+              "symbol" : "StoredValue.reset"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Package.swift declares .macOS(.v14) platform floor",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 56,
+              "note" : "@StoredValue property wrapper persists a single Item in UserDefaults No explicit tvOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on tvOS.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L56",
+              "symbol" : "StoredValue"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 73,
+              "note" : "init(wrappedValue:key:storage: UserDefaults = .standard) — key-value storage keyed by String",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L73",
+              "symbol" : "StoredValue.init"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 135,
+              "note" : "func set(_ item: Item) — writes the value for the wrapper's key",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L135",
+              "symbol" : "StoredValue.set"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 159,
+              "note" : "func reset() — resets the stored value to its default",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L159",
+              "symbol" : "StoredValue.reset"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 56,
+              "note" : "@StoredValue property wrapper persists a single Item in UserDefaults No explicit visionOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on visionOS.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L56",
+              "symbol" : "StoredValue"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 73,
+              "note" : "init(wrappedValue:key:storage: UserDefaults = .standard) — key-value storage keyed by String",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L73",
+              "symbol" : "StoredValue.init"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 135,
+              "note" : "func set(_ item: Item) — writes the value for the wrapper's key",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L135",
+              "symbol" : "StoredValue.set"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 159,
+              "note" : "func reset() — resets the stored value to its default",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L159",
+              "symbol" : "StoredValue.reset"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 56,
+              "note" : "@StoredValue property wrapper persists a single Item in UserDefaults No explicit watchOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on watchOS.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L56",
+              "symbol" : "StoredValue"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 73,
+              "note" : "init(wrappedValue:key:storage: UserDefaults = .standard) — key-value storage keyed by String",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L73",
+              "symbol" : "StoredValue.init"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 135,
+              "note" : "func set(_ item: Item) — writes the value for the wrapper's key",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L135",
+              "symbol" : "StoredValue.set"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 159,
+              "note" : "func reset() — resets the stored value to its default",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L159",
+              "symbol" : "StoredValue.reset"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "boutique",
+      "version" : "3.0.2"
+    },
+    {
+      "commit" : "00a7465a0668a87fa159e779b9d80f1f9652357e",
+      "notes" : "Core capability: type-safe UserDefaults facade (Defaults.Key + subscript access). Surface digest records zero per-platform gaps and zero #if conditions across all 230 decls. linux left unknown: no gap-based absence evidence exists, but sources unconditionally import Apple-only frameworks.",
+      "package" : "https://github.com/sindresorhus/defaults",
+      "packageName" : "defaults",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "note" : "Root namespace enum; no per-platform gaps recorded in surface digest.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L4",
+              "symbol" : "Defaults"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 92,
+              "note" : "Strongly-typed key used to access values.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L92",
+              "symbol" : "Defaults.Key"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 30,
+              "note" : "Access stored values via key subscript.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L30",
+              "symbol" : "Defaults.subscript"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 114,
+              "note" : "Create a key with name, default value, and UserDefaults suite.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L114",
+              "symbol" : "Defaults.Key.init"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Manifest declares .iOS(.v14) floor.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Manifest lists Apple platforms only (not absence evidence). Digest records no os() gaps, so unsupported cannot be claimed; core target unconditionally imports SwiftUI/Combine (Apple-only frameworks), making linux presence unverified and doubtful.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Package.swift#L7"
+            },
+            {
+              "file" : "readme.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README Compatibility section lists macOS/iOS/tvOS/watchOS/visionOS only; linux never mentioned.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/readme.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "note" : "No macCatalyst gap recorded in surface digest; decl resolves present.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L4",
+              "symbol" : "Defaults"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 92,
+              "note" : "No macCatalyst gap recorded in surface digest; decl resolves present.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L92",
+              "symbol" : "Defaults.Key"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "No explicit macCatalyst floor; Catalyst inherits the .iOS(.v14) floor by SwiftPM default. Confidence lowered accordingly.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "note" : "Root namespace enum; no per-platform gaps recorded in surface digest.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L4",
+              "symbol" : "Defaults"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 92,
+              "note" : "Strongly-typed key used to access values.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L92",
+              "symbol" : "Defaults.Key"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 30,
+              "note" : "Access stored values via key subscript.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L30",
+              "symbol" : "Defaults.subscript"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Manifest declares .macOS(.v11) floor.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "note" : "Root namespace enum; no per-platform gaps recorded in surface digest.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L4",
+              "symbol" : "Defaults"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 92,
+              "note" : "Strongly-typed key used to access values.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L92",
+              "symbol" : "Defaults.Key"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 30,
+              "note" : "Access stored values via key subscript.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L30",
+              "symbol" : "Defaults.subscript"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Manifest declares .tvOS(.v14) floor.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "note" : "Root namespace enum; no per-platform gaps recorded in surface digest.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L4",
+              "symbol" : "Defaults"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 92,
+              "note" : "Strongly-typed key used to access values.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L92",
+              "symbol" : "Defaults.Key"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 30,
+              "note" : "Access stored values via key subscript.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L30",
+              "symbol" : "Defaults.subscript"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Manifest declares .visionOS(.v1) floor.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "note" : "Root namespace enum; no per-platform gaps recorded in surface digest.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L4",
+              "symbol" : "Defaults"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 92,
+              "note" : "Strongly-typed key used to access values.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L92",
+              "symbol" : "Defaults.Key"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 30,
+              "note" : "Access stored values via key subscript.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L30",
+              "symbol" : "Defaults.subscript"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Manifest declares .watchOS(.v9) floor.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "defaults",
+      "version" : "9.0.9"
+    }
+  ]
+}

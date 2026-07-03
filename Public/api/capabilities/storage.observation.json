@@ -1,0 +1,1835 @@
+{
+  "aliases" : [
+    "live queries",
+    "value observation",
+    "database observation"
+  ],
+  "id" : "storage.observation",
+  "label" : "Reactive queries / change tracking",
+  "packages" : [
+    {
+      "commit" : "24e47109e31b2031cb26e25cc1b81b607496066c",
+      "notes" : "Per-key and storage-wide change observation (addObserver / addStorageObserver with KeyChange / StorageChange, ObservationToken). Matches the 'change tracking' facet of the taxonomy label; there are no reactive queries.",
+      "package" : "https://github.com/hyperoslo/cache",
+      "packageName" : "cache",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 86,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L86",
+              "symbol" : "Storage.addStorageObserver"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 103,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L103",
+              "symbol" : "Storage.addObserver"
+            },
+            {
+              "file" : "Source/Shared/Storage/KeyObservationRegistry.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/KeyObservationRegistry.swift#L4",
+              "symbol" : "KeyObservationRegistry"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageObservationRegistry.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageObservationRegistry.swift#L26",
+              "symbol" : "StorageChange"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 86,
+              "note" : "Surface digest resolves this decl present on linux (no gap); source is Foundation-only under Source/Shared with no os() guards, but there is no Linux CI or README corroboration - confidence reduced.",
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L86",
+              "symbol" : "Storage.addStorageObserver"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 103,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L103",
+              "symbol" : "Storage.addObserver"
+            },
+            {
+              "file" : "Source/Shared/Storage/KeyObservationRegistry.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/KeyObservationRegistry.swift#L4",
+              "symbol" : "KeyObservationRegistry"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageObservationRegistry.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageObservationRegistry.swift#L26",
+              "symbol" : "StorageChange"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 86,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L86",
+              "symbol" : "Storage.addStorageObserver"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 103,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L103",
+              "symbol" : "Storage.addObserver"
+            },
+            {
+              "file" : "Source/Shared/Storage/KeyObservationRegistry.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/KeyObservationRegistry.swift#L4",
+              "symbol" : "KeyObservationRegistry"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageObservationRegistry.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageObservationRegistry.swift#L26",
+              "symbol" : "StorageChange"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 86,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L86",
+              "symbol" : "Storage.addStorageObserver"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 103,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L103",
+              "symbol" : "Storage.addObserver"
+            },
+            {
+              "file" : "Source/Shared/Storage/KeyObservationRegistry.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/KeyObservationRegistry.swift#L4",
+              "symbol" : "KeyObservationRegistry"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageObservationRegistry.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageObservationRegistry.swift#L26",
+              "symbol" : "StorageChange"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 86,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L86",
+              "symbol" : "Storage.addStorageObserver"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 103,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L103",
+              "symbol" : "Storage.addObserver"
+            },
+            {
+              "file" : "Source/Shared/Storage/KeyObservationRegistry.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/KeyObservationRegistry.swift#L4",
+              "symbol" : "KeyObservationRegistry"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageObservationRegistry.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageObservationRegistry.swift#L26",
+              "symbol" : "StorageChange"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 86,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L86",
+              "symbol" : "Storage.addStorageObserver"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 103,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L103",
+              "symbol" : "Storage.addObserver"
+            },
+            {
+              "file" : "Source/Shared/Storage/KeyObservationRegistry.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/KeyObservationRegistry.swift#L4",
+              "symbol" : "KeyObservationRegistry"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageObservationRegistry.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageObservationRegistry.swift#L26",
+              "symbol" : "StorageChange"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 86,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L86",
+              "symbol" : "Storage.addStorageObserver"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage.swift",
+              "kind" : "symbol",
+              "line" : 103,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage.swift#L103",
+              "symbol" : "Storage.addObserver"
+            },
+            {
+              "file" : "Source/Shared/Storage/KeyObservationRegistry.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/KeyObservationRegistry.swift#L4",
+              "symbol" : "KeyObservationRegistry"
+            },
+            {
+              "file" : "Source/Shared/Storage/StorageObservationRegistry.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/StorageObservationRegistry.swift#L26",
+              "symbol" : "StorageChange"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "cache",
+      "version" : "7.4.0"
+    },
+    {
+      "commit" : "b83108d10f42680d78f23fe4d4d80fc88dab3212",
+      "notes" : "ValueObservation machinery (shared/async observation, schedulers) and transaction observation types are unconditional on all platforms. Combine publishers (ValueObservation.publisher, DatabaseRegionObservation.publisher, canImport(Combine)) are absent on Linux, but async-sequence and callback observation remain. The ValueObservation base type itself is not in the truncated digest (800/2706 decls); anchors are its sibling observation types, hence confidence slightly reduced.",
+      "package" : "https://github.com/groue/grdb.swift",
+      "packageName" : "grdb.swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "GRDB/ValueObservation/SharedValueObservation.swift",
+              "kind" : "symbol",
+              "line" : 167,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/ValueObservation/SharedValueObservation.swift#L167",
+              "symbol" : "SharedValueObservation"
+            },
+            {
+              "file" : "GRDB/ValueObservation/ValueObservation.swift",
+              "kind" : "symbol",
+              "line" : 382,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/ValueObservation/ValueObservation.swift#L382",
+              "symbol" : "AsyncValueObservation"
+            },
+            {
+              "file" : "GRDB/Core/TransactionObserver.swift",
+              "kind" : "symbol",
+              "line" : 757,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/TransactionObserver.swift#L757",
+              "symbol" : "DatabaseEventObservationStrategy"
+            },
+            {
+              "file" : "GRDB/Core/TransactionObserver.swift",
+              "kind" : "symbol",
+              "line" : 153,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/TransactionObserver.swift#L153",
+              "symbol" : "Database.TransactionObservationExtent"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 51,
+              "note" : "Package.swift declares iOS minimum .v13",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L51"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "GRDB/ValueObservation/SharedValueObservation.swift",
+              "kind" : "symbol",
+              "line" : 167,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/ValueObservation/SharedValueObservation.swift#L167",
+              "symbol" : "SharedValueObservation"
+            },
+            {
+              "file" : "GRDB/ValueObservation/ValueObservation.swift",
+              "kind" : "symbol",
+              "line" : 382,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/ValueObservation/ValueObservation.swift#L382",
+              "symbol" : "AsyncValueObservation"
+            },
+            {
+              "file" : "GRDB/Core/TransactionObserver.swift",
+              "kind" : "symbol",
+              "line" : 757,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/TransactionObserver.swift#L757",
+              "symbol" : "DatabaseEventObservationStrategy"
+            },
+            {
+              "file" : "GRDB/Core/TransactionObserver.swift",
+              "kind" : "symbol",
+              "line" : 153,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/TransactionObserver.swift#L153",
+              "symbol" : "Database.TransactionObservationExtent"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "GRDB/ValueObservation/SharedValueObservation.swift",
+              "kind" : "symbol",
+              "line" : 167,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/ValueObservation/SharedValueObservation.swift#L167",
+              "symbol" : "SharedValueObservation"
+            },
+            {
+              "file" : "GRDB/ValueObservation/ValueObservation.swift",
+              "kind" : "symbol",
+              "line" : 382,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/ValueObservation/ValueObservation.swift#L382",
+              "symbol" : "AsyncValueObservation"
+            },
+            {
+              "file" : "GRDB/Core/TransactionObserver.swift",
+              "kind" : "symbol",
+              "line" : 757,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/TransactionObserver.swift#L757",
+              "symbol" : "DatabaseEventObservationStrategy"
+            },
+            {
+              "file" : "GRDB/Core/TransactionObserver.swift",
+              "kind" : "symbol",
+              "line" : 153,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/TransactionObserver.swift#L153",
+              "symbol" : "Database.TransactionObservationExtent"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "GRDB/ValueObservation/SharedValueObservation.swift",
+              "kind" : "symbol",
+              "line" : 167,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/ValueObservation/SharedValueObservation.swift#L167",
+              "symbol" : "SharedValueObservation"
+            },
+            {
+              "file" : "GRDB/ValueObservation/ValueObservation.swift",
+              "kind" : "symbol",
+              "line" : 382,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/ValueObservation/ValueObservation.swift#L382",
+              "symbol" : "AsyncValueObservation"
+            },
+            {
+              "file" : "GRDB/Core/TransactionObserver.swift",
+              "kind" : "symbol",
+              "line" : 757,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/TransactionObserver.swift#L757",
+              "symbol" : "DatabaseEventObservationStrategy"
+            },
+            {
+              "file" : "GRDB/Core/TransactionObserver.swift",
+              "kind" : "symbol",
+              "line" : 153,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/TransactionObserver.swift#L153",
+              "symbol" : "Database.TransactionObservationExtent"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 52,
+              "note" : "Package.swift declares macOS minimum .v10_15",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L52"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "GRDB/ValueObservation/SharedValueObservation.swift",
+              "kind" : "symbol",
+              "line" : 167,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/ValueObservation/SharedValueObservation.swift#L167",
+              "symbol" : "SharedValueObservation"
+            },
+            {
+              "file" : "GRDB/ValueObservation/ValueObservation.swift",
+              "kind" : "symbol",
+              "line" : 382,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/ValueObservation/ValueObservation.swift#L382",
+              "symbol" : "AsyncValueObservation"
+            },
+            {
+              "file" : "GRDB/Core/TransactionObserver.swift",
+              "kind" : "symbol",
+              "line" : 757,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/TransactionObserver.swift#L757",
+              "symbol" : "DatabaseEventObservationStrategy"
+            },
+            {
+              "file" : "GRDB/Core/TransactionObserver.swift",
+              "kind" : "symbol",
+              "line" : 153,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/TransactionObserver.swift#L153",
+              "symbol" : "Database.TransactionObservationExtent"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 53,
+              "note" : "Package.swift declares tvOS minimum .v13",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L53"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "GRDB/ValueObservation/SharedValueObservation.swift",
+              "kind" : "symbol",
+              "line" : 167,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/ValueObservation/SharedValueObservation.swift#L167",
+              "symbol" : "SharedValueObservation"
+            },
+            {
+              "file" : "GRDB/ValueObservation/ValueObservation.swift",
+              "kind" : "symbol",
+              "line" : 382,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/ValueObservation/ValueObservation.swift#L382",
+              "symbol" : "AsyncValueObservation"
+            },
+            {
+              "file" : "GRDB/Core/TransactionObserver.swift",
+              "kind" : "symbol",
+              "line" : 757,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/TransactionObserver.swift#L757",
+              "symbol" : "DatabaseEventObservationStrategy"
+            },
+            {
+              "file" : "GRDB/Core/TransactionObserver.swift",
+              "kind" : "symbol",
+              "line" : 153,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/TransactionObserver.swift#L153",
+              "symbol" : "Database.TransactionObservationExtent"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "GRDB/ValueObservation/SharedValueObservation.swift",
+              "kind" : "symbol",
+              "line" : 167,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/ValueObservation/SharedValueObservation.swift#L167",
+              "symbol" : "SharedValueObservation"
+            },
+            {
+              "file" : "GRDB/ValueObservation/ValueObservation.swift",
+              "kind" : "symbol",
+              "line" : 382,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/ValueObservation/ValueObservation.swift#L382",
+              "symbol" : "AsyncValueObservation"
+            },
+            {
+              "file" : "GRDB/Core/TransactionObserver.swift",
+              "kind" : "symbol",
+              "line" : 757,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/TransactionObserver.swift#L757",
+              "symbol" : "DatabaseEventObservationStrategy"
+            },
+            {
+              "file" : "GRDB/Core/TransactionObserver.swift",
+              "kind" : "symbol",
+              "line" : 153,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/TransactionObserver.swift#L153",
+              "symbol" : "Database.TransactionObservationExtent"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 54,
+              "note" : "Package.swift declares watchOS minimum .v7",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L54"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "grdb.swift",
+      "version" : "v7.11.1"
+    },
+    {
+      "commit" : "e2bf935089cd7620031ea342eaf96bf4ba3a22dc",
+      "package" : "https://github.com/marcoarment/blackbird",
+      "packageName" : "blackbird",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdChanges.swift",
+              "kind" : "symbol",
+              "line" : 166,
+              "note" : "Combine ChangePublisher for a table.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdChanges.swift#L166",
+              "symbol" : "Blackbird.Database.changePublisher"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 296,
+              "note" : "Change publisher for a model's table.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L296",
+              "symbol" : "BlackbirdModel.changePublisher"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 132,
+              "note" : "Auto-updating SwiftUI result wrapper kept in sync with table changes.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdSwiftUI.swift#L132",
+              "symbol" : "BlackbirdLiveModels"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 90,
+              "note" : "Auto-updating rows from a generator function.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdSwiftUI.swift#L90",
+              "symbol" : "BlackbirdLiveQuery"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Package.swift declares .iOS(.v15) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms list contains only Apple platforms; Surface digest records no platform gaps, but sources unconditionally import Combine, SwiftUI, OSLog and SQLite3 with no os() guards, and Package.swift declares no Linux support; Linux buildability is unverified. Symbol absence is not absence evidence, so status is unknown.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L7"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdChanges.swift",
+              "kind" : "symbol",
+              "line" : 166,
+              "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdChanges.swift#L166",
+              "symbol" : "Blackbird.Database.changePublisher"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 296,
+              "note" : "Change publisher for a model's table.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L296",
+              "symbol" : "BlackbirdModel.changePublisher"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 132,
+              "note" : "Auto-updating SwiftUI result wrapper kept in sync with table changes.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdSwiftUI.swift#L132",
+              "symbol" : "BlackbirdLiveModels"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 90,
+              "note" : "Auto-updating rows from a generator function.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdSwiftUI.swift#L90",
+              "symbol" : "BlackbirdLiveQuery"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdChanges.swift",
+              "kind" : "symbol",
+              "line" : 166,
+              "note" : "Combine ChangePublisher for a table.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdChanges.swift#L166",
+              "symbol" : "Blackbird.Database.changePublisher"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 296,
+              "note" : "Change publisher for a model's table.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L296",
+              "symbol" : "BlackbirdModel.changePublisher"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 132,
+              "note" : "Auto-updating SwiftUI result wrapper kept in sync with table changes.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdSwiftUI.swift#L132",
+              "symbol" : "BlackbirdLiveModels"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 90,
+              "note" : "Auto-updating rows from a generator function.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdSwiftUI.swift#L90",
+              "symbol" : "BlackbirdLiveQuery"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Package.swift declares .macOS(.v12) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdChanges.swift",
+              "kind" : "symbol",
+              "line" : 166,
+              "note" : "Combine ChangePublisher for a table.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdChanges.swift#L166",
+              "symbol" : "Blackbird.Database.changePublisher"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 296,
+              "note" : "Change publisher for a model's table.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L296",
+              "symbol" : "BlackbirdModel.changePublisher"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 132,
+              "note" : "Auto-updating SwiftUI result wrapper kept in sync with table changes.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdSwiftUI.swift#L132",
+              "symbol" : "BlackbirdLiveModels"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 90,
+              "note" : "Auto-updating rows from a generator function.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdSwiftUI.swift#L90",
+              "symbol" : "BlackbirdLiveQuery"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 11,
+              "note" : "Package.swift declares .tvOS(.v15) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L11"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdChanges.swift",
+              "kind" : "symbol",
+              "line" : 166,
+              "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdChanges.swift#L166",
+              "symbol" : "Blackbird.Database.changePublisher"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 296,
+              "note" : "Change publisher for a model's table.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L296",
+              "symbol" : "BlackbirdModel.changePublisher"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 132,
+              "note" : "Auto-updating SwiftUI result wrapper kept in sync with table changes.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdSwiftUI.swift#L132",
+              "symbol" : "BlackbirdLiveModels"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 90,
+              "note" : "Auto-updating rows from a generator function.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdSwiftUI.swift#L90",
+              "symbol" : "BlackbirdLiveQuery"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdChanges.swift",
+              "kind" : "symbol",
+              "line" : 166,
+              "note" : "Combine ChangePublisher for a table.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdChanges.swift#L166",
+              "symbol" : "Blackbird.Database.changePublisher"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 296,
+              "note" : "Change publisher for a model's table.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L296",
+              "symbol" : "BlackbirdModel.changePublisher"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 132,
+              "note" : "Auto-updating SwiftUI result wrapper kept in sync with table changes.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdSwiftUI.swift#L132",
+              "symbol" : "BlackbirdLiveModels"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 90,
+              "note" : "Auto-updating rows from a generator function.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdSwiftUI.swift#L90",
+              "symbol" : "BlackbirdLiveQuery"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Package.swift declares .watchOS(.v8) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "blackbird",
+      "version" : "0.5"
+    },
+    {
+      "commit" : "ba6848908ca930521484727b2de2399f68413f40",
+      "notes" : "Store/StoredValue/SecurelyStoredValue are @Observable; change tracking via AsyncStream events plus Observation framework integration.",
+      "package" : "https://github.com/mergesort/boutique",
+      "packageName" : "boutique",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 272,
+              "note" : "var events: AsyncStream<StoreEvent<Item>> — granular events tracking API for all Store changes",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L272",
+              "symbol" : "Store.events"
+            },
+            {
+              "file" : "Sources/Boutique/StoreEvent.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "note" : "event type carrying operation (.initialized/.loaded/.insert/.remove) and affected items",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoreEvent.swift#L25",
+              "symbol" : "StoreEvent"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 109,
+              "note" : "AsyncStream that emits all value changes of a @StoredValue",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L109",
+              "symbol" : "StoredValue.values"
+            },
+            {
+              "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+              "kind" : "symbol",
+              "line" : 89,
+              "note" : "AsyncStream that emits all value changes of a @SecurelyStoredValue",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/SecurelyStoredValue.swift#L89",
+              "symbol" : "SecurelyStoredValue.values"
+            },
+            {
+              "file" : "Sources/Boutique/Store+Observation.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "note" : "SwiftUI View hook that fires when a Store finishes loading",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store+Observation.swift#L4",
+              "symbol" : "View.onStoreDidLoad"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Package.swift declares .iOS(.v17) platform floor",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 272,
+              "note" : "Surface digest resolves this decl present on linux (no os() conditions anywhere in the public surface), but the module unconditionally imports SwiftUI, Security, and Observation; Package.swift and README declare only iOS 17+/macOS 14+. Linux buildability unverified — honest answer is unknown.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L272",
+              "symbol" : "Store.events"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 272,
+              "note" : "var events: AsyncStream<StoreEvent<Item>> — granular events tracking API for all Store changes No explicit macCatalyst floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on macCatalyst.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L272",
+              "symbol" : "Store.events"
+            },
+            {
+              "file" : "Sources/Boutique/StoreEvent.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "note" : "event type carrying operation (.initialized/.loaded/.insert/.remove) and affected items",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoreEvent.swift#L25",
+              "symbol" : "StoreEvent"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 109,
+              "note" : "AsyncStream that emits all value changes of a @StoredValue",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L109",
+              "symbol" : "StoredValue.values"
+            },
+            {
+              "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+              "kind" : "symbol",
+              "line" : 89,
+              "note" : "AsyncStream that emits all value changes of a @SecurelyStoredValue",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/SecurelyStoredValue.swift#L89",
+              "symbol" : "SecurelyStoredValue.values"
+            },
+            {
+              "file" : "Sources/Boutique/Store+Observation.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "note" : "SwiftUI View hook that fires when a Store finishes loading",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store+Observation.swift#L4",
+              "symbol" : "View.onStoreDidLoad"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 272,
+              "note" : "var events: AsyncStream<StoreEvent<Item>> — granular events tracking API for all Store changes",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L272",
+              "symbol" : "Store.events"
+            },
+            {
+              "file" : "Sources/Boutique/StoreEvent.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "note" : "event type carrying operation (.initialized/.loaded/.insert/.remove) and affected items",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoreEvent.swift#L25",
+              "symbol" : "StoreEvent"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 109,
+              "note" : "AsyncStream that emits all value changes of a @StoredValue",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L109",
+              "symbol" : "StoredValue.values"
+            },
+            {
+              "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+              "kind" : "symbol",
+              "line" : 89,
+              "note" : "AsyncStream that emits all value changes of a @SecurelyStoredValue",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/SecurelyStoredValue.swift#L89",
+              "symbol" : "SecurelyStoredValue.values"
+            },
+            {
+              "file" : "Sources/Boutique/Store+Observation.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "note" : "SwiftUI View hook that fires when a Store finishes loading",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store+Observation.swift#L4",
+              "symbol" : "View.onStoreDidLoad"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Package.swift declares .macOS(.v14) platform floor",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 272,
+              "note" : "var events: AsyncStream<StoreEvent<Item>> — granular events tracking API for all Store changes No explicit tvOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on tvOS.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L272",
+              "symbol" : "Store.events"
+            },
+            {
+              "file" : "Sources/Boutique/StoreEvent.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "note" : "event type carrying operation (.initialized/.loaded/.insert/.remove) and affected items",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoreEvent.swift#L25",
+              "symbol" : "StoreEvent"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 109,
+              "note" : "AsyncStream that emits all value changes of a @StoredValue",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L109",
+              "symbol" : "StoredValue.values"
+            },
+            {
+              "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+              "kind" : "symbol",
+              "line" : 89,
+              "note" : "AsyncStream that emits all value changes of a @SecurelyStoredValue",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/SecurelyStoredValue.swift#L89",
+              "symbol" : "SecurelyStoredValue.values"
+            },
+            {
+              "file" : "Sources/Boutique/Store+Observation.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "note" : "SwiftUI View hook that fires when a Store finishes loading",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store+Observation.swift#L4",
+              "symbol" : "View.onStoreDidLoad"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 272,
+              "note" : "var events: AsyncStream<StoreEvent<Item>> — granular events tracking API for all Store changes No explicit visionOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on visionOS.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L272",
+              "symbol" : "Store.events"
+            },
+            {
+              "file" : "Sources/Boutique/StoreEvent.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "note" : "event type carrying operation (.initialized/.loaded/.insert/.remove) and affected items",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoreEvent.swift#L25",
+              "symbol" : "StoreEvent"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 109,
+              "note" : "AsyncStream that emits all value changes of a @StoredValue",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L109",
+              "symbol" : "StoredValue.values"
+            },
+            {
+              "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+              "kind" : "symbol",
+              "line" : 89,
+              "note" : "AsyncStream that emits all value changes of a @SecurelyStoredValue",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/SecurelyStoredValue.swift#L89",
+              "symbol" : "SecurelyStoredValue.values"
+            },
+            {
+              "file" : "Sources/Boutique/Store+Observation.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "note" : "SwiftUI View hook that fires when a Store finishes loading",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store+Observation.swift#L4",
+              "symbol" : "View.onStoreDidLoad"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 272,
+              "note" : "var events: AsyncStream<StoreEvent<Item>> — granular events tracking API for all Store changes No explicit watchOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on watchOS.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L272",
+              "symbol" : "Store.events"
+            },
+            {
+              "file" : "Sources/Boutique/StoreEvent.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "note" : "event type carrying operation (.initialized/.loaded/.insert/.remove) and affected items",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoreEvent.swift#L25",
+              "symbol" : "StoreEvent"
+            },
+            {
+              "file" : "Sources/Boutique/StoredValue.swift",
+              "kind" : "symbol",
+              "line" : 109,
+              "note" : "AsyncStream that emits all value changes of a @StoredValue",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StoredValue.swift#L109",
+              "symbol" : "StoredValue.values"
+            },
+            {
+              "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+              "kind" : "symbol",
+              "line" : 89,
+              "note" : "AsyncStream that emits all value changes of a @SecurelyStoredValue",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/SecurelyStoredValue.swift#L89",
+              "symbol" : "SecurelyStoredValue.values"
+            },
+            {
+              "file" : "Sources/Boutique/Store+Observation.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "note" : "SwiftUI View hook that fires when a Store finishes loading",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store+Observation.swift#L4",
+              "symbol" : "View.onStoreDidLoad"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "boutique",
+      "version" : "3.0.2"
+    },
+    {
+      "commit" : "17F113",
+      "notes" : "NSFetchedResultsController change tracking for UI.",
+      "package" : "https://developer.apple.com/documentation/coredata",
+      "packageName" : "CoreData",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 394,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L394",
+              "symbol" : "NSFetchedResultsController"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "availability",
+              "line" : 394,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L394",
+              "symbol" : "NSFetchedResultsController"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 394,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L394",
+              "symbol" : "NSFetchedResultsController"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 394,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L394",
+              "symbol" : "NSFetchedResultsController"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 394,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L394",
+              "symbol" : "NSFetchedResultsController"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 394,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L394",
+              "symbol" : "NSFetchedResultsController"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 394,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L394",
+              "symbol" : "NSFetchedResultsController"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "coredata",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "commit" : "00a7465a0668a87fa159e779b9d80f1f9652357e",
+      "notes" : "Three observation surfaces: closure-based Defaults.observe (KVO-backed), AsyncStream-based Defaults.updates, and Combine-based Defaults.publisher. Surface digest records zero per-platform gaps and zero #if conditions. linux left unknown: no gap-based absence evidence, but the Combine/SwiftUI imports are Apple-only.",
+      "package" : "https://github.com/sindresorhus/defaults",
+      "packageName" : "defaults",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Observation.swift",
+              "kind" : "symbol",
+              "line" : 351,
+              "note" : "Observe a defaults key with a change handler; no per-platform gaps recorded.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Observation.swift#L351",
+              "symbol" : "Defaults.observe"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 273,
+              "note" : "AsyncStream of value updates for a key.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L273",
+              "symbol" : "Defaults.updates"
+            },
+            {
+              "file" : "Sources/Defaults/Observation+Combine.swift",
+              "kind" : "symbol",
+              "line" : 89,
+              "note" : "Combine publisher of KeyChange events.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Observation+Combine.swift#L89",
+              "symbol" : "Defaults.publisher"
+            },
+            {
+              "file" : "Sources/Defaults/Observation.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Change payload with old/new values.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Observation.swift#L71",
+              "symbol" : "Defaults.KeyChange"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Manifest lists Apple platforms only (not absence evidence). Digest records no os() gaps, so unsupported cannot be claimed; Observation+Combine.swift unconditionally imports Combine and the target imports SwiftUI (Apple-only frameworks), making linux presence unverified and doubtful.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Package.swift#L7"
+            },
+            {
+              "file" : "readme.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README Compatibility section lists macOS/iOS/tvOS/watchOS/visionOS only; linux never mentioned.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/readme.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Observation.swift",
+              "kind" : "symbol",
+              "line" : 351,
+              "note" : "No macCatalyst gap recorded in surface digest; decl resolves present.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Observation.swift#L351",
+              "symbol" : "Defaults.observe"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 273,
+              "note" : "No macCatalyst gap recorded in surface digest; decl resolves present.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L273",
+              "symbol" : "Defaults.updates"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "No explicit macCatalyst floor; Catalyst inherits the .iOS(.v14) floor by SwiftPM default. Confidence lowered accordingly.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Observation.swift",
+              "kind" : "symbol",
+              "line" : 351,
+              "note" : "Observe a defaults key with a change handler; no per-platform gaps recorded.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Observation.swift#L351",
+              "symbol" : "Defaults.observe"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 273,
+              "note" : "AsyncStream of value updates for a key.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L273",
+              "symbol" : "Defaults.updates"
+            },
+            {
+              "file" : "Sources/Defaults/Observation+Combine.swift",
+              "kind" : "symbol",
+              "line" : 89,
+              "note" : "Combine publisher of KeyChange events.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Observation+Combine.swift#L89",
+              "symbol" : "Defaults.publisher"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Observation.swift",
+              "kind" : "symbol",
+              "line" : 351,
+              "note" : "Observe a defaults key with a change handler; no per-platform gaps recorded.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Observation.swift#L351",
+              "symbol" : "Defaults.observe"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 273,
+              "note" : "AsyncStream of value updates for a key.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L273",
+              "symbol" : "Defaults.updates"
+            },
+            {
+              "file" : "Sources/Defaults/Observation+Combine.swift",
+              "kind" : "symbol",
+              "line" : 89,
+              "note" : "Combine publisher of KeyChange events.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Observation+Combine.swift#L89",
+              "symbol" : "Defaults.publisher"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Observation.swift",
+              "kind" : "symbol",
+              "line" : 351,
+              "note" : "Observe a defaults key with a change handler; no per-platform gaps recorded.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Observation.swift#L351",
+              "symbol" : "Defaults.observe"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 273,
+              "note" : "AsyncStream of value updates for a key.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L273",
+              "symbol" : "Defaults.updates"
+            },
+            {
+              "file" : "Sources/Defaults/Observation+Combine.swift",
+              "kind" : "symbol",
+              "line" : 89,
+              "note" : "Combine publisher of KeyChange events.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Observation+Combine.swift#L89",
+              "symbol" : "Defaults.publisher"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Observation.swift",
+              "kind" : "symbol",
+              "line" : 351,
+              "note" : "Observe a defaults key with a change handler; no per-platform gaps recorded.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Observation.swift#L351",
+              "symbol" : "Defaults.observe"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults.swift",
+              "kind" : "symbol",
+              "line" : 273,
+              "note" : "AsyncStream of value updates for a key.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults.swift#L273",
+              "symbol" : "Defaults.updates"
+            },
+            {
+              "file" : "Sources/Defaults/Observation+Combine.swift",
+              "kind" : "symbol",
+              "line" : 89,
+              "note" : "Combine publisher of KeyChange events.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Observation+Combine.swift#L89",
+              "symbol" : "Defaults.publisher"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "defaults",
+      "version" : "9.0.9"
+    },
+    {
+      "commit" : "ca03df491ec5e4bb8af0bca1e9957d08c10ec2da",
+      "notes" : "Unconditional observe API plus Combine publishers and SwiftUI @ObservedResults. Additional observe overloads exist behind compiler(<6)/!compiler(<6) version gates (compiler-version, not platform, conditions). Swift-only extraction; 215 ObjC files unparsed and digest truncated (800 of 1463 decls). No platform-specific os() gaps exist anywhere in this digest.",
+      "package" : "https://github.com/realm/realm-swift",
+      "packageName" : "realm-swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Object.swift",
+              "kind" : "symbol",
+              "line" : 322,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Object.swift#L322",
+              "symbol" : "Object.observe"
+            },
+            {
+              "file" : "RealmSwift/Aliases.swift",
+              "kind" : "symbol",
+              "line" : 59,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Aliases.swift#L59",
+              "symbol" : "NotificationToken"
+            },
+            {
+              "file" : "RealmSwift/Combine.swift",
+              "kind" : "symbol",
+              "line" : 936,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Combine.swift#L936",
+              "symbol" : "RealmPublishers"
+            },
+            {
+              "file" : "RealmSwift/SwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 491,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/SwiftUI.swift#L491",
+              "symbol" : "ObservedResults"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 47,
+              "note" : "Manifest platform floor .iOS(.v12)",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L47"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Object.swift",
+              "kind" : "symbol",
+              "line" : 322,
+              "note" : "Surface digest resolves this Swift decl present on linux at parse level, but RealmSwift sits on the Realm ObjC core (215 ObjC files unparsed - declared blind spot); no manifest, README, or CI evidence of Linux builds. Under-claiming as unknown.",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Object.swift#L322",
+              "symbol" : "Object.observe"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Object.swift",
+              "kind" : "symbol",
+              "line" : 322,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Object.swift#L322",
+              "symbol" : "Object.observe"
+            },
+            {
+              "file" : "RealmSwift/Aliases.swift",
+              "kind" : "symbol",
+              "line" : 59,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Aliases.swift#L59",
+              "symbol" : "NotificationToken"
+            },
+            {
+              "file" : "RealmSwift/Combine.swift",
+              "kind" : "symbol",
+              "line" : 936,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Combine.swift#L936",
+              "symbol" : "RealmPublishers"
+            },
+            {
+              "file" : "RealmSwift/SwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 491,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/SwiftUI.swift#L491",
+              "symbol" : "ObservedResults"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 144,
+              "note" : "Package.swift explicitly targets macCatalyst: .linkedFramework(\"UIKit\", .when(platforms: [.iOS, .macCatalyst, .tvOS, .watchOS]))",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L144"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Object.swift",
+              "kind" : "symbol",
+              "line" : 322,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Object.swift#L322",
+              "symbol" : "Object.observe"
+            },
+            {
+              "file" : "RealmSwift/Aliases.swift",
+              "kind" : "symbol",
+              "line" : 59,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Aliases.swift#L59",
+              "symbol" : "NotificationToken"
+            },
+            {
+              "file" : "RealmSwift/Combine.swift",
+              "kind" : "symbol",
+              "line" : 936,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Combine.swift#L936",
+              "symbol" : "RealmPublishers"
+            },
+            {
+              "file" : "RealmSwift/SwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 491,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/SwiftUI.swift#L491",
+              "symbol" : "ObservedResults"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 46,
+              "note" : "Manifest platform floor .macOS(.v10_13)",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L46"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Object.swift",
+              "kind" : "symbol",
+              "line" : 322,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Object.swift#L322",
+              "symbol" : "Object.observe"
+            },
+            {
+              "file" : "RealmSwift/Aliases.swift",
+              "kind" : "symbol",
+              "line" : 59,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Aliases.swift#L59",
+              "symbol" : "NotificationToken"
+            },
+            {
+              "file" : "RealmSwift/Combine.swift",
+              "kind" : "symbol",
+              "line" : 936,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Combine.swift#L936",
+              "symbol" : "RealmPublishers"
+            },
+            {
+              "file" : "RealmSwift/SwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 491,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/SwiftUI.swift#L491",
+              "symbol" : "ObservedResults"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 48,
+              "note" : "Manifest platform floor .tvOS(.v12)",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L48"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Object.swift",
+              "kind" : "symbol",
+              "line" : 322,
+              "note" : "Decl unconditional in surface digest (no os() gate) and resolves present on visionOS. Supplementary: build.sh at this tag has dedicated visionOS build/test targets (generic/platform=visionOS, xrsimulator 'Apple Vision Pro'). visionOS is not listed in Package.swift platform floors and README names only iOS/macOS/tvOS/watchOS, hence reduced confidence.",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Object.swift#L322",
+              "symbol" : "Object.observe"
+            },
+            {
+              "file" : "RealmSwift/Aliases.swift",
+              "kind" : "symbol",
+              "line" : 59,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Aliases.swift#L59",
+              "symbol" : "NotificationToken"
+            },
+            {
+              "file" : "RealmSwift/Combine.swift",
+              "kind" : "symbol",
+              "line" : 936,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Combine.swift#L936",
+              "symbol" : "RealmPublishers"
+            },
+            {
+              "file" : "RealmSwift/SwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 491,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/SwiftUI.swift#L491",
+              "symbol" : "ObservedResults"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Object.swift",
+              "kind" : "symbol",
+              "line" : 322,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Object.swift#L322",
+              "symbol" : "Object.observe"
+            },
+            {
+              "file" : "RealmSwift/Aliases.swift",
+              "kind" : "symbol",
+              "line" : 59,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Aliases.swift#L59",
+              "symbol" : "NotificationToken"
+            },
+            {
+              "file" : "RealmSwift/Combine.swift",
+              "kind" : "symbol",
+              "line" : 936,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Combine.swift#L936",
+              "symbol" : "RealmPublishers"
+            },
+            {
+              "file" : "RealmSwift/SwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 491,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/SwiftUI.swift#L491",
+              "symbol" : "ObservedResults"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 49,
+              "note" : "Manifest platform floor .watchOS(.v4)",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L49"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "realm-swift",
+      "version" : "v20.0.5"
+    },
+    {
+      "commit" : "17F113",
+      "notes" : "Change tracking via SwiftData history API; live UI updates flow through @Query/Observable rather than a dedicated observer type.",
+      "package" : "https://developer.apple.com/documentation/swiftdata",
+      "packageName" : "SwiftData",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 317,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L317",
+              "symbol" : "HistoryDescriptor"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "availability",
+              "line" : 317,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L317",
+              "symbol" : "HistoryDescriptor"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 317,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L317",
+              "symbol" : "HistoryDescriptor"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 317,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L317",
+              "symbol" : "HistoryDescriptor"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 317,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L317",
+              "symbol" : "HistoryDescriptor"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 317,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L317",
+              "symbol" : "HistoryDescriptor"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 317,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L317",
+              "symbol" : "HistoryDescriptor"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swiftdata",
+      "version" : "Xcode 26.6"
+    }
+  ]
+}

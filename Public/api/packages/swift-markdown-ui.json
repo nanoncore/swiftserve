@@ -1,0 +1,280 @@
+[
+  {
+    "capability" : {
+      "id" : "ui.markdown-rendering",
+      "label" : "Markdown rendering"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Package is a SwiftUI Markdown renderer (GFM-compatible). All non-deprecated public decls in the surface are unconditional (0 #if conditions); the only gapped decls are @available(*, unavailable) deprecation shims absent on every platform. Read-only rendering: does not qualify for ui.rich-text (editing).",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/gonzalezreal/swift-markdown-ui",
+      "commit" : "5f613358148239d0292c0cef674a3c2314737f9e",
+      "firstParty" : false,
+      "name" : "swift-markdown-ui",
+      "surfaceDigest" : "fnv1a64:44608bafe4f0a0cc",
+      "version" : "2.4.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/MarkdownUI/Views/Markdown.swift",
+            "kind" : "symbol",
+            "line" : 191,
+            "note" : "SwiftUI view that displays read-only Markdown content; unconditional in the surface (no #if gaps)",
+            "package" : null,
+            "symbol" : "Markdown"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/MarkdownUI/Views/Markdown.swift",
+            "kind" : "symbol",
+            "line" : 237,
+            "note" : "init(_ markdown: String, baseURL: URL? = nil, imageBaseURL: URL? = nil)",
+            "package" : null,
+            "symbol" : "Markdown.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/MarkdownUI/DSL/Blocks/MarkdownContent.swift",
+            "kind" : "symbol",
+            "line" : 62,
+            "note" : "Pre-parsed GFM-compatible Markdown content value",
+            "package" : null,
+            "symbol" : "MarkdownContent"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 0,
+            "note" : "Manifest declares .iOS(.v15) floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/MarkdownUI/Views/Markdown.swift",
+            "kind" : "symbol",
+            "line" : 191,
+            "note" : "Surface shows no linux gap (no os() guards), but the core view imports SwiftUI, which does not exist on Linux; no guard-based absence evidence, so status stays unknown",
+            "package" : null,
+            "symbol" : "Markdown"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README minimum-requirements list covers only macOS/iOS/tvOS/watchOS; Linux not mentioned",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/MarkdownUI/Views/Markdown.swift",
+            "kind" : "symbol",
+            "line" : 191,
+            "note" : "Unconditional in the surface; no macCatalyst gap",
+            "package" : null,
+            "symbol" : "Markdown"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/MarkdownUI/DSL/Blocks/MarkdownContent.swift",
+            "kind" : "symbol",
+            "line" : 62,
+            "note" : "No macCatalyst gap",
+            "package" : null,
+            "symbol" : "MarkdownContent"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 0,
+            "note" : "Manifest declares .macCatalyst(.v15) floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/MarkdownUI/Views/Markdown.swift",
+            "kind" : "symbol",
+            "line" : 191,
+            "note" : "Unconditional in the surface; no macOS gap",
+            "package" : null,
+            "symbol" : "Markdown"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/MarkdownUI/DSL/Blocks/MarkdownContent.swift",
+            "kind" : "symbol",
+            "line" : 62,
+            "note" : "No macOS gap",
+            "package" : null,
+            "symbol" : "MarkdownContent"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 0,
+            "note" : "Manifest declares .macOS(.v12) floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/MarkdownUI/Views/Markdown.swift",
+            "kind" : "symbol",
+            "line" : 191,
+            "note" : "Unconditional in the surface; no tvOS gap",
+            "package" : null,
+            "symbol" : "Markdown"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/MarkdownUI/DSL/Blocks/MarkdownContent.swift",
+            "kind" : "symbol",
+            "line" : 62,
+            "note" : "No tvOS gap",
+            "package" : null,
+            "symbol" : "MarkdownContent"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 0,
+            "note" : "Manifest declares .tvOS(.v15) floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/MarkdownUI/Views/Markdown.swift",
+            "kind" : "symbol",
+            "line" : 191,
+            "note" : "Unconditional in the surface; no visionOS gap and no os() guards anywhere in the live surface",
+            "package" : null,
+            "symbol" : "Markdown"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/MarkdownUI/DSL/Blocks/MarkdownContent.swift",
+            "kind" : "symbol",
+            "line" : 62,
+            "note" : "No visionOS gap",
+            "package" : null,
+            "symbol" : "MarkdownContent"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 0,
+            "note" : "No visionOS floor declared (swift-tools-version 5.6 predates visionOS); iOS 15 floor applies via iOS compatibility — confidence reduced",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/MarkdownUI/Views/Markdown.swift",
+            "kind" : "symbol",
+            "line" : 191,
+            "note" : "Unconditional in the surface; no watchOS gap",
+            "package" : null,
+            "symbol" : "Markdown"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/MarkdownUI/DSL/Blocks/MarkdownContent.swift",
+            "kind" : "symbol",
+            "line" : 62,
+            "note" : "No watchOS gap",
+            "package" : null,
+            "symbol" : "MarkdownContent"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 0,
+            "note" : "Manifest declares .watchOS(.v8) floor; README notes tables/multi-image paragraphs need watchOS 9+",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

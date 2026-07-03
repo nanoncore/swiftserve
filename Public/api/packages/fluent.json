@@ -1,0 +1,518 @@
+[
+  {
+    "capability" : {
+      "id" : "storage.migrations",
+      "label" : "Schema migrations"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Rich migration surface at this layer: Application.migrations registry, Application.migrator, autoMigrate/autoRevert in both EventLoopFuture (Sources/Fluent/FluentProvider.swift:71,79) and async/await (Sources/Fluent/Concurrency/FluentProvider+Concurrency.swift:7,15) forms, Application.Fluent.migrationLogLevel, and the MigrateCommand CLI command. All decls unconditional (no #if, no per-platform gaps).",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/vapor/fluent",
+      "commit" : "2fe9e36daf4bdb5edcf193e0d0806ba2074d2864",
+      "firstParty" : false,
+      "name" : "fluent",
+      "surfaceDigest" : "fnv1a64:78da7a25553f9414",
+      "version" : "4.13.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : "Migrations registry; unconditional decl, no platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "Application.migrations"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Runs forward migrations; unconditional in surface.",
+            "package" : null,
+            "symbol" : "Application.autoMigrate"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "manifestPlatforms: .iOS(.v13) floor declared.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : "Unconditional decl; zero os() conditions in the entire surface, so present on linux. Server-side Vapor package; Linux is the primary deployment target and CI-tested (GitHub Actions test badge in README).",
+            "package" : null,
+            "symbol" : "Application.migrations"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Runs forward migrations; unconditional in surface.",
+            "package" : null,
+            "symbol" : "Application.autoMigrate"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/MigrateCommand.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "CLI `migrate` command for running/reverting migrations; unconditional.",
+            "package" : null,
+            "symbol" : "MigrateCommand"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : "Unconditional decl; surface digest lists no macCatalyst gap for any decl. Catalyst inherits the iOS 13 manifest floor.",
+            "package" : null,
+            "symbol" : "Application.migrations"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Runs forward migrations; unconditional in surface.",
+            "package" : null,
+            "symbol" : "Application.autoMigrate"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : "Migrations registry; unconditional decl, no platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "Application.migrations"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Runs forward migrations; unconditional in surface.",
+            "package" : null,
+            "symbol" : "Application.autoMigrate"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "manifestPlatforms: .macOS(.v10_15) floor declared.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : "Migrations registry; unconditional decl, no platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "Application.migrations"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Runs forward migrations; unconditional in surface.",
+            "package" : null,
+            "symbol" : "Application.autoMigrate"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "manifestPlatforms: .tvOS(.v13) floor declared.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : "Unconditional decl; surface digest lists no visionOS gap for any decl. No explicit visionOS manifest floor (inherits default).",
+            "package" : null,
+            "symbol" : "Application.migrations"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Runs forward migrations; unconditional in surface.",
+            "package" : null,
+            "symbol" : "Application.autoMigrate"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 55,
+            "note" : "Migrations registry; unconditional decl, no platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "Application.migrations"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Runs forward migrations; unconditional in surface.",
+            "package" : null,
+            "symbol" : "Application.autoMigrate"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "manifestPlatforms: .watchOS(.v6) floor declared. Server-side framework; watchOS floor exists but practical use there is atypical.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.query-builder",
+      "label" : "Type-safe queries"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "The query-builder DSL itself originates in the FluentKit dependency; this package wires it into Vapor (Request.db/Application.db entry points returning `any Database`, plus paginate(for:) extensions on QueryBuilder). Every decl in the surface is unconditional (no #if, no per-platform gaps). A concrete database driver (e.g. fluent-sqlite-driver) is needed at runtime, but the query-builder API surface itself carries no companion requirement.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/vapor/fluent",
+      "commit" : "2fe9e36daf4bdb5edcf193e0d0806ba2074d2864",
+      "firstParty" : false,
+      "name" : "fluent",
+      "surfaceDigest" : "fnv1a64:78da7a25553f9414",
+      "version" : "4.13.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 7,
+            "note" : "Unconditional decl; no #if condition, no platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "Request.db"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/Fluent+Paginate.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Extension on FluentKit's QueryBuilder DSL; unconditional in surface.",
+            "package" : null,
+            "symbol" : "QueryBuilder.paginate"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "manifestPlatforms: .iOS(.v13) floor declared.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 7,
+            "note" : "Unconditional decl; zero os() conditions in the entire surface, so present on linux. Server-side Vapor package; Linux is the primary deployment target and CI-tested (GitHub Actions test badge in README).",
+            "package" : null,
+            "symbol" : "Request.db"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/Fluent+Paginate.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Extension on FluentKit's QueryBuilder DSL; unconditional in surface.",
+            "package" : null,
+            "symbol" : "QueryBuilder.paginate"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 33,
+            "note" : "Application-level database entry point; unconditional.",
+            "package" : null,
+            "symbol" : "Application.db"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 7,
+            "note" : "Unconditional decl; surface digest lists no macCatalyst gap for any decl. Catalyst inherits the iOS 13 manifest floor.",
+            "package" : null,
+            "symbol" : "Request.db"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/Fluent+Paginate.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Extension on FluentKit's QueryBuilder DSL; unconditional in surface.",
+            "package" : null,
+            "symbol" : "QueryBuilder.paginate"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 7,
+            "note" : "Unconditional decl; no #if condition, no platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "Request.db"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/Fluent+Paginate.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Extension on FluentKit's QueryBuilder DSL; unconditional in surface.",
+            "package" : null,
+            "symbol" : "QueryBuilder.paginate"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "manifestPlatforms: .macOS(.v10_15) floor declared.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 7,
+            "note" : "Unconditional decl; no #if condition, no platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "Request.db"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/Fluent+Paginate.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Extension on FluentKit's QueryBuilder DSL; unconditional in surface.",
+            "package" : null,
+            "symbol" : "QueryBuilder.paginate"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "manifestPlatforms: .tvOS(.v13) floor declared.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 7,
+            "note" : "Unconditional decl; surface digest lists no visionOS gap for any decl. No explicit visionOS manifest floor (inherits default).",
+            "package" : null,
+            "symbol" : "Request.db"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/Fluent+Paginate.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Extension on FluentKit's QueryBuilder DSL; unconditional in surface.",
+            "package" : null,
+            "symbol" : "QueryBuilder.paginate"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/FluentProvider.swift",
+            "kind" : "symbol",
+            "line" : 7,
+            "note" : "Unconditional decl; no #if condition, no platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "Request.db"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Fluent/Fluent+Paginate.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Extension on FluentKit's QueryBuilder DSL; unconditional in surface.",
+            "package" : null,
+            "symbol" : "QueryBuilder.paginate"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "manifestPlatforms: .watchOS(.v6) floor declared. Server-side framework; watchOS floor exists but practical use there is atypical.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

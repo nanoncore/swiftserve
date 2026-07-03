@@ -1,0 +1,580 @@
+{
+  "aliases" : [
+    "confetti",
+    "particles",
+    "sparkles"
+  ],
+  "id" : "ui.particle-effects",
+  "label" : "Particle effects",
+  "packages" : [
+    {
+      "commit" : "9ae5bc2ce2149980884d4612321c3a266d6bf82c",
+      "notes" : "Core purpose of the package: configurable confetti particle animation (shapes, emojis, SF Symbols, text) in pure SwiftUI. All 23 public decls are unconditional with no per-platform gaps.",
+      "package" : "https://github.com/simibac/confettiswiftui",
+      "packageName" : "confettiswiftui",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/View+ConfettiCannon.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "Unconditional public SwiftUI modifier rendering configurable confetti animation; no per-platform gaps in surface digest.",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Sources/View+ConfettiCannon.swift#L47",
+              "symbol" : "View.confettiCannon"
+            },
+            {
+              "file" : "Sources/ConfettiSwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 77,
+              "note" : "Core confetti view initializer, unconditional.",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Sources/ConfettiSwiftUI.swift#L77",
+              "symbol" : "ConfettiCannon.init"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 0,
+              "note" : "Manifest declares .iOS(.v14).",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Package.swift#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Sources/View+ConfettiCannon.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "Surface digest records no linux gap, but the module is SwiftUI-only and SwiftUI is not available on Linux; no guard/availability anchor exists to prove absence, so status stays unknown.",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Sources/View+ConfettiCannon.swift#L47",
+              "symbol" : "View.confettiCannon"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/View+ConfettiCannon.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "No macCatalyst gap in surface digest; iOS 14 manifest floor covers Catalyst.",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Sources/View+ConfettiCannon.swift#L47",
+              "symbol" : "View.confettiCannon"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 0,
+              "note" : "Manifest declares .iOS(.v14); Catalyst inherits the iOS floor.",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Package.swift#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/View+ConfettiCannon.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "No macOS gap in surface digest; pure SwiftUI implementation.",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Sources/View+ConfettiCannon.swift#L47",
+              "symbol" : "View.confettiCannon"
+            },
+            {
+              "file" : "Sources/ConfettiSwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 51,
+              "note" : "Core confetti view struct, unconditional.",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Sources/ConfettiSwiftUI.swift#L51",
+              "symbol" : "ConfettiCannon"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 0,
+              "note" : "Manifest declares .macOS(.v11).",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Package.swift#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/View+ConfettiCannon.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "No tvOS gap in surface digest.",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Sources/View+ConfettiCannon.swift#L47",
+              "symbol" : "View.confettiCannon"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 0,
+              "note" : "Manifest declares .tvOS(.v14).",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Package.swift#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/View+ConfettiCannon.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "No visionOS gap in surface digest; pure SwiftUI surface. Manifest has no visionOS floor (not absence evidence), hence reduced confidence.",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Sources/View+ConfettiCannon.swift#L47",
+              "symbol" : "View.confettiCannon"
+            },
+            {
+              "file" : "Sources/ConfettiSwiftUI.swift",
+              "kind" : "symbol",
+              "line" : 77,
+              "note" : "Unconditional on visionOS per surface digest.",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Sources/ConfettiSwiftUI.swift#L77",
+              "symbol" : "ConfettiCannon.init"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/View+ConfettiCannon.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "note" : "No watchOS gap in surface digest.",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Sources/View+ConfettiCannon.swift#L47",
+              "symbol" : "View.confettiCannon"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 0,
+              "note" : "Manifest declares .watchOS(.v7).",
+              "permalink" : "https://github.com/simibac/confettiswiftui/blob/3.0.0/Package.swift#L0"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "confettiswiftui",
+      "version" : "3.0.0"
+    },
+    {
+      "commit" : "9d9d9016ceace579455f01f8e0bd59facae7d252",
+      "notes" : "Vortex is a SwiftUI particle system library (VortexSystem + VortexView, with confetti/fire/fireworks/rain/smoke/snow/spark/splash/magic/fireflies presets). All 105 surface decls are unconditional (no gaps, no #if conditions).",
+      "package" : "https://github.com/twostraws/vortex",
+      "packageName" : "vortex",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Vortex/System/VortexSystem.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Core particle system generator class; unconditional in surface (no gaps).",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/Sources/Vortex/System/VortexSystem.swift#L11",
+              "symbol" : "VortexSystem"
+            },
+            {
+              "file" : "Sources/Vortex/Views/VortexView.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "SwiftUI view that renders a Vortex particle system; unconditional in surface.",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/Sources/Vortex/Views/VortexView.swift#L11",
+              "symbol" : "VortexView"
+            },
+            {
+              "file" : "Sources/Vortex/Presets/Confetti.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "Built-in confetti preset; unconditional in surface.",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/Sources/Vortex/Presets/Confetti.swift#L14",
+              "symbol" : "VortexSystem.confetti"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Manifest declares .iOS(.v15).",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README lists only iOS, macOS, tvOS, watchOS, visionOS. Module imports SwiftUI throughout, which is unavailable on Linux toolchains, but the surface carries no os() guard marking linux absent, and symbol/manifest silence is not absence evidence.",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/README.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Vortex/System/VortexSystem.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Core particle system generator class; unconditional in surface (no gaps).",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/Sources/Vortex/System/VortexSystem.swift#L11",
+              "symbol" : "VortexSystem"
+            },
+            {
+              "file" : "Sources/Vortex/Views/VortexView.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "SwiftUI view that renders a Vortex particle system; unconditional in surface.",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/Sources/Vortex/Views/VortexView.swift#L11",
+              "symbol" : "VortexView"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Manifest explicitly declares .macCatalyst(.v15); README does not mention Catalyst, hence slightly lower confidence.",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Vortex/System/VortexSystem.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Core particle system generator class; unconditional in surface (no gaps).",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/Sources/Vortex/System/VortexSystem.swift#L11",
+              "symbol" : "VortexSystem"
+            },
+            {
+              "file" : "Sources/Vortex/Views/VortexView.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "SwiftUI view that renders a Vortex particle system; unconditional in surface.",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/Sources/Vortex/Views/VortexView.swift#L11",
+              "symbol" : "VortexView"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Manifest declares .macOS(.v12).",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Vortex/System/VortexSystem.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Core particle system generator class; unconditional in surface (no gaps).",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/Sources/Vortex/System/VortexSystem.swift#L11",
+              "symbol" : "VortexSystem"
+            },
+            {
+              "file" : "Sources/Vortex/Views/VortexView.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "SwiftUI view that renders a Vortex particle system; unconditional in surface.",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/Sources/Vortex/Views/VortexView.swift#L11",
+              "symbol" : "VortexView"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Manifest declares .tvOS(.v15).",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Vortex/System/VortexSystem.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Core particle system generator class; unconditional in surface (no gaps).",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/Sources/Vortex/System/VortexSystem.swift#L11",
+              "symbol" : "VortexSystem"
+            },
+            {
+              "file" : "Sources/Vortex/Views/VortexView.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "SwiftUI view that renders a Vortex particle system; unconditional in surface.",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/Sources/Vortex/Views/VortexView.swift#L11",
+              "symbol" : "VortexView"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Manifest declares .visionOS(.v1).",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Vortex/System/VortexSystem.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Core particle system generator class; unconditional in surface (no gaps).",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/Sources/Vortex/System/VortexSystem.swift#L11",
+              "symbol" : "VortexSystem"
+            },
+            {
+              "file" : "Sources/Vortex/Views/VortexView.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "SwiftUI view that renders a Vortex particle system; unconditional in surface. Internal #if os(watchOS) branch in the render loop, but the public decl carries no gap.",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/Sources/Vortex/Views/VortexView.swift#L11",
+              "symbol" : "VortexView"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Manifest declares .watchOS(.v8).",
+              "permalink" : "https://github.com/twostraws/vortex/blob/1.0.4/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "vortex",
+      "version" : "1.0.4"
+    },
+    {
+      "commit" : "1b4b1dda28c50b95f0872927ee2226fe8b58950e",
+      "notes" : "Particle capability is view-level (SwiftUI particle change effects: spray, rise, smoke, vanish, plus ParticleLayer contexts), not a general-purpose particle engine. watchOS/linux left unknown because digest gaps are condition-derived and neither platform is declared by manifest or README.",
+      "package" : "https://github.com/emergetools/pow",
+      "packageName" : "pow",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Pow/Effects/SprayEffect.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "Confetti-style effect emitting multiple particles from an origin point; unconditioned in surface.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/SprayEffect.swift#L15",
+              "symbol" : "AnyChangeEffect.spray"
+            },
+            {
+              "file" : "Sources/Pow/Effects/RisingParticleEffect.swift",
+              "kind" : "symbol",
+              "line" : 12,
+              "note" : "Emits particles that float up from the origin point.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/RisingParticleEffect.swift#L12",
+              "symbol" : "AnyChangeEffect.rise"
+            },
+            {
+              "file" : "Sources/Pow/Infrastructure/ParticleLayer.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "note" : "Dedicated particle rendering context type.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Infrastructure/ParticleLayer.swift#L42",
+              "symbol" : "ParticleLayer"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 11,
+              "note" : "Manifest declares .iOS(.v15).",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Package.swift#L11"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Sources/Pow/Effects/SprayEffect.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "Surface shows no linux gap only because gaps are #if-derived; the package unconditionally imports SwiftUI, which is unavailable on Linux, so it almost certainly does not build there. No guard evidence of absence, so unknown rather than unsupported.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/SprayEffect.swift#L15",
+              "symbol" : "AnyChangeEffect.spray"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Pow/Effects/SprayEffect.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "Unconditioned; no macCatalyst gap in surface digest.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/SprayEffect.swift#L15",
+              "symbol" : "AnyChangeEffect.spray"
+            },
+            {
+              "file" : "Sources/Pow/Infrastructure/ParticleLayer.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Infrastructure/ParticleLayer.swift#L42",
+              "symbol" : "ParticleLayer"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 13,
+              "note" : "Manifest declares .macCatalyst(.v15).",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Package.swift#L13"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Pow/Effects/SprayEffect.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "Unconditioned; no macOS gap in surface digest.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/SprayEffect.swift#L15",
+              "symbol" : "AnyChangeEffect.spray"
+            },
+            {
+              "file" : "Sources/Pow/Transitions/Vanish.swift",
+              "kind" : "symbol",
+              "line" : 10,
+              "note" : "Dissolves the view into many small particles.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Transitions/Vanish.swift#L10",
+              "symbol" : "AnyTransition.MovingParts.vanish"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 12,
+              "note" : "Manifest declares .macOS(.v12).",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Package.swift#L12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Pow/Effects/SprayEffect.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "Unconditioned; no tvOS gap in surface digest.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/SprayEffect.swift#L15",
+              "symbol" : "AnyChangeEffect.spray"
+            },
+            {
+              "file" : "Sources/Pow/Infrastructure/ParticleLayer.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Infrastructure/ParticleLayer.swift#L9",
+              "symbol" : "View.particleLayer"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 14,
+              "note" : "Manifest declares .tvOS(.v15).",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Package.swift#L14"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Pow/Effects/SprayEffect.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "Unconditioned; no visionOS gap in surface digest.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/SprayEffect.swift#L15",
+              "symbol" : "AnyChangeEffect.spray"
+            },
+            {
+              "file" : "Sources/Pow/Effects/RisingParticleEffect.swift",
+              "kind" : "symbol",
+              "line" : 12,
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/RisingParticleEffect.swift#L12",
+              "symbol" : "AnyChangeEffect.rise"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README Requirements list 'visionOS beta 6 (requires Xcode 15.1 beta 3)'. No manifest floor, hence 0.8 not 0.9.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/README.md#L0"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.4,
+          "evidence" : [
+            {
+              "file" : "Sources/Pow/Effects/SprayEffect.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "Surface shows no watchOS gap (decl is unguarded), but gaps are #if-derived, not build verdicts; manifest declares no watchOS floor and README requirements omit watchOS. No build verification, so unknown.",
+              "permalink" : "https://github.com/emergetools/pow/blob/1.0.6/Sources/Pow/Effects/SprayEffect.swift#L15",
+              "symbol" : "AnyChangeEffect.spray"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "pow",
+      "version" : "1.0.6"
+    }
+  ]
+}

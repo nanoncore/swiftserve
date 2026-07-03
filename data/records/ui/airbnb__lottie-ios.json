@@ -1,0 +1,340 @@
+[
+  {
+    "capability" : {
+      "id" : "ui.vector-animation",
+      "label" : "Vector animation playback"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Core symbols (LottieAnimationView, LottieAnimationView.play, LottieAnimation.named) are syntactically unguarded, so the surface digest resolves them present even on watchOS/linux; those two platforms are labeled unknown rather than supported because the manifest declares no floor there and the unconditional QuartzCore import leaves compilability unverified.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/airbnb/lottie-ios",
+      "commit" : "f4db77d7feacba0c2360b84a40c38a6ce8ff399d",
+      "firstParty" : false,
+      "name" : "lottie-ios",
+      "surfaceDigest" : "fnv1a64:683e216a16e857f4",
+      "version" : "4.6.1"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+            "kind" : "symbol",
+            "line" : 91,
+            "note" : "Core rendering view; unconditional decl, no platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "LottieAnimationView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+            "kind" : "symbol",
+            "line" : 229,
+            "note" : "Playback entry point; unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "LottieAnimationView.play"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Public/Animation/LottieAnimationHelpers.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : "Animation loading API; unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "LottieAnimation.named"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Package.swift declares .iOS(\"13.0\") platform floor.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README: 'Lottie is a cross-platform library for iOS, macOS, tvOS, visionOS, Android, and Web that natively renders vector-based animations'.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README platform list omits Linux; 191 of 759 surface decls carry guards resolving absent on linux, and core files import QuartzCore unconditionally, but there is no guard/availability evidence of absence for the core symbols, so status is unknown.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+            "kind" : "symbol",
+            "line" : 91,
+            "note" : "Core rendering view; unconditional decl, no platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "LottieAnimationView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+            "kind" : "symbol",
+            "line" : 229,
+            "note" : "Playback entry point; unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "LottieAnimationView.play"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Public/Animation/LottieAnimationHelpers.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : "Animation loading API; unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "LottieAnimation.named"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "No explicit macCatalyst floor in Package.swift; Catalyst inherits the .iOS(\"13.0\") floor. Core decls resolve present with no counter-guards in the digest.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+            "kind" : "symbol",
+            "line" : 91,
+            "note" : "Core rendering view; unconditional decl, no platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "LottieAnimationView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+            "kind" : "symbol",
+            "line" : 229,
+            "note" : "Playback entry point; unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "LottieAnimationView.play"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Public/Animation/LottieAnimationHelpers.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : "Animation loading API; unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "LottieAnimation.named"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Package.swift declares .macOS(\"10.15\") platform floor.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README: 'Lottie is a cross-platform library for iOS, macOS, tvOS, visionOS, Android, and Web that natively renders vector-based animations'.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+            "kind" : "symbol",
+            "line" : 91,
+            "note" : "Core rendering view; unconditional decl, no platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "LottieAnimationView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+            "kind" : "symbol",
+            "line" : 229,
+            "note" : "Playback entry point; unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "LottieAnimationView.play"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Public/Animation/LottieAnimationHelpers.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : "Animation loading API; unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "LottieAnimation.named"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Package.swift declares .tvOS(\"13.0\") platform floor.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README: 'Lottie is a cross-platform library for iOS, macOS, tvOS, visionOS, Android, and Web that natively renders vector-based animations'.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+            "kind" : "symbol",
+            "line" : 91,
+            "note" : "Core rendering view; unconditional decl, no platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "LottieAnimationView"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Public/Animation/LottieAnimationView.swift",
+            "kind" : "symbol",
+            "line" : 229,
+            "note" : "Playback entry point; unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "LottieAnimationView.play"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Public/Animation/LottieAnimationHelpers.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : "Animation loading API; unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "LottieAnimation.named"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Package.swift declares .visionOS(\"1.0\") platform floor (visionOS support shipped in Lottie 4.4; this pin is 4.6.1).",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README: 'Lottie is a cross-platform library for iOS, macOS, tvOS, visionOS, Android, and Web that natively renders vector-based animations'.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Package.swift declares no watchOS platform floor (iOS/macOS/tvOS/visionOS only). Missing floor is not absence evidence, so status is unknown.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README platform list (iOS, macOS, tvOS, visionOS, Android, Web) omits watchOS.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

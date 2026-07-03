@@ -1,0 +1,1082 @@
+{
+  "aliases" : [
+    "sqlite database",
+    "sql database",
+    "sqlite3"
+  ],
+  "id" : "storage.sqlite",
+  "label" : "SQLite access",
+  "packages" : [
+    {
+      "commit" : "e227d94dc3fe7099a096ac2ca28cad1f69bd8d5b",
+      "notes" : "Fluent ORM driver for SQLite via SQLiteKit/SQLiteNIO (bundled SQLite, no system dependency). Entire 18-decl surface is unconditional across platforms.",
+      "package" : "https://github.com/vapor/fluent-sqlite-driver",
+      "packageName" : "fluent-sqlite-driver",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/Exports.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Unconditional public decl; no platform gaps in surface digest.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/Exports.swift#L5",
+              "symbol" : "DatabaseID.sqlite"
+            },
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Primary SQLite database configuration factory.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L71",
+              "symbol" : "DatabaseConfigurationFactory.sqlite"
+            },
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 121,
+              "note" : "File-backed SQLite database configuration.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L121",
+              "symbol" : "SQLiteConfiguration.file"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Manifest declares .iOS(.v13) floor.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/Exports.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Unconditional public decl; surface digest lists no linux gap. Vapor server-side package, CI tested on Linux.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/Exports.swift#L5",
+              "symbol" : "DatabaseID.sqlite"
+            },
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Primary SQLite database configuration factory.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L71",
+              "symbol" : "DatabaseConfigurationFactory.sqlite"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/Exports.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Unconditional public decl; surface digest lists no macCatalyst gap. No explicit macCatalyst manifest floor, so confidence lowered.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/Exports.swift#L5",
+              "symbol" : "DatabaseID.sqlite"
+            },
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Primary SQLite database configuration factory.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L71",
+              "symbol" : "DatabaseConfigurationFactory.sqlite"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/Exports.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Unconditional public decl; no platform gaps in surface digest.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/Exports.swift#L5",
+              "symbol" : "DatabaseID.sqlite"
+            },
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Primary SQLite database configuration factory.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L71",
+              "symbol" : "DatabaseConfigurationFactory.sqlite"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Manifest declares .macOS(.v10_15) floor.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/Exports.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Unconditional public decl; no platform gaps in surface digest.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/Exports.swift#L5",
+              "symbol" : "DatabaseID.sqlite"
+            },
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Primary SQLite database configuration factory.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L71",
+              "symbol" : "DatabaseConfigurationFactory.sqlite"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Manifest declares .tvOS(.v13) floor.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/Exports.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Unconditional public decl; surface digest lists no visionOS gap. No explicit visionOS manifest floor, so confidence lowered.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/Exports.swift#L5",
+              "symbol" : "DatabaseID.sqlite"
+            },
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Primary SQLite database configuration factory.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L71",
+              "symbol" : "DatabaseConfigurationFactory.sqlite"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/FluentSQLiteDriver/Exports.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Unconditional public decl; no platform gaps in surface digest.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/Exports.swift#L5",
+              "symbol" : "DatabaseID.sqlite"
+            },
+            {
+              "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "note" : "Primary SQLite database configuration factory.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift#L71",
+              "symbol" : "DatabaseConfigurationFactory.sqlite"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Manifest declares .watchOS(.v6) floor.",
+              "permalink" : "https://github.com/vapor/fluent-sqlite-driver/blob/4.9.0/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+        "https://github.com/vapor/fluent"
+      ],
+      "slug" : "fluent-sqlite-driver",
+      "version" : "4.9.0"
+    },
+    {
+      "commit" : "b83108d10f42680d78f23fe4d4d80fc88dab3212",
+      "notes" : "Core SQLite access API (Database, execute, reader/writer protocols) is unconditional across the surface. Package.swift declares iOS 13 / macOS 10.15 / tvOS 13 / watchOS 7 floors and explicitly configures the .linux platform (SQLITE_DISABLE_SNAPSHOT define, Package.swift:19), so Linux is a maintained platform. Digest truncated (800/2706 decls) and 9 ObjC files unparsed; confidence held below cap accordingly.",
+      "package" : "https://github.com/groue/grdb.swift",
+      "packageName" : "grdb.swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/Core/Database.swift",
+              "kind" : "symbol",
+              "line" : 146,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database.swift#L146",
+              "symbol" : "Database"
+            },
+            {
+              "file" : "GRDB/Core/Database+Statements.swift",
+              "kind" : "symbol",
+              "line" : 324,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+Statements.swift#L324",
+              "symbol" : "Database.execute"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseReader.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseReader.swift#L55",
+              "symbol" : "DatabaseReader"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseWriter.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseWriter.swift#L64",
+              "symbol" : "DatabaseWriter"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 51,
+              "note" : "Package.swift declares iOS minimum .v13",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L51"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "GRDB/Core/Database.swift",
+              "kind" : "symbol",
+              "line" : 146,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database.swift#L146",
+              "symbol" : "Database"
+            },
+            {
+              "file" : "GRDB/Core/Database+Statements.swift",
+              "kind" : "symbol",
+              "line" : 324,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+Statements.swift#L324",
+              "symbol" : "Database.execute"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseReader.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseReader.swift#L55",
+              "symbol" : "DatabaseReader"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseWriter.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseWriter.swift#L64",
+              "symbol" : "DatabaseWriter"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "GRDB/Core/Database.swift",
+              "kind" : "symbol",
+              "line" : 146,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database.swift#L146",
+              "symbol" : "Database"
+            },
+            {
+              "file" : "GRDB/Core/Database+Statements.swift",
+              "kind" : "symbol",
+              "line" : 324,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+Statements.swift#L324",
+              "symbol" : "Database.execute"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseReader.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseReader.swift#L55",
+              "symbol" : "DatabaseReader"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseWriter.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseWriter.swift#L64",
+              "symbol" : "DatabaseWriter"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/Core/Database.swift",
+              "kind" : "symbol",
+              "line" : 146,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database.swift#L146",
+              "symbol" : "Database"
+            },
+            {
+              "file" : "GRDB/Core/Database+Statements.swift",
+              "kind" : "symbol",
+              "line" : 324,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+Statements.swift#L324",
+              "symbol" : "Database.execute"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseReader.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseReader.swift#L55",
+              "symbol" : "DatabaseReader"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseWriter.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseWriter.swift#L64",
+              "symbol" : "DatabaseWriter"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 52,
+              "note" : "Package.swift declares macOS minimum .v10_15",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L52"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/Core/Database.swift",
+              "kind" : "symbol",
+              "line" : 146,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database.swift#L146",
+              "symbol" : "Database"
+            },
+            {
+              "file" : "GRDB/Core/Database+Statements.swift",
+              "kind" : "symbol",
+              "line" : 324,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+Statements.swift#L324",
+              "symbol" : "Database.execute"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseReader.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseReader.swift#L55",
+              "symbol" : "DatabaseReader"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseWriter.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseWriter.swift#L64",
+              "symbol" : "DatabaseWriter"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 53,
+              "note" : "Package.swift declares tvOS minimum .v13",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L53"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "GRDB/Core/Database.swift",
+              "kind" : "symbol",
+              "line" : 146,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database.swift#L146",
+              "symbol" : "Database"
+            },
+            {
+              "file" : "GRDB/Core/Database+Statements.swift",
+              "kind" : "symbol",
+              "line" : 324,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+Statements.swift#L324",
+              "symbol" : "Database.execute"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseReader.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseReader.swift#L55",
+              "symbol" : "DatabaseReader"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseWriter.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseWriter.swift#L64",
+              "symbol" : "DatabaseWriter"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/Core/Database.swift",
+              "kind" : "symbol",
+              "line" : 146,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database.swift#L146",
+              "symbol" : "Database"
+            },
+            {
+              "file" : "GRDB/Core/Database+Statements.swift",
+              "kind" : "symbol",
+              "line" : 324,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/Database+Statements.swift#L324",
+              "symbol" : "Database.execute"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseReader.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseReader.swift#L55",
+              "symbol" : "DatabaseReader"
+            },
+            {
+              "file" : "GRDB/Core/DatabaseWriter.swift",
+              "kind" : "symbol",
+              "line" : 64,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/DatabaseWriter.swift#L64",
+              "symbol" : "DatabaseWriter"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 54,
+              "note" : "Package.swift declares watchOS minimum .v7",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L54"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "grdb.swift",
+      "version" : "v7.11.1"
+    },
+    {
+      "commit" : "964c300fb0736699ce945c9edb56ecd62eba27a3",
+      "notes" : "Core SQLite wrapper (Connection/Statement) is unconditional across the extracted surface. Digest truncated at 800/968 decls and 1 ObjC file unparsed; anchors verified in the digest.",
+      "package" : "https://github.com/stephencelis/sqlite.swift",
+      "packageName" : "sqlite.swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L38",
+              "symbol" : "Connection"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 189,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L189",
+              "symbol" : "Connection.prepare"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L233",
+              "symbol" : "Connection.run"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 290,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L290",
+              "symbol" : "Connection.scalar"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Statement.swift",
+              "kind" : "symbol",
+              "line" : 36,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Statement.swift#L36",
+              "symbol" : "Statement"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 39,
+              "note" : "Package.swift declares a iOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L39"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L38",
+              "symbol" : "Connection"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 189,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L189",
+              "symbol" : "Connection.prepare"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L233",
+              "symbol" : "Connection.run"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 290,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L290",
+              "symbol" : "Connection.scalar"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Statement.swift",
+              "kind" : "symbol",
+              "line" : 36,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Statement.swift#L36",
+              "symbol" : "Statement"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 31,
+              "note" : "Package.swift has an explicit #if os(Linux) branch enabling the SQLiteSwiftCSQLite default trait (bundled SQLite for Linux builds).",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L31"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 23,
+              "note" : "README: 'Works on Linux (with some limitations)'.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/README.md#L23"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L38",
+              "symbol" : "Connection"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 189,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L189",
+              "symbol" : "Connection.prepare"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L233",
+              "symbol" : "Connection.run"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 290,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L290",
+              "symbol" : "Connection.scalar"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Statement.swift",
+              "kind" : "symbol",
+              "line" : 36,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Statement.swift#L36",
+              "symbol" : "Statement"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 38,
+              "note" : "Package.swift does not declare a macCatalyst floor, but all anchor symbols are unconditional (no platform gaps) in the extracted surface.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L38"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L38",
+              "symbol" : "Connection"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 189,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L189",
+              "symbol" : "Connection.prepare"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L233",
+              "symbol" : "Connection.run"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 290,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L290",
+              "symbol" : "Connection.scalar"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Statement.swift",
+              "kind" : "symbol",
+              "line" : 36,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Statement.swift#L36",
+              "symbol" : "Statement"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 40,
+              "note" : "Package.swift declares a macOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L40"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L38",
+              "symbol" : "Connection"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 189,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L189",
+              "symbol" : "Connection.prepare"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L233",
+              "symbol" : "Connection.run"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 290,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L290",
+              "symbol" : "Connection.scalar"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Statement.swift",
+              "kind" : "symbol",
+              "line" : 36,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Statement.swift#L36",
+              "symbol" : "Statement"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 42,
+              "note" : "Package.swift declares a tvOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L42"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L38",
+              "symbol" : "Connection"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 189,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L189",
+              "symbol" : "Connection.prepare"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L233",
+              "symbol" : "Connection.run"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 290,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L290",
+              "symbol" : "Connection.scalar"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Statement.swift",
+              "kind" : "symbol",
+              "line" : 36,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Statement.swift#L36",
+              "symbol" : "Statement"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 43,
+              "note" : "Package.swift declares a visionOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L43"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L38",
+              "symbol" : "Connection"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 189,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L189",
+              "symbol" : "Connection.prepare"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 233,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L233",
+              "symbol" : "Connection.run"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Connection.swift",
+              "kind" : "symbol",
+              "line" : 290,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Connection.swift#L290",
+              "symbol" : "Connection.scalar"
+            },
+            {
+              "file" : "Sources/SQLite/Core/Statement.swift",
+              "kind" : "symbol",
+              "line" : 36,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Core/Statement.swift#L36",
+              "symbol" : "Statement"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 41,
+              "note" : "Package.swift declares a watchOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L41"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "sqlite.swift",
+      "version" : "0.16.0"
+    },
+    {
+      "commit" : "e2bf935089cd7620031ea342eaf96bf4ba3a22dc",
+      "package" : "https://github.com/marcoarment/blackbird",
+      "packageName" : "blackbird",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 200,
+              "note" : "Doc: 'A managed SQLite database.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L200",
+              "symbol" : "Blackbird.Database"
+            },
+            {
+              "file" : "Sources/Blackbird/Blackbird.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "note" : "Doc: 'A small, fast, lightweight SQLite database wrapper and model layer.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/Blackbird.swift#L38",
+              "symbol" : "Blackbird"
+            },
+            {
+              "file" : "Sources/Blackbird/Blackbird.swift",
+              "kind" : "symbol",
+              "line" : 63,
+              "note" : "Doc: 'A wrapper for SQLite's column data types.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/Blackbird.swift#L63",
+              "symbol" : "Blackbird.Value"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Package.swift declares .iOS(.v15) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms list contains only Apple platforms; Surface digest records no platform gaps, but sources unconditionally import Combine, SwiftUI, OSLog and SQLite3 with no os() guards, and Package.swift declares no Linux support; Linux buildability is unverified. Symbol absence is not absence evidence, so status is unknown.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L7"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 200,
+              "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L200",
+              "symbol" : "Blackbird.Database"
+            },
+            {
+              "file" : "Sources/Blackbird/Blackbird.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "note" : "Doc: 'A small, fast, lightweight SQLite database wrapper and model layer.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/Blackbird.swift#L38",
+              "symbol" : "Blackbird"
+            },
+            {
+              "file" : "Sources/Blackbird/Blackbird.swift",
+              "kind" : "symbol",
+              "line" : 63,
+              "note" : "Doc: 'A wrapper for SQLite's column data types.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/Blackbird.swift#L63",
+              "symbol" : "Blackbird.Value"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 200,
+              "note" : "Doc: 'A managed SQLite database.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L200",
+              "symbol" : "Blackbird.Database"
+            },
+            {
+              "file" : "Sources/Blackbird/Blackbird.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "note" : "Doc: 'A small, fast, lightweight SQLite database wrapper and model layer.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/Blackbird.swift#L38",
+              "symbol" : "Blackbird"
+            },
+            {
+              "file" : "Sources/Blackbird/Blackbird.swift",
+              "kind" : "symbol",
+              "line" : 63,
+              "note" : "Doc: 'A wrapper for SQLite's column data types.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/Blackbird.swift#L63",
+              "symbol" : "Blackbird.Value"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Package.swift declares .macOS(.v12) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 200,
+              "note" : "Doc: 'A managed SQLite database.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L200",
+              "symbol" : "Blackbird.Database"
+            },
+            {
+              "file" : "Sources/Blackbird/Blackbird.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "note" : "Doc: 'A small, fast, lightweight SQLite database wrapper and model layer.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/Blackbird.swift#L38",
+              "symbol" : "Blackbird"
+            },
+            {
+              "file" : "Sources/Blackbird/Blackbird.swift",
+              "kind" : "symbol",
+              "line" : 63,
+              "note" : "Doc: 'A wrapper for SQLite's column data types.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/Blackbird.swift#L63",
+              "symbol" : "Blackbird.Value"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 11,
+              "note" : "Package.swift declares .tvOS(.v15) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L11"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 200,
+              "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L200",
+              "symbol" : "Blackbird.Database"
+            },
+            {
+              "file" : "Sources/Blackbird/Blackbird.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "note" : "Doc: 'A small, fast, lightweight SQLite database wrapper and model layer.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/Blackbird.swift#L38",
+              "symbol" : "Blackbird"
+            },
+            {
+              "file" : "Sources/Blackbird/Blackbird.swift",
+              "kind" : "symbol",
+              "line" : 63,
+              "note" : "Doc: 'A wrapper for SQLite's column data types.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/Blackbird.swift#L63",
+              "symbol" : "Blackbird.Value"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+              "kind" : "symbol",
+              "line" : 200,
+              "note" : "Doc: 'A managed SQLite database.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdDatabase.swift#L200",
+              "symbol" : "Blackbird.Database"
+            },
+            {
+              "file" : "Sources/Blackbird/Blackbird.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "note" : "Doc: 'A small, fast, lightweight SQLite database wrapper and model layer.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/Blackbird.swift#L38",
+              "symbol" : "Blackbird"
+            },
+            {
+              "file" : "Sources/Blackbird/Blackbird.swift",
+              "kind" : "symbol",
+              "line" : 63,
+              "note" : "Doc: 'A wrapper for SQLite's column data types.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/Blackbird.swift#L63",
+              "symbol" : "Blackbird.Value"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Package.swift declares .watchOS(.v8) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "blackbird",
+      "version" : "0.5"
+    }
+  ]
+}

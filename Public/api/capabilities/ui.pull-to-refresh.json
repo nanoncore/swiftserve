@@ -1,0 +1,152 @@
+{
+  "aliases" : [
+    "refresh control",
+    "swipe to refresh"
+  ],
+  "id" : "ui.pull-to-refresh",
+  "label" : "Pull to refresh",
+  "packages" : [
+    {
+      "commit" : "1852a4eb7e7a12a768c64b25b1bd905993ced4eb",
+      "notes" : "Pure-SwiftUI pull-to-refresh for any ScrollView (no UIRefreshControl), with callback and async (compiler>=5.5) initializers, a refreshableCompat drop-in modifier, and optional built-in haptic feedback via the shouldTriggerHapticFeedback: parameter (RefreshableScrollView.init, line 86). Module has zero os() guards, so all non-iOS statuses rest on judgment rather than guard evidence.",
+      "package" : "https://github.com/globulus/swiftui-pull-to-refresh",
+      "packageName" : "swiftui-pull-to-refresh",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 70,
+              "note" : "Core pull-to-refresh container for any ScrollView; unguarded public struct.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L70",
+              "symbol" : "RefreshableScrollView"
+            },
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 86,
+              "note" : "Callback-based initializer (onRefresh:, threshold:, shouldTriggerHapticFeedback:); unguarded.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L86",
+              "symbol" : "RefreshableScrollView.init"
+            },
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 298,
+              "note" : "Drop-in modifier mirroring iOS 15 refreshable; declared outside the compiler(>=5.5) guards.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L298",
+              "symbol" : "View.refreshableCompat"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Manifest declares .iOS(.v13) as the only platform floor.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 70,
+              "note" : "Declared in a module that unconditionally imports SwiftUI, which does not exist on Linux; the digest records no os() guard, so this cannot be claimed unsupported, but Linux support is implausible.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L70",
+              "symbol" : "RefreshableScrollView"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 70,
+              "note" : "Unguarded declaration, PRESENT on macCatalyst per surface; Mac Catalyst inherits the iOS UIKit APIs the module uses (UIActivityIndicatorView, UIImpactFeedbackGenerator).",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L70",
+              "symbol" : "RefreshableScrollView"
+            },
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 86,
+              "note" : "Unguarded callback-based initializer, PRESENT on macCatalyst per surface.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L86",
+              "symbol" : "RefreshableScrollView.init"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 205,
+              "note" : "Surface parses PRESENT (no os() guards anywhere), but the module unconditionally references UIKit-only types (UIViewRepresentable, UIActivityIndicatorView, and UIImpactFeedbackGenerator internally), so macOS compilation is doubtful. No guard/availability absence evidence exists, so status stays unknown.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L205",
+              "symbol" : "RefreshActivityIndicator.makeUIView"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 86,
+              "note" : "Surface parses PRESENT, but the implementation uses UIImpactFeedbackGenerator (unavailable on tvOS) unguarded, and the pull gesture is not a tvOS interaction; no absence guard evidence, so unknown.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L86",
+              "symbol" : "RefreshableScrollView.init"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.4,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 70,
+              "note" : "Surface parses PRESENT and the SwiftUI+UIKit types used are generally available on visionOS, so compilation is plausible, but there is no visionOS-specific evidence or build verdict.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L70",
+              "symbol" : "RefreshableScrollView"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.3,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift",
+              "kind" : "symbol",
+              "line" : 205,
+              "note" : "Surface parses PRESENT, but UIViewRepresentable/UIActivityIndicatorView are unavailable on watchOS and the reference is unguarded; no absence guard evidence, so unknown.",
+              "permalink" : "https://github.com/globulus/swiftui-pull-to-refresh/blob/1.1.9/Sources/SwiftUIPullToRefresh/SwiftUIPullToRefresh.swift#L205",
+              "symbol" : "RefreshActivityIndicator.makeUIView"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swiftui-pull-to-refresh",
+      "version" : "1.1.9"
+    }
+  ]
+}

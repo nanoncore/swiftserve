@@ -1,0 +1,1164 @@
+[
+  {
+    "capability" : {
+      "id" : "storage.cloud-sync",
+      "label" : "Cloud sync"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Dedicated Defaults.iCloud namespace (add/remove/removeAll/waitForSyncCompletion) plus per-key opt-in via Key.init(iCloud:). Runtime sync additionally requires the app to have the iCloud key-value store entitlement; symbol surface is unconditional, hence confidence 0.85 rather than higher. linux left unknown per absence-evidence rules.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/sindresorhus/defaults",
+      "commit" : "00a7465a0668a87fa159e779b9d80f1f9652357e",
+      "firstParty" : false,
+      "name" : "defaults",
+      "surfaceDigest" : "fnv1a64:c1d1407efbb62b83",
+      "version" : "9.0.9"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+iCloud.swift",
+            "kind" : "symbol",
+            "line" : 58,
+            "note" : "Synchronize values across devices using iCloud; no per-platform gaps recorded.",
+            "package" : null,
+            "symbol" : "Defaults.iCloud"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+iCloud.swift",
+            "kind" : "symbol",
+            "line" : 87,
+            "note" : "Add keys to be automatically synced.",
+            "package" : null,
+            "symbol" : "Defaults.iCloud.add"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+iCloud.swift",
+            "kind" : "symbol",
+            "line" : 138,
+            "note" : "Await completion of synchronization.",
+            "package" : null,
+            "symbol" : "Defaults.iCloud.waitForSyncCompletion"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 114,
+            "note" : "Key initializer takes iCloud: Bool = false to opt a key into sync.",
+            "package" : null,
+            "symbol" : "Defaults.Key.init"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.15,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Manifest lists Apple platforms only (not absence evidence). Digest records no os() gaps, so unsupported cannot be claimed; iCloud sync is built on NSUbiquitousKeyValueStore and the file imports Combine/OSLog/UIKit-or-AppKit, making linux presence unverified and very doubtful.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "readme.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README Compatibility section lists macOS/iOS/tvOS/watchOS/visionOS only; linux never mentioned.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+iCloud.swift",
+            "kind" : "symbol",
+            "line" : 58,
+            "note" : "No macCatalyst gap recorded in surface digest; decl resolves present.",
+            "package" : null,
+            "symbol" : "Defaults.iCloud"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+iCloud.swift",
+            "kind" : "symbol",
+            "line" : 87,
+            "note" : "No macCatalyst gap recorded in surface digest; decl resolves present.",
+            "package" : null,
+            "symbol" : "Defaults.iCloud.add"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "No explicit macCatalyst floor; Catalyst inherits the .iOS(.v14) floor by SwiftPM default. Confidence lowered accordingly.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+iCloud.swift",
+            "kind" : "symbol",
+            "line" : 58,
+            "note" : "Synchronize values across devices using iCloud; no per-platform gaps recorded.",
+            "package" : null,
+            "symbol" : "Defaults.iCloud"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+iCloud.swift",
+            "kind" : "symbol",
+            "line" : 87,
+            "note" : "Add keys to be automatically synced.",
+            "package" : null,
+            "symbol" : "Defaults.iCloud.add"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+iCloud.swift",
+            "kind" : "symbol",
+            "line" : 138,
+            "note" : "Await completion of synchronization.",
+            "package" : null,
+            "symbol" : "Defaults.iCloud.waitForSyncCompletion"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+iCloud.swift",
+            "kind" : "symbol",
+            "line" : 58,
+            "note" : "Synchronize values across devices using iCloud; no per-platform gaps recorded.",
+            "package" : null,
+            "symbol" : "Defaults.iCloud"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+iCloud.swift",
+            "kind" : "symbol",
+            "line" : 87,
+            "note" : "Add keys to be automatically synced.",
+            "package" : null,
+            "symbol" : "Defaults.iCloud.add"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+iCloud.swift",
+            "kind" : "symbol",
+            "line" : 138,
+            "note" : "Await completion of synchronization.",
+            "package" : null,
+            "symbol" : "Defaults.iCloud.waitForSyncCompletion"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+iCloud.swift",
+            "kind" : "symbol",
+            "line" : 58,
+            "note" : "Synchronize values across devices using iCloud; no per-platform gaps recorded.",
+            "package" : null,
+            "symbol" : "Defaults.iCloud"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+iCloud.swift",
+            "kind" : "symbol",
+            "line" : 87,
+            "note" : "Add keys to be automatically synced.",
+            "package" : null,
+            "symbol" : "Defaults.iCloud.add"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+iCloud.swift",
+            "kind" : "symbol",
+            "line" : 138,
+            "note" : "Await completion of synchronization.",
+            "package" : null,
+            "symbol" : "Defaults.iCloud.waitForSyncCompletion"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+iCloud.swift",
+            "kind" : "symbol",
+            "line" : 58,
+            "note" : "Synchronize values across devices using iCloud; no per-platform gaps recorded. Manifest floor watchOS 9 matches NSUbiquitousKeyValueStore availability.",
+            "package" : null,
+            "symbol" : "Defaults.iCloud"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+iCloud.swift",
+            "kind" : "symbol",
+            "line" : 87,
+            "note" : "Add keys to be automatically synced.",
+            "package" : null,
+            "symbol" : "Defaults.iCloud.add"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+iCloud.swift",
+            "kind" : "symbol",
+            "line" : 138,
+            "note" : "Await completion of synchronization.",
+            "package" : null,
+            "symbol" : "Defaults.iCloud.waitForSyncCompletion"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.codable",
+      "label" : "Codable persistence"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Codable values are persisted as JSON strings in UserDefaults via TopLevelCodableBridge and related Codable bridges. Surface digest records zero per-platform gaps and zero #if conditions. linux left unknown: no gap-based absence evidence, but sources unconditionally import Apple-only frameworks.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/sindresorhus/defaults",
+      "commit" : "00a7465a0668a87fa159e779b9d80f1f9652357e",
+      "firstParty" : false,
+      "name" : "defaults",
+      "surfaceDigest" : "fnv1a64:c1d1407efbb62b83",
+      "version" : "9.0.9"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+Bridge.swift",
+            "kind" : "symbol",
+            "line" : 38,
+            "note" : "Bridge persisting any top-level Codable value; no per-platform gaps recorded.",
+            "package" : null,
+            "symbol" : "Defaults.TopLevelCodableBridge"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+Protocol.swift",
+            "kind" : "symbol",
+            "line" : 84,
+            "note" : "Protocol for Codable-based serialization bridges.",
+            "package" : null,
+            "symbol" : "Defaults.CodableBridge"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+Bridge.swift",
+            "kind" : "symbol",
+            "line" : 9,
+            "note" : "JSON serialization of Codable values.",
+            "package" : null,
+            "symbol" : "Defaults.CodableBridge.serialize"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+Bridge.swift",
+            "kind" : "symbol",
+            "line" : 45,
+            "note" : "Codable + RawRepresentable bridge.",
+            "package" : null,
+            "symbol" : "Defaults.RawRepresentableCodableBridge"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Manifest lists Apple platforms only (not absence evidence). Digest records no os() gaps, so unsupported cannot be claimed; core target unconditionally imports SwiftUI/Combine (Apple-only frameworks), making linux presence unverified and doubtful.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "readme.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README Compatibility section lists macOS/iOS/tvOS/watchOS/visionOS only; linux never mentioned.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+Bridge.swift",
+            "kind" : "symbol",
+            "line" : 38,
+            "note" : "No macCatalyst gap recorded in surface digest; decl resolves present.",
+            "package" : null,
+            "symbol" : "Defaults.TopLevelCodableBridge"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+Protocol.swift",
+            "kind" : "symbol",
+            "line" : 84,
+            "note" : "No macCatalyst gap recorded in surface digest; decl resolves present.",
+            "package" : null,
+            "symbol" : "Defaults.CodableBridge"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "No explicit macCatalyst floor; Catalyst inherits the .iOS(.v14) floor by SwiftPM default. Confidence lowered accordingly.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+Bridge.swift",
+            "kind" : "symbol",
+            "line" : 38,
+            "note" : "Bridge persisting any top-level Codable value; no per-platform gaps recorded.",
+            "package" : null,
+            "symbol" : "Defaults.TopLevelCodableBridge"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+Protocol.swift",
+            "kind" : "symbol",
+            "line" : 84,
+            "note" : "Protocol for Codable-based serialization bridges.",
+            "package" : null,
+            "symbol" : "Defaults.CodableBridge"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+Bridge.swift",
+            "kind" : "symbol",
+            "line" : 9,
+            "note" : "JSON serialization of Codable values.",
+            "package" : null,
+            "symbol" : "Defaults.CodableBridge.serialize"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+Bridge.swift",
+            "kind" : "symbol",
+            "line" : 38,
+            "note" : "Bridge persisting any top-level Codable value; no per-platform gaps recorded.",
+            "package" : null,
+            "symbol" : "Defaults.TopLevelCodableBridge"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+Protocol.swift",
+            "kind" : "symbol",
+            "line" : 84,
+            "note" : "Protocol for Codable-based serialization bridges.",
+            "package" : null,
+            "symbol" : "Defaults.CodableBridge"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+Bridge.swift",
+            "kind" : "symbol",
+            "line" : 9,
+            "note" : "JSON serialization of Codable values.",
+            "package" : null,
+            "symbol" : "Defaults.CodableBridge.serialize"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+Bridge.swift",
+            "kind" : "symbol",
+            "line" : 38,
+            "note" : "Bridge persisting any top-level Codable value; no per-platform gaps recorded.",
+            "package" : null,
+            "symbol" : "Defaults.TopLevelCodableBridge"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+Protocol.swift",
+            "kind" : "symbol",
+            "line" : 84,
+            "note" : "Protocol for Codable-based serialization bridges.",
+            "package" : null,
+            "symbol" : "Defaults.CodableBridge"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+Bridge.swift",
+            "kind" : "symbol",
+            "line" : 9,
+            "note" : "JSON serialization of Codable values.",
+            "package" : null,
+            "symbol" : "Defaults.CodableBridge.serialize"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+Bridge.swift",
+            "kind" : "symbol",
+            "line" : 38,
+            "note" : "Bridge persisting any top-level Codable value; no per-platform gaps recorded.",
+            "package" : null,
+            "symbol" : "Defaults.TopLevelCodableBridge"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+Protocol.swift",
+            "kind" : "symbol",
+            "line" : 84,
+            "note" : "Protocol for Codable-based serialization bridges.",
+            "package" : null,
+            "symbol" : "Defaults.CodableBridge"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults+Bridge.swift",
+            "kind" : "symbol",
+            "line" : 9,
+            "note" : "JSON serialization of Codable values.",
+            "package" : null,
+            "symbol" : "Defaults.CodableBridge.serialize"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.key-value",
+      "label" : "Key-value storage"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Core capability: type-safe UserDefaults facade (Defaults.Key + subscript access). Surface digest records zero per-platform gaps and zero #if conditions across all 230 decls. linux left unknown: no gap-based absence evidence exists, but sources unconditionally import Apple-only frameworks.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/sindresorhus/defaults",
+      "commit" : "00a7465a0668a87fa159e779b9d80f1f9652357e",
+      "firstParty" : false,
+      "name" : "defaults",
+      "surfaceDigest" : "fnv1a64:c1d1407efbb62b83",
+      "version" : "9.0.9"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : "Root namespace enum; no per-platform gaps recorded in surface digest.",
+            "package" : null,
+            "symbol" : "Defaults"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 92,
+            "note" : "Strongly-typed key used to access values.",
+            "package" : null,
+            "symbol" : "Defaults.Key"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : "Access stored values via key subscript.",
+            "package" : null,
+            "symbol" : "Defaults.subscript"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 114,
+            "note" : "Create a key with name, default value, and UserDefaults suite.",
+            "package" : null,
+            "symbol" : "Defaults.Key.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Manifest declares .iOS(.v14) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Manifest lists Apple platforms only (not absence evidence). Digest records no os() gaps, so unsupported cannot be claimed; core target unconditionally imports SwiftUI/Combine (Apple-only frameworks), making linux presence unverified and doubtful.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "readme.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README Compatibility section lists macOS/iOS/tvOS/watchOS/visionOS only; linux never mentioned.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : "No macCatalyst gap recorded in surface digest; decl resolves present.",
+            "package" : null,
+            "symbol" : "Defaults"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 92,
+            "note" : "No macCatalyst gap recorded in surface digest; decl resolves present.",
+            "package" : null,
+            "symbol" : "Defaults.Key"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "No explicit macCatalyst floor; Catalyst inherits the .iOS(.v14) floor by SwiftPM default. Confidence lowered accordingly.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : "Root namespace enum; no per-platform gaps recorded in surface digest.",
+            "package" : null,
+            "symbol" : "Defaults"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 92,
+            "note" : "Strongly-typed key used to access values.",
+            "package" : null,
+            "symbol" : "Defaults.Key"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : "Access stored values via key subscript.",
+            "package" : null,
+            "symbol" : "Defaults.subscript"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Manifest declares .macOS(.v11) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : "Root namespace enum; no per-platform gaps recorded in surface digest.",
+            "package" : null,
+            "symbol" : "Defaults"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 92,
+            "note" : "Strongly-typed key used to access values.",
+            "package" : null,
+            "symbol" : "Defaults.Key"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : "Access stored values via key subscript.",
+            "package" : null,
+            "symbol" : "Defaults.subscript"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Manifest declares .tvOS(.v14) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : "Root namespace enum; no per-platform gaps recorded in surface digest.",
+            "package" : null,
+            "symbol" : "Defaults"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 92,
+            "note" : "Strongly-typed key used to access values.",
+            "package" : null,
+            "symbol" : "Defaults.Key"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : "Access stored values via key subscript.",
+            "package" : null,
+            "symbol" : "Defaults.subscript"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Manifest declares .visionOS(.v1) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : "Root namespace enum; no per-platform gaps recorded in surface digest.",
+            "package" : null,
+            "symbol" : "Defaults"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 92,
+            "note" : "Strongly-typed key used to access values.",
+            "package" : null,
+            "symbol" : "Defaults.Key"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 30,
+            "note" : "Access stored values via key subscript.",
+            "package" : null,
+            "symbol" : "Defaults.subscript"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Manifest declares .watchOS(.v9) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.observation",
+      "label" : "Reactive queries / change tracking"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Three observation surfaces: closure-based Defaults.observe (KVO-backed), AsyncStream-based Defaults.updates, and Combine-based Defaults.publisher. Surface digest records zero per-platform gaps and zero #if conditions. linux left unknown: no gap-based absence evidence, but the Combine/SwiftUI imports are Apple-only.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/sindresorhus/defaults",
+      "commit" : "00a7465a0668a87fa159e779b9d80f1f9652357e",
+      "firstParty" : false,
+      "name" : "defaults",
+      "surfaceDigest" : "fnv1a64:c1d1407efbb62b83",
+      "version" : "9.0.9"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Observation.swift",
+            "kind" : "symbol",
+            "line" : 351,
+            "note" : "Observe a defaults key with a change handler; no per-platform gaps recorded.",
+            "package" : null,
+            "symbol" : "Defaults.observe"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 273,
+            "note" : "AsyncStream of value updates for a key.",
+            "package" : null,
+            "symbol" : "Defaults.updates"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Observation+Combine.swift",
+            "kind" : "symbol",
+            "line" : 89,
+            "note" : "Combine publisher of KeyChange events.",
+            "package" : null,
+            "symbol" : "Defaults.publisher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Observation.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Change payload with old/new values.",
+            "package" : null,
+            "symbol" : "Defaults.KeyChange"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Manifest lists Apple platforms only (not absence evidence). Digest records no os() gaps, so unsupported cannot be claimed; Observation+Combine.swift unconditionally imports Combine and the target imports SwiftUI (Apple-only frameworks), making linux presence unverified and doubtful.",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "readme.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README Compatibility section lists macOS/iOS/tvOS/watchOS/visionOS only; linux never mentioned.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Observation.swift",
+            "kind" : "symbol",
+            "line" : 351,
+            "note" : "No macCatalyst gap recorded in surface digest; decl resolves present.",
+            "package" : null,
+            "symbol" : "Defaults.observe"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 273,
+            "note" : "No macCatalyst gap recorded in surface digest; decl resolves present.",
+            "package" : null,
+            "symbol" : "Defaults.updates"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "No explicit macCatalyst floor; Catalyst inherits the .iOS(.v14) floor by SwiftPM default. Confidence lowered accordingly.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Observation.swift",
+            "kind" : "symbol",
+            "line" : 351,
+            "note" : "Observe a defaults key with a change handler; no per-platform gaps recorded.",
+            "package" : null,
+            "symbol" : "Defaults.observe"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 273,
+            "note" : "AsyncStream of value updates for a key.",
+            "package" : null,
+            "symbol" : "Defaults.updates"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Observation+Combine.swift",
+            "kind" : "symbol",
+            "line" : 89,
+            "note" : "Combine publisher of KeyChange events.",
+            "package" : null,
+            "symbol" : "Defaults.publisher"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Observation.swift",
+            "kind" : "symbol",
+            "line" : 351,
+            "note" : "Observe a defaults key with a change handler; no per-platform gaps recorded.",
+            "package" : null,
+            "symbol" : "Defaults.observe"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 273,
+            "note" : "AsyncStream of value updates for a key.",
+            "package" : null,
+            "symbol" : "Defaults.updates"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Observation+Combine.swift",
+            "kind" : "symbol",
+            "line" : 89,
+            "note" : "Combine publisher of KeyChange events.",
+            "package" : null,
+            "symbol" : "Defaults.publisher"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Observation.swift",
+            "kind" : "symbol",
+            "line" : 351,
+            "note" : "Observe a defaults key with a change handler; no per-platform gaps recorded.",
+            "package" : null,
+            "symbol" : "Defaults.observe"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 273,
+            "note" : "AsyncStream of value updates for a key.",
+            "package" : null,
+            "symbol" : "Defaults.updates"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Observation+Combine.swift",
+            "kind" : "symbol",
+            "line" : 89,
+            "note" : "Combine publisher of KeyChange events.",
+            "package" : null,
+            "symbol" : "Defaults.publisher"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Observation.swift",
+            "kind" : "symbol",
+            "line" : 351,
+            "note" : "Observe a defaults key with a change handler; no per-platform gaps recorded.",
+            "package" : null,
+            "symbol" : "Defaults.observe"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Defaults.swift",
+            "kind" : "symbol",
+            "line" : 273,
+            "note" : "AsyncStream of value updates for a key.",
+            "package" : null,
+            "symbol" : "Defaults.updates"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Defaults/Observation+Combine.swift",
+            "kind" : "symbol",
+            "line" : 89,
+            "note" : "Combine publisher of KeyChange events.",
+            "package" : null,
+            "symbol" : "Defaults.publisher"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

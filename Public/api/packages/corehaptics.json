@@ -1,0 +1,190 @@
+[
+  {
+    "capability" : {
+      "id" : "ui.haptics",
+      "label" : "Haptic feedback"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Custom haptic patterns via CHHapticEngine. Present in the visionOS and tvOS SDKs; absent from the watchOS SDK (WatchKit WKInterfaceDevice.play is the watch path).",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/corehaptics",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "CoreHaptics",
+      "surfaceDigest" : "fnv1a64:f869921cb3dc8eef",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CHHapticEngine"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+            "kind" : "symbol",
+            "line" : 84,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CHHapticEngine.start()"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+            "kind" : "availability",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CHHapticEngine"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CHHapticEngine"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+            "kind" : "symbol",
+            "line" : 84,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CHHapticEngine.start()"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CHHapticEngine"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+            "kind" : "symbol",
+            "line" : 84,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CHHapticEngine.start()"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CHHapticEngine"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+            "kind" : "symbol",
+            "line" : 84,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CHHapticEngine.start()"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+            "kind" : "symbol",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CHHapticEngine"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+            "kind" : "symbol",
+            "line" : 84,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CHHapticEngine.start()"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "absent from the watchOS SDK symbol graphs",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/CoreHaptics.symbols.json",
+            "kind" : "availability",
+            "line" : 42,
+            "note" : null,
+            "package" : null,
+            "symbol" : "CHHapticEngine"
+          }
+        ],
+        "status" : "unsupported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

@@ -1,0 +1,581 @@
+{
+  "aliases" : [
+    "snackbar",
+    "in-app notification",
+    "banner"
+  ],
+  "id" : "ui.toast",
+  "label" : "Toasts / banners",
+  "packages" : [
+    {
+      "commit" : "e56e89614d86b4bc21ffb36bf435cc52c60a8c13",
+      "notes" : "Toast capability is first-class: PopupType.toast case, isToast property, autohideIn auto-dismiss, and top/bottom banner positioning via Popup.Position. README markets 'Toasts' explicitly. All public decls are unconditional in the surface digest.",
+      "package" : "https://github.com/exyte/popupview",
+      "packageName" : "popupview",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/PopupView/PublicAPI.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "Dedicated toast popup type; decl is unconditional (no gaps) in surface digest",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicAPI.swift#L14",
+              "symbol" : "Popup.PopupType.toast"
+            },
+            {
+              "file" : "Sources/PopupView/PublicAPI.swift",
+              "kind" : "symbol",
+              "line" : 188,
+              "note" : "Auto-hide timer, the defining toast/banner behavior",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicAPI.swift#L188",
+              "symbol" : "Popup.BasePopupParameters.autohideIn"
+            },
+            {
+              "file" : "Sources/PopupView/PublicModifiers.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "note" : "SwiftUI entry-point modifier that presents toast-type popups",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicModifiers.swift#L25",
+              "symbol" : "View.popup"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Manifest declares .iOS(.v17)",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.1,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "No linux support signal; library is SwiftUI-only, which is unavailable on linux, but there is no os() guard evidence of absence in the surface, so status stays unknown",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Package.swift#L7"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/PopupView/PublicAPI.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "Unconditional decl, present on macCatalyst per surface digest; iOS code paths (os(iOS)) also compile on Catalyst",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicAPI.swift#L14",
+              "symbol" : "Popup.PopupType.toast"
+            },
+            {
+              "file" : "Sources/PopupView/PublicAPI.swift",
+              "kind" : "symbol",
+              "line" : 188,
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicAPI.swift#L188",
+              "symbol" : "Popup.BasePopupParameters.autohideIn"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "No explicit macCatalyst floor; iOS floor governs Catalyst builds",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/PopupView/PublicAPI.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "Unconditional decl, present on macOS per surface digest",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicAPI.swift#L14",
+              "symbol" : "Popup.PopupType.toast"
+            },
+            {
+              "file" : "Sources/PopupView/PublicAPI.swift",
+              "kind" : "symbol",
+              "line" : 188,
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicAPI.swift#L188",
+              "symbol" : "Popup.BasePopupParameters.autohideIn"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Manifest declares .macOS(.v14)",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/PopupView/PublicAPI.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "Unconditional decl, present on tvOS per surface digest",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicAPI.swift#L14",
+              "symbol" : "Popup.PopupType.toast"
+            },
+            {
+              "file" : "Sources/PopupView/PublicModifiers.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicModifiers.swift#L25",
+              "symbol" : "View.popup"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Manifest declares .tvOS(.v17); drag-based dismissal internals are iOS-gated, so confidence moderated",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "file" : "Sources/PopupView/PublicAPI.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "Unconditional decl, present on visionOS per surface digest (no gaps)",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicAPI.swift#L14",
+              "symbol" : "Popup.PopupType.toast"
+            },
+            {
+              "file" : "Sources/PopupView/PublicModifiers.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicModifiers.swift#L25",
+              "symbol" : "View.popup"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "No visionOS floor declared in manifest; support inferred from unconditional SwiftUI-only decls, confidence moderated",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/PopupView/PublicAPI.swift",
+              "kind" : "symbol",
+              "line" : 14,
+              "note" : "Unconditional decl, present on watchOS per surface digest",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicAPI.swift#L14",
+              "symbol" : "Popup.PopupType.toast"
+            },
+            {
+              "file" : "Sources/PopupView/PublicModifiers.swift",
+              "kind" : "symbol",
+              "line" : 25,
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Sources/PopupView/PublicModifiers.swift#L25",
+              "symbol" : "View.popup"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 11,
+              "note" : "Manifest declares .watchOS(.v10); some interaction internals are iOS-gated, so confidence moderated",
+              "permalink" : "https://github.com/exyte/popupview/blob/5.0.2/Package.swift#L11"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "popupview",
+      "version" : "5.0.2"
+    },
+    {
+      "commit" : "a183ee6f79f21c940092a19c2cba756555422371",
+      "notes" : "Entire public surface (44/44 decls) sits behind #if os(iOS). Supported claims (iOS, macCatalyst) are therefore all-conditional and capped at 0.6 confidence. Unsupported claims use the os(iOS) guard as absence evidence per digest gaps.",
+      "package" : "https://github.com/omaralbeik/drops",
+      "packageName" : "drops",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.6,
+          "evidence" : [
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Drops.swift",
+              "kind" : "symbol",
+              "line" : 41,
+              "note" : "Core show API for presenting a drop (toast/banner); guarded by #if os(iOS), which holds on iOS.",
+              "permalink" : "https://github.com/omaralbeik/drops/blob/1.7.0/Sources/Drops.swift#L41",
+              "symbol" : "Drops.show"
+            },
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Drop.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "note" : "The drop model (title/subtitle/icon/position/duration) — the toast payload; present on iOS.",
+              "permalink" : "https://github.com/omaralbeik/drops/blob/1.7.0/Sources/Drop.swift#L28",
+              "symbol" : "Drop"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 30,
+              "note" : "Package.swift declares platforms: [.iOS(.v13)]; README states iOS 13+. Secondary evidence only.",
+              "permalink" : "https://github.com/omaralbeik/drops/blob/1.7.0/Package.swift#L30"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Drops.swift",
+              "kind" : "guard",
+              "line" : 30,
+              "note" : "Core Drops class is guarded by #if os(iOS); surface digest resolves linux as absent (gap) for this decl.",
+              "permalink" : "https://github.com/omaralbeik/drops/blob/1.7.0/Sources/Drops.swift#L30",
+              "symbol" : "Drops"
+            },
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Drop.swift",
+              "kind" : "guard",
+              "line" : 28,
+              "note" : "Drop model guarded by #if os(iOS); linux marked absent. All 44 public decls carry this guard (UIKit-based) — no surface exists on Linux.",
+              "permalink" : "https://github.com/omaralbeik/drops/blob/1.7.0/Sources/Drop.swift#L28",
+              "symbol" : "Drop"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.5,
+          "evidence" : [
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Drops.swift",
+              "kind" : "symbol",
+              "line" : 41,
+              "note" : "os(iOS) evaluates true under Mac Catalyst; the surface digest records no macCatalyst gap for this decl, so the show API resolves present there.",
+              "permalink" : "https://github.com/omaralbeik/drops/blob/1.7.0/Sources/Drops.swift#L41",
+              "symbol" : "Drops.show"
+            },
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Drop.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "note" : "Drop model present under Mac Catalyst (no gap recorded; os(iOS) holds on Catalyst). Manifest does not name Catalyst, so confidence held below the 0.6 conditional cap.",
+              "permalink" : "https://github.com/omaralbeik/drops/blob/1.7.0/Sources/Drop.swift#L28",
+              "symbol" : "Drop"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Drops.swift",
+              "kind" : "guard",
+              "line" : 30,
+              "note" : "Core Drops class is guarded by #if os(iOS); surface digest resolves macOS as absent (gap) for this decl.",
+              "permalink" : "https://github.com/omaralbeik/drops/blob/1.7.0/Sources/Drops.swift#L30",
+              "symbol" : "Drops"
+            },
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Drop.swift",
+              "kind" : "guard",
+              "line" : 28,
+              "note" : "Drop model guarded by #if os(iOS); macOS marked absent. All 44 public decls carry this guard — no surface exists on macOS.",
+              "permalink" : "https://github.com/omaralbeik/drops/blob/1.7.0/Sources/Drop.swift#L28",
+              "symbol" : "Drop"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Drops.swift",
+              "kind" : "guard",
+              "line" : 30,
+              "note" : "Core Drops class is guarded by #if os(iOS); surface digest resolves tvOS as absent (gap) for this decl.",
+              "permalink" : "https://github.com/omaralbeik/drops/blob/1.7.0/Sources/Drops.swift#L30",
+              "symbol" : "Drops"
+            },
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Drop.swift",
+              "kind" : "guard",
+              "line" : 28,
+              "note" : "Drop model guarded by #if os(iOS); tvOS marked absent. All 44 public decls carry this guard — no surface exists on tvOS.",
+              "permalink" : "https://github.com/omaralbeik/drops/blob/1.7.0/Sources/Drop.swift#L28",
+              "symbol" : "Drop"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Drops.swift",
+              "kind" : "guard",
+              "line" : 30,
+              "note" : "Core Drops class is guarded by #if os(iOS); os(iOS) is false when compiling for the visionOS SDK, and the surface digest resolves visionOS as absent (gap).",
+              "permalink" : "https://github.com/omaralbeik/drops/blob/1.7.0/Sources/Drops.swift#L30",
+              "symbol" : "Drops"
+            },
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Drop.swift",
+              "kind" : "guard",
+              "line" : 28,
+              "note" : "Drop model guarded by #if os(iOS); visionOS marked absent. All 44 public decls carry this guard — no surface exists on native visionOS (iOS-compatibility mode aside).",
+              "permalink" : "https://github.com/omaralbeik/drops/blob/1.7.0/Sources/Drop.swift#L28",
+              "symbol" : "Drop"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Drops.swift",
+              "kind" : "guard",
+              "line" : 30,
+              "note" : "Core Drops class is guarded by #if os(iOS); surface digest resolves watchOS as absent (gap) for this decl.",
+              "permalink" : "https://github.com/omaralbeik/drops/blob/1.7.0/Sources/Drops.swift#L30",
+              "symbol" : "Drops"
+            },
+            {
+              "condition" : "os(iOS)",
+              "file" : "Sources/Drop.swift",
+              "kind" : "guard",
+              "line" : 28,
+              "note" : "Drop model guarded by #if os(iOS); watchOS marked absent. All 44 public decls carry this guard — no surface exists on watchOS.",
+              "permalink" : "https://github.com/omaralbeik/drops/blob/1.7.0/Sources/Drop.swift#L28",
+              "symbol" : "Drop"
+            }
+          ],
+          "status" : "unsupported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "drops",
+      "version" : "1.7.0"
+    },
+    {
+      "commit" : "44e04c79ae75ed5e979df517ab13d8a1aa9b41a5",
+      "notes" : "Banner API is a first-class surface: show/hide functions, a dedicated ProgressBannerView + View.progressBanner modifier, and five appearance properties. Anchored on SwiftUI/Sources decls because Package.swift builds only that path; the ProgressHUD/Sources UIKit duplicates are the legacy manual-integration copy.",
+      "package" : "https://github.com/relatedcode/progresshud",
+      "packageName" : "progresshud",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "SwiftUI/Sources/ProgressHUD+Public.swift",
+              "kind" : "symbol",
+              "line" : 301,
+              "note" : "Shows a title+message banner with auto-hide delay (default 3.0s).",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/SwiftUI/Sources/ProgressHUD+Public.swift#L301",
+              "symbol" : "ProgressHUD.banner"
+            },
+            {
+              "file" : "SwiftUI/Sources/ProgressHUD+Public.swift",
+              "kind" : "symbol",
+              "line" : 317,
+              "note" : "Dismisses the banner programmatically.",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/SwiftUI/Sources/ProgressHUD+Public.swift#L317",
+              "symbol" : "ProgressHUD.bannerHide"
+            },
+            {
+              "file" : "SwiftUI/Sources/ProgressHUD+Banner.swift",
+              "kind" : "symbol",
+              "line" : 15,
+              "note" : "Dedicated SwiftUI banner view.",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/SwiftUI/Sources/ProgressHUD+Banner.swift#L15",
+              "symbol" : "ProgressBannerView"
+            },
+            {
+              "file" : "SwiftUI/Sources/ProgressHUD+Banner.swift",
+              "kind" : "symbol",
+              "line" : 83,
+              "note" : "SwiftUI modifier hosting the banner layer.",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/SwiftUI/Sources/ProgressHUD+Banner.swift#L83",
+              "symbol" : "View.progressBanner"
+            },
+            {
+              "file" : "SwiftUI/Sources/ProgressHUD+Public.swift",
+              "kind" : "symbol",
+              "line" : 91,
+              "note" : "Banner appearance customization (with colorBannerTitle, colorBannerMessage, fontBannerTitle, fontBannerMessage).",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/SwiftUI/Sources/ProgressHUD+Public.swift#L91",
+              "symbol" : "ProgressHUD.colorBanner"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Manifest declares platforms: [.iOS(.v17)].",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/Package.swift#L9"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "note" : "README documents ProgressHUD.banner(\"Banner title\", \"Banner message to display.\") usage."
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Only .iOS(.v17) declared. Target depends on SwiftUI (unavailable on Linux) but no os() guard in the surface proves absence, so unknown.",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/Package.swift#L9"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "note" : "README positions the library as iOS-only."
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Only .iOS(.v17) declared; Catalyst often inherits iOS targets but no evidence confirms it.",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/Package.swift#L9"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "note" : "README positions the library as iOS-only."
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Only .iOS(.v17) declared; missing floor is not absence evidence. No os() guards in the surface.",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/Package.swift#L9"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "note" : "README positions the library as iOS-only ('designed specifically for iOS')."
+            }
+          ],
+          "status" : "unknown"
+        },
+        "tvOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Only .iOS(.v17) declared; missing floor is not absence evidence.",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/Package.swift#L9"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "note" : "README positions the library as iOS-only."
+            }
+          ],
+          "status" : "unknown"
+        },
+        "visionOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Only .iOS(.v17) declared; SwiftUI-based target might compile for visionOS but nothing confirms it.",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/Package.swift#L9"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "note" : "README positions the library as iOS-only."
+            }
+          ],
+          "status" : "unknown"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Only .iOS(.v17) declared; missing floor is not absence evidence.",
+              "permalink" : "https://github.com/relatedcode/progresshud/blob/15.0.1/Package.swift#L9"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "note" : "README positions the library as iOS-only."
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "progresshud",
+      "version" : "15.0.1"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+[
+  {
+    "capability" : {
+      "id" : "ui.bottom-sheet",
+      "label" : "Bottom sheets"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "FloatingPanel is a UIKit bottom-sheet/drawer container (Apple Maps style) with SwiftUI wrappers. Digest blind spot: core UIKit decls carry no per-platform gaps because 'import UIKit' is unconditional, so digest presence on macOS/watchOS/tvOS/visionOS/linux overstates buildability; statuses above under-claim accordingly. linux unsupported rests on the SwiftUI-wing guard anchors (gaps mark linux absent); the UIKit core has no linux guard, hence confidence 0.5. Checkout observations (not anchors): UIScreen.main used unconditionally in Sources/Extensions.swift; childForHomeIndicatorAutoHidden overridden in Sources/Controller.swift. 1 ObjC file unparsed per bundle blind-spot note.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/scenee/floatingpanel",
+      "commit" : "7efcc769e0ffe62f530e9276ab26309f758b7cc3",
+      "firstParty" : false,
+      "name" : "floatingpanel",
+      "surfaceDigest" : "fnv1a64:ae52d77b2a4829d8",
+      "version" : "3.2.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Controller.swift",
+            "kind" : "symbol",
+            "line" : 145,
+            "note" : "Container view controller that displays a panel; core bottom-sheet entry point, unconditioned in source.",
+            "package" : null,
+            "symbol" : "FloatingPanelController"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Layout.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : "Doc: 'A layout object that lays out a panel in bottom sheet style.'",
+            "package" : null,
+            "symbol" : "FloatingPanelBottomLayout"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Controller.swift",
+            "kind" : "symbol",
+            "line" : 529,
+            "note" : "Adds the panel as a child of a parent view controller.",
+            "package" : null,
+            "symbol" : "FloatingPanelController.addPanel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "Manifest declares platforms: [.iOS(.v12)]; README states 'compatible with iOS 12.0+'.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.5,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "canImport(SwiftUI)",
+            "file" : "Sources/SwiftUI/View+floatingPanel.swift",
+            "kind" : "guard",
+            "line" : 51,
+            "note" : "Digest gaps mark linux absent for this core bottom-sheet entry point (canImport(SwiftUI) resolves false on linux).",
+            "package" : null,
+            "symbol" : "View.floatingPanel"
+          },
+          {
+            "availability" : null,
+            "condition" : "canImport(SwiftUI)",
+            "file" : "Sources/SwiftUI/FloatingPanelProxy.swift",
+            "kind" : "guard",
+            "line" : 31,
+            "note" : "Digest gaps mark linux absent (canImport(SwiftUI)).",
+            "package" : null,
+            "symbol" : "FloatingPanelProxy"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Controller.swift",
+            "kind" : "symbol",
+            "line" : 145,
+            "note" : "No macCatalyst gap in the digest; pure-UIKit surface is available under Mac Catalyst. No explicit manifest floor, so confidence is held below the symbol-presence ceiling.",
+            "package" : null,
+            "symbol" : "FloatingPanelController"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Layout.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : "Bottom sheet layout object; no macCatalyst gap in the digest.",
+            "package" : null,
+            "symbol" : "FloatingPanelBottomLayout"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "Manifest declares only .iOS(.v12); no macOS floor. Sources import UIKit unconditionally, which the Swift-only extraction does not model as a macOS gap — no absence evidence, so unknown.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "tvOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "Manifest declares only .iOS(.v12). Digest records no tvOS gaps, but the source unconditionally overrides childForHomeIndicatorAutoHidden (iOS-family API not on tvOS), so a tvOS build is doubtful; no guard evidence either way.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "visionOS" : {
+        "confidence" : 0.25,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "Manifest declares only .iOS(.v12). Digest records no visionOS gaps, but Sources/Extensions.swift uses UIScreen.main unconditionally (UIScreen is unavailable on visionOS), so a visionOS build is doubtful; no guard evidence either way.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "watchOS" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : null,
+            "note" : "Manifest declares only .iOS(.v12); no watchOS floor. UIKit-based UIViewController surface; digest records no watchOS gap but no positive build evidence either.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

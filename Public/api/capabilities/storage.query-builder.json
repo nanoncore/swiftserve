@@ -1,0 +1,1563 @@
+{
+  "aliases" : [
+    "query dsl",
+    "orm",
+    "query interface"
+  ],
+  "id" : "storage.query-builder",
+  "label" : "Type-safe queries",
+  "packages" : [
+    {
+      "commit" : "2fe9e36daf4bdb5edcf193e0d0806ba2074d2864",
+      "notes" : "The query-builder DSL itself originates in the FluentKit dependency; this package wires it into Vapor (Request.db/Application.db entry points returning `any Database`, plus paginate(for:) extensions on QueryBuilder). Every decl in the surface is unconditional (no #if, no per-platform gaps). A concrete database driver (e.g. fluent-sqlite-driver) is needed at runtime, but the query-builder API surface itself carries no companion requirement.",
+      "package" : "https://github.com/vapor/fluent",
+      "packageName" : "fluent",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 7,
+              "note" : "Unconditional decl; no #if condition, no platform gaps in surface digest.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L7",
+              "symbol" : "Request.db"
+            },
+            {
+              "file" : "Sources/Fluent/Fluent+Paginate.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Extension on FluentKit's QueryBuilder DSL; unconditional in surface.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/Fluent+Paginate.swift#L5",
+              "symbol" : "QueryBuilder.paginate"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "manifestPlatforms: .iOS(.v13) floor declared.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 7,
+              "note" : "Unconditional decl; zero os() conditions in the entire surface, so present on linux. Server-side Vapor package; Linux is the primary deployment target and CI-tested (GitHub Actions test badge in README).",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L7",
+              "symbol" : "Request.db"
+            },
+            {
+              "file" : "Sources/Fluent/Fluent+Paginate.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Extension on FluentKit's QueryBuilder DSL; unconditional in surface.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/Fluent+Paginate.swift#L5",
+              "symbol" : "QueryBuilder.paginate"
+            },
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 33,
+              "note" : "Application-level database entry point; unconditional.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L33",
+              "symbol" : "Application.db"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 7,
+              "note" : "Unconditional decl; surface digest lists no macCatalyst gap for any decl. Catalyst inherits the iOS 13 manifest floor.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L7",
+              "symbol" : "Request.db"
+            },
+            {
+              "file" : "Sources/Fluent/Fluent+Paginate.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Extension on FluentKit's QueryBuilder DSL; unconditional in surface.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/Fluent+Paginate.swift#L5",
+              "symbol" : "QueryBuilder.paginate"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 7,
+              "note" : "Unconditional decl; no #if condition, no platform gaps in surface digest.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L7",
+              "symbol" : "Request.db"
+            },
+            {
+              "file" : "Sources/Fluent/Fluent+Paginate.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Extension on FluentKit's QueryBuilder DSL; unconditional in surface.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/Fluent+Paginate.swift#L5",
+              "symbol" : "QueryBuilder.paginate"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "manifestPlatforms: .macOS(.v10_15) floor declared.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 7,
+              "note" : "Unconditional decl; no #if condition, no platform gaps in surface digest.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L7",
+              "symbol" : "Request.db"
+            },
+            {
+              "file" : "Sources/Fluent/Fluent+Paginate.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Extension on FluentKit's QueryBuilder DSL; unconditional in surface.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/Fluent+Paginate.swift#L5",
+              "symbol" : "QueryBuilder.paginate"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "manifestPlatforms: .tvOS(.v13) floor declared.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 7,
+              "note" : "Unconditional decl; surface digest lists no visionOS gap for any decl. No explicit visionOS manifest floor (inherits default).",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L7",
+              "symbol" : "Request.db"
+            },
+            {
+              "file" : "Sources/Fluent/Fluent+Paginate.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Extension on FluentKit's QueryBuilder DSL; unconditional in surface.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/Fluent+Paginate.swift#L5",
+              "symbol" : "QueryBuilder.paginate"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/Fluent/FluentProvider.swift",
+              "kind" : "symbol",
+              "line" : 7,
+              "note" : "Unconditional decl; no #if condition, no platform gaps in surface digest.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/FluentProvider.swift#L7",
+              "symbol" : "Request.db"
+            },
+            {
+              "file" : "Sources/Fluent/Fluent+Paginate.swift",
+              "kind" : "symbol",
+              "line" : 5,
+              "note" : "Extension on FluentKit's QueryBuilder DSL; unconditional in surface.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Sources/Fluent/Fluent+Paginate.swift#L5",
+              "symbol" : "QueryBuilder.paginate"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "manifestPlatforms: .watchOS(.v6) floor declared. Server-side framework; watchOS floor exists but practical use there is atypical.",
+              "permalink" : "https://github.com/vapor/fluent/blob/4.13.0/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "fluent",
+      "version" : "4.13.0"
+    },
+    {
+      "commit" : "b83108d10f42680d78f23fe4d4d80fc88dab3212",
+      "notes" : "Query interface DSL (QueryInterfaceRequest, Column, TableRecord) and type-safe SQLRequest are unconditional on all platforms in the surface. A few peripheral request methods (e.g. QueryInterfaceRequest.deleteAndFetchStatement) are gated behind GRDBCUSTOMSQLITE || SQLITE_HAS_CODEC; the core builder is not.",
+      "package" : "https://github.com/groue/grdb.swift",
+      "packageName" : "grdb.swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/QueryInterface/Request/QueryInterfaceRequest.swift",
+              "kind" : "symbol",
+              "line" : 98,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/QueryInterface/Request/QueryInterfaceRequest.swift#L98",
+              "symbol" : "QueryInterfaceRequest"
+            },
+            {
+              "file" : "GRDB/QueryInterface/SQL/Column.swift",
+              "kind" : "symbol",
+              "line" : 126,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/QueryInterface/SQL/Column.swift#L126",
+              "symbol" : "Column"
+            },
+            {
+              "file" : "GRDB/Record/TableRecord.swift",
+              "kind" : "symbol",
+              "line" : 137,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/TableRecord.swift#L137",
+              "symbol" : "TableRecord"
+            },
+            {
+              "file" : "GRDB/Core/SQLRequest.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/SQLRequest.swift#L47",
+              "symbol" : "SQLRequest"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 51,
+              "note" : "Package.swift declares iOS minimum .v13",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L51"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "GRDB/QueryInterface/Request/QueryInterfaceRequest.swift",
+              "kind" : "symbol",
+              "line" : 98,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/QueryInterface/Request/QueryInterfaceRequest.swift#L98",
+              "symbol" : "QueryInterfaceRequest"
+            },
+            {
+              "file" : "GRDB/QueryInterface/SQL/Column.swift",
+              "kind" : "symbol",
+              "line" : 126,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/QueryInterface/SQL/Column.swift#L126",
+              "symbol" : "Column"
+            },
+            {
+              "file" : "GRDB/Record/TableRecord.swift",
+              "kind" : "symbol",
+              "line" : 137,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/TableRecord.swift#L137",
+              "symbol" : "TableRecord"
+            },
+            {
+              "file" : "GRDB/Core/SQLRequest.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/SQLRequest.swift#L47",
+              "symbol" : "SQLRequest"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "GRDB/QueryInterface/Request/QueryInterfaceRequest.swift",
+              "kind" : "symbol",
+              "line" : 98,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/QueryInterface/Request/QueryInterfaceRequest.swift#L98",
+              "symbol" : "QueryInterfaceRequest"
+            },
+            {
+              "file" : "GRDB/QueryInterface/SQL/Column.swift",
+              "kind" : "symbol",
+              "line" : 126,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/QueryInterface/SQL/Column.swift#L126",
+              "symbol" : "Column"
+            },
+            {
+              "file" : "GRDB/Record/TableRecord.swift",
+              "kind" : "symbol",
+              "line" : 137,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/TableRecord.swift#L137",
+              "symbol" : "TableRecord"
+            },
+            {
+              "file" : "GRDB/Core/SQLRequest.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/SQLRequest.swift#L47",
+              "symbol" : "SQLRequest"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/QueryInterface/Request/QueryInterfaceRequest.swift",
+              "kind" : "symbol",
+              "line" : 98,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/QueryInterface/Request/QueryInterfaceRequest.swift#L98",
+              "symbol" : "QueryInterfaceRequest"
+            },
+            {
+              "file" : "GRDB/QueryInterface/SQL/Column.swift",
+              "kind" : "symbol",
+              "line" : 126,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/QueryInterface/SQL/Column.swift#L126",
+              "symbol" : "Column"
+            },
+            {
+              "file" : "GRDB/Record/TableRecord.swift",
+              "kind" : "symbol",
+              "line" : 137,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/TableRecord.swift#L137",
+              "symbol" : "TableRecord"
+            },
+            {
+              "file" : "GRDB/Core/SQLRequest.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/SQLRequest.swift#L47",
+              "symbol" : "SQLRequest"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 52,
+              "note" : "Package.swift declares macOS minimum .v10_15",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L52"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/QueryInterface/Request/QueryInterfaceRequest.swift",
+              "kind" : "symbol",
+              "line" : 98,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/QueryInterface/Request/QueryInterfaceRequest.swift#L98",
+              "symbol" : "QueryInterfaceRequest"
+            },
+            {
+              "file" : "GRDB/QueryInterface/SQL/Column.swift",
+              "kind" : "symbol",
+              "line" : 126,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/QueryInterface/SQL/Column.swift#L126",
+              "symbol" : "Column"
+            },
+            {
+              "file" : "GRDB/Record/TableRecord.swift",
+              "kind" : "symbol",
+              "line" : 137,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/TableRecord.swift#L137",
+              "symbol" : "TableRecord"
+            },
+            {
+              "file" : "GRDB/Core/SQLRequest.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/SQLRequest.swift#L47",
+              "symbol" : "SQLRequest"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 53,
+              "note" : "Package.swift declares tvOS minimum .v13",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L53"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "GRDB/QueryInterface/Request/QueryInterfaceRequest.swift",
+              "kind" : "symbol",
+              "line" : 98,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/QueryInterface/Request/QueryInterfaceRequest.swift#L98",
+              "symbol" : "QueryInterfaceRequest"
+            },
+            {
+              "file" : "GRDB/QueryInterface/SQL/Column.swift",
+              "kind" : "symbol",
+              "line" : 126,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/QueryInterface/SQL/Column.swift#L126",
+              "symbol" : "Column"
+            },
+            {
+              "file" : "GRDB/Record/TableRecord.swift",
+              "kind" : "symbol",
+              "line" : 137,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/TableRecord.swift#L137",
+              "symbol" : "TableRecord"
+            },
+            {
+              "file" : "GRDB/Core/SQLRequest.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/SQLRequest.swift#L47",
+              "symbol" : "SQLRequest"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/QueryInterface/Request/QueryInterfaceRequest.swift",
+              "kind" : "symbol",
+              "line" : 98,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/QueryInterface/Request/QueryInterfaceRequest.swift#L98",
+              "symbol" : "QueryInterfaceRequest"
+            },
+            {
+              "file" : "GRDB/QueryInterface/SQL/Column.swift",
+              "kind" : "symbol",
+              "line" : 126,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/QueryInterface/SQL/Column.swift#L126",
+              "symbol" : "Column"
+            },
+            {
+              "file" : "GRDB/Record/TableRecord.swift",
+              "kind" : "symbol",
+              "line" : 137,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/TableRecord.swift#L137",
+              "symbol" : "TableRecord"
+            },
+            {
+              "file" : "GRDB/Core/SQLRequest.swift",
+              "kind" : "symbol",
+              "line" : 47,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Core/SQLRequest.swift#L47",
+              "symbol" : "SQLRequest"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 54,
+              "note" : "Package.swift declares watchOS minimum .v7",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L54"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "grdb.swift",
+      "version" : "v7.11.1"
+    },
+    {
+      "commit" : "964c300fb0736699ce945c9edb56ecd62eba27a3",
+      "notes" : "Typed query DSL (Table/Expression/QueryType) is the package's headline feature; all anchors unconditional in the surface.",
+      "package" : "https://github.com/stephencelis/sqlite.swift",
+      "packageName" : "sqlite.swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 881,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L881",
+              "symbol" : "Table"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Expression.swift",
+              "kind" : "symbol",
+              "line" : 56,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Expression.swift#L56",
+              "symbol" : "Expression"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 314,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L314",
+              "symbol" : "QueryType.filter"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 695,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L695",
+              "symbol" : "QueryType.insert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L55",
+              "symbol" : "SchemaType.select"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 39,
+              "note" : "Package.swift declares a iOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L39"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 881,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L881",
+              "symbol" : "Table"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Expression.swift",
+              "kind" : "symbol",
+              "line" : 56,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Expression.swift#L56",
+              "symbol" : "Expression"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 314,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L314",
+              "symbol" : "QueryType.filter"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 695,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L695",
+              "symbol" : "QueryType.insert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L55",
+              "symbol" : "SchemaType.select"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 31,
+              "note" : "Package.swift has an explicit #if os(Linux) branch enabling the SQLiteSwiftCSQLite default trait (bundled SQLite for Linux builds).",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L31"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 23,
+              "note" : "README: 'Works on Linux (with some limitations)'.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/README.md#L23"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 881,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L881",
+              "symbol" : "Table"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Expression.swift",
+              "kind" : "symbol",
+              "line" : 56,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Expression.swift#L56",
+              "symbol" : "Expression"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 314,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L314",
+              "symbol" : "QueryType.filter"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 695,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L695",
+              "symbol" : "QueryType.insert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L55",
+              "symbol" : "SchemaType.select"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 38,
+              "note" : "Package.swift does not declare a macCatalyst floor, but all anchor symbols are unconditional (no platform gaps) in the extracted surface.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L38"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 881,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L881",
+              "symbol" : "Table"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Expression.swift",
+              "kind" : "symbol",
+              "line" : 56,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Expression.swift#L56",
+              "symbol" : "Expression"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 314,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L314",
+              "symbol" : "QueryType.filter"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 695,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L695",
+              "symbol" : "QueryType.insert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L55",
+              "symbol" : "SchemaType.select"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 40,
+              "note" : "Package.swift declares a macOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L40"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 881,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L881",
+              "symbol" : "Table"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Expression.swift",
+              "kind" : "symbol",
+              "line" : 56,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Expression.swift#L56",
+              "symbol" : "Expression"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 314,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L314",
+              "symbol" : "QueryType.filter"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 695,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L695",
+              "symbol" : "QueryType.insert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L55",
+              "symbol" : "SchemaType.select"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 42,
+              "note" : "Package.swift declares a tvOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L42"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 881,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L881",
+              "symbol" : "Table"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Expression.swift",
+              "kind" : "symbol",
+              "line" : 56,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Expression.swift#L56",
+              "symbol" : "Expression"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 314,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L314",
+              "symbol" : "QueryType.filter"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 695,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L695",
+              "symbol" : "QueryType.insert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L55",
+              "symbol" : "SchemaType.select"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 43,
+              "note" : "Package.swift declares a visionOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L43"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 881,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L881",
+              "symbol" : "Table"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Expression.swift",
+              "kind" : "symbol",
+              "line" : 56,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Expression.swift#L56",
+              "symbol" : "Expression"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 314,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L314",
+              "symbol" : "QueryType.filter"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 695,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L695",
+              "symbol" : "QueryType.insert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Query.swift",
+              "kind" : "symbol",
+              "line" : 55,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Query.swift#L55",
+              "symbol" : "SchemaType.select"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 41,
+              "note" : "Package.swift declares a watchOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L41"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "sqlite.swift",
+      "version" : "0.16.0"
+    },
+    {
+      "commit" : "e2bf935089cd7620031ea342eaf96bf4ba3a22dc",
+      "package" : "https://github.com/marcoarment/blackbird",
+      "packageName" : "blackbird",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 569,
+              "note" : "Key-path-based WHERE expression type.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L569",
+              "symbol" : "BlackbirdModelColumnExpression"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 52,
+              "note" : "Key-path-based ORDER BY clause type.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L52",
+              "symbol" : "BlackbirdModelOrderClause"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 252,
+              "note" : "Structured read using key-path matching, orderBy, limit.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L252",
+              "symbol" : "BlackbirdModel.read"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 285,
+              "note" : "Column-subset select via key-paths.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L285",
+              "symbol" : "BlackbirdModel.query"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Package.swift declares .iOS(.v15) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms list contains only Apple platforms; Surface digest records no platform gaps, but sources unconditionally import Combine, SwiftUI, OSLog and SQLite3 with no os() guards, and Package.swift declares no Linux support; Linux buildability is unverified. Symbol absence is not absence evidence, so status is unknown.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L7"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 569,
+              "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L569",
+              "symbol" : "BlackbirdModelColumnExpression"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 52,
+              "note" : "Key-path-based ORDER BY clause type.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L52",
+              "symbol" : "BlackbirdModelOrderClause"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 252,
+              "note" : "Structured read using key-path matching, orderBy, limit.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L252",
+              "symbol" : "BlackbirdModel.read"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 285,
+              "note" : "Column-subset select via key-paths.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L285",
+              "symbol" : "BlackbirdModel.query"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 569,
+              "note" : "Key-path-based WHERE expression type.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L569",
+              "symbol" : "BlackbirdModelColumnExpression"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 52,
+              "note" : "Key-path-based ORDER BY clause type.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L52",
+              "symbol" : "BlackbirdModelOrderClause"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 252,
+              "note" : "Structured read using key-path matching, orderBy, limit.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L252",
+              "symbol" : "BlackbirdModel.read"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 285,
+              "note" : "Column-subset select via key-paths.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L285",
+              "symbol" : "BlackbirdModel.query"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Package.swift declares .macOS(.v12) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 569,
+              "note" : "Key-path-based WHERE expression type.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L569",
+              "symbol" : "BlackbirdModelColumnExpression"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 52,
+              "note" : "Key-path-based ORDER BY clause type.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L52",
+              "symbol" : "BlackbirdModelOrderClause"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 252,
+              "note" : "Structured read using key-path matching, orderBy, limit.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L252",
+              "symbol" : "BlackbirdModel.read"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 285,
+              "note" : "Column-subset select via key-paths.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L285",
+              "symbol" : "BlackbirdModel.query"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 11,
+              "note" : "Package.swift declares .tvOS(.v15) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L11"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 569,
+              "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L569",
+              "symbol" : "BlackbirdModelColumnExpression"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 52,
+              "note" : "Key-path-based ORDER BY clause type.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L52",
+              "symbol" : "BlackbirdModelOrderClause"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 252,
+              "note" : "Structured read using key-path matching, orderBy, limit.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L252",
+              "symbol" : "BlackbirdModel.read"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 285,
+              "note" : "Column-subset select via key-paths.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L285",
+              "symbol" : "BlackbirdModel.query"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 569,
+              "note" : "Key-path-based WHERE expression type.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L569",
+              "symbol" : "BlackbirdModelColumnExpression"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 52,
+              "note" : "Key-path-based ORDER BY clause type.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L52",
+              "symbol" : "BlackbirdModelOrderClause"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 252,
+              "note" : "Structured read using key-path matching, orderBy, limit.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L252",
+              "symbol" : "BlackbirdModel.read"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+              "kind" : "symbol",
+              "line" : 285,
+              "note" : "Column-subset select via key-paths.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModelStructuredQuerying.swift#L285",
+              "symbol" : "BlackbirdModel.query"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Package.swift declares .watchOS(.v8) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "blackbird",
+      "version" : "0.5"
+    },
+    {
+      "commit" : "17F113",
+      "notes" : "NSFetchRequest + NSPredicate typed fetches.",
+      "package" : "https://developer.apple.com/documentation/coredata",
+      "packageName" : "CoreData",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 323,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L323",
+              "symbol" : "NSFetchRequest"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "availability",
+              "line" : 323,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L323",
+              "symbol" : "NSFetchRequest"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 323,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L323",
+              "symbol" : "NSFetchRequest"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 323,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L323",
+              "symbol" : "NSFetchRequest"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 323,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L323",
+              "symbol" : "NSFetchRequest"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 323,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L323",
+              "symbol" : "NSFetchRequest"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json",
+              "kind" : "symbol",
+              "line" : 323,
+              "permalink" : "https://developer.apple.com/documentation/coredata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/CoreData.symbols.json#L323",
+              "symbol" : "NSFetchRequest"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "coredata",
+      "version" : "Xcode 26.6"
+    },
+    {
+      "commit" : "ca03df491ec5e4bb8af0bca1e9957d08c10ec2da",
+      "notes" : "Type-safe Query DSL (Query struct with ~90 operator/predicate members in surface), Results, SortDescriptor, all unconditional. Swift-only extraction; 215 ObjC files unparsed and digest truncated (800 of 1463 decls). No platform-specific os() gaps exist anywhere in this digest.",
+      "package" : "https://github.com/realm/realm-swift",
+      "packageName" : "realm-swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Query.swift",
+              "kind" : "symbol",
+              "line" : 103,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Query.swift#L103",
+              "symbol" : "Query"
+            },
+            {
+              "file" : "RealmSwift/Results.swift",
+              "kind" : "symbol",
+              "line" : 112,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Results.swift#L112",
+              "symbol" : "Results"
+            },
+            {
+              "file" : "RealmSwift/SortDescriptor.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/SortDescriptor.swift#L26",
+              "symbol" : "SortDescriptor"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 47,
+              "note" : "Manifest platform floor .iOS(.v12)",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L47"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Query.swift",
+              "kind" : "symbol",
+              "line" : 103,
+              "note" : "Surface digest resolves this Swift decl present on linux at parse level, but RealmSwift sits on the Realm ObjC core (215 ObjC files unparsed - declared blind spot); no manifest, README, or CI evidence of Linux builds. Under-claiming as unknown.",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Query.swift#L103",
+              "symbol" : "Query"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Query.swift",
+              "kind" : "symbol",
+              "line" : 103,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Query.swift#L103",
+              "symbol" : "Query"
+            },
+            {
+              "file" : "RealmSwift/Results.swift",
+              "kind" : "symbol",
+              "line" : 112,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Results.swift#L112",
+              "symbol" : "Results"
+            },
+            {
+              "file" : "RealmSwift/SortDescriptor.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/SortDescriptor.swift#L26",
+              "symbol" : "SortDescriptor"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 144,
+              "note" : "Package.swift explicitly targets macCatalyst: .linkedFramework(\"UIKit\", .when(platforms: [.iOS, .macCatalyst, .tvOS, .watchOS]))",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L144"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Query.swift",
+              "kind" : "symbol",
+              "line" : 103,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Query.swift#L103",
+              "symbol" : "Query"
+            },
+            {
+              "file" : "RealmSwift/Results.swift",
+              "kind" : "symbol",
+              "line" : 112,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Results.swift#L112",
+              "symbol" : "Results"
+            },
+            {
+              "file" : "RealmSwift/SortDescriptor.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/SortDescriptor.swift#L26",
+              "symbol" : "SortDescriptor"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 46,
+              "note" : "Manifest platform floor .macOS(.v10_13)",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L46"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Query.swift",
+              "kind" : "symbol",
+              "line" : 103,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Query.swift#L103",
+              "symbol" : "Query"
+            },
+            {
+              "file" : "RealmSwift/Results.swift",
+              "kind" : "symbol",
+              "line" : 112,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Results.swift#L112",
+              "symbol" : "Results"
+            },
+            {
+              "file" : "RealmSwift/SortDescriptor.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/SortDescriptor.swift#L26",
+              "symbol" : "SortDescriptor"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 48,
+              "note" : "Manifest platform floor .tvOS(.v12)",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L48"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Query.swift",
+              "kind" : "symbol",
+              "line" : 103,
+              "note" : "Decl unconditional in surface digest (no os() gate) and resolves present on visionOS. Supplementary: build.sh at this tag has dedicated visionOS build/test targets (generic/platform=visionOS, xrsimulator 'Apple Vision Pro'). visionOS is not listed in Package.swift platform floors and README names only iOS/macOS/tvOS/watchOS, hence reduced confidence.",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Query.swift#L103",
+              "symbol" : "Query"
+            },
+            {
+              "file" : "RealmSwift/Results.swift",
+              "kind" : "symbol",
+              "line" : 112,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Results.swift#L112",
+              "symbol" : "Results"
+            },
+            {
+              "file" : "RealmSwift/SortDescriptor.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/SortDescriptor.swift#L26",
+              "symbol" : "SortDescriptor"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "RealmSwift/Query.swift",
+              "kind" : "symbol",
+              "line" : 103,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Query.swift#L103",
+              "symbol" : "Query"
+            },
+            {
+              "file" : "RealmSwift/Results.swift",
+              "kind" : "symbol",
+              "line" : 112,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/Results.swift#L112",
+              "symbol" : "Results"
+            },
+            {
+              "file" : "RealmSwift/SortDescriptor.swift",
+              "kind" : "symbol",
+              "line" : 26,
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/RealmSwift/SortDescriptor.swift#L26",
+              "symbol" : "SortDescriptor"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 49,
+              "note" : "Manifest platform floor .watchOS(.v4)",
+              "permalink" : "https://github.com/realm/realm-swift/blob/v20.0.5/Package.swift#L49"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "realm-swift",
+      "version" : "v20.0.5"
+    },
+    {
+      "commit" : "17F113",
+      "notes" : "Type-safe fetches via FetchDescriptor + #Predicate macros.",
+      "package" : "https://developer.apple.com/documentation/swiftdata",
+      "packageName" : "SwiftData",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 198,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L198",
+              "symbol" : "FetchDescriptor"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "availability",
+              "line" : 198,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L198",
+              "symbol" : "FetchDescriptor"
+            }
+          ],
+          "status" : "unsupported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 198,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L198",
+              "symbol" : "FetchDescriptor"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 198,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L198",
+              "symbol" : "FetchDescriptor"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 198,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L198",
+              "symbol" : "FetchDescriptor"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 198,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L198",
+              "symbol" : "FetchDescriptor"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+              "kind" : "symbol",
+              "line" : 198,
+              "permalink" : "https://developer.apple.com/documentation/swiftdata/blob/Xcode 26.6/symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json#L198",
+              "symbol" : "FetchDescriptor"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swiftdata",
+      "version" : "Xcode 26.6"
+    }
+  ]
+}

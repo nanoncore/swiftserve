@@ -1,0 +1,2268 @@
+[
+  {
+    "capability" : {
+      "id" : "storage.codable",
+      "label" : "Codable persistence"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : null,
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/marcoarment/blackbird",
+      "commit" : "e2bf935089cd7620031ea342eaf96bf4ba3a22dc",
+      "firstParty" : false,
+      "name" : "blackbird",
+      "surfaceDigest" : "fnv1a64:8c9e39f2bc7d29c1",
+      "version" : "0.5"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 161,
+            "note" : "Doc: 'A model protocol based on Codable and SQLite.'",
+            "package" : null,
+            "symbol" : "BlackbirdModel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdColumn.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : "Property wrapper for column variables in BlackbirdModel struct definitions.",
+            "package" : null,
+            "symbol" : "BlackbirdColumn"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdCodingKey.swift",
+            "kind" : "symbol",
+            "line" : 37,
+            "note" : "Custom CodingKeys support for BlackbirdModel.",
+            "package" : null,
+            "symbol" : "BlackbirdCodingKey"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Package.swift declares .iOS(.v15) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms list contains only Apple platforms; Surface digest records no platform gaps, but sources unconditionally import Combine, SwiftUI, OSLog and SQLite3 with no os() guards, and Package.swift declares no Linux support; Linux buildability is unverified. Symbol absence is not absence evidence, so status is unknown.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 161,
+            "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+            "package" : null,
+            "symbol" : "BlackbirdModel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdColumn.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : "Property wrapper for column variables in BlackbirdModel struct definitions.",
+            "package" : null,
+            "symbol" : "BlackbirdColumn"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdCodingKey.swift",
+            "kind" : "symbol",
+            "line" : 37,
+            "note" : "Custom CodingKeys support for BlackbirdModel.",
+            "package" : null,
+            "symbol" : "BlackbirdCodingKey"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 161,
+            "note" : "Doc: 'A model protocol based on Codable and SQLite.'",
+            "package" : null,
+            "symbol" : "BlackbirdModel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdColumn.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : "Property wrapper for column variables in BlackbirdModel struct definitions.",
+            "package" : null,
+            "symbol" : "BlackbirdColumn"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdCodingKey.swift",
+            "kind" : "symbol",
+            "line" : 37,
+            "note" : "Custom CodingKeys support for BlackbirdModel.",
+            "package" : null,
+            "symbol" : "BlackbirdCodingKey"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Package.swift declares .macOS(.v12) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 161,
+            "note" : "Doc: 'A model protocol based on Codable and SQLite.'",
+            "package" : null,
+            "symbol" : "BlackbirdModel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdColumn.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : "Property wrapper for column variables in BlackbirdModel struct definitions.",
+            "package" : null,
+            "symbol" : "BlackbirdColumn"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdCodingKey.swift",
+            "kind" : "symbol",
+            "line" : 37,
+            "note" : "Custom CodingKeys support for BlackbirdModel.",
+            "package" : null,
+            "symbol" : "BlackbirdCodingKey"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 11,
+            "note" : "Package.swift declares .tvOS(.v15) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 161,
+            "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+            "package" : null,
+            "symbol" : "BlackbirdModel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdColumn.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : "Property wrapper for column variables in BlackbirdModel struct definitions.",
+            "package" : null,
+            "symbol" : "BlackbirdColumn"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdCodingKey.swift",
+            "kind" : "symbol",
+            "line" : 37,
+            "note" : "Custom CodingKeys support for BlackbirdModel.",
+            "package" : null,
+            "symbol" : "BlackbirdCodingKey"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 161,
+            "note" : "Doc: 'A model protocol based on Codable and SQLite.'",
+            "package" : null,
+            "symbol" : "BlackbirdModel"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdColumn.swift",
+            "kind" : "symbol",
+            "line" : 46,
+            "note" : "Property wrapper for column variables in BlackbirdModel struct definitions.",
+            "package" : null,
+            "symbol" : "BlackbirdColumn"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdCodingKey.swift",
+            "kind" : "symbol",
+            "line" : 37,
+            "note" : "Custom CodingKeys support for BlackbirdModel.",
+            "package" : null,
+            "symbol" : "BlackbirdCodingKey"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Package.swift declares .watchOS(.v8) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.concurrency",
+      "label" : "Concurrent access"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Concurrency is Swift-actor based (single serialized Core actor per database), not a multi-connection reader/writer pool.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/marcoarment/blackbird",
+      "commit" : "e2bf935089cd7620031ea342eaf96bf4ba3a22dc",
+      "firstParty" : false,
+      "name" : "blackbird",
+      "surfaceDigest" : "fnv1a64:8c9e39f2bc7d29c1",
+      "version" : "0.5"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 485,
+            "note" : "Doc: 'An actor for protected concurrent access to a database.'",
+            "package" : null,
+            "symbol" : "Blackbird.Database.Core"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 465,
+            "note" : "Actor-isolated transactions.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.transaction"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 468,
+            "note" : "Cancellable actor-isolated transactions.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.cancellableTransaction"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/Blackbird.swift",
+            "kind" : "symbol",
+            "line" : 282,
+            "note" : "Locked-value utility for Sendable conformance.",
+            "package" : null,
+            "symbol" : "Blackbird.Locked"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Package.swift declares .iOS(.v15) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms list contains only Apple platforms; Surface digest records no platform gaps, but sources unconditionally import Combine, SwiftUI, OSLog and SQLite3 with no os() guards, and Package.swift declares no Linux support; Linux buildability is unverified. Symbol absence is not absence evidence, so status is unknown.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 485,
+            "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.Core"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 465,
+            "note" : "Actor-isolated transactions.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.transaction"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 468,
+            "note" : "Cancellable actor-isolated transactions.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.cancellableTransaction"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/Blackbird.swift",
+            "kind" : "symbol",
+            "line" : 282,
+            "note" : "Locked-value utility for Sendable conformance.",
+            "package" : null,
+            "symbol" : "Blackbird.Locked"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 485,
+            "note" : "Doc: 'An actor for protected concurrent access to a database.'",
+            "package" : null,
+            "symbol" : "Blackbird.Database.Core"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 465,
+            "note" : "Actor-isolated transactions.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.transaction"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 468,
+            "note" : "Cancellable actor-isolated transactions.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.cancellableTransaction"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/Blackbird.swift",
+            "kind" : "symbol",
+            "line" : 282,
+            "note" : "Locked-value utility for Sendable conformance.",
+            "package" : null,
+            "symbol" : "Blackbird.Locked"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Package.swift declares .macOS(.v12) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 485,
+            "note" : "Doc: 'An actor for protected concurrent access to a database.'",
+            "package" : null,
+            "symbol" : "Blackbird.Database.Core"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 465,
+            "note" : "Actor-isolated transactions.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.transaction"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 468,
+            "note" : "Cancellable actor-isolated transactions.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.cancellableTransaction"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/Blackbird.swift",
+            "kind" : "symbol",
+            "line" : 282,
+            "note" : "Locked-value utility for Sendable conformance.",
+            "package" : null,
+            "symbol" : "Blackbird.Locked"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 11,
+            "note" : "Package.swift declares .tvOS(.v15) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 485,
+            "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.Core"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 465,
+            "note" : "Actor-isolated transactions.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.transaction"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 468,
+            "note" : "Cancellable actor-isolated transactions.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.cancellableTransaction"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/Blackbird.swift",
+            "kind" : "symbol",
+            "line" : 282,
+            "note" : "Locked-value utility for Sendable conformance.",
+            "package" : null,
+            "symbol" : "Blackbird.Locked"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 485,
+            "note" : "Doc: 'An actor for protected concurrent access to a database.'",
+            "package" : null,
+            "symbol" : "Blackbird.Database.Core"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 465,
+            "note" : "Actor-isolated transactions.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.transaction"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 468,
+            "note" : "Cancellable actor-isolated transactions.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.cancellableTransaction"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/Blackbird.swift",
+            "kind" : "symbol",
+            "line" : 282,
+            "note" : "Locked-value utility for Sendable conformance.",
+            "package" : null,
+            "symbol" : "Blackbird.Locked"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Package.swift declares .watchOS(.v8) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.in-memory",
+      "label" : "In-memory database"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : null,
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/marcoarment/blackbird",
+      "commit" : "e2bf935089cd7620031ea342eaf96bf4ba3a22dc",
+      "firstParty" : false,
+      "name" : "blackbird",
+      "surfaceDigest" : "fnv1a64:8c9e39f2bc7d29c1",
+      "version" : "0.5"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 351,
+            "note" : "Doc: 'Instantiates a new SQLite database in memory, without persisting to a file.'",
+            "package" : null,
+            "symbol" : "Blackbird.Database.inMemoryDatabase"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 327,
+            "note" : "Doc: path is 'nil for in-memory databases'.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.path"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Package.swift declares .iOS(.v15) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms list contains only Apple platforms; Surface digest records no platform gaps, but sources unconditionally import Combine, SwiftUI, OSLog and SQLite3 with no os() guards, and Package.swift declares no Linux support; Linux buildability is unverified. Symbol absence is not absence evidence, so status is unknown.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 351,
+            "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.inMemoryDatabase"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 327,
+            "note" : "Doc: path is 'nil for in-memory databases'.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.path"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 351,
+            "note" : "Doc: 'Instantiates a new SQLite database in memory, without persisting to a file.'",
+            "package" : null,
+            "symbol" : "Blackbird.Database.inMemoryDatabase"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 327,
+            "note" : "Doc: path is 'nil for in-memory databases'.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.path"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Package.swift declares .macOS(.v12) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 351,
+            "note" : "Doc: 'Instantiates a new SQLite database in memory, without persisting to a file.'",
+            "package" : null,
+            "symbol" : "Blackbird.Database.inMemoryDatabase"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 327,
+            "note" : "Doc: path is 'nil for in-memory databases'.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.path"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 11,
+            "note" : "Package.swift declares .tvOS(.v15) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 351,
+            "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.inMemoryDatabase"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 327,
+            "note" : "Doc: path is 'nil for in-memory databases'.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.path"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 351,
+            "note" : "Doc: 'Instantiates a new SQLite database in memory, without persisting to a file.'",
+            "package" : null,
+            "symbol" : "Blackbird.Database.inMemoryDatabase"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 327,
+            "note" : "Doc: path is 'nil for in-memory databases'.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.path"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Package.swift declares .watchOS(.v8) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.migrations",
+      "label" : "Schema migrations"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Migrations are automatic (schema derived from the model type); there is no user-defined migration DSL.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/marcoarment/blackbird",
+      "commit" : "e2bf935089cd7620031ea342eaf96bf4ba3a22dc",
+      "firstParty" : false,
+      "name" : "blackbird",
+      "surfaceDigest" : "fnv1a64:8c9e39f2bc7d29c1",
+      "version" : "0.5"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 908,
+            "note" : "Doc: 'Performs setup and any necessary schema migrations.'",
+            "package" : null,
+            "symbol" : "BlackbirdModel.resolveSchema"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 217,
+            "note" : "Row-level migration failure handling.",
+            "package" : null,
+            "symbol" : "BlackbirdModelMigrationErrorAction"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 214,
+            "note" : "How row-level migration failures should be handled.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.invalidRowDataMigrationResolution"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 227,
+            "note" : "Error case: schema migration is impossible for the specified type.",
+            "package" : null,
+            "symbol" : "BlackbirdTableError.impossibleMigration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Package.swift declares .iOS(.v15) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms list contains only Apple platforms; Surface digest records no platform gaps, but sources unconditionally import Combine, SwiftUI, OSLog and SQLite3 with no os() guards, and Package.swift declares no Linux support; Linux buildability is unverified. Symbol absence is not absence evidence, so status is unknown.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 908,
+            "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.resolveSchema"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 217,
+            "note" : "Row-level migration failure handling.",
+            "package" : null,
+            "symbol" : "BlackbirdModelMigrationErrorAction"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 214,
+            "note" : "How row-level migration failures should be handled.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.invalidRowDataMigrationResolution"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 227,
+            "note" : "Error case: schema migration is impossible for the specified type.",
+            "package" : null,
+            "symbol" : "BlackbirdTableError.impossibleMigration"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 908,
+            "note" : "Doc: 'Performs setup and any necessary schema migrations.'",
+            "package" : null,
+            "symbol" : "BlackbirdModel.resolveSchema"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 217,
+            "note" : "Row-level migration failure handling.",
+            "package" : null,
+            "symbol" : "BlackbirdModelMigrationErrorAction"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 214,
+            "note" : "How row-level migration failures should be handled.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.invalidRowDataMigrationResolution"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 227,
+            "note" : "Error case: schema migration is impossible for the specified type.",
+            "package" : null,
+            "symbol" : "BlackbirdTableError.impossibleMigration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Package.swift declares .macOS(.v12) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 908,
+            "note" : "Doc: 'Performs setup and any necessary schema migrations.'",
+            "package" : null,
+            "symbol" : "BlackbirdModel.resolveSchema"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 217,
+            "note" : "Row-level migration failure handling.",
+            "package" : null,
+            "symbol" : "BlackbirdModelMigrationErrorAction"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 214,
+            "note" : "How row-level migration failures should be handled.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.invalidRowDataMigrationResolution"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 227,
+            "note" : "Error case: schema migration is impossible for the specified type.",
+            "package" : null,
+            "symbol" : "BlackbirdTableError.impossibleMigration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 11,
+            "note" : "Package.swift declares .tvOS(.v15) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 908,
+            "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.resolveSchema"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 217,
+            "note" : "Row-level migration failure handling.",
+            "package" : null,
+            "symbol" : "BlackbirdModelMigrationErrorAction"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 214,
+            "note" : "How row-level migration failures should be handled.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.invalidRowDataMigrationResolution"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 227,
+            "note" : "Error case: schema migration is impossible for the specified type.",
+            "package" : null,
+            "symbol" : "BlackbirdTableError.impossibleMigration"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 908,
+            "note" : "Doc: 'Performs setup and any necessary schema migrations.'",
+            "package" : null,
+            "symbol" : "BlackbirdModel.resolveSchema"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 217,
+            "note" : "Row-level migration failure handling.",
+            "package" : null,
+            "symbol" : "BlackbirdModelMigrationErrorAction"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 214,
+            "note" : "How row-level migration failures should be handled.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.invalidRowDataMigrationResolution"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 227,
+            "note" : "Error case: schema migration is impossible for the specified type.",
+            "package" : null,
+            "symbol" : "BlackbirdTableError.impossibleMigration"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Package.swift declares .watchOS(.v8) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.observation",
+      "label" : "Reactive queries / change tracking"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : null,
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/marcoarment/blackbird",
+      "commit" : "e2bf935089cd7620031ea342eaf96bf4ba3a22dc",
+      "firstParty" : false,
+      "name" : "blackbird",
+      "surfaceDigest" : "fnv1a64:8c9e39f2bc7d29c1",
+      "version" : "0.5"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdChanges.swift",
+            "kind" : "symbol",
+            "line" : 166,
+            "note" : "Combine ChangePublisher for a table.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.changePublisher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 296,
+            "note" : "Change publisher for a model's table.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.changePublisher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 132,
+            "note" : "Auto-updating SwiftUI result wrapper kept in sync with table changes.",
+            "package" : null,
+            "symbol" : "BlackbirdLiveModels"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 90,
+            "note" : "Auto-updating rows from a generator function.",
+            "package" : null,
+            "symbol" : "BlackbirdLiveQuery"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Package.swift declares .iOS(.v15) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms list contains only Apple platforms; Surface digest records no platform gaps, but sources unconditionally import Combine, SwiftUI, OSLog and SQLite3 with no os() guards, and Package.swift declares no Linux support; Linux buildability is unverified. Symbol absence is not absence evidence, so status is unknown.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdChanges.swift",
+            "kind" : "symbol",
+            "line" : 166,
+            "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.changePublisher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 296,
+            "note" : "Change publisher for a model's table.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.changePublisher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 132,
+            "note" : "Auto-updating SwiftUI result wrapper kept in sync with table changes.",
+            "package" : null,
+            "symbol" : "BlackbirdLiveModels"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 90,
+            "note" : "Auto-updating rows from a generator function.",
+            "package" : null,
+            "symbol" : "BlackbirdLiveQuery"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdChanges.swift",
+            "kind" : "symbol",
+            "line" : 166,
+            "note" : "Combine ChangePublisher for a table.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.changePublisher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 296,
+            "note" : "Change publisher for a model's table.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.changePublisher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 132,
+            "note" : "Auto-updating SwiftUI result wrapper kept in sync with table changes.",
+            "package" : null,
+            "symbol" : "BlackbirdLiveModels"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 90,
+            "note" : "Auto-updating rows from a generator function.",
+            "package" : null,
+            "symbol" : "BlackbirdLiveQuery"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Package.swift declares .macOS(.v12) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdChanges.swift",
+            "kind" : "symbol",
+            "line" : 166,
+            "note" : "Combine ChangePublisher for a table.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.changePublisher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 296,
+            "note" : "Change publisher for a model's table.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.changePublisher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 132,
+            "note" : "Auto-updating SwiftUI result wrapper kept in sync with table changes.",
+            "package" : null,
+            "symbol" : "BlackbirdLiveModels"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 90,
+            "note" : "Auto-updating rows from a generator function.",
+            "package" : null,
+            "symbol" : "BlackbirdLiveQuery"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 11,
+            "note" : "Package.swift declares .tvOS(.v15) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdChanges.swift",
+            "kind" : "symbol",
+            "line" : 166,
+            "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.changePublisher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 296,
+            "note" : "Change publisher for a model's table.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.changePublisher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 132,
+            "note" : "Auto-updating SwiftUI result wrapper kept in sync with table changes.",
+            "package" : null,
+            "symbol" : "BlackbirdLiveModels"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 90,
+            "note" : "Auto-updating rows from a generator function.",
+            "package" : null,
+            "symbol" : "BlackbirdLiveQuery"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdChanges.swift",
+            "kind" : "symbol",
+            "line" : 166,
+            "note" : "Combine ChangePublisher for a table.",
+            "package" : null,
+            "symbol" : "Blackbird.Database.changePublisher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModel.swift",
+            "kind" : "symbol",
+            "line" : 296,
+            "note" : "Change publisher for a model's table.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.changePublisher"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 132,
+            "note" : "Auto-updating SwiftUI result wrapper kept in sync with table changes.",
+            "package" : null,
+            "symbol" : "BlackbirdLiveModels"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdSwiftUI.swift",
+            "kind" : "symbol",
+            "line" : 90,
+            "note" : "Auto-updating rows from a generator function.",
+            "package" : null,
+            "symbol" : "BlackbirdLiveQuery"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Package.swift declares .watchOS(.v8) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.query-builder",
+      "label" : "Type-safe queries"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : null,
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/marcoarment/blackbird",
+      "commit" : "e2bf935089cd7620031ea342eaf96bf4ba3a22dc",
+      "firstParty" : false,
+      "name" : "blackbird",
+      "surfaceDigest" : "fnv1a64:8c9e39f2bc7d29c1",
+      "version" : "0.5"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 569,
+            "note" : "Key-path-based WHERE expression type.",
+            "package" : null,
+            "symbol" : "BlackbirdModelColumnExpression"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 52,
+            "note" : "Key-path-based ORDER BY clause type.",
+            "package" : null,
+            "symbol" : "BlackbirdModelOrderClause"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 252,
+            "note" : "Structured read using key-path matching, orderBy, limit.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.read"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 285,
+            "note" : "Column-subset select via key-paths.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.query"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Package.swift declares .iOS(.v15) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms list contains only Apple platforms; Surface digest records no platform gaps, but sources unconditionally import Combine, SwiftUI, OSLog and SQLite3 with no os() guards, and Package.swift declares no Linux support; Linux buildability is unverified. Symbol absence is not absence evidence, so status is unknown.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 569,
+            "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+            "package" : null,
+            "symbol" : "BlackbirdModelColumnExpression"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 52,
+            "note" : "Key-path-based ORDER BY clause type.",
+            "package" : null,
+            "symbol" : "BlackbirdModelOrderClause"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 252,
+            "note" : "Structured read using key-path matching, orderBy, limit.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.read"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 285,
+            "note" : "Column-subset select via key-paths.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.query"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 569,
+            "note" : "Key-path-based WHERE expression type.",
+            "package" : null,
+            "symbol" : "BlackbirdModelColumnExpression"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 52,
+            "note" : "Key-path-based ORDER BY clause type.",
+            "package" : null,
+            "symbol" : "BlackbirdModelOrderClause"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 252,
+            "note" : "Structured read using key-path matching, orderBy, limit.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.read"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 285,
+            "note" : "Column-subset select via key-paths.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.query"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Package.swift declares .macOS(.v12) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 569,
+            "note" : "Key-path-based WHERE expression type.",
+            "package" : null,
+            "symbol" : "BlackbirdModelColumnExpression"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 52,
+            "note" : "Key-path-based ORDER BY clause type.",
+            "package" : null,
+            "symbol" : "BlackbirdModelOrderClause"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 252,
+            "note" : "Structured read using key-path matching, orderBy, limit.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.read"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 285,
+            "note" : "Column-subset select via key-paths.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.query"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 11,
+            "note" : "Package.swift declares .tvOS(.v15) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 569,
+            "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+            "package" : null,
+            "symbol" : "BlackbirdModelColumnExpression"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 52,
+            "note" : "Key-path-based ORDER BY clause type.",
+            "package" : null,
+            "symbol" : "BlackbirdModelOrderClause"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 252,
+            "note" : "Structured read using key-path matching, orderBy, limit.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.read"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 285,
+            "note" : "Column-subset select via key-paths.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.query"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 569,
+            "note" : "Key-path-based WHERE expression type.",
+            "package" : null,
+            "symbol" : "BlackbirdModelColumnExpression"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 52,
+            "note" : "Key-path-based ORDER BY clause type.",
+            "package" : null,
+            "symbol" : "BlackbirdModelOrderClause"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 252,
+            "note" : "Structured read using key-path matching, orderBy, limit.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.read"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdModelStructuredQuerying.swift",
+            "kind" : "symbol",
+            "line" : 285,
+            "note" : "Column-subset select via key-paths.",
+            "package" : null,
+            "symbol" : "BlackbirdModel.query"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Package.swift declares .watchOS(.v8) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.sqlite",
+      "label" : "SQLite access"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : null,
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/marcoarment/blackbird",
+      "commit" : "e2bf935089cd7620031ea342eaf96bf4ba3a22dc",
+      "firstParty" : false,
+      "name" : "blackbird",
+      "surfaceDigest" : "fnv1a64:8c9e39f2bc7d29c1",
+      "version" : "0.5"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 200,
+            "note" : "Doc: 'A managed SQLite database.'",
+            "package" : null,
+            "symbol" : "Blackbird.Database"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/Blackbird.swift",
+            "kind" : "symbol",
+            "line" : 38,
+            "note" : "Doc: 'A small, fast, lightweight SQLite database wrapper and model layer.'",
+            "package" : null,
+            "symbol" : "Blackbird"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/Blackbird.swift",
+            "kind" : "symbol",
+            "line" : 63,
+            "note" : "Doc: 'A wrapper for SQLite's column data types.'",
+            "package" : null,
+            "symbol" : "Blackbird.Value"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Package.swift declares .iOS(.v15) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "platforms list contains only Apple platforms; Surface digest records no platform gaps, but sources unconditionally import Combine, SwiftUI, OSLog and SQLite3 with no os() guards, and Package.swift declares no Linux support; Linux buildability is unverified. Symbol absence is not absence evidence, so status is unknown.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 200,
+            "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+            "package" : null,
+            "symbol" : "Blackbird.Database"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/Blackbird.swift",
+            "kind" : "symbol",
+            "line" : 38,
+            "note" : "Doc: 'A small, fast, lightweight SQLite database wrapper and model layer.'",
+            "package" : null,
+            "symbol" : "Blackbird"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/Blackbird.swift",
+            "kind" : "symbol",
+            "line" : 63,
+            "note" : "Doc: 'A wrapper for SQLite's column data types.'",
+            "package" : null,
+            "symbol" : "Blackbird.Value"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 200,
+            "note" : "Doc: 'A managed SQLite database.'",
+            "package" : null,
+            "symbol" : "Blackbird.Database"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/Blackbird.swift",
+            "kind" : "symbol",
+            "line" : 38,
+            "note" : "Doc: 'A small, fast, lightweight SQLite database wrapper and model layer.'",
+            "package" : null,
+            "symbol" : "Blackbird"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/Blackbird.swift",
+            "kind" : "symbol",
+            "line" : 63,
+            "note" : "Doc: 'A wrapper for SQLite's column data types.'",
+            "package" : null,
+            "symbol" : "Blackbird.Value"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Package.swift declares .macOS(.v12) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 200,
+            "note" : "Doc: 'A managed SQLite database.'",
+            "package" : null,
+            "symbol" : "Blackbird.Database"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/Blackbird.swift",
+            "kind" : "symbol",
+            "line" : 38,
+            "note" : "Doc: 'A small, fast, lightweight SQLite database wrapper and model layer.'",
+            "package" : null,
+            "symbol" : "Blackbird"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/Blackbird.swift",
+            "kind" : "symbol",
+            "line" : 63,
+            "note" : "Doc: 'A wrapper for SQLite's column data types.'",
+            "package" : null,
+            "symbol" : "Blackbird.Value"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 11,
+            "note" : "Package.swift declares .tvOS(.v15) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 200,
+            "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+            "package" : null,
+            "symbol" : "Blackbird.Database"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/Blackbird.swift",
+            "kind" : "symbol",
+            "line" : 38,
+            "note" : "Doc: 'A small, fast, lightweight SQLite database wrapper and model layer.'",
+            "package" : null,
+            "symbol" : "Blackbird"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/Blackbird.swift",
+            "kind" : "symbol",
+            "line" : 63,
+            "note" : "Doc: 'A wrapper for SQLite's column data types.'",
+            "package" : null,
+            "symbol" : "Blackbird.Value"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/BlackbirdDatabase.swift",
+            "kind" : "symbol",
+            "line" : 200,
+            "note" : "Doc: 'A managed SQLite database.'",
+            "package" : null,
+            "symbol" : "Blackbird.Database"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/Blackbird.swift",
+            "kind" : "symbol",
+            "line" : 38,
+            "note" : "Doc: 'A small, fast, lightweight SQLite database wrapper and model layer.'",
+            "package" : null,
+            "symbol" : "Blackbird"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Blackbird/Blackbird.swift",
+            "kind" : "symbol",
+            "line" : 63,
+            "note" : "Doc: 'A wrapper for SQLite's column data types.'",
+            "package" : null,
+            "symbol" : "Blackbird.Value"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Package.swift declares .watchOS(.v8) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

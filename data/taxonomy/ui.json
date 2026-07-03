@@ -1,0 +1,133 @@
+{
+  "_comment": "UI domain. Records may only claim ids that exist here (V01).",
+  "taxonomyVersion": 1,
+  "domain": "ui",
+  "capabilities": [
+    {
+      "id": "ui.vector-animation",
+      "label": "Vector animation playback",
+      "aliases": [
+        "lottie",
+        "after effects animation",
+        "bodymovin"
+      ]
+    },
+    {
+      "id": "ui.autolayout-dsl",
+      "label": "Auto Layout DSL",
+      "aliases": [
+        "constraints dsl",
+        "layout anchors",
+        "snap constraints"
+      ]
+    },
+    {
+      "id": "ui.particle-effects",
+      "label": "Particle effects",
+      "aliases": [
+        "confetti",
+        "particles",
+        "sparkles"
+      ]
+    },
+    {
+      "id": "ui.transition-effects",
+      "label": "View transitions / motion effects",
+      "aliases": [
+        "view animations",
+        "transition",
+        "motion design"
+      ]
+    },
+    {
+      "id": "ui.toast",
+      "label": "Toasts / banners",
+      "aliases": [
+        "snackbar",
+        "in-app notification",
+        "banner"
+      ]
+    },
+    {
+      "id": "ui.progress-hud",
+      "label": "Loading indicators",
+      "aliases": [
+        "spinner",
+        "hud",
+        "activity indicator"
+      ]
+    },
+    {
+      "id": "ui.skeleton-loading",
+      "label": "Skeleton loading",
+      "aliases": [
+        "shimmer",
+        "placeholder loading",
+        "loading skeleton"
+      ]
+    },
+    {
+      "id": "ui.charts",
+      "label": "Charts",
+      "aliases": [
+        "graphs",
+        "plotting",
+        "bar chart",
+        "line chart"
+      ]
+    },
+    {
+      "id": "ui.markdown-rendering",
+      "label": "Markdown rendering",
+      "aliases": [
+        "markdown view",
+        "commonmark",
+        "gfm"
+      ]
+    },
+    {
+      "id": "ui.rich-text",
+      "label": "Rich text editing",
+      "aliases": [
+        "text editor",
+        "attributed string editing",
+        "wysiwyg"
+      ]
+    },
+    {
+      "id": "ui.bottom-sheet",
+      "label": "Bottom sheets",
+      "aliases": [
+        "drawer",
+        "floating panel",
+        "modal sheet"
+      ]
+    },
+    {
+      "id": "ui.pager",
+      "label": "Paging / carousel",
+      "aliases": [
+        "carousel",
+        "page view",
+        "swipeable pages"
+      ]
+    },
+    {
+      "id": "ui.pull-to-refresh",
+      "label": "Pull to refresh",
+      "aliases": [
+        "refresh control",
+        "swipe to refresh"
+      ]
+    },
+    {
+      "id": "ui.haptics",
+      "label": "Haptic feedback",
+      "aliases": [
+        "core haptics",
+        "vibration",
+        "taptic"
+      ]
+    }
+  ]
+}

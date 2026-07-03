@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="308.5" height="20" role="img" aria-label="Loading indicators platform support — SwiftServe">
+  <title>Loading indicators — verified by SwiftServe</title>
+  <clipPath id="r"><rect width="308.5" height="20" rx="4"/></clipPath>
+  <g clip-path="url(#r)">
+    <rect width="134.7" height="20" fill="#2c2724"/>
+    <g transform="translate(5.0,3.0) scale(0.6)">
+  <path d="M3 8 L8 18 L13 8 Z" fill="#e8b04b"/>
+  <path d="M2.5 8 A5.5 5.5 0 0 1 13.5 8 Z" fill="#ed8b3e"/>
+  <circle cx="8" cy="4.5" r="3.4" fill="#ed8b3e"/>
+</g>
+    <text x="22" y="14" fill="#fbf7f0" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11">Loading indicators</text>
+    <rect x="134.7" width="29.8" height="20" fill="#5fb37a"/>
+<text x="149.6" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">iOS</text><rect x="164.5" width="24.0" height="20" fill="#a49a8f"/>
+<text x="176.5" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="188.5" width="24.0" height="20" fill="#a49a8f"/>
+<text x="200.5" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="212.5" width="24.0" height="20" fill="#a49a8f"/>
+<text x="224.5" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="236.5" width="24.0" height="20" fill="#a49a8f"/>
+<text x="248.5" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="260.5" width="24.0" height="20" fill="#a49a8f"/>
+<text x="272.5" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text><rect x="284.5" width="24.0" height="20" fill="#a49a8f"/>
+<text x="296.5" y="14" text-anchor="middle" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10.5">?</text>
+  </g>
+</svg>

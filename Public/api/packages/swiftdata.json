@@ -1,0 +1,830 @@
+[
+  {
+    "capability" : {
+      "id" : "storage.cloud-sync",
+      "label" : "Cloud sync"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "CloudKit-backed sync via ModelConfiguration.CloudKitDatabase.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/swiftdata",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "SwiftData",
+      "surfaceDigest" : "fnv1a64:3386c718e8b47fd1",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 402,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelConfiguration.CloudKitDatabase"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "availability",
+            "line" : 402,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelConfiguration.CloudKitDatabase"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 402,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelConfiguration.CloudKitDatabase"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 402,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelConfiguration.CloudKitDatabase"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 402,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelConfiguration.CloudKitDatabase"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 402,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelConfiguration.CloudKitDatabase"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 402,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelConfiguration.CloudKitDatabase"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.document-store",
+      "label" : "Object / document store"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Schema-managed object persistence; SwiftData model store on top of SQLite. Floors: iOS 17 / macOS 14.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/swiftdata",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "SwiftData",
+      "surfaceDigest" : "fnv1a64:3386c718e8b47fd1",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 431,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelContainer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "availability",
+            "line" : 431,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelContainer"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 431,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelContainer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 431,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelContainer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 431,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelContainer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 431,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelContainer"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 431,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelContainer"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.in-memory",
+      "label" : "In-memory database"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "In-memory container via ModelConfiguration(isStoredInMemoryOnly:).",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/swiftdata",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "SwiftData",
+      "surfaceDigest" : "fnv1a64:3386c718e8b47fd1",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 425,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelConfiguration.isStoredInMemoryOnly"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "availability",
+            "line" : 425,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelConfiguration.isStoredInMemoryOnly"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 425,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelConfiguration.isStoredInMemoryOnly"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 425,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelConfiguration.isStoredInMemoryOnly"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 425,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelConfiguration.isStoredInMemoryOnly"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 425,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelConfiguration.isStoredInMemoryOnly"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 425,
+            "note" : null,
+            "package" : null,
+            "symbol" : "ModelConfiguration.isStoredInMemoryOnly"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.migrations",
+      "label" : "Schema migrations"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Versioned schemas with SchemaMigrationPlan / MigrationStage.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/swiftdata",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "SwiftData",
+      "surfaceDigest" : "fnv1a64:3386c718e8b47fd1",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 770,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaMigrationPlan"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "availability",
+            "line" : 770,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaMigrationPlan"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 770,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaMigrationPlan"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 770,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaMigrationPlan"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 770,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaMigrationPlan"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 770,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaMigrationPlan"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 770,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SchemaMigrationPlan"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.observation",
+      "label" : "Reactive queries / change tracking"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Change tracking via SwiftData history API; live UI updates flow through @Query/Observable rather than a dedicated observer type.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/swiftdata",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "SwiftData",
+      "surfaceDigest" : "fnv1a64:3386c718e8b47fd1",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 317,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HistoryDescriptor"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "availability",
+            "line" : 317,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HistoryDescriptor"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 317,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HistoryDescriptor"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 317,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HistoryDescriptor"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 317,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HistoryDescriptor"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 317,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HistoryDescriptor"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 317,
+            "note" : null,
+            "package" : null,
+            "symbol" : "HistoryDescriptor"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.query-builder",
+      "label" : "Type-safe queries"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Type-safe fetches via FetchDescriptor + #Predicate macros.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://developer.apple.com/documentation/swiftdata",
+      "commit" : "17F113",
+      "firstParty" : true,
+      "name" : "SwiftData",
+      "surfaceDigest" : "fnv1a64:3386c718e8b47fd1",
+      "version" : "Xcode 26.6"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 198,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchDescriptor"
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : "no Apple SDK ships this module on Linux",
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "availability",
+            "line" : 198,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchDescriptor"
+          }
+        ],
+        "status" : "unsupported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 198,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchDescriptor"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 198,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchDescriptor"
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 198,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchDescriptor"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 198,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchDescriptor"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "symbolgraph/arm64-apple-xros26.5/SwiftData.symbols.json",
+            "kind" : "symbol",
+            "line" : 198,
+            "note" : null,
+            "package" : null,
+            "symbol" : "FetchDescriptor"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

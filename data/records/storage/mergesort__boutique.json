@@ -1,0 +1,1970 @@
+[
+  {
+    "capability" : {
+      "id" : "storage.codable",
+      "label" : "Codable persistence"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Boutique's core purpose: persist Codable & Sendable value types via Store<Item>.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/mergesort/boutique",
+      "commit" : "ba6848908ca930521484727b2de2399f68413f40",
+      "firstParty" : false,
+      "name" : "boutique",
+      "surfaceDigest" : "fnv1a64:cbf2510d9226185f",
+      "version" : "3.0.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StorableItem.swift",
+            "kind" : "symbol",
+            "line" : 1,
+            "note" : "public typealias StorableItem = Codable & Sendable — all stored items are Codable",
+            "package" : null,
+            "symbol" : "StorableItem"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 51,
+            "note" : "Store<Item> persists Codable items to a memory cache and a storage engine",
+            "package" : null,
+            "symbol" : "Store"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 159,
+            "note" : "func insert(_ item: Item) async throws — persists a Codable item",
+            "package" : null,
+            "symbol" : "Store.insert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Package.swift declares .iOS(.v17) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StorableItem.swift",
+            "kind" : "symbol",
+            "line" : 1,
+            "note" : "Surface digest resolves this decl present on linux (no os() conditions anywhere in the public surface), but the module unconditionally imports SwiftUI, Security, and Observation; Package.swift and README declare only iOS 17+/macOS 14+. Linux buildability unverified — honest answer is unknown.",
+            "package" : null,
+            "symbol" : "StorableItem"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StorableItem.swift",
+            "kind" : "symbol",
+            "line" : 1,
+            "note" : "public typealias StorableItem = Codable & Sendable — all stored items are Codable No explicit macCatalyst floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on macCatalyst.",
+            "package" : null,
+            "symbol" : "StorableItem"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 51,
+            "note" : "Store<Item> persists Codable items to a memory cache and a storage engine",
+            "package" : null,
+            "symbol" : "Store"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 159,
+            "note" : "func insert(_ item: Item) async throws — persists a Codable item",
+            "package" : null,
+            "symbol" : "Store.insert"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StorableItem.swift",
+            "kind" : "symbol",
+            "line" : 1,
+            "note" : "public typealias StorableItem = Codable & Sendable — all stored items are Codable",
+            "package" : null,
+            "symbol" : "StorableItem"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 51,
+            "note" : "Store<Item> persists Codable items to a memory cache and a storage engine",
+            "package" : null,
+            "symbol" : "Store"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 159,
+            "note" : "func insert(_ item: Item) async throws — persists a Codable item",
+            "package" : null,
+            "symbol" : "Store.insert"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Package.swift declares .macOS(.v14) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StorableItem.swift",
+            "kind" : "symbol",
+            "line" : 1,
+            "note" : "public typealias StorableItem = Codable & Sendable — all stored items are Codable No explicit tvOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on tvOS.",
+            "package" : null,
+            "symbol" : "StorableItem"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 51,
+            "note" : "Store<Item> persists Codable items to a memory cache and a storage engine",
+            "package" : null,
+            "symbol" : "Store"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 159,
+            "note" : "func insert(_ item: Item) async throws — persists a Codable item",
+            "package" : null,
+            "symbol" : "Store.insert"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StorableItem.swift",
+            "kind" : "symbol",
+            "line" : 1,
+            "note" : "public typealias StorableItem = Codable & Sendable — all stored items are Codable No explicit visionOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on visionOS.",
+            "package" : null,
+            "symbol" : "StorableItem"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 51,
+            "note" : "Store<Item> persists Codable items to a memory cache and a storage engine",
+            "package" : null,
+            "symbol" : "Store"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 159,
+            "note" : "func insert(_ item: Item) async throws — persists a Codable item",
+            "package" : null,
+            "symbol" : "Store.insert"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StorableItem.swift",
+            "kind" : "symbol",
+            "line" : 1,
+            "note" : "public typealias StorableItem = Codable & Sendable — all stored items are Codable No explicit watchOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on watchOS.",
+            "package" : null,
+            "symbol" : "StorableItem"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 51,
+            "note" : "Store<Item> persists Codable items to a memory cache and a storage engine",
+            "package" : null,
+            "symbol" : "Store"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 159,
+            "note" : "func insert(_ item: Item) async throws — persists a Codable item",
+            "package" : null,
+            "symbol" : "Store.insert"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.disk-cache",
+      "label" : "Disk caching"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Disk persistence is delivered through the StorageEngine protocol from the Bodega dependency (pinned 2.1.3); Boutique's own surface drives it unconditionally.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/mergesort/boutique",
+      "commit" : "ba6848908ca930521484727b2de2399f68413f40",
+      "firstParty" : false,
+      "name" : "boutique",
+      "surfaceDigest" : "fnv1a64:cbf2510d9226185f",
+      "version" : "3.0.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : "init(storage: StorageEngine, cacheIdentifier:) — persists items to a memory cache and a storage engine (disk persistence via Bodega StorageEngine, e.g. SQLiteStorageEngine)",
+            "package" : null,
+            "symbol" : "Store.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 244,
+            "note" : "doc: 'Removes all items from the store's memory cache and storage engine'",
+            "package" : null,
+            "symbol" : "Store.removeAll"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store+Identifiable.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : "init(storage: StorageEngine) — Identifiable convenience, same dual-layer disk persistence",
+            "package" : null,
+            "symbol" : "Store.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README: 'dual-layered memory + disk caching architecture ... full offline storage'",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Package.swift declares .iOS(.v17) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : "Surface digest resolves this decl present on linux (no os() conditions anywhere in the public surface), but the module unconditionally imports SwiftUI, Security, and Observation; Package.swift and README declare only iOS 17+/macOS 14+. Linux buildability unverified — honest answer is unknown.",
+            "package" : null,
+            "symbol" : "Store.init"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.75,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : "init(storage: StorageEngine, cacheIdentifier:) — persists items to a memory cache and a storage engine (disk persistence via Bodega StorageEngine, e.g. SQLiteStorageEngine) No explicit macCatalyst floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on macCatalyst.",
+            "package" : null,
+            "symbol" : "Store.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 244,
+            "note" : "doc: 'Removes all items from the store's memory cache and storage engine'",
+            "package" : null,
+            "symbol" : "Store.removeAll"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store+Identifiable.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : "init(storage: StorageEngine) — Identifiable convenience, same dual-layer disk persistence",
+            "package" : null,
+            "symbol" : "Store.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README: 'dual-layered memory + disk caching architecture ... full offline storage'",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : "init(storage: StorageEngine, cacheIdentifier:) — persists items to a memory cache and a storage engine (disk persistence via Bodega StorageEngine, e.g. SQLiteStorageEngine)",
+            "package" : null,
+            "symbol" : "Store.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 244,
+            "note" : "doc: 'Removes all items from the store's memory cache and storage engine'",
+            "package" : null,
+            "symbol" : "Store.removeAll"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store+Identifiable.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : "init(storage: StorageEngine) — Identifiable convenience, same dual-layer disk persistence",
+            "package" : null,
+            "symbol" : "Store.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README: 'dual-layered memory + disk caching architecture ... full offline storage'",
+            "package" : null,
+            "symbol" : null
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Package.swift declares .macOS(.v14) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : "init(storage: StorageEngine, cacheIdentifier:) — persists items to a memory cache and a storage engine (disk persistence via Bodega StorageEngine, e.g. SQLiteStorageEngine) No explicit tvOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on tvOS.",
+            "package" : null,
+            "symbol" : "Store.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 244,
+            "note" : "doc: 'Removes all items from the store's memory cache and storage engine'",
+            "package" : null,
+            "symbol" : "Store.removeAll"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store+Identifiable.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : "init(storage: StorageEngine) — Identifiable convenience, same dual-layer disk persistence",
+            "package" : null,
+            "symbol" : "Store.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README: 'dual-layered memory + disk caching architecture ... full offline storage'",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : "init(storage: StorageEngine, cacheIdentifier:) — persists items to a memory cache and a storage engine (disk persistence via Bodega StorageEngine, e.g. SQLiteStorageEngine) No explicit visionOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on visionOS.",
+            "package" : null,
+            "symbol" : "Store.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 244,
+            "note" : "doc: 'Removes all items from the store's memory cache and storage engine'",
+            "package" : null,
+            "symbol" : "Store.removeAll"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store+Identifiable.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : "init(storage: StorageEngine) — Identifiable convenience, same dual-layer disk persistence",
+            "package" : null,
+            "symbol" : "Store.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README: 'dual-layered memory + disk caching architecture ... full offline storage'",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : "init(storage: StorageEngine, cacheIdentifier:) — persists items to a memory cache and a storage engine (disk persistence via Bodega StorageEngine, e.g. SQLiteStorageEngine) No explicit watchOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on watchOS.",
+            "package" : null,
+            "symbol" : "Store.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 244,
+            "note" : "doc: 'Removes all items from the store's memory cache and storage engine'",
+            "package" : null,
+            "symbol" : "Store.removeAll"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store+Identifiable.swift",
+            "kind" : "symbol",
+            "line" : 39,
+            "note" : "init(storage: StorageEngine) — Identifiable convenience, same dual-layer disk persistence",
+            "package" : null,
+            "symbol" : "Store.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "README.md",
+            "kind" : "readme",
+            "line" : 0,
+            "note" : "README: 'dual-layered memory + disk caching architecture ... full offline storage'",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.in-memory",
+      "label" : "In-memory database"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Caveat: the in-memory layer is always paired with a StorageEngine; the only purely transient store in the public surface (previewStore) is DEBUG-only. Confidence lowered accordingly — Boutique is not a standalone in-memory database.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/mergesort/boutique",
+      "commit" : "ba6848908ca930521484727b2de2399f68413f40",
+      "firstParty" : false,
+      "name" : "boutique",
+      "surfaceDigest" : "fnv1a64:cbf2510d9226185f",
+      "version" : "3.0.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : "var items: [Item] — items are held in and read synchronously from the Store's in-memory cache layer (dual-layer memory + disk architecture)",
+            "package" : null,
+            "symbol" : "Store.items"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : "doc: 'persisting items to a memory cache' — memory layer is intrinsic to every Store",
+            "package" : null,
+            "symbol" : "Store.init"
+          },
+          {
+            "availability" : null,
+            "condition" : "DEBUG",
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 304,
+            "note" : "DEBUG-only transient Store that only holds items in memory (SwiftUI Previews); no files written to disk",
+            "package" : null,
+            "symbol" : "Store.previewStore"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Package.swift declares .iOS(.v17) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : "Surface digest resolves this decl present on linux (no os() conditions anywhere in the public surface), but the module unconditionally imports SwiftUI, Security, and Observation; Package.swift and README declare only iOS 17+/macOS 14+. Linux buildability unverified — honest answer is unknown.",
+            "package" : null,
+            "symbol" : "Store.items"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.65,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : "var items: [Item] — items are held in and read synchronously from the Store's in-memory cache layer (dual-layer memory + disk architecture) No explicit macCatalyst floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on macCatalyst.",
+            "package" : null,
+            "symbol" : "Store.items"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : "doc: 'persisting items to a memory cache' — memory layer is intrinsic to every Store",
+            "package" : null,
+            "symbol" : "Store.init"
+          },
+          {
+            "availability" : null,
+            "condition" : "DEBUG",
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 304,
+            "note" : "DEBUG-only transient Store that only holds items in memory (SwiftUI Previews); no files written to disk",
+            "package" : null,
+            "symbol" : "Store.previewStore"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : "var items: [Item] — items are held in and read synchronously from the Store's in-memory cache layer (dual-layer memory + disk architecture)",
+            "package" : null,
+            "symbol" : "Store.items"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : "doc: 'persisting items to a memory cache' — memory layer is intrinsic to every Store",
+            "package" : null,
+            "symbol" : "Store.init"
+          },
+          {
+            "availability" : null,
+            "condition" : "DEBUG",
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 304,
+            "note" : "DEBUG-only transient Store that only holds items in memory (SwiftUI Previews); no files written to disk",
+            "package" : null,
+            "symbol" : "Store.previewStore"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Package.swift declares .macOS(.v14) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : "var items: [Item] — items are held in and read synchronously from the Store's in-memory cache layer (dual-layer memory + disk architecture) No explicit tvOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on tvOS.",
+            "package" : null,
+            "symbol" : "Store.items"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : "doc: 'persisting items to a memory cache' — memory layer is intrinsic to every Store",
+            "package" : null,
+            "symbol" : "Store.init"
+          },
+          {
+            "availability" : null,
+            "condition" : "DEBUG",
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 304,
+            "note" : "DEBUG-only transient Store that only holds items in memory (SwiftUI Previews); no files written to disk",
+            "package" : null,
+            "symbol" : "Store.previewStore"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : "var items: [Item] — items are held in and read synchronously from the Store's in-memory cache layer (dual-layer memory + disk architecture) No explicit visionOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on visionOS.",
+            "package" : null,
+            "symbol" : "Store.items"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : "doc: 'persisting items to a memory cache' — memory layer is intrinsic to every Store",
+            "package" : null,
+            "symbol" : "Store.init"
+          },
+          {
+            "availability" : null,
+            "condition" : "DEBUG",
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 304,
+            "note" : "DEBUG-only transient Store that only holds items in memory (SwiftUI Previews); no files written to disk",
+            "package" : null,
+            "symbol" : "Store.previewStore"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 64,
+            "note" : "var items: [Item] — items are held in and read synchronously from the Store's in-memory cache layer (dual-layer memory + disk architecture) No explicit watchOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on watchOS.",
+            "package" : null,
+            "symbol" : "Store.items"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 102,
+            "note" : "doc: 'persisting items to a memory cache' — memory layer is intrinsic to every Store",
+            "package" : null,
+            "symbol" : "Store.init"
+          },
+          {
+            "availability" : null,
+            "condition" : "DEBUG",
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 304,
+            "note" : "DEBUG-only transient Store that only holds items in memory (SwiftUI Previews); no files written to disk",
+            "package" : null,
+            "symbol" : "Store.previewStore"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.key-value",
+      "label" : "Key-value storage"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "UserDefaults-backed @StoredValue (plus Keychain-backed @SecurelyStoredValue, recorded separately under storage.keychain).",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/mergesort/boutique",
+      "commit" : "ba6848908ca930521484727b2de2399f68413f40",
+      "firstParty" : false,
+      "name" : "boutique",
+      "surfaceDigest" : "fnv1a64:cbf2510d9226185f",
+      "version" : "3.0.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 56,
+            "note" : "@StoredValue property wrapper persists a single Item in UserDefaults",
+            "package" : null,
+            "symbol" : "StoredValue"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 73,
+            "note" : "init(wrappedValue:key:storage: UserDefaults = .standard) — key-value storage keyed by String",
+            "package" : null,
+            "symbol" : "StoredValue.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 135,
+            "note" : "func set(_ item: Item) — writes the value for the wrapper's key",
+            "package" : null,
+            "symbol" : "StoredValue.set"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 159,
+            "note" : "func reset() — resets the stored value to its default",
+            "package" : null,
+            "symbol" : "StoredValue.reset"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Package.swift declares .iOS(.v17) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 56,
+            "note" : "Surface digest resolves this decl present on linux (no os() conditions anywhere in the public surface), but the module unconditionally imports SwiftUI, Security, and Observation; Package.swift and README declare only iOS 17+/macOS 14+. Linux buildability unverified — honest answer is unknown.",
+            "package" : null,
+            "symbol" : "StoredValue"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 56,
+            "note" : "@StoredValue property wrapper persists a single Item in UserDefaults No explicit macCatalyst floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on macCatalyst.",
+            "package" : null,
+            "symbol" : "StoredValue"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 73,
+            "note" : "init(wrappedValue:key:storage: UserDefaults = .standard) — key-value storage keyed by String",
+            "package" : null,
+            "symbol" : "StoredValue.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 135,
+            "note" : "func set(_ item: Item) — writes the value for the wrapper's key",
+            "package" : null,
+            "symbol" : "StoredValue.set"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 159,
+            "note" : "func reset() — resets the stored value to its default",
+            "package" : null,
+            "symbol" : "StoredValue.reset"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 56,
+            "note" : "@StoredValue property wrapper persists a single Item in UserDefaults",
+            "package" : null,
+            "symbol" : "StoredValue"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 73,
+            "note" : "init(wrappedValue:key:storage: UserDefaults = .standard) — key-value storage keyed by String",
+            "package" : null,
+            "symbol" : "StoredValue.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 135,
+            "note" : "func set(_ item: Item) — writes the value for the wrapper's key",
+            "package" : null,
+            "symbol" : "StoredValue.set"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 159,
+            "note" : "func reset() — resets the stored value to its default",
+            "package" : null,
+            "symbol" : "StoredValue.reset"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Package.swift declares .macOS(.v14) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 56,
+            "note" : "@StoredValue property wrapper persists a single Item in UserDefaults No explicit tvOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on tvOS.",
+            "package" : null,
+            "symbol" : "StoredValue"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 73,
+            "note" : "init(wrappedValue:key:storage: UserDefaults = .standard) — key-value storage keyed by String",
+            "package" : null,
+            "symbol" : "StoredValue.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 135,
+            "note" : "func set(_ item: Item) — writes the value for the wrapper's key",
+            "package" : null,
+            "symbol" : "StoredValue.set"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 159,
+            "note" : "func reset() — resets the stored value to its default",
+            "package" : null,
+            "symbol" : "StoredValue.reset"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 56,
+            "note" : "@StoredValue property wrapper persists a single Item in UserDefaults No explicit visionOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on visionOS.",
+            "package" : null,
+            "symbol" : "StoredValue"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 73,
+            "note" : "init(wrappedValue:key:storage: UserDefaults = .standard) — key-value storage keyed by String",
+            "package" : null,
+            "symbol" : "StoredValue.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 135,
+            "note" : "func set(_ item: Item) — writes the value for the wrapper's key",
+            "package" : null,
+            "symbol" : "StoredValue.set"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 159,
+            "note" : "func reset() — resets the stored value to its default",
+            "package" : null,
+            "symbol" : "StoredValue.reset"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 56,
+            "note" : "@StoredValue property wrapper persists a single Item in UserDefaults No explicit watchOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on watchOS.",
+            "package" : null,
+            "symbol" : "StoredValue"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 73,
+            "note" : "init(wrappedValue:key:storage: UserDefaults = .standard) — key-value storage keyed by String",
+            "package" : null,
+            "symbol" : "StoredValue.init"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 135,
+            "note" : "func set(_ item: Item) — writes the value for the wrapper's key",
+            "package" : null,
+            "symbol" : "StoredValue.set"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 159,
+            "note" : "func reset() — resets the stored value to its default",
+            "package" : null,
+            "symbol" : "StoredValue.reset"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.keychain",
+      "label" : "Keychain storage"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Implementation imports the Security framework (Apple platforms only in practice); linux left unknown per rules — no os() guard evidence of absence in the surface.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/mergesort/boutique",
+      "commit" : "ba6848908ca930521484727b2de2399f68413f40",
+      "firstParty" : false,
+      "name" : "boutique",
+      "surfaceDigest" : "fnv1a64:cbf2510d9226185f",
+      "version" : "3.0.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 51,
+            "note" : "@SecurelyStoredValue property wrapper persists a single Item in the system Keychain",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 115,
+            "note" : "func set(_ value: Item?) throws — writes the value to the Keychain",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue.set"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 154,
+            "note" : "func remove() throws — removes the value from the Keychain",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue.remove"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Internal/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 40,
+            "note" : "typed wrapper for the keychain Service; KeychainGroup and KeychainError also public",
+            "package" : null,
+            "symbol" : "KeychainService"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Package.swift declares .iOS(.v17) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.15,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 51,
+            "note" : "Surface digest resolves this decl present on linux (no os() conditions anywhere in the public surface), but the module unconditionally imports SwiftUI, Security, and Observation; Package.swift and README declare only iOS 17+/macOS 14+. Linux buildability unverified — honest answer is unknown.",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 51,
+            "note" : "@SecurelyStoredValue property wrapper persists a single Item in the system Keychain No explicit macCatalyst floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on macCatalyst.",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 115,
+            "note" : "func set(_ value: Item?) throws — writes the value to the Keychain",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue.set"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 154,
+            "note" : "func remove() throws — removes the value from the Keychain",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue.remove"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Internal/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 40,
+            "note" : "typed wrapper for the keychain Service; KeychainGroup and KeychainError also public",
+            "package" : null,
+            "symbol" : "KeychainService"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 51,
+            "note" : "@SecurelyStoredValue property wrapper persists a single Item in the system Keychain",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 115,
+            "note" : "func set(_ value: Item?) throws — writes the value to the Keychain",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue.set"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 154,
+            "note" : "func remove() throws — removes the value from the Keychain",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue.remove"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Internal/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 40,
+            "note" : "typed wrapper for the keychain Service; KeychainGroup and KeychainError also public",
+            "package" : null,
+            "symbol" : "KeychainService"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Package.swift declares .macOS(.v14) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 51,
+            "note" : "@SecurelyStoredValue property wrapper persists a single Item in the system Keychain No explicit tvOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on tvOS.",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 115,
+            "note" : "func set(_ value: Item?) throws — writes the value to the Keychain",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue.set"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 154,
+            "note" : "func remove() throws — removes the value from the Keychain",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue.remove"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Internal/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 40,
+            "note" : "typed wrapper for the keychain Service; KeychainGroup and KeychainError also public",
+            "package" : null,
+            "symbol" : "KeychainService"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 51,
+            "note" : "@SecurelyStoredValue property wrapper persists a single Item in the system Keychain No explicit visionOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on visionOS.",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 115,
+            "note" : "func set(_ value: Item?) throws — writes the value to the Keychain",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue.set"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 154,
+            "note" : "func remove() throws — removes the value from the Keychain",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue.remove"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Internal/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 40,
+            "note" : "typed wrapper for the keychain Service; KeychainGroup and KeychainError also public",
+            "package" : null,
+            "symbol" : "KeychainService"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 51,
+            "note" : "@SecurelyStoredValue property wrapper persists a single Item in the system Keychain No explicit watchOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on watchOS.",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 115,
+            "note" : "func set(_ value: Item?) throws — writes the value to the Keychain",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue.set"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 154,
+            "note" : "func remove() throws — removes the value from the Keychain",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue.remove"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Internal/Keychain.swift",
+            "kind" : "symbol",
+            "line" : 40,
+            "note" : "typed wrapper for the keychain Service; KeychainGroup and KeychainError also public",
+            "package" : null,
+            "symbol" : "KeychainService"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.observation",
+      "label" : "Reactive queries / change tracking"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Store/StoredValue/SecurelyStoredValue are @Observable; change tracking via AsyncStream events plus Observation framework integration.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/mergesort/boutique",
+      "commit" : "ba6848908ca930521484727b2de2399f68413f40",
+      "firstParty" : false,
+      "name" : "boutique",
+      "surfaceDigest" : "fnv1a64:cbf2510d9226185f",
+      "version" : "3.0.2"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 272,
+            "note" : "var events: AsyncStream<StoreEvent<Item>> — granular events tracking API for all Store changes",
+            "package" : null,
+            "symbol" : "Store.events"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoreEvent.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : "event type carrying operation (.initialized/.loaded/.insert/.remove) and affected items",
+            "package" : null,
+            "symbol" : "StoreEvent"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 109,
+            "note" : "AsyncStream that emits all value changes of a @StoredValue",
+            "package" : null,
+            "symbol" : "StoredValue.values"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 89,
+            "note" : "AsyncStream that emits all value changes of a @SecurelyStoredValue",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue.values"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store+Observation.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : "SwiftUI View hook that fires when a Store finishes loading",
+            "package" : null,
+            "symbol" : "View.onStoreDidLoad"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Package.swift declares .iOS(.v17) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.2,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 272,
+            "note" : "Surface digest resolves this decl present on linux (no os() conditions anywhere in the public surface), but the module unconditionally imports SwiftUI, Security, and Observation; Package.swift and README declare only iOS 17+/macOS 14+. Linux buildability unverified — honest answer is unknown.",
+            "package" : null,
+            "symbol" : "Store.events"
+          }
+        ],
+        "status" : "unknown"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 272,
+            "note" : "var events: AsyncStream<StoreEvent<Item>> — granular events tracking API for all Store changes No explicit macCatalyst floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on macCatalyst.",
+            "package" : null,
+            "symbol" : "Store.events"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoreEvent.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : "event type carrying operation (.initialized/.loaded/.insert/.remove) and affected items",
+            "package" : null,
+            "symbol" : "StoreEvent"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 109,
+            "note" : "AsyncStream that emits all value changes of a @StoredValue",
+            "package" : null,
+            "symbol" : "StoredValue.values"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 89,
+            "note" : "AsyncStream that emits all value changes of a @SecurelyStoredValue",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue.values"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store+Observation.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : "SwiftUI View hook that fires when a Store finishes loading",
+            "package" : null,
+            "symbol" : "View.onStoreDidLoad"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 272,
+            "note" : "var events: AsyncStream<StoreEvent<Item>> — granular events tracking API for all Store changes",
+            "package" : null,
+            "symbol" : "Store.events"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoreEvent.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : "event type carrying operation (.initialized/.loaded/.insert/.remove) and affected items",
+            "package" : null,
+            "symbol" : "StoreEvent"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 109,
+            "note" : "AsyncStream that emits all value changes of a @StoredValue",
+            "package" : null,
+            "symbol" : "StoredValue.values"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 89,
+            "note" : "AsyncStream that emits all value changes of a @SecurelyStoredValue",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue.values"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store+Observation.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : "SwiftUI View hook that fires when a Store finishes loading",
+            "package" : null,
+            "symbol" : "View.onStoreDidLoad"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Package.swift declares .macOS(.v14) platform floor",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 272,
+            "note" : "var events: AsyncStream<StoreEvent<Item>> — granular events tracking API for all Store changes No explicit tvOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on tvOS.",
+            "package" : null,
+            "symbol" : "Store.events"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoreEvent.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : "event type carrying operation (.initialized/.loaded/.insert/.remove) and affected items",
+            "package" : null,
+            "symbol" : "StoreEvent"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 109,
+            "note" : "AsyncStream that emits all value changes of a @StoredValue",
+            "package" : null,
+            "symbol" : "StoredValue.values"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 89,
+            "note" : "AsyncStream that emits all value changes of a @SecurelyStoredValue",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue.values"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store+Observation.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : "SwiftUI View hook that fires when a Store finishes loading",
+            "package" : null,
+            "symbol" : "View.onStoreDidLoad"
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 272,
+            "note" : "var events: AsyncStream<StoreEvent<Item>> — granular events tracking API for all Store changes No explicit visionOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on visionOS.",
+            "package" : null,
+            "symbol" : "Store.events"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoreEvent.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : "event type carrying operation (.initialized/.loaded/.insert/.remove) and affected items",
+            "package" : null,
+            "symbol" : "StoreEvent"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 109,
+            "note" : "AsyncStream that emits all value changes of a @StoredValue",
+            "package" : null,
+            "symbol" : "StoredValue.values"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 89,
+            "note" : "AsyncStream that emits all value changes of a @SecurelyStoredValue",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue.values"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store+Observation.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : "SwiftUI View hook that fires when a Store finishes loading",
+            "package" : null,
+            "symbol" : "View.onStoreDidLoad"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store.swift",
+            "kind" : "symbol",
+            "line" : 272,
+            "note" : "var events: AsyncStream<StoreEvent<Item>> — granular events tracking API for all Store changes No explicit watchOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on watchOS.",
+            "package" : null,
+            "symbol" : "Store.events"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoreEvent.swift",
+            "kind" : "symbol",
+            "line" : 25,
+            "note" : "event type carrying operation (.initialized/.loaded/.insert/.remove) and affected items",
+            "package" : null,
+            "symbol" : "StoreEvent"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/StoredValue.swift",
+            "kind" : "symbol",
+            "line" : 109,
+            "note" : "AsyncStream that emits all value changes of a @StoredValue",
+            "package" : null,
+            "symbol" : "StoredValue.values"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/SecurelyStoredValue.swift",
+            "kind" : "symbol",
+            "line" : 89,
+            "note" : "AsyncStream that emits all value changes of a @SecurelyStoredValue",
+            "package" : null,
+            "symbol" : "SecurelyStoredValue.values"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Boutique/Store+Observation.swift",
+            "kind" : "symbol",
+            "line" : 4,
+            "note" : "SwiftUI View hook that fires when a Store finishes loading",
+            "package" : null,
+            "symbol" : "View.onStoreDidLoad"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

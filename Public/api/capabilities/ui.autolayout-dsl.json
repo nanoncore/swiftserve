@@ -1,0 +1,254 @@
+{
+  "aliases" : [
+    "constraints dsl",
+    "layout anchors",
+    "snap constraints"
+  ],
+  "id" : "ui.autolayout-dsl",
+  "label" : "Auto Layout DSL",
+  "packages" : [
+    {
+      "commit" : "e27a338a03a5f388de759da63f9baf7988ed9e00",
+      "notes" : "SnapKit is a chainable Auto Layout constraint DSL over NSLayoutConstraint (view.snp.makeConstraints { make.width.equalTo(...) }). Apple UIKit/AppKit platforms are well evidenced. watchOS and linux are marked unknown: the digest structurally resolves the !canImport(UIKit) (NSView/AppKit) branch as present there, but AppKit does not exist on those platforms and the digest has no os() guard marking them absent, so neither supported nor unsupported can be honestly claimed.",
+      "package" : "https://github.com/snapkit/snapkit",
+      "packageName" : "snapkit",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/ConstraintView+Extensions.swift",
+              "kind" : "symbol",
+              "line" : 148,
+              "note" : "Unconditional entry point to the constraint DSL (view.snp), present on iOS.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Sources/ConstraintView+Extensions.swift#L148",
+              "symbol" : "ConstraintView.snp"
+            },
+            {
+              "file" : "Sources/ConstraintViewDSL.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "note" : "Core DSL verb makeConstraints, unconditional.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Sources/ConstraintViewDSL.swift#L38",
+              "symbol" : "ConstraintViewDSL.makeConstraints"
+            },
+            {
+              "condition" : "canImport(UIKit)",
+              "file" : "Sources/ConstraintView.swift",
+              "kind" : "symbol",
+              "line" : 32,
+              "note" : "ConstraintView = UIView under canImport(UIKit); digest resolves it present on iOS.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Sources/ConstraintView.swift#L32",
+              "symbol" : "ConstraintView"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 31,
+              "note" : "Manifest declares .iOS(.v14) platform floor.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Package.swift#L31"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "condition" : "canImport(UIKit)",
+              "file" : "Sources/ConstraintView.swift",
+              "kind" : "symbol",
+              "line" : 32,
+              "note" : "UIView-backed DSL branch: digest gaps mark linux absent for this variant.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Sources/ConstraintView.swift#L32",
+              "symbol" : "ConstraintView"
+            },
+            {
+              "condition" : "!canImport(UIKit)",
+              "file" : "Sources/ConstraintView.swift",
+              "kind" : "symbol",
+              "line" : 34,
+              "note" : "Digest nominally resolves the NSView branch present on linux, but this is a structural canImport evaluation; AppKit is unavailable on Linux, so presence is not credible. No os() absence guard exists, so unsupported cannot be claimed.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Sources/ConstraintView.swift#L34",
+              "symbol" : "ConstraintView"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README requirements list only iOS 14.0+ / macOS 12.0+ / tvOS 14.0+ (not absence evidence).",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/README.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/ConstraintView+Extensions.swift",
+              "kind" : "symbol",
+              "line" : 148,
+              "note" : "Unconditional entry point to the constraint DSL (view.snp), present on macCatalyst.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Sources/ConstraintView+Extensions.swift#L148",
+              "symbol" : "ConstraintView.snp"
+            },
+            {
+              "condition" : "canImport(UIKit)",
+              "file" : "Sources/ConstraintView.swift",
+              "kind" : "symbol",
+              "line" : 32,
+              "note" : "ConstraintView = UIView under canImport(UIKit); digest gaps do not list macCatalyst, so present there.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Sources/ConstraintView.swift#L32",
+              "symbol" : "ConstraintView"
+            },
+            {
+              "file" : "Sources/ConstraintViewDSL.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "note" : "Core DSL verb makeConstraints, unconditional. No explicit macCatalyst manifest floor, hence slightly reduced confidence.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Sources/ConstraintViewDSL.swift#L38",
+              "symbol" : "ConstraintViewDSL.makeConstraints"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/ConstraintView+Extensions.swift",
+              "kind" : "symbol",
+              "line" : 148,
+              "note" : "Unconditional entry point to the constraint DSL (view.snp), present on macOS.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Sources/ConstraintView+Extensions.swift#L148",
+              "symbol" : "ConstraintView.snp"
+            },
+            {
+              "condition" : "!canImport(UIKit)",
+              "file" : "Sources/ConstraintView.swift",
+              "kind" : "symbol",
+              "line" : 34,
+              "note" : "ConstraintView = NSView under !canImport(UIKit); digest resolves it present on macOS.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Sources/ConstraintView.swift#L34",
+              "symbol" : "ConstraintView"
+            },
+            {
+              "file" : "Sources/ConstraintViewDSL.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "note" : "Core DSL verb makeConstraints, unconditional.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Sources/ConstraintViewDSL.swift#L38",
+              "symbol" : "ConstraintViewDSL.makeConstraints"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 32,
+              "note" : "Manifest declares .macOS(.v12) platform floor; README: 'a DSL to make Auto Layout easy on both iOS and OS X'.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Package.swift#L32"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/ConstraintView+Extensions.swift",
+              "kind" : "symbol",
+              "line" : 148,
+              "note" : "Unconditional entry point to the constraint DSL (view.snp), present on tvOS.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Sources/ConstraintView+Extensions.swift#L148",
+              "symbol" : "ConstraintView.snp"
+            },
+            {
+              "condition" : "canImport(UIKit)",
+              "file" : "Sources/ConstraintView.swift",
+              "kind" : "symbol",
+              "line" : 32,
+              "note" : "ConstraintView = UIView under canImport(UIKit); digest resolves it present on tvOS.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Sources/ConstraintView.swift#L32",
+              "symbol" : "ConstraintView"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 33,
+              "note" : "Manifest declares .tvOS(.v14) platform floor.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Package.swift#L33"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/ConstraintView+Extensions.swift",
+              "kind" : "symbol",
+              "line" : 148,
+              "note" : "Unconditional entry point to the constraint DSL (view.snp), present on visionOS.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Sources/ConstraintView+Extensions.swift#L148",
+              "symbol" : "ConstraintView.snp"
+            },
+            {
+              "condition" : "canImport(UIKit)",
+              "file" : "Sources/ConstraintView.swift",
+              "kind" : "symbol",
+              "line" : 32,
+              "note" : "ConstraintView = UIView under canImport(UIKit); digest gaps do not list visionOS, so present there.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Sources/ConstraintView.swift#L32",
+              "symbol" : "ConstraintView"
+            },
+            {
+              "file" : "Sources/ConstraintViewDSL.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "note" : "Core DSL verb makeConstraints, unconditional. No visionOS manifest floor, hence slightly reduced confidence.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Sources/ConstraintViewDSL.swift#L38",
+              "symbol" : "ConstraintViewDSL.makeConstraints"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.25,
+          "evidence" : [
+            {
+              "condition" : "canImport(UIKit)",
+              "file" : "Sources/ConstraintView.swift",
+              "kind" : "symbol",
+              "line" : 32,
+              "note" : "UIView-backed DSL branch: digest gaps mark watchOS absent for this variant.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Sources/ConstraintView.swift#L32",
+              "symbol" : "ConstraintView"
+            },
+            {
+              "condition" : "!canImport(UIKit)",
+              "file" : "Sources/ConstraintView.swift",
+              "kind" : "symbol",
+              "line" : 34,
+              "note" : "Digest nominally resolves the NSView branch present on watchOS, but this is a structural canImport evaluation; AppKit/NSView is not an available SDK type on watchOS, so presence is not credible.",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Sources/ConstraintView.swift#L34",
+              "symbol" : "ConstraintView"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 30,
+              "note" : "Manifest lists only iOS/macOS/tvOS floors; no watchOS entry (not absence evidence).",
+              "permalink" : "https://github.com/snapkit/snapkit/blob/6.0.0/Package.swift#L30"
+            }
+          ],
+          "status" : "unknown"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "snapkit",
+      "version" : "6.0.0"
+    }
+  ]
+}

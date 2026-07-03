@@ -1,0 +1,646 @@
+[
+  {
+    "capability" : {
+      "id" : "storage.concurrency",
+      "label" : "Concurrent access"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Concurrent access is via event-loop connection pooling (taxonomy alias 'database pool'): maxConnectionsPerEventLoop and connectionPoolTimeout are public factory parameters, with AsyncKit pooling per the README. No WAL-mode or reader/writer API is surfaced by this driver itself, hence capped confidence.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/vapor/fluent-sqlite-driver",
+      "commit" : "e227d94dc3fe7099a096ac2ca28cad1f69bd8d5b",
+      "firstParty" : false,
+      "name" : "fluent-sqlite-driver",
+      "surfaceDigest" : "fnv1a64:35a9ff4c0021801d",
+      "version" : "4.9.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Connection pooling surfaced directly in the public API: maxConnectionsPerEventLoop: Int and connectionPoolTimeout: TimeAmount parameters. Pool-based concurrent access, not WAL-specific.",
+            "package" : null,
+            "symbol" : "DatabaseConfigurationFactory.sqlite"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Manifest declares .iOS(.v13) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Connection pooling parameters (maxConnectionsPerEventLoop, connectionPoolTimeout); unconditional decl, no linux gap in surface. Vapor server-side package, CI tested on Linux.",
+            "package" : null,
+            "symbol" : "DatabaseConfigurationFactory.sqlite"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Connection pooling parameters (maxConnectionsPerEventLoop, connectionPoolTimeout); unconditional decl, no macCatalyst gap in surface. No explicit macCatalyst manifest floor, so confidence lowered.",
+            "package" : null,
+            "symbol" : "DatabaseConfigurationFactory.sqlite"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Connection pooling surfaced directly in the public API: maxConnectionsPerEventLoop: Int and connectionPoolTimeout: TimeAmount parameters. Pool-based concurrent access, not WAL-specific.",
+            "package" : null,
+            "symbol" : "DatabaseConfigurationFactory.sqlite"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Manifest declares .macOS(.v10_15) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Connection pooling surfaced directly in the public API: maxConnectionsPerEventLoop: Int and connectionPoolTimeout: TimeAmount parameters. Pool-based concurrent access, not WAL-specific.",
+            "package" : null,
+            "symbol" : "DatabaseConfigurationFactory.sqlite"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Manifest declares .tvOS(.v13) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.6,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Connection pooling parameters (maxConnectionsPerEventLoop, connectionPoolTimeout); unconditional decl, no visionOS gap in surface. No explicit visionOS manifest floor, so confidence lowered.",
+            "package" : null,
+            "symbol" : "DatabaseConfigurationFactory.sqlite"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Connection pooling surfaced directly in the public API: maxConnectionsPerEventLoop: Int and connectionPoolTimeout: TimeAmount parameters. Pool-based concurrent access, not WAL-specific.",
+            "package" : null,
+            "symbol" : "DatabaseConfigurationFactory.sqlite"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Manifest declares .watchOS(.v6) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+      "https://github.com/vapor/fluent"
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.in-memory",
+      "label" : "In-memory database"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "In-memory SQLite is a first-class configuration: SQLiteConfiguration.memory is public and every DatabaseConfigurationFactory.sqlite overload defaults to .memory.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/vapor/fluent-sqlite-driver",
+      "commit" : "e227d94dc3fe7099a096ac2ca28cad1f69bd8d5b",
+      "firstParty" : false,
+      "name" : "fluent-sqlite-driver",
+      "surfaceDigest" : "fnv1a64:35a9ff4c0021801d",
+      "version" : "4.9.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 125,
+            "note" : "Dedicated in-memory SQLite configuration (storage: .memory); unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "SQLiteConfiguration.memory"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : "Factory defaults to .memory configuration (config: SQLiteConfiguration = .memory).",
+            "package" : null,
+            "symbol" : "DatabaseConfigurationFactory.sqlite"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Manifest declares .iOS(.v13) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 125,
+            "note" : "Unconditional public decl; surface digest lists no linux gap. Vapor server-side package, CI tested on Linux.",
+            "package" : null,
+            "symbol" : "SQLiteConfiguration.memory"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : "Factory defaults to .memory configuration (config: SQLiteConfiguration = .memory).",
+            "package" : null,
+            "symbol" : "DatabaseConfigurationFactory.sqlite"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 125,
+            "note" : "Unconditional public decl; surface digest lists no macCatalyst gap. No explicit macCatalyst manifest floor, so confidence lowered.",
+            "package" : null,
+            "symbol" : "SQLiteConfiguration.memory"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 125,
+            "note" : "Dedicated in-memory SQLite configuration (storage: .memory); unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "SQLiteConfiguration.memory"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 14,
+            "note" : "Factory defaults to .memory configuration (config: SQLiteConfiguration = .memory).",
+            "package" : null,
+            "symbol" : "DatabaseConfigurationFactory.sqlite"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Manifest declares .macOS(.v10_15) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 125,
+            "note" : "Dedicated in-memory SQLite configuration (storage: .memory); unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "SQLiteConfiguration.memory"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Manifest declares .tvOS(.v13) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 125,
+            "note" : "Unconditional public decl; surface digest lists no visionOS gap. No explicit visionOS manifest floor, so confidence lowered.",
+            "package" : null,
+            "symbol" : "SQLiteConfiguration.memory"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 125,
+            "note" : "Dedicated in-memory SQLite configuration (storage: .memory); unconditional, no platform gaps.",
+            "package" : null,
+            "symbol" : "SQLiteConfiguration.memory"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Manifest declares .watchOS(.v6) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+      "https://github.com/vapor/fluent"
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "storage.sqlite",
+      "label" : "SQLite access"
+    },
+    "labeledAt" : "2026-07-03T13:00:00Z",
+    "labeledBy" : "claude-code-session",
+    "notes" : "Fluent ORM driver for SQLite via SQLiteKit/SQLiteNIO (bundled SQLite, no system dependency). Entire 18-decl surface is unconditional across platforms.",
+    "package" : {
+      "aliases" : [
+
+      ],
+      "canonicalURL" : "https://github.com/vapor/fluent-sqlite-driver",
+      "commit" : "e227d94dc3fe7099a096ac2ca28cad1f69bd8d5b",
+      "firstParty" : false,
+      "name" : "fluent-sqlite-driver",
+      "surfaceDigest" : "fnv1a64:35a9ff4c0021801d",
+      "version" : "4.9.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/Exports.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Unconditional public decl; no platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "DatabaseID.sqlite"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Primary SQLite database configuration factory.",
+            "package" : null,
+            "symbol" : "DatabaseConfigurationFactory.sqlite"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 121,
+            "note" : "File-backed SQLite database configuration.",
+            "package" : null,
+            "symbol" : "SQLiteConfiguration.file"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 8,
+            "note" : "Manifest declares .iOS(.v13) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "linux" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/Exports.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Unconditional public decl; surface digest lists no linux gap. Vapor server-side package, CI tested on Linux.",
+            "package" : null,
+            "symbol" : "DatabaseID.sqlite"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Primary SQLite database configuration factory.",
+            "package" : null,
+            "symbol" : "DatabaseConfigurationFactory.sqlite"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macCatalyst" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/Exports.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Unconditional public decl; surface digest lists no macCatalyst gap. No explicit macCatalyst manifest floor, so confidence lowered.",
+            "package" : null,
+            "symbol" : "DatabaseID.sqlite"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Primary SQLite database configuration factory.",
+            "package" : null,
+            "symbol" : "DatabaseConfigurationFactory.sqlite"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/Exports.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Unconditional public decl; no platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "DatabaseID.sqlite"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Primary SQLite database configuration factory.",
+            "package" : null,
+            "symbol" : "DatabaseConfigurationFactory.sqlite"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 7,
+            "note" : "Manifest declares .macOS(.v10_15) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "tvOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/Exports.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Unconditional public decl; no platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "DatabaseID.sqlite"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Primary SQLite database configuration factory.",
+            "package" : null,
+            "symbol" : "DatabaseConfigurationFactory.sqlite"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 10,
+            "note" : "Manifest declares .tvOS(.v13) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      },
+      "visionOS" : {
+        "confidence" : 0.7,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/Exports.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Unconditional public decl; surface digest lists no visionOS gap. No explicit visionOS manifest floor, so confidence lowered.",
+            "package" : null,
+            "symbol" : "DatabaseID.sqlite"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Primary SQLite database configuration factory.",
+            "package" : null,
+            "symbol" : "DatabaseConfigurationFactory.sqlite"
+          }
+        ],
+        "status" : "supported"
+      },
+      "watchOS" : {
+        "confidence" : 0.9,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/Exports.swift",
+            "kind" : "symbol",
+            "line" : 5,
+            "note" : "Unconditional public decl; no platform gaps in surface digest.",
+            "package" : null,
+            "symbol" : "DatabaseID.sqlite"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/FluentSQLiteDriver/FluentSQLiteConfiguration.swift",
+            "kind" : "symbol",
+            "line" : 71,
+            "note" : "Primary SQLite database configuration factory.",
+            "package" : null,
+            "symbol" : "DatabaseConfigurationFactory.sqlite"
+          },
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Package.swift",
+            "kind" : "manifestPlatforms",
+            "line" : 9,
+            "note" : "Manifest declares .watchOS(.v6) floor.",
+            "package" : null,
+            "symbol" : null
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+      "https://github.com/vapor/fluent"
+    ]
+  }
+]

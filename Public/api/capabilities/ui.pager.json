@@ -1,0 +1,198 @@
+{
+  "aliases" : [
+    "carousel",
+    "page view",
+    "swipeable pages"
+  ],
+  "id" : "ui.pager",
+  "label" : "Paging / carousel",
+  "packages" : [
+    {
+      "commit" : "4ddc04c801aac143090bb14cf26603a3bf9c74cb",
+      "notes" : "SwiftUIPager is a pure-SwiftUI pager/carousel; the core Pager view is unconditional across Apple platforms. tvOS lacks the !os(tvOS)-gated drag modifiers (dragForwardOnly, sensitivity, delaysTouches, bounces, onDragging*), so interaction options are reduced there. watchOS adds Digital Crown paging. Blind spot: 1 ObjC file unparsed by extraction.",
+      "package" : "https://github.com/fermoya/swiftuipager",
+      "packageName" : "swiftuipager",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPager/Pager.swift",
+              "kind" : "symbol",
+              "line" : 34,
+              "note" : "Core paging view, declared unconditionally; no iOS gap in surface digest",
+              "permalink" : "https://github.com/fermoya/swiftuipager/blob/2.5.0/Sources/SwiftUIPager/Pager.swift#L34",
+              "symbol" : "Pager"
+            },
+            {
+              "file" : "Sources/SwiftUIPager/Pager.swift",
+              "kind" : "symbol",
+              "line" : 181,
+              "note" : "Public initializer present on iOS",
+              "permalink" : "https://github.com/fermoya/swiftuipager/blob/2.5.0/Sources/SwiftUIPager/Pager.swift#L181",
+              "symbol" : "Pager.init"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Manifest declares .iOS(.v13)",
+              "permalink" : "https://github.com/fermoya/swiftuipager/blob/2.5.0/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPager/Pager.swift",
+              "kind" : "symbol",
+              "line" : 34,
+              "note" : "Surface digest lists no linux gap, but the Swift-only extraction does not model the SwiftUI import, which is not available on Linux; no build verdict, so presence cannot be trusted here",
+              "permalink" : "https://github.com/fermoya/swiftuipager/blob/2.5.0/Sources/SwiftUIPager/Pager.swift#L34",
+              "symbol" : "Pager"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPager/Pager.swift",
+              "kind" : "symbol",
+              "line" : 34,
+              "note" : "No macCatalyst gap in surface digest; the extractor does model macCatalyst (digital-crown decls list it absent), so gap absence here is a genuine presence signal",
+              "permalink" : "https://github.com/fermoya/swiftuipager/blob/2.5.0/Sources/SwiftUIPager/Pager.swift#L34",
+              "symbol" : "Pager"
+            },
+            {
+              "file" : "Sources/SwiftUIPager/Pager.swift",
+              "kind" : "symbol",
+              "line" : 181,
+              "note" : "Public initializer present on macCatalyst",
+              "permalink" : "https://github.com/fermoya/swiftuipager/blob/2.5.0/Sources/SwiftUIPager/Pager.swift#L181",
+              "symbol" : "Pager.init"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPager/Pager.swift",
+              "kind" : "symbol",
+              "line" : 34,
+              "note" : "Core paging view, declared unconditionally; no macOS gap in surface digest",
+              "permalink" : "https://github.com/fermoya/swiftuipager/blob/2.5.0/Sources/SwiftUIPager/Pager.swift#L34",
+              "symbol" : "Pager"
+            },
+            {
+              "file" : "Sources/SwiftUIPager/Pager.swift",
+              "kind" : "symbol",
+              "line" : 181,
+              "note" : "Public initializer present on macOS",
+              "permalink" : "https://github.com/fermoya/swiftuipager/blob/2.5.0/Sources/SwiftUIPager/Pager.swift#L181",
+              "symbol" : "Pager.init"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Manifest declares .macOS(.v10_15)",
+              "permalink" : "https://github.com/fermoya/swiftuipager/blob/2.5.0/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPager/Pager.swift",
+              "kind" : "symbol",
+              "line" : 34,
+              "note" : "Core paging view has no tvOS gap; drag-gesture modifiers (e.g. Pager.dragForwardOnly, Pager.sensitivity) are gated !os(tvOS), so swipe interaction is reduced on tvOS",
+              "permalink" : "https://github.com/fermoya/swiftuipager/blob/2.5.0/Sources/SwiftUIPager/Pager.swift#L34",
+              "symbol" : "Pager"
+            },
+            {
+              "file" : "Sources/SwiftUIPager/Pager.swift",
+              "kind" : "symbol",
+              "line" : 181,
+              "note" : "Public initializer present on tvOS",
+              "permalink" : "https://github.com/fermoya/swiftuipager/blob/2.5.0/Sources/SwiftUIPager/Pager.swift#L181",
+              "symbol" : "Pager.init"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 12,
+              "note" : "Manifest declares .tvOS(.v13)",
+              "permalink" : "https://github.com/fermoya/swiftuipager/blob/2.5.0/Package.swift#L12"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.75,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPager/Pager.swift",
+              "kind" : "symbol",
+              "line" : 34,
+              "note" : "Core paging view has no visionOS gap in surface digest; no visionOS-specific handling in source and no manifest floor, hence reduced confidence",
+              "permalink" : "https://github.com/fermoya/swiftuipager/blob/2.5.0/Sources/SwiftUIPager/Pager.swift#L34",
+              "symbol" : "Pager"
+            },
+            {
+              "file" : "Sources/SwiftUIPager/PageConfiguration/PagingAnimation.swift",
+              "kind" : "symbol",
+              "line" : 11,
+              "note" : "Trailing-* availability covers visionOS",
+              "permalink" : "https://github.com/fermoya/swiftuipager/blob/2.5.0/Sources/SwiftUIPager/PageConfiguration/PagingAnimation.swift#L11",
+              "symbol" : "DraggingAnimation"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SwiftUIPager/Pager.swift",
+              "kind" : "symbol",
+              "line" : 34,
+              "note" : "Core paging view, declared unconditionally; no watchOS gap in surface digest",
+              "permalink" : "https://github.com/fermoya/swiftuipager/blob/2.5.0/Sources/SwiftUIPager/Pager.swift#L34",
+              "symbol" : "Pager"
+            },
+            {
+              "file" : "Sources/SwiftUIPager/Pager+Buildable.swift",
+              "kind" : "symbol",
+              "line" : 168,
+              "note" : "watchOS-specific paging input (Digital Crown); digest gaps mark it absent on iOS/macOS/macCatalyst/tvOS but present on watchOS",
+              "permalink" : "https://github.com/fermoya/swiftuipager/blob/2.5.0/Sources/SwiftUIPager/Pager+Buildable.swift#L168",
+              "symbol" : "Pager.onDigitalCrownRotated"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 11,
+              "note" : "Manifest declares .watchOS(.v6)",
+              "permalink" : "https://github.com/fermoya/swiftuipager/blob/2.5.0/Package.swift#L11"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "swiftuipager",
+      "version" : "2.5.0"
+    }
+  ]
+}

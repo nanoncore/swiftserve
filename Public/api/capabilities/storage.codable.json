@@ -1,0 +1,1474 @@
+{
+  "aliases" : [
+    "record types",
+    "persist codable",
+    "struct persistence"
+  ],
+  "id" : "storage.codable",
+  "label" : "Codable persistence",
+  "packages" : [
+    {
+      "commit" : "24e47109e31b2031cb26e25cc1b81b607496066c",
+      "notes" : "Any Codable value is persistable via TransformerFactory.forCodable / Storage.transformCodable, wrapped in TypeWrapper; README: 'utilizes Codable in Swift 4 to perform serialization'.",
+      "package" : "https://github.com/hyperoslo/cache",
+      "packageName" : "cache",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Library/TransformerFactory.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Library/TransformerFactory.swift#L28",
+              "symbol" : "TransformerFactory.forCodable"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage+Transform.swift",
+              "kind" : "symbol",
+              "line" : 19,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage+Transform.swift#L19",
+              "symbol" : "Storage.transformCodable"
+            },
+            {
+              "file" : "Source/Shared/Library/TypeWrapper.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Library/TypeWrapper.swift#L4",
+              "symbol" : "TypeWrapper"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Library/TransformerFactory.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "note" : "Surface digest resolves this decl present on linux (no gap); source is Foundation-only under Source/Shared with no os() guards, but there is no Linux CI or README corroboration - confidence reduced.",
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Library/TransformerFactory.swift#L28",
+              "symbol" : "TransformerFactory.forCodable"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage+Transform.swift",
+              "kind" : "symbol",
+              "line" : 19,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage+Transform.swift#L19",
+              "symbol" : "Storage.transformCodable"
+            },
+            {
+              "file" : "Source/Shared/Library/TypeWrapper.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Library/TypeWrapper.swift#L4",
+              "symbol" : "TypeWrapper"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Library/TransformerFactory.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Library/TransformerFactory.swift#L28",
+              "symbol" : "TransformerFactory.forCodable"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage+Transform.swift",
+              "kind" : "symbol",
+              "line" : 19,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage+Transform.swift#L19",
+              "symbol" : "Storage.transformCodable"
+            },
+            {
+              "file" : "Source/Shared/Library/TypeWrapper.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Library/TypeWrapper.swift#L4",
+              "symbol" : "TypeWrapper"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Library/TransformerFactory.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Library/TransformerFactory.swift#L28",
+              "symbol" : "TransformerFactory.forCodable"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage+Transform.swift",
+              "kind" : "symbol",
+              "line" : 19,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage+Transform.swift#L19",
+              "symbol" : "Storage.transformCodable"
+            },
+            {
+              "file" : "Source/Shared/Library/TypeWrapper.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Library/TypeWrapper.swift#L4",
+              "symbol" : "TypeWrapper"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Library/TransformerFactory.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Library/TransformerFactory.swift#L28",
+              "symbol" : "TransformerFactory.forCodable"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage+Transform.swift",
+              "kind" : "symbol",
+              "line" : 19,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage+Transform.swift#L19",
+              "symbol" : "Storage.transformCodable"
+            },
+            {
+              "file" : "Source/Shared/Library/TypeWrapper.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Library/TypeWrapper.swift#L4",
+              "symbol" : "TypeWrapper"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Library/TransformerFactory.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Library/TransformerFactory.swift#L28",
+              "symbol" : "TransformerFactory.forCodable"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage+Transform.swift",
+              "kind" : "symbol",
+              "line" : 19,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage+Transform.swift#L19",
+              "symbol" : "Storage.transformCodable"
+            },
+            {
+              "file" : "Source/Shared/Library/TypeWrapper.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Library/TypeWrapper.swift#L4",
+              "symbol" : "TypeWrapper"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Source/Shared/Library/TransformerFactory.swift",
+              "kind" : "symbol",
+              "line" : 28,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Library/TransformerFactory.swift#L28",
+              "symbol" : "TransformerFactory.forCodable"
+            },
+            {
+              "file" : "Source/Shared/Storage/Storage+Transform.swift",
+              "kind" : "symbol",
+              "line" : 19,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Storage/Storage+Transform.swift#L19",
+              "symbol" : "Storage.transformCodable"
+            },
+            {
+              "file" : "Source/Shared/Library/TypeWrapper.swift",
+              "kind" : "symbol",
+              "line" : 4,
+              "permalink" : "https://github.com/hyperoslo/cache/blob/7.4.0/Source/Shared/Library/TypeWrapper.swift#L4",
+              "symbol" : "TypeWrapper"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "cache",
+      "version" : "7.4.0"
+    },
+    {
+      "commit" : "b83108d10f42680d78f23fe4d4d80fc88dab3212",
+      "notes" : "Codable bridging is first-class: FetchableRecordDecoder (the Decodable row decoder) plus the FetchableRecord / PersistableRecord / EncodableRecord protocols are unconditional on all platforms. Codable structs conforming to these protocols get persistence and fetching for free (as shown in the README quick start).",
+      "package" : "https://github.com/groue/grdb.swift",
+      "packageName" : "grdb.swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/Record/FetchableRecord+Decodable.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/FetchableRecord+Decodable.swift#L71",
+              "symbol" : "FetchableRecordDecoder"
+            },
+            {
+              "file" : "GRDB/Record/FetchableRecord.swift",
+              "kind" : "symbol",
+              "line" : 110,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/FetchableRecord.swift#L110",
+              "symbol" : "FetchableRecord"
+            },
+            {
+              "file" : "GRDB/Record/PersistableRecord.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/PersistableRecord.swift#L44",
+              "symbol" : "PersistableRecord"
+            },
+            {
+              "file" : "GRDB/Record/EncodableRecord.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/EncodableRecord.swift#L42",
+              "symbol" : "EncodableRecord"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 51,
+              "note" : "Package.swift declares iOS minimum .v13",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L51"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "GRDB/Record/FetchableRecord+Decodable.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/FetchableRecord+Decodable.swift#L71",
+              "symbol" : "FetchableRecordDecoder"
+            },
+            {
+              "file" : "GRDB/Record/FetchableRecord.swift",
+              "kind" : "symbol",
+              "line" : 110,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/FetchableRecord.swift#L110",
+              "symbol" : "FetchableRecord"
+            },
+            {
+              "file" : "GRDB/Record/PersistableRecord.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/PersistableRecord.swift#L44",
+              "symbol" : "PersistableRecord"
+            },
+            {
+              "file" : "GRDB/Record/EncodableRecord.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/EncodableRecord.swift#L42",
+              "symbol" : "EncodableRecord"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "GRDB/Record/FetchableRecord+Decodable.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/FetchableRecord+Decodable.swift#L71",
+              "symbol" : "FetchableRecordDecoder"
+            },
+            {
+              "file" : "GRDB/Record/FetchableRecord.swift",
+              "kind" : "symbol",
+              "line" : 110,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/FetchableRecord.swift#L110",
+              "symbol" : "FetchableRecord"
+            },
+            {
+              "file" : "GRDB/Record/PersistableRecord.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/PersistableRecord.swift#L44",
+              "symbol" : "PersistableRecord"
+            },
+            {
+              "file" : "GRDB/Record/EncodableRecord.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/EncodableRecord.swift#L42",
+              "symbol" : "EncodableRecord"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/Record/FetchableRecord+Decodable.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/FetchableRecord+Decodable.swift#L71",
+              "symbol" : "FetchableRecordDecoder"
+            },
+            {
+              "file" : "GRDB/Record/FetchableRecord.swift",
+              "kind" : "symbol",
+              "line" : 110,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/FetchableRecord.swift#L110",
+              "symbol" : "FetchableRecord"
+            },
+            {
+              "file" : "GRDB/Record/PersistableRecord.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/PersistableRecord.swift#L44",
+              "symbol" : "PersistableRecord"
+            },
+            {
+              "file" : "GRDB/Record/EncodableRecord.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/EncodableRecord.swift#L42",
+              "symbol" : "EncodableRecord"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 52,
+              "note" : "Package.swift declares macOS minimum .v10_15",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L52"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/Record/FetchableRecord+Decodable.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/FetchableRecord+Decodable.swift#L71",
+              "symbol" : "FetchableRecordDecoder"
+            },
+            {
+              "file" : "GRDB/Record/FetchableRecord.swift",
+              "kind" : "symbol",
+              "line" : 110,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/FetchableRecord.swift#L110",
+              "symbol" : "FetchableRecord"
+            },
+            {
+              "file" : "GRDB/Record/PersistableRecord.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/PersistableRecord.swift#L44",
+              "symbol" : "PersistableRecord"
+            },
+            {
+              "file" : "GRDB/Record/EncodableRecord.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/EncodableRecord.swift#L42",
+              "symbol" : "EncodableRecord"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 53,
+              "note" : "Package.swift declares tvOS minimum .v13",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L53"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "GRDB/Record/FetchableRecord+Decodable.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/FetchableRecord+Decodable.swift#L71",
+              "symbol" : "FetchableRecordDecoder"
+            },
+            {
+              "file" : "GRDB/Record/FetchableRecord.swift",
+              "kind" : "symbol",
+              "line" : 110,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/FetchableRecord.swift#L110",
+              "symbol" : "FetchableRecord"
+            },
+            {
+              "file" : "GRDB/Record/PersistableRecord.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/PersistableRecord.swift#L44",
+              "symbol" : "PersistableRecord"
+            },
+            {
+              "file" : "GRDB/Record/EncodableRecord.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/EncodableRecord.swift#L42",
+              "symbol" : "EncodableRecord"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "GRDB/Record/FetchableRecord+Decodable.swift",
+              "kind" : "symbol",
+              "line" : 71,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/FetchableRecord+Decodable.swift#L71",
+              "symbol" : "FetchableRecordDecoder"
+            },
+            {
+              "file" : "GRDB/Record/FetchableRecord.swift",
+              "kind" : "symbol",
+              "line" : 110,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/FetchableRecord.swift#L110",
+              "symbol" : "FetchableRecord"
+            },
+            {
+              "file" : "GRDB/Record/PersistableRecord.swift",
+              "kind" : "symbol",
+              "line" : 44,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/PersistableRecord.swift#L44",
+              "symbol" : "PersistableRecord"
+            },
+            {
+              "file" : "GRDB/Record/EncodableRecord.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/GRDB/Record/EncodableRecord.swift#L42",
+              "symbol" : "EncodableRecord"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 54,
+              "note" : "Package.swift declares watchOS minimum .v7",
+              "permalink" : "https://github.com/groue/grdb.swift/blob/v7.11.1/Package.swift#L54"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "grdb.swift",
+      "version" : "v7.11.1"
+    },
+    {
+      "commit" : "964c300fb0736699ce945c9edb56ecd62eba27a3",
+      "notes" : "Coding.swift surfaces Encodable insert/insertMany/upsert/update and Decodable Row.decode; all unconditional.",
+      "package" : "https://github.com/stephencelis/sqlite.swift",
+      "packageName" : "sqlite.swift",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L42",
+              "symbol" : "QueryType.insert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 87,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L87",
+              "symbol" : "QueryType.insertMany"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 123,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L123",
+              "symbol" : "QueryType.upsert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 161,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L161",
+              "symbol" : "Row.decode"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 39,
+              "note" : "Package.swift declares a iOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L39"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L42",
+              "symbol" : "QueryType.insert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 87,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L87",
+              "symbol" : "QueryType.insertMany"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 123,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L123",
+              "symbol" : "QueryType.upsert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 161,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L161",
+              "symbol" : "Row.decode"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 31,
+              "note" : "Package.swift has an explicit #if os(Linux) branch enabling the SQLiteSwiftCSQLite default trait (bundled SQLite for Linux builds).",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L31"
+            },
+            {
+              "file" : "README.md",
+              "kind" : "readme",
+              "line" : 23,
+              "note" : "README: 'Works on Linux (with some limitations)'.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/README.md#L23"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.85,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L42",
+              "symbol" : "QueryType.insert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 87,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L87",
+              "symbol" : "QueryType.insertMany"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 123,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L123",
+              "symbol" : "QueryType.upsert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 161,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L161",
+              "symbol" : "Row.decode"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 38,
+              "note" : "Package.swift does not declare a macCatalyst floor, but all anchor symbols are unconditional (no platform gaps) in the extracted surface.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L38"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L42",
+              "symbol" : "QueryType.insert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 87,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L87",
+              "symbol" : "QueryType.insertMany"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 123,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L123",
+              "symbol" : "QueryType.upsert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 161,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L161",
+              "symbol" : "Row.decode"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 40,
+              "note" : "Package.swift declares a macOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L40"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L42",
+              "symbol" : "QueryType.insert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 87,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L87",
+              "symbol" : "QueryType.insertMany"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 123,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L123",
+              "symbol" : "QueryType.upsert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 161,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L161",
+              "symbol" : "Row.decode"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 42,
+              "note" : "Package.swift declares a tvOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L42"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L42",
+              "symbol" : "QueryType.insert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 87,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L87",
+              "symbol" : "QueryType.insertMany"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 123,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L123",
+              "symbol" : "QueryType.upsert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 161,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L161",
+              "symbol" : "Row.decode"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 43,
+              "note" : "Package.swift declares a visionOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L43"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 42,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L42",
+              "symbol" : "QueryType.insert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 87,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L87",
+              "symbol" : "QueryType.insertMany"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 123,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L123",
+              "symbol" : "QueryType.upsert"
+            },
+            {
+              "file" : "Sources/SQLite/Typed/Coding.swift",
+              "kind" : "symbol",
+              "line" : 161,
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Sources/SQLite/Typed/Coding.swift#L161",
+              "symbol" : "Row.decode"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 41,
+              "note" : "Package.swift declares a watchOS platform floor.",
+              "permalink" : "https://github.com/stephencelis/sqlite.swift/blob/0.16.0/Package.swift#L41"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "sqlite.swift",
+      "version" : "0.16.0"
+    },
+    {
+      "commit" : "e2bf935089cd7620031ea342eaf96bf4ba3a22dc",
+      "package" : "https://github.com/marcoarment/blackbird",
+      "packageName" : "blackbird",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 161,
+              "note" : "Doc: 'A model protocol based on Codable and SQLite.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L161",
+              "symbol" : "BlackbirdModel"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdColumn.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "note" : "Property wrapper for column variables in BlackbirdModel struct definitions.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdColumn.swift#L46",
+              "symbol" : "BlackbirdColumn"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdCodingKey.swift",
+              "kind" : "symbol",
+              "line" : 37,
+              "note" : "Custom CodingKeys support for BlackbirdModel.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdCodingKey.swift#L37",
+              "symbol" : "BlackbirdCodingKey"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Package.swift declares .iOS(.v15) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "platforms list contains only Apple platforms; Surface digest records no platform gaps, but sources unconditionally import Combine, SwiftUI, OSLog and SQLite3 with no os() guards, and Package.swift declares no Linux support; Linux buildability is unverified. Symbol absence is not absence evidence, so status is unknown.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L7"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 161,
+              "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L161",
+              "symbol" : "BlackbirdModel"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdColumn.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "note" : "Property wrapper for column variables in BlackbirdModel struct definitions.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdColumn.swift#L46",
+              "symbol" : "BlackbirdColumn"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdCodingKey.swift",
+              "kind" : "symbol",
+              "line" : 37,
+              "note" : "Custom CodingKeys support for BlackbirdModel.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdCodingKey.swift#L37",
+              "symbol" : "BlackbirdCodingKey"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 161,
+              "note" : "Doc: 'A model protocol based on Codable and SQLite.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L161",
+              "symbol" : "BlackbirdModel"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdColumn.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "note" : "Property wrapper for column variables in BlackbirdModel struct definitions.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdColumn.swift#L46",
+              "symbol" : "BlackbirdColumn"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdCodingKey.swift",
+              "kind" : "symbol",
+              "line" : 37,
+              "note" : "Custom CodingKeys support for BlackbirdModel.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdCodingKey.swift#L37",
+              "symbol" : "BlackbirdCodingKey"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 8,
+              "note" : "Package.swift declares .macOS(.v12) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L8"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 161,
+              "note" : "Doc: 'A model protocol based on Codable and SQLite.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L161",
+              "symbol" : "BlackbirdModel"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdColumn.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "note" : "Property wrapper for column variables in BlackbirdModel struct definitions.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdColumn.swift#L46",
+              "symbol" : "BlackbirdColumn"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdCodingKey.swift",
+              "kind" : "symbol",
+              "line" : 37,
+              "note" : "Custom CodingKeys support for BlackbirdModel.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdCodingKey.swift#L37",
+              "symbol" : "BlackbirdCodingKey"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 11,
+              "note" : "Package.swift declares .tvOS(.v15) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L11"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 161,
+              "note" : "No explicit manifest floor (swift-tools-version 5.7 predates visionOS); symbols are unconditional in the surface digest.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L161",
+              "symbol" : "BlackbirdModel"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdColumn.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "note" : "Property wrapper for column variables in BlackbirdModel struct definitions.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdColumn.swift#L46",
+              "symbol" : "BlackbirdColumn"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdCodingKey.swift",
+              "kind" : "symbol",
+              "line" : 37,
+              "note" : "Custom CodingKeys support for BlackbirdModel.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdCodingKey.swift#L37",
+              "symbol" : "BlackbirdCodingKey"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Blackbird/BlackbirdModel.swift",
+              "kind" : "symbol",
+              "line" : 161,
+              "note" : "Doc: 'A model protocol based on Codable and SQLite.'",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdModel.swift#L161",
+              "symbol" : "BlackbirdModel"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdColumn.swift",
+              "kind" : "symbol",
+              "line" : 46,
+              "note" : "Property wrapper for column variables in BlackbirdModel struct definitions.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdColumn.swift#L46",
+              "symbol" : "BlackbirdColumn"
+            },
+            {
+              "file" : "Sources/Blackbird/BlackbirdCodingKey.swift",
+              "kind" : "symbol",
+              "line" : 37,
+              "note" : "Custom CodingKeys support for BlackbirdModel.",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Sources/Blackbird/BlackbirdCodingKey.swift#L37",
+              "symbol" : "BlackbirdCodingKey"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Package.swift declares .watchOS(.v8) platform floor",
+              "permalink" : "https://github.com/marcoarment/blackbird/blob/0.5/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "blackbird",
+      "version" : "0.5"
+    },
+    {
+      "commit" : "ba6848908ca930521484727b2de2399f68413f40",
+      "notes" : "Boutique's core purpose: persist Codable & Sendable value types via Store<Item>.",
+      "package" : "https://github.com/mergesort/boutique",
+      "packageName" : "boutique",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/StorableItem.swift",
+              "kind" : "symbol",
+              "line" : 1,
+              "note" : "public typealias StorableItem = Codable & Sendable — all stored items are Codable",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StorableItem.swift#L1",
+              "symbol" : "StorableItem"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 51,
+              "note" : "Store<Item> persists Codable items to a memory cache and a storage engine",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L51",
+              "symbol" : "Store"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 159,
+              "note" : "func insert(_ item: Item) async throws — persists a Codable item",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L159",
+              "symbol" : "Store.insert"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 9,
+              "note" : "Package.swift declares .iOS(.v17) platform floor",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Package.swift#L9"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/StorableItem.swift",
+              "kind" : "symbol",
+              "line" : 1,
+              "note" : "Surface digest resolves this decl present on linux (no os() conditions anywhere in the public surface), but the module unconditionally imports SwiftUI, Security, and Observation; Package.swift and README declare only iOS 17+/macOS 14+. Linux buildability unverified — honest answer is unknown.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StorableItem.swift#L1",
+              "symbol" : "StorableItem"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/StorableItem.swift",
+              "kind" : "symbol",
+              "line" : 1,
+              "note" : "public typealias StorableItem = Codable & Sendable — all stored items are Codable No explicit macCatalyst floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on macCatalyst.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StorableItem.swift#L1",
+              "symbol" : "StorableItem"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 51,
+              "note" : "Store<Item> persists Codable items to a memory cache and a storage engine",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L51",
+              "symbol" : "Store"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 159,
+              "note" : "func insert(_ item: Item) async throws — persists a Codable item",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L159",
+              "symbol" : "Store.insert"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/StorableItem.swift",
+              "kind" : "symbol",
+              "line" : 1,
+              "note" : "public typealias StorableItem = Codable & Sendable — all stored items are Codable",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StorableItem.swift#L1",
+              "symbol" : "StorableItem"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 51,
+              "note" : "Store<Item> persists Codable items to a memory cache and a storage engine",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L51",
+              "symbol" : "Store"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 159,
+              "note" : "func insert(_ item: Item) async throws — persists a Codable item",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L159",
+              "symbol" : "Store.insert"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 10,
+              "note" : "Package.swift declares .macOS(.v14) platform floor",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Package.swift#L10"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/StorableItem.swift",
+              "kind" : "symbol",
+              "line" : 1,
+              "note" : "public typealias StorableItem = Codable & Sendable — all stored items are Codable No explicit tvOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on tvOS.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StorableItem.swift#L1",
+              "symbol" : "StorableItem"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 51,
+              "note" : "Store<Item> persists Codable items to a memory cache and a storage engine",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L51",
+              "symbol" : "Store"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 159,
+              "note" : "func insert(_ item: Item) async throws — persists a Codable item",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L159",
+              "symbol" : "Store.insert"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/StorableItem.swift",
+              "kind" : "symbol",
+              "line" : 1,
+              "note" : "public typealias StorableItem = Codable & Sendable — all stored items are Codable No explicit visionOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on visionOS.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StorableItem.swift#L1",
+              "symbol" : "StorableItem"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 51,
+              "note" : "Store<Item> persists Codable items to a memory cache and a storage engine",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L51",
+              "symbol" : "Store"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 159,
+              "note" : "func insert(_ item: Item) async throws — persists a Codable item",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L159",
+              "symbol" : "Store.insert"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.7,
+          "evidence" : [
+            {
+              "file" : "Sources/Boutique/StorableItem.swift",
+              "kind" : "symbol",
+              "line" : 1,
+              "note" : "public typealias StorableItem = Codable & Sendable — all stored items are Codable No explicit watchOS floor in Package.swift (manifest lists only iOS/macOS); symbol anchors are unconditional and the digest resolves them present on watchOS.",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/StorableItem.swift#L1",
+              "symbol" : "StorableItem"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 51,
+              "note" : "Store<Item> persists Codable items to a memory cache and a storage engine",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L51",
+              "symbol" : "Store"
+            },
+            {
+              "file" : "Sources/Boutique/Store.swift",
+              "kind" : "symbol",
+              "line" : 159,
+              "note" : "func insert(_ item: Item) async throws — persists a Codable item",
+              "permalink" : "https://github.com/mergesort/boutique/blob/3.0.2/Sources/Boutique/Store.swift#L159",
+              "symbol" : "Store.insert"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "boutique",
+      "version" : "3.0.2"
+    },
+    {
+      "commit" : "00a7465a0668a87fa159e779b9d80f1f9652357e",
+      "notes" : "Codable values are persisted as JSON strings in UserDefaults via TopLevelCodableBridge and related Codable bridges. Surface digest records zero per-platform gaps and zero #if conditions. linux left unknown: no gap-based absence evidence, but sources unconditionally import Apple-only frameworks.",
+      "package" : "https://github.com/sindresorhus/defaults",
+      "packageName" : "defaults",
+      "platforms" : {
+        "iOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Defaults+Bridge.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "note" : "Bridge persisting any top-level Codable value; no per-platform gaps recorded.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+Bridge.swift#L38",
+              "symbol" : "Defaults.TopLevelCodableBridge"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+Protocol.swift",
+              "kind" : "symbol",
+              "line" : 84,
+              "note" : "Protocol for Codable-based serialization bridges.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+Protocol.swift#L84",
+              "symbol" : "Defaults.CodableBridge"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+Bridge.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "JSON serialization of Codable values.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+Bridge.swift#L9",
+              "symbol" : "Defaults.CodableBridge.serialize"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+Bridge.swift",
+              "kind" : "symbol",
+              "line" : 45,
+              "note" : "Codable + RawRepresentable bridge.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+Bridge.swift#L45",
+              "symbol" : "Defaults.RawRepresentableCodableBridge"
+            }
+          ],
+          "status" : "supported"
+        },
+        "linux" : {
+          "confidence" : 0.2,
+          "evidence" : [
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "Manifest lists Apple platforms only (not absence evidence). Digest records no os() gaps, so unsupported cannot be claimed; core target unconditionally imports SwiftUI/Combine (Apple-only frameworks), making linux presence unverified and doubtful.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Package.swift#L7"
+            },
+            {
+              "file" : "readme.md",
+              "kind" : "readme",
+              "line" : 0,
+              "note" : "README Compatibility section lists macOS/iOS/tvOS/watchOS/visionOS only; linux never mentioned.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/readme.md#L0"
+            }
+          ],
+          "status" : "unknown"
+        },
+        "macCatalyst" : {
+          "confidence" : 0.8,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Defaults+Bridge.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "note" : "No macCatalyst gap recorded in surface digest; decl resolves present.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+Bridge.swift#L38",
+              "symbol" : "Defaults.TopLevelCodableBridge"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+Protocol.swift",
+              "kind" : "symbol",
+              "line" : 84,
+              "note" : "No macCatalyst gap recorded in surface digest; decl resolves present.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+Protocol.swift#L84",
+              "symbol" : "Defaults.CodableBridge"
+            },
+            {
+              "file" : "Package.swift",
+              "kind" : "manifestPlatforms",
+              "line" : 7,
+              "note" : "No explicit macCatalyst floor; Catalyst inherits the .iOS(.v14) floor by SwiftPM default. Confidence lowered accordingly.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Package.swift#L7"
+            }
+          ],
+          "status" : "supported"
+        },
+        "macOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Defaults+Bridge.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "note" : "Bridge persisting any top-level Codable value; no per-platform gaps recorded.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+Bridge.swift#L38",
+              "symbol" : "Defaults.TopLevelCodableBridge"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+Protocol.swift",
+              "kind" : "symbol",
+              "line" : 84,
+              "note" : "Protocol for Codable-based serialization bridges.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+Protocol.swift#L84",
+              "symbol" : "Defaults.CodableBridge"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+Bridge.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "JSON serialization of Codable values.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+Bridge.swift#L9",
+              "symbol" : "Defaults.CodableBridge.serialize"
+            }
+          ],
+          "status" : "supported"
+        },
+        "tvOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Defaults+Bridge.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "note" : "Bridge persisting any top-level Codable value; no per-platform gaps recorded.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+Bridge.swift#L38",
+              "symbol" : "Defaults.TopLevelCodableBridge"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+Protocol.swift",
+              "kind" : "symbol",
+              "line" : 84,
+              "note" : "Protocol for Codable-based serialization bridges.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+Protocol.swift#L84",
+              "symbol" : "Defaults.CodableBridge"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+Bridge.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "JSON serialization of Codable values.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+Bridge.swift#L9",
+              "symbol" : "Defaults.CodableBridge.serialize"
+            }
+          ],
+          "status" : "supported"
+        },
+        "visionOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Defaults+Bridge.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "note" : "Bridge persisting any top-level Codable value; no per-platform gaps recorded.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+Bridge.swift#L38",
+              "symbol" : "Defaults.TopLevelCodableBridge"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+Protocol.swift",
+              "kind" : "symbol",
+              "line" : 84,
+              "note" : "Protocol for Codable-based serialization bridges.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+Protocol.swift#L84",
+              "symbol" : "Defaults.CodableBridge"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+Bridge.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "JSON serialization of Codable values.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+Bridge.swift#L9",
+              "symbol" : "Defaults.CodableBridge.serialize"
+            }
+          ],
+          "status" : "supported"
+        },
+        "watchOS" : {
+          "confidence" : 0.9,
+          "evidence" : [
+            {
+              "file" : "Sources/Defaults/Defaults+Bridge.swift",
+              "kind" : "symbol",
+              "line" : 38,
+              "note" : "Bridge persisting any top-level Codable value; no per-platform gaps recorded.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+Bridge.swift#L38",
+              "symbol" : "Defaults.TopLevelCodableBridge"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+Protocol.swift",
+              "kind" : "symbol",
+              "line" : 84,
+              "note" : "Protocol for Codable-based serialization bridges.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+Protocol.swift#L84",
+              "symbol" : "Defaults.CodableBridge"
+            },
+            {
+              "file" : "Sources/Defaults/Defaults+Bridge.swift",
+              "kind" : "symbol",
+              "line" : 9,
+              "note" : "JSON serialization of Codable values.",
+              "permalink" : "https://github.com/sindresorhus/defaults/blob/9.0.9/Sources/Defaults/Defaults+Bridge.swift#L9",
+              "symbol" : "Defaults.CodableBridge.serialize"
+            }
+          ],
+          "status" : "supported"
+        }
+      },
+      "requiresCompanion" : [
+
+      ],
+      "slug" : "defaults",
+      "version" : "9.0.9"
+    }
+  ]
+}
