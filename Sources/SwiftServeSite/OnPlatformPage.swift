@@ -25,6 +25,7 @@ public enum OnPlatformPage {
               every count below is derived from the records, and every verdict carries its receipt.</p>
             </section>
         \(statTiles(view))
+            <div class="xr-slot" data-xr hidden></div>
         \(builtInSection(view, site: site, platformLabel: platformLabel))
         \(capabilitiesSection(view, site: site, platformLabel: platformLabel))
         \(fenceSection(view, site: site, platformLabel: platformLabel))
@@ -35,9 +36,13 @@ public enum OnPlatformPage {
               — counts, coverage, fences, and receipts as static JSON.</p>
             </section>
         """
+        // xr-entry.js is pure progressive enhancement: it feature-detects
+        // immersive support and stays silent everywhere else, so this page —
+        // and only this page — pays its one small script tag.
         return site.page(title: "The state of \(platformLabel)",
                          description: "What the Swift ecosystem actually serves on \(platformLabel): \(view.supported) supported verdicts, \(view.unsupported) proven fences with compiler receipts, \(view.unknown) honest unknowns.",
-                         path: path(for: view.platform), wide: true, main: main)
+                         path: path(for: view.platform), wide: true,
+                         extraHead: site.script("/xr-entry.js"), main: main)
     }
 
     /// "/api/on/visionos.json" — the page's one-fetch data feed.

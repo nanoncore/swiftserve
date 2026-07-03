@@ -170,6 +170,22 @@ import SwiftServeCapability
         #expect(playback["truthTable"] as? String == "/can/audio.playback/?on=visionOS")
     }
 
+    @Test func immersiveEntryIsPivotOnlyAndDegradesToNothing() throws {
+        let outputs = try SiteGenerator.plan(site: makeSite())
+        let pivot = String(decoding: outputs.first { $0.path == "on/visionos/index.html" }!.bytes,
+                           as: UTF8.self)
+        // The slot ships hidden — with JS off (or no immersive support) the
+        // page renders exactly as before the WebXR layer existed.
+        #expect(pivot.contains("<div class=\"xr-slot\" data-xr hidden></div>"))
+        #expect(pivot.contains("<script src=\"/xr-entry.js\" defer></script>"))
+        // No other page pays for the entry script.
+        for path in ["index.html", "menu/index.html", "can/audio.playback/index.html",
+                     "package/audiokit/index.html"] {
+            let page = String(decoding: outputs.first { $0.path == path }!.bytes, as: UTF8.self)
+            #expect(!page.contains("xr-entry.js"), "\(path) should not load xr-entry.js")
+        }
+    }
+
     @Test func homeAndMenuLinkToThePivot() throws {
         let outputs = try SiteGenerator.plan(site: makeSite())
         let home = String(decoding: outputs.first { $0.path == "index.html" }!.bytes, as: UTF8.self)

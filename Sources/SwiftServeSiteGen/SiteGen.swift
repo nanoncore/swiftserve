@@ -73,7 +73,7 @@ struct SiteGen: ParsableCommand {
         // Version the static assets by content (FNV-1a) so cached copies are
         // never served after a change. Content-derived — same bytes, same URL.
         var hash: UInt64 = 0xcbf2_9ce4_8422_2325
-        for asset in ["styles.css", "site.js"] {
+        for asset in ["styles.css", "site.js", "xr-entry.js", "xr.js"] {
             for byte in fm.contents(atPath: "\(out)/\(asset)") ?? Data() {
                 hash = (hash ^ UInt64(byte)) &* 0x0000_0100_0000_01b3
             }

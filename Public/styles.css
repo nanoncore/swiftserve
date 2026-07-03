@@ -691,6 +691,25 @@ thead th.col-focus { color: var(--accent-deep); }
 
 .on-feed p { color: var(--ink-soft); line-height: 1.6; }
 
+/* The immersive invite — injected by xr-entry.js only where an immersive
+   session can actually start; the slot stays hidden everywhere else. */
+.xr-invite {
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  background: var(--surface); border: 1px solid var(--accent); border-radius: var(--radius);
+  box-shadow: var(--shadow-soft); padding: 18px 22px; margin-top: 18px;
+}
+.xr-invite > div { flex: 1; min-width: 240px; }
+.xr-invite-head { margin: 0; font-size: 18px; font-weight: 680; letter-spacing: -0.015em; }
+.xr-invite-body { margin: 4px 0 0; color: var(--ink-soft); font-size: 14.5px; line-height: 1.55; }
+.xr-enter {
+  flex: none; font: inherit; font-weight: 620; font-size: 16px;
+  background: var(--accent); color: #fff; border: none; border-radius: 999px;
+  padding: 12px 26px; cursor: pointer; transition: background 0.2s var(--ease);
+}
+.xr-enter:hover { background: var(--accent-deep); }
+.xr-enter:disabled { opacity: 0.6; cursor: default; }
+.xr-enter:focus-visible { outline: 4px solid var(--accent-wash); }
+
 @media (max-width: 600px) {
   .on-head h1 { font-size: 30px; }
   .stat-num { font-size: 44px; }

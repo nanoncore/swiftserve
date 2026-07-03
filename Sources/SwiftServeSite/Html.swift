@@ -51,10 +51,16 @@ public struct Site {
 
     private var assetQuery: String { assetVersion.map { "?v=\($0)" } ?? "" }
 
+    /// A cache-busted script tag for a page-specific asset (same ?v= scheme
+    /// as the shared styles/site.js pair).
+    public func script(_ path: String) -> String {
+        "<script src=\"\(href(path))\(assetQuery)\" defer></script>"
+    }
+
     // MARK: - Page shell
 
     public func page(title: String, description: String, path: String,
-                     wide: Bool = false, main: String) -> String {
+                     wide: Bool = false, extraHead: String = "", main: String) -> String {
         let fullTitle = title.isEmpty ? "SwiftServe" : "\(title) — SwiftServe"
         return """
         <!doctype html>
@@ -68,7 +74,7 @@ public struct Site {
           <link rel="icon" href="\(href("/swiftee/swiftee-idle.png"))" />
           <link rel="stylesheet" href="\(href("/styles.css"))\(assetQuery)" />
           <script src="\(href("/site.js"))\(assetQuery)" defer></script>
-        </head>
+          \(extraHead)</head>
         <body class="site\(wide ? " wide" : "")">
           \(header(currentPath: path))
           <main id="main">
