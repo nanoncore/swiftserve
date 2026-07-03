@@ -20,12 +20,17 @@ struct SwiftServeApp {
 
         // Enrichment is additive: with a GITHUB_TOKEN we pull live GitHub data,
         // otherwise we fall back to the always-available file-only path.
+        // The live path wears its production armor (CachedEnrichment): a TTL
+        // cache so popular repos are fetched once an hour instead of per
+        // request, a per-request fetch budget, and a circuit breaker that
+        // degrades to cache-only when GitHub stops answering — a public
+        // /analyze endpoint must never be able to burn the rate limit.
         let token = ProcessInfo.processInfo.environment["GITHUB_TOKEN"]
         let analyzer: Analyzer
         let mode: String
         if let token, !token.isEmpty {
-            analyzer = Analyzer(enrichment: GitHubEnrichment(token: token))
-            mode = "GitHub (token detected)"
+            analyzer = Analyzer(enrichment: CachedEnrichment(wrapping: GitHubEnrichment(token: token)))
+            mode = "GitHub (token detected; cached, budgeted, circuit-broken)"
         } else {
             analyzer = Analyzer()
             mode = "file-only (set GITHUB_TOKEN to enable live GitHub data)"
