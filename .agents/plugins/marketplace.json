@@ -1,0 +1,19 @@
+{
+  "name": "swiftserve",
+  "interface": {
+    "displayName": "SwiftServe"
+  },
+  "plugins": [
+    {
+      "name": "swiftserve",
+      "source": {
+        "source": "local",
+        "path": "./plugins/swiftserve"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

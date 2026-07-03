@@ -487,8 +487,12 @@ public enum GetPage {
               \(cmd("/plugin marketplace add \(repoSlug)"))
               \(cmd("/plugin install swiftserve@swiftserve"))
               <p>Then just ask: <em>“can LiveKit do noise cancellation on macOS?”</em></p>
-              <p><strong>Codex</strong> — the same skill, same file, in the open <code>SKILL.md</code>
-              format Codex speaks. One paste in a terminal:</p>
+              <p><strong>Codex</strong> — this repo is a Codex plugin marketplace too. Two pastes
+              in a terminal, versioned like the Claude plugin:</p>
+              \(cmd("codex plugin marketplace add \(repoSlug)"))
+              \(cmd("codex plugin add swiftserve@swiftserve"))
+              <p>Prefer a bare skill file (no plugin, no updates)? One paste — Codex speaks the
+              same open <code>SKILL.md</code> format:</p>
               \(cmd("mkdir -p ~/.agents/skills/swiftserve && curl -fsSL \(site.absolute("/skill.md")) -o ~/.agents/skills/swiftserve/SKILL.md"))
               <p>(Older Codex builds read <code>~/.codex/skills</code> instead — same file, same paste,
               different path. Mention it with <code>$swiftserve</code> or just ask.)</p>

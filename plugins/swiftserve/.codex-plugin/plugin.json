@@ -1,0 +1,38 @@
+{
+  "name": "swiftserve",
+  "version": "0.1.0",
+  "description": "Capability truth for Swift packages: what a package actually serves, per Apple platform and Linux, derived from parsed source with evidence permalinks.",
+  "author": {
+    "name": "nanoncore",
+    "url": "https://swiftserve.dev"
+  },
+  "homepage": "https://swiftserve.dev",
+  "repository": "https://github.com/nanoncore/swiftserve",
+  "license": "FSL-1.1-ALv2",
+  "keywords": [
+    "swift",
+    "swiftpm",
+    "dependencies",
+    "capability-check",
+    "visionos",
+    "watchos",
+    "app-store"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "SwiftServe",
+    "shortDescription": "Check what Swift packages actually support, per platform",
+    "longDescription": "Before adding a Swift dependency, ask SwiftServe whether it actually serves the capability you need on your target platform — noise cancellation on macOS, charts on visionOS, haptics on watchOS. Verdicts are derived from parsed source at pinned versions with evidence permalinks, plus dependency-health review and private-API detection for App Store rejections (ITMS-90338). Works with zero install over the hosted static JSON index; the CLI adds offline scans and CI gates.",
+    "developerName": "nanoncore",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive"
+    ],
+    "websiteURL": "https://swiftserve.dev",
+    "brandColor": "#ed8b3e",
+    "defaultPrompt": [
+      "Can LiveKit do noise cancellation on macOS? Check SwiftServe before answering."
+    ],
+    "screenshots": []
+  }
+}
