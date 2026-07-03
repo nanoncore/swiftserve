@@ -467,7 +467,8 @@ public enum GetPage {
             <section class="page-head">
               <h1>Get SwiftServe</h1>
               <p>Three ways in, ordered by setup cost: point your agent at the hosted index
-              (zero install), add the Claude Code plugin (two pastes), or install the CLI.</p>
+              (zero install), teach your coding agent the skill (a paste or two), or install
+              the CLI.</p>
             </section>
             <section class="prose">
               <h2>1 · Your agent — zero install</h2>
@@ -478,14 +479,20 @@ public enum GetPage {
               <a href="\(site.href("/agents/"))">agents page</a>.</p>
             </section>
             <section class="prose">
-              <h2>2 · Claude Code — the plugin</h2>
-              <p>Two pastes inside Claude Code. Versioned, auto-updating, and it teaches Claude to
-              consult the index <em>before</em> adding any Swift dependency:</p>
+              <h2>2 · Your coding agent — the skill</h2>
+              <p><strong>Claude Code</strong> — two pastes. Versioned, auto-updating, and it teaches
+              Claude to consult the index <em>before</em> adding any Swift dependency:</p>
               \(cmd("/plugin marketplace add \(repoSlug)"))
               \(cmd("/plugin install swiftserve@swiftserve"))
               <p>Then just ask: <em>“can LiveKit do noise cancellation on macOS?”</em></p>
-              <p>Prefer a bare skill file (no plugin, no updates)? One paste in a terminal:</p>
-              \(cmd("mkdir -p ~/.claude/skills/swiftserve && curl -fsSL \(site.absolute("/skill.md")) -o ~/.claude/skills/swiftserve/SKILL.md"))
+              <p><strong>Codex</strong> — the same skill, same file, in the open <code>SKILL.md</code>
+              format Codex speaks. One paste in a terminal:</p>
+              \(cmd("mkdir -p ~/.agents/skills/swiftserve && curl -fsSL \(site.absolute("/skill.md")) -o ~/.agents/skills/swiftserve/SKILL.md"))
+              <p>(Older Codex builds read <code>~/.codex/skills</code> instead — same file, same paste,
+              different path. Mention it with <code>$swiftserve</code> or just ask.)</p>
+              <p><strong>Any other agent</strong> that speaks the skill format — same one-liner,
+              pointed at its skills directory. The skill is plain instructions over the hosted
+              API and the CLI; nothing in it is agent-specific.</p>
             </section>
             <section class="prose">
               <h2>3 · The CLI — offline checks, CI gates, scanners</h2>

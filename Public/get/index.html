@@ -28,7 +28,8 @@
     <section class="page-head">
       <h1>Get SwiftServe</h1>
       <p>Three ways in, ordered by setup cost: point your agent at the hosted index
-      (zero install), add the Claude Code plugin (two pastes), or install the CLI.</p>
+      (zero install), teach your coding agent the skill (a paste or two), or install
+      the CLI.</p>
     </section>
     <section class="prose">
       <h2>1 · Your agent — zero install</h2>
@@ -42,9 +43,9 @@
       <a href="/agents/">agents page</a>.</p>
     </section>
     <section class="prose">
-      <h2>2 · Claude Code — the plugin</h2>
-      <p>Two pastes inside Claude Code. Versioned, auto-updating, and it teaches Claude to
-      consult the index <em>before</em> adding any Swift dependency:</p>
+      <h2>2 · Your coding agent — the skill</h2>
+      <p><strong>Claude Code</strong> — two pastes. Versioned, auto-updating, and it teaches
+      Claude to consult the index <em>before</em> adding any Swift dependency:</p>
       <div class="cmd-row">
   <pre><code>/plugin marketplace add nanoncore/swiftserve</code></pre>
   <button type="button" class="copy-btn" data-copy="/plugin marketplace add nanoncore/swiftserve">Copy</button>
@@ -54,11 +55,17 @@
   <button type="button" class="copy-btn" data-copy="/plugin install swiftserve@swiftserve">Copy</button>
 </div>
       <p>Then just ask: <em>“can LiveKit do noise cancellation on macOS?”</em></p>
-      <p>Prefer a bare skill file (no plugin, no updates)? One paste in a terminal:</p>
+      <p><strong>Codex</strong> — the same skill, same file, in the open <code>SKILL.md</code>
+      format Codex speaks. One paste in a terminal:</p>
       <div class="cmd-row">
-  <pre><code>mkdir -p ~/.claude/skills/swiftserve &amp;&amp; curl -fsSL https://swiftserve.dev/skill.md -o ~/.claude/skills/swiftserve/SKILL.md</code></pre>
-  <button type="button" class="copy-btn" data-copy="mkdir -p ~/.claude/skills/swiftserve &amp;&amp; curl -fsSL https://swiftserve.dev/skill.md -o ~/.claude/skills/swiftserve/SKILL.md">Copy</button>
+  <pre><code>mkdir -p ~/.agents/skills/swiftserve &amp;&amp; curl -fsSL https://swiftserve.dev/skill.md -o ~/.agents/skills/swiftserve/SKILL.md</code></pre>
+  <button type="button" class="copy-btn" data-copy="mkdir -p ~/.agents/skills/swiftserve &amp;&amp; curl -fsSL https://swiftserve.dev/skill.md -o ~/.agents/skills/swiftserve/SKILL.md">Copy</button>
 </div>
+      <p>(Older Codex builds read <code>~/.codex/skills</code> instead — same file, same paste,
+      different path. Mention it with <code>$swiftserve</code> or just ask.)</p>
+      <p><strong>Any other agent</strong> that speaks the skill format — same one-liner,
+      pointed at its skills directory. The skill is plain instructions over the hosted
+      API and the CLI; nothing in it is agent-specific.</p>
     </section>
     <section class="prose">
       <h2>3 · The CLI — offline checks, CI gates, scanners</h2>

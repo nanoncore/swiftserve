@@ -1,8 +1,9 @@
 # SwiftServe — build & install for local use + Claude Code.
 
-BINDIR   ?= $(HOME)/.local/bin
-SKILLDIR ?= $(HOME)/.claude/skills/swiftserve
-BIN      := .build/release/swiftserve
+BINDIR    ?= $(HOME)/.local/bin
+SKILLDIR  ?= $(HOME)/.claude/skills/swiftserve
+AGENTSDIR ?= $(HOME)/.agents/skills/swiftserve
+BIN       := .build/release/swiftserve
 
 .PHONY: help build install uninstall test livekit-spike
 
@@ -20,12 +21,14 @@ build:
 	swift build -c release
 
 install: build
-	@mkdir -p "$(BINDIR)" "$(SKILLDIR)"
+	@mkdir -p "$(BINDIR)" "$(SKILLDIR)" "$(AGENTSDIR)"
 	install -m 0755 "$(BIN)" "$(BINDIR)/swiftserve"
 	cp .claude/skills/swiftserve/SKILL.md "$(SKILLDIR)/SKILL.md"
+	cp .claude/skills/swiftserve/SKILL.md "$(AGENTSDIR)/SKILL.md"
 	@echo ""
 	@echo "✅ swiftserve → $(BINDIR)/swiftserve"
-	@echo "✅ skill      → $(SKILLDIR)/SKILL.md"
+	@echo "✅ skill      → $(SKILLDIR)/SKILL.md (Claude Code)"
+	@echo "✅ skill      → $(AGENTSDIR)/SKILL.md (Codex & friends)"
 	@echo ""
 	@case ":$$PATH:" in *":$(BINDIR):"*) ;; *) echo "⚠️  Add to PATH:  export PATH=\"$(BINDIR):$$PATH\"" ;; esac
 	@echo "Start a new Claude Code session, then try: \"check my dependency health\" or \"scan my app for private APIs\""
@@ -42,9 +45,12 @@ test:
 # Deterministic (no timestamp) so the diff is reviewable; browse it locally
 # with `swift run SwiftServeServer` → http://127.0.0.1:8080
 # Also syncs the canonical skill (.claude/skills/swiftserve) into the Claude
-# Code plugin (plugins/swiftserve) so the two copies never drift.
+# Code plugin (plugins/swiftserve) and the open-standard skills dir
+# (.agents/skills — what Codex and friends discover) so no copy ever drifts.
 site:
 	cp .claude/skills/swiftserve/SKILL.md plugins/swiftserve/skills/swiftserve/SKILL.md
+	mkdir -p .agents/skills/swiftserve
+	cp .claude/skills/swiftserve/SKILL.md .agents/skills/swiftserve/SKILL.md
 	swift run SwiftServeSiteGen --records data/records --taxonomy data/taxonomy --out Public
 
 # Acceptance spike against the real LiveKit source (network + git): fetch at
