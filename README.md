@@ -222,13 +222,43 @@ runs the right scanner and explains the result.
 
 ```bash
 make install     # release-build + put `swiftserve` on PATH + install the skill
-                 # → ~/.local/bin/swiftserve  and  ~/.claude/skills/swiftserve/SKILL.md
+                 # → ~/.local/bin/swiftserve, ~/.claude/skills/swiftserve/SKILL.md,
+                 #   and ~/.agents/skills/swiftserve/SKILL.md (Codex & friends)
 ```
 
 Start a fresh Claude Code session; when a request matches (a dependency review, a
 `Package.resolved`, an App Store "non-public API" rejection, a pre-submission
 binary scan), Claude Code invokes `swiftserve scan` / `scan-binary` and reads the
 canonical JSON. The skill source lives in `.claude/skills/swiftserve/SKILL.md`.
+
+Prefer the versioned plugin? This repo is a Claude Code plugin marketplace:
+
+```
+/plugin marketplace add nanoncore/swiftserve
+/plugin install swiftserve@swiftserve
+```
+
+## Use it from Codex
+
+Same skill, same file — Codex speaks the open `SKILL.md` format. This repo is a
+Codex plugin **marketplace** too, so the versioned install is two pastes in a
+terminal:
+
+```bash
+codex plugin marketplace add nanoncore/swiftserve
+codex plugin add swiftserve@swiftserve
+```
+
+Then mention it with `$swiftserve` or just ask ("can LiveKit do noise
+cancellation on macOS?") — Codex picks the skill up on its own when the request
+matches. Prefer a bare skill file with no plugin and no updates? One paste:
+
+```bash
+mkdir -p ~/.agents/skills/swiftserve && curl -fsSL https://swiftserve.dev/skill.md -o ~/.agents/skills/swiftserve/SKILL.md
+```
+
+(Older Codex builds read `~/.codex/skills` instead — same file, different path.
+`make install` above drops the skill in place for both agents at once.)
 
 ## Test it
 
