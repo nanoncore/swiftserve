@@ -42,6 +42,9 @@
 </div>
       <p>Start at <code>/api/index.json</code> for the endpoint map — full contract on the
       <a href="/agents/">agents page</a>.</p>
+      <p>The index doesn't rot: it rechecks itself against new upstream releases
+      (<code>swiftserve index recheck</code>) — pins bump only when every receipt still
+      holds; changed truth is surfaced for review, never silently rewritten.</p>
     </section>
     <section class="prose">
       <h2>2 · Your coding agent — the skill</h2>

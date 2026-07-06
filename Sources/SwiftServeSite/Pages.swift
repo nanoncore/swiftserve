@@ -356,7 +356,10 @@ public enum AboutPage {
                 <li>Objective-C surface isn't parsed yet — such packages read "not verified", never a fake verdict.</li>
                 <li>Macro-generated API is invisible to parsing; affected declarations carry a confidence cap.</li>
                 <li>Binary targets hide their platform truth; flagged, capped, noted.</li>
-                <li>A verdict is a fact about a <em>pinned version</em>. Packages change — record freshness is shown on every row.</li>
+                <li>A verdict is a fact about a <em>pinned version</em>. Packages change — so the
+                index rechecks itself against new upstream tags: pins bump only when every anchor
+                still holds, and changed truth is surfaced for review, never silently rewritten.
+                Record freshness is shown on every row.</li>
               </ul>
             </section>
             <section id="contribute" class="prose">
@@ -481,6 +484,9 @@ public enum GetPage {
               \(cmd("curl -s \(site.absolute("/api/capabilities/audio.noise-cancellation.json"))"))
               <p>Start at <code>/api/index.json</code> for the endpoint map — full contract on the
               <a href="\(site.href("/agents/"))">agents page</a>.</p>
+              <p>The index doesn't rot: it rechecks itself against new upstream releases
+              (<code>swiftserve index recheck</code>) — pins bump only when every receipt still
+              holds; changed truth is surfaced for review, never silently rewritten.</p>
             </section>
             <section class="prose">
               <h2>2 · Your coding agent — the skill</h2>

@@ -42,12 +42,25 @@ an explicit guard or availability fence, never mere silence.
       "supported", silence-as-"unsupported", inflated confidence)
                             │
       records (data/records/) → CLI dataset · static site · JSON API
+                            │
+      recheck (the loop): new upstream tag → re-extract → re-anchor
+      still-true pins bump · changed truth is a finding, not a write
 ```
 
 Two layers. The **deterministic layer** parses; it never guesses — undecidable
 conditions surface as `conditional`, unknown modules stay honest. The
 **semantic layer** names capabilities; a validator rejects anything the parsed
 surface can't prove. The labeler is replaceable; the contract is files.
+
+**And the truth doesn't rot.** `swiftserve index recheck` polls every indexed
+package for stable tags newer than its records' pin, re-extracts at the new
+tag, and diffs each record's anchors against the fresh surface. Report-only by
+default and side-effect free; `--apply` bumps the pins whose every receipt
+still holds — repairing anchors whose lines merely moved. A record whose
+*truth changed* (a guard appeared, a symbol vanished) is never auto-written:
+that's the finding, and it waits for review. First-party SDK records are
+skipped — their pin is the SDK, not a tag. `make recheck-spike` gates the
+whole loop end-to-end against a real upstream 1.2.0 → 1.3.0 release.
 
 ## Explore it
 
