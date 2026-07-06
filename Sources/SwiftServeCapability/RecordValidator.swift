@@ -6,8 +6,8 @@ import Foundation
 /// matters.
 public enum RecordValidator {
 
-    public struct Diagnostic: Sendable, Equatable {
-        public enum Severity: String, Sendable { case error, warning }
+    public struct Diagnostic: Sendable, Equatable, Codable {
+        public enum Severity: String, Sendable, Codable { case error, warning }
         public let rule: String
         public let severity: Severity
         public let message: String
@@ -60,45 +60,30 @@ public enum RecordValidator {
             error("V06", "surfaceDigest mismatch for \(home) — the surface changed since labeling")
         }
 
-        // Resolve every anchor once; V02 kills hallucinations.
+        // Resolve every anchor once via the shared resolver; V02 kills
+        // hallucinations. Message strings are part of the contract — tests
+        // assert on them.
         func decl(for anchor: EvidenceAnchor, rule: String, context: String) -> SurfaceDecl? {
-            guard anchor.kind == .symbol || anchor.kind == .guard || anchor.kind == .availability else { return nil }
             let target = anchor.package ?? home
-            guard let surface = surfaces[target] else {
-                error(rule, "\(context): anchor cites \(target) but no surface is loaded for it")
-                return nil
-            }
-            guard let symbol = anchor.symbol else {
+            switch AnchorResolver.resolve(anchor, home: home, surfaces: surfaces) {
+            case .success(let match):
+                return match
+            case .failure(.notResolvable):
+                break // weak kinds name no decl — nothing to diagnose
+            case .failure(.noSurface(let cited)):
+                error(rule, "\(context): anchor cites \(cited) but no surface is loaded for it")
+            case .failure(.noSymbol):
                 error("V02", "\(context): anchor has no symbol")
-                return nil
-            }
-            let candidates = surface.decls.filter { $0.name == symbol }
-            guard !candidates.isEmpty else {
+            case .failure(.symbolMissing(let symbol)):
                 error("V02", "\(context): anchor symbol ‘\(symbol)’ does not exist on \(target)'s surface — hallucinated?")
-                return nil
+            case .failure(.ambiguous(let symbol, let count)):
+                error("V02", "\(context): ‘\(symbol)’ has \(count) declarations on \(target)'s surface — the anchor's file+line (\(anchor.file ?? "nil"):\(anchor.line.map(String.init) ?? "nil")) matches none of them")
+            case .failure(.fileMismatch(let anchorFile, let surfaceFile)):
+                error("V02", "\(context): anchor file \(anchorFile) ≠ surface \(surfaceFile) for \(anchor.symbol ?? "?")")
+            case .failure(.lineMismatch(let anchorLine, let surfaceLine)):
+                error("V02", "\(context): anchor line \(anchorLine) ≠ surface line \(surfaceLine) for \(anchor.symbol ?? "?")")
             }
-            // Same-named decls are legal Swift (e.g. an os(macOS)/!os(macOS)
-            // split pair) — the anchor's file+line picks the exact one.
-            let match: SurfaceDecl
-            if candidates.count == 1 {
-                match = candidates[0]
-            } else if let exact = candidates.first(where: {
-                $0.location.file == anchor.file && $0.location.line == anchor.line
-            }) {
-                match = exact
-            } else {
-                error("V02", "\(context): ‘\(symbol)’ has \(candidates.count) declarations on \(target)'s surface — the anchor's file+line (\(anchor.file ?? "nil"):\(anchor.line.map(String.init) ?? "nil")) matches none of them")
-                return nil
-            }
-            if let file = anchor.file, file != match.location.file {
-                error("V02", "\(context): anchor file \(file) ≠ surface \(match.location.file) for \(symbol)")
-                return nil
-            }
-            if let line = anchor.line, line != match.location.line {
-                error("V02", "\(context): anchor line \(line) ≠ surface line \(match.location.line) for \(symbol)")
-                return nil
-            }
-            return match
+            return nil
         }
 
         // Per-platform claims.

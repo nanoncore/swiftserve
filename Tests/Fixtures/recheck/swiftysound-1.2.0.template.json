@@ -1,0 +1,118 @@
+[
+  {
+    "capability" : {
+      "id" : "audio.playback",
+      "label" : "Audio playback"
+    },
+    "labeledAt" : "2026-07-05T00:00:00Z",
+    "labeledBy" : "recheck-spike-fixture",
+    "notes" : "Spike fixture pinned at the historical 1.2.0 — `Sound` sits at line 65 here and line 62 at 1.3.0, so the recheck must line-repair it. Only globally unique symbols are anchored (Sound.play has three same-named decls and would honestly read anchor-gone).",
+    "package" : {
+      "aliases" : [
+        "adamcichy/SwiftySound"
+      ],
+      "canonicalURL" : "https://github.com/adamcichy/swiftysound",
+      "commit" : "__COMMIT__",
+      "firstParty" : false,
+      "name" : "SwiftySound",
+      "surfaceDigest" : "__DIGEST__",
+      "version" : "1.2.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.85,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Sound.swift",
+            "kind" : "symbol",
+            "line" : 65,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Sound"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : null,
+            "file" : "Sources/Sound.swift",
+            "kind" : "symbol",
+            "line" : 65,
+            "note" : null,
+            "package" : null,
+            "symbol" : "Sound"
+          }
+        ],
+        "status" : "supported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  },
+  {
+    "capability" : {
+      "id" : "audio.session-management",
+      "label" : "Audio session management"
+    },
+    "labeledAt" : "2026-07-05T00:00:00Z",
+    "labeledBy" : "recheck-spike-fixture",
+    "notes" : "SoundCategory is fenced os(iOS) || os(tvOS) at both tags — the guard anchor must hold unchanged across the bump.",
+    "package" : {
+      "aliases" : [
+        "adamcichy/SwiftySound"
+      ],
+      "canonicalURL" : "https://github.com/adamcichy/swiftysound",
+      "commit" : "__COMMIT__",
+      "firstParty" : false,
+      "name" : "SwiftySound",
+      "surfaceDigest" : "__DIGEST__",
+      "version" : "1.2.0"
+    },
+    "platforms" : {
+      "iOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS) || os(tvOS)",
+            "file" : "Sources/Sound.swift",
+            "kind" : "symbol",
+            "line" : 32,
+            "note" : null,
+            "package" : null,
+            "symbol" : "SoundCategory"
+          }
+        ],
+        "status" : "supported"
+      },
+      "macOS" : {
+        "confidence" : 0.8,
+        "evidence" : [
+          {
+            "availability" : null,
+            "condition" : "os(iOS) || os(tvOS)",
+            "file" : "Sources/Sound.swift",
+            "kind" : "guard",
+            "line" : 32,
+            "note" : "session categories exist only where AVAudioSession does",
+            "package" : null,
+            "symbol" : "SoundCategory"
+          }
+        ],
+        "status" : "unsupported"
+      }
+    },
+    "recordVersion" : 1,
+    "requiresCompanion" : [
+
+    ]
+  }
+]

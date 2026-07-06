@@ -216,8 +216,11 @@ enum SurfaceFileCollector {
 
         // Anchor paths to an absolute root: displayPath must stay repo-relative
         // regardless of how the argument was spelled — these paths become
-        // evidence anchors and GitHub permalinks downstream.
-        let root = URL(fileURLWithPath: input).standardizedFileURL.path
+        // evidence anchors and GitHub permalinks downstream. Both sides go
+        // through the same symlink normalization (which on macOS also strips
+        // /private) or an enumerator path under /private/tmp would never
+        // match a root spelled /tmp.
+        let root = URL(fileURLWithPath: input).resolvingSymlinksInPath().path
         guard let enumerator = fm.enumerator(at: URL(fileURLWithPath: root),
                                              includingPropertiesForKeys: [.isDirectoryKey]) else { return [] }
         var results: [SourceFile] = []
@@ -229,7 +232,7 @@ enum SurfaceFileCollector {
                 continue
             }
             guard let lang = SourceCollector.language(forExtension: url.pathExtension) else { continue }
-            results.append(SourceFile(displayPath: relativePath(of: url.path, under: root),
+            results.append(SourceFile(displayPath: relativePath(of: url.resolvingSymlinksInPath().path, under: root),
                                       contents: (try? String(contentsOfFile: url.path, encoding: .utf8)) ?? "",
                                       language: lang))
         }

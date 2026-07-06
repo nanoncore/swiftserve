@@ -14,8 +14,8 @@ import SwiftServeSurface
 struct Index: ParsableCommand {
     static let configuration = CommandConfiguration(
         commandName: "index",
-        abstract: "Build the capability corpus: discover, fetch, extract, probe, label, validate.",
-        subcommands: [Discover.self, Fetch.self, Extract.self, BuildProbe.self, SdkExtract.self, LabelPrep.self, Validate.self, Assemble.self]
+        abstract: "Build the capability corpus: discover, fetch, extract, probe, label, validate, recheck.",
+        subcommands: [Discover.self, Fetch.self, Extract.self, BuildProbe.self, SdkExtract.self, LabelPrep.self, Validate.self, Assemble.self, Recheck.self]
     )
 }
 
@@ -942,9 +942,10 @@ struct Validate: ParsableCommand {
         return [try decoder.decode(CapabilityRecord.self, from: data)]
     }
 
-    /// Every record under a root — flat files and one level of domain
-    /// subdirectories (`data/records/audio/*.json`, `data/records/network/…`).
-    fileprivate static func mergeRecordFiles(_ recordsRoot: String) throws -> [CapabilityRecord] {
+    /// Every record file under a root, path preserved — flat files and one
+    /// level of domain subdirectories (`data/records/audio/*.json`, …).
+    /// Recheck needs the paths to write bumps back where they came from.
+    static func recordFilesByPath(_ recordsRoot: String) throws -> [(file: URL, records: [CapabilityRecord])] {
         let fm = FileManager.default
         let root = URL(fileURLWithPath: recordsRoot)
         var files: [URL] = []
@@ -956,12 +957,17 @@ struct Validate: ParsableCommand {
                     .filter { $0.pathExtension == "json" }
             }
         }
-        var all: [CapabilityRecord] = []
+        var result: [(file: URL, records: [CapabilityRecord])] = []
         for file in files.sorted(by: { $0.path < $1.path }) {
             guard let data = fm.contents(atPath: file.path) else { continue }
-            all += try decodeRecords(data)
+            result.append((file, try decodeRecords(data)))
         }
-        return all.sorted {
+        return result
+    }
+
+    /// Every record under a root, flattened and sorted.
+    fileprivate static func mergeRecordFiles(_ recordsRoot: String) throws -> [CapabilityRecord] {
+        try recordFilesByPath(recordsRoot).flatMap(\.records).sorted {
             ($0.package.canonicalURL, $0.capability.id) < ($1.package.canonicalURL, $1.capability.id)
         }
     }
