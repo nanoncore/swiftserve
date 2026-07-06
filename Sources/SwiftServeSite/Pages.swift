@@ -214,7 +214,7 @@ public enum PackagePage {
         return """
         <section class="badges-section">
               <h2>Badges for your README</h2>
-              <p>Maintainer of \(Html.escape(package.name))? These are yours — verified claims, linked to the receipts. Wrong verdict? That's a fix we want; see <a href="\(site.href("/about/#contribute"))">contribute</a>.</p>
+              <p>Maintainer of \(Html.escape(package.name))? These are yours — verified claims, linked to the receipts. Wrong verdict? That's a fix we want — <a href="\(site.repoURL)/issues" rel="noopener">open an issue on GitHub</a> or see <a href="\(site.href("/about/#contribute"))">contribute</a>.</p>
               <div class="badge-row">
                 <img src="\(site.href("/badge/\(package.slug)/verified.svg"))" alt="verified badge" height="20" />
                 <button type="button" class="copy-btn" data-copy="\(Html.escape(verifiedMarkdown))">Copy markdown</button>
@@ -362,8 +362,10 @@ public enum AboutPage {
             <section id="contribute" class="prose">
               <h2>Contribute</h2>
               <p>Got burned by a feature×platform gap? That story is a record waiting to happen —
-              open an issue with the package, feature, and platform, and it joins the index with
-              your name on the receipt.</p>
+              <a href="\(site.repoURL)/issues" rel="noopener">open an issue</a> with the package,
+              feature, and platform, and it joins the index with your name on the receipt.
+              The whole index is built in the open at
+              <a href="\(site.repoURL)" rel="noopener">github.com/nanoncore/swiftserve</a>.</p>
             </section>
         """
         return site.page(title: "About",

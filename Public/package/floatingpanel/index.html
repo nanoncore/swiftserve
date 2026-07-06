@@ -7,8 +7,8 @@
   <title>floatingpanel — SwiftServe</title>
   <meta name="description" content="What floatingpanel actually serves on each Apple platform, verdict by verdict, with source receipts." />
   <link rel="icon" href="/swiftee/swiftee-idle.png" />
-  <link rel="stylesheet" href="/styles.css?v=1t66hzl0byk2g" />
-  <script src="/site.js?v=1t66hzl0byk2g" defer></script>
+  <link rel="stylesheet" href="/styles.css?v=2p4psmk86y33" />
+  <script src="/site.js?v=2p4psmk86y33" defer></script>
   </head>
 <body class="site wide">
   <header class="top-nav">
@@ -22,6 +22,7 @@
         <input type="search" name="q" placeholder="press / to search" aria-label="Search capabilities" />
       </form>
     </nav>
+    <a class="nav-github" href="https://github.com/nanoncore/swiftserve" rel="noopener" aria-label="SwiftServe on GitHub" title="View source on GitHub"><svg viewBox="0 0 16 16" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
     <a class="nav-cta" href="/get/">Get</a>
   </header>
   <main id="main">
@@ -109,7 +110,7 @@
     <section class="package-notes"><h2>Notes</h2><p><strong>Bottom sheets:</strong> FloatingPanel is a UIKit bottom-sheet/drawer container (Apple Maps style) with SwiftUI wrappers. Digest blind spot: core UIKit decls carry no per-platform gaps because 'import UIKit' is unconditional, so digest presence on macOS/watchOS/tvOS/visionOS/linux overstates buildability; statuses above under-claim accordingly. linux unsupported rests on the SwiftUI-wing guard anchors (gaps mark linux absent); the UIKit core has no linux guard, hence confidence 0.5. Checkout observations (not anchors): UIScreen.main used unconditionally in Sources/Extensions.swift; childForHomeIndicatorAutoHidden overridden in Sources/Controller.swift. 1 ObjC file unparsed per bundle blind-spot note.</p></section>
     <section class="badges-section">
       <h2>Badges for your README</h2>
-      <p>Maintainer of floatingpanel? These are yours — verified claims, linked to the receipts. Wrong verdict? That's a fix we want; see <a href="/about/#contribute">contribute</a>.</p>
+      <p>Maintainer of floatingpanel? These are yours — verified claims, linked to the receipts. Wrong verdict? That's a fix we want — <a href="https://github.com/nanoncore/swiftserve/issues" rel="noopener">open an issue on GitHub</a> or see <a href="/about/#contribute">contribute</a>.</p>
       <div class="badge-row">
         <img src="/badge/floatingpanel/verified.svg" alt="verified badge" height="20" />
         <button type="button" class="copy-btn" data-copy="[![1 capabilities verified by SwiftServe](https://swiftserve.dev/badge/floatingpanel/verified.svg)](https://swiftserve.dev/package/floatingpanel/)">Copy markdown</button>
@@ -126,7 +127,7 @@
   </main>
   <footer class="site-footer">
     <p>Served fresh · 81 capabilities × 115 packages · 231 records · data v1</p>
-    <p>Every verdict links to the exact source line that decides it. <a href="/about/">How it works</a></p>
+    <p>Every verdict links to the exact source line that decides it. <a href="/about/">How it works</a> · <a href="https://github.com/nanoncore/swiftserve" rel="noopener">Source on GitHub</a></p>
     <p>Made refreshingly cool from Paris, France</p>
   </footer>
 </body>

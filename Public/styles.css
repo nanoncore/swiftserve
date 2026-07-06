@@ -358,6 +358,13 @@ body.site.wide main { max-width: var(--maxw-wide); }
   transition: background 0.2s var(--ease);
 }
 .top-nav .nav-cta:hover { background: var(--accent-deep); }
+.top-nav .nav-github {
+  display: inline-flex; align-items: center; color: var(--ink-soft);
+  padding: 6px; border-radius: 999px;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+}
+.top-nav .nav-github:hover { background: var(--accent-wash); color: var(--accent-deep); }
+.top-nav .nav-github svg { display: block; }
 .nav-search input {
   border: 1px solid var(--hairline); border-radius: 999px; padding: 6px 14px;
   font: inherit; font-size: 14px; background: var(--surface); color: var(--ink); width: 170px;
