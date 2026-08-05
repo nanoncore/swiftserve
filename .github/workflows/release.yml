@@ -49,6 +49,8 @@ jobs:
     container: swift:6.0
     steps:
       - uses: actions/checkout@v4
+      - name: Install packaging tools
+        run: apt-get update && apt-get install -y gzip
       - name: Build (static stdlib)
         run: swift build -c release --product swiftserve --static-swift-stdlib
       - name: Package

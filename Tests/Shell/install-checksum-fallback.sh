@@ -15,7 +15,7 @@ fake_bin="$scratch/bin"
 payload="$scratch/payload"
 mkdir -p "$fake_bin" "$payload" "$scratch/install"
 
-for tool in mktemp rm grep cut tar mkdir install cp sha256sum; do
+for tool in mktemp rm grep cut tar gzip mkdir install cp sha256sum; do
   tool_path=$(command -v "$tool")
   ln -s "$tool_path" "$fake_bin/$tool"
 done
