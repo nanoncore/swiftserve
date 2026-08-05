@@ -308,6 +308,14 @@ public enum HomePage {
               \(site.categoryPills())
             </section>
             <section class="home-why">
+              <h2>Dependency update waiting for review?</h2>
+              <p><strong>Dependabot tells you what changed. SwiftServe tells you what it means.</strong>
+              Compare the two <code>Package.resolved</code> files for a policy-aware Upgrade Receipt:
+              version direction, pin and source changes, health delta, and exact-version capability impact.</p>
+              <pre><code>swiftserve diff base-Package.resolved head-Package.resolved</code></pre>
+              <p><a href="\(site.href("/receipts/"))">Review an upgrade with SwiftServe →</a></p>
+            </section>
+            <section class="home-why">
               <h2>Why this exists</h2>
               <p>A healthy, popular package can still silently not support the one feature you need
               on the one platform you ship. Health scores don't see it; compile matrices don't see it.
@@ -319,6 +327,63 @@ public enum HomePage {
         return site.page(title: "",
                          description: "Capability search for Swift packages: what they actually serve, on which Apple platforms, with source-line proof.",
                          path: "/", main: main)
+    }
+}
+
+public enum UpgradeReceiptsPage {
+
+    public static func render(site: Site) -> String {
+        let policy = """
+        {
+          "version": 1,
+          "rules": {
+            "branch-pin": "block",
+            "source-change": "block",
+            "major-update": "review",
+            "capability-unverified": "review"
+          }
+        }
+        """
+        let main = """
+            <section class="page-head">
+              <h1>Upgrade Receipts</h1>
+              <p><strong>Dependabot tells you what changed. SwiftServe tells you what it means.</strong></p>
+              <p>SwiftServe is an upgrade decision engine, not an updater. It reads two SwiftPM
+              lockfiles and produces a versioned, policy-aware artifact for a human or CI.</p>
+            </section>
+            <section class="prose">
+              <h2>Terminal, JSON, and GitHub</h2>
+              <pre><code>swiftserve diff base.resolved head.resolved
+        swiftserve diff base.resolved head.resolved --json
+        swiftserve diff base.resolved head.resolved --markdown &gt;&gt; "$GITHUB_STEP_SUMMARY"
+        swiftserve schema upgrade-receipt</code></pre>
+              <p>Use <code>--recheck-capabilities</code> to fetch changed indexed packages and rerun
+              the same source extraction and anchor validation as the index. Without it, evidence
+              applies only to an exactly matching recorded version; anything else is
+              <code>unverified</code>, never extrapolated.</p>
+              <h2>Policy</h2>
+              <p>Commit <code>.swiftserve.json</code> or pass <code>--policy</code>. JSON is strict:
+              malformed or unknown input fails closed.</p>
+              <pre><code>\(Html.escape(policy))</code></pre>
+              <h2>Verdicts and exits</h2>
+              <ul>
+                <li><code>pass</code> — no configured policy violation; not a universal safety guarantee.</li>
+                <li><code>review</code> — policy asks for human review.</li>
+                <li><code>block</code> — policy says the update must not pass the selected gate.</li>
+              </ul>
+              <p>Exit 0: receipt completed and gate passed · 1: completed, gate failed · 2: no
+              trustworthy receipt. Default gating fails on <code>block</code>; use
+              <code>--fail-on review</code> for stricter CI.</p>
+              <h2>Limits</h2>
+              <p>No unindexed capability claims. No vulnerability coverage. No source or lockfile
+              upload. No dependency updates, PR writing, hosted app, or auto-merge. An Upgrade
+              Receipt complements compilation and tests; it does not replace them.</p>
+              <p><a href="\(site.repoURL)/blob/main/docs/examples/upgrade-receipt.yml" rel="noopener">Copy the read-only GitHub Actions workflow →</a></p>
+            </section>
+        """
+        return site.page(title: "Upgrade Receipts",
+                         description: "Dependency change analysis for SwiftPM: policy, health deltas, and exact-version capability impact.",
+                         path: "/receipts/", main: main)
     }
 }
 
@@ -419,7 +484,8 @@ public enum AgentsPage {
               <h2>CLI</h2>
               <p>The same dataset ships in the CLI for offline/CI use
               (<a href="\(site.href("/get/"))">install options</a>):</p>
-              <pre><code>swiftserve capability-check livekit --capability "noise cancellation" --platform macos
+              <pre><code>swiftserve diff base.resolved head.resolved --json
+        swiftserve capability-check livekit --capability "noise cancellation" --platform macos
         swiftserve find --capability audio.recording --platform watchos
         swiftserve schema capability-record</code></pre>
               <p>Exit codes: 0 answered · 1 <code>--expect</code> mismatch (CI gate) · 2 not found.</p>
@@ -456,8 +522,9 @@ public enum GetPage {
             cli = """
             <p>Homebrew:</p>
             \(cmd("brew install \(repoSlug.split(separator: "/")[0])/tap/swiftserve"))
-            <p>Or the installer script (fetches the latest signed release into <code>~/.local/bin</code>):</p>
+            <p>Or the checksum-verified installer script (latest, or pass a pinned release):</p>
             \(cmd("curl -fsSL \(site.absolute("/install.sh")) | sh"))
+            \(cmd("curl -fsSL \(site.absolute("/install.sh")) | sh -s -- v0.7.0"))
             <p>Or from source:</p>
             \(cmd("git clone https://github.com/\(repoSlug) && cd swiftserve && make install"))
             """
@@ -512,7 +579,7 @@ public enum GetPage {
               <h2>3 · The CLI — offline checks, CI gates, scanners</h2>
               <p>Everything the hosted index answers, plus what needs your machine: dependency
               health (<code>scan</code>), private-API detection (<code>scan-binary</code>,
-              <code>scan-deps</code>), and <code>--expect</code> CI gates.</p>
+              <code>scan-deps</code>), Upgrade Receipts (<code>diff</code>), and CI gates.</p>
               \(cli)
             </section>
         """

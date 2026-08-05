@@ -149,6 +149,10 @@ public struct Scorer: Sendable {
         guard let r = SemVer(resolved), let l = SemVer(latest) else {
             return config.versionStaleness
         }
+        // A prerelease is informative, not evidence that a stable pin is
+        // behind. This also covers repositories whose visible history has no
+        // stable semantic tag.
+        if !r.prerelease, l.prerelease { return 100 }
         let majors = max(0, l.major - r.major)
         let minors = max(0, l.minor - r.minor)
         if majors > 0 { return clamp(100 - majors * 30) }   // a major behind is a real lag
@@ -243,7 +247,7 @@ public struct Scorer: Sendable {
             return "No license detected — usage rights are unclear."
         }
         if isPreRelease(pin.resolvedVersion) {
-            return "Pre-1.0 release (\(pin.resolvedVersion ?? "0.x")) — API may still shift."
+            return "Prerelease (\(pin.resolvedVersion ?? "unknown")) — API may still shift."
         }
         if flags.contains(.nonCanonicalLocation) {
             return "Hosted outside the common Swift forges — worth a glance."
@@ -262,6 +266,9 @@ public struct Scorer: Sendable {
     private func versionGapReason(resolved: String, latest: String) -> String? {
         guard let r = SemVer(resolved), let l = SemVer(latest) else {
             return resolved == latest ? nil : "Resolved at \(resolved); latest is \(latest)."
+        }
+        if !r.prerelease, l.prerelease {
+            return "Stable \(resolved) is pinned; newest published tag \(latest) is a prerelease."
         }
         let majors = l.major - r.major
         if majors > 0 { return "\(majors) major\(majors == 1 ? "" : "s") behind (latest \(latest))." }
@@ -319,7 +326,7 @@ public struct Scorer: Sendable {
 
     private func isPreRelease(_ version: String?) -> Bool {
         guard let v = version else { return false }
-        return SemVer(v)?.major == 0
+        return SemVer(v)?.prerelease == true
     }
 
     private func repoName(for pin: Pin) -> String {

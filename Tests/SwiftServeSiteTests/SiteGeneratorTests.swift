@@ -31,16 +31,28 @@ import SwiftServeCapability
     @Test func planCoversPagesApiAndLlmsTxt() throws {
         let paths = try SiteGenerator.plan(site: makeSite()).map(\.path)
         for expected in ["index.html", "menu/index.html", "about/index.html", "404.html",
+                         "receipts/index.html",
                          "can/audio.session-management/index.html", "can/audio.playback/index.html",
                          "package/client-sdk-swift/index.html",
                          "api/index.json", "api/taxonomy.json", "api/search-index.json",
                          "api/packages/index.json", "api/packages/client-sdk-swift.json",
                          "api/capabilities/audio.session-management.json",
-                         "api/schemas/capability-record-v1.json", "llms.txt"] {
+                         "api/schemas/capability-record-v1.json",
+                         "api/schemas/upgrade-receipt-v1.json", "llms.txt"] {
             #expect(paths.contains(expected), "missing \(expected)")
         }
         // No capability API file for a capability with zero records.
         #expect(!paths.contains("api/capabilities/audio.playback.json"))
+    }
+
+    @Test func upgradeReceiptsArePresentedAsAPrimaryWorkflow() throws {
+        let outputs = try SiteGenerator.plan(site: makeSite())
+        let home = String(decoding: outputs.first { $0.path == "index.html" }!.bytes, as: UTF8.self)
+        let page = String(decoding: outputs.first { $0.path == "receipts/index.html" }!.bytes, as: UTF8.self)
+        #expect(home.contains("Dependabot tells you what changed. SwiftServe tells you what it means."))
+        #expect(page.contains("swiftserve diff"))
+        #expect(page.contains("not a universal safety guarantee"))
+        #expect(page.contains("--recheck-capabilities"))
     }
 
     @Test func capabilityPageCarriesTheReceipt() throws {

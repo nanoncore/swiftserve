@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  macos:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test
+        run: swift test
+      - name: Release build
+        run: swift build -c release --product swiftserve
+      - name: Receipt acceptance
+        run: make receipt-spike
+      - name: Generated site and skill synchronization
+        run: make site-check
+
+  linux:
+    runs-on: ubuntu-latest
+    container: swift:6.0
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test
+        run: swift test
+      - name: Release build
+        run: swift build -c release --product swiftserve --static-swift-stdlib
+      - name: Receipt acceptance
+        run: make receipt-spike

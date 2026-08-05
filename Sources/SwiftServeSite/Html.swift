@@ -100,6 +100,7 @@ public struct Site {
             <a class="wordmark" href="\(href("/"))">🍦 <strong>SwiftServe</strong></a>
             <nav aria-label="Primary">
               \(navLink("Menu", "/menu/"))
+              \(navLink("Receipts", "/receipts/"))
               \(navLink("Scoop", "/scoop/"))
               \(navLink("Agents", "/agents/"))
               \(navLink("About", "/about/"))

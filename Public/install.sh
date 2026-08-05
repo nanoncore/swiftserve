@@ -1,6 +1,7 @@
 #!/bin/sh
-# SwiftServe installer — fetches the latest release binary into ~/.local/bin.
-# Usage:  curl -fsSL https://swiftserve.dev/install.sh | sh
+# SwiftServe installer — fetches a release binary into ~/.local/bin.
+# Latest:  curl -fsSL https://swiftserve.dev/install.sh | sh
+# Pinned:  curl -fsSL https://swiftserve.dev/install.sh | sh -s -- v0.7.0
 # Override the destination:  BINDIR=/usr/local/bin sh install.sh
 set -eu
 
@@ -21,8 +22,16 @@ case "$os" in
 esac
 
 echo "🍦 SwiftServe installer"
-tag=$(curl -fsSL "https://api.github.com/repos/$REPO/releases/latest" \
-  | sed -n 's/.*"tag_name": *"\([^"]*\)".*/\1/p' | head -1)
+requested_version=${1:-${SWIFTSERVE_VERSION:-}}
+if [ -n "$requested_version" ]; then
+  case "$requested_version" in
+    v*) tag="$requested_version" ;;
+    *) tag="v$requested_version" ;;
+  esac
+else
+  tag=$(curl -fsSL "https://api.github.com/repos/$REPO/releases/latest" \
+    | sed -n 's/.*"tag_name": *"\([^"]*\)".*/\1/p' | head -1)
+fi
 if [ -z "$tag" ]; then
   echo "No releases yet. Build from source instead:" >&2
   echo "  git clone https://github.com/$REPO && cd swiftserve && make install" >&2

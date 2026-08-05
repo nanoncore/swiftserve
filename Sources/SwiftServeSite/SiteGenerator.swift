@@ -1,5 +1,6 @@
 import Foundation
 import SwiftServeCapability
+import SwiftServeReceipt
 
 /// Stamps the whole site into the output directory. Deterministic: sorted
 /// iteration everywhere, no wall-clock unless a stamp is passed — re-running
@@ -30,6 +31,7 @@ public enum SiteGenerator {
         add("menu/index.html", MenuPage.render(site: site))
         add("about/index.html", AboutPage.render(site: site))
         add("agents/index.html", AgentsPage.render(site: site))
+        add("receipts/index.html", UpgradeReceiptsPage.render(site: site))
         add("404.html", NotFoundPage.render(site: site))
 
         for view in site.model.capabilities {
@@ -61,6 +63,7 @@ public enum SiteGenerator {
         add("api/search-index.json", try ApiOutput.searchIndex(site: site))
         add("api/schemas/capability-record-v1.json", Data(CapabilitySchemas.recordJSON.utf8))
         add("api/schemas/package-surface-v1.json", Data(CapabilitySchemas.surfaceJSON.utf8))
+        add("api/schemas/upgrade-receipt-v1.json", Data(UpgradeReceiptSchema.json.utf8))
 
         for package in site.model.packages {
             add("badge/\(package.slug)/verified.svg", Data(BadgeSVG.verified(package: package).utf8))
@@ -107,6 +110,7 @@ public enum SiteGenerator {
         }.joined(separator: "\n"))
         - How verdicts are derived: \(site.basePath)/about/
         - For agents (CLI, skill, examples): \(site.basePath)/agents/
+        - Upgrade Receipts: \(site.basePath)/receipts/
         - Install (plugin, skill, CLI): \(site.basePath)/get/
         - The Claude Code skill, ready to save: \(site.basePath)/skill.md
         """

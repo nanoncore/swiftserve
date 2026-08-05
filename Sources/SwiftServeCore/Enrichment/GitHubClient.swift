@@ -50,10 +50,10 @@ struct GitHubClient: Sendable {
     }
 
     /// `GET /repos/{owner}/{repo}/tags` — newest 100 tags; we pick the max semver.
-    func latestTag(owner: String, name: String) async throws -> String? {
+    func latestTag(owner: String, name: String, resolvedVersion: String?) async throws -> String? {
         let (data, _) = try await send("https://api.github.com/repos/\(owner)/\(name)/tags?per_page=100")
         let tags = try Self.decoder.decode([GitHubTag].self, from: data)
-        return GitHubParsing.maxSemverTag(tags.map(\.name))
+        return GitHubParsing.maxSemverTag(tags.map(\.name), resolvedVersion: resolvedVersion)
     }
 
     /// Contributor count via the cheap `per_page=1` + `Link: rel="last"` trick.
@@ -96,11 +96,12 @@ enum GitHubParsing {
     }
 
     /// The highest semantic version among raw tag strings (ignores non-semver).
-    static func maxSemverTag(_ tags: [String]) -> String? {
-        tags
-            .compactMap { tag -> (SemVer, String)? in SemVer(tag).map { ($0, tag) } }
-            .max { $0.0 < $1.0 }?
-            .1
+    static func maxSemverTag(_ tags: [String], resolvedVersion: String? = nil) -> String? {
+        if SemVer(resolvedVersion ?? "")?.prerelease == true {
+            return tags.compactMap { tag -> (SemVer, String)? in SemVer(tag).map { ($0, tag) } }
+                .max { $0.0 < $1.0 }?.1
+        }
+        return SemVer.preferredReleaseTag(tags)
     }
 
     /// Parse the page number of the `rel="last"` entry from a GitHub `Link` header.

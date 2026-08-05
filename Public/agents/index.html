@@ -15,6 +15,7 @@
     <a class="wordmark" href="/">🍦 <strong>SwiftServe</strong></a>
     <nav aria-label="Primary">
       <a href="/menu/">Menu</a>
+      <a href="/receipts/">Receipts</a>
       <a href="/scoop/">Scoop</a>
       <a href="/agents/" aria-current="page">Agents</a>
       <a href="/about/">About</a>
@@ -60,7 +61,8 @@
       <h2>CLI</h2>
       <p>The same dataset ships in the CLI for offline/CI use
       (<a href="/get/">install options</a>):</p>
-      <pre><code>swiftserve capability-check livekit --capability "noise cancellation" --platform macos
+      <pre><code>swiftserve diff base.resolved head.resolved --json
+swiftserve capability-check livekit --capability "noise cancellation" --platform macos
 swiftserve find --capability audio.recording --platform watchos
 swiftserve schema capability-record</code></pre>
       <p>Exit codes: 0 answered · 1 <code>--expect</code> mismatch (CI gate) · 2 not found.</p>

@@ -5,7 +5,7 @@ SKILLDIR  ?= $(HOME)/.claude/skills/swiftserve
 AGENTSDIR ?= $(HOME)/.agents/skills/swiftserve
 BIN       := .build/release/swiftserve
 
-.PHONY: help build install uninstall test livekit-spike recheck-spike
+.PHONY: help build install uninstall test site-check livekit-spike recheck-spike receipt-spike
 
 help:
 	@echo "SwiftServe make targets:"
@@ -13,8 +13,10 @@ help:
 	@echo "  make install       Build + install swiftserve to $(BINDIR) and the Claude Code skill to $(SKILLDIR)"
 	@echo "  make uninstall     Remove the installed binary and skill"
 	@echo "  make test          Run the test suite"
+	@echo "  make site-check    Prove generated site files and all skill copies are synchronized"
 	@echo "  make livekit-spike Fetch + extract the real LiveKit repos and show the noise-cancellation truth"
 	@echo "  make recheck-spike Gate 'swiftserve index recheck' end-to-end against SwiftySound 1.2.0 → 1.3.0"
+	@echo "  make receipt-spike Gate deterministic Upgrade Receipt JSON, Markdown, card, policy, and exit codes"
 	@echo ""
 	@echo "Override the bin location: make install BINDIR=/usr/local/bin"
 
@@ -53,6 +55,18 @@ site:
 	mkdir -p .agents/skills/swiftserve
 	cp .claude/skills/swiftserve/SKILL.md .agents/skills/swiftserve/SKILL.md
 	swift run SwiftServeSiteGen --records data/records --taxonomy data/taxonomy --out Public
+
+SITE_CHECK := .build/site-check
+site-check:
+	rm -rf $(SITE_CHECK)
+	mkdir -p $(SITE_CHECK)
+	cp Public/styles.css Public/site.js Public/xr-entry.js Public/xr.js $(SITE_CHECK)/
+	swift run SwiftServeSiteGen --records data/records --taxonomy data/taxonomy --out $(SITE_CHECK)
+	@find $(SITE_CHECK) -type f | while IFS= read -r file; do rel=$${file#$(SITE_CHECK)/}; cmp "$$file" "Public/$$rel" || exit 1; done
+	cmp .claude/skills/swiftserve/SKILL.md plugins/swiftserve/skills/swiftserve/SKILL.md
+	cmp .claude/skills/swiftserve/SKILL.md .agents/skills/swiftserve/SKILL.md
+	cmp .claude/skills/swiftserve/SKILL.md Public/skill.md
+	@echo "✅ site-check: generated site and every SwiftServe skill copy are synchronized"
 
 # Acceptance spike against the real LiveKit source (network + git): fetch at
 # pinned tags, extract, and gate on the grounded verdicts. Note the live
@@ -103,3 +117,35 @@ recheck-spike:
 	.build/debug/swiftserve index recheck $(RECHECK_ARGS) --package avfaudio --out $(RECHECK_SPIKE)/report-4-sdk.json
 	grep -q '"skipReason" : "first-party"' $(RECHECK_SPIKE)/report-4-sdk.json
 	@echo "✅ recheck-spike: report-only is side-effect free, --apply lands the bump, repairs hold, SDKs skip"
+
+# Deterministic, network-free Upgrade Receipt acceptance. The fixtures model an
+# immutable v2 → v3 lockfile history and outputs stay under .build only.
+RECEIPT_SPIKE := .build/receipt-spike
+RECEIPT_BASE := Tests/Fixtures/receipt/base-v2.json
+RECEIPT_HEAD := Tests/Fixtures/receipt/head-v3.json
+RECEIPT_ENV := SWIFTSERVE_GENERATED_AT=2026-08-05T12:00:00Z NO_COLOR=1
+receipt-spike:
+	swift build
+	rm -rf $(RECEIPT_SPIKE)
+	mkdir -p $(RECEIPT_SPIKE)
+	cp $(RECEIPT_BASE) $(RECEIPT_SPIKE)/base-before.json
+	cp $(RECEIPT_HEAD) $(RECEIPT_SPIKE)/head-before.json
+	$(RECEIPT_ENV) .build/debug/swiftserve diff $(RECEIPT_BASE) $(RECEIPT_HEAD) --json --file-only --fail-on block > $(RECEIPT_SPIKE)/receipt.json
+	grep -q '"receiptVersion" : 1' $(RECEIPT_SPIKE)/receipt.json
+	grep -q '"verdict" : "review"' $(RECEIPT_SPIKE)/receipt.json
+	$(RECEIPT_ENV) .build/debug/swiftserve diff $(RECEIPT_BASE) $(RECEIPT_HEAD) --markdown --file-only --fail-on block > $(RECEIPT_SPIKE)/receipt.md
+	grep -q 'Upgrade Receipt — REVIEW' $(RECEIPT_SPIKE)/receipt.md
+	$(RECEIPT_ENV) .build/debug/swiftserve diff $(RECEIPT_BASE) $(RECEIPT_HEAD) --card --file-only --fail-on block > $(RECEIPT_SPIKE)/receipt.card
+	grep -q 'Upgrade Receipt — REVIEW' $(RECEIPT_SPIKE)/receipt.card
+	@set +e; $(RECEIPT_ENV) .build/debug/swiftserve diff $(RECEIPT_BASE) $(RECEIPT_HEAD) --json --file-only --fail-on review >/dev/null; code=$$?; set -e; test $$code -eq 1
+	@set +e; $(RECEIPT_ENV) .build/debug/swiftserve diff $(RECEIPT_BASE) $(RECEIPT_HEAD) --json --file-only --policy Tests/Fixtures/receipt/block-major-policy.json >/dev/null; code=$$?; set -e; test $$code -eq 1
+	@set +e; $(RECEIPT_ENV) .build/debug/swiftserve diff Tests/Fixtures/receipt/malformed.json $(RECEIPT_HEAD) --json --file-only >$(RECEIPT_SPIKE)/bad.stdout 2>$(RECEIPT_SPIKE)/bad.stderr; code=$$?; set -e; test $$code -eq 2
+	test ! -s $(RECEIPT_SPIKE)/bad.stdout
+	grep -q '"error"' $(RECEIPT_SPIKE)/bad.stderr
+	cmp $(RECEIPT_BASE) $(RECEIPT_SPIKE)/base-before.json
+	cmp $(RECEIPT_HEAD) $(RECEIPT_SPIKE)/head-before.json
+	git show HEAD:Tests/SwiftServeCoreTests/Fixtures/resolved-v2.json > $(RECEIPT_SPIKE)/workflow-base.resolved
+	cp Tests/SwiftServeCoreTests/Fixtures/resolved-v2.json $(RECEIPT_SPIKE)/workflow-head.resolved
+	GITHUB_STEP_SUMMARY=$(RECEIPT_SPIKE)/step-summary.md $(RECEIPT_ENV) .build/debug/swiftserve diff $(RECEIPT_SPIKE)/workflow-base.resolved $(RECEIPT_SPIKE)/workflow-head.resolved --markdown --file-only --fail-on block >> $(RECEIPT_SPIKE)/step-summary.md
+	grep -q 'Upgrade Receipt — PASS' $(RECEIPT_SPIKE)/step-summary.md
+	@echo "✅ receipt-spike: deterministic v2/v3 receipt, renderers, policies, clean stdout, and exit codes 0/1/2"

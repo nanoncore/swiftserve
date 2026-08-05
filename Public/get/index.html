@@ -15,6 +15,7 @@
     <a class="wordmark" href="/">🍦 <strong>SwiftServe</strong></a>
     <nav aria-label="Primary">
       <a href="/menu/">Menu</a>
+      <a href="/receipts/">Receipts</a>
       <a href="/scoop/">Scoop</a>
       <a href="/agents/">Agents</a>
       <a href="/about/">About</a>
@@ -85,16 +86,20 @@
       <h2>3 · The CLI — offline checks, CI gates, scanners</h2>
       <p>Everything the hosted index answers, plus what needs your machine: dependency
       health (<code>scan</code>), private-API detection (<code>scan-binary</code>,
-      <code>scan-deps</code>), and <code>--expect</code> CI gates.</p>
+      <code>scan-deps</code>), Upgrade Receipts (<code>diff</code>), and CI gates.</p>
       <p>Homebrew:</p>
 <div class="cmd-row">
   <pre><code>brew install nanoncore/tap/swiftserve</code></pre>
   <button type="button" class="copy-btn" data-copy="brew install nanoncore/tap/swiftserve">Copy</button>
 </div>
-<p>Or the installer script (fetches the latest signed release into <code>~/.local/bin</code>):</p>
+<p>Or the checksum-verified installer script (latest, or pass a pinned release):</p>
 <div class="cmd-row">
   <pre><code>curl -fsSL https://swiftserve.dev/install.sh | sh</code></pre>
   <button type="button" class="copy-btn" data-copy="curl -fsSL https://swiftserve.dev/install.sh | sh">Copy</button>
+</div>
+<div class="cmd-row">
+  <pre><code>curl -fsSL https://swiftserve.dev/install.sh | sh -s -- v0.7.0</code></pre>
+  <button type="button" class="copy-btn" data-copy="curl -fsSL https://swiftserve.dev/install.sh | sh -s -- v0.7.0">Copy</button>
 </div>
 <p>Or from source:</p>
 <div class="cmd-row">

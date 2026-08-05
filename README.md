@@ -78,6 +78,96 @@ README badges per package, and a static JSON API under `/api/` for agents
 
 ---
 
+## Upgrade Receipts — dependency change review
+
+> **Dependabot tells you what changed. SwiftServe tells you what it means.**
+
+SwiftServe is not a dependency updater. It is an upgrade decision engine: give
+it the base and head SwiftPM lockfiles and it produces a versioned **Upgrade
+Receipt** with exact additions, removals, upgrades, downgrades, pin/source
+changes, policy findings, health deltas, and version-matched capability impact.
+
+```bash
+# Terminal card on a TTY; canonical JSON in a pipe
+swiftserve diff base-Package.resolved head-Package.resolved
+swiftserve diff base.resolved head.resolved --json > upgrade-receipt.json
+
+# GitHub Step Summary and CI gates
+swiftserve diff base.resolved head.resolved --markdown >> "$GITHUB_STEP_SUMMARY"
+swiftserve diff base.resolved head.resolved --fail-on review
+
+# Re-extract only capabilities already indexed for changed packages
+swiftserve diff base.resolved head.resolved --recheck-capabilities
+
+# Inspect the exact contract
+swiftserve schema upgrade-receipt
+```
+
+Without `--recheck-capabilities`, evidence is used only when its recorded
+version exactly matches the relevant pin. A newer pin is `unverified`, never
+silently extrapolated. Recheck mode reuses the existing source extraction,
+anchor validation, and `RecheckEngine` without mutating records or corpus
+caches; outcomes include `still-true`, `truth-changed`, `anchor-gone`,
+`needs-probe`, `unavailable`, `not-indexed`, and `first-party-skipped`.
+Live receipt rechecking currently fetches GitHub semantic-version tags; branch,
+revision, non-GitHub, or inaccessible private sources remain honestly
+`unavailable` instead of being treated as a pass.
+
+### Policy
+
+Commit an optional `.swiftserve.json` or pass `--policy path`. Policy is strict
+Foundation/Codable JSON—unknown versions, rules, severities, platforms,
+duplicate keys, and malformed capability requirements fail closed.
+
+```json
+{
+  "version": 1,
+  "rules": {
+    "branch-pin": "block",
+    "revision-pin": "block",
+    "source-change": "block",
+    "downgrade": "review",
+    "major-update": "review",
+    "prerelease": "review",
+    "removed-package": "review",
+    "capability-unverified": "review"
+  },
+  "requiredCapabilities": [
+    {
+      "package": "livekit",
+      "capability": "audio.session-management",
+      "platform": "macos",
+      "expect": "supported"
+    }
+  ]
+}
+```
+
+The receipt verdict is `pass`, `review`, or `block`. **`pass` means no
+configured policy was violated**—not that an upgrade is universally safe.
+By default the CLI exits 1 for `block`; `--fail-on review` also gates review
+receipts. Exit 0 means the receipt completed and the selected gate passed; 1 is
+a completed policy/gate failure; 2 means malformed input or infrastructure
+prevented a trustworthy receipt. JSON-mode errors go to stderr as a structured
+envelope and leave stdout clean.
+
+The copy-ready, read-only [GitHub Actions example](docs/examples/upgrade-receipt.yml)
+reads the base lockfile with `git show`, installs a checksum-verified pinned
+release, writes Markdown to `$GITHUB_STEP_SUMMARY`, and fails only at the chosen
+policy threshold. The installer accepts a release pin too:
+
+```bash
+curl -fsSL https://swiftserve.dev/install.sh | sh -s -- v0.7.0
+```
+
+Limits are deliberate: SwiftServe makes no claims about unindexed
+capabilities, provides no vulnerability database, and does not replace
+compiling, tests, or application-specific review. It does not update
+dependencies, open PRs, auto-merge, upload lockfiles/source, or run a hosted
+GitHub App.
+
+---
+
 ## The Scoop — dependency health (the original front door)
 
 Drop your `Package.resolved` and get a shareable dependency-health card — a
@@ -90,7 +180,7 @@ your project's health. Now served at `/scoop/`.
         │                          │
         │ POST /analyze            │ scan
         ▼                          ▼
-  SwiftServeServer ───────▶  SwiftServeCore  ◀─── (future: GitHub Action)
+  SwiftServeServer ───────▶  SwiftServeCore  ◀─── CLI / GitHub Actions
    (Hummingbird)             parse · enrich · score · mood
                              no external deps · macOS + Linux
                              ── canonical JSON is the one source of truth ──
@@ -285,7 +375,10 @@ RUN_LIVE_GITHUB=1 swift test --filter liveEnrichment   # opt-in live GitHub smok
 - **`SwiftServeCore`** — the platform-agnostic brains. Codable models, the
   `Package.resolved` parser (format v2 + v3), the `Scorer`, the `Mood` state
   machine, and the `Enrichment` protocol. Zero external dependencies so it drops
-  cleanly into the CLI (and a future GitHub Action).
+  cleanly into the CLI and read-only GitHub Actions workflows.
+- **`SwiftServeReceipt`** — pure Upgrade Receipt models, SemVer diffing,
+  policy evaluation, exact-version capability projection, and its independent
+  JSON Schema. Network, git, disk, and rendering stay in the CLI.
 - **`SwiftServeServer`** — a [Hummingbird](https://github.com/hummingbird-project/hummingbird)
   app exposing `POST /analyze` and serving the static frontend. (We dogfood
   Hummingbird on purpose.)
@@ -343,7 +436,9 @@ Private-API detection now spans binaries (`scan-binary`), dependency artifacts
 (`scan-deps`), and first-party source (`scan-source`). Still ahead: scanning
 dependency *source* (a deps × source combo), Objective-C via a real AST (libclang,
 not regex), build-time pointers, inline suppression (`// swiftserve:ignore` — the
-seam is left, not built), a GitHub Action, and any auth / accounts / persistence.
+seam is left, not built), and any auth / accounts / persistence. Upgrade
+Receipts intentionally stop at read-only GitHub Actions consumption—there is no
+hosted app, PR writer, updater, or auto-merge service.
 
 ## License
 

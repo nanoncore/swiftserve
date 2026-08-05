@@ -1,0 +1,11 @@
+{
+  "pins": [
+    {
+      "identity": "swiftysound",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/adamcichy/SwiftySound.git",
+      "state": { "revision": "0000000000000000000000000000000000000000", "version": "1.2.0" }
+    }
+  ],
+  "version": 2
+}

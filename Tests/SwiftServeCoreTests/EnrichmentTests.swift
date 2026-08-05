@@ -25,6 +25,47 @@ struct GitHubParsingTests {
         #expect(GitHubParsing.maxSemverTag([]) == nil)
     }
 
+    @Test("Stable release selection ignores newer alpha, beta, and RC tags")
+    func stableReleaseSelection() {
+        let mixed = ["v1.9.0", "2.0.0-alpha.1", "2.0.0-beta.3", "2.0.0-rc.1", "notes", "1.10.0"]
+        #expect(GitHubParsing.maxSemverTag(mixed) == "1.10.0")
+        #expect(GitHubParsing.maxSemverTag(["2.0.0-alpha.1", "2.0.0-beta.2", "2.0.0-rc.1"]) == "2.0.0-rc.1")
+        #expect(GitHubParsing.maxSemverTag(["v3.0.0", "3.1.0-beta.1", "malformed"]) == "v3.0.0")
+        #expect(GitHubParsing.maxSemverTag(["1.10.0", "2.0.0-beta.2", "2.0.0-rc.1"],
+                                           resolvedVersion: "2.0.0-beta.1") == "2.0.0-rc.1")
+    }
+
+    @Test("A stable pin is not described as a major behind a newer prerelease")
+    func stablePinIsNotBehindPrereleaseMajor() throws {
+        let latest = try #require(GitHubParsing.maxSemverTag(["1.9.0", "2.0.0-rc.1"]))
+        let pin = Pin(identity: "demo", kind: .remoteSourceControl,
+                      location: "https://github.com/acme/demo", resolvedVersion: "1.9.0",
+                      branch: nil, revision: "abc", pinType: .version)
+        let report = Scorer().score(pin: pin, data: EnrichmentData(latestVersion: latest))
+        #expect(report.subScores.staleness == 100)
+        #expect(!report.reason.contains("major"))
+
+        let prereleaseOnly = try #require(GitHubParsing.maxSemverTag(["2.0.0-alpha.1", "2.0.0-rc.1"]))
+        let prereleaseReport = Scorer().score(pin: pin, data: EnrichmentData(latestVersion: prereleaseOnly))
+        #expect(prereleaseReport.subScores.staleness == 100)
+        #expect(prereleaseReport.reason.contains("is a prerelease"))
+        #expect(!prereleaseReport.reason.contains("major"))
+    }
+
+    @Test("SemVer prerelease precedence and build metadata follow SemVer 2")
+    func semverPrecedence() throws {
+        let ordered = ["1.0.0-alpha", "1.0.0-alpha.1", "1.0.0-alpha.beta", "1.0.0-beta",
+                       "1.0.0-beta.2", "1.0.0-beta.11", "1.0.0-rc.1", "1.0.0"]
+        let parsed = try ordered.map { try #require(SemVer($0)) }
+        #expect(parsed == parsed.sorted())
+        let build1 = try #require(SemVer("1.0.0+build.1"))
+        let build2 = try #require(SemVer("1.0.0+build.2"))
+        #expect(!(build1 < build2) && !(build2 < build1))
+        for invalid in ["1", "1.2", "1.2.x", "01.2.3", "1.2.3-01", "1.2.3-"] {
+            #expect(SemVer(invalid) == nil)
+        }
+    }
+
     @Test("Parses the rel=\"last\" page from a GitHub Link header")
     func linkHeader() {
         let header = #"<https://api.github.com/.../contributors?per_page=1&page=2>; rel="next", <https://api.github.com/.../contributors?per_page=1&page=244>; rel="last""#

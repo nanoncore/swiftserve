@@ -1,0 +1,17 @@
+{
+  "pins": [
+    {
+      "identity": "demo",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/acme/demo.git",
+      "state": { "revision": "1111111111111111111111111111111111111111", "version": "1.2.3" }
+    },
+    {
+      "identity": "removed-kit",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/acme/removed-kit.git",
+      "state": { "revision": "2222222222222222222222222222222222222222", "version": "2.0.0" }
+    }
+  ],
+  "version": 2
+}

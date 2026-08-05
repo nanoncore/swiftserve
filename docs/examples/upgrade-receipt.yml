@@ -1,0 +1,40 @@
+name: SwiftServe Upgrade Receipt
+
+on:
+  pull_request:
+    paths:
+      - "**/Package.resolved"
+      - ".swiftserve.json"
+
+permissions:
+  contents: read
+
+jobs:
+  receipt:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Read base and head lockfiles without changing the checkout
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/swiftserve"
+          git show "$BASE_SHA:Package.resolved" > "$RUNNER_TEMP/swiftserve/base.resolved"
+          cp Package.resolved "$RUNNER_TEMP/swiftserve/head.resolved"
+
+      - name: Install pinned SwiftServe
+        run: curl -fsSL https://swiftserve.dev/install.sh | sh -s -- v0.7.0
+
+      - name: Write the Upgrade Receipt
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          "$HOME/.local/bin/swiftserve" diff \
+            "$RUNNER_TEMP/swiftserve/base.resolved" \
+            "$RUNNER_TEMP/swiftserve/head.resolved" \
+            --markdown \
+            --fail-on block >> "$GITHUB_STEP_SUMMARY"

@@ -2,6 +2,7 @@ import ArgumentParser
 import Foundation
 import SwiftServeCore
 import SwiftServeCapability
+import SwiftServeReceipt
 
 /// SwiftServe's terminal/CI/agent front door. Same `SwiftServeCore`, same canonical
 /// JSON as the web `POST /analyze` — the human card is rendered from that JSON.
@@ -9,29 +10,29 @@ import SwiftServeCapability
 struct SwiftServe: AsyncParsableCommand {
     static let configuration = CommandConfiguration(
         commandName: "swiftserve",
-        abstract: "Scan a Package.resolved and get a dependency-health Scoop from Swiftee.",
+        abstract: "Review Swift dependency changes, capability truth, health, and private APIs.",
         discussion: """
         OUTPUT
-          A human card on an interactive terminal; the canonical JSON report when
-          piped or redirected. Force either with --json / --card.
+          Human output on an interactive terminal; canonical JSON when piped or
+          redirected. `diff --markdown` writes a GitHub Step Summary receipt.
 
         EXIT CODES (for scripts and agents)
-          0  scan succeeded
-          1  scan succeeded but overall score is below --min-score
-          2  scan failed (unreadable file, not a Package.resolved, …)
+          0  operation completed and the configured gate passed
+          1  operation completed but its policy/gate failed
+          2  malformed input or infrastructure prevented a trustworthy result
 
         AGENTS
           `swiftserve scan --json` emits the canonical report on stdout (and a
-          {"error": …} envelope on stderr if it fails). `swiftserve schema` prints
-          the report's JSON Schema. The same JSON backs the web card and the CLI.
+          {"error": …} envelope on stderr if it fails). `swiftserve diff --json`
+          emits a versioned Upgrade Receipt; `schema upgrade-receipt` documents it.
 
         ENVIRONMENT
           GITHUB_TOKEN     enable live GitHub enrichment (else file-only)
           NO_COLOR         disable ANSI color
           CLICOLOR_FORCE   force ANSI color even when not a TTY
         """,
-        version: "0.6.0",
-        subcommands: [Scan.self, ScanBinary.self, ScanDeps.self, ScanSource.self, BuildTiming.self, BuildCost.self, Surface.self, Index.self, CapabilityCheck.self, Find.self, Schema.self],
+        version: "0.7.0",
+        subcommands: [Scan.self, Diff.self, ScanBinary.self, ScanDeps.self, ScanSource.self, BuildTiming.self, BuildCost.self, Surface.self, Index.self, CapabilityCheck.self, Find.self, Schema.self],
         defaultSubcommand: Scan.self
     )
 }
@@ -152,21 +153,23 @@ struct Scan: AsyncParsableCommand {
 /// Print canonical JSON Schemas — lets agents validate/understand output.
 struct Schema: ParsableCommand {
     static let configuration = CommandConfiguration(
-        abstract: "Print a JSON Schema: report (default), capability-record, or surface."
+        abstract: "Print a JSON Schema: report (default), upgrade-receipt, capability-record, or surface."
     )
 
     enum Kind: String, ExpressibleByArgument, CaseIterable {
         case report
+        case upgradeReceipt = "upgrade-receipt"
         case capabilityRecord = "capability-record"
         case surface
     }
 
-    @Argument(help: "Which schema: report | capability-record | surface.")
+    @Argument(help: "Which schema: report | upgrade-receipt | capability-record | surface.")
     var kind: Kind = .report
 
     func run() {
         switch kind {
         case .report: print(ReportSchema.json)
+        case .upgradeReceipt: print(UpgradeReceiptSchema.json)
         case .capabilityRecord: print(CapabilitySchemas.recordJSON)
         case .surface: print(CapabilitySchemas.surfaceJSON)
         }

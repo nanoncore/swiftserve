@@ -9,5 +9,6 @@
 - Platform pivot (the state of watchOS): /on/watchos/ · JSON: /api/on/watchos.json
 - How verdicts are derived: /about/
 - For agents (CLI, skill, examples): /agents/
+- Upgrade Receipts: /receipts/
 - Install (plugin, skill, CLI): /get/
 - The Claude Code skill, ready to save: /skill.md

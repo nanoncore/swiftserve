@@ -7,8 +7,9 @@ let package = Package(
         .macOS(.v14)
     ],
     products: [
-        // Platform-agnostic brains: parsing + scoring + mood. Reused later by a CLI / GitHub Action.
+        // Platform-agnostic brains: parsing + scoring + mood. Reused by CLI and CI workflows.
         .library(name: "SwiftServeCore", targets: ["SwiftServeCore"]),
+        .library(name: "SwiftServeReceipt", targets: ["SwiftServeReceipt"]),
         // The web front door. Dogfoods Hummingbird.
         .executable(name: "SwiftServeServer", targets: ["SwiftServeServer"]),
         // The terminal/CI front door. Same Core, same canonical JSON.
@@ -62,6 +63,13 @@ let package = Package(
             name: "SwiftServeCapability",
             dependencies: ["SwiftServeCore"]
         ),
+        // Upgrade Receipts: deterministic Package.resolved diffing, policy,
+        // capability-impact projection, and the versioned JSON contract. I/O,
+        // git, and network access stay in the CLI behind injectable seams.
+        .target(
+            name: "SwiftServeReceipt",
+            dependencies: ["SwiftServeCore", "SwiftServeCapability"]
+        ),
         // Capability search, extraction layer: the second (and only other)
         // SwiftSyntax target. Turns package source into SwiftServeCapability's
         // SurfaceDecl values — public API surface × #if guards × @available.
@@ -86,7 +94,7 @@ let package = Package(
         // string interpolation — no engine, testable, deterministic output.
         .target(
             name: "SwiftServeSite",
-            dependencies: ["SwiftServeCore", "SwiftServeCapability"]
+            dependencies: ["SwiftServeCore", "SwiftServeCapability", "SwiftServeReceipt"]
         ),
         // The generator executable: `swift run SwiftServeSiteGen --out Public`.
         // Repo-internal tooling — not installed with the CLI.
@@ -109,6 +117,7 @@ let package = Package(
                 "SwiftServeSource",
                 "SwiftServeBuild",
                 "SwiftServeCapability",
+                "SwiftServeReceipt",
                 "SwiftServeSurface",
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
             ],
@@ -148,6 +157,14 @@ let package = Package(
         .testTarget(
             name: "SwiftServeCapabilityTests",
             dependencies: ["SwiftServeCapability"]
+        ),
+        .testTarget(
+            name: "SwiftServeReceiptTests",
+            dependencies: ["SwiftServeReceipt", "SwiftServeCore", "SwiftServeCapability"]
+        ),
+        .testTarget(
+            name: "SwiftServeCLITests",
+            dependencies: ["SwiftServeCLI", "SwiftServeReceipt", "SwiftServeCore"]
         ),
     ]
 )

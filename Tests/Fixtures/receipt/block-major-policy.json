@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "rules": {
+    "major-update": "block",
+    "removed-package": "review"
+  }
+}

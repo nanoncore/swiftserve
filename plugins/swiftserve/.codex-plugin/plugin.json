@@ -1,7 +1,7 @@
 {
   "name": "swiftserve",
   "version": "0.1.0",
-  "description": "Capability truth for Swift packages: what a package actually serves, per Apple platform and Linux, derived from parsed source with evidence permalinks.",
+  "description": "Capability truth and Upgrade Receipts for Swift packages: what dependencies serve and what an update means, grounded in version-pinned source evidence.",
   "author": {
     "name": "nanoncore",
     "url": "https://swiftserve.dev"
@@ -16,13 +16,14 @@
     "capability-check",
     "visionos",
     "watchos",
-    "app-store"
+    "app-store",
+    "upgrade-receipt"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "SwiftServe",
-    "shortDescription": "Check what Swift packages actually support, per platform",
-    "longDescription": "Before adding a Swift dependency, ask SwiftServe whether it actually serves the capability you need on your target platform — noise cancellation on macOS, charts on visionOS, haptics on watchOS. Verdicts are derived from parsed source at pinned versions with evidence permalinks, plus dependency-health review and private-API detection for App Store rejections (ITMS-90338). Works with zero install over the hosted static JSON index; the CLI adds offline scans and CI gates.",
+    "shortDescription": "Capability truth and SwiftPM Upgrade Receipts",
+    "longDescription": "Before adding a Swift dependency, ask SwiftServe whether it serves the capability you need. When Package.resolved changes, use an Upgrade Receipt to review versions, pins, policy, health, and exact-version capability impact. Verdicts are derived from parsed source at pinned versions with evidence permalinks, plus dependency-health and private-API checks.",
     "developerName": "nanoncore",
     "category": "Developer Tools",
     "capabilities": [

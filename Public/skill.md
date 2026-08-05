@@ -1,7 +1,7 @@
 ---
 name: swiftserve
 description: >-
-  Capability truth + dependency health for Swift packages. BEFORE adding a Swift
+  Capability truth, dependency health, and Upgrade Receipts for Swift packages. BEFORE adding a Swift
   dependency, or when the user asks "does package X support feature Y on
   platform Z" (noise cancellation, background audio, MIDI, speech-to-text… on
   macOS/watchOS/visionOS/…), consult `swiftserve capability-check` / `find` —
@@ -10,7 +10,8 @@ description: >-
   healthy/maintained/stale) and private/non-public API detection for App Store
   rejections (ITMS-90338). Trigger phrases: "add a dependency", "which package
   can do X", "does X work on macOS/watchOS", "capability check", "dependency
-  health", "are my dependencies safe", "App Store rejection", "non-public API",
+  health", "review this dependency update", "Package.resolved changed",
+  "are my dependencies safe", "App Store rejection", "non-public API",
   "private API", "ITMS-90338".
 ---
 
@@ -82,10 +83,33 @@ swiftserve find --capability "<feature>" --platform <os> --json
 ## Pick the right scanner
 
 - **Capability truth** ("does X do Y on Z?", "what can do Y?") → `capability-check` / `find` (above).
+- **Dependency change review** (two lockfiles, Dependabot/Renovate PR) → `diff` (below).
 - **Dependency health** (a project's packages) → `scan`.
 - **Private / non-public API** in a single compiled binary → `scan-binary`.
 - **Private API across a project's dependencies** ("is a *dependency* getting me
   rejected?", binary/xcframework deps) → `scan-deps`.
+
+### Upgrade Receipts — `swiftserve diff`
+
+When reviewing a SwiftPM dependency change, compare the base and head lockfiles
+before recommending merge:
+
+```bash
+swiftserve diff <base-Package.resolved> <head-Package.resolved> --json
+```
+
+- Read `verdict` (`pass` / `review` / `block`), `changes[]`, stable
+  `findings[].code`, old/new pin snapshots, and `capabilityChecks[]`.
+- A `pass` means no configured policy was violated. It is not proof of universal
+  safety and does not replace compiling or tests.
+- Capability evidence applies only at the exact recorded version. `unverified`
+  means SwiftServe refused to extrapolate. Use `--recheck-capabilities` when a
+  source/network recheck is appropriate; network failures remain unavailable.
+- `.swiftserve.json` is the strict optional policy. `--fail-on review|block`
+  chooses the CI gate; `--markdown` is for GitHub Step Summary.
+- Treat source changes, pin-type changes, downgrades, prereleases, removals,
+  duplicate identities, and changed revisions as distinct findings—never reduce
+  the receipt to “version went up.”
 
 ### 1. Dependency health — `swiftserve scan`
 
@@ -142,8 +166,9 @@ swiftserve scan-deps <project-dir> --json   # add --source-packages <dir> / --ap
 
 ## Exit codes (for scripting/CI)
 
-`0` success · `1` gate not met (`scan --min-score` / `scan-binary --fail-on`) ·
-`2` the scan failed (bad input). In `--json` mode, errors arrive as
+`0` success · `1` gate not met (`diff --fail-on` / `scan --min-score` /
+`scan-binary --fail-on`) · `2` the operation failed (bad input/infrastructure).
+In `--json` mode, errors arrive as
 `{"error": "…"}` on stderr.
 
 ## Tone
