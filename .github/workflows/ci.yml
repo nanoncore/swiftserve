@@ -27,6 +27,8 @@ jobs:
     container: swift:6.0
     steps:
       - uses: actions/checkout@v4
+      - name: Install build tools
+        run: apt-get update && apt-get install -y make
       - name: Test
         run: swift test
       - name: Release build
