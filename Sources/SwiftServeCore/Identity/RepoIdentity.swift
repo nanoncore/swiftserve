@@ -48,9 +48,12 @@ public enum RepoIdentity {
     /// Preserve source identity while stripping URL user-info so receipts and
     /// diagnostics never echo embedded repository credentials.
     public static func redactedLocation(_ location: String) -> String {
-        guard var components = URLComponents(string: location), components.host != nil else {
-            return location
+        if !location.contains("://"),
+           let at = location.firstIndex(of: "@"),
+           location[location.index(after: at)...].contains(":") {
+            return "<redacted>@\(location[location.index(after: at)...])"
         }
+        guard var components = URLComponents(string: location), components.host != nil else { return location }
         components.user = nil
         components.password = nil
         return components.string ?? location

@@ -3,7 +3,9 @@ name: SwiftServe Upgrade Receipt
 on:
   pull_request:
     paths:
-      - "**/Package.resolved"
+      # This example compares the repository-root lockfile below. Duplicate the
+      # job with an explicit path when a monorepo has multiple Swift packages.
+      - "Package.resolved"
       - ".swiftserve.json"
 
 permissions:

@@ -80,33 +80,36 @@ struct Diff: AsyncParsableCommand {
         }
 
         let changedPins = Self.changedRepositoryPins(base: basePins, head: headPins)
+        let githubPins = Self.githubEnrichmentPins(changedPins)
         let enrichment: [String: EnrichmentData]
-        let enrichmentSource: String
-        let networkUsed: Bool
+        var healthNetworkUsed = false
         let token = ProcessInfo.processInfo.environment["GITHUB_TOKEN"]
-        if !fileOnly, let token, !token.isEmpty, !changedPins.isEmpty {
-            let raw = await GitHubEnrichment(token: token).enrich(changedPins)
+        if !fileOnly, let token, !token.isEmpty, !githubPins.isEmpty {
+            healthNetworkUsed = true
+            let raw = await GitHubEnrichment(token: token).enrich(githubPins)
             enrichment = Dictionary(uniqueKeysWithValues: raw.map {
                 (RepoIdentity.normalizedPackageIdentity($0.key), $0.value)
             })
-            enrichmentSource = "github"
-            networkUsed = true
         } else {
             enrichment = [:]
-            enrichmentSource = "fileOnly"
-            networkUsed = false
         }
 
         var rechecked: [String: [CapabilityImpact]] = [:]
         var recheckExecuted = false
+        var capabilityNetworkUsed = false
         var unavailable: [String] = []
         if recheckCapabilities {
             let result = CapabilityReceiptRechecker.recheck(
                 base: basePins, head: headPins, dataset: dataset)
             rechecked = result.impacts
             recheckExecuted = result.executed
+            capabilityNetworkUsed = result.networkUsed
             unavailable = result.unavailable
         }
+        let networkUsed = healthNetworkUsed || capabilityNetworkUsed
+        let enrichmentSource = Self.enrichmentSource(
+            healthNetworkUsed: healthNetworkUsed,
+            capabilityNetworkUsed: capabilityNetworkUsed)
 
         let generatedAt = ProcessInfo.processInfo.environment["SWIFTSERVE_GENERATED_AT"] ?? Analyzer.timestamp()
         let receipt = ReceiptEngine.build(
@@ -183,6 +186,19 @@ struct Diff: AsyncParsableCommand {
         }
         return byRepository.keys.sorted().compactMap { byRepository[$0] }
     }
+
+    static func githubEnrichmentPins(_ pins: [Pin]) -> [Pin] {
+        pins.filter { RepoIdentity.ownerRepo(from: $0.location) != nil }
+    }
+
+    static func enrichmentSource(healthNetworkUsed: Bool, capabilityNetworkUsed: Bool) -> String {
+        switch (healthNetworkUsed, capabilityNetworkUsed) {
+        case (true, true): "github+capability-recheck"
+        case (true, false): "github"
+        case (false, true): "capability-recheck"
+        case (false, false): "fileOnly"
+        }
+    }
 }
 
 enum ReceiptGateThreshold: String, ExpressibleByArgument {
@@ -203,6 +219,12 @@ enum UpgradeReceiptRenderer {
             lines.append("   \(marker) \(change.identity)  \(old) → \(new)  [\(change.classification.rawValue)]")
             for finding in change.findings where finding.severity >= .review {
                 lines.append(Style.dim("      \(finding.code.rawValue): \(finding.message)"))
+            }
+        }
+        if !receipt.policy.violations.isEmpty {
+            lines.append("   Policy violations")
+            for violation in receipt.policy.violations {
+                lines.append(Style.dim("      \(violation)"))
             }
         }
         lines.append(Style.dim("   pass means configured policy passed; compile and test before shipping."))
@@ -230,6 +252,12 @@ enum UpgradeReceiptRenderer {
             lines += ["", "### Findings", ""]
             for finding in findings {
                 lines.append("- **\(finding.severity.rawValue)** `\(finding.code.rawValue)` — \(finding.message)")
+            }
+        }
+        if !receipt.policy.violations.isEmpty {
+            lines += ["", "### Policy violations", ""]
+            for violation in receipt.policy.violations {
+                lines.append("- `\(escape(violation))`")
             }
         }
         lines += [

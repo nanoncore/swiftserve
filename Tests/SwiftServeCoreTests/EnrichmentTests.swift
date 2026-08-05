@@ -16,6 +16,16 @@ struct GitHubParsingTests {
         #expect(GitHubParsing.ownerRepo(from: "apple.swift-collections") == nil) // registry identity
     }
 
+    @Test("Redacts URL and SCP-style repository user-info")
+    func redactsRepositoryCredentials() {
+        #expect(RepoIdentity.redactedLocation("https://token:secret@github.com/acme/private.git")
+                == "https://github.com/acme/private.git")
+        #expect(RepoIdentity.redactedLocation("token@github.com:acme/private.git")
+                == "<redacted>@github.com:acme/private.git")
+        #expect(RepoIdentity.redactedLocation("token@gitlab.example:team/private.git")
+                == "<redacted>@gitlab.example:team/private.git")
+    }
+
     @Test("Picks the highest semver tag, ignoring non-semver")
     func maxTag() {
         #expect(GitHubParsing.maxSemverTag(["2.98.0", "2.101.1", "2.100.0", "2.99.0"]) == "2.101.1")

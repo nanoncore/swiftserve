@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "rules": {
+    "required-capability-unverified": "block"
+  },
+  "requiredCapabilities": [
+    {
+      "package": "demo",
+      "capability": "audio.demo",
+      "platform": "macos",
+      "expect": "supported"
+    }
+  ]
+}

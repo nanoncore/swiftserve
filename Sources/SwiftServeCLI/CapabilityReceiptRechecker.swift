@@ -7,6 +7,7 @@ enum CapabilityReceiptRechecker {
     struct Result {
         let impacts: [String: [CapabilityImpact]]
         let executed: Bool
+        let networkUsed: Bool
         let unavailable: [String]
     }
 
@@ -17,6 +18,7 @@ enum CapabilityReceiptRechecker {
         var impacts: [String: [CapabilityImpact]] = [:]
         var unavailable: [String] = []
         var executed = false
+        var networkUsed = false
 
         for representative in changed {
             let identity = RepoIdentity.normalizedPackageIdentity(representative.identity)
@@ -47,6 +49,7 @@ enum CapabilityReceiptRechecker {
                 continue
             }
 
+            networkUsed = true
             do {
                 let checked = try recheckPackage(canonicalURL: canonical, basePin: old, headVersion: headVersion,
                                                  records: records, dataset: dataset)
@@ -58,7 +61,8 @@ enum CapabilityReceiptRechecker {
                 unavailable.append(identity)
             }
         }
-        return Result(impacts: impacts, executed: executed, unavailable: unavailable.sorted())
+        return Result(impacts: impacts, executed: executed, networkUsed: networkUsed,
+                      unavailable: unavailable.sorted())
     }
 
     private static func recheckPackage(canonicalURL: String, basePin: Pin?, headVersion: String,

@@ -53,19 +53,20 @@ public enum ReceiptEngine {
             }
         }
 
+        let requiredViolations = requiredCapabilityViolations(
+            head: head, changes: changes, context: context)
         var policyViolations = changes.flatMap(\.findings)
             .filter { $0.severity >= .review }
             .map { $0.code.rawValue }
-        policyViolations.append(contentsOf: requiredCapabilityViolations(
-            head: head, changes: changes, context: context))
+        policyViolations.append(contentsOf: requiredViolations
+            .filter { $0.severity >= .review }
+            .map(\.identifier))
         policyViolations = Array(Set(policyViolations)).sorted()
 
-        let highest = changes.map(\.severity).max() ?? .info
-        let requiredBlock = policyViolations.contains { $0.hasPrefix(FindingCode.requiredCapabilityMismatch.rawValue) }
-        let requiredReview = policyViolations.contains { $0.hasPrefix(FindingCode.requiredCapabilityUnverified.rawValue) }
+        let highest = (changes.map(\.severity) + requiredViolations.map(\.severity)).max() ?? .info
         let verdict: ReceiptVerdict
-        if highest == .block || requiredBlock { verdict = .block }
-        else if highest == .review || requiredReview { verdict = .review }
+        if highest == .block { verdict = .block }
+        else if highest == .review { verdict = .review }
         else { verdict = .pass }
 
         let policy = ReceiptPolicyEvaluation(
@@ -314,16 +315,27 @@ public enum ReceiptEngine {
 
     // MARK: - Policy requirements and enrichment
 
+    private struct RequiredCapabilityViolation {
+        let identifier: String
+        let severity: ReceiptSeverity
+    }
+
     private static func requiredCapabilityViolations(head: [Pin], changes: [UpgradeChange],
-                                                     context: ReceiptBuildContext) -> [String] {
+                                                     context: ReceiptBuildContext) -> [RequiredCapabilityViolation] {
         context.policy.requiredCapabilities.compactMap { requirement in
-            let identity = RepoIdentity.normalizedPackageIdentity(requirement.package)
+            let requestedIdentity = RepoIdentity.normalizedPackageIdentity(requirement.package)
             guard let pin = head.first(where: {
-                RepoIdentity.normalizedPackageIdentity($0.identity) == identity
+                RepoIdentity.normalizedPackageIdentity($0.identity) == requestedIdentity
                     || RepoIdentity.canonicalURL($0.location) == RepoIdentity.canonicalURL(requirement.package)
             }) else {
-                return "\(FindingCode.requiredCapabilityMismatch.rawValue):\(identity):missing-package"
+                let code = FindingCode.requiredCapabilityMismatch
+                let safePackage = RepoIdentity.normalizedPackageIdentity(
+                    RepoIdentity.redactedLocation(requirement.package))
+                return RequiredCapabilityViolation(
+                    identifier: "\(code.rawValue):\(safePackage):missing-package",
+                    severity: context.policy.severity(for: code))
             }
+            let identity = RepoIdentity.normalizedPackageIdentity(pin.identity)
             let changeChecks = changes.first { $0.identity == RepoIdentity.normalizedPackageIdentity(pin.identity) }?.capabilityChecks ?? []
             let directChecks = changeChecks.isEmpty
                 ? projectedCapabilities(identity: RepoIdentity.normalizedPackageIdentity(pin.identity), old: pin,
@@ -332,10 +344,16 @@ public enum ReceiptEngine {
             guard let result = directChecks.first(where: {
                 $0.capability == requirement.capability && $0.platform == canonicalPlatform(requirement.platform)
             }), let status = result.headStatus else {
-                return "\(FindingCode.requiredCapabilityUnverified.rawValue):\(identity):\(requirement.capability):\(requirement.platform)"
+                let code = FindingCode.requiredCapabilityUnverified
+                return RequiredCapabilityViolation(
+                    identifier: "\(code.rawValue):\(identity):\(requirement.capability):\(requirement.platform)",
+                    severity: context.policy.severity(for: code))
             }
             guard status == requirement.expect else {
-                return "\(FindingCode.requiredCapabilityMismatch.rawValue):\(identity):\(requirement.capability):\(requirement.platform)"
+                let code = FindingCode.requiredCapabilityMismatch
+                return RequiredCapabilityViolation(
+                    identifier: "\(code.rawValue):\(identity):\(requirement.capability):\(requirement.platform)",
+                    severity: context.policy.severity(for: code))
             }
             return nil
         }
@@ -384,7 +402,13 @@ public enum ReceiptEngine {
     }
 
     private static func headline(verdict: ReceiptVerdict, changeCount: Int) -> String {
-        if changeCount == 0 { return "No dependency changes detected; configured policy passed." }
+        if changeCount == 0 {
+            return switch verdict {
+            case .pass: "No dependency changes detected; configured policy passed."
+            case .review: "No dependency changes detected; review requested by policy."
+            case .block: "No dependency changes detected; blocked by policy."
+            }
+        }
         let noun = changeCount == 1 ? "change" : "changes"
         switch verdict {
         case .pass: return "\(changeCount) dependency \(noun); no configured policy violation."

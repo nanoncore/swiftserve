@@ -99,6 +99,17 @@ struct ReceiptEngineTests {
         #expect(result.changes[0].findings.contains { $0.code == .minorUpdate })
     }
 
+    @Test("SCP-style repository user-info is redacted from receipts and findings")
+    func sourceCredentialsAreRedacted() {
+        let result = receipt(
+            [pin("demo", location: "secret-token@github.com:acme/private.git")],
+            [pin("demo", location: "another-token@github.com:fork/private.git")])
+        let change = result.changes[0]
+        #expect(change.oldPin?.location == "<redacted>@github.com:acme/private.git")
+        #expect(change.newPin?.location == "<redacted>@github.com:fork/private.git")
+        #expect(!change.findings.contains { $0.message.contains("secret-token") || $0.message.contains("another-token") })
+    }
+
     @Test("Duplicate and conflicting normalized identities fail closed")
     func duplicates() {
         let head = [pin("Demo"), pin(" demo ", "2.0.0")]
@@ -268,5 +279,30 @@ struct ReceiptCapabilityTests {
                                          context: .init(policy: policy, capabilityDataset: dataset()))
         #expect(review.policy.violations.contains { $0.hasPrefix("required-capability-unverified") })
         #expect(review.verdict == .review)
+    }
+
+    @Test("Required capability findings honor severity overrides in both directions")
+    func requiredCapabilitySeverityOverrides() {
+        let requirement = CapabilityRequirement(package: "demo", capability: "audio.demo",
+                                                platform: "macOS", expect: .supported)
+        let blockedPolicy = ReceiptPolicy(
+            rules: [FindingCode.requiredCapabilityUnverified.rawValue: .block],
+            requiredCapabilities: [requirement])
+        let blocked = ReceiptEngine.build(base: [pin("1.1.0")], head: [pin("1.1.0")], generatedAt: "t",
+            context: .init(policy: blockedPolicy, capabilityDataset: dataset()))
+        #expect(blocked.changes.isEmpty)
+        #expect(blocked.verdict == .block)
+        #expect(blocked.policy.violations.contains { $0.hasPrefix("required-capability-unverified") })
+        #expect(blocked.headline == "No dependency changes detected; blocked by policy.")
+
+        let mismatch = CapabilityRequirement(package: "demo", capability: "audio.demo",
+                                             platform: "macOS", expect: .unsupported)
+        let demotedPolicy = ReceiptPolicy(
+            rules: [FindingCode.requiredCapabilityMismatch.rawValue: .info],
+            requiredCapabilities: [mismatch])
+        let demoted = ReceiptEngine.build(base: [pin("1.0.0")], head: [pin("1.0.0")], generatedAt: "t",
+            context: .init(policy: demotedPolicy, capabilityDataset: dataset()))
+        #expect(demoted.verdict == .pass)
+        #expect(demoted.policy.violations.isEmpty)
     }
 }

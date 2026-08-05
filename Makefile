@@ -139,13 +139,25 @@ receipt-spike:
 	grep -q 'Upgrade Receipt — REVIEW' $(RECEIPT_SPIKE)/receipt.card
 	@set +e; $(RECEIPT_ENV) .build/debug/swiftserve diff $(RECEIPT_BASE) $(RECEIPT_HEAD) --json --file-only --fail-on review >/dev/null; code=$$?; set -e; test $$code -eq 1
 	@set +e; $(RECEIPT_ENV) .build/debug/swiftserve diff $(RECEIPT_BASE) $(RECEIPT_HEAD) --json --file-only --policy Tests/Fixtures/receipt/block-major-policy.json >/dev/null; code=$$?; set -e; test $$code -eq 1
+	@set +e; $(RECEIPT_ENV) .build/debug/swiftserve diff $(RECEIPT_BASE) $(RECEIPT_BASE) --json --file-only --policy Tests/Fixtures/receipt/required-capability-block-policy.json >$(RECEIPT_SPIKE)/required-block.json; code=$$?; set -e; test $$code -eq 1
+	grep -q '"headline" : "No dependency changes detected; blocked by policy."' $(RECEIPT_SPIKE)/required-block.json
+	grep -q 'required-capability-unverified:demo:audio.demo:macOS' $(RECEIPT_SPIKE)/required-block.json
 	@set +e; $(RECEIPT_ENV) .build/debug/swiftserve diff Tests/Fixtures/receipt/malformed.json $(RECEIPT_HEAD) --json --file-only >$(RECEIPT_SPIKE)/bad.stdout 2>$(RECEIPT_SPIKE)/bad.stderr; code=$$?; set -e; test $$code -eq 2
 	test ! -s $(RECEIPT_SPIKE)/bad.stdout
 	grep -q '"error"' $(RECEIPT_SPIKE)/bad.stderr
+	@set +e; .build/debug/swiftserve diff $(RECEIPT_BASE) --json >$(RECEIPT_SPIKE)/missing.stdout 2>$(RECEIPT_SPIKE)/missing.stderr; code=$$?; set -e; test $$code -eq 2
+	test ! -s $(RECEIPT_SPIKE)/missing.stdout
+	grep -q '"error"' $(RECEIPT_SPIKE)/missing.stderr
+	@set +e; .build/debug/swiftserve diff $(RECEIPT_BASE) $(RECEIPT_HEAD) --json --fail-on nope >$(RECEIPT_SPIKE)/invalid-option.stdout 2>$(RECEIPT_SPIKE)/invalid-option.stderr; code=$$?; set -e; test $$code -eq 2
+	test ! -s $(RECEIPT_SPIKE)/invalid-option.stdout
+	grep -q '"error"' $(RECEIPT_SPIKE)/invalid-option.stderr
 	cmp $(RECEIPT_BASE) $(RECEIPT_SPIKE)/base-before.json
 	cmp $(RECEIPT_HEAD) $(RECEIPT_SPIKE)/head-before.json
 	git show HEAD:Tests/SwiftServeCoreTests/Fixtures/resolved-v2.json > $(RECEIPT_SPIKE)/workflow-base.resolved
 	cp Tests/SwiftServeCoreTests/Fixtures/resolved-v2.json $(RECEIPT_SPIKE)/workflow-head.resolved
 	GITHUB_STEP_SUMMARY=$(RECEIPT_SPIKE)/step-summary.md $(RECEIPT_ENV) .build/debug/swiftserve diff $(RECEIPT_SPIKE)/workflow-base.resolved $(RECEIPT_SPIKE)/workflow-head.resolved --markdown --file-only --fail-on block >> $(RECEIPT_SPIKE)/step-summary.md
 	grep -q 'Upgrade Receipt — PASS' $(RECEIPT_SPIKE)/step-summary.md
+	sh Tests/Shell/install-checksum-fallback.sh
+	grep -q -- '- "Package.resolved"' docs/examples/upgrade-receipt.yml
+	@if grep -q '\*\*/Package.resolved' docs/examples/upgrade-receipt.yml; then exit 1; fi
 	@echo "✅ receipt-spike: deterministic v2/v3 receipt, renderers, policies, clean stdout, and exit codes 0/1/2"

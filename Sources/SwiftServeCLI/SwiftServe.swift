@@ -35,6 +35,50 @@ struct SwiftServe: AsyncParsableCommand {
         subcommands: [Scan.self, Diff.self, ScanBinary.self, ScanDeps.self, ScanSource.self, BuildTiming.self, BuildCost.self, Surface.self, Index.self, CapabilityCheck.self, Find.self, Schema.self],
         defaultSubcommand: Scan.self
     )
+
+    /// ArgumentParser normally exits with EX_USAGE before a subcommand can
+    /// enforce SwiftServe's public error contract. Intercept parse failures for
+    /// `diff` so malformed invocations use exit 2 and the JSON stderr envelope.
+    static func main() async {
+        let arguments = Array(CommandLine.arguments.dropFirst())
+        let command: ParsableCommand
+        do {
+            command = try parseAsRoot(arguments)
+        } catch {
+            handleParsingError(error, arguments: arguments)
+        }
+
+        do {
+            var command = command
+            if var asyncCommand = command as? AsyncParsableCommand {
+                try await asyncCommand.run()
+            } else {
+                try command.run()
+            }
+        } catch {
+            exit(withError: error)
+        }
+    }
+
+    private static func handleParsingError(_ error: Error, arguments: [String]) -> Never {
+        guard arguments.first == "diff", exitCode(for: error).rawValue != 0 else {
+            exit(withError: error)
+        }
+
+        let wantsJSON = arguments.contains("--json")
+            || (!arguments.contains("--markdown") && !arguments.contains("--card") && !Terminal.isInteractive)
+        let message = message(for: error)
+        let line: String
+        if wantsJSON,
+           let data = try? JSONEncoder().encode(["error": message]),
+           let encoded = String(data: data, encoding: .utf8) {
+            line = encoded
+        } else {
+            line = "Error: \(message)"
+        }
+        FileHandle.standardError.write(Data((line + "\n").utf8))
+        exit(withError: ExitCode(2))
+    }
 }
 
 struct Scan: AsyncParsableCommand {

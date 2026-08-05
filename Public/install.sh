@@ -51,8 +51,14 @@ curl -fsSL "$sums" -o "$tmp/checksums.txt"
 
 echo "→ verifying checksum"
 expected=$(grep " $asset\$" "$tmp/checksums.txt" | cut -d' ' -f1)
-actual=$(shasum -a 256 "$tmp/$asset" 2>/dev/null | cut -d' ' -f1 \
-  || sha256sum "$tmp/$asset" | cut -d' ' -f1)
+if command -v shasum >/dev/null 2>&1; then
+  actual=$(shasum -a 256 "$tmp/$asset" | cut -d' ' -f1)
+elif command -v sha256sum >/dev/null 2>&1; then
+  actual=$(sha256sum "$tmp/$asset" | cut -d' ' -f1)
+else
+  echo "no SHA-256 tool found (need shasum or sha256sum)" >&2
+  exit 1
+fi
 if [ -z "$expected" ] || [ "$expected" != "$actual" ]; then
   echo "checksum mismatch — refusing to install" >&2
   exit 1
