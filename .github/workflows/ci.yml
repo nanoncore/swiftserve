@@ -27,8 +27,10 @@ jobs:
     container: swift:6.0
     steps:
       - uses: actions/checkout@v4
-      - name: Install build tools
-        run: apt-get update && apt-get install -y make
+      - name: Prepare build environment
+        run: |
+          apt-get update && apt-get install -y make
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - name: Test
         run: swift test
       - name: Release build
