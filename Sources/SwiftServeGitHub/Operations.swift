@@ -90,6 +90,11 @@ public actor DurableJobQueue: WebhookJobEnqueuing {
 }
 
 public actor DurableWorkerPool {
+    private enum LeaseExecutionOutcome: Sendable {
+        case processed(CheckProcessResult)
+        case heartbeatStopped
+    }
+
     private let store: any JobStore
     private let orchestrator: GitHubCheckOrchestrator
     private let metrics: OperationalMetrics
@@ -207,12 +212,7 @@ public actor DurableWorkerPool {
         await metrics.jobStarted()
         do {
             try Task.checkCancellation()
-            let result = try await orchestrator.execute(
-                job.job, knownCheckRunID: job.checkRunID,
-                checkIdentified: { [store] checkID in
-                    try await store.saveCheckRunID(
-                        jobID: job.id, leaseOwner: leaseOwner, checkRunID: checkID)
-                })
+            let result = try await executeWithLeaseHeartbeat(job, leaseOwner: leaseOwner)
             if result.superseded {
                 try? await store.fail(jobID: job.id, leaseOwner: leaseOwner,
                                       category: "superseded", now: now(), retention: retention)
@@ -249,6 +249,44 @@ public actor DurableWorkerPool {
             await metrics.jobFailed()
         }
         finished(leaseOwner: leaseOwner, installationID: job.installationID)
+    }
+
+    private func executeWithLeaseHeartbeat(
+        _ job: StoredJob, leaseOwner: String
+    ) async throws -> CheckProcessResult {
+        let store = self.store
+        let orchestrator = self.orchestrator
+        let leaseDuration = self.leaseDuration
+        let heartbeatInterval = max(0.01, leaseDuration / 3)
+        let now = self.now
+        return try await withThrowingTaskGroup(of: LeaseExecutionOutcome.self) { group in
+            group.addTask {
+                .processed(try await orchestrator.execute(
+                    job.job, knownCheckRunID: job.checkRunID,
+                    checkIdentified: { checkID in
+                        try await store.saveCheckRunID(
+                            jobID: job.id, leaseOwner: leaseOwner, checkRunID: checkID)
+                    }))
+            }
+            group.addTask {
+                while !Task.isCancelled {
+                    try await Task.sleep(for: .seconds(heartbeatInterval))
+                    try Task.checkCancellation()
+                    try await store.renew(
+                        jobID: job.id, leaseOwner: leaseOwner, now: now(),
+                        leaseDuration: leaseDuration)
+                }
+                return .heartbeatStopped
+            }
+            guard let first = try await group.next() else {
+                throw CancellationError()
+            }
+            group.cancelAll()
+            switch first {
+            case .processed(let result): return result
+            case .heartbeatStopped: throw CancellationError()
+            }
+        }
     }
 
     private func finished(leaseOwner: String, installationID: Int64) {

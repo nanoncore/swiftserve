@@ -69,7 +69,8 @@ public actor GitHubCheckOrchestrator {
         knownCheckRunID: Int64?,
         checkIdentified: (@Sendable (Int64) async throws -> Void)?
     ) async throws -> CheckProcessResult {
-        guard try await isCurrent(event) else {
+        try Task.checkCancellation()
+        guard let initialState = try await matchingState(event) else {
             return .init(checkRunID: knownCheckRunID, superseded: true, publishedCheckCount: 0)
         }
 
@@ -79,15 +80,18 @@ public actor GitHubCheckOrchestrator {
         let checkID: Int64
         if let knownCheckRunID {
             checkID = knownCheckRunID
+            try Task.checkCancellation()
             try await api.updateCheck(repository: event.repository, id: checkID,
                                       publication: progress, installationID: event.installationID)
         } else if let existing = try await api.checkRunID(
             repository: event.repository, headSHA: event.headSHA, externalID: event.externalID,
             installationID: event.installationID) {
             checkID = existing
+            try Task.checkCancellation()
             try await api.updateCheck(repository: event.repository, id: existing,
                                       publication: progress, installationID: event.installationID)
         } else {
+            try Task.checkCancellation()
             checkID = try await api.createCheck(repository: event.repository, publication: progress,
                                                 installationID: event.installationID)
         }
@@ -95,7 +99,14 @@ public actor GitHubCheckOrchestrator {
 
         let final: CheckPublication
         do {
-            final = try await finalPublication(for: event)
+            final = try await finalPublication(
+                for: event, expectedChangedFileCount: initialState.changedFileCount)
+        } catch is CancellationError {
+            throw CancellationError()
+        } catch GitHubAPIError.incompleteChangedFileEnumeration(let expected, let received) {
+            final = failurePublication(
+                event: event, title: "Upgrade Receipt could not be produced",
+                summary: "SwiftServe failed closed because GitHub returned only \(received) of \(expected) changed files. Complete lockfile enumeration could not be proven.")
         } catch let error as GitHubAPIError {
             if case .retryable = error { throw error }
             final = failurePublication(
@@ -107,9 +118,10 @@ public actor GitHubCheckOrchestrator {
                 summary: "SwiftServe failed closed because a required immutable input was missing, malformed, or untrustworthy.")
         }
 
-        guard try await isCurrent(event) else {
+        guard try await matchingState(event) != nil else {
             return .init(checkRunID: checkID, superseded: true, publishedCheckCount: 0)
         }
+        try Task.checkCancellation()
         try await api.updateCheck(repository: event.repository, id: checkID,
                                   publication: final, installationID: event.installationID)
         return .init(checkRunID: checkID, superseded: false, publishedCheckCount: 1)
@@ -124,6 +136,7 @@ public actor GitHubCheckOrchestrator {
                 repository: event.repository, baseRef: event.branch,
                 installationID: event.installationID, page: pageNumber, perPage: 100)
             for pullRequest in page.values {
+                try Task.checkCancellation()
                 published += try await execute(
                     pullRequest, knownCheckRunID: nil,
                     checkIdentified: nil).publishedCheckCount
@@ -144,12 +157,15 @@ public actor GitHubCheckOrchestrator {
         }
     }
 
-    private func changedLockfiles(for event: PullRequestEvent) async throws -> [LockfileChange] {
+    private func changedLockfiles(for event: PullRequestEvent,
+                                  expectedCount: Int) async throws -> [LockfileChange] {
         var pageNumber = 1
+        var receivedCount = 0
         var changes: [LockfileChange] = []
         while true {
             guard pageNumber <= 100 else { throw GitHubAPIError.malformedResponse }
             let page = try await api.changedFiles(for: event, page: pageNumber, perPage: 100)
+            receivedCount += page.values.count
             changes += page.values.compactMap { file in
                 let newIsLockfile = Self.isLockfile(file.filename)
                 let previousIsLockfile = file.previousFilename.map(Self.isLockfile) ?? false
@@ -168,6 +184,10 @@ public actor GitHubCheckOrchestrator {
                 }
             }
             guard page.hasNext else {
+                guard receivedCount == expectedCount else {
+                    throw GitHubAPIError.incompleteChangedFileEnumeration(
+                        expected: expectedCount, received: receivedCount)
+                }
                 return changes.sorted {
                     ($0.sortPath, $0.basePath ?? "", $0.headPath ?? "") <
                     ($1.sortPath, $1.basePath ?? "", $1.headPath ?? "")
@@ -198,8 +218,10 @@ public actor GitHubCheckOrchestrator {
         }
     }
 
-    private func finalPublication(for event: PullRequestEvent) async throws -> CheckPublication {
-        let changes = try await changedLockfiles(for: event)
+    private func finalPublication(for event: PullRequestEvent,
+                                  expectedChangedFileCount: Int) async throws -> CheckPublication {
+        let changes = try await changedLockfiles(
+            for: event, expectedCount: expectedChangedFileCount)
         guard !changes.isEmpty else {
             return CheckPublication(
                 headSHA: event.headSHA, externalID: event.externalID, conclusion: .skipped,
@@ -228,6 +250,7 @@ public actor GitHubCheckOrchestrator {
 
         var outcomes: [LockfileOutcome] = []
         for change in changes {
+            try Task.checkCancellation()
             outcomes.append(try await analyze(
                 event: event, change: change, policy: policy, policySource: policySource))
         }
@@ -261,6 +284,8 @@ public actor GitHubCheckOrchestrator {
             if case .retryable = error { throw error }
             return .init(change: change, verdict: nil, markdown: nil,
                          errorCode: Self.inputErrorCode(error))
+        } catch is CancellationError {
+            throw CancellationError()
         } catch {
             return .init(change: change, verdict: nil, markdown: nil,
                          errorCode: "lockfile_malformed")
@@ -270,6 +295,7 @@ public actor GitHubCheckOrchestrator {
     private func pins(repository: RepositoryCoordinates, path: String?, ref: String,
                       installationID: Int64) async throws -> [Pin] {
         guard let path else { return [] }
+        try Task.checkCancellation()
         let data = try await api.content(
             repository: repository, path: path, ref: ref, installationID: installationID)
         guard data.count <= lockfileLimit else { throw GitHubAPIError.responseTooLarge }
@@ -305,10 +331,11 @@ public actor GitHubCheckOrchestrator {
                          summary: Self.boundedMarkdown(summary))
     }
 
-    private func isCurrent(_ event: PullRequestEvent) async throws -> Bool {
+    private func matchingState(_ event: PullRequestEvent) async throws -> PullRequestState? {
         let current = try await api.currentPullRequest(for: event)
-        return current.baseRef == event.baseRef && current.baseSHA == event.baseSHA &&
-            current.headSHA == event.headSHA
+        guard current.baseRef == event.baseRef && current.baseSHA == event.baseSHA &&
+                current.headSHA == event.headSHA else { return nil }
+        return current
     }
 
     private static func inputErrorCode(_ error: GitHubAPIError) -> String {

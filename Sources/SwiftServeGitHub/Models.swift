@@ -130,11 +130,14 @@ public struct PullRequestState: Sendable, Equatable {
     public let baseRef: String
     public let baseSHA: String
     public let headSHA: String
+    public let changedFileCount: Int
 
-    public init(baseRef: String, baseSHA: String, headSHA: String) {
+    public init(baseRef: String, baseSHA: String, headSHA: String,
+                changedFileCount: Int = 0) {
         self.baseRef = baseRef
         self.baseSHA = baseSHA
         self.headSHA = headSHA
+        self.changedFileCount = changedFileCount
     }
 }
 
@@ -235,6 +238,7 @@ public enum GitHubAPIError: Error, Sendable, Equatable, CustomStringConvertible 
     case transport
     case invalidRequest
     case responseTooLarge
+    case incompleteChangedFileEnumeration(expected: Int, received: Int)
     case retryable(GitHubRetryDirective)
 
     public var description: String {
@@ -247,6 +251,8 @@ public enum GitHubAPIError: Error, Sendable, Equatable, CustomStringConvertible 
         case .transport: "GitHub API transport failed"
         case .invalidRequest: "GitHub API request validation failed"
         case .responseTooLarge: "GitHub API response exceeded its configured limit"
+        case .incompleteChangedFileEnumeration(let expected, let received):
+            "GitHub changed-file enumeration was incomplete (expected \(expected), received \(received))"
         case .retryable(let directive): "GitHub API request should be retried (\(directive.category.rawValue))"
         }
     }

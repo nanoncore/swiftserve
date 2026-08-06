@@ -46,7 +46,7 @@ struct GitHubHTTPClientTests {
                 """
             case "/repos/acme/demo/pulls/7":
                 body = """
-                {"base":{"ref":"main","sha":"base-sha"},"head":{"sha":"head-sha"}}
+                {"base":{"ref":"main","sha":"base-sha"},"head":{"sha":"head-sha"},"changed_files":1}
                 """
             case "/repos/acme/demo/pulls":
                 body = """
@@ -65,7 +65,8 @@ struct GitHubHTTPClientTests {
                         previousFilename: "Old/Package.resolved"),
         ])
         #expect(try await client.currentPullRequest(for: fixtureEvent) == .init(
-            baseRef: "main", baseSHA: "base-sha", headSHA: "head-sha"))
+            baseRef: "main", baseSHA: "base-sha", headSHA: "head-sha",
+            changedFileCount: 1))
         let pulls = try await client.pullRequests(
             repository: fixtureEvent.repository, baseRef: "main",
             installationID: fixtureEvent.installationID, page: 1, perPage: 100)
@@ -90,7 +91,7 @@ struct GitHubHTTPClientTests {
             let attempt = attempts.next()
             if attempt == 1 { return (401, [:], Data("credential rejected".utf8)) }
             return (200, [:], Data("""
-            {"base":{"ref":"main","sha":"base-sha"},"head":{"sha":"head-sha"}}
+            {"base":{"ref":"main","sha":"base-sha"},"head":{"sha":"head-sha"},"changed_files":0}
             """.utf8))
         }
         defer { GitHubStubURLProtocol.handler = nil }
@@ -111,13 +112,24 @@ struct GitHubHTTPClientTests {
             .retryable(.init(category: .tooManyRequests,
                              notBefore: now.addingTimeInterval(12))))
         #expect(GitHubHTTPTransport.error(
+            for: response(429, ["Retry-After": "1", "X-RateLimit-Remaining": "0",
+                                "X-RateLimit-Reset": "1800000030"]),
+            data: Data(), now: now) ==
+            .retryable(.init(category: .primaryRateLimit,
+                             notBefore: now.addingTimeInterval(30))))
+        #expect(GitHubHTTPTransport.error(
+            for: response(429), data: Data(), now: now) ==
+            .retryable(.init(category: .secondaryRateLimit,
+                             notBefore: now.addingTimeInterval(60))))
+        #expect(GitHubHTTPTransport.error(
             for: response(403, ["X-RateLimit-Remaining": "0", "X-RateLimit-Reset": "1800000030"]),
             data: Data(), now: now) ==
             .retryable(.init(category: .primaryRateLimit,
                              notBefore: now.addingTimeInterval(30))))
         #expect(GitHubHTTPTransport.error(
             for: response(403), data: Data("secondary rate limit".utf8), now: now) ==
-            .retryable(.init(category: .secondaryRateLimit)))
+            .retryable(.init(category: .secondaryRateLimit,
+                             notBefore: now.addingTimeInterval(60))))
         #expect(GitHubHTTPTransport.error(for: response(503), data: Data(), now: now) ==
                 .retryable(.init(category: .serverError)))
         #expect(GitHubHTTPTransport.error(for: response(403), data: Data(), now: now) == .forbidden)

@@ -44,6 +44,7 @@ public struct StoredJob: Sendable, Equatable {
 
 public enum JobEnqueueResult: Sendable, Equatable {
     case inserted
+    case revived
     case duplicate
 }
 
@@ -52,6 +53,8 @@ public protocol JobStore: Sendable {
                  retention: TimeInterval) async throws -> JobEnqueueResult
     func claim(leaseOwner: String, now: Date, leaseDuration: TimeInterval,
                excludingInstallations: Set<Int64>) async throws -> StoredJob?
+    func renew(jobID: String, leaseOwner: String, now: Date,
+               leaseDuration: TimeInterval) async throws
     func saveCheckRunID(jobID: String, leaseOwner: String, checkRunID: Int64) async throws
     func complete(jobID: String, leaseOwner: String, now: Date,
                   retention: TimeInterval) async throws
@@ -118,11 +121,54 @@ public actor SQLiteJobStore: JobStore {
                         retention: TimeInterval) throws -> JobEnqueueResult {
         let fields = Self.fields(job)
         return try database.write { db in
-            if try Bool.fetchOne(
+            if let existing = try Row.fetchOne(
                 db,
-                sql: "SELECT EXISTS(SELECT 1 FROM github_jobs WHERE delivery_id = ? OR idempotency_key = ?)",
-                arguments: [deliveryID, job.stableID]) == true {
-                return .duplicate
+                sql: """
+                SELECT id, delivery_id, idempotency_key, state, repository_id,
+                       pull_request_number, created_at
+                FROM github_jobs
+                WHERE delivery_id = ? OR idempotency_key = ?
+                ORDER BY CASE WHEN delivery_id = ? THEN 0 ELSE 1 END
+                LIMIT 1
+                """,
+                arguments: [deliveryID, job.stableID, deliveryID]) {
+                let existingKey: String = existing["idempotency_key"]
+                let existingState: String = existing["state"]
+                guard existingKey == job.stableID, existingState == StoredJobState.failed.rawValue else {
+                    return .duplicate
+                }
+                if let number: Int = existing["pull_request_number"] {
+                    let repositoryID: Int64 = existing["repository_id"]
+                    let createdAt: Double = existing["created_at"]
+                    let newerExists = try Bool.fetchOne(
+                        db,
+                        sql: """
+                        SELECT EXISTS(
+                            SELECT 1 FROM github_jobs
+                            WHERE repository_id = ? AND pull_request_number = ?
+                              AND created_at > ? AND idempotency_key <> ?
+                              AND state IN ('pending', 'running', 'completed')
+                        )
+                        """,
+                        arguments: [repositoryID, number, createdAt, job.stableID]) == true
+                    if newerExists { return .duplicate }
+                }
+                let existingID: String = existing["id"]
+                try db.execute(
+                    sql: """
+                    UPDATE github_jobs
+                    SET delivery_id = ?, state = 'pending', attempt_count = 0,
+                        scheduled_at = ?, created_at = ?, completed_at = NULL,
+                        expires_at = ?, lease_owner = NULL, lease_expires_at = NULL,
+                        terminal_error_category = NULL
+                    WHERE id = ? AND state = 'failed' AND idempotency_key = ?
+                    """,
+                    arguments: [deliveryID, now.timeIntervalSince1970,
+                                now.timeIntervalSince1970,
+                                Date.distantFuture.timeIntervalSince1970,
+                                existingID, job.stableID])
+                guard db.changesCount == 1 else { return .duplicate }
+                return .revived
             }
             if let number = fields.pullRequestNumber {
                 try db.execute(
@@ -199,6 +245,19 @@ public actor SQLiteJobStore: JobStore {
         try mutateLease(jobID: jobID, leaseOwner: leaseOwner,
                         sql: "UPDATE github_jobs SET check_run_id = ? WHERE id = ? AND state = 'running' AND lease_owner = ?",
                         arguments: [checkRunID, jobID, leaseOwner])
+    }
+
+    public func renew(jobID: String, leaseOwner: String, now: Date,
+                      leaseDuration: TimeInterval) throws {
+        try mutateLease(
+            jobID: jobID, leaseOwner: leaseOwner,
+            sql: """
+            UPDATE github_jobs SET lease_expires_at = ?
+            WHERE id = ? AND state = 'running' AND lease_owner = ?
+              AND lease_expires_at > ?
+            """,
+            arguments: [now.addingTimeInterval(leaseDuration).timeIntervalSince1970,
+                        jobID, leaseOwner, now.timeIntervalSince1970])
     }
 
     public func complete(jobID: String, leaseOwner: String, now: Date,

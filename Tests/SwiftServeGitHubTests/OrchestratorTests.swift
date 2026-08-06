@@ -79,6 +79,18 @@ struct OrchestratorTests {
         #expect(!snapshot.calls.contains { $0 == (".swiftserve.json", fixtureEvent.headSHA) })
     }
 
+    @Test("Incomplete changed-file enumeration fails closed")
+    func incompleteChangedFileEnumeration() async throws {
+        let api = FakeGitHubAPI()
+        await api.setPage(1, files: ["README.md"])
+        await api.setChangedFileCount(3_001)
+        await (try makeOrchestrator(api)).process(fixtureEvent)
+        let publication = try #require(await final(api))
+        #expect(publication.conclusion == .failure)
+        #expect(publication.summary.contains("only 1 of 3001 changed files"))
+        #expect(!publication.title.contains("No Package.resolved changed"))
+    }
+
     @Test("Added, deleted, modified, and renamed lockfiles model empty sides in memory")
     func lifecycle() async throws {
         let files: [ChangedFile] = [

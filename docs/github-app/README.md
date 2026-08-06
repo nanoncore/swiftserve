@@ -12,6 +12,10 @@ base SHA. Added/deleted sides are empty pin sets in memory and renames use the
 old base path plus new head path. Package identities are intentionally not
 deduplicated across lockfiles. The aggregate verdict is the worst receipt
 verdict; malformed inputs fail closed without hiding valid sibling receipts.
+The pull request's authoritative `changed_files` count is compared with the
+paginated listing, so GitHub's 3,000-file listing ceiling or any incomplete
+enumeration fails the aggregate Check closed instead of silently skipping a
+lockfile.
 
 The App reuses `ReceiptEngine`, `ReceiptPolicy`, gate mapping, bundled exact
 capability evidence, and `UpgradeReceiptMarkdownRenderer`. It does not clone
@@ -91,10 +95,17 @@ maintained; Linux release builds and the acceptance target remain required.
 
 The webhook returns 202 only after the SQLite transaction commits. A duplicate
 delivery or identical immutable work is acknowledged without another row.
-Claims atomically increment attempts and install a worker/expiry lease. Other
-workers cannot claim that row until the lease expires. A process restart can
-claim pending work immediately; a crashed running job becomes claimable after
-lease expiry.
+Claims atomically increment attempts and install a worker/expiry lease. Active
+workers renew that lease every one-third of its configured duration with an
+owner-checked update. A failed renewal cancels the analysis and prevents later
+Check mutations; other workers cannot claim a healthy lease. A process restart
+can claim pending work immediately, while a crashed running job becomes
+claimable after lease expiry.
+
+Completed work remains idempotent for the retention window. A redelivery of
+failed work revives the same row, resets its attempt/elapsed retry budget, and
+preserves its Check Run ID so an `in_progress` Check can recover. Failed older
+work is not revived after a newer active or completed state for that pull request.
 
 New PR state marks older pending/running states superseded. A worker also
 re-reads the PR base ref, base SHA, and head SHA before starting and before final
@@ -115,6 +126,9 @@ exhaustion, secondary/abuse limits, and retryable 500/502/503/504 responses. It
 honors `Retry-After`, `X-RateLimit-Remaining`, and `X-RateLimit-Reset`. The first
 401 invalidates only the rejected installation token, refreshes once, and
 retries; a second 401 and permanent 403/404 responses are not retried forever.
+Primary-limit headers take precedence for both 403 and 429 responses. A
+secondary limit without an explicit deadline is scheduled at least 60 seconds
+later, as required by GitHub's rate-limit guidance.
 
 Retryable work releases its lease and is rescheduled in SQLite. Workers never
 sleep through a rate-limit window while consuming processing capacity. Backoff
@@ -165,6 +179,13 @@ make receipt-spike
 make github-app-spike
 make github-app-mvp
 ```
+
+Linux CI, tagged Linux releases, and the deployment image use Swift 6.1 because
+the resolved Hummingbird, swift-crypto, and GRDB releases require Swift tools
+6.1. The manifest syntax declaration remains 6.0, but the current resolved
+dependency graph has an effective Swift 6.1 build-toolchain minimum.
+Linux builds also install the distribution's SQLite development headers for
+GRDB's system SQLite module.
 
 Start the service with secrets injected by a secret manager:
 

@@ -29,11 +29,11 @@ jobs:
       - uses: actions/checkout@v4
       - name: Prepare build environment
         run: |
-          apt-get update && apt-get install -y gzip make
+          apt-get update && apt-get install -y gzip libsqlite3-dev make
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - name: Test
-        run: swift test
+        run: swift test -j 2
       - name: Release build
-        run: swift build -c release --product swiftserve --static-swift-stdlib
+        run: swift build -c release --product swiftserve --static-swift-stdlib -j 2
       - name: Receipt acceptance
         run: make receipt-spike

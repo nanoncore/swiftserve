@@ -74,10 +74,21 @@ actor FakeGitHubAPI: GitHubAPI {
 
     func setPage(_ number: Int, files: [String], hasNext: Bool = false) {
         pages[number] = Page(values: files.map { ChangedFile(filename: $0) }, hasNext: hasNext)
+        refreshChangedFileCount()
     }
 
     func setPage(_ number: Int, files: [ChangedFile], hasNext: Bool = false) {
         pages[number] = Page(values: files, hasNext: hasNext)
+        refreshChangedFileCount()
+    }
+
+    func setChangedFileCount(_ count: Int) {
+        currentState = .init(baseRef: currentState.baseRef, baseSHA: currentState.baseSHA,
+                             headSHA: currentState.headSHA, changedFileCount: count)
+    }
+
+    private func refreshChangedFileCount() {
+        setChangedFileCount(pages.values.reduce(0) { $0 + $1.values.count })
     }
 
     func failNextChangedFiles(with error: GitHubAPIError) {
@@ -93,11 +104,13 @@ actor FakeGitHubAPI: GitHubAPI {
     }
 
     func setHead(_ sha: String) {
-        currentState = .init(baseRef: currentState.baseRef, baseSHA: currentState.baseSHA, headSHA: sha)
+        currentState = .init(baseRef: currentState.baseRef, baseSHA: currentState.baseSHA,
+                             headSHA: sha, changedFileCount: currentState.changedFileCount)
     }
     func setBase(ref: String? = nil, sha: String) {
         currentState = .init(baseRef: ref ?? currentState.baseRef, baseSHA: sha,
-                             headSHA: currentState.headSHA)
+                             headSHA: currentState.headSHA,
+                             changedFileCount: currentState.changedFileCount)
     }
     func setExistingCheck(_ id: Int64?) { existingCheckID = id }
     func holdCheckRunLookup() { holdCheckRunLookups = true }

@@ -112,23 +112,32 @@ public final class GitHubHTTPTransport: @unchecked Sendable, InstallationTokenEx
 
     static func error(for response: HTTPURLResponse, data: Data, now: Date) -> GitHubAPIError {
         let status = response.statusCode
+        let remaining = response.value(forHTTPHeaderField: "X-RateLimit-Remaining")
+        if (status == 403 || status == 429), remaining == "0" {
+            let reset = response.value(forHTTPHeaderField: "X-RateLimit-Reset")
+                .flatMap(TimeInterval.init).map(Date.init(timeIntervalSince1970:))
+            return .retryable(.init(
+                category: .primaryRateLimit,
+                notBefore: reset ?? now.addingTimeInterval(60)))
+        }
         if status == 429 {
+            if response.value(forHTTPHeaderField: "Retry-After") == nil {
+                return .retryable(.init(
+                    category: .secondaryRateLimit,
+                    notBefore: now.addingTimeInterval(60)))
+            }
             return .retryable(.init(
                 category: .tooManyRequests,
                 notBefore: retryDate(response: response, now: now)))
         }
         if status == 403 {
-            if response.value(forHTTPHeaderField: "X-RateLimit-Remaining") == "0" {
-                let reset = response.value(forHTTPHeaderField: "X-RateLimit-Reset")
-                    .flatMap(TimeInterval.init).map(Date.init(timeIntervalSince1970:))
-                return .retryable(.init(category: .primaryRateLimit, notBefore: reset))
-            }
             let message = String(data: data.prefix(4096), encoding: .utf8)?.lowercased() ?? ""
             if response.value(forHTTPHeaderField: "Retry-After") != nil ||
                 message.contains("secondary rate limit") || message.contains("abuse detection") {
                 return .retryable(.init(
                     category: .secondaryRateLimit,
-                    notBefore: retryDate(response: response, now: now)))
+                    notBefore: retryDate(response: response, now: now) ??
+                        now.addingTimeInterval(60)))
             }
             return .forbidden
         }
@@ -220,13 +229,20 @@ public final class GitHubHTTPClient: @unchecked Sendable, GitHubAPI {
         struct Pull: Decodable {
             let base: Base
             let head: Head
+            let changedFiles: Int
             struct Base: Decodable { let ref: String; let sha: String }
             struct Head: Decodable { let sha: String }
+            enum CodingKeys: String, CodingKey {
+                case base, head
+                case changedFiles = "changed_files"
+            }
         }
         guard let pull = try? JSONDecoder().decode(Pull.self, from: data) else {
             throw GitHubAPIError.malformedResponse
         }
-        return .init(baseRef: pull.base.ref, baseSHA: pull.base.sha, headSHA: pull.head.sha)
+        guard pull.changedFiles >= 0 else { throw GitHubAPIError.malformedResponse }
+        return .init(baseRef: pull.base.ref, baseSHA: pull.base.sha, headSHA: pull.head.sha,
+                     changedFileCount: pull.changedFiles)
     }
 
     public func pullRequests(repository: RepositoryCoordinates, baseRef: String,
