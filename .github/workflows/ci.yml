@@ -16,9 +16,14 @@ jobs:
       - name: Test
         run: swift test
       - name: Release build
-        run: swift build -c release --product swiftserve
+        run: |
+          swift build -c release --product swiftserve
+          swift build -c release --product swiftserve-github-app
       - name: Receipt acceptance
-        run: make receipt-spike
+        run: |
+          make receipt-spike
+          make github-app-spike
+          make github-app-mvp
       - name: Generated site and skill synchronization
         run: make site-check
 
@@ -34,6 +39,20 @@ jobs:
       - name: Test
         run: swift test -j 2
       - name: Release build
-        run: swift build -c release --product swiftserve --static-swift-stdlib -j 2
+        run: |
+          swift build -c release --product swiftserve --static-swift-stdlib -j 2
+          swift build -c release --product swiftserve-github-app -j 2
       - name: Receipt acceptance
-        run: make receipt-spike
+        run: |
+          make receipt-spike
+          make github-app-spike
+          make github-app-mvp
+
+  github-app-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build production GitHub App image
+        run: docker build --file Dockerfile.github-app --tag swiftserve-github-app:ci .
+      - name: Smoke production GitHub App image
+        run: sh Tests/Shell/github-app-image-smoke.sh swiftserve-github-app:ci

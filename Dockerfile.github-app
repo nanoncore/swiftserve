@@ -1,0 +1,46 @@
+# SwiftServe GitHub App: webhook front door, durable SQLite queue, and workers.
+# Build with Swift 6.1 because the resolved dependency graph requires it.
+
+FROM swift:6.1-noble@sha256:fddaf02db3d41844916167ef4d199d5ca14c6003d052a0b9ab579646a9c720ec AS build
+WORKDIR /src
+
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends libsqlite3-dev \
+  && rm -rf /var/lib/apt/lists/*
+
+# Resolve dependencies in their own layer so source-only changes reuse the cache.
+COPY Package.swift Package.resolved ./
+RUN swift package resolve
+
+COPY Sources ./Sources
+COPY Tests ./Tests
+RUN swift build -c release --product swiftserve-github-app -j 2
+
+# SwiftPM resource bundles must remain beside the executable at runtime.
+RUN mkdir /staging \
+  && cp .build/release/swiftserve-github-app /staging/ \
+  && find -L .build/release -maxdepth 1 -type d \
+       \( -name '*.resources' -o -name '*.bundle' \) \
+       -exec cp -R {} /staging/ \;
+
+FROM swift:6.1-noble-slim@sha256:bde230c405c3c816a309baccd0c6614e1c17bd7fcb2beaffbea0139e42e4f6fe
+WORKDIR /app
+
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends ca-certificates libsqlite3-0 \
+  && rm -rf /var/lib/apt/lists/* \
+  && useradd --uid 10001 --create-home --home-dir /app \
+       --shell /usr/sbin/nologin swiftserve \
+  && mkdir -p /data \
+  && chown swiftserve:swiftserve /data
+
+COPY --from=build --chown=swiftserve:swiftserve /staging /app
+
+USER swiftserve
+ENV HOST=0.0.0.0 \
+    PORT=8080 \
+    SWIFTSERVE_GITHUB_JOB_STORE=/data/swiftserve-github.sqlite
+VOLUME ["/data"]
+EXPOSE 8080
+STOPSIGNAL SIGTERM
+ENTRYPOINT ["./swiftserve-github-app"]

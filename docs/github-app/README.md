@@ -183,6 +183,20 @@ make github-app-spike
 make github-app-mvp
 ```
 
+Build the deployment-neutral production image:
+
+```sh
+docker build -f Dockerfile.github-app -t swiftserve-github-app:local .
+sh Tests/Shell/github-app-image-smoke.sh swiftserve-github-app:local
+```
+
+The image runs as UID 10001, listens on port 8080, and stores SQLite state at
+`/data/swiftserve-github.sqlite`. Mount `/data` on a persistent volume and run
+exactly one replica for this MVP. The image contains no credentials; inject all
+required values at runtime through the hosting platform's secret manager. Its
+Swift 6.1 build and runtime images are pinned by multi-platform digest; update
+and re-smoke those pins deliberately when taking Swift or base-image patches.
+
 Linux CI, tagged Linux releases, and the deployment image use Swift 6.1 because
 the resolved Hummingbird, swift-crypto, and GRDB releases require Swift tools
 6.1. The manifest syntax declaration remains 6.0, but the current resolved
