@@ -146,11 +146,9 @@ public actor DurableWorkerPool {
         }
     }
 
-    public func waitForQuiescence(maxYields: Int = 10_000) async {
-        for _ in 0..<maxYields {
-            if tasks.isEmpty { return }
-            await Task.yield()
-        }
+    public func waitForQuiescence() async {
+        let active = Array(tasks.values)
+        for task in active { await task.value }
     }
 
     public func shutdown() async {
