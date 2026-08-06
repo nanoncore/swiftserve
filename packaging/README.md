@@ -20,6 +20,6 @@ repo is public and the first release is tagged.
 - `Public/install.sh` → GitHub latest release assets (`swiftserve-<tag>-<platform>.tar.gz`),
   installing the executable and both adjacent SwiftPM resource directories
 - `Formula/swiftserve.rb` (in the tap repo) → the same release tarballs, kept
-  beside the `bin/swiftserve` symlink so `Bundle.module` resolves resources
+  beside the `bin/swiftserve` executable so `Bundle.module` resolves resources
 - `/plugin marketplace add <account>/swiftserve` → `.claude-plugin/marketplace.json` in this repo
 - `https://swiftserve.dev/skill.md` → emitted by sitegen from `.claude/skills/swiftserve/SKILL.md`

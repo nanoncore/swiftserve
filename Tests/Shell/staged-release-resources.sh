@@ -20,14 +20,13 @@ scratch=$(mktemp -d)
 stage="$scratch/stage"
 homebrew="$scratch/homebrew"
 hidden="$scratch/build-resources"
-mkdir -p "$stage" "$homebrew/bin" "$homebrew/libexec" "$hidden"
+mkdir -p "$stage" "$homebrew/bin" "$hidden"
 cp "$build_dir/swiftserve" "$stage/swiftserve"
 cp -R "$cli_resource" "$stage/"
 cp -R "$evidence_resource" "$stage/"
-cp "$build_dir/swiftserve" "$homebrew/libexec/swiftserve"
+cp "$build_dir/swiftserve" "$homebrew/bin/swiftserve"
 cp -R "$cli_resource" "$homebrew/bin/"
 cp -R "$evidence_resource" "$homebrew/bin/"
-ln -s ../libexec/swiftserve "$homebrew/bin/swiftserve"
 
 restore() {
   if [ -d "$hidden/SwiftServe_SwiftServeCLI.$resource_suffix" ]; then
