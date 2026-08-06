@@ -30,6 +30,10 @@ let package = Package(
         // dependency for audited HMAC-SHA256 webhook verification and RS256
         // GitHub App JWT signing; no cryptographic primitive is implemented here.
         .package(url: "https://github.com/apple/swift-crypto.git", from: "4.5.0"),
+        // SQLite-backed durable orchestration for the hosted GitHub App. GRDB
+        // supplies migrations, transactions, WAL, and safe concurrent access;
+        // see docs/github-app/README.md for the adoption evidence and caveats.
+        .package(url: "https://github.com/groue/GRDB.swift.git", exact: "7.10.0"),
     ],
     targets: [
         // Core has ZERO external dependencies — pure Swift + Foundation, macOS + Linux.
@@ -95,6 +99,7 @@ let package = Package(
                 "SwiftServeEvidence",
                 .product(name: "Crypto", package: "swift-crypto"),
                 .product(name: "CryptoExtras", package: "swift-crypto"),
+                .product(name: "GRDB", package: "GRDB.swift"),
             ]
         ),
         .executableTarget(

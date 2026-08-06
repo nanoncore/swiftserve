@@ -11,7 +11,8 @@ public struct WebhookResponse: Sendable, Equatable {
 }
 
 public protocol WebhookJobEnqueuing: Sendable {
-    func enqueue(_ job: WebhookJob) async -> Bool
+    /// Returns only after the job and its idempotency key are durably committed.
+    func enqueue(deliveryID: String, job: WebhookJob) async -> Bool
 }
 
 public struct WebhookHandler: Sendable {
@@ -20,76 +21,73 @@ public struct WebhookHandler: Sendable {
     private let verifier: WebhookSignatureVerifier
     private let payloadLimit: Int
     private let queue: any WebhookJobEnqueuing
+    private let metrics: OperationalMetrics?
 
-    public init(secret: String, payloadLimit: Int = 1 << 20, queue: any WebhookJobEnqueuing) {
-        verifier = WebhookSignatureVerifier(secret: secret)
+    public init(secret: String, previousSecret: String? = nil,
+                payloadLimit: Int = 1 << 20, queue: any WebhookJobEnqueuing,
+                metrics: OperationalMetrics? = nil) {
+        verifier = WebhookSignatureVerifier(secret: secret, previousSecret: previousSecret)
         self.payloadLimit = payloadLimit
         self.queue = queue
+        self.metrics = metrics
     }
 
-    public func handle(eventName: String?, signature: String?, body: Data) async -> WebhookResponse {
+    public func handle(eventName: String?, deliveryID: String? = nil,
+                       signature: String?, body: Data) async -> WebhookResponse {
         guard body.count <= payloadLimit else {
-            return .init(status: 413, code: "payload_too_large")
+            return await finish(.init(status: 413, code: "payload_too_large"))
         }
         switch verifier.verify(header: signature, body: body) {
         case .valid: break
-        case .missing: return .init(status: 401, code: "signature_missing")
-        case .malformed: return .init(status: 401, code: "signature_malformed")
-        case .invalid: return .init(status: 401, code: "signature_invalid")
+        case .missing: return await finish(.init(status: 401, code: "signature_missing"))
+        case .malformed: return await finish(.init(status: 401, code: "signature_malformed"))
+        case .invalid: return await finish(.init(status: 401, code: "signature_invalid"))
         }
         let job: WebhookJob
         switch eventName {
         case "pull_request":
             guard let webhook = try? JSONDecoder().decode(PullRequestWebhook.self, from: body) else {
-                return .init(status: 400, code: "payload_malformed")
+                return await finish(.init(status: 400, code: "payload_malformed"))
             }
             guard Self.acceptedActions.contains(webhook.action) else {
-                return .init(status: 202, code: "action_ignored")
+                return await finish(.init(status: 202, code: "action_ignored"))
             }
             guard webhook.action != "edited" || webhook.editedBase else {
-                return .init(status: 202, code: "action_ignored")
+                return await finish(.init(status: 202, code: "action_ignored"))
             }
             job = .pullRequest(webhook.event)
         case "push":
             guard let webhook = try? JSONDecoder().decode(PushWebhook.self, from: body) else {
-                return .init(status: 400, code: "payload_malformed")
+                return await finish(.init(status: 400, code: "payload_malformed"))
             }
             guard let event = webhook.event else {
-                return .init(status: 202, code: "event_ignored")
+                return await finish(.init(status: 202, code: "event_ignored"))
             }
             job = .basePush(event)
         default:
-            return .init(status: 202, code: "event_ignored")
+            return await finish(.init(status: 202, code: "event_ignored"))
         }
-        guard await queue.enqueue(job) else {
-            return .init(status: 503, code: "queue_full")
+        guard let deliveryID, Self.validDeliveryID(deliveryID) else {
+            return await finish(.init(status: 400, code: "delivery_id_invalid"))
         }
-        return .init(status: 202, code: "accepted")
-    }
-}
-
-public actor BoundedWebhookQueue: WebhookJobEnqueuing {
-    private let capacity: Int
-    private let orchestrator: GitHubCheckOrchestrator
-    private var active: Set<String> = []
-
-    public init(capacity: Int, orchestrator: GitHubCheckOrchestrator) {
-        self.capacity = capacity
-        self.orchestrator = orchestrator
+        guard await queue.enqueue(deliveryID: deliveryID, job: job) else {
+            return await finish(.init(status: 503, code: "enqueue_failed"))
+        }
+        return await finish(.init(status: 202, code: "accepted"))
     }
 
-    public func enqueue(_ job: WebhookJob) -> Bool {
-        if active.contains(job.stableID) { return true }
-        guard active.count < capacity else { return false }
-        active.insert(job.stableID)
-        Task {
-            await orchestrator.process(job)
-            self.finished(job.stableID)
+    private func finish(_ response: WebhookResponse) async -> WebhookResponse {
+        if response.status >= 200, response.status < 300 {
+            await metrics?.webhookAccepted()
+        } else {
+            await metrics?.webhookRejected()
         }
-        return true
+        return response
     }
 
-    private func finished(_ externalID: String) {
-        active.remove(externalID)
+    private static func validDeliveryID(_ value: String) -> Bool {
+        !value.isEmpty && value.utf8.count <= 128 && value.unicodeScalars.allSatisfy {
+            CharacterSet.alphanumerics.contains($0) || "-_".unicodeScalars.contains($0)
+        }
     }
 }

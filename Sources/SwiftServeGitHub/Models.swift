@@ -130,11 +130,14 @@ public struct PullRequestState: Sendable, Equatable {
     public let baseRef: String
     public let baseSHA: String
     public let headSHA: String
+    public let changedFileCount: Int
 
-    public init(baseRef: String, baseSHA: String, headSHA: String) {
+    public init(baseRef: String, baseSHA: String, headSHA: String,
+                changedFileCount: Int = 0) {
         self.baseRef = baseRef
         self.baseSHA = baseSHA
         self.headSHA = headSHA
+        self.changedFileCount = changedFileCount
     }
 }
 
@@ -146,13 +149,19 @@ public enum CheckConclusion: String, Codable, Sendable, Equatable {
     case actionRequired = "action_required"
 }
 
+public enum CheckStatus: String, Codable, Sendable, Equatable {
+    case inProgress = "in_progress"
+    case completed
+}
+
 public struct CheckPublication: Sendable, Equatable {
     public static let name = "SwiftServe / Upgrade Receipt"
 
     public let name: String
     public let headSHA: String
     public let externalID: String
-    public let conclusion: CheckConclusion
+    public let status: CheckStatus
+    public let conclusion: CheckConclusion?
     public let title: String
     public let summary: String
 
@@ -161,7 +170,21 @@ public struct CheckPublication: Sendable, Equatable {
         self.name = name
         self.headSHA = headSHA
         self.externalID = externalID
+        self.status = .completed
         self.conclusion = conclusion
+        self.title = title
+        self.summary = summary
+    }
+
+
+    public init(name: String = Self.name, headSHA: String, externalID: String,
+                inProgressTitle title: String,
+                summary: String = "SwiftServe is analyzing immutable pull request inputs.") {
+        self.name = name
+        self.headSHA = headSHA
+        self.externalID = externalID
+        self.status = .inProgress
+        self.conclusion = nil
         self.title = title
         self.summary = summary
     }
@@ -188,20 +211,49 @@ public struct Page<Element: Sendable>: Sendable {
     }
 }
 
+public enum GitHubRetryCategory: String, Codable, Sendable, Equatable {
+    case networkTimeout = "network_timeout"
+    case tooManyRequests = "too_many_requests"
+    case primaryRateLimit = "primary_rate_limit"
+    case secondaryRateLimit = "secondary_rate_limit"
+    case serverError = "server_error"
+}
+
+public struct GitHubRetryDirective: Sendable, Equatable {
+    public let category: GitHubRetryCategory
+    public let notBefore: Date?
+
+    public init(category: GitHubRetryCategory, notBefore: Date? = nil) {
+        self.category = category
+        self.notBefore = notBefore
+    }
+}
+
 public enum GitHubAPIError: Error, Sendable, Equatable, CustomStringConvertible {
     case notFound
     case unauthorized
+    case forbidden
     case rejected(status: Int)
     case malformedResponse
     case transport
+    case invalidRequest
+    case responseTooLarge
+    case incompleteChangedFileEnumeration(expected: Int, received: Int)
+    case retryable(GitHubRetryDirective)
 
     public var description: String {
         switch self {
         case .notFound: "GitHub resource was not found"
         case .unauthorized: "GitHub authentication was rejected"
+        case .forbidden: "GitHub permission was denied"
         case .rejected(let status): "GitHub API request failed with status \(status)"
         case .malformedResponse: "GitHub returned an invalid response"
         case .transport: "GitHub API transport failed"
+        case .invalidRequest: "GitHub API request validation failed"
+        case .responseTooLarge: "GitHub API response exceeded its configured limit"
+        case .incompleteChangedFileEnumeration(let expected, let received):
+            "GitHub changed-file enumeration was incomplete (expected \(expected), received \(received))"
+        case .retryable(let directive): "GitHub API request should be retried (\(directive.category.rawValue))"
         }
     }
 }
@@ -216,7 +268,7 @@ public protocol GitHubAPI: Sendable {
     func checkRunID(repository: RepositoryCoordinates, headSHA: String, externalID: String,
                     installationID: Int64) async throws -> Int64?
     func createCheck(repository: RepositoryCoordinates, publication: CheckPublication,
-                     installationID: Int64) async throws
+                     installationID: Int64) async throws -> Int64
     func updateCheck(repository: RepositoryCoordinates, id: Int64, publication: CheckPublication,
                      installationID: Int64) async throws
 }

@@ -8,7 +8,7 @@ RESOURCE_SUFFIX := $(if $(filter Darwin,$(shell uname -s)),bundle,resources)
 CLI_RESOURCES := .build/release/SwiftServe_SwiftServeCLI.$(RESOURCE_SUFFIX)
 EVIDENCE_RESOURCES := .build/release/SwiftServe_SwiftServeEvidence.$(RESOURCE_SUFFIX)
 
-.PHONY: help build install uninstall test site-check livekit-spike recheck-spike receipt-spike github-app-spike
+.PHONY: help build install uninstall test site-check livekit-spike recheck-spike receipt-spike github-app-spike github-app-mvp
 
 help:
 	@echo "SwiftServe make targets:"
@@ -21,6 +21,7 @@ help:
 	@echo "  make recheck-spike Gate 'swiftserve index recheck' end-to-end against SwiftySound 1.2.0 → 1.3.0"
 	@echo "  make receipt-spike Gate deterministic Upgrade Receipt JSON, Markdown, card, policy, and exit codes"
 	@echo "  make github-app-spike Drive a signed PR webhook through the GitHub App against a fake API"
+	@echo "  make github-app-mvp   Prove durable multi-lockfile processing, restart, retry, and idempotency"
 	@echo ""
 	@echo "Override the bin location: make install BINDIR=/usr/local/bin"
 
@@ -178,3 +179,11 @@ receipt-spike:
 github-app-spike:
 	swift test --filter GitHubAppAcceptanceTests
 	@echo "✅ github-app-spike: one signed dependency PR publishes one correctly mapped Check"
+
+# Production-MVP acceptance remains network-free and deterministic. It commits a
+# signed multi-lockfile delivery to SQLite, reconstructs the service as if after
+# a crash, reschedules a simulated primary rate-limit response without sleeping
+# a worker, completes one aggregate Check, and proves redelivery is idempotent.
+github-app-mvp:
+	swift test --filter durableMVP
+	@echo "✅ github-app-mvp: durable restart + rate-limit retry completes one aggregate Check"
