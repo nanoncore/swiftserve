@@ -31,7 +31,15 @@ jobs:
             .build/arm64-apple-macosx/release/swiftserve \
             .build/x86_64-apple-macosx/release/swiftserve \
             -output dist/swiftserve
-          tar -czf "swiftserve-$GITHUB_REF_NAME-macos-universal.tar.gz" -C dist swiftserve
+          cp -R .build/arm64-apple-macosx/release/SwiftServe_SwiftServeCLI.bundle dist/
+          cp -R .build/arm64-apple-macosx/release/SwiftServe_SwiftServeEvidence.bundle dist/
+          tar -czf "swiftserve-$GITHUB_REF_NAME-macos-universal.tar.gz" -C dist \
+            swiftserve SwiftServe_SwiftServeCLI.bundle SwiftServe_SwiftServeEvidence.bundle
+      - name: Smoke staged artifact without build-tree resources
+        run: |
+          mv .build .build-resource-smoke
+          dist/swiftserve capability-check livekit --capability audio.session-management --platform macos --json >/dev/null
+          dist/swiftserve scan-source Sources/SwiftServeCore/Models/Pin.swift --json >/dev/null
       - uses: actions/upload-artifact@v4
         with:
           name: macos-universal
@@ -57,7 +65,15 @@ jobs:
         run: |
           mkdir -p dist
           cp .build/release/swiftserve dist/
-          tar -czf "swiftserve-$GITHUB_REF_NAME-${{ matrix.platform }}.tar.gz" -C dist swiftserve
+          cp -R .build/release/SwiftServe_SwiftServeCLI.resources dist/
+          cp -R .build/release/SwiftServe_SwiftServeEvidence.resources dist/
+          tar -czf "swiftserve-$GITHUB_REF_NAME-${{ matrix.platform }}.tar.gz" -C dist \
+            swiftserve SwiftServe_SwiftServeCLI.resources SwiftServe_SwiftServeEvidence.resources
+      - name: Smoke staged artifact without build-tree resources
+        run: |
+          mv .build .build-resource-smoke
+          dist/swiftserve capability-check livekit --capability audio.session-management --platform macos --json >/dev/null
+          dist/swiftserve scan-source Sources/SwiftServeCore/Models/Pin.swift --json >/dev/null
       - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.platform }}

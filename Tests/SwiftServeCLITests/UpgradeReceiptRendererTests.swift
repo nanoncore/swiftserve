@@ -14,7 +14,7 @@ struct UpgradeReceiptRendererTests {
     func renderers() {
         let receipt = ReceiptEngine.build(base: [pin("1.0.0")], head: [pin("2.0.0")],
                                           generatedAt: "2026-08-05T00:00:00Z")
-        let markdown = UpgradeReceiptRenderer.markdown(receipt)
+        let markdown = UpgradeReceiptMarkdownRenderer.render(receipt)
         let card = UpgradeReceiptRenderer.card(receipt)
         #expect(markdown.contains("Upgrade Receipt — REVIEW"))
         #expect(markdown.contains("| `demo` | `1.0.0` | `2.0.0` | major | **review** |"))
@@ -32,7 +32,7 @@ struct UpgradeReceiptRendererTests {
         #expect(receipt.changes.isEmpty)
         #expect(receipt.verdict == .block)
         #expect(!receipt.headline.contains("passed"))
-        let markdown = UpgradeReceiptRenderer.markdown(receipt)
+        let markdown = UpgradeReceiptMarkdownRenderer.render(receipt)
         let card = UpgradeReceiptRenderer.card(receipt)
         #expect(markdown.contains("required-capability-mismatch:missing:missing-package"))
         #expect(card.contains("required-capability-mismatch:missing:missing-package"))

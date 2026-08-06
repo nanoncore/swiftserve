@@ -125,15 +125,11 @@ struct Diff: AsyncParsableCommand {
 
         switch outputMode {
         case .json: print(try DatasetLoader.encodeJSON(receipt))
-        case .markdown: print(UpgradeReceiptRenderer.markdown(receipt))
+        case .markdown: print(UpgradeReceiptMarkdownRenderer.render(receipt))
         case .card: print(UpgradeReceiptRenderer.card(receipt))
         }
 
-        let gateFailed: Bool = switch failOn {
-        case .review: receipt.verdict == .review || receipt.verdict == .block
-        case .block: receipt.verdict == .block
-        }
-        if gateFailed { throw ExitCode(1) }
+        if failOn.fails(receipt.verdict) { throw ExitCode(1) }
     }
 
     private enum OutputMode: Equatable { case json, markdown, card }
@@ -201,10 +197,7 @@ struct Diff: AsyncParsableCommand {
     }
 }
 
-enum ReceiptGateThreshold: String, ExpressibleByArgument {
-    case review
-    case block
-}
+extension ReceiptGateThreshold: ExpressibleByArgument {}
 
 enum UpgradeReceiptRenderer {
     static func card(_ receipt: UpgradeReceipt) -> String {
@@ -231,42 +224,6 @@ enum UpgradeReceiptRenderer {
         return lines.joined(separator: "\n")
     }
 
-    static func markdown(_ receipt: UpgradeReceipt) -> String {
-        var lines = [
-            "## 🍦 Upgrade Receipt — \(receipt.verdict.rawValue.uppercased())",
-            "",
-            receipt.headline,
-            "",
-            "| Package | Before | After | Classification | Severity |",
-            "|---|---:|---:|---|---|",
-        ]
-        if receipt.changes.isEmpty {
-            lines.append("| _No dependency changes_ | — | — | — | info |")
-        } else {
-            for change in receipt.changes {
-                lines.append("| `\(escape(change.identity))` | `\(escape(pinLabel(change.oldPin)))` | `\(escape(pinLabel(change.newPin)))` | \(change.classification.rawValue) | **\(change.severity.rawValue)** |")
-            }
-        }
-        let findings = receipt.changes.flatMap(\.findings).filter { $0.severity >= .review }
-        if !findings.isEmpty {
-            lines += ["", "### Findings", ""]
-            for finding in findings {
-                lines.append("- **\(finding.severity.rawValue)** `\(finding.code.rawValue)` — \(finding.message)")
-            }
-        }
-        if !receipt.policy.violations.isEmpty {
-            lines += ["", "### Policy violations", ""]
-            for violation in receipt.policy.violations {
-                lines.append("- `\(escape(violation))`")
-            }
-        }
-        lines += [
-            "", "Policy: `\(receipt.policy.source)` · \(receipt.policy.passed ? "passed" : "needs attention")",
-            "", "> A `pass` means no configured policy was violated. It is not a universal safety guarantee and does not replace compiling or tests.",
-        ]
-        return lines.joined(separator: "\n")
-    }
-
     private static func pinLabel(_ pin: PinSnapshot?) -> String {
         guard let pin else { return "—" }
         switch pin.pinType {
@@ -275,9 +232,5 @@ enum UpgradeReceiptRenderer {
         case .revision: return "revision:\(pin.revision.map { String($0.prefix(8)) } ?? "unknown")"
         case .unknown: return "unknown"
         }
-    }
-
-    private static func escape(_ value: String) -> String {
-        value.replacingOccurrences(of: "|", with: "\\|")
     }
 }

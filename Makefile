@@ -4,6 +4,9 @@ BINDIR    ?= $(HOME)/.local/bin
 SKILLDIR  ?= $(HOME)/.claude/skills/swiftserve
 AGENTSDIR ?= $(HOME)/.agents/skills/swiftserve
 BIN       := .build/release/swiftserve
+RESOURCE_SUFFIX := $(if $(filter Darwin,$(shell uname -s)),bundle,resources)
+CLI_RESOURCES := .build/release/SwiftServe_SwiftServeCLI.$(RESOURCE_SUFFIX)
+EVIDENCE_RESOURCES := .build/release/SwiftServe_SwiftServeEvidence.$(RESOURCE_SUFFIX)
 
 .PHONY: help build install uninstall test site-check livekit-spike recheck-spike receipt-spike
 
@@ -26,10 +29,13 @@ build:
 install: build
 	@mkdir -p "$(BINDIR)" "$(SKILLDIR)" "$(AGENTSDIR)"
 	install -m 0755 "$(BIN)" "$(BINDIR)/swiftserve"
+	cp -R "$(CLI_RESOURCES)" "$(BINDIR)/"
+	cp -R "$(EVIDENCE_RESOURCES)" "$(BINDIR)/"
 	cp .claude/skills/swiftserve/SKILL.md "$(SKILLDIR)/SKILL.md"
 	cp .claude/skills/swiftserve/SKILL.md "$(AGENTSDIR)/SKILL.md"
 	@echo ""
 	@echo "✅ swiftserve → $(BINDIR)/swiftserve"
+	@echo "✅ resources  → $(BINDIR)/SwiftServe_SwiftServe{CLI,Evidence}.$(RESOURCE_SUFFIX)"
 	@echo "✅ skill      → $(SKILLDIR)/SKILL.md (Claude Code)"
 	@echo "✅ skill      → $(AGENTSDIR)/SKILL.md (Codex & friends)"
 	@echo ""
@@ -38,6 +44,8 @@ install: build
 
 uninstall:
 	rm -f "$(BINDIR)/swiftserve"
+	rm -rf "$(BINDIR)/SwiftServe_SwiftServeCLI.$(RESOURCE_SUFFIX)"
+	rm -rf "$(BINDIR)/SwiftServe_SwiftServeEvidence.$(RESOURCE_SUFFIX)"
 	rm -rf "$(SKILLDIR)"
 	@echo "Removed swiftserve and the SwiftServe skill."
 
@@ -158,6 +166,7 @@ receipt-spike:
 	GITHUB_STEP_SUMMARY=$(RECEIPT_SPIKE)/step-summary.md $(RECEIPT_ENV) .build/debug/swiftserve diff $(RECEIPT_SPIKE)/workflow-base.resolved $(RECEIPT_SPIKE)/workflow-head.resolved --markdown --file-only --fail-on block >> $(RECEIPT_SPIKE)/step-summary.md
 	grep -q 'Upgrade Receipt — PASS' $(RECEIPT_SPIKE)/step-summary.md
 	sh Tests/Shell/install-checksum-fallback.sh
+	sh Tests/Shell/staged-release-resources.sh .build/debug
 	grep -q -- '- "Package.resolved"' docs/examples/upgrade-receipt.yml
 	@if grep -q '\*\*/Package.resolved' docs/examples/upgrade-receipt.yml; then exit 1; fi
 	@echo "✅ receipt-spike: deterministic v2/v3 receipt, renderers, policies, clean stdout, and exit codes 0/1/2"

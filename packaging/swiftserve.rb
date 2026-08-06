@@ -24,7 +24,9 @@ class Swiftserve < Formula
   end
 
   def install
-    bin.install "swiftserve"
+    libexec.install "swiftserve"
+    bin.install_symlink libexec/"swiftserve"
+    bin.install Dir["SwiftServe_*.bundle", "SwiftServe_*.resources"]
   end
 
   test do

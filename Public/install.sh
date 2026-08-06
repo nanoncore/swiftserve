@@ -68,6 +68,23 @@ tar -xzf "$tmp/$asset" -C "$tmp"
 mkdir -p "$BINDIR"
 install -m 0755 "$tmp/swiftserve" "$BINDIR/swiftserve"
 
+# SwiftPM resolves command-line resource bundles beside the executable. Older
+# SwiftServe archives predate bundled resources, so copy them when present;
+# tagged release CI proves every new archive contains and can load both.
+case "$platform" in
+  macos-*) resource_suffix="bundle" ;;
+  linux-*) resource_suffix="resources" ;;
+esac
+for resource in \
+  "SwiftServe_SwiftServeCLI.$resource_suffix" \
+  "SwiftServe_SwiftServeEvidence.$resource_suffix"
+do
+  if [ -d "$tmp/$resource" ]; then
+    mkdir -p "$BINDIR/$resource"
+    cp -R "$tmp/$resource/." "$BINDIR/$resource/"
+  fi
+done
+
 echo "✅ swiftserve $tag → $BINDIR/swiftserve"
 case ":$PATH:" in
   *":$BINDIR:"*) ;;
