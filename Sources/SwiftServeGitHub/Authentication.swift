@@ -57,4 +57,11 @@ public actor InstallationTokenProvider {
             throw error
         }
     }
+
+    /// Invalidates only the token that was rejected. A concurrently refreshed
+    /// token is retained, preventing one stale 401 from evicting fresh auth.
+    public func invalidate(installationID: Int64, token rejectedToken: String) {
+        guard cache[installationID]?.value == rejectedToken else { return }
+        cache[installationID] = nil
+    }
 }

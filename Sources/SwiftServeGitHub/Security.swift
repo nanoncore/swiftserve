@@ -10,10 +10,10 @@ public enum WebhookSignatureResult: Sendable, Equatable {
 }
 
 public struct WebhookSignatureVerifier: Sendable {
-    private let secret: Data
+    private let secrets: [Data]
 
-    public init(secret: String) {
-        self.secret = Data(secret.utf8)
+    public init(secret: String, previousSecret: String? = nil) {
+        self.secrets = [secret, previousSecret].compactMap { $0 }.map { Data($0.utf8) }
     }
 
     public func verify(header: String?, body: Data) -> WebhookSignatureResult {
@@ -22,9 +22,13 @@ public struct WebhookSignatureVerifier: Sendable {
               let supplied = Self.hexData(String(header.dropFirst(7))) else {
             return .malformed
         }
-        let key = SymmetricKey(data: secret)
-        let expected = Data(HMAC<SHA256>.authenticationCode(for: body, using: key))
-        return Self.constantTimeEqual(supplied, expected) ? .valid : .invalid
+        var valid: UInt8 = 0
+        for secret in secrets {
+            let key = SymmetricKey(data: secret)
+            let expected = Data(HMAC<SHA256>.authenticationCode(for: body, using: key))
+            valid |= Self.constantTimeEqual(supplied, expected) ? 1 : 0
+        }
+        return valid == 1 ? .valid : .invalid
     }
 
     public static func signature(secret: String, body: Data) -> String {

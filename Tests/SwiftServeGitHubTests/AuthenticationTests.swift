@@ -96,4 +96,21 @@ struct AuthenticationTests {
             #expect(!String(describing: error).contains(secret))
         }
     }
+
+    @Test("Loopback HTTP GitHub origins are unavailable in production configuration")
+    func productionOriginBoundary() throws {
+        var environment = [
+            "SWIFTSERVE_GITHUB_APP_ID": "1",
+            "SWIFTSERVE_GITHUB_PRIVATE_KEY": "placeholder",
+            "SWIFTSERVE_GITHUB_WEBHOOK_SECRET": "secret",
+            "SWIFTSERVE_GITHUB_API_URL": "http://127.0.0.1:9999",
+        ]
+        #expect(throws: SafeDiagnostic.self) {
+            _ = try GitHubAppConfiguration(environment: environment)
+        }
+        environment["SWIFTSERVE_RUNTIME_MODE"] = "test"
+        let configuration = try GitHubAppConfiguration(environment: environment)
+        #expect(configuration.isTestRuntime)
+        #expect(configuration.apiBaseURL.host == "127.0.0.1")
+    }
 }

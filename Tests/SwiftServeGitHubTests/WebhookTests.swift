@@ -12,6 +12,7 @@ struct WebhookTests {
         let body = webhookBody(action: "synchronize")
         let response = await WebhookHandler(secret: secret, queue: queue).handle(
             eventName: "pull_request",
+            deliveryID: "delivery-1",
             signature: WebhookSignatureVerifier.signature(secret: secret, body: body), body: body)
         #expect(response == .init(status: 202, code: "accepted"))
         #expect(await queue.count() == 1)
@@ -45,6 +46,7 @@ struct WebhookTests {
         let body = webhookBody(action: action)
         let response = await WebhookHandler(secret: secret, queue: queue).handle(
             eventName: "pull_request",
+            deliveryID: "delivery-1",
             signature: WebhookSignatureVerifier.signature(secret: secret, body: body), body: body)
         #expect(response.code == "accepted")
     }
@@ -57,6 +59,7 @@ struct WebhookTests {
         let handler = WebhookHandler(secret: secret, queue: queue)
         #expect(await handler.handle(
             eventName: "pull_request",
+            deliveryID: "delivery-1",
             signature: WebhookSignatureVerifier.signature(secret: secret, body: changed),
             body: changed).code == "accepted")
         #expect(await handler.handle(
@@ -83,6 +86,7 @@ struct WebhookTests {
         let body = pushBody()
         let response = await WebhookHandler(secret: secret, queue: queue).handle(
             eventName: "push",
+            deliveryID: "delivery-1",
             signature: WebhookSignatureVerifier.signature(secret: secret, body: body), body: body)
         #expect(response.code == "accepted")
         #expect(await queue.recorded() == [
@@ -121,6 +125,7 @@ struct WebhookTests {
         let body = webhookBody(sender: sender)
         let response = await WebhookHandler(secret: secret, queue: queue).handle(
             eventName: "pull_request",
+            deliveryID: "delivery-1",
             signature: WebhookSignatureVerifier.signature(secret: secret, body: body), body: body)
         #expect(response.code == "accepted")
     }
@@ -133,5 +138,37 @@ struct WebhookTests {
             eventName: "pull_request",
             signature: WebhookSignatureVerifier.signature(secret: secret, body: body), body: body)
         #expect(response == .init(status: 400, code: "payload_malformed"))
+    }
+
+    @Test("Current and previous webhook secrets support rotation")
+    func secretRotation() async {
+        let queue = RecordingQueue()
+        let body = webhookBody()
+        let handler = WebhookHandler(
+            secret: "current-secret", previousSecret: "previous-secret", queue: queue)
+        #expect(await handler.handle(
+            eventName: "pull_request", deliveryID: "current-delivery",
+            signature: WebhookSignatureVerifier.signature(secret: "current-secret", body: body),
+            body: body).code == "accepted")
+        #expect(await handler.handle(
+            eventName: "pull_request", deliveryID: "previous-delivery",
+            signature: WebhookSignatureVerifier.signature(secret: "previous-secret", body: body),
+            body: body).code == "accepted")
+        #expect(await handler.handle(
+            eventName: "pull_request", deliveryID: "old-delivery",
+            signature: WebhookSignatureVerifier.signature(secret: "retired-secret", body: body),
+            body: body).code == "signature_invalid")
+        #expect(await queue.count() == 2)
+    }
+
+    @Test("Accepted work requires a bounded delivery id")
+    func deliveryID() async {
+        let queue = RecordingQueue()
+        let body = webhookBody()
+        let signature = WebhookSignatureVerifier.signature(secret: secret, body: body)
+        #expect(await WebhookHandler(secret: secret, queue: queue).handle(
+            eventName: "pull_request", signature: signature, body: body).code ==
+            "delivery_id_invalid")
+        #expect(await queue.count() == 0)
     }
 }

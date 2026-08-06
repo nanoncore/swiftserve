@@ -40,10 +40,12 @@ func pushBody(ref: String = "refs/heads/main", after: String = "new-base-sha") -
 
 actor RecordingQueue: WebhookJobEnqueuing {
     private(set) var jobs: [WebhookJob] = []
+    private(set) var deliveries: [String] = []
     var accepts = true
 
-    func enqueue(_ job: WebhookJob) -> Bool {
+    func enqueue(deliveryID: String, job: WebhookJob) -> Bool {
         guard accepts else { return false }
+        deliveries.append(deliveryID)
         jobs.append(job)
         return true
     }
@@ -54,6 +56,7 @@ actor RecordingQueue: WebhookJobEnqueuing {
 
 actor FakeGitHubAPI: GitHubAPI {
     var pages: [Int: Page<ChangedFile>] = [:]
+    var changedFileFailures: [GitHubAPIError] = []
     var pullRequestPages: [Int: Page<PullRequestEvent>] = [:]
     var contentResults: [String: Result<Data, GitHubAPIError>] = [:]
     var currentState = PullRequestState(
@@ -75,6 +78,10 @@ actor FakeGitHubAPI: GitHubAPI {
 
     func setPage(_ number: Int, files: [ChangedFile], hasNext: Bool = false) {
         pages[number] = Page(values: files, hasNext: hasNext)
+    }
+
+    func failNextChangedFiles(with error: GitHubAPIError) {
+        changedFileFailures.append(error)
     }
 
     func setPullRequestPage(_ number: Int, events: [PullRequestEvent], hasNext: Bool = false) {
@@ -104,6 +111,7 @@ actor FakeGitHubAPI: GitHubAPI {
 
     func changedFiles(for event: PullRequestEvent, page: Int, perPage: Int) async throws -> Page<ChangedFile> {
         changedFilePages.append(page)
+        if !changedFileFailures.isEmpty { throw changedFileFailures.removeFirst() }
         return pages[page] ?? Page(values: [], hasNext: false)
     }
 
@@ -135,9 +143,10 @@ actor FakeGitHubAPI: GitHubAPI {
     }
 
     func createCheck(repository: RepositoryCoordinates, publication: CheckPublication,
-                     installationID: Int64) async throws {
+                     installationID: Int64) async throws -> Int64 {
         created.append(publication)
         existingCheckID = 123
+        return 123
     }
 
     func updateCheck(repository: RepositoryCoordinates, id: Int64, publication: CheckPublication,
@@ -156,8 +165,17 @@ actor FakeGitHubAPI: GitHubAPI {
 
 struct ImmediateQueue: WebhookJobEnqueuing {
     let orchestrator: GitHubCheckOrchestrator
-    func enqueue(_ job: WebhookJob) async -> Bool {
+    func enqueue(deliveryID: String, job: WebhookJob) async -> Bool {
         await orchestrator.process(job)
         return true
     }
+}
+
+final class LockedTestClock: @unchecked Sendable {
+    private let lock = NSLock()
+    private var value: Date
+
+    init(_ value: Date) { self.value = value }
+    func now() -> Date { lock.withLock { value } }
+    func advance(by interval: TimeInterval) { lock.withLock { value = value.addingTimeInterval(interval) } }
 }
