@@ -10,6 +10,14 @@ public actor GitHubCheckOrchestrator {
     private let gate: ReceiptGateThreshold
     private let capabilityDataset: CapabilityDataset
     private let generatedAt: @Sendable () -> String
+    private var nextScheduleSequence = 0
+    private var scheduledPullRequestStates: [String: ScheduledPullRequest] = [:]
+    private var pullRequestTails: [String: ScheduledPullRequest] = [:]
+
+    private struct ScheduledPullRequest {
+        let sequence: Int
+        let task: Task<Void, Never>
+    }
 
     public init(api: any GitHubAPI, gate: ReceiptGateThreshold = .block,
                 capabilityDataset: CapabilityDataset,
@@ -30,6 +38,33 @@ public actor GitHubCheckOrchestrator {
     }
 
     public func process(_ event: PullRequestEvent) async {
+        let stateKey = WebhookJob.pullRequest(event).stableID
+        if let existing = scheduledPullRequestStates[stateKey] {
+            await existing.task.value
+            return
+        }
+        let pullRequestKey = "\(event.repository.id):\(event.number)"
+        let predecessor = pullRequestTails[pullRequestKey]?.task
+        nextScheduleSequence += 1
+        let sequence = nextScheduleSequence
+        let task = Task {
+            if let predecessor { await predecessor.value }
+            await self.processOnce(event)
+        }
+        let scheduled = ScheduledPullRequest(sequence: sequence, task: task)
+        scheduledPullRequestStates[stateKey] = scheduled
+        pullRequestTails[pullRequestKey] = scheduled
+
+        await task.value
+        if scheduledPullRequestStates[stateKey]?.sequence == sequence {
+            scheduledPullRequestStates[stateKey] = nil
+        }
+        if pullRequestTails[pullRequestKey]?.sequence == sequence {
+            pullRequestTails[pullRequestKey] = nil
+        }
+    }
+
+    private func processOnce(_ event: PullRequestEvent) async {
         do {
             let lockfiles = try await changedLockfiles(for: event)
             switch lockfiles.count {

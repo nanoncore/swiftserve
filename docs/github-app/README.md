@@ -108,6 +108,9 @@ secret, and installation of that App on the private test repository.
 - The worker re-reads the PR base ref, base SHA, and head SHA before publication.
   A stale worker publishes nothing over a newer result. Base-changing `edited`
   events and pushes to target branches trigger reprocessing.
+- Queue identity includes the immutable base and head inputs. Every entry path
+  coalesces identical immutable work and serializes replacement states for the
+  same logical PR before Check lookup or creation.
 - The stable external ID is derived from repository ID, PR number, and head SHA.
   Redelivery updates the matching Check; a new head creates a new logical Check.
 

@@ -118,7 +118,8 @@ public enum WebhookJob: Sendable, Equatable {
 
     public var stableID: String {
         switch self {
-        case .pullRequest(let event): event.externalID
+        case .pullRequest(let event):
+            "swiftserve:pr-job:\(event.repository.id):\(event.number):\(event.baseRef):\(event.baseSHA):\(event.headSHA)"
         case .basePush(let event):
             "swiftserve:base-push:\(event.repository.id):\(event.branch):\(event.afterSHA)"
         }

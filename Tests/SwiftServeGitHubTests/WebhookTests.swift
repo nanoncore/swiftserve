@@ -66,6 +66,17 @@ struct WebhookTests {
         #expect(await queue.count() == 1)
     }
 
+    @Test("Base changes have distinct in-flight identities for the same Check")
+    func baseChangeIdentity() {
+        let retargeted = PullRequestEvent(
+            action: "edited", installationID: fixtureEvent.installationID,
+            repository: fixtureEvent.repository, number: fixtureEvent.number,
+            baseRef: "release", baseSHA: "new-base-sha", headSHA: fixtureEvent.headSHA)
+        #expect(retargeted.externalID == fixtureEvent.externalID)
+        #expect(WebhookJob.pullRequest(retargeted).stableID !=
+                WebhookJob.pullRequest(fixtureEvent).stableID)
+    }
+
     @Test("Branch pushes enqueue base invalidation work")
     func basePush() async {
         let queue = RecordingQueue()

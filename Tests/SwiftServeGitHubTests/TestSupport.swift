@@ -63,6 +63,9 @@ actor FakeGitHubAPI: GitHubAPI {
     var contentCalls: [(String, String)] = []
     var changedFilePages: [Int] = []
     var listedPullRequestPages: [Int] = []
+    var checkRunLookups = 0
+    var holdCheckRunLookups = false
+    var checkRunLookupWaiters: [CheckedContinuation<Void, Never>] = []
     var created: [CheckPublication] = []
     var updated: [CheckPublication] = []
 
@@ -90,6 +93,14 @@ actor FakeGitHubAPI: GitHubAPI {
                              headSHA: currentState.headSHA)
     }
     func setExistingCheck(_ id: Int64?) { existingCheckID = id }
+    func holdCheckRunLookup() { holdCheckRunLookups = true }
+
+    func releaseCheckRunLookups() {
+        holdCheckRunLookups = false
+        let waiters = checkRunLookupWaiters
+        checkRunLookupWaiters.removeAll()
+        waiters.forEach { $0.resume() }
+    }
 
     func changedFiles(for event: PullRequestEvent, page: Int, perPage: Int) async throws -> Page<ChangedFile> {
         changedFilePages.append(page)
@@ -113,7 +124,15 @@ actor FakeGitHubAPI: GitHubAPI {
     }
 
     func checkRunID(repository: RepositoryCoordinates, headSHA: String, externalID: String,
-                    installationID: Int64) async throws -> Int64? { existingCheckID }
+                    installationID: Int64) async throws -> Int64? {
+        checkRunLookups += 1
+        if holdCheckRunLookups {
+            await withCheckedContinuation { continuation in
+                checkRunLookupWaiters.append(continuation)
+            }
+        }
+        return existingCheckID
+    }
 
     func createCheck(repository: RepositoryCoordinates, publication: CheckPublication,
                      installationID: Int64) async throws {
@@ -132,6 +151,7 @@ actor FakeGitHubAPI: GitHubAPI {
     }
 
     func pullRequestPageCalls() -> [Int] { listedPullRequestPages }
+    func checkRunLookupCount() -> Int { checkRunLookups }
 }
 
 struct ImmediateQueue: WebhookJobEnqueuing {

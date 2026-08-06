@@ -246,6 +246,76 @@ struct OrchestratorTests {
         #expect(await api.snapshot().created.first?.conclusion == .success)
     }
 
+    @Test("Base-push fan-out and PR delivery coalesce before Check creation")
+    func basePushCoalescing() async throws {
+        let api = FakeGitHubAPI()
+        await configureOne(api)
+        await api.setPullRequestPage(1, events: [fixtureEvent])
+        await api.holdCheckRunLookup()
+        let orchestrator = try makeOrchestrator(api)
+        let firstPush = Task {
+            await orchestrator.process(.basePush(.init(
+                installationID: fixtureEvent.installationID,
+                repository: fixtureEvent.repository, branch: fixtureEvent.baseRef,
+                afterSHA: "base-push-1")))
+        }
+        while await api.checkRunLookupCount() == 0 { await Task.yield() }
+
+        let secondPush = Task {
+            await orchestrator.process(.basePush(.init(
+                installationID: fixtureEvent.installationID,
+                repository: fixtureEvent.repository, branch: fixtureEvent.baseRef,
+                afterSHA: "base-push-2")))
+        }
+        while await api.pullRequestPageCalls().count < 2 { await Task.yield() }
+        let pullRequestDelivery = Task {
+            await orchestrator.process(.pullRequest(fixtureEvent))
+        }
+        for _ in 0..<20 { await Task.yield() }
+        #expect(await api.checkRunLookupCount() == 1)
+
+        await api.releaseCheckRunLookups()
+        await firstPush.value
+        await secondPush.value
+        await pullRequestDelivery.value
+        let snapshot = await api.snapshot()
+        #expect(snapshot.created.count == 1)
+        #expect(snapshot.updated.isEmpty)
+        #expect(await api.checkRunLookupCount() == 1)
+    }
+
+    @Test("A replacement base state waits for active work on the same PR")
+    func replacementStateScheduling() async throws {
+        let api = FakeGitHubAPI()
+        await configureOne(api)
+        await api.holdCheckRunLookup()
+        let orchestrator = try makeOrchestrator(api)
+        let oldBase = Task { await orchestrator.process(fixtureEvent) }
+        while await api.checkRunLookupCount() == 0 { await Task.yield() }
+
+        let refreshed = PullRequestEvent(
+            action: "edited", installationID: fixtureEvent.installationID,
+            repository: fixtureEvent.repository, number: fixtureEvent.number,
+            baseRef: "release", baseSHA: "new-base-sha", headSHA: fixtureEvent.headSHA)
+        await api.setBase(ref: refreshed.baseRef, sha: refreshed.baseSHA)
+        await api.setContent(path: "Package.resolved", ref: refreshed.baseSHA,
+                             result: .success(resolved("1.0.0")))
+        await api.setContent(path: ".swiftserve.json", ref: refreshed.baseSHA,
+                             result: .failure(.notFound))
+        let newBase = Task { await orchestrator.process(refreshed) }
+        for _ in 0..<20 { await Task.yield() }
+        #expect(await api.checkRunLookupCount() == 1)
+
+        await api.releaseCheckRunLookups()
+        await oldBase.value
+        await newBase.value
+        let snapshot = await api.snapshot()
+        #expect(snapshot.created.count == 1)
+        #expect(snapshot.updated.count == 1)
+        #expect(snapshot.updated.first?.externalID == snapshot.created.first?.externalID)
+        #expect(await api.checkRunLookupCount() == 2)
+    }
+
     @Test("Oversize Markdown truncates on complete lines within the byte cap")
     func markdownLimit() {
         let markdown = (0..<100).map { "| row \($0) | `value` |" }.joined(separator: "\n")
