@@ -68,6 +68,56 @@ struct OrchestratorTests {
         #expect(!calls.contains { $0 == (".swiftserve.json", fixtureEvent.headSHA) })
     }
 
+    @Test("Added, removed, and renamed lockfiles use the sides that exist")
+    func lockfileLifecycle() async throws {
+        let added = FakeGitHubAPI()
+        await added.setPage(1, files: [
+            ChangedFile(filename: "New/Package.resolved", status: "added"),
+        ])
+        await added.setContent(path: "New/Package.resolved", ref: fixtureEvent.headSHA,
+                               result: .success(resolved("1.0.0")))
+        await added.setContent(path: ".swiftserve.json", ref: fixtureEvent.baseSHA,
+                               result: .failure(.notFound))
+        await (try makeOrchestrator(added)).process(fixtureEvent)
+        let addedSnapshot = await added.snapshot()
+        let addedPublication = try #require(addedSnapshot.created.first)
+        #expect(addedPublication.conclusion != .failure)
+        #expect(addedPublication.title.hasPrefix("Upgrade Receipt"))
+        #expect(!addedSnapshot.calls.contains { $0 == ("New/Package.resolved", fixtureEvent.baseSHA) })
+
+        let removed = FakeGitHubAPI()
+        await removed.setPage(1, files: [
+            ChangedFile(filename: "Old/Package.resolved", status: "removed"),
+        ])
+        await removed.setContent(path: "Old/Package.resolved", ref: fixtureEvent.baseSHA,
+                                 result: .success(resolved("1.0.0")))
+        await removed.setContent(path: ".swiftserve.json", ref: fixtureEvent.baseSHA,
+                                 result: .failure(.notFound))
+        await (try makeOrchestrator(removed)).process(fixtureEvent)
+        let removedSnapshot = await removed.snapshot()
+        let removedPublication = try #require(removedSnapshot.created.first)
+        #expect(removedPublication.conclusion != .failure)
+        #expect(removedPublication.title.hasPrefix("Upgrade Receipt"))
+        #expect(!removedSnapshot.calls.contains { $0 == ("Old/Package.resolved", fixtureEvent.headSHA) })
+
+        let renamed = FakeGitHubAPI()
+        await renamed.setPage(1, files: [
+            ChangedFile(filename: "New/Package.resolved", status: "renamed",
+                        previousFilename: "Old/Package.resolved"),
+        ])
+        await renamed.setContent(path: "Old/Package.resolved", ref: fixtureEvent.baseSHA,
+                                 result: .success(resolved("1.0.0")))
+        await renamed.setContent(path: "New/Package.resolved", ref: fixtureEvent.headSHA,
+                                 result: .success(resolved("1.0.1")))
+        await renamed.setContent(path: ".swiftserve.json", ref: fixtureEvent.baseSHA,
+                                 result: .failure(.notFound))
+        await (try makeOrchestrator(renamed)).process(fixtureEvent)
+        let renamedSnapshot = await renamed.snapshot()
+        #expect(renamedSnapshot.created.first?.conclusion == .success)
+        #expect(renamedSnapshot.calls.contains { $0 == ("Old/Package.resolved", fixtureEvent.baseSHA) })
+        #expect(renamedSnapshot.calls.contains { $0 == ("New/Package.resolved", fixtureEvent.headSHA) })
+    }
+
     @Test("Canonical renderer output is passed unchanged")
     func canonicalMarkdown() async throws {
         let api = FakeGitHubAPI()
@@ -152,6 +202,48 @@ struct OrchestratorTests {
         let snapshot = await api.snapshot()
         #expect(snapshot.created.isEmpty)
         #expect(snapshot.updated.isEmpty)
+    }
+
+    @Test("A stale worker cannot publish after the base changes")
+    func staleBase() async throws {
+        let api = FakeGitHubAPI()
+        await configureOne(api)
+        await api.setBase(sha: "newer-base")
+        await (try makeOrchestrator(api)).process(fixtureEvent)
+        let snapshot = await api.snapshot()
+        #expect(snapshot.created.isEmpty)
+        #expect(snapshot.updated.isEmpty)
+
+        let retargeted = FakeGitHubAPI()
+        await configureOne(retargeted)
+        await retargeted.setBase(ref: "release", sha: fixtureEvent.baseSHA)
+        await (try makeOrchestrator(retargeted)).process(fixtureEvent)
+        let retargetedSnapshot = await retargeted.snapshot()
+        #expect(retargetedSnapshot.created.isEmpty)
+        #expect(retargetedSnapshot.updated.isEmpty)
+    }
+
+    @Test("A base push reprocesses open pull requests targeting that branch")
+    func basePush() async throws {
+        let api = FakeGitHubAPI()
+        let refreshed = PullRequestEvent(
+            action: "base_push", installationID: fixtureEvent.installationID,
+            repository: fixtureEvent.repository, number: fixtureEvent.number,
+            baseRef: "main", baseSHA: "new-base-sha", headSHA: fixtureEvent.headSHA)
+        await api.setPullRequestPage(1, events: [refreshed])
+        await api.setBase(sha: refreshed.baseSHA)
+        await api.setPage(1, files: ["Package.resolved"])
+        await api.setContent(path: "Package.resolved", ref: refreshed.baseSHA,
+                             result: .success(resolved("1.0.0")))
+        await api.setContent(path: "Package.resolved", ref: refreshed.headSHA,
+                             result: .success(resolved("1.0.1")))
+        await api.setContent(path: ".swiftserve.json", ref: refreshed.baseSHA,
+                             result: .failure(.notFound))
+        await (try makeOrchestrator(api)).process(.basePush(.init(
+            installationID: fixtureEvent.installationID, repository: fixtureEvent.repository,
+            branch: "main", afterSHA: refreshed.baseSHA)))
+        #expect(await api.pullRequestPageCalls() == [1])
+        #expect(await api.snapshot().created.first?.conclusion == .success)
     }
 
     @Test("Oversize Markdown truncates on complete lines within the byte cap")

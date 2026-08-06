@@ -17,15 +17,17 @@ public struct PullRequestEvent: Sendable, Equatable {
     public let installationID: Int64
     public let repository: RepositoryCoordinates
     public let number: Int
+    public let baseRef: String
     public let baseSHA: String
     public let headSHA: String
 
     public init(action: String, installationID: Int64, repository: RepositoryCoordinates,
-                number: Int, baseSHA: String, headSHA: String) {
+                number: Int, baseRef: String, baseSHA: String, headSHA: String) {
         self.action = action
         self.installationID = installationID
         self.repository = repository
         self.number = number
+        self.baseRef = baseRef
         self.baseSHA = baseSHA
         self.headSHA = headSHA
     }
@@ -41,6 +43,7 @@ struct PullRequestWebhook: Decodable {
     let installation: Installation
     let repository: Repository
     let pullRequest: PullRequest
+    let changes: Changes?
 
     struct Installation: Decodable { let id: Int64 }
     struct Repository: Decodable {
@@ -52,11 +55,15 @@ struct PullRequestWebhook: Decodable {
     struct PullRequest: Decodable {
         let base: GitReference
         let head: GitReference
-        struct GitReference: Decodable { let sha: String }
+        struct GitReference: Decodable { let ref: String; let sha: String }
+    }
+    struct Changes: Decodable {
+        let base: BaseChange?
+        struct BaseChange: Decodable {}
     }
 
     enum CodingKeys: String, CodingKey {
-        case action, number, installation, repository
+        case action, number, installation, repository, changes
         case pullRequest = "pull_request"
     }
 
@@ -66,8 +73,67 @@ struct PullRequestWebhook: Decodable {
             installationID: installation.id,
             repository: .init(id: repository.id, owner: repository.owner.login, name: repository.name),
             number: number,
+            baseRef: pullRequest.base.ref,
             baseSHA: pullRequest.base.sha,
             headSHA: pullRequest.head.sha)
+    }
+
+    var editedBase: Bool { changes?.base != nil }
+}
+
+struct PushWebhook: Decodable {
+    let ref: String
+    let after: String
+    let installation: PullRequestWebhook.Installation
+    let repository: PullRequestWebhook.Repository
+
+    var event: RepositoryPushEvent? {
+        let prefix = "refs/heads/"
+        guard ref.hasPrefix(prefix), after.contains(where: { $0 != "0" }) else { return nil }
+        return RepositoryPushEvent(
+            installationID: installation.id,
+            repository: .init(id: repository.id, owner: repository.owner.login, name: repository.name),
+            branch: String(ref.dropFirst(prefix.count)), afterSHA: after)
+    }
+}
+
+public struct RepositoryPushEvent: Sendable, Equatable {
+    public let installationID: Int64
+    public let repository: RepositoryCoordinates
+    public let branch: String
+    public let afterSHA: String
+
+    public init(installationID: Int64, repository: RepositoryCoordinates,
+                branch: String, afterSHA: String) {
+        self.installationID = installationID
+        self.repository = repository
+        self.branch = branch
+        self.afterSHA = afterSHA
+    }
+}
+
+public enum WebhookJob: Sendable, Equatable {
+    case pullRequest(PullRequestEvent)
+    case basePush(RepositoryPushEvent)
+
+    public var stableID: String {
+        switch self {
+        case .pullRequest(let event): event.externalID
+        case .basePush(let event):
+            "swiftserve:base-push:\(event.repository.id):\(event.branch):\(event.afterSHA)"
+        }
+    }
+}
+
+public struct PullRequestState: Sendable, Equatable {
+    public let baseRef: String
+    public let baseSHA: String
+    public let headSHA: String
+
+    public init(baseRef: String, baseSHA: String, headSHA: String) {
+        self.baseRef = baseRef
+        self.baseSHA = baseSHA
+        self.headSHA = headSHA
     }
 }
 
@@ -102,7 +168,14 @@ public struct CheckPublication: Sendable, Equatable {
 
 public struct ChangedFile: Sendable, Equatable {
     public let filename: String
-    public init(filename: String) { self.filename = filename }
+    public let status: String
+    public let previousFilename: String?
+
+    public init(filename: String, status: String = "modified", previousFilename: String? = nil) {
+        self.filename = filename
+        self.status = status
+        self.previousFilename = previousFilename
+    }
 }
 
 public struct Page<Element: Sendable>: Sendable {
@@ -136,7 +209,9 @@ public protocol GitHubAPI: Sendable {
     func changedFiles(for event: PullRequestEvent, page: Int, perPage: Int) async throws -> Page<ChangedFile>
     func content(repository: RepositoryCoordinates, path: String, ref: String,
                  installationID: Int64) async throws -> Data
-    func currentHeadSHA(for event: PullRequestEvent) async throws -> String
+    func currentPullRequest(for event: PullRequestEvent) async throws -> PullRequestState
+    func pullRequests(repository: RepositoryCoordinates, baseRef: String, installationID: Int64,
+                      page: Int, perPage: Int) async throws -> Page<PullRequestEvent>
     func checkRunID(repository: RepositoryCoordinates, headSHA: String, externalID: String,
                     installationID: Int64) async throws -> Int64?
     func createCheck(repository: RepositoryCoordinates, publication: CheckPublication,

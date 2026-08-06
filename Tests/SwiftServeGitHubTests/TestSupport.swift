@@ -4,7 +4,7 @@ import SwiftServeGitHub
 let fixtureEvent = PullRequestEvent(
     action: "opened", installationID: 99,
     repository: .init(id: 42, owner: "acme", name: "demo"),
-    number: 7, baseSHA: "base-sha", headSHA: "head-sha")
+    number: 7, baseRef: "main", baseSHA: "base-sha", headSHA: "head-sha")
 
 func resolved(_ version: String) -> Data {
     Data("""
@@ -12,49 +12,83 @@ func resolved(_ version: String) -> Data {
     """.utf8)
 }
 
-func webhookBody(action: String = "opened", sender: String = "human") -> Data {
-    try! JSONSerialization.data(withJSONObject: [
+func webhookBody(action: String = "opened", sender: String = "human",
+                 baseEdited: Bool = false) -> Data {
+    var payload: [String: Any] = [
         "action": action,
         "number": 7,
         "installation": ["id": 99],
         "repository": ["id": 42, "name": "demo", "owner": ["login": "acme"]],
-        "pull_request": ["base": ["sha": "base-sha"], "head": ["sha": "head-sha"]],
+        "pull_request": [
+            "base": ["ref": "main", "sha": "base-sha"],
+            "head": ["ref": "feature", "sha": "head-sha"],
+        ],
         "sender": ["login": sender],
+    ]
+    if baseEdited { payload["changes"] = ["base": ["ref": ["from": "develop"]]] }
+    return try! JSONSerialization.data(withJSONObject: payload, options: [.sortedKeys])
+}
+
+func pushBody(ref: String = "refs/heads/main", after: String = "new-base-sha") -> Data {
+    try! JSONSerialization.data(withJSONObject: [
+        "ref": ref,
+        "after": after,
+        "installation": ["id": 99],
+        "repository": ["id": 42, "name": "demo", "owner": ["login": "acme"]],
     ], options: [.sortedKeys])
 }
 
 actor RecordingQueue: WebhookJobEnqueuing {
-    private(set) var events: [PullRequestEvent] = []
+    private(set) var jobs: [WebhookJob] = []
     var accepts = true
 
-    func enqueue(_ event: PullRequestEvent) -> Bool {
+    func enqueue(_ job: WebhookJob) -> Bool {
         guard accepts else { return false }
-        events.append(event)
+        jobs.append(job)
         return true
     }
 
-    func count() -> Int { events.count }
+    func count() -> Int { jobs.count }
+    func recorded() -> [WebhookJob] { jobs }
 }
 
 actor FakeGitHubAPI: GitHubAPI {
     var pages: [Int: Page<ChangedFile>] = [:]
+    var pullRequestPages: [Int: Page<PullRequestEvent>] = [:]
     var contentResults: [String: Result<Data, GitHubAPIError>] = [:]
-    var headSHA = fixtureEvent.headSHA
+    var currentState = PullRequestState(
+        baseRef: fixtureEvent.baseRef, baseSHA: fixtureEvent.baseSHA,
+        headSHA: fixtureEvent.headSHA)
     var existingCheckID: Int64?
     var contentCalls: [(String, String)] = []
     var changedFilePages: [Int] = []
+    var listedPullRequestPages: [Int] = []
     var created: [CheckPublication] = []
     var updated: [CheckPublication] = []
 
     func setPage(_ number: Int, files: [String], hasNext: Bool = false) {
-        pages[number] = Page(values: files.map(ChangedFile.init), hasNext: hasNext)
+        pages[number] = Page(values: files.map { ChangedFile(filename: $0) }, hasNext: hasNext)
+    }
+
+    func setPage(_ number: Int, files: [ChangedFile], hasNext: Bool = false) {
+        pages[number] = Page(values: files, hasNext: hasNext)
+    }
+
+    func setPullRequestPage(_ number: Int, events: [PullRequestEvent], hasNext: Bool = false) {
+        pullRequestPages[number] = Page(values: events, hasNext: hasNext)
     }
 
     func setContent(path: String, ref: String, result: Result<Data, GitHubAPIError>) {
         contentResults["\(path)@\(ref)"] = result
     }
 
-    func setHead(_ sha: String) { headSHA = sha }
+    func setHead(_ sha: String) {
+        currentState = .init(baseRef: currentState.baseRef, baseSHA: currentState.baseSHA, headSHA: sha)
+    }
+    func setBase(ref: String? = nil, sha: String) {
+        currentState = .init(baseRef: ref ?? currentState.baseRef, baseSHA: sha,
+                             headSHA: currentState.headSHA)
+    }
     func setExistingCheck(_ id: Int64?) { existingCheckID = id }
 
     func changedFiles(for event: PullRequestEvent, page: Int, perPage: Int) async throws -> Page<ChangedFile> {
@@ -68,7 +102,15 @@ actor FakeGitHubAPI: GitHubAPI {
         return try contentResults["\(path)@\(ref)"]?.get() ?? { throw GitHubAPIError.notFound }()
     }
 
-    func currentHeadSHA(for event: PullRequestEvent) async throws -> String { headSHA }
+    func currentPullRequest(for event: PullRequestEvent) async throws -> PullRequestState {
+        currentState
+    }
+
+    func pullRequests(repository: RepositoryCoordinates, baseRef: String, installationID: Int64,
+                      page: Int, perPage: Int) async throws -> Page<PullRequestEvent> {
+        listedPullRequestPages.append(page)
+        return pullRequestPages[page] ?? Page(values: [], hasNext: false)
+    }
 
     func checkRunID(repository: RepositoryCoordinates, headSHA: String, externalID: String,
                     installationID: Int64) async throws -> Int64? { existingCheckID }
@@ -88,12 +130,14 @@ actor FakeGitHubAPI: GitHubAPI {
                         calls: [(String, String)], pages: [Int]) {
         (created, updated, contentCalls, changedFilePages)
     }
+
+    func pullRequestPageCalls() -> [Int] { listedPullRequestPages }
 }
 
 struct ImmediateQueue: WebhookJobEnqueuing {
     let orchestrator: GitHubCheckOrchestrator
-    func enqueue(_ event: PullRequestEvent) async -> Bool {
-        await orchestrator.process(event)
+    func enqueue(_ job: WebhookJob) async -> Bool {
+        await orchestrator.process(job)
         return true
     }
 }

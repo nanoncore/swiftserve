@@ -49,6 +49,50 @@ struct WebhookTests {
         #expect(response.code == "accepted")
     }
 
+    @Test("Edited events are accepted only when the base changed")
+    func editedBase() async {
+        let queue = RecordingQueue()
+        let changed = webhookBody(action: "edited", baseEdited: true)
+        let unchanged = webhookBody(action: "edited")
+        let handler = WebhookHandler(secret: secret, queue: queue)
+        #expect(await handler.handle(
+            eventName: "pull_request",
+            signature: WebhookSignatureVerifier.signature(secret: secret, body: changed),
+            body: changed).code == "accepted")
+        #expect(await handler.handle(
+            eventName: "pull_request",
+            signature: WebhookSignatureVerifier.signature(secret: secret, body: unchanged),
+            body: unchanged).code == "action_ignored")
+        #expect(await queue.count() == 1)
+    }
+
+    @Test("Branch pushes enqueue base invalidation work")
+    func basePush() async {
+        let queue = RecordingQueue()
+        let body = pushBody()
+        let response = await WebhookHandler(secret: secret, queue: queue).handle(
+            eventName: "push",
+            signature: WebhookSignatureVerifier.signature(secret: secret, body: body), body: body)
+        #expect(response.code == "accepted")
+        #expect(await queue.recorded() == [
+            .basePush(.init(
+                installationID: 99, repository: fixtureEvent.repository,
+                branch: "main", afterSHA: "new-base-sha")),
+        ])
+    }
+
+    @Test("Tag and deleted-branch pushes are ignored")
+    func ignoredPushes() async {
+        let queue = RecordingQueue()
+        for body in [pushBody(ref: "refs/tags/1.0.0"), pushBody(after: String(repeating: "0", count: 40))] {
+            let response = await WebhookHandler(secret: secret, queue: queue).handle(
+                eventName: "push",
+                signature: WebhookSignatureVerifier.signature(secret: secret, body: body), body: body)
+            #expect(response.code == "event_ignored")
+        }
+        #expect(await queue.count() == 0)
+    }
+
     @Test("Unrelated actions and events are ignored after verification")
     func ignoredEvents() async {
         let queue = RecordingQueue()
@@ -57,7 +101,7 @@ struct WebhookTests {
         #expect(await WebhookHandler(secret: secret, queue: queue).handle(
             eventName: "pull_request", signature: signature, body: body).code == "action_ignored")
         #expect(await WebhookHandler(secret: secret, queue: queue).handle(
-            eventName: "push", signature: signature, body: body).code == "event_ignored")
+            eventName: "issues", signature: signature, body: body).code == "event_ignored")
     }
 
     @Test(arguments: ["dependabot[bot]", "renovate[bot]", "octocat"])

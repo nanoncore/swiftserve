@@ -20,6 +20,30 @@ private actor FakeExchanger: InstallationTokenExchanging {
     func count() -> Int { calls }
 }
 
+private actor BlockingExchanger: InstallationTokenExchanging {
+    let expiry: Date
+    private var calls = 0
+    private var waiters: [CheckedContinuation<Void, Never>] = []
+
+    init(expiry: Date) { self.expiry = expiry }
+
+    func exchange(appJWT: String, installationID: Int64) async throws -> InstallationToken {
+        calls += 1
+        await withCheckedContinuation { continuation in
+            waiters.append(continuation)
+        }
+        return InstallationToken(value: "shared-token", expiresAt: expiry)
+    }
+
+    func count() -> Int { calls }
+
+    func release() {
+        let continuations = waiters
+        waiters.removeAll()
+        continuations.forEach { $0.resume() }
+    }
+}
+
 @Suite("Installation authentication")
 struct AuthenticationTests {
     @Test("Installation tokens are cached while safely before expiry")
@@ -40,6 +64,24 @@ struct AuthenticationTests {
         #expect(try await provider.token(for: 1) == "token-1")
         #expect(try await provider.token(for: 1) == "token-2")
         #expect(await exchanger.count() == 2)
+    }
+
+    @Test("Concurrent cold requests coalesce one token exchange per installation")
+    func coalescing() async throws {
+        let now = Date(timeIntervalSince1970: 1_800_000_000)
+        let exchanger = BlockingExchanger(expiry: now.addingTimeInterval(120))
+        let provider = InstallationTokenProvider(signer: FakeSigner(), exchanger: exchanger, now: { now })
+        let first = Task { try await provider.token(for: 1) }
+        while await exchanger.count() == 0 { await Task.yield() }
+        let second = Task { try await provider.token(for: 1) }
+        let third = Task { try await provider.token(for: 1) }
+        for _ in 0..<10 { await Task.yield() }
+        #expect(await exchanger.count() == 1)
+        await exchanger.release()
+        #expect(try await first.value == "shared-token")
+        #expect(try await second.value == "shared-token")
+        #expect(try await third.value == "shared-token")
+        #expect(await exchanger.count() == 1)
     }
 
     @Test("Configuration errors name variables without exposing their values")

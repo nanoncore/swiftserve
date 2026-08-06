@@ -1,9 +1,9 @@
 # SwiftServe GitHub App spike
 
 This executable is the first hosted Upgrade Receipt slice. It accepts signed
-pull-request webhooks, authenticates as the event's GitHub App installation,
-fetches immutable inputs, runs the reusable receipt engine with exact bundled
-capability evidence, and creates or updates one Check Run named
+pull-request and branch-push webhooks, authenticates as the event's GitHub App
+installation, fetches immutable inputs, runs the reusable receipt engine with
+exact bundled capability evidence, and creates or updates one Check Run named
 `SwiftServe / Upgrade Receipt`.
 
 It is intentionally separate from `SwiftServeServer`. It does not store source,
@@ -19,12 +19,15 @@ Create a GitHub App owned by the intended user or organization and configure:
   - Contents: **Read-only**
   - Pull requests: **Read-only**
   - Checks: **Read and write**
-- Subscribe to events: **Pull request** only
+- Subscribe to events: **Pull request** and **Push**
 
-Install it on the test repository. The spike accepts only `opened`,
-`synchronize`, and `reopened`; all other signed actions are acknowledged and
-ignored. It never filters on sender identity, so Dependabot, Renovate, and
-manually opened dependency PRs follow the same path.
+Install it on the test repository. The spike accepts `opened`, `synchronize`,
+and `reopened`, plus `edited` only when the PR base changed. A branch push
+reprocesses open PRs targeting that branch so a policy or lockfile change in the
+base cannot leave an obsolete Check in place. Other signed actions, tag pushes,
+and branch deletions are acknowledged and ignored. It never filters on sender
+identity, so Dependabot, Renovate, and manually opened dependency PRs follow the
+same path.
 
 Generate and download an RSA private key from the App settings. Keep the App ID,
 private key, and webhook secret in the runtime's secret store.
@@ -83,6 +86,8 @@ make github-app-spike
    `SwiftServe / Upgrade Receipt` appears on the PR head SHA.
 5. Redeliver the same webhook and confirm that Check is updated, not duplicated.
 6. Push a new commit and confirm a new logical Check uses the new head SHA.
+7. Advance the PR's base branch and confirm the existing logical Check is
+   refreshed against the new base SHA.
 
 No credentials are committed by this workflow. The minimal setup needed for a
 real smoke test is an App ID, one downloaded App private key, a matching webhook
@@ -92,14 +97,17 @@ secret, and installation of that App on the private test repository.
 
 - The HMAC-SHA256 signature is verified against raw bytes in constant time
   before JSON decoding. Missing, malformed, and invalid signatures are rejected.
-- Lockfiles are fetched from the event's exact base and head commit SHAs.
+- Lockfiles are fetched from the event's exact base and head commit SHAs. Added
+  and removed lockfiles use an empty dependency set for the absent side; renamed
+  lockfiles use `previous_filename` at the base SHA and the new path at the head.
 - `.swiftserve.json` is fetched only from the exact base SHA. Only a genuine 404
   selects the default policy; malformed policy and every other failure close the
   Check as `failure`.
 - More than one changed lockfile produces `action_required`; none produces
   `skipped`. The spike never silently selects the first lockfile.
-- The worker re-reads the PR head before publication. A stale worker publishes
-  nothing over a newer result.
+- The worker re-reads the PR base ref, base SHA, and head SHA before publication.
+  A stale worker publishes nothing over a newer result. Base-changing `edited`
+  events and pushes to target branches trigger reprocessing.
 - The stable external ID is derived from repository ID, PR number, and head SHA.
   Redelivery updates the matching Check; a new head creates a new logical Check.
 

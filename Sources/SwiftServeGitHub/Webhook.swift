@@ -11,11 +11,11 @@ public struct WebhookResponse: Sendable, Equatable {
 }
 
 public protocol WebhookJobEnqueuing: Sendable {
-    func enqueue(_ event: PullRequestEvent) async -> Bool
+    func enqueue(_ job: WebhookJob) async -> Bool
 }
 
 public struct WebhookHandler: Sendable {
-    public static let acceptedActions: Set<String> = ["opened", "synchronize", "reopened"]
+    public static let acceptedActions: Set<String> = ["opened", "synchronize", "reopened", "edited"]
 
     private let verifier: WebhookSignatureVerifier
     private let payloadLimit: Int
@@ -37,16 +37,31 @@ public struct WebhookHandler: Sendable {
         case .malformed: return .init(status: 401, code: "signature_malformed")
         case .invalid: return .init(status: 401, code: "signature_invalid")
         }
-        guard eventName == "pull_request" else {
+        let job: WebhookJob
+        switch eventName {
+        case "pull_request":
+            guard let webhook = try? JSONDecoder().decode(PullRequestWebhook.self, from: body) else {
+                return .init(status: 400, code: "payload_malformed")
+            }
+            guard Self.acceptedActions.contains(webhook.action) else {
+                return .init(status: 202, code: "action_ignored")
+            }
+            guard webhook.action != "edited" || webhook.editedBase else {
+                return .init(status: 202, code: "action_ignored")
+            }
+            job = .pullRequest(webhook.event)
+        case "push":
+            guard let webhook = try? JSONDecoder().decode(PushWebhook.self, from: body) else {
+                return .init(status: 400, code: "payload_malformed")
+            }
+            guard let event = webhook.event else {
+                return .init(status: 202, code: "event_ignored")
+            }
+            job = .basePush(event)
+        default:
             return .init(status: 202, code: "event_ignored")
         }
-        guard let webhook = try? JSONDecoder().decode(PullRequestWebhook.self, from: body) else {
-            return .init(status: 400, code: "payload_malformed")
-        }
-        guard Self.acceptedActions.contains(webhook.action) else {
-            return .init(status: 202, code: "action_ignored")
-        }
-        guard await queue.enqueue(webhook.event) else {
+        guard await queue.enqueue(job) else {
             return .init(status: 503, code: "queue_full")
         }
         return .init(status: 202, code: "accepted")
@@ -63,13 +78,13 @@ public actor BoundedWebhookQueue: WebhookJobEnqueuing {
         self.orchestrator = orchestrator
     }
 
-    public func enqueue(_ event: PullRequestEvent) -> Bool {
-        if active.contains(event.externalID) { return true }
+    public func enqueue(_ job: WebhookJob) -> Bool {
+        if active.contains(job.stableID) { return true }
         guard active.count < capacity else { return false }
-        active.insert(event.externalID)
+        active.insert(job.stableID)
         Task {
-            await orchestrator.process(event)
-            self.finished(event.externalID)
+            await orchestrator.process(job)
+            self.finished(job.stableID)
         }
         return true
     }

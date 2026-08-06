@@ -86,11 +86,25 @@ public final class GitHubHTTPClient: @unchecked Sendable, GitHubAPI {
             path: repoPath(event.repository) + "/pulls/\(event.number)/files",
             query: [.init(name: "page", value: String(page)), .init(name: "per_page", value: String(perPage))],
             installationID: event.installationID)
-        struct File: Decodable { let filename: String }
+        struct File: Decodable {
+            let filename: String
+            let status: String
+            let previousFilename: String?
+
+            enum CodingKeys: String, CodingKey {
+                case filename, status
+                case previousFilename = "previous_filename"
+            }
+        }
         guard let files = try? JSONDecoder().decode([File].self, from: data) else {
             throw GitHubAPIError.malformedResponse
         }
-        return Page(values: files.map { ChangedFile(filename: $0.filename) }, hasNext: files.count == perPage)
+        return Page(
+            values: files.map {
+                ChangedFile(filename: $0.filename, status: $0.status,
+                            previousFilename: $0.previousFilename)
+            },
+            hasNext: files.count == perPage)
     }
 
     public func content(repository: RepositoryCoordinates, path: String, ref: String,
@@ -107,14 +121,48 @@ public final class GitHubHTTPClient: @unchecked Sendable, GitHubAPI {
         return decoded
     }
 
-    public func currentHeadSHA(for event: PullRequestEvent) async throws -> String {
+    public func currentPullRequest(for event: PullRequestEvent) async throws -> PullRequestState {
         let data = try await get(path: repoPath(event.repository) + "/pulls/\(event.number)",
                                  installationID: event.installationID)
-        struct Pull: Decodable { let head: Head; struct Head: Decodable { let sha: String } }
+        struct Pull: Decodable {
+            let base: Base
+            let head: Head
+            struct Base: Decodable { let ref: String; let sha: String }
+            struct Head: Decodable { let sha: String }
+        }
         guard let pull = try? JSONDecoder().decode(Pull.self, from: data) else {
             throw GitHubAPIError.malformedResponse
         }
-        return pull.head.sha
+        return .init(baseRef: pull.base.ref, baseSHA: pull.base.sha, headSHA: pull.head.sha)
+    }
+
+    public func pullRequests(repository: RepositoryCoordinates, baseRef: String,
+                             installationID: Int64, page: Int,
+                             perPage: Int) async throws -> Page<PullRequestEvent> {
+        let data = try await get(
+            path: repoPath(repository) + "/pulls",
+            query: [.init(name: "state", value: "open"), .init(name: "base", value: baseRef),
+                    .init(name: "page", value: String(page)),
+                    .init(name: "per_page", value: String(perPage))],
+            installationID: installationID)
+        struct Pull: Decodable {
+            let number: Int
+            let base: Base
+            let head: Head
+            struct Base: Decodable { let ref: String; let sha: String }
+            struct Head: Decodable { let sha: String }
+        }
+        guard let pulls = try? JSONDecoder().decode([Pull].self, from: data) else {
+            throw GitHubAPIError.malformedResponse
+        }
+        return Page(
+            values: pulls.map {
+                PullRequestEvent(
+                    action: "base_push", installationID: installationID,
+                    repository: repository, number: $0.number, baseRef: $0.base.ref,
+                    baseSHA: $0.base.sha, headSHA: $0.head.sha)
+            },
+            hasNext: pulls.count == perPage)
     }
 
     public func checkRunID(repository: RepositoryCoordinates, headSHA: String, externalID: String,
