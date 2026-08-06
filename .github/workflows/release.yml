@@ -54,7 +54,7 @@ jobs:
           - runner: ubuntu-24.04-arm
             platform: linux-aarch64
     runs-on: ${{ matrix.runner }}
-    container: swift:6.0
+    container: swift:6.1
     steps:
       - uses: actions/checkout@v4
       - name: Install packaging tools

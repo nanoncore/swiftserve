@@ -8,7 +8,7 @@ RESOURCE_SUFFIX := $(if $(filter Darwin,$(shell uname -s)),bundle,resources)
 CLI_RESOURCES := .build/release/SwiftServe_SwiftServeCLI.$(RESOURCE_SUFFIX)
 EVIDENCE_RESOURCES := .build/release/SwiftServe_SwiftServeEvidence.$(RESOURCE_SUFFIX)
 
-.PHONY: help build install uninstall test site-check livekit-spike recheck-spike receipt-spike
+.PHONY: help build install uninstall test site-check livekit-spike recheck-spike receipt-spike github-app-spike
 
 help:
 	@echo "SwiftServe make targets:"
@@ -20,6 +20,7 @@ help:
 	@echo "  make livekit-spike Fetch + extract the real LiveKit repos and show the noise-cancellation truth"
 	@echo "  make recheck-spike Gate 'swiftserve index recheck' end-to-end against SwiftySound 1.2.0 → 1.3.0"
 	@echo "  make receipt-spike Gate deterministic Upgrade Receipt JSON, Markdown, card, policy, and exit codes"
+	@echo "  make github-app-spike Drive a signed PR webhook through the GitHub App against a fake API"
 	@echo ""
 	@echo "Override the bin location: make install BINDIR=/usr/local/bin"
 
@@ -170,3 +171,10 @@ receipt-spike:
 	grep -q -- '- "Package.resolved"' docs/examples/upgrade-receipt.yml
 	@if grep -q '\*\*/Package.resolved' docs/examples/upgrade-receipt.yml; then exit 1; fi
 	@echo "✅ receipt-spike: deterministic v2/v3 receipt, renderers, policies, clean stdout, and exit codes 0/1/2"
+
+# Network-free GitHub App acceptance. The focused test signs a pull_request
+# webhook, passes it through the real webhook/orchestration layers, serves all
+# immutable GitHub inputs from a protocol fake, and asserts exactly one Check.
+github-app-spike:
+	swift test --filter GitHubAppAcceptanceTests
+	@echo "✅ github-app-spike: one signed dependency PR publishes one correctly mapped Check"

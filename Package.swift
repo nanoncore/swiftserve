@@ -11,10 +11,12 @@ let package = Package(
         .library(name: "SwiftServeCore", targets: ["SwiftServeCore"]),
         .library(name: "SwiftServeReceipt", targets: ["SwiftServeReceipt"]),
         .library(name: "SwiftServeEvidence", targets: ["SwiftServeEvidence"]),
+        .library(name: "SwiftServeGitHub", targets: ["SwiftServeGitHub"]),
         // The web front door. Dogfoods Hummingbird.
         .executable(name: "SwiftServeServer", targets: ["SwiftServeServer"]),
         // The terminal/CI front door. Same Core, same canonical JSON.
         .executable(name: "swiftserve", targets: ["SwiftServeCLI"]),
+        .executable(name: "swiftserve-github-app", targets: ["SwiftServeGitHubApp"]),
     ],
     dependencies: [
         .package(url: "https://github.com/hummingbird-project/hummingbird.git", from: "2.0.0"),
@@ -24,6 +26,10 @@ let package = Package(
         // installed compiler); the pin keeps it parsing current syntax. Isolated
         // to SwiftServeSource so Core/Scan stay dependency-light.
         .package(url: "https://github.com/swiftlang/swift-syntax.git", from: "603.0.0"),
+        // Already resolved through Hummingbird at 4.5.0. Promoted to a direct
+        // dependency for audited HMAC-SHA256 webhook verification and RS256
+        // GitHub App JWT signing; no cryptographic primitive is implemented here.
+        .package(url: "https://github.com/apple/swift-crypto.git", from: "4.5.0"),
     ],
     targets: [
         // Core has ZERO external dependencies — pure Swift + Foundation, macOS + Linux.
@@ -78,6 +84,26 @@ let package = Package(
             name: "SwiftServeEvidence",
             dependencies: ["SwiftServeCapability"],
             resources: [.copy("Resources")]
+        ),
+        // Trusted GitHub App orchestration. Receipt, policy, evidence, and
+        // Markdown semantics remain in their reusable library targets.
+        .target(
+            name: "SwiftServeGitHub",
+            dependencies: [
+                "SwiftServeCore",
+                "SwiftServeReceipt",
+                "SwiftServeEvidence",
+                .product(name: "Crypto", package: "swift-crypto"),
+                .product(name: "CryptoExtras", package: "swift-crypto"),
+            ]
+        ),
+        .executableTarget(
+            name: "SwiftServeGitHubApp",
+            dependencies: [
+                "SwiftServeGitHub",
+                "SwiftServeEvidence",
+                .product(name: "Hummingbird", package: "hummingbird"),
+            ]
         ),
         // Capability search, extraction layer: the second (and only other)
         // SwiftSyntax target. Turns package source into SwiftServeCapability's
@@ -175,6 +201,15 @@ let package = Package(
         .testTarget(
             name: "SwiftServeEvidenceTests",
             dependencies: ["SwiftServeEvidence"]
+        ),
+        .testTarget(
+            name: "SwiftServeGitHubTests",
+            dependencies: [
+                "SwiftServeGitHub",
+                "SwiftServeCore",
+                "SwiftServeReceipt",
+                "SwiftServeEvidence",
+            ]
         ),
         .testTarget(
             name: "SwiftServeCLITests",
