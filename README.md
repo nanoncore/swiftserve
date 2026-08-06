@@ -377,8 +377,12 @@ RUN_LIVE_GITHUB=1 swift test --filter liveEnrichment   # opt-in live GitHub smok
   machine, and the `Enrichment` protocol. Zero external dependencies so it drops
   cleanly into the CLI and read-only GitHub Actions workflows.
 - **`SwiftServeReceipt`** — pure Upgrade Receipt models, SemVer diffing,
-  policy evaluation, exact-version capability projection, and its independent
-  JSON Schema. Network, git, disk, and rendering stay in the CLI.
+  policy and gate evaluation, exact-version capability projection, canonical
+  Markdown rendering, and its independent JSON Schema. Network, git, and disk
+  stay outside the library.
+- **`SwiftServeEvidence`** — the immutable, version-pinned capability snapshot
+  and its reusable loader. The CLI and hosted surfaces consume the exact same
+  bundled evidence without pushing resource I/O into the pure capability model.
 - **`SwiftServeServer`** — a [Hummingbird](https://github.com/hummingbird-project/hummingbird)
   app exposing `POST /analyze` and serving the static frontend. (We dogfood
   Hummingbird on purpose.)

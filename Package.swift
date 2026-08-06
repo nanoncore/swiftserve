@@ -10,6 +10,7 @@ let package = Package(
         // Platform-agnostic brains: parsing + scoring + mood. Reused by CLI and CI workflows.
         .library(name: "SwiftServeCore", targets: ["SwiftServeCore"]),
         .library(name: "SwiftServeReceipt", targets: ["SwiftServeReceipt"]),
+        .library(name: "SwiftServeEvidence", targets: ["SwiftServeEvidence"]),
         // The web front door. Dogfoods Hummingbird.
         .executable(name: "SwiftServeServer", targets: ["SwiftServeServer"]),
         // The terminal/CI front door. Same Core, same canonical JSON.
@@ -70,6 +71,14 @@ let package = Package(
             name: "SwiftServeReceipt",
             dependencies: ["SwiftServeCore", "SwiftServeCapability"]
         ),
+        // Version-pinned capability evidence bundled for every front door.
+        // Keeping resource I/O here leaves SwiftServeCapability pure while
+        // allowing the CLI and hosted App to load the exact same snapshot.
+        .target(
+            name: "SwiftServeEvidence",
+            dependencies: ["SwiftServeCapability"],
+            resources: [.copy("Resources")]
+        ),
         // Capability search, extraction layer: the second (and only other)
         // SwiftSyntax target. Turns package source into SwiftServeCapability's
         // SurfaceDecl values — public API surface × #if guards × @available.
@@ -117,6 +126,7 @@ let package = Package(
                 "SwiftServeSource",
                 "SwiftServeBuild",
                 "SwiftServeCapability",
+                "SwiftServeEvidence",
                 "SwiftServeReceipt",
                 "SwiftServeSurface",
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
@@ -161,6 +171,10 @@ let package = Package(
         .testTarget(
             name: "SwiftServeReceiptTests",
             dependencies: ["SwiftServeReceipt", "SwiftServeCore", "SwiftServeCapability"]
+        ),
+        .testTarget(
+            name: "SwiftServeEvidenceTests",
+            dependencies: ["SwiftServeEvidence"]
         ),
         .testTarget(
             name: "SwiftServeCLITests",

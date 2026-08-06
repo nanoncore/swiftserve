@@ -29,9 +29,15 @@ esac
 
 printf '#!/bin/sh\nexit 0\n' > "$payload/swiftserve"
 chmod +x "$payload/swiftserve"
+mkdir -p \
+  "$payload/SwiftServe_SwiftServeCLI.resources/Resources" \
+  "$payload/SwiftServe_SwiftServeEvidence.resources/Resources"
+printf '{}\n' > "$payload/SwiftServe_SwiftServeCLI.resources/Resources/denylist.seed.json"
+printf '{}\n' > "$payload/SwiftServe_SwiftServeEvidence.resources/Resources/capability-dataset.json"
 asset="swiftserve-v0.7.0-$platform.tar.gz"
 archive="$scratch/$asset"
-tar -czf "$archive" -C "$payload" swiftserve
+tar -czf "$archive" -C "$payload" \
+  swiftserve SwiftServe_SwiftServeCLI.resources SwiftServe_SwiftServeEvidence.resources
 checksum=$(sha256sum "$archive" | cut -d' ' -f1)
 printf '%s  %s\n' "$checksum" "$asset" > "$scratch/checksums.txt"
 
@@ -48,4 +54,6 @@ BINDIR="$scratch/install" \
 /bin/sh "$root/Public/install.sh" v0.7.0 >/dev/null
 
 test -x "$scratch/install/swiftserve"
+test -f "$scratch/install/SwiftServe_SwiftServeCLI.resources/Resources/denylist.seed.json"
+test -f "$scratch/install/SwiftServe_SwiftServeEvidence.resources/Resources/capability-dataset.json"
 echo "installer checksum fallback: sha256sum path passed"

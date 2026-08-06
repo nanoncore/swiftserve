@@ -8,15 +8,20 @@ at `receiptVersion: 1` and has its own schema and CLI command.
 ## Decisions
 
 - `SwiftServeReceipt` is a library target containing deterministic lockfile
-  comparison, SemVer precedence, policy evaluation, capability projection, and
-  Codable contracts. It depends on `SwiftServeCore` and
-  `SwiftServeCapability`, with no I/O and no external dependencies.
+  comparison, SemVer precedence, policy and gate evaluation, capability
+  projection, canonical Markdown rendering, and Codable contracts. It depends
+  on `SwiftServeCore` and `SwiftServeCapability`, with no I/O and no external
+  dependencies.
+- `SwiftServeEvidence` owns the immutable bundled capability snapshot and its
+  loader so CLI and hosted consumers use identical exact-version evidence while
+  `SwiftServeCapability` remains pure.
 - Both inputs use `PackageResolvedParser`; normalized SwiftPM identities and
   canonical repository URLs come from `RepoIdentity`. A repository change for
   one identity therefore remains one source-change finding.
 - The CLI owns files, environment, GitHub enrichment, temporary source
-  checkouts, extraction, and rendering. Health enrichment receives one pin per
-  changed canonical repository, so base/head scores share one snapshot.
+  checkouts, extraction, and terminal-card rendering. Health enrichment
+  receives one pin per changed canonical repository, so base/head scores share
+  one snapshot.
 - Capability records are exact-version evidence. Without recheck, a head pin
   must exactly equal the record version or its result is `unverified`. With
   recheck, temporary checkouts feed the existing `SurfaceBuilder` and pure

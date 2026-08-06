@@ -162,6 +162,80 @@ struct ReceiptEngineTests {
     }
 }
 
+@Suite("Upgrade Receipt presentation and gates")
+struct ReceiptPresentationTests {
+    func pin(_ version: String) -> Pin {
+        Pin(identity: "demo", kind: .remoteSourceControl,
+            location: "https://github.com/acme/demo.git",
+            resolvedVersion: version, branch: nil, revision: version, pinType: .version)
+    }
+
+    @Test("Markdown renders from the canonical receipt")
+    func markdown() {
+        let receipt = ReceiptEngine.build(base: [pin("1.0.0")], head: [pin("2.0.0")],
+                                          generatedAt: "2026-08-05T00:00:00Z")
+        let markdown = UpgradeReceiptMarkdownRenderer.render(receipt)
+        #expect(markdown == """
+        ## 🍦 Upgrade Receipt — REVIEW
+
+        1 dependency change; review requested by policy.
+
+        | Package | Before | After | Classification | Severity |
+        |---|---:|---:|---|---|
+        | `demo` | `1.0.0` | `2.0.0` | major | **review** |
+
+        ### Findings
+
+        - **review** `major-update` — Major version changed from 1.0.0 to 2.0.0.
+
+        ### Policy violations
+
+        - `major-update`
+
+        Policy: `default` · needs attention
+
+        > A `pass` means no configured policy was violated. It is not a universal safety guarantee and does not replace compiling or tests.
+        """)
+    }
+
+    @Test("Gate evaluation is independent from presentation")
+    func gates() {
+        #expect(!ReceiptGateThreshold.review.fails(.pass))
+        #expect(ReceiptGateThreshold.review.fails(.review))
+        #expect(ReceiptGateThreshold.review.fails(.block))
+        #expect(!ReceiptGateThreshold.block.fails(.pass))
+        #expect(!ReceiptGateThreshold.block.fails(.review))
+        #expect(ReceiptGateThreshold.block.fails(.block))
+    }
+
+    @Test("Markdown neutralizes repository-controlled content by context")
+    func adversarialMarkdown() {
+        let hostileIdentity = "demo\\|```\n## injected [link](https://evil.example) <img> @maintainers"
+        let hostileVersion = "release`\r\n![image](https://evil.example/x)"
+        let base = Pin(identity: hostileIdentity, kind: .remoteSourceControl,
+                       location: "https://github.com/acme/demo.git",
+                       resolvedVersion: "old", branch: nil, revision: "old", pinType: .version)
+        let head = Pin(identity: hostileIdentity, kind: .remoteSourceControl,
+                       location: "https://github.com/acme/demo.git",
+                       resolvedVersion: hostileVersion, branch: nil, revision: "new", pinType: .version)
+        let receipt = ReceiptEngine.build(
+            base: [base], head: [head], generatedAt: "t",
+            context: .init(policySource: "`.swiftserve.json`\n# forged @owners"))
+
+        let markdown = UpgradeReceiptMarkdownRenderer.render(receipt)
+        let findingText = markdown.split(separator: "\n")
+            .filter { $0.hasPrefix("- **") }
+            .joined(separator: "\n")
+        #expect(!markdown.contains("\n## injected"))
+        #expect(!markdown.contains("\n# forged"))
+        #expect(markdown.contains(#"demo\\\|"#))
+        #expect(markdown.contains("````"))
+        #expect(findingText.contains("!\\[image\\]("))
+        #expect(!findingText.contains("![image]("))
+        #expect(markdown.contains("`` `.swiftserve.json` # forged @owners ``"))
+    }
+}
+
 @Suite("Upgrade Receipt policy")
 struct ReceiptPolicyTests {
     @Test("Default and custom severity override")

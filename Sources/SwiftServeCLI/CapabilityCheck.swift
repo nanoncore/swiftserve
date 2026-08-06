@@ -2,6 +2,7 @@ import ArgumentParser
 import Foundation
 import SwiftServeCapability
 import SwiftServeCore
+import SwiftServeEvidence
 
 /// `swiftserve capability-check <package> --capability <id> --platform <p>` —
 /// the north-star question: does this package actually serve this feature on
@@ -105,18 +106,13 @@ extension ClaimStatus: ExpressibleByArgument {
 /// from `index assemble` (same double-lookup as every bundled resource).
 enum DatasetLoader {
     static func load(override: String?) throws -> CapabilityDataset {
-        if let override {
-            guard let data = FileManager.default.contents(atPath: override) else {
-                throw ScanError("couldn't read dataset at \(override)")
-            }
-            return try CapabilityDataset.decode(from: data)
+        do {
+            return try CapabilityEvidenceLoader.load(overridePath: override)
+        } catch let error as CapabilityEvidenceError {
+            // Preserve the CLI's structured exit-2 error surface while the
+            // reusable loader remains independent of SwiftServeCLI.
+            throw ScanError(error.description)
         }
-        guard let url = Bundle.module.url(forResource: "capability-dataset", withExtension: "json", subdirectory: "Resources")
-            ?? Bundle.module.url(forResource: "capability-dataset", withExtension: "json"),
-              let data = try? Data(contentsOf: url) else {
-            throw ScanError("no bundled capability dataset — run `swiftserve index assemble` and rebuild, or pass --dataset")
-        }
-        return try CapabilityDataset.decode(from: data)
     }
 
     static func encodeJSON(_ value: some Encodable) throws -> String {

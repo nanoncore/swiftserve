@@ -997,8 +997,8 @@ struct Assemble: ParsableCommand {
     @Option(name: .long, help: "Directory of per-domain taxonomy files (merged).")
     var taxonomyDir: String = "data/taxonomy"
 
-    @Option(name: .long, help: "Dataset output (bundled into the CLI on rebuild).")
-    var out: String = "Sources/SwiftServeCLI/Resources/capability-dataset.json"
+    @Option(name: .long, help: "Dataset output (bundled into every front door on rebuild).")
+    var out: String = "Sources/SwiftServeEvidence/Resources/capability-dataset.json"
 
     func run() throws {
         let taxonomy = try Self.mergedTaxonomy(taxonomyDir)
@@ -1007,7 +1007,7 @@ struct Assemble: ParsableCommand {
         try CorpusFiles.writeJSON(dataset, to: out)
         let packages = Set(records.map(\.package.canonicalURL)).count
         print(Style.bold("🍦 dataset assembled") + " — \(records.count) record\(records.count == 1 ? "" : "s") across \(packages) package\(packages == 1 ? "" : "s"), \(dataset.taxonomy.capabilities.count) capabilities (\(dataset.taxonomy.domain)) → \(out)")
-        print(Style.dim("   rebuild (`swift build`) to bundle it into the CLI"))
+        print(Style.dim("   rebuild (`swift build`) to bundle it into the CLI and hosted surfaces"))
     }
 
     static func mergedTaxonomy(_ dir: String) throws -> Taxonomy {
