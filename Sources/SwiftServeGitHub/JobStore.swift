@@ -214,18 +214,21 @@ public actor SQLiteJobStore: JobStore {
                 WHERE state = 'running' AND lease_expires_at <= ?
                 """,
                 arguments: [timestamp])
-            let rows = try Row.fetchAll(
-                db,
-                sql: """
+            var claimSQL = """
                 SELECT * FROM github_jobs
                 WHERE state = 'pending' AND scheduled_at <= ? AND expires_at > ?
-                ORDER BY scheduled_at ASC, created_at ASC, id ASC LIMIT 256
-                """,
-                arguments: [timestamp, timestamp])
-            guard let row = rows.first(where: {
-                let installation: Int64 = $0["installation_id"]
-                return !excludingInstallations.contains(installation)
-            }) else { return nil }
+                """
+            var claimArguments: StatementArguments = [timestamp, timestamp]
+            if !excludingInstallations.isEmpty {
+                let excluded = excludingInstallations.sorted()
+                let placeholders = Array(repeating: "?", count: excluded.count)
+                    .joined(separator: ", ")
+                claimSQL += " AND installation_id NOT IN (\(placeholders))"
+                claimArguments += StatementArguments(excluded)
+            }
+            claimSQL += " ORDER BY scheduled_at ASC, created_at ASC, id ASC LIMIT 1"
+            guard let row = try Row.fetchOne(
+                db, sql: claimSQL, arguments: claimArguments) else { return nil }
             let id: String = row["id"]
             try db.execute(
                 sql: """

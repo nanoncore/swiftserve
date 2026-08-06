@@ -115,6 +115,9 @@ updated as `in_progress`, its ID is persisted immediately, and that same Check
 is completed after aggregation.
 
 The worker scheduler enforces both global and per-installation concurrency.
+Installation exclusions are applied inside the ordered SQLite claim query, so
+a deep backlog from a saturated installation cannot hide eligible work from
+other installations.
 Shutdown first stops durable acceptance, cancels the scheduler, and either
 finishes or releases active leases. Already acknowledged rows therefore remain
 recoverable.

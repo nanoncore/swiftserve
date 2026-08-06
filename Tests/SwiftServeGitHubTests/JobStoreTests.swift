@@ -37,6 +37,34 @@ struct JobStoreTests {
         #expect(claimed[0].attemptCount == 1)
     }
 
+    @Test("A saturated installation cannot hide eligible work beyond 256 older jobs")
+    func excludedInstallationDoesNotStarveQueue() async throws {
+        let store = try SQLiteJobStore(path: temporaryPath())
+        let start = Date(timeIntervalSince1970: 1_800_000_000)
+        for index in 0..<300 {
+            let event = RepositoryPushEvent(
+                installationID: 99,
+                repository: .init(id: 42, owner: "acme", name: "saturated"),
+                branch: "main", afterSHA: "saturated-\(index)")
+            _ = try await store.enqueue(
+                deliveryID: "saturated-delivery-\(index)", job: .basePush(event),
+                now: start.addingTimeInterval(Double(index)), retention: 100)
+        }
+        let eligible = RepositoryPushEvent(
+            installationID: 100,
+            repository: .init(id: 43, owner: "acme", name: "eligible"),
+            branch: "main", afterSHA: "eligible-head")
+        _ = try await store.enqueue(
+            deliveryID: "eligible-delivery", job: .basePush(eligible),
+            now: start.addingTimeInterval(300), retention: 100)
+
+        let claimed = try #require(try await store.claim(
+            leaseOwner: "available-worker", now: start.addingTimeInterval(301),
+            leaseDuration: 30, excludingInstallations: [99]))
+        #expect(claimed.installationID == 100)
+        #expect(claimed.job == .basePush(eligible))
+    }
+
     @Test("Restart resumes acknowledged work and expired leases recover")
     func restartAndLeaseRecovery() async throws {
         let path = temporaryPath()
