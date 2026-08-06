@@ -2,7 +2,7 @@
 # Multi-stage: heavy Swift toolchain to build, slim runtime to serve.
 # Railway auto-detects this Dockerfile (pinned via railway.json).
 
-FROM swift:6.0-noble AS build
+FROM swift:6.1-noble AS build
 WORKDIR /app
 
 # Resolve dependencies in their own layer so code edits don't re-fetch them.
@@ -17,7 +17,7 @@ RUN mkdir -p /staging \
   && cp .build/release/SwiftServeServer /staging/ \
   && find .build/release -maxdepth 1 -name '*.bundle' -exec cp -R {} /staging/ \;
 
-FROM swift:6.0-noble-slim
+FROM swift:6.1-noble-slim
 WORKDIR /app
 COPY --from=build /staging /app
 COPY Public ./Public
